@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "quantum-consciousness-agi"
+version = "0.1.0"
+description = "Experimental Quantum Consciousness VAE scaffold"
+authors = ["GitHub Copilot <copilot@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+torch = "^2.0"
+numpy = "^1.25"
+matplotlib = "^3.8"
+scipy = "^1.11"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

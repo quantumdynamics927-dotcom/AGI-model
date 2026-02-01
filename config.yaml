@@ -1,0 +1,69 @@
+# Project configuration for Quantum Consciousness VAE
+
+# Data
+data:
+  train_path: "real_data/"
+  synthetic_path: "sacred_datasets/"
+  input_dim: 128
+  latent_dim: 32
+
+# Training
+training:
+  epochs: 200
+  batch_size: 64
+  learning_rate: 0.0003
+  device: "cpu"
+  random_seed: 42
+  early_stopping_patience: 30
+  reduce_lr_patience: 15
+
+# Loss weights (see vae_model.total_loss defaults)
+weights:
+  recon: 1.0
+  kl: 0.0008
+  hamming: 0.3
+  coherence: 0.1
+  hw: 0.01
+  mixed_state: 0.1
+  fidelity: 0.1
+  entropy: 0.05
+
+# Experiment
+experiment:
+  name: "qc_vae_default"
+  output_dir: "artifacts/"
+  save_best_model: true
+  checkpoint_interval: 1
+
+# CI / Testing
+ci:
+  smoke_sample_size: 10
+  smoke_epochs: 1
+
+# Nodes (TMT.OS functional nodes)
+nodes:
+  - name: "tmt.os"
+    role: "Base operating environment"
+    path: "tmt.os"
+  - name: "tmt-os-cybershield"
+    role: "Security layer"
+    path: "tmt-os-cybershield"
+  - name: "tmt-os-labs"
+    role: "Experimental labs"
+    path: "tmt-os-labs"
+  - name: "tmt-os-nft"
+    role: "NFT / Asset layer"
+    path: "tmt-os-nft"
+  - name: "molecular_geometry"
+    role: "Spatial intelligence: molecular & atomic geometry"
+    path: "molecular_geometry/"
+    node_id: 5
+    platonic_solid: "Octahedron"
+    contact: "metatron"
+  - name: "data_provenance"
+    role: "Data provenance, lineage, signatures, and audit trails"
+    path: "data_provenance/"
+    node_id: 6
+    platonic_solid: "Metatron Nexus"
+    contact: "metatron"
+

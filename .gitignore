@@ -1,0 +1,231 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Environments
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Project specific
+# Quantum computing artifacts
+*.qasm
+*.qpy
+quantum_results/
+circuit_cache/
+backend_results/
+quantum_jobs/
+
+# Data files
+data/
+logs/
+*.log
+*.out
+*.err
+*.trace
+
+# NFT and Blockchain
+nft_metadata/
+contracts/
+artifacts/
+deployments/
+.cache/
+coverage.xml
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+.cache
+nosetests.xml
+.coverage
+
+# Machine Learning
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.ckpt
+*.pth
+*.pt
+*.safetensors
+tf_board_profile/
+runs/
+wandb/
+mlruns/
+*.mlmodel
+
+# Monitoring
+prometheus_data/
+grafana_data/
+alerts/
+*.rules.yml
+prometheus.yml.backup
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+docker-compose.prod.yml
+docker-compose.staging.yml
+
+# Secrets
+secrets/
+credentials/
+*.key
+*.pem
+*.crt
+ibmq_credentials.json
+pinata_secrets.json
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Redis
+dump.rdb
+appendonly.aof
+
+# PostgreSQL
+*.sql
+*.dump
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Build artifacts
+*.tar.gz
+*.zip
+*.rar
+*.7z
+*.deb
+*.rpm
+*.msi
+*.exe
+
+# Configuration overrides
+config.local.yaml
+config.staging.yaml
+config.prod.yaml
+
+# Certificates
+*.crt
+*.key
+*.p12
+*.pfx
+
+# Kubernetes
+*.kubeconfig
+
+# Terraform
+*.tfstate
+*.tfvars
+*.tfplan
+
+# Backup files
+*.bak
+*.backup
+
+# Lock files
+*.lock
+Poetry.lock
+package-lock.json.backup
+
+# Performance profiling
+*.prof
+*.profile
+benchmark_results.json
+performance_report.json
+
+# Documentation build
+docs/_build/
+site/
+README.html
+
+# Experiment results
+experiment_results/
+simulation_data/
+test_results/
+integration_test_results/
+
+# Quantum consciousness specific
+consciousness_cache/
+sacred_geometry_cache/
+zpe_experiment_cache/
+bio_signal_cache/
+agent_swarm_cache/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Cloud provider files
+.aws/
+.azure/
+.gcp/
+.google_cloud/
+
+# Helm charts
+*.tgz
+Chart.lock
+charts/*.tgz

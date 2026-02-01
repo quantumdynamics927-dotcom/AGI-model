@@ -1,0 +1,160 @@
+version: 2
+updates:
+  # Enable version updates for Python dependencies
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "quantumdynamics927-dotcom"
+      - "tmt-os-maintainers"
+    assignees:
+      - "tmt-os-maintainers"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "quantum-computing"
+      - "security"
+    groups:
+      quantum-dependencies:
+        patterns:
+          - "qiskit*"
+          - "qiskit-*"
+          - "qiskit-nature*"
+          - "qiskit-machine-learning*"
+        dependency-type: "direct"
+        update-types:
+          - "version-update:semver-patch"
+          - "version-update:semver-minor"
+      ml-dependencies:
+        patterns:
+          - "torch*"
+          - "torchvision*"
+          - "tensorflow*"
+          - "scikit-learn*"
+          - "transformers*"
+        dependency-type: "direct"
+        update-types:
+          - "version-update:semver-patch"
+          - "version-update:semver-minor"
+      api-dependencies:
+        patterns:
+          - "fastapi*"
+          - "uvicorn*"
+          - "pydantic*"
+          - "streamlit*"
+          - "plotly*"
+        dependency-type: "direct"
+      monitoring-dependencies:
+        patterns:
+          - "prometheus*"
+          - "redis*"
+          - "grafana*"
+          - "psutil*"
+        dependency-type: "direct"
+      security-dependencies:
+        patterns:
+          - "cryptography*"
+          - "pyjwt*"
+          - "passlib*"
+          - "bcrypt*"
+          - "python-jose*"
+        dependency-type: "direct"
+
+  # Enable Docker base updates
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+      time: "09:00"
+      timezone: "UTC"
+    open-pull-requests-limit: 3
+    reviewers:
+      - "quantumdynamics927-dotcom"
+      - "tmt-os-maintainers"
+    commit-message:
+      prefix: "docker"
+      include: "scope"
+    labels:
+      - "docker"
+      - "infrastructure"
+
+  # Enable GitHub Actions updates
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+      time: "09:00"
+      timezone: "UTC"
+    open-pull-requests-limit: 3
+    reviewers:
+      - "quantumdynamics927-dotcom"
+      - "tmt-os-maintainers"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    labels:
+      - "ci-cd"
+      - "github-actions"
+
+  # Enable Node.js updates (for blockchain/NFT components)
+  - package-ecosystem: "npm"
+    directory: "/Build-Your-NFT-Explorer"
+    schedule:
+      interval: "weekly"
+      day: "thursday"
+      time: "09:00"
+      timezone: "UTC"
+    open-pull-requests-limit: 3
+    reviewers:
+      - "quantumdynamics927-dotcom"
+      - "tmt-os-maintainers"
+    commit-message:
+      prefix: "npm"
+      include: "scope"
+    labels:
+      - "npm"
+      - "blockchain"
+      - "nft"
+
+  # Enable updates for Web3/blockchain dependencies
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "friday"
+      time: "09:00"
+      timezone: "UTC"
+    open-pull-requests-limit: 2
+    reviewers:
+      - "quantumdynamics927-dotcom"
+      - "tmt-os-maintainers"
+    commit-message:
+      prefix: "blockchain"
+      include: "scope"
+    labels:
+      - "blockchain"
+      - "nft"
+      - "web3"
+    groups:
+      web3-dependencies:
+        patterns:
+          - "web3*"
+          - "eth-account*"
+          - "ipfs*"
+          - "pinata*"
+        dependency-type: "direct"
+      nft-dependencies:
+        patterns:
+          - "nft*"
+          - "token*"
+          - "erc721*"
+        dependency-type: "direct"

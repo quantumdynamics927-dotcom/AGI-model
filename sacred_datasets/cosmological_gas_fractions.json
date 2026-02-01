@@ -1,0 +1,2102 @@
+[
+  {
+    "cluster_id": "cosmo_phi_1",
+    "mass_msun": 165905309606468.0,
+    "redshift": 0.6389476198487484,
+    "gas_fraction": 0.09413020119826178,
+    "phi_constraint": 1.3951410522215064
+  },
+  {
+    "cluster_id": "cosmo_phi_2",
+    "mass_msun": 284693981140467.44,
+    "redshift": 0.4856757640837126,
+    "gas_fraction": 0.05462972693760303,
+    "phi_constraint": 1.4368466793344885
+  },
+  {
+    "cluster_id": "cosmo_phi_3",
+    "mass_msun": 35004354284917.65,
+    "redshift": 0.7237061095722318,
+    "gas_fraction": 0.17958053259454296,
+    "phi_constraint": 1.3741959806873574
+  },
+  {
+    "cluster_id": "cosmo_phi_4",
+    "mass_msun": 33354568908304.49,
+    "redshift": 0.30512385543044973,
+    "gas_fraction": 0.10849629573007308,
+    "phi_constraint": 1.4937988538445737
+  },
+  {
+    "cluster_id": "cosmo_phi_5",
+    "mass_msun": 234488821256282.4,
+    "redshift": 0.683202017110746,
+    "gas_fraction": 0.1070173235899087,
+    "phi_constraint": 1.384034026449122
+  },
+  {
+    "cluster_id": "cosmo_phi_6",
+    "mass_msun": 207046172559054.4,
+    "redshift": 0.6579243592214613,
+    "gas_fraction": 0.11656501023453288,
+    "phi_constraint": 1.390331064757722
+  },
+  {
+    "cluster_id": "cosmo_phi_7",
+    "mass_msun": 161558246087601.84,
+    "redshift": 0.452623560469251,
+    "gas_fraction": 0.033426671112386855,
+    "phi_constraint": 1.4465775309383733
+  },
+  {
+    "cluster_id": "cosmo_phi_8",
+    "mass_msun": 678352395677661.0,
+    "redshift": 0.3383929184312322,
+    "gas_fraction": 0.08096978573989638,
+    "phi_constraint": 1.4825609309466625
+  },
+  {
+    "cluster_id": "cosmo_phi_9",
+    "mass_msun": 32335237623392.086,
+    "redshift": 0.27919494852784105,
+    "gas_fraction": 0.1132035557928994,
+    "phi_constraint": 1.5028188005396268
+  },
+  {
+    "cluster_id": "cosmo_phi_10",
+    "mass_msun": 617592935306277.5,
+    "redshift": 0.9739306526036738,
+    "gas_fraction": 0.08969452680369476,
+    "phi_constraint": 1.3194352208670967
+  },
+  {
+    "cluster_id": "cosmo_phi_11",
+    "mass_msun": 9768399959172.045,
+    "redshift": 0.5407660570504964,
+    "gas_fraction": 0.06757250033834727,
+    "phi_constraint": 1.4212374067304963
+  },
+  {
+    "cluster_id": "cosmo_phi_12",
+    "mass_msun": 82799234391046.47,
+    "redshift": 0.43891935055931064,
+    "gas_fraction": 0.026140408308566454,
+    "phi_constraint": 1.4506969712889288
+  },
+  {
+    "cluster_id": "cosmo_phi_13",
+    "mass_msun": 111794875658460.02,
+    "redshift": 0.5088706688144041,
+    "gas_fraction": 0.0395195636865888,
+    "phi_constraint": 1.430184395972353
+  },
+  {
+    "cluster_id": "cosmo_phi_14",
+    "mass_msun": 1016753723014748.6,
+    "redshift": 0.6941078994734033,
+    "gas_fraction": 0.16978138978063717,
+    "phi_constraint": 1.3813550508056
+  },
+  {
+    "cluster_id": "cosmo_phi_15",
+    "mass_msun": 93702959001561.36,
+    "redshift": 0.36581817096840996,
+    "gas_fraction": 0.07958248936740395,
+    "phi_constraint": 1.4735666174784634
+  },
+  {
+    "cluster_id": "cosmo_phi_16",
+    "mass_msun": 96472747344121.52,
+    "redshift": 0.6097549261492464,
+    "gas_fraction": 0.12090538068316534,
+    "phi_constraint": 1.4026835745185988
+  },
+  {
+    "cluster_id": "cosmo_phi_17",
+    "mass_msun": 53208200594264.21,
+    "redshift": 0.7441770342919178,
+    "gas_fraction": 0.16686826679024028,
+    "phi_constraint": 1.3693374035654624
+  },
+  {
+    "cluster_id": "cosmo_phi_18",
+    "mass_msun": 107435630530524.03,
+    "redshift": 0.8633143278262906,
+    "gas_fraction": 0.12770703582481308,
+    "phi_constraint": 1.3424613876310878
+  },
+  {
+    "cluster_id": "cosmo_phi_19",
+    "mass_msun": 40829728898074.28,
+    "redshift": 0.3714760688681128,
+    "gas_fraction": 0.06109506192237212,
+    "phi_constraint": 1.4717402591413078
+  },
+  {
+    "cluster_id": "cosmo_phi_20",
+    "mass_msun": 254754473508038.47,
+    "redshift": 0.4545816464279988,
+    "gas_fraction": 0.07020925816458384,
+    "phi_constraint": 1.4459930621197745
+  },
+  {
+    "cluster_id": "cosmo_phi_21",
+    "mass_msun": 27349483574658.67,
+    "redshift": 0.2144041886127692,
+    "gas_fraction": 0.12511790920249607,
+    "phi_constraint": 1.5264362223831762
+  },
+  {
+    "cluster_id": "cosmo_phi_22",
+    "mass_msun": 477548058113738.44,
+    "redshift": 0.2839696521830465,
+    "gas_fraction": 0.11752597857192752,
+    "phi_constraint": 1.5011400521197318
+  },
+  {
+    "cluster_id": "cosmo_phi_23",
+    "mass_msun": 26226438643101.04,
+    "redshift": 0.6639613993150792,
+    "gas_fraction": 0.10327183457399768,
+    "phi_constraint": 1.3888158556795325
+  },
+  {
+    "cluster_id": "cosmo_phi_24",
+    "mass_msun": 207990230090204.47,
+    "redshift": 0.6759193671562971,
+    "gas_fraction": 0.13669746005017328,
+    "phi_constraint": 1.3858355707056589
+  },
+  {
+    "cluster_id": "cosmo_phi_25",
+    "mass_msun": 17396735177524.006,
+    "redshift": 0.40132409467309604,
+    "gas_fraction": 0.025496369700114936,
+    "phi_constraint": 1.4622649270903483
+  },
+  {
+    "cluster_id": "cosmo_phi_26",
+    "mass_msun": 42870656917155.39,
+    "redshift": 0.552455890730791,
+    "gas_fraction": 0.07973980938769692,
+    "phi_constraint": 1.418018377616591
+  },
+  {
+    "cluster_id": "cosmo_phi_27",
+    "mass_msun": 604282348121826.2,
+    "redshift": 0.7394016626114606,
+    "gas_fraction": 0.17147825732980254,
+    "phi_constraint": 1.3704641395426156
+  },
+  {
+    "cluster_id": "cosmo_phi_28",
+    "mass_msun": 103669504479383.69,
+    "redshift": 0.12350610853994165,
+    "gas_fraction": 0.1318201325008944,
+    "phi_constraint": 1.5624819493602566
+  },
+  {
+    "cluster_id": "cosmo_phi_29",
+    "mass_msun": 785064769022689.8,
+    "redshift": 0.9727153721572916,
+    "gas_fraction": 0.0721635689847556,
+    "phi_constraint": 1.31967901754928
+  },
+  {
+    "cluster_id": "cosmo_phi_30",
+    "mass_msun": 183488522929131.97,
+    "redshift": 0.7009937297790905,
+    "gas_fraction": 0.12700915994830642,
+    "phi_constraint": 1.3796751003162295
+  },
+  {
+    "cluster_id": "cosmo_phi_31",
+    "mass_msun": 194792771760756.3,
+    "redshift": 0.8885387754737053,
+    "gas_fraction": 0.095044638615308,
+    "phi_constraint": 1.337056834840036
+  },
+  {
+    "cluster_id": "cosmo_phi_32",
+    "mass_msun": 6171205042847.545,
+    "redshift": 0.680911454994804,
+    "gas_fraction": 0.13402173500068223,
+    "phi_constraint": 1.384599559819208
+  },
+  {
+    "cluster_id": "cosmo_phi_33",
+    "mass_msun": 79050259529932.47,
+    "redshift": 0.15357607198498455,
+    "gas_fraction": 0.1504132545652735,
+    "phi_constraint": 1.5501501566094704
+  },
+  {
+    "cluster_id": "cosmo_phi_34",
+    "mass_msun": 57443903003933.03,
+    "redshift": 0.32978048538570226,
+    "gas_fraction": 0.08907668244068591,
+    "phi_constraint": 1.485435003562934
+  },
+  {
+    "cluster_id": "cosmo_phi_35",
+    "mass_msun": 42555560131040.95,
+    "redshift": 0.9239542463624995,
+    "gas_fraction": 0.11772666463178978,
+    "phi_constraint": 1.3296251409731612
+  },
+  {
+    "cluster_id": "cosmo_phi_36",
+    "mass_msun": 129606521209884.3,
+    "redshift": 0.9532242063413916,
+    "gas_fraction": 0.12321960093237772,
+    "phi_constraint": 1.323616007853441
+  },
+  {
+    "cluster_id": "cosmo_phi_37",
+    "mass_msun": 18671328255996.457,
+    "redshift": 0.5939848221240706,
+    "gas_fraction": 0.08923620306817172,
+    "phi_constraint": 1.4068324776316077
+  },
+  {
+    "cluster_id": "cosmo_phi_38",
+    "mass_msun": 30578831432654.727,
+    "redshift": 0.3592661652293445,
+    "gas_fraction": 0.04536051385025394,
+    "phi_constraint": 1.4756939210927702
+  },
+  {
+    "cluster_id": "cosmo_phi_39",
+    "mass_msun": 345717511072036.5,
+    "redshift": 0.9157269865868404,
+    "gas_fraction": 0.100119356828601,
+    "phi_constraint": 1.331335630309
+  },
+  {
+    "cluster_id": "cosmo_phi_40",
+    "mass_msun": 17723580851033.73,
+    "redshift": 0.7401138477546676,
+    "gas_fraction": 0.15750024457847528,
+    "phi_constraint": 1.3702958464085215
+  },
+  {
+    "cluster_id": "cosmo_phi_41",
+    "mass_msun": 22336053447697.277,
+    "redshift": 0.8764371940494277,
+    "gas_fraction": 0.1077463212882303,
+    "phi_constraint": 1.3396379143394086
+  },
+  {
+    "cluster_id": "cosmo_phi_42",
+    "mass_msun": 221826205736622.84,
+    "redshift": 0.9910978981202225,
+    "gas_fraction": 0.06732226461220055,
+    "phi_constraint": 1.3160120202627323
+  },
+  {
+    "cluster_id": "cosmo_phi_43",
+    "mass_msun": 122426910284568.48,
+    "redshift": 0.44201663361203836,
+    "gas_fraction": 0.04103041589977457,
+    "phi_constraint": 1.4497614894835675
+  },
+  {
+    "cluster_id": "cosmo_phi_44",
+    "mass_msun": 23497284001646.938,
+    "redshift": 0.19005297407100857,
+    "gas_fraction": 0.10770680330375951,
+    "phi_constraint": 1.5357401978766942
+  },
+  {
+    "cluster_id": "cosmo_phi_45",
+    "mass_msun": 114510081554763.05,
+    "redshift": 0.39632110407914956,
+    "gas_fraction": 0.09970692580290272,
+    "phi_constraint": 1.4638347398011706
+  },
+  {
+    "cluster_id": "cosmo_phi_46",
+    "mass_msun": 45896684430468.46,
+    "redshift": 0.1986787171851802,
+    "gas_fraction": 0.10846648556229041,
+    "phi_constraint": 1.5324164379396286
+  },
+  {
+    "cluster_id": "cosmo_phi_47",
+    "mass_msun": 99805031471648.23,
+    "redshift": 0.7620062006587637,
+    "gas_fraction": 0.14071131086084088,
+    "phi_constraint": 1.365165833602737
+  },
+  {
+    "cluster_id": "cosmo_phi_48",
+    "mass_msun": 192939761605911.75,
+    "redshift": 0.18543535637872977,
+    "gas_fraction": 0.15325952048679004,
+    "phi_constraint": 1.5375324038019864
+  },
+  {
+    "cluster_id": "cosmo_phi_49",
+    "mass_msun": 14933209103886.89,
+    "redshift": 0.7123745612761783,
+    "gas_fraction": 0.11667694698143895,
+    "phi_constraint": 1.376917786519331
+  },
+  {
+    "cluster_id": "cosmo_phi_50",
+    "mass_msun": 10251570320352.209,
+    "redshift": 0.6782743870890524,
+    "gas_fraction": 0.16056539674902742,
+    "phi_constraint": 1.3852518864300076
+  },
+  {
+    "cluster_id": "cosmo_phi_51",
+    "mass_msun": 12873384614263.795,
+    "redshift": 0.22036553521043833,
+    "gas_fraction": 0.1492852885354143,
+    "phi_constraint": 1.524195447132591
+  },
+  {
+    "cluster_id": "cosmo_phi_52",
+    "mass_msun": 42986109458311.164,
+    "redshift": 0.6611791026234966,
+    "gas_fraction": 0.09033332892544772,
+    "phi_constraint": 1.3895132822339058
+  },
+  {
+    "cluster_id": "cosmo_phi_53",
+    "mass_msun": 168564929258611.16,
+    "redshift": 0.6593658783376529,
+    "gas_fraction": 0.11121556427900377,
+    "phi_constraint": 1.3899686133220097
+  },
+  {
+    "cluster_id": "cosmo_phi_54",
+    "mass_msun": 286227199134364.8,
+    "redshift": 0.8940483554882317,
+    "gas_fraction": 0.11572873225259714,
+    "phi_constraint": 1.3358888392037322
+  },
+  {
+    "cluster_id": "cosmo_phi_55",
+    "mass_msun": 36482338287404.41,
+    "redshift": 0.5711077688798597,
+    "gas_fraction": 0.08773723421127247,
+    "phi_constraint": 1.4129469211001762
+  },
+  {
+    "cluster_id": "cosmo_phi_56",
+    "mass_msun": 180425107720035.66,
+    "redshift": 0.5339477772175578,
+    "gas_fraction": 0.04199247763459354,
+    "phi_constraint": 1.423129653020841
+  },
+  {
+    "cluster_id": "cosmo_phi_57",
+    "mass_msun": 480790587849675.9,
+    "redshift": 0.7837530448143724,
+    "gas_fraction": 0.14490699436862975,
+    "phi_constraint": 1.3601513033529276
+  },
+  {
+    "cluster_id": "cosmo_phi_58",
+    "mass_msun": 749333115215021.1,
+    "redshift": 0.15983858873893114,
+    "gas_fraction": 0.122796553033005,
+    "phi_constraint": 1.547634398695794
+  },
+  {
+    "cluster_id": "cosmo_phi_59",
+    "mass_msun": 627743338347991.6,
+    "redshift": 0.6126008543989994,
+    "gas_fraction": 0.09962420236353094,
+    "phi_constraint": 1.4019404758745904
+  },
+  {
+    "cluster_id": "cosmo_phi_60",
+    "mass_msun": 13360508819023.793,
+    "redshift": 0.9997107518438457,
+    "gas_fraction": 0.04144804218983891,
+    "phi_constraint": 1.3143090118533975
+  },
+  {
+    "cluster_id": "cosmo_phi_61",
+    "mass_msun": 109465507404085.69,
+    "redshift": 0.5570183521489329,
+    "gas_fraction": 0.0926208323373042,
+    "phi_constraint": 1.4167705502463044
+  },
+  {
+    "cluster_id": "cosmo_phi_62",
+    "mass_msun": 51650007453769.625,
+    "redshift": 0.719225586670116,
+    "gas_fraction": 0.16140255581201168,
+    "phi_constraint": 1.3752694015416447
+  },
+  {
+    "cluster_id": "cosmo_phi_63",
+    "mass_msun": 16327073942394.285,
+    "redshift": 0.10428322252860983,
+    "gas_fraction": 0.1241845001232992,
+    "phi_constraint": 1.5705924233987107
+  },
+  {
+    "cluster_id": "cosmo_phi_64",
+    "mass_msun": 71705497911473.88,
+    "redshift": 0.8567064926105261,
+    "gas_fraction": 0.11264747344926242,
+    "phi_constraint": 1.3438929121620098
+  },
+  {
+    "cluster_id": "cosmo_phi_65",
+    "mass_msun": 43782342004910.02,
+    "redshift": 0.671311021053273,
+    "gas_fraction": 0.12344403876707687,
+    "phi_constraint": 1.3869808254534866
+  },
+  {
+    "cluster_id": "cosmo_phi_66",
+    "mass_msun": 77465503261516.38,
+    "redshift": 0.6924641074080148,
+    "gas_fraction": 0.12829902918890815,
+    "phi_constraint": 1.381757403034588
+  },
+  {
+    "cluster_id": "cosmo_phi_67",
+    "mass_msun": 45197474626747.89,
+    "redshift": 0.6923328801653709,
+    "gas_fraction": 0.13791598473152258,
+    "phi_constraint": 1.3817895455217866
+  },
+  {
+    "cluster_id": "cosmo_phi_68",
+    "mass_msun": 44063770310704.22,
+    "redshift": 0.5325798892421946,
+    "gas_fraction": 0.05946996000257713,
+    "phi_constraint": 1.4235105938394885
+  },
+  {
+    "cluster_id": "cosmo_phi_69",
+    "mass_msun": 57940180782530.01,
+    "redshift": 0.4804004399793169,
+    "gas_fraction": 0.024055808254380452,
+    "phi_constraint": 1.4383808042550967
+  },
+  {
+    "cluster_id": "cosmo_phi_70",
+    "mass_msun": 65931128375074.5,
+    "redshift": 0.9607100630536612,
+    "gas_fraction": 0.07992711603138256,
+    "phi_constraint": 1.3220979350327284
+  },
+  {
+    "cluster_id": "cosmo_phi_71",
+    "mass_msun": 115806218832412.92,
+    "redshift": 0.927437768258961,
+    "gas_fraction": 0.11466482122189829,
+    "phi_constraint": 1.3289037618529589
+  },
+  {
+    "cluster_id": "cosmo_phi_72",
+    "mass_msun": 21274485410191.086,
+    "redshift": 0.7085339108868233,
+    "gas_fraction": 0.14948643489806857,
+    "phi_constraint": 1.3778456178781295
+  },
+  {
+    "cluster_id": "cosmo_phi_73",
+    "mass_msun": 124557852267329.84,
+    "redshift": 0.7978476410269694,
+    "gas_fraction": 0.14539007276131474,
+    "phi_constraint": 1.3569435308105497
+  },
+  {
+    "cluster_id": "cosmo_phi_74",
+    "mass_msun": 312801223612065.8,
+    "redshift": 0.46782959142967195,
+    "gas_fraction": 0.054832378392369006,
+    "phi_constraint": 1.442065372821788
+  },
+  {
+    "cluster_id": "cosmo_phi_75",
+    "mass_msun": 238667196056359.9,
+    "redshift": 0.5190434873535735,
+    "gas_fraction": 0.04765558527074655,
+    "phi_constraint": 1.4273043129704286
+  },
+  {
+    "cluster_id": "cosmo_phi_76",
+    "mass_msun": 473936371638062.4,
+    "redshift": 0.940238632590174,
+    "gas_fraction": 0.09039298372593216,
+    "phi_constraint": 1.3262674038476485
+  },
+  {
+    "cluster_id": "cosmo_phi_77",
+    "mass_msun": 185749107209068.28,
+    "redshift": 0.9659250151206028,
+    "gas_fraction": 0.07076366823588676,
+    "phi_constraint": 1.3210448295169164
+  },
+  {
+    "cluster_id": "cosmo_phi_78",
+    "mass_msun": 114505274409803.11,
+    "redshift": 0.8075995790655649,
+    "gas_fraction": 0.1301464047210824,
+    "phi_constraint": 1.3547431719279142
+  },
+  {
+    "cluster_id": "cosmo_phi_79",
+    "mass_msun": 79106068302567.25,
+    "redshift": 0.5469725636141137,
+    "gas_fraction": 0.09116092388376171,
+    "phi_constraint": 1.4195243833366933
+  },
+  {
+    "cluster_id": "cosmo_phi_80",
+    "mass_msun": 119771057274383.62,
+    "redshift": 0.8677560024331955,
+    "gas_fraction": 0.14435260254050314,
+    "phi_constraint": 1.3415028449197157
+  },
+  {
+    "cluster_id": "cosmo_phi_81",
+    "mass_msun": 188776134413087.44,
+    "redshift": 0.6682503355710333,
+    "gas_fraction": 0.13916024557535162,
+    "phi_constraint": 1.3877437305559261
+  },
+  {
+    "cluster_id": "cosmo_phi_82",
+    "mass_msun": 127267034025120.64,
+    "redshift": 0.9454279450667535,
+    "gas_fraction": 0.07488403657250661,
+    "phi_constraint": 1.325205089843462
+  },
+  {
+    "cluster_id": "cosmo_phi_83",
+    "mass_msun": 101027870218918.78,
+    "redshift": 0.4985889959397569,
+    "gas_fraction": 0.05558900735014951,
+    "phi_constraint": 1.4331210612351828
+  },
+  {
+    "cluster_id": "cosmo_phi_84",
+    "mass_msun": 140869716952893.97,
+    "redshift": 0.7730154617925655,
+    "gas_fraction": 0.14618006785986495,
+    "phi_constraint": 1.3626172525020694
+  },
+  {
+    "cluster_id": "cosmo_phi_85",
+    "mass_msun": 235856772147104.62,
+    "redshift": 0.6972463826114159,
+    "gas_fraction": 0.14308064634891723,
+    "phi_constraint": 1.3805882496393862
+  },
+  {
+    "cluster_id": "cosmo_phi_86",
+    "mass_msun": 108857662286598.08,
+    "redshift": 0.29130495285439817,
+    "gas_fraction": 0.08429827576808491,
+    "phi_constraint": 1.4985767667632461
+  },
+  {
+    "cluster_id": "cosmo_phi_87",
+    "mass_msun": 130189590156971.5,
+    "redshift": 0.8808516276610445,
+    "gas_fraction": 0.06768868695482666,
+    "phi_constraint": 1.3386938834099769
+  },
+  {
+    "cluster_id": "cosmo_phi_88",
+    "mass_msun": 69236953107965.69,
+    "redshift": 0.30262230817405505,
+    "gas_fraction": 0.13278064004395995,
+    "phi_constraint": 1.4946588804572645
+  },
+  {
+    "cluster_id": "cosmo_phi_89",
+    "mass_msun": 14266936916853.463,
+    "redshift": 0.38715348786366044,
+    "gas_fraction": 0.09580302055062018,
+    "phi_constraint": 1.466730370827576
+  },
+  {
+    "cluster_id": "cosmo_phi_90",
+    "mass_msun": 820077919208998.4,
+    "redshift": 0.5459127238456483,
+    "gas_fraction": 0.0784402688532833,
+    "phi_constraint": 1.4198162706168973
+  },
+  {
+    "cluster_id": "cosmo_phi_91",
+    "mass_msun": 85399025710874.38,
+    "redshift": 0.8299856549664603,
+    "gas_fraction": 0.1654238184420075,
+    "phi_constraint": 1.3497499953317613
+  },
+  {
+    "cluster_id": "cosmo_phi_92",
+    "mass_msun": 179587736207204.75,
+    "redshift": 0.7866298193212499,
+    "gas_fraction": 0.13437845133388812,
+    "phi_constraint": 1.359493911034602
+  },
+  {
+    "cluster_id": "cosmo_phi_93",
+    "mass_msun": 24451836352126.547,
+    "redshift": 0.5216536558360247,
+    "gas_fraction": 0.01224301283980854,
+    "phi_constraint": 1.4265693736656604
+  },
+  {
+    "cluster_id": "cosmo_phi_94",
+    "mass_msun": 462431934751257.6,
+    "redshift": 0.5104336995177183,
+    "gas_fraction": 0.0276863957025417,
+    "phi_constraint": 1.4297402389913068
+  },
+  {
+    "cluster_id": "cosmo_phi_95",
+    "mass_msun": 200458869861191.25,
+    "redshift": 0.16104370022010622,
+    "gas_fraction": 0.13520073214709152,
+    "phi_constraint": 1.5471523109158618
+  },
+  {
+    "cluster_id": "cosmo_phi_96",
+    "mass_msun": 147516897560967.56,
+    "redshift": 0.17323102573851717,
+    "gas_fraction": 0.13678677850079113,
+    "phi_constraint": 1.5423132104143022
+  },
+  {
+    "cluster_id": "cosmo_phi_97",
+    "mass_msun": 129073519314976.97,
+    "redshift": 0.876867439596183,
+    "gas_fraction": 0.15018728643235255,
+    "phi_constraint": 1.3395457789837608
+  },
+  {
+    "cluster_id": "cosmo_phi_98",
+    "mass_msun": 201906595499487.97,
+    "redshift": 0.8654665106366575,
+    "gas_fraction": 0.13258012108675649,
+    "phi_constraint": 1.341996561853858
+  },
+  {
+    "cluster_id": "cosmo_phi_99",
+    "mass_msun": 20414287947296.766,
+    "redshift": 0.10971252819610963,
+    "gas_fraction": 0.1470052166649159,
+    "phi_constraint": 1.5682832121422614
+  },
+  {
+    "cluster_id": "cosmo_phi_100",
+    "mass_msun": 176626035750241.88,
+    "redshift": 0.3135085394945517,
+    "gas_fraction": 0.10087035047351381,
+    "phi_constraint": 1.4909317731652514
+  },
+  {
+    "cluster_id": "cosmo_phi_101",
+    "mass_msun": 19573762904201.98,
+    "redshift": 0.29420303881229,
+    "gas_fraction": 0.11447559379856202,
+    "phi_constraint": 1.497569255815336
+  },
+  {
+    "cluster_id": "cosmo_phi_102",
+    "mass_msun": 100598005184184.56,
+    "redshift": 0.8086018979923253,
+    "gas_fraction": 0.13467829894445296,
+    "phi_constraint": 1.3545178904782302
+  },
+  {
+    "cluster_id": "cosmo_phi_103",
+    "mass_msun": 15997443834254.736,
+    "redshift": 0.22457716047940673,
+    "gas_fraction": 0.1337592792115349,
+    "phi_constraint": 1.5226209242950186
+  },
+  {
+    "cluster_id": "cosmo_phi_104",
+    "mass_msun": 76019364815231.62,
+    "redshift": 0.7728039091992597,
+    "gas_fraction": 0.17480701877584692,
+    "phi_constraint": 1.3626660316997583
+  },
+  {
+    "cluster_id": "cosmo_phi_105",
+    "mass_msun": 807728637189210.4,
+    "redshift": 0.2005228278478149,
+    "gas_fraction": 0.16780513277876147,
+    "phi_constraint": 1.5317098792466934
+  },
+  {
+    "cluster_id": "cosmo_phi_106",
+    "mass_msun": 107219868574642.62,
+    "redshift": 0.9877327600393311,
+    "gas_fraction": 0.08476644890469637,
+    "phi_constraint": 1.3166800085400545
+  },
+  {
+    "cluster_id": "cosmo_phi_107",
+    "mass_msun": 472843399345625.2,
+    "redshift": 0.7563158903153279,
+    "gas_fraction": 0.189404536173169,
+    "phi_constraint": 1.366491237168644
+  },
+  {
+    "cluster_id": "cosmo_phi_108",
+    "mass_msun": 130403304320051.11,
+    "redshift": 0.9870489607837903,
+    "gas_fraction": 0.0769907098406979,
+    "phi_constraint": 1.3168159241224089
+  },
+  {
+    "cluster_id": "cosmo_phi_109",
+    "mass_msun": 103084956174727.6,
+    "redshift": 0.9996384713592623,
+    "gas_fraction": 0.0683327698282285,
+    "phi_constraint": 1.3143232640832563
+  },
+  {
+    "cluster_id": "cosmo_phi_110",
+    "mass_msun": 126804191105083.9,
+    "redshift": 0.22518284271602612,
+    "gas_fraction": 0.12247691899070212,
+    "phi_constraint": 1.5223950680321316
+  },
+  {
+    "cluster_id": "cosmo_phi_111",
+    "mass_msun": 82352478981979.53,
+    "redshift": 0.4871813393475022,
+    "gas_fraction": 0.03239061226826643,
+    "phi_constraint": 1.4364101392070732
+  },
+  {
+    "cluster_id": "cosmo_phi_112",
+    "mass_msun": 1786315547285525.8,
+    "redshift": 0.5673740997568022,
+    "gas_fraction": 0.07419494863964837,
+    "phi_constraint": 1.413955822007557
+  },
+  {
+    "cluster_id": "cosmo_phi_113",
+    "mass_msun": 42824489975369.76,
+    "redshift": 0.5035281293054485,
+    "gas_fraction": 0.026503656090734955,
+    "phi_constraint": 1.4317070811046195
+  },
+  {
+    "cluster_id": "cosmo_phi_114",
+    "mass_msun": 137439523612717.44,
+    "redshift": 0.6802915695292143,
+    "gas_fraction": 0.15217888478919017,
+    "phi_constraint": 1.3847527800742578
+  },
+  {
+    "cluster_id": "cosmo_phi_115",
+    "mass_msun": 40021829637685.625,
+    "redshift": 0.27418000523247077,
+    "gas_fraction": 0.11089598323317162,
+    "phi_constraint": 1.5045908089494535
+  },
+  {
+    "cluster_id": "cosmo_phi_116",
+    "mass_msun": 26884022096270.883,
+    "redshift": 0.5755367190643603,
+    "gas_fraction": 0.06496779155938688,
+    "phi_constraint": 1.4117541773996483
+  },
+  {
+    "cluster_id": "cosmo_phi_117",
+    "mass_msun": 156070560911661.7,
+    "redshift": 0.8379109777553467,
+    "gas_fraction": 0.12577060180363223,
+    "phi_constraint": 1.3480012617711035
+  },
+  {
+    "cluster_id": "cosmo_phi_118",
+    "mass_msun": 31811764202586.89,
+    "redshift": 0.8443206626484585,
+    "gas_fraction": 0.14250509410367643,
+    "phi_constraint": 1.3465941104988353
+  },
+  {
+    "cluster_id": "cosmo_phi_119",
+    "mass_msun": 24642581621833.027,
+    "redshift": 0.7088393868450522,
+    "gas_fraction": 0.1547928050312948,
+    "phi_constraint": 1.377771721223371
+  },
+  {
+    "cluster_id": "cosmo_phi_120",
+    "mass_msun": 387159013186114.44,
+    "redshift": 0.21900057324473798,
+    "gas_fraction": 0.15978603230504757,
+    "phi_constraint": 1.5247072567304267
+  },
+  {
+    "cluster_id": "cosmo_phi_121",
+    "mass_msun": 39803757346691.98,
+    "redshift": 0.7246184101355263,
+    "gas_fraction": 0.16547639276334491,
+    "phi_constraint": 1.3739778607932596
+  },
+  {
+    "cluster_id": "cosmo_phi_122",
+    "mass_msun": 94707983977607.89,
+    "redshift": 0.805240830929179,
+    "gas_fraction": 0.1631882455942792,
+    "phi_constraint": 1.3552739660933046
+  },
+  {
+    "cluster_id": "cosmo_phi_123",
+    "mass_msun": 164790770063029.2,
+    "redshift": 0.22354809592940336,
+    "gas_fraction": 0.14028585005147895,
+    "phi_constraint": 1.5230049911423242
+  },
+  {
+    "cluster_id": "cosmo_phi_124",
+    "mass_msun": 113564447630589.7,
+    "redshift": 0.2676571125668047,
+    "gas_fraction": 0.12109804564784019,
+    "phi_constraint": 1.5069092577753538
+  },
+  {
+    "cluster_id": "cosmo_phi_125",
+    "mass_msun": 141266264663139.97,
+    "redshift": 0.5669862585824624,
+    "gas_fraction": 0.0777456629156943,
+    "phi_constraint": 1.414060802402441
+  },
+  {
+    "cluster_id": "cosmo_phi_126",
+    "mass_msun": 32246342805476.227,
+    "redshift": 0.5260290645264051,
+    "gas_fraction": 0.05554262953209557,
+    "phi_constraint": 1.4253410684896497
+  },
+  {
+    "cluster_id": "cosmo_phi_127",
+    "mass_msun": 2717505623819019.5,
+    "redshift": 0.4087691273864569,
+    "gas_fraction": 0.044043521377011764,
+    "phi_constraint": 1.459942302214167
+  },
+  {
+    "cluster_id": "cosmo_phi_128",
+    "mass_msun": 48561745843750.62,
+    "redshift": 0.4676509993552417,
+    "gas_fraction": 0.037425821311373134,
+    "phi_constraint": 1.4421180141810583
+  },
+  {
+    "cluster_id": "cosmo_phi_129",
+    "mass_msun": 8200058423293.852,
+    "redshift": 0.9499899689255978,
+    "gas_fraction": 0.07740744172110173,
+    "phi_constraint": 1.324274227495339
+  },
+  {
+    "cluster_id": "cosmo_phi_130",
+    "mass_msun": 287740767848842.94,
+    "redshift": 0.3435328993539706,
+    "gas_fraction": 0.05620234741648623,
+    "phi_constraint": 1.4808570886229955
+  },
+  {
+    "cluster_id": "cosmo_phi_131",
+    "mass_msun": 95738579426390.77,
+    "redshift": 0.6717678817809736,
+    "gas_fraction": 0.1161291174343339,
+    "phi_constraint": 1.3868671043394105
+  },
+  {
+    "cluster_id": "cosmo_phi_132",
+    "mass_msun": 522413543096942.5,
+    "redshift": 0.6726851330984506,
+    "gas_fraction": 0.11078027037746944,
+    "phi_constraint": 1.3866389054003145
+  },
+  {
+    "cluster_id": "cosmo_phi_133",
+    "mass_msun": 152473935956930.38,
+    "redshift": 0.9379456308759678,
+    "gas_fraction": 0.1218204535211895,
+    "phi_constraint": 1.3267379859142805
+  },
+  {
+    "cluster_id": "cosmo_phi_134",
+    "mass_msun": 41721055505536.266,
+    "redshift": 0.8081205086952757,
+    "gas_fraction": 0.11849606345118383,
+    "phi_constraint": 1.3546260673936124
+  },
+  {
+    "cluster_id": "cosmo_phi_135",
+    "mass_msun": 39207336483565.086,
+    "redshift": 0.8202590937030588,
+    "gas_fraction": 0.1269696940302375,
+    "phi_constraint": 1.3519096791400012
+  },
+  {
+    "cluster_id": "cosmo_phi_136",
+    "mass_msun": 24056178638371.05,
+    "redshift": 0.8474796117766226,
+    "gas_fraction": 0.1686674344322517,
+    "phi_constraint": 1.3459029466366577
+  },
+  {
+    "cluster_id": "cosmo_phi_137",
+    "mass_msun": 96165584875150.88,
+    "redshift": 0.6026238498439368,
+    "gas_fraction": 0.062212488683606196,
+    "phi_constraint": 1.4045530908665163
+  },
+  {
+    "cluster_id": "cosmo_phi_138",
+    "mass_msun": 51152756667873.5,
+    "redshift": 0.6342877266347536,
+    "gas_fraction": 0.1009624619301122,
+    "phi_constraint": 1.3963332653240892
+  },
+  {
+    "cluster_id": "cosmo_phi_139",
+    "mass_msun": 37088949647123.805,
+    "redshift": 0.6056872468711694,
+    "gas_fraction": 0.13272725379376205,
+    "phi_constraint": 1.4037486540145419
+  },
+  {
+    "cluster_id": "cosmo_phi_140",
+    "mass_msun": 137548713041036.72,
+    "redshift": 0.7105378287369511,
+    "gas_fraction": 0.09700062370219212,
+    "phi_constraint": 1.3773611698414865
+  },
+  {
+    "cluster_id": "cosmo_phi_141",
+    "mass_msun": 115687412879300.94,
+    "redshift": 0.8815557529649135,
+    "gas_fraction": 0.12396726864156948,
+    "phi_constraint": 1.3385435718833885
+  },
+  {
+    "cluster_id": "cosmo_phi_142",
+    "mass_msun": 73979706645488.67,
+    "redshift": 0.8445798665133735,
+    "gas_fraction": 0.14918086531277563,
+    "phi_constraint": 1.3465373399183167
+  },
+  {
+    "cluster_id": "cosmo_phi_143",
+    "mass_msun": 265234573875982.62,
+    "redshift": 0.9534881293631138,
+    "gas_fraction": 0.11808929865258838,
+    "phi_constraint": 1.3235623577824174
+  },
+  {
+    "cluster_id": "cosmo_phi_144",
+    "mass_msun": 183257755361659.53,
+    "redshift": 0.8827465991242954,
+    "gas_fraction": 0.1201227199724404,
+    "phi_constraint": 1.3382895250870808
+  },
+  {
+    "cluster_id": "cosmo_phi_145",
+    "mass_msun": 194053002748817.38,
+    "redshift": 0.5297676612765566,
+    "gas_fraction": 0.0442839703858834,
+    "phi_constraint": 1.424295156749714
+  },
+  {
+    "cluster_id": "cosmo_phi_146",
+    "mass_msun": 283256767791238.6,
+    "redshift": 0.77383330459403,
+    "gas_fraction": 0.14102352054127354,
+    "phi_constraint": 1.3624287477669328
+  },
+  {
+    "cluster_id": "cosmo_phi_147",
+    "mass_msun": 283405302073145.06,
+    "redshift": 0.29689673017346363,
+    "gas_fraction": 0.1116847603769217,
+    "phi_constraint": 1.4966354284846803
+  },
+  {
+    "cluster_id": "cosmo_phi_148",
+    "mass_msun": 77709929019374.4,
+    "redshift": 0.4119953764320917,
+    "gas_fraction": 0.042811145772437054,
+    "phi_constraint": 1.4589407601763558
+  },
+  {
+    "cluster_id": "cosmo_phi_149",
+    "mass_msun": 155326127359747.62,
+    "redshift": 0.6575320288459493,
+    "gas_fraction": 0.10116407596562127,
+    "phi_constraint": 1.3904297821128189
+  },
+  {
+    "cluster_id": "cosmo_phi_150",
+    "mass_msun": 104516154360732.69,
+    "redshift": 0.9333873552034828,
+    "gas_fraction": 0.11958410383655921,
+    "phi_constraint": 1.327675612881313
+  },
+  {
+    "cluster_id": "cosmo_phi_151",
+    "mass_msun": 154820389855138.78,
+    "redshift": 0.16892826683087814,
+    "gas_fraction": 0.1587980867652952,
+    "phi_constraint": 1.5440141710965536
+  },
+  {
+    "cluster_id": "cosmo_phi_152",
+    "mass_msun": 310087982613695.6,
+    "redshift": 0.14941555306855087,
+    "gas_fraction": 0.13410453895696275,
+    "phi_constraint": 1.551831343637658
+  },
+  {
+    "cluster_id": "cosmo_phi_153",
+    "mass_msun": 119187738475609.8,
+    "redshift": 0.15302034980658252,
+    "gas_fraction": 0.1482231479671925,
+    "phi_constraint": 1.5503742569586285
+  },
+  {
+    "cluster_id": "cosmo_phi_154",
+    "mass_msun": 18100198414940.14,
+    "redshift": 0.1550003164481558,
+    "gas_fraction": 0.14344490592994416,
+    "phi_constraint": 1.5495764564281236
+  },
+  {
+    "cluster_id": "cosmo_phi_155",
+    "mass_msun": 25585068681927.95,
+    "redshift": 0.991946969017989,
+    "gas_fraction": 0.0923305828899745,
+    "phi_constraint": 1.3158437094192041
+  },
+  {
+    "cluster_id": "cosmo_phi_156",
+    "mass_msun": 41300841007992.97,
+    "redshift": 0.21700602705307132,
+    "gas_fraction": 0.1380108943413015,
+    "phi_constraint": 1.5254564780622883
+  },
+  {
+    "cluster_id": "cosmo_phi_157",
+    "mass_msun": 55698428430620.375,
+    "redshift": 0.9908819767087313,
+    "gas_fraction": 0.04499170285341928,
+    "phi_constraint": 1.3160548371233913
+  },
+  {
+    "cluster_id": "cosmo_phi_158",
+    "mass_msun": 312534585958949.1,
+    "redshift": 0.7098612571068095,
+    "gas_fraction": 0.12188403954464161,
+    "phi_constraint": 1.3775246488009163
+  },
+  {
+    "cluster_id": "cosmo_phi_159",
+    "mass_msun": 186738477110797.8,
+    "redshift": 0.23530846373460518,
+    "gas_fraction": 0.14764083347613943,
+    "phi_constraint": 1.5186406308882756
+  },
+  {
+    "cluster_id": "cosmo_phi_160",
+    "mass_msun": 364200330597732.2,
+    "redshift": 0.7704621231334261,
+    "gas_fraction": 0.1706222064342261,
+    "phi_constraint": 1.3632065001065692
+  },
+  {
+    "cluster_id": "cosmo_phi_161",
+    "mass_msun": 123157974332876.66,
+    "redshift": 0.19618781423656792,
+    "gas_fraction": 0.11055822249283759,
+    "phi_constraint": 1.533373057421286
+  },
+  {
+    "cluster_id": "cosmo_phi_162",
+    "mass_msun": 189405137063707.06,
+    "redshift": 0.9911785383520763,
+    "gas_fraction": 0.08699649767697362,
+    "phi_constraint": 1.3159960309855256
+  },
+  {
+    "cluster_id": "cosmo_phi_163",
+    "mass_msun": 54518083619638.3,
+    "redshift": 0.15292874216026237,
+    "gas_fraction": 0.10913059015093618,
+    "phi_constraint": 1.55041121210994
+  },
+  {
+    "cluster_id": "cosmo_phi_164",
+    "mass_msun": 62314199841082.64,
+    "redshift": 0.29106610655373116,
+    "gas_fraction": 0.127310692197303,
+    "phi_constraint": 1.4986599320655745
+  },
+  {
+    "cluster_id": "cosmo_phi_165",
+    "mass_msun": 64488944332249.42,
+    "redshift": 0.27713197886553687,
+    "gas_fraction": 0.12246627887313456,
+    "phi_constraint": 1.5035466466382696
+  },
+  {
+    "cluster_id": "cosmo_phi_166",
+    "mass_msun": 143337626074355.2,
+    "redshift": 0.9123256950915639,
+    "gas_fraction": 0.09285520433417017,
+    "phi_constraint": 1.3320455686570352
+  },
+  {
+    "cluster_id": "cosmo_phi_167",
+    "mass_msun": 184453742751062.44,
+    "redshift": 0.6423752644992162,
+    "gas_fraction": 0.08858920157158796,
+    "phi_constraint": 1.394266913699273
+  },
+  {
+    "cluster_id": "cosmo_phi_168",
+    "mass_msun": 36972241344802.93,
+    "redshift": 0.1238748852836763,
+    "gas_fraction": 0.16475319458819657,
+    "phi_constraint": 1.5623281226665544
+  },
+  {
+    "cluster_id": "cosmo_phi_169",
+    "mass_msun": 337388661926295.2,
+    "redshift": 0.22900842272451233,
+    "gas_fraction": 0.15441448572739075,
+    "phi_constraint": 1.5209718718287046
+  },
+  {
+    "cluster_id": "cosmo_phi_170",
+    "mass_msun": 59180069268828.7,
+    "redshift": 0.9242954886066082,
+    "gas_fraction": 0.11719649045070009,
+    "phi_constraint": 1.3295544004189728
+  },
+  {
+    "cluster_id": "cosmo_phi_171",
+    "mass_msun": 84636154768661.5,
+    "redshift": 0.7202567558856944,
+    "gas_fraction": 0.13345139373740167,
+    "phi_constraint": 1.3750220373460609
+  },
+  {
+    "cluster_id": "cosmo_phi_172",
+    "mass_msun": 94780980089504.61,
+    "redshift": 0.1999582634498655,
+    "gas_fraction": 0.16004604461781474,
+    "phi_constraint": 1.531926038391125
+  },
+  {
+    "cluster_id": "cosmo_phi_173",
+    "mass_msun": 169956910215517.88,
+    "redshift": 0.9413346509658076,
+    "gas_fraction": 0.07115890493010125,
+    "phi_constraint": 1.3260427284002898
+  },
+  {
+    "cluster_id": "cosmo_phi_174",
+    "mass_msun": 35074356634756.176,
+    "redshift": 0.6278588663752857,
+    "gas_fraction": 0.12873121126257217,
+    "phi_constraint": 1.3979853343942132
+  },
+  {
+    "cluster_id": "cosmo_phi_175",
+    "mass_msun": 40837820603248.45,
+    "redshift": 0.6936264948512332,
+    "gas_fraction": 0.11400374942943786,
+    "phi_constraint": 1.381472832009766
+  },
+  {
+    "cluster_id": "cosmo_phi_176",
+    "mass_msun": 18637915892436.71,
+    "redshift": 0.7727652375279566,
+    "gas_fraction": 0.17486608741530119,
+    "phi_constraint": 1.362674949322254
+  },
+  {
+    "cluster_id": "cosmo_phi_177",
+    "mass_msun": 171915225610490.84,
+    "redshift": 0.8990161746574283,
+    "gas_fraction": 0.11337523156995613,
+    "phi_constraint": 1.3348394738074587
+  },
+  {
+    "cluster_id": "cosmo_phi_178",
+    "mass_msun": 125402761510906.34,
+    "redshift": 0.7180953959846675,
+    "gas_fraction": 0.15729044005542614,
+    "phi_constraint": 1.3755407413541247
+  },
+  {
+    "cluster_id": "cosmo_phi_179",
+    "mass_msun": 132260408822337.2,
+    "redshift": 0.16919166698014057,
+    "gas_fraction": 0.12002814986673224,
+    "phi_constraint": 1.543909810371212
+  },
+  {
+    "cluster_id": "cosmo_phi_180",
+    "mass_msun": 178797518446455.12,
+    "redshift": 0.9704949640548102,
+    "gas_fraction": 0.10220546483735407,
+    "phi_constraint": 1.3201249569386029
+  },
+  {
+    "cluster_id": "cosmo_phi_181",
+    "mass_msun": 139740229169361.11,
+    "redshift": 0.9177520647201051,
+    "gas_fraction": 0.13395131153216566,
+    "phi_constraint": 1.3309137213851518
+  },
+  {
+    "cluster_id": "cosmo_phi_182",
+    "mass_msun": 100195427185788.08,
+    "redshift": 0.3877313956743784,
+    "gas_fraction": 0.0576786323255689,
+    "phi_constraint": 1.4665471022536194
+  },
+  {
+    "cluster_id": "cosmo_phi_183",
+    "mass_msun": 104555204725446.61,
+    "redshift": 0.4261162142017112,
+    "gas_fraction": 0.05013544445286053,
+    "phi_constraint": 1.4545919004160304
+  },
+  {
+    "cluster_id": "cosmo_phi_184",
+    "mass_msun": 258851466083075.97,
+    "redshift": 0.6922108131058895,
+    "gas_fraction": 0.13311175589743657,
+    "phi_constraint": 1.381819447244501
+  },
+  {
+    "cluster_id": "cosmo_phi_185",
+    "mass_msun": 1084089866658291.0,
+    "redshift": 0.3666591146094176,
+    "gas_fraction": 0.055545068122913745,
+    "phi_constraint": 1.4732945408281337
+  },
+  {
+    "cluster_id": "cosmo_phi_186",
+    "mass_msun": 69840613600892.42,
+    "redshift": 0.7937868019431686,
+    "gas_fraction": 0.12611979517164956,
+    "phi_constraint": 1.3578643708193425
+  },
+  {
+    "cluster_id": "cosmo_phi_187",
+    "mass_msun": 163652489402071.84,
+    "redshift": 0.38073871446591445,
+    "gas_fraction": 0.08540966879533499,
+    "phi_constraint": 1.4687713400113607
+  },
+  {
+    "cluster_id": "cosmo_phi_188",
+    "mass_msun": 410145131859428.4,
+    "redshift": 0.4639493166099391,
+    "gas_fraction": 0.07270972056867117,
+    "phi_constraint": 1.443210991730174
+  },
+  {
+    "cluster_id": "cosmo_phi_189",
+    "mass_msun": 171002474335939.4,
+    "redshift": 0.9521289223057631,
+    "gas_fraction": 0.106605514126314,
+    "phi_constraint": 1.3238387571090993
+  },
+  {
+    "cluster_id": "cosmo_phi_190",
+    "mass_msun": 100722379631641.72,
+    "redshift": 0.6392413790908764,
+    "gas_fraction": 0.11496149702238356,
+    "phi_constraint": 1.3950660428986237
+  },
+  {
+    "cluster_id": "cosmo_phi_191",
+    "mass_msun": 74682375566692.03,
+    "redshift": 0.7621267188779941,
+    "gas_fraction": 0.17302296992438762,
+    "phi_constraint": 1.3651378223436104
+  },
+  {
+    "cluster_id": "cosmo_phi_192",
+    "mass_msun": 435849499904325.3,
+    "redshift": 0.47072681566004326,
+    "gas_fraction": 0.04642357901152225,
+    "phi_constraint": 1.4412125555894848
+  },
+  {
+    "cluster_id": "cosmo_phi_193",
+    "mass_msun": 71846295785799.02,
+    "redshift": 0.7452400407408845,
+    "gas_fraction": 0.12441639274196367,
+    "phi_constraint": 1.3690871357157373
+  },
+  {
+    "cluster_id": "cosmo_phi_194",
+    "mass_msun": 46619496290577.13,
+    "redshift": 0.5568623501372986,
+    "gas_fraction": 0.08984772200613617,
+    "phi_constraint": 1.4168131380778348
+  },
+  {
+    "cluster_id": "cosmo_phi_195",
+    "mass_msun": 152116429294807.3,
+    "redshift": 0.656567330396427,
+    "gas_fraction": 0.10690367164116389,
+    "phi_constraint": 1.3906726467628399
+  },
+  {
+    "cluster_id": "cosmo_phi_196",
+    "mass_msun": 588989969830365.1,
+    "redshift": 0.601536467591773,
+    "gas_fraction": 0.08174896767101063,
+    "phi_constraint": 1.404839114319842
+  },
+  {
+    "cluster_id": "cosmo_phi_197",
+    "mass_msun": 1375085305199344.0,
+    "redshift": 0.4880339647550447,
+    "gas_fraction": 0.03499962473545605,
+    "phi_constraint": 1.4361631759989442
+  },
+  {
+    "cluster_id": "cosmo_phi_198",
+    "mass_msun": 57067985453759.53,
+    "redshift": 0.32836227533902895,
+    "gas_fraction": 0.10360108373571271,
+    "phi_constraint": 1.4859105979452591
+  },
+  {
+    "cluster_id": "cosmo_phi_199",
+    "mass_msun": 82839493637662.0,
+    "redshift": 0.6797066029634384,
+    "gas_fraction": 0.11629787217863155,
+    "phi_constraint": 1.3848974366520952
+  },
+  {
+    "cluster_id": "cosmo_phi_200",
+    "mass_msun": 52633729165851.81,
+    "redshift": 0.6336325744483245,
+    "gas_fraction": 0.11481780672812136,
+    "phi_constraint": 1.3965012374425516
+  },
+  {
+    "cluster_id": "cosmo_phi_201",
+    "mass_msun": 5969320429835.748,
+    "redshift": 0.7835224533810082,
+    "gas_fraction": 0.19282271425820893,
+    "phi_constraint": 1.360204057112171
+  },
+  {
+    "cluster_id": "cosmo_phi_202",
+    "mass_msun": 162467883972529.28,
+    "redshift": 0.8507608437024626,
+    "gas_fraction": 0.12509737994102776,
+    "phi_constraint": 1.3451866526592957
+  },
+  {
+    "cluster_id": "cosmo_phi_203",
+    "mass_msun": 36147419391244.27,
+    "redshift": 0.3292138294585039,
+    "gas_fraction": 0.10494742596951731,
+    "phi_constraint": 1.485624951553506
+  },
+  {
+    "cluster_id": "cosmo_phi_204",
+    "mass_msun": 74568697617235.1,
+    "redshift": 0.4342083980950714,
+    "gas_fraction": 0.06027285586022539,
+    "phi_constraint": 1.452124864654249
+  },
+  {
+    "cluster_id": "cosmo_phi_205",
+    "mass_msun": 253749762345193.94,
+    "redshift": 0.5870073756949713,
+    "gas_fraction": 0.06379266201886134,
+    "phi_constraint": 1.4086852158333112
+  },
+  {
+    "cluster_id": "cosmo_phi_206",
+    "mass_msun": 146090825676276.0,
+    "redshift": 0.4923607449044294,
+    "gas_fraction": 0.05447202787202432,
+    "phi_constraint": 1.434912752130459
+  },
+  {
+    "cluster_id": "cosmo_phi_207",
+    "mass_msun": 48155311670294.93,
+    "redshift": 0.7173260568552157,
+    "gas_fraction": 0.12323980182620836,
+    "phi_constraint": 1.3757255795375147
+  },
+  {
+    "cluster_id": "cosmo_phi_208",
+    "mass_msun": 80948745070788.83,
+    "redshift": 0.8368243926101524,
+    "gas_fraction": 0.17868414427302712,
+    "phi_constraint": 1.3482404378717836
+  },
+  {
+    "cluster_id": "cosmo_phi_209",
+    "mass_msun": 24259540810058.973,
+    "redshift": 0.7403869917360975,
+    "gas_fraction": 0.13720313077390786,
+    "phi_constraint": 1.370231324788903
+  },
+  {
+    "cluster_id": "cosmo_phi_210",
+    "mass_msun": 86984976404992.06,
+    "redshift": 0.6477306659774634,
+    "gas_fraction": 0.12556861810674833,
+    "phi_constraint": 1.3929058838450703
+  },
+  {
+    "cluster_id": "cosmo_phi_211",
+    "mass_msun": 37493891760012.57,
+    "redshift": 0.31020521111956734,
+    "gas_fraction": 0.11510281932870836,
+    "phi_constraint": 1.492058473941347
+  },
+  {
+    "cluster_id": "cosmo_phi_212",
+    "mass_msun": 126546215027997.61,
+    "redshift": 0.3458747370491347,
+    "gas_fraction": 0.12806620886012865,
+    "phi_constraint": 1.4800836048234403
+  },
+  {
+    "cluster_id": "cosmo_phi_213",
+    "mass_msun": 129784200145960.67,
+    "redshift": 0.7464018286846006,
+    "gas_fraction": 0.14428828564835974,
+    "phi_constraint": 1.3688138378889843
+  },
+  {
+    "cluster_id": "cosmo_phi_214",
+    "mass_msun": 32046703714431.652,
+    "redshift": 0.336192190132664,
+    "gas_fraction": 0.10621542151085465,
+    "phi_constraint": 1.4832930489977187
+  },
+  {
+    "cluster_id": "cosmo_phi_215",
+    "mass_msun": 151674133365546.34,
+    "redshift": 0.10905741730109347,
+    "gas_fraction": 0.13738659916903204,
+    "phi_constraint": 1.5685610662191884
+  },
+  {
+    "cluster_id": "cosmo_phi_216",
+    "mass_msun": 28739051663158.727,
+    "redshift": 0.7681328358718056,
+    "gas_fraction": 0.11715388657495451,
+    "phi_constraint": 1.3637450065744752
+  },
+  {
+    "cluster_id": "cosmo_phi_217",
+    "mass_msun": 136942350643663.16,
+    "redshift": 0.688682857563602,
+    "gas_fraction": 0.10947628945656376,
+    "phi_constraint": 1.382684873890192
+  },
+  {
+    "cluster_id": "cosmo_phi_218",
+    "mass_msun": 276242160199131.4,
+    "redshift": 0.6062490395580012,
+    "gas_fraction": 0.07690267476573888,
+    "phi_constraint": 1.4036013457954557
+  },
+  {
+    "cluster_id": "cosmo_phi_219",
+    "mass_msun": 157951377503484.2,
+    "redshift": 0.46422247188896637,
+    "gas_fraction": 0.07036812328524206,
+    "phi_constraint": 1.4431302157992925
+  },
+  {
+    "cluster_id": "cosmo_phi_220",
+    "mass_msun": 57481420108230.016,
+    "redshift": 0.13557254304029398,
+    "gas_fraction": 0.14726336015750188,
+    "phi_constraint": 1.5574824989295755
+  },
+  {
+    "cluster_id": "cosmo_phi_221",
+    "mass_msun": 24179521196140.85,
+    "redshift": 0.49420534589269804,
+    "gas_fraction": 0.008193271208597731,
+    "phi_constraint": 1.4343811011243663
+  },
+  {
+    "cluster_id": "cosmo_phi_222",
+    "mass_msun": 42127568550082.01,
+    "redshift": 0.39164564099453414,
+    "gas_fraction": 0.09502313690717926,
+    "phi_constraint": 1.465308406482169
+  },
+  {
+    "cluster_id": "cosmo_phi_223",
+    "mass_msun": 40108174212418.0,
+    "redshift": 0.3163062557409221,
+    "gas_fraction": 0.10712297372138674,
+    "phi_constraint": 1.4899804039693891
+  },
+  {
+    "cluster_id": "cosmo_phi_224",
+    "mass_msun": 189391105401788.84,
+    "redshift": 0.23814831189679606,
+    "gas_fraction": 0.15135416612483682,
+    "phi_constraint": 1.5175948332132914
+  },
+  {
+    "cluster_id": "cosmo_phi_225",
+    "mass_msun": 110328796484451.8,
+    "redshift": 0.8637522932287968,
+    "gas_fraction": 0.12809398184844437,
+    "phi_constraint": 1.3423667398593147
+  },
+  {
+    "cluster_id": "cosmo_phi_226",
+    "mass_msun": 168584892191953.28,
+    "redshift": 0.9957930825256837,
+    "gas_fraction": 0.05246701642651457,
+    "phi_constraint": 1.3150824629427256
+  },
+  {
+    "cluster_id": "cosmo_phi_227",
+    "mass_msun": 22368837115617.023,
+    "redshift": 0.7159427880574812,
+    "gas_fraction": 0.19439176437324407,
+    "phi_constraint": 1.3760581888073595
+  },
+  {
+    "cluster_id": "cosmo_phi_228",
+    "mass_msun": 166833686367139.4,
+    "redshift": 0.6620288990698088,
+    "gas_fraction": 0.1704194304948334,
+    "phi_constraint": 1.3893001063699602
+  },
+  {
+    "cluster_id": "cosmo_phi_229",
+    "mass_msun": 17905762083752.242,
+    "redshift": 0.5309323622320397,
+    "gas_fraction": 0.06633789342054257,
+    "phi_constraint": 1.4239699980669762
+  },
+  {
+    "cluster_id": "cosmo_phi_230",
+    "mass_msun": 54640229643988.14,
+    "redshift": 0.5939579504530851,
+    "gas_fraction": 0.09853694966498713,
+    "phi_constraint": 1.4068395926969206
+  },
+  {
+    "cluster_id": "cosmo_phi_231",
+    "mass_msun": 35779394669443.87,
+    "redshift": 0.8349917428458762,
+    "gas_fraction": 0.15267374681436227,
+    "phi_constraint": 1.3486442526558184
+  },
+  {
+    "cluster_id": "cosmo_phi_232",
+    "mass_msun": 554241349144073.4,
+    "redshift": 0.38216339262027854,
+    "gas_fraction": 0.05603211748631941,
+    "phi_constraint": 1.4683169910234521
+  },
+  {
+    "cluster_id": "cosmo_phi_233",
+    "mass_msun": 42562424667886.41,
+    "redshift": 0.344721914161935,
+    "gas_fraction": 0.09769544687424339,
+    "phi_constraint": 1.480464150982233
+  },
+  {
+    "cluster_id": "cosmo_phi_234",
+    "mass_msun": 393380006947111.3,
+    "redshift": 0.9564711700657359,
+    "gas_fraction": 0.08491731105161836,
+    "phi_constraint": 1.3229566219197635
+  },
+  {
+    "cluster_id": "cosmo_phi_235",
+    "mass_msun": 112772817468808.11,
+    "redshift": 0.49598288711758476,
+    "gas_fraction": 0.08881979237169807,
+    "phi_constraint": 1.4338695847260705
+  },
+  {
+    "cluster_id": "cosmo_phi_236",
+    "mass_msun": 348389355258615.8,
+    "redshift": 0.874740919956801,
+    "gas_fraction": 0.10418879245785101,
+    "phi_constraint": 1.3400014323818916
+  },
+  {
+    "cluster_id": "cosmo_phi_237",
+    "mass_msun": 110832577134112.17,
+    "redshift": 0.5144607578407411,
+    "gas_fraction": 0.012403819420804527,
+    "phi_constraint": 1.4285986417821654
+  },
+  {
+    "cluster_id": "cosmo_phi_238",
+    "mass_msun": 25797221511302.242,
+    "redshift": 0.9250962589988306,
+    "gas_fraction": 0.06846946048473779,
+    "phi_constraint": 1.3293884623004362
+  },
+  {
+    "cluster_id": "cosmo_phi_239",
+    "mass_msun": 207541474606732.53,
+    "redshift": 0.5837254337242171,
+    "gas_fraction": 0.07486757731659167,
+    "phi_constraint": 1.409560343630006
+  },
+  {
+    "cluster_id": "cosmo_phi_240",
+    "mass_msun": 153115812637029.84,
+    "redshift": 0.8804307000567733,
+    "gas_fraction": 0.1318023608124971,
+    "phi_constraint": 1.3387837749014115
+  },
+  {
+    "cluster_id": "cosmo_phi_241",
+    "mass_msun": 71442076568628.3,
+    "redshift": 0.8067262761307601,
+    "gas_fraction": 0.1379463404153497,
+    "phi_constraint": 1.3549395881374757
+  },
+  {
+    "cluster_id": "cosmo_phi_242",
+    "mass_msun": 53365839136806.66,
+    "redshift": 0.8868699934657872,
+    "gas_fraction": 0.09271951668694726,
+    "phi_constraint": 1.3374114802685964
+  },
+  {
+    "cluster_id": "cosmo_phi_243",
+    "mass_msun": 50009185277237.63,
+    "redshift": 0.24048572233841917,
+    "gas_fraction": 0.13594441106420002,
+    "phi_constraint": 1.5167363991740774
+  },
+  {
+    "cluster_id": "cosmo_phi_244",
+    "mass_msun": 147332068610568.0,
+    "redshift": 0.9682262551842616,
+    "gas_fraction": 0.06979240382168632,
+    "phi_constraint": 1.32058127211674
+  },
+  {
+    "cluster_id": "cosmo_phi_245",
+    "mass_msun": 17268221634577.957,
+    "redshift": 0.5265711709802056,
+    "gas_fraction": 0.06359818188217999,
+    "phi_constraint": 1.4251892021378159
+  },
+  {
+    "cluster_id": "cosmo_phi_246",
+    "mass_msun": 13234351999159.72,
+    "redshift": 0.21957913900883136,
+    "gas_fraction": 0.17478274219685233,
+    "phi_constraint": 1.5244902253216521
+  },
+  {
+    "cluster_id": "cosmo_phi_247",
+    "mass_msun": 6231280734552.566,
+    "redshift": 0.5102074896084318,
+    "gas_fraction": 0.07157616134917391,
+    "phi_constraint": 1.4298044827044156
+  },
+  {
+    "cluster_id": "cosmo_phi_248",
+    "mass_msun": 240862695261504.3,
+    "redshift": 0.97621274567876,
+    "gas_fraction": 0.09158470688418853,
+    "phi_constraint": 1.318977938353347
+  },
+  {
+    "cluster_id": "cosmo_phi_249",
+    "mass_msun": 73196499728212.61,
+    "redshift": 0.11445016914314893,
+    "gas_fraction": 0.1623727663494549,
+    "phi_constraint": 1.5662801496607681
+  },
+  {
+    "cluster_id": "cosmo_phi_250",
+    "mass_msun": 660554566737471.9,
+    "redshift": 0.23010798661772466,
+    "gas_fraction": 0.15931629839009048,
+    "phi_constraint": 1.5205638761260432
+  },
+  {
+    "cluster_id": "cosmo_phi_251",
+    "mass_msun": 8459591910926.804,
+    "redshift": 0.8893999872435245,
+    "gas_fraction": 0.1257548668068436,
+    "phi_constraint": 1.3368739715754545
+  },
+  {
+    "cluster_id": "cosmo_phi_252",
+    "mass_msun": 55490589790741.48,
+    "redshift": 0.48635830325076956,
+    "gas_fraction": 0.03400722988331135,
+    "phi_constraint": 1.4366487065184834
+  },
+  {
+    "cluster_id": "cosmo_phi_253",
+    "mass_msun": 364986340486189.4,
+    "redshift": 0.2834434925005668,
+    "gas_fraction": 0.11556259558118952,
+    "phi_constraint": 1.5013246475631772
+  },
+  {
+    "cluster_id": "cosmo_phi_254",
+    "mass_msun": 432551854486147.6,
+    "redshift": 0.40452557055819305,
+    "gas_fraction": 0.05108522385387103,
+    "phi_constraint": 1.4612642022312405
+  },
+  {
+    "cluster_id": "cosmo_phi_255",
+    "mass_msun": 363023590338249.3,
+    "redshift": 0.5577992301438864,
+    "gas_fraction": 0.09868195282617519,
+    "phi_constraint": 1.4165574574910351
+  },
+  {
+    "cluster_id": "cosmo_phi_256",
+    "mass_msun": 244361059831111.38,
+    "redshift": 0.3043043443954086,
+    "gas_fraction": 0.10914879210368639,
+    "phi_constraint": 1.4940803638010827
+  },
+  {
+    "cluster_id": "cosmo_phi_257",
+    "mass_msun": 136717635640977.75,
+    "redshift": 0.41891411560247416,
+    "gas_fraction": 0.02766173291547499,
+    "phi_constraint": 1.4568029341473154
+  },
+  {
+    "cluster_id": "cosmo_phi_258",
+    "mass_msun": 63077583716566.11,
+    "redshift": 0.6070703639104296,
+    "gas_fraction": 0.09636277265713424,
+    "phi_constraint": 1.4033861060162107
+  },
+  {
+    "cluster_id": "cosmo_phi_259",
+    "mass_msun": 32872491726471.008,
+    "redshift": 0.12605776049404538,
+    "gas_fraction": 0.14444861340199844,
+    "phi_constraint": 1.5614189285231825
+  },
+  {
+    "cluster_id": "cosmo_phi_260",
+    "mass_msun": 22029644092052.996,
+    "redshift": 0.7915262345964719,
+    "gas_fraction": 0.15439957955791958,
+    "phi_constraint": 1.3583781543999736
+  },
+  {
+    "cluster_id": "cosmo_phi_261",
+    "mass_msun": 25609798024479.77,
+    "redshift": 0.5515484243693681,
+    "gas_fraction": 0.06805897910273165,
+    "phi_constraint": 1.4182671369772106
+  },
+  {
+    "cluster_id": "cosmo_phi_262",
+    "mass_msun": 221466603754229.62,
+    "redshift": 0.2278780933164663,
+    "gas_fraction": 0.1646275541140447,
+    "phi_constraint": 1.5213917780761192
+  },
+  {
+    "cluster_id": "cosmo_phi_263",
+    "mass_msun": 94073040851590.1,
+    "redshift": 0.5459801508284324,
+    "gas_fraction": 0.07405529532375184,
+    "phi_constraint": 1.4197976930067122
+  },
+  {
+    "cluster_id": "cosmo_phi_264",
+    "mass_msun": 10748747078165.922,
+    "redshift": 0.8729428659266398,
+    "gas_fraction": 0.12614283915853036,
+    "phi_constraint": 1.3403872293899288
+  },
+  {
+    "cluster_id": "cosmo_phi_265",
+    "mass_msun": 7170957930602.956,
+    "redshift": 0.6669331489612196,
+    "gas_fraction": 0.14119809128877156,
+    "phi_constraint": 1.388072612157901
+  },
+  {
+    "cluster_id": "cosmo_phi_266",
+    "mass_msun": 407424415897891.7,
+    "redshift": 0.7547920561152109,
+    "gas_fraction": 0.1779631121800117,
+    "phi_constraint": 1.3668471209613502
+  },
+  {
+    "cluster_id": "cosmo_phi_267",
+    "mass_msun": 14649894646911.549,
+    "redshift": 0.1571268692224453,
+    "gas_fraction": 0.16601893113722566,
+    "phi_constraint": 1.548721568860599
+  },
+  {
+    "cluster_id": "cosmo_phi_268",
+    "mass_msun": 32891845472488.418,
+    "redshift": 0.1423995598995912,
+    "gas_fraction": 0.11008657548838768,
+    "phi_constraint": 1.5546843689346375
+  },
+  {
+    "cluster_id": "cosmo_phi_269",
+    "mass_msun": 19804049055204.758,
+    "redshift": 0.11882555085874145,
+    "gas_fraction": 0.15939680823241884,
+    "phi_constraint": 1.5644400573099202
+  },
+  {
+    "cluster_id": "cosmo_phi_270",
+    "mass_msun": 264575132721077.34,
+    "redshift": 0.5152444019764175,
+    "gas_fraction": 0.03511673616767032,
+    "phi_constraint": 1.4283769516740277
+  },
+  {
+    "cluster_id": "cosmo_phi_271",
+    "mass_msun": 74908942207743.77,
+    "redshift": 0.8500829164350989,
+    "gas_fraction": 0.15641681527926993,
+    "phi_constraint": 1.3453345090236042
+  },
+  {
+    "cluster_id": "cosmo_phi_272",
+    "mass_msun": 25577556210382.977,
+    "redshift": 0.6298194578417549,
+    "gas_fraction": 0.13872889604540684,
+    "phi_constraint": 1.397480609857429
+  },
+  {
+    "cluster_id": "cosmo_phi_273",
+    "mass_msun": 95798006217184.94,
+    "redshift": 0.9915793480430678,
+    "gas_fraction": 0.08820145681727719,
+    "phi_constraint": 1.3159165712661436
+  },
+  {
+    "cluster_id": "cosmo_phi_274",
+    "mass_msun": 935419684316971.9,
+    "redshift": 0.9023068409081698,
+    "gas_fraction": 0.09304319922047777,
+    "phi_constraint": 1.3341463406401046
+  },
+  {
+    "cluster_id": "cosmo_phi_275",
+    "mass_msun": 318728507208344.3,
+    "redshift": 0.645014943338466,
+    "gas_fraction": 0.09038526788281274,
+    "phi_constraint": 1.3935953418465217
+  },
+  {
+    "cluster_id": "cosmo_phi_276",
+    "mass_msun": 25205062029633.445,
+    "redshift": 0.518313628794695,
+    "gas_fraction": 0.07341485333963228,
+    "phi_constraint": 1.4275101113700008
+  },
+  {
+    "cluster_id": "cosmo_phi_277",
+    "mass_msun": 3164520218244.587,
+    "redshift": 0.7998267893342204,
+    "gas_fraction": 0.15729304174504188,
+    "phi_constraint": 1.35649571659415
+  },
+  {
+    "cluster_id": "cosmo_phi_278",
+    "mass_msun": 841369795587787.1,
+    "redshift": 0.5524740779809697,
+    "gas_fraction": 0.061678661775218975,
+    "phi_constraint": 1.418013393966087
+  },
+  {
+    "cluster_id": "cosmo_phi_279",
+    "mass_msun": 167171471563199.53,
+    "redshift": 0.6994539522980104,
+    "gas_fraction": 0.16169631299110185,
+    "phi_constraint": 1.3800499947316343
+  },
+  {
+    "cluster_id": "cosmo_phi_280",
+    "mass_msun": 41360616503898.14,
+    "redshift": 0.3597973982364293,
+    "gas_fraction": 0.08306997397351744,
+    "phi_constraint": 1.4755209443238495
+  },
+  {
+    "cluster_id": "cosmo_phi_281",
+    "mass_msun": 192727073162659.28,
+    "redshift": 0.317601688974365,
+    "gas_fraction": 0.10428677031099673,
+    "phi_constraint": 1.48954077914674
+  },
+  {
+    "cluster_id": "cosmo_phi_282",
+    "mass_msun": 47647930817848.3,
+    "redshift": 0.10595318594157567,
+    "gas_fraction": 0.1795959437219037,
+    "phi_constraint": 1.5698805797376392
+  },
+  {
+    "cluster_id": "cosmo_phi_283",
+    "mass_msun": 141366514440134.8,
+    "redshift": 0.4481419475830193,
+    "gas_fraction": 0.09015893521741723,
+    "phi_constraint": 1.4479191102010576
+  },
+  {
+    "cluster_id": "cosmo_phi_284",
+    "mass_msun": 33793387935624.855,
+    "redshift": 0.5786601339344837,
+    "gas_fraction": 0.05780739238894757,
+    "phi_constraint": 1.4109156401825758
+  },
+  {
+    "cluster_id": "cosmo_phi_285",
+    "mass_msun": 72106333997829.75,
+    "redshift": 0.9348319878109865,
+    "gas_fraction": 0.10607863178564625,
+    "phi_constraint": 1.3273781444297097
+  },
+  {
+    "cluster_id": "cosmo_phi_286",
+    "mass_msun": 91156840954157.11,
+    "redshift": 0.8901912478536481,
+    "gas_fraction": 0.11400325657469478,
+    "phi_constraint": 1.3367060567036395
+  },
+  {
+    "cluster_id": "cosmo_phi_287",
+    "mass_msun": 195047540916470.66,
+    "redshift": 0.6282927600011521,
+    "gas_fraction": 0.1372485928576,
+    "phi_constraint": 1.3978735669919056
+  },
+  {
+    "cluster_id": "cosmo_phi_288",
+    "mass_msun": 95688403622860.45,
+    "redshift": 0.7156759249745237,
+    "gas_fraction": 0.11846000947879323,
+    "phi_constraint": 1.3761223965873002
+  },
+  {
+    "cluster_id": "cosmo_phi_289",
+    "mass_msun": 95809367874036.56,
+    "redshift": 0.35773625650466656,
+    "gas_fraction": 0.0804450525710313,
+    "phi_constraint": 1.4761925718077606
+  },
+  {
+    "cluster_id": "cosmo_phi_290",
+    "mass_msun": 40993789438266.24,
+    "redshift": 0.12402070954153821,
+    "gas_fraction": 0.11320359039946655,
+    "phi_constraint": 1.5622673135508327
+  },
+  {
+    "cluster_id": "cosmo_phi_291",
+    "mass_msun": 206655225188224.28,
+    "redshift": 0.22106240542816108,
+    "gas_fraction": 0.1426224654257088,
+    "phi_constraint": 1.5239344337783693
+  },
+  {
+    "cluster_id": "cosmo_phi_292",
+    "mass_msun": 165882641432174.22,
+    "redshift": 0.4095664465609361,
+    "gas_fraction": 0.0841099958257093,
+    "phi_constraint": 1.459694508889975
+  },
+  {
+    "cluster_id": "cosmo_phi_293",
+    "mass_msun": 539237649959201.9,
+    "redshift": 0.9557488778489562,
+    "gas_fraction": 0.08618581546554424,
+    "phi_constraint": 1.3231031802725615
+  },
+  {
+    "cluster_id": "cosmo_phi_294",
+    "mass_msun": 54498990671678.29,
+    "redshift": 0.3027688082443024,
+    "gas_fraction": 0.09972391026256774,
+    "phi_constraint": 1.4946084548755996
+  },
+  {
+    "cluster_id": "cosmo_phi_295",
+    "mass_msun": 392207761507792.1,
+    "redshift": 0.8268880863360416,
+    "gas_fraction": 0.16723426202796327,
+    "phi_constraint": 1.3504361563259646
+  },
+  {
+    "cluster_id": "cosmo_phi_296",
+    "mass_msun": 16673457030035.096,
+    "redshift": 0.3039153662626305,
+    "gas_fraction": 0.10003682414826777,
+    "phi_constraint": 1.494214062030842
+  },
+  {
+    "cluster_id": "cosmo_phi_297",
+    "mass_msun": 193675178704466.12,
+    "redshift": 0.7397884376084882,
+    "gas_fraction": 0.16634367069353628,
+    "phi_constraint": 1.3703727314436558
+  },
+  {
+    "cluster_id": "cosmo_phi_298",
+    "mass_msun": 126676573446722.6,
+    "redshift": 0.9338350093975615,
+    "gas_fraction": 0.11703906713662142,
+    "phi_constraint": 1.327583404231682
+  },
+  {
+    "cluster_id": "cosmo_phi_299",
+    "mass_msun": 163642984770454.4,
+    "redshift": 0.6899052813892368,
+    "gas_fraction": 0.1028792515644334,
+    "phi_constraint": 1.382384740789761
+  },
+  {
+    "cluster_id": "cosmo_phi_300",
+    "mass_msun": 81418395058215.12,
+    "redshift": 0.1544450107492045,
+    "gas_fraction": 0.17903281597872053,
+    "phi_constraint": 1.5498000297817642
+  }
+]

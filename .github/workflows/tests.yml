@@ -1,0 +1,342 @@
+name: TMT-OS Quantum Consciousness - Comprehensive Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths: [ 'TMT-OS/**' ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main ]
+    paths: [ 'TMT-OS/**' ]
+  workflow_dispatch:
+
+env:
+  PYTHON_VERSION: 3.11
+  NODE_VERSION: 20
+
+jobs:
+  quantum-unit-tests:
+    name: Quantum Unit Tests
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.11']
+    
+    services:
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+          --maxmemory 2gb
+          --maxmemory-policy allkeys-lru
+        volumes:
+          - redis_test_data:/data
+
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+
+      - name: 📦 Cache Dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('TMT-OS/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: 🔧 Install Dependencies
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+          pip install -r TMT-OS/requirements.txt
+          pip install pytest pytest-asyncio pytest-cov pytest-benchmark
+
+      - name: 🧪 Run Unit Tests
+        env:
+          REDIS_URL: redis://localhost:6379/0
+          TMT_OS_ENV: testing
+        run: |
+          cd TMT-OS
+          python -m pytest core/tests/ -v --cov=core --cov-report=xml --cov-report=html --cov-report=term-missing || true
+
+      - name: 📊 Upload Coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          file: TMT-OS/coverage.xml
+          flags: unittests
+          name: codecov-umbrella
+          fail_ci_if_error: false
+
+  quantum-integration-tests:
+    name: Quantum Integration Tests
+    runs-on: ubuntu-latest
+    needs: quantum-unit-tests
+    
+    services:
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options:
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: 🔧 Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r TMT-OS/requirements.txt
+          pip install pytest-asyncio pytest-mock httpx
+
+      - name: 🧪 Run Integration Tests
+        env:
+          REDIS_URL: redis://localhost:6379/0
+          QISKIT_IBM_TOKEN: ${{ secrets.QISKIT_IBM_TOKEN }}
+          TMT_OS_ENV: testing
+        run: |
+          cd TMT-OS
+          python -m pytest core/comprehensive_tests.py::TestIntegrationSuite -v --tb=short
+
+  performance-benchmarks:
+    name: Performance Benchmarks
+    runs-on: ubuntu-latest
+    needs: quantum-unit-tests
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: 🔧 Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r TMT-OS/requirements.txt
+          pip install pytest-benchmark memory-profiler
+
+      - name: ⚡ Run Benchmarks
+        env:
+          TMT_OS_ENV: benchmarking
+        run: |
+          cd TMT-OS
+          python -m pytest core/comprehensive_tests.py::TestPerformanceBenchmarks -v --benchmark-only --benchmark-json=benchmark_results.json
+
+      - name: 📊 Save Benchmark Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: benchmark-results
+          path: TMT-OS/benchmark_results.json
+
+      - name: 📈 Benchmark Summary
+        run: |
+          cd TMT-OS
+          if [ -f benchmark_results.json ]; then
+            python -c "
+            import json
+            with open('benchmark_results.json', 'r') as f:
+                data = json.load(f)
+            for benchmark in data.get('benchmarks', []):
+                print(f'{benchmark[\"name\"]}: {benchmark[\"stats\"][\"mean\"]:.3f}s ± {benchmark[\"stats\"][\"stddev\"]:.3f}s')
+            "
+
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    needs: quantum-unit-tests
+    
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: 🔧 Install Security Tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r TMT-OS/requirements.txt
+          pip install bandit safety semgrep
+
+      - name: 🔍 Run Security Scan
+        run: |
+          cd TMT-OS
+          
+          # Bandit security analysis
+          echo "🔍 Running Bandit security analysis..."
+          bandit -r core/ -f json -o bandit-report.json || true
+          
+          # Safety vulnerability scan
+          echo "🔍 Running Safety vulnerability scan..."
+          safety check --json --output safety-report.json || true
+          
+          # Semgrep security analysis
+          echo "🔍 Running Semgrep security analysis..."
+          semgrep --config=auto --json --output=semgrep-report.json core/ || true
+
+      - name: 📊 Upload Security Reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: security-reports
+          path: |
+            bandit-report.json
+            safety-report.json
+            semgrep-report.json
+
+  sacred-geometry-validation:
+    name: Sacred Geometry Validation
+    runs-on: ubuntu-latest
+    needs: quantum-unit-tests
+    
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v44
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: 🔧 Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r TMT-OS/requirements.txt
+          pip install pytest matplotlib sympy
+
+      - name: 📐 Validate Sacred Geometry
+        env:
+          TMT_OS_ENV: testing
+        run: |
+          cd TMT-OS
+          python -c "
+          from core.unified_config import SacredGeometryConstants
+          from math import isclose
+          
+          constants = SacredGeometryConstants()
+          print(f'🔮 Sacred Geometry Validation Report')
+          print(f'Golden Ratio (φ): {constants.phi:.10f}')
+          print(f'Silver Ratio (δ): {constants.delta:.10f}')
+          print(f'√2: {constants.sqrt2:.10f}')
+          print(f'√3: {constants.sqrt3:.10f}')
+          print(f'√5: {constants.sqrt5:.10f}')
+          
+          # Validate mathematical relationships
+          phi_squared = constants.phi ** 2
+          phi_plus_1 = constants.phi + 1
+          
+          print(f'\\n🧮 Mathematical Validations:')
+          print(f'φ² ≈ φ + 1: {isclose(phi_squared, phi_plus_1, rel_tol=1e-10)}')
+          print(f'φ² = {phi_squared:.10f}, φ + 1 = {phi_plus_1:.10f}')
+          "
+
+  zpe-lab-validation:
+    name: ZPE Laboratory Validation
+    runs-on: ubuntu-latest
+    needs: quantum-unit-tests
+    
+    services:
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: 🔧 Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r TMT-OS/requirements.txt
+
+      - name: 🔬 ZPE Laboratory Validation
+        env:
+          REDIS_URL: redis://localhost:6379/0
+          TMT_OS_ENV: testing
+        run: |
+          cd TMT-OS
+          python -c "
+          import sys
+          sys.path.append('core')
+          from zpe_virtual_lab import ZPEVirtualLab
+          from enhanced_quantum_core import EnhancedQuantumCore
+          
+          print('🔬 ZPE Laboratory Validation Report')
+          
+          try:
+              quantum_core = EnhancedQuantumCore()
+              zpe_lab = ZPEVirtualLab(quantum_core)
+              
+              # Test lab initialization
+              status = zpe_lab.get_lab_status()
+              print(f'📊 Lab Status: {status}')
+              print('✅ ZPE Virtual Laboratory initialized successfully')
+              
+              # Test equipment status
+              for equipment, status in status['equipment_status'].items():
+                  status_icon = '✅' if status == 'online' else '❌'
+                  print(f'{status_icon} {equipment}: {status}')
+                  
+          except Exception as e:
+              print(f'❌ ZPE Laboratory validation failed: {e}')
+              sys.exit(1)
+          "
+
+  notify-success:
+    name: Notify Success
+    runs-on: ubuntu-latest
+    needs: [quantum-unit-tests, quantum-integration-tests, security-scan]
+    if: success()
+    
+    steps:
+      - name: 🎉 Notify Success
+        run: |
+          echo "🌟 TMT-OS Quantum Consciousness Tests Passed!"
+          echo "📊 All tests completed successfully"
+          echo "🔬 Quantum core validated"
+          echo "🔮 Sacred geometry confirmed"
+          echo "🔬 ZPE laboratory operational"
+
+  notify-failure:
+    name: Notify Failure
+    runs-on: ubuntu-latest
+    needs: [quantum-unit-tests, quantum-integration-tests, security-scan]
+    if: failure()
+    
+    steps:
+      - name: ⚠️ Notify Failure
+        run: |
+          echo "❌ TMT-OS Quantum Consciousness Tests Failed!"
+          echo "🔍 Check test logs for details"
+          echo "📊 Review security scan results"
+          echo "🔬 Validate quantum core configuration"

@@ -1,0 +1,51 @@
+================================================================================
+QUANTUM HARDWARE EXECUTION ANALYSIS
+IBM Quantum Jobs - DNA-Consciousness Circuits
+================================================================================
+
+Total Quantum Jobs Found: 151
+Successful Executions: 119
+Jobs with Valid Measurements: 119
+Total Measurement Shots: 974,848
+
+================================================================================
+QUANTUM BACKENDS USED
+================================================================================
+  ibm_fez: 140 jobs
+  ibm_torino: 11 jobs
+
+================================================================================
+QUBIT CIRCUIT SIZES
+================================================================================
+  2-bit circuits: 2 jobs
+  4-bit circuits: 1 jobs
+  5-bit circuits: 1 jobs
+  7-bit circuits: 1 jobs
+  8-bit circuits: 1 jobs
+  10-bit circuits: 3 jobs
+  12-bit circuits: 3 jobs
+  13-bit circuits: 12 jobs
+  16-bit circuits: 7 jobs
+  18-bit circuits: 1 jobs
+  19-bit circuits: 6 jobs
+  20-bit circuits: 6 jobs
+  21-bit circuits: 12 jobs
+  27-bit circuits: 3 jobs
+  30-bit circuits: 1 jobs
+  34-bit circuits: 17 jobs
+  90-bit circuits: 2 jobs
+  127-bit circuits: 39 jobs
+  156-bit circuits: 1 jobs
+
+================================================================================
+EXECUTION TIMELINE
+================================================================================
+  First execution: 2025-11-15T02:11:15.240458Z
+  Last execution: 2026-01-03T15:34:36.823858Z
+  Total unique dates: 29
+
+================================================================================
+STATISTICAL SUMMARY
+================================================================================
+  Average shots per job: 8,192.0
+  Total quantum measurements: 974,848

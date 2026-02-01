@@ -1,0 +1,14 @@
+{
+  "glasgow_coma_scale": 15,
+  "consciousness_level": 0.95,
+  "attention": 0.85,
+  "memory": 0.78,
+  "executive_function": 0.82,
+  "language": 0.88,
+  "visuospatial": 0.75,
+  "abstract_reasoning": 0.8,
+  "moca_score": 28,
+  "mmse_score": 29,
+  "age": 35,
+  "education_years": 16
+}

@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "creation_date": "2026-01-12",
+    "phi_constant": 1.618033988749895,
+    "fibonacci_sequence": [
+      1,
+      1,
+      2,
+      3,
+      5,
+      8,
+      13,
+      21,
+      34,
+      55,
+      89,
+      144,
+      233,
+      377,
+      610,
+      987
+    ],
+    "domains": [
+      "biology",
+      "physics",
+      "chemistry",
+      "cosmology",
+      "mathematics"
+    ],
+    "total_samples": 2950
+  },
+  "files": {
+    "proteins": "sacred_datasets\\fibonacci_proteins.fasta",
+    "dna_structures": "sacred_datasets\\phi_dna_structures.json",
+    "quantum_spectra": "sacred_datasets\\quantum_transport_spectra.json",
+    "molecular_kinetics": "sacred_datasets\\molecular_kinetics.json",
+    "cosmological_data": "sacred_datasets\\cosmological_gas_fractions.json",
+    "embeddings": "sacred_datasets\\fibonacci_embeddings.json"
+  },
+  "phi_patterns": {
+    "dna_helix_ratio": 1.619047619047619,
+    "protein_fibonacci_hashing": true,
+    "quantum_localization": 1.618033988749895,
+    "kinetics_scaling": 1.618033988749895,
+    "cosmological_constraint": 1.618033988749895,
+    "embedding_basis": "fibonacci"
+  }
+}
