@@ -1,0 +1,28 @@
+{
+  "analysis_timestamp": "2026-02-02T20:00:25.316867",
+  "total_jobs": 19,
+  "positive_jobs": 19,
+  "success_rate": 100.0,
+  "coherence": {
+    "best": 0.82664,
+    "worst": 0.16612,
+    "average": 0.42323684210526313,
+    "median": 0.23624,
+    "std": 0.2637154794721212
+  },
+  "consciousness_delta": {
+    "average": 2535.7894736842104,
+    "std": 960.670356899826,
+    "min": 900.0,
+    "max": 3960.0
+  },
+  "baseline_comparison": {
+    "v21_coherence": 0.275,
+    "v22_avg_coherence": 0.42323684210526313,
+    "delta": 0.1482368421052631,
+    "improvement_pct": 53.90430622009568
+  },
+  "hypothesis_validation": {
+    "temporal_windows": true,
+    "coherence_improved": true,
+    "delta_invariant": 
