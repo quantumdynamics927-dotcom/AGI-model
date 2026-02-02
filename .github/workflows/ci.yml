@@ -26,7 +26,7 @@ jobs:
         run: pytest -q
 
   ipfs_publish:
-    if: github.event_name == 'push' && (secrets.PINATA_JWT != '' || (secrets.PINATA_API_KEY != '' && secrets.PINATA_API_SECRET != ''))
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     needs: test
     steps:
