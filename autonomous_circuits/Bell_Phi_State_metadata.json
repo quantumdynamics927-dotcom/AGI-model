@@ -1,0 +1,13 @@
+{
+  "name": "Bell_Phi_State",
+  "qubits": 2,
+  "depth": 4,
+  "gates": {
+    "p": 2,
+    "measure": 2,
+    "h": 1,
+    "cx": 1,
+    "barrier": 1
+  },
+  "timestamp": "2026-01-05T01:11:19.902030"
+}

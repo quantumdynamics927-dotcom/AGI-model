@@ -1,0 +1,12 @@
+{
+  "name": "Quantum_Teleportation",
+  "qubits": 3,
+  "depth": 5,
+  "gates": {
+    "measure": 3,
+    "h": 2,
+    "cx": 2,
+    "ry": 1
+  },
+  "timestamp": "2026-01-05T01:11:18.007776"
+}

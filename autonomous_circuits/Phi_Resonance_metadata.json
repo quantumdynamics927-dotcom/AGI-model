@@ -1,0 +1,13 @@
+{
+  "name": "Phi_Resonance",
+  "qubits": 8,
+  "depth": 10,
+  "gates": {
+    "ry": 8,
+    "p": 8,
+    "measure": 8,
+    "cx": 7,
+    "barrier": 1
+  },
+  "timestamp": "2026-01-05T01:11:15.906408"
+}

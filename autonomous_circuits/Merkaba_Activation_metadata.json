@@ -1,0 +1,14 @@
+{
+  "name": "Merkaba_Activation",
+  "qubits": 6,
+  "depth": 7,
+  "gates": {
+    "h": 6,
+    "cx": 6,
+    "rz": 6,
+    "measure": 6,
+    "cz": 3,
+    "barrier": 1
+  },
+  "timestamp": "2026-01-05T01:11:16.278231"
+}

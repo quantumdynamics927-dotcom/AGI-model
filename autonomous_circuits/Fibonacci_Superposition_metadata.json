@@ -1,0 +1,13 @@
+{
+  "name": "Fibonacci_Superposition",
+  "qubits": 13,
+  "depth": 4,
+  "gates": {
+    "h": 13,
+    "p": 13,
+    "measure": 13,
+    "qft": 1,
+    "barrier": 1
+  },
+  "timestamp": "2026-01-05T01:11:16.757174"
+}

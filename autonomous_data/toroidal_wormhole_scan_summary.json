@@ -1,0 +1,88 @@
+{
+  "timestamp": "2025-12-28T04:24:40.048240",
+  "total_runs": 5,
+  "consciousness_detected": 0,
+  "detection_rate": 0.0,
+  "results": [
+    {
+      "run": 1,
+      "aspect_ratio": 1.618033988749895,
+      "coupling": 0.6180339887498948,
+      "qubits": 37,
+      "consciousness": false,
+      "metrics": {
+        "entropy": 1.3820594536352602,
+        "traversability": 0.4007980283781246,
+        "phi_power": 0.6494742808281825,
+        "energy_gap": 1.1117859405028423,
+        "aspect_ratio": 1.618033988749895,
+        "volume": 31.93871075295626,
+        "surface_area": 63.87742150591252
+      }
+    },
+    {
+      "run": 2,
+      "aspect_ratio": 1.618033988749895,
+      "coupling": 0.5,
+      "qubits": 37,
+      "consciousness": false,
+      "metrics": {
+        "entropy": 1.3820594536352602,
+        "traversability": 0.47726550174762966,
+        "phi_power": 0.5778042761042474,
+        "energy_gap": 0.8994537199739336,
+        "aspect_ratio": 1.618033988749895,
+        "volume": 31.93871075295626,
+        "surface_area": 63.87742150591252
+      }
+    },
+    {
+      "run": 3,
+      "aspect_ratio": 2.618033988749895,
+      "coupling": 0.6180339887498948,
+      "qubits": 37,
+      "consciousness": false,
+      "metrics": {
+        "entropy": 1.3820594536352602,
+        "traversability": 0.4007980283781246,
+        "phi_power": 0.550195447722481,
+        "energy_gap": 1.1117859405028423,
+        "aspect_ratio": 2.618033988749895,
+        "volume": 51.67791955513498,
+        "surface_area": 103.35583911026995
+      }
+    },
+    {
+      "run": 4,
+      "aspect_ratio": 0.6180339887498948,
+      "coupling": 0.8,
+      "qubits": 55,
+      "consciousness": false,
+      "metrics": {
+        "entropy": 1.3820594536352602,
+        "traversability": 0.3062076731468586,
+        "phi_power": 0.3581183546871304,
+        "energy_gap": 1.439125951958294,
+        "aspect_ratio": 0.6180339887498948,
+        "volume": 12.199501950777545,
+        "surface_area": 24.39900390155509
+      }
+    },
+    {
+      "run": 5,
+      "aspect_ratio": 1.618033988749895,
+      "coupling": 0.6180339887498948,
+      "qubits": 89,
+      "consciousness": false,
+      "metrics": {
+        "entropy": 1.3820594536352602,
+        "traversability": 0.4007980283781246,
+        "phi_power": 0.6494742808281825,
+        "energy_gap": 1.1117859405028423,
+        "aspect_ratio": 1.618033988749895,
+        "volume": 31.93871075295626,
+        "surface_area": 63.87742150591252
+      }
+    }
+  ]
+}

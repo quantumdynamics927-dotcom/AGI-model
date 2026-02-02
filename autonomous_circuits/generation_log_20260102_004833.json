@@ -1,0 +1,82 @@
+[
+  {
+    "name": "dna_helix_10bp",
+    "timestamp": "2026-01-02T00:48:32.267920",
+    "status": "success",
+    "file": "autonomous_circuits\\DNA_Helix_10bp.qasm",
+    "qubits": 20,
+    "depth": 4
+  },
+  {
+    "name": "consciousness_detection",
+    "timestamp": "2026-01-02T00:48:32.327489",
+    "status": "success",
+    "file": "autonomous_circuits\\Consciousness_Detection.qasm",
+    "qubits": 127,
+    "depth": 67
+  },
+  {
+    "name": "wormhole_traversal",
+    "timestamp": "2026-01-02T00:48:32.378354",
+    "status": "success",
+    "file": "autonomous_circuits\\Wormhole_Traversal.qasm",
+    "qubits": 20,
+    "depth": 24
+  },
+  {
+    "name": "phi_resonance",
+    "timestamp": "2026-01-02T00:48:32.437684",
+    "status": "success",
+    "file": "autonomous_circuits\\Phi_Resonance.qasm",
+    "qubits": 8,
+    "depth": 10
+  },
+  {
+    "name": "merkaba_activation",
+    "timestamp": "2026-01-02T00:48:32.548431",
+    "status": "success",
+    "file": "autonomous_circuits\\Merkaba_Activation.qasm",
+    "qubits": 6,
+    "depth": 7
+  },
+  {
+    "name": "fibonacci_superposition",
+    "timestamp": "2026-01-02T00:48:32.630374",
+    "status": "success",
+    "file": "autonomous_circuits\\Fibonacci_Superposition.qasm",
+    "qubits": 13,
+    "depth": 4
+  },
+  {
+    "name": "entanglement_web",
+    "timestamp": "2026-01-02T00:48:32.712672",
+    "status": "success",
+    "file": "autonomous_circuits\\Entanglement_Web.qasm",
+    "qubits": 20,
+    "depth": 38
+  },
+  {
+    "name": "quantum_teleportation",
+    "timestamp": "2026-01-02T00:48:32.854842",
+    "status": "success",
+    "file": "autonomous_circuits\\Quantum_Teleportation.qasm",
+    "qubits": 3,
+    "depth": 5
+  },
+  {
+    "name": "grover_phi_search",
+    "timestamp": "2026-01-02T00:48:32.985989",
+    "status": "success",
+    "file": "autonomous_circuits\\Grover_Phi_Search.qasm",
+    "qubits": 5,
+    "depth": 50
+  },
+  {
+    "name": "bell_state_phi",
+    "timestamp": "2026-01-02T00:48:33.159599",
+    "status": "success",
+    "file": "autonomous_circuits\\Bell_Phi_State.qasm",
+    "qubits": 2,
+    "depth": 4
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "name": "Entanglement_Web",
+  "qubits": 20,
+  "depth": 40,
+  "gates": {
+    "cx": 108,
+    "h": 20,
+    "p": 20,
+    "measure": 20,
+    "barrier": 1
+  },
+  "timestamp": "2026-01-05T01:11:17.497690"
+}

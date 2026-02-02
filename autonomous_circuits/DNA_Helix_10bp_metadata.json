@@ -1,0 +1,13 @@
+{
+  "name": "DNA_Helix_10bp",
+  "qubits": 20,
+  "depth": 4,
+  "gates": {
+    "ry": 20,
+    "p": 20,
+    "measure": 20,
+    "cz": 10,
+    "barrier": 1
+  },
+  "timestamp": "2026-01-05T01:11:14.558912"
+}

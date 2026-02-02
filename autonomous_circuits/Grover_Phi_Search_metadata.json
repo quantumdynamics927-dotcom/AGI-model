@@ -1,0 +1,13 @@
+{
+  "name": "Grover_Phi_Search",
+  "qubits": 5,
+  "depth": 50,
+  "gates": {
+    "x": 64,
+    "h": 61,
+    "mcx": 8,
+    "measure": 5,
+    "barrier": 1
+  },
+  "timestamp": "2026-01-05T01:11:19.565527"
+}

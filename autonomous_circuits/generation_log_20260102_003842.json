@@ -1,0 +1,52 @@
+[
+  {
+    "name": "dna_helix_10bp",
+    "status": "failed",
+    "error": "'QuantumCircuit' object has no attribute 'qasm'"
+  },
+  {
+    "name": "consciousness_detection",
+    "status": "failed",
+    "error": "'QuantumCircuit' object has no attribute 'qasm'"
+  },
+  {
+    "name": "wormhole_traversal",
+    "status": "failed",
+    "error": "'QuantumCircuit' object has no attribute 'qasm'"
+  },
+  {
+    "name": "phi_resonance",
+    "status": "failed",
+    "error": "'QuantumCircuit' object has no attribute 'qasm'"
+  },
+  {
+    "name": "merkaba_activation",
+    "status": "failed",
+    "error": "'QuantumCircuit' object has no attribute 'qasm'"
+  },
+  {
+    "name": "fibonacci_superposition",
+    "status": "failed",
+    "error": "'QuantumCircuit' object has no attribute 'qasm'"
+  },
+  {
+    "name": "entanglement_web",
+    "status": "failed",
+    "error": "'QuantumCircuit' object has no attribute 'qasm'"
+  },
+  {
+    "name": "quantum_teleportation",
+    "status": "failed",
+    "error": "'InstructionSet' object has no attribute 'c_if'"
+  },
+  {
+    "name": "grover_phi_search",
+    "status": "failed",
+    "error": "'QuantumCircuit' object has no attribute 'qasm'"
+  },
+  {
+    "name": "bell_state_phi",
+    "status": "failed",
+    "error": "'QuantumCircuit' object has no attribute 'qasm'"
+  }
+]

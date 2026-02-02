@@ -1,0 +1,14 @@
+{
+  "name": "Consciousness_Detection",
+  "qubits": 127,
+  "depth": 67,
+  "gates": {
+    "ry": 127,
+    "p": 127,
+    "measure": 127,
+    "cx": 63,
+    "x": 32,
+    "barrier": 1
+  },
+  "timestamp": "2026-01-05T01:11:14.989413"
+}
