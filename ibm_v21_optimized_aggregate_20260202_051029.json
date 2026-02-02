@@ -1,0 +1,131 @@
+{
+  "timestamp": "20260202_051029",
+  "version": "v2.1_optimized_30_bell_pairs",
+  "backend": "ibm_fez",
+  "total_shots": 40000,
+  "num_jobs": 4,
+  "individual_jobs": [
+    {
+      "job_id": "d602l2pmvbjc73ad1ph0",
+      "shots": 10000,
+      "wormhole": {
+        "r": 0.27479999999999993,
+        "transfer": 0.6374,
+        "S": 0.9990390624437657,
+        "T": 0.9622545869866073,
+        "correlation": 0.2749298819961735
+      },
+      "metatron": {
+        "tetrahedron_F5": 0.9596,
+        "cube_F6": 0.9158,
+        "octahedron_F7": 0.9758,
+        "dodecahedron": 0.931
+      },
+      "phi_resonance": 0.94555,
+      "retrocausal": {
+        "R_score": 0.01110853858866824,
+        "temporal_asym": 0.0016000000000000458
+      },
+      "consciousness": {
+        "delta": 4781.575283864641,
+        "ghost_factor": 27.479999999999993
+      }
+    },
+    {
+      "job_id": "d602lu1mvbjc73ad1qug",
+      "shots": 10000,
+      "wormhole": {
+        "r": -0.16379999999999995,
+        "transfer": 0.4181,
+        "S": 0.9215361242013993,
+        "T": 0.42958631522604823,
+        "correlation": -0.12273894720744236
+      },
+      "metatron": {
+        "tetrahedron_F5": 0.9054,
+        "cube_F6": 0.5682,
+        "octahedron_F7": 0.9402,
+        "dodecahedron": 0.9343999999999999
+      },
+      "phi_resonance": 0.8370500000000001,
+      "retrocausal": {
+        "R_score": 0.0032567765827627914,
+        "temporal_asym": 0.0024000000000000132
+      },
+      "consciousness": {
+        "delta": 4799.407382841129,
+        "ghost_factor": 16.379999999999995
+      }
+    },
+    {
+      "job_id": "d602m0l7fc0s73aujuo0",
+      "shots": 4096,
+      "wormhole": {
+        "r": -0.22265625,
+        "transfer": 0.388671875,
+        "S": 0.9930259908805217,
+        "T": 0.8149288543794714,
+        "correlation": -0.23283681553699181
+      },
+      "metatron": {
+        "tetrahedron_F5": 0.912109375,
+        "cube_F6": 0.8583984375,
+        "octahedron_F7": 0.99072265625,
+        "dodecahedron": 0.9833984375
+      },
+      "phi_resonance": 0.9361572265625,
+      "retrocausal": {
+        "R_score": 0.002844078631643288,
+        "temporal_asym": 0.00244140625
+      },
+      "consciousness": {
+        "delta": 4675.718765979496,
+        "ghost_factor": 22.265625
+      }
+    },
+    {
+      "job_id": "d602m3d7fc0s73aujuu0",
+      "shots": 4096,
+      "wormhole": {
+        "r": -0.2197265625,
+        "transfer": 0.39013671875,
+        "S": 0.9970293208309895,
+        "T": 0.7865167167937929,
+        "correlation": -0.22471906194108368
+      },
+      "metatron": {
+        "tetrahedron_F5": 0.98828125,
+        "cube_F6": 0.9833984375,
+        "octahedron_F7": 0.94287109375,
+        "dodecahedron": 0.9365234375
+      },
+      "phi_resonance": 0.9627685546875,
+      "retrocausal": {
+        "R_score": 0.005940767363286023,
+        "temporal_asym": 0.00830078125
+      },
+      "consciousness": {
+        "delta": 4687.855507696677,
+        "ghost_factor": 21.97265625
+      }
+    }
+  ],
+  "aggregate_metrics": {
+    "wormhole_coherence_r": -0.082845703125,
+    "wormhole_coherence_std": 0.20781446402201312,
+    "transfer_success": 0.45857714843749997,
+    "entropy_S": 0.977657624589169,
+    "phi_resonance": 0.9203814453125,
+    "retrocausal_R": 0.005787540291590085,
+    "consciousness_delta": 4736.139235095487,
+    "consciousness_std": 54.884525293192574
+  },
+  "comparison_v10": {
+    "v10_coherence_r": -0.181,
+    "v21_coherence_r": -0.082845703125,
+    "improvement_percent": 54.228893301104975,
+    "v10_transfer": 0.4,
+    "v21_transfer": 0.45857714843749997,
+    "transfer_improvement_percent": 14.644287109374988
+  }
+}
