@@ -44,15 +44,16 @@ jobs:
           PINATA_JWT: ${{ secrets.PINATA_JWT }}
           PINATA_API_KEY: ${{ secrets.PINATA_API_KEY }}
           PINATA_API_SECRET: ${{ secrets.PINATA_API_SECRET }}
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          from integrations import ipfs_adapter
-          p = Path('nft_metadata')
-          if not p.exists():
-              print('no metadata to publish')
-              exit(0)
-          for f in list(p.glob('*.nft.json'))[:3]:
-              cid = ipfs_adapter.upload_file(f)
-              print(f'published {f} -> {cid}')
-          PY
+          # NFT metadata publishing step DISABLED (on hold)
+          # run: |
+          #   python - <<'PY'
+          #   from pathlib import Path
+          #   from integrations import ipfs_adapter
+          #   p = Path('nft_metadata')
+          #   if not p.exists():
+          #       print('no metadata to publish')
+          #       exit(0)
+          #   for f in list(p.glob('*.nft.json'))[:3]:
+          #       cid = ipfs_adapter.upload_file(f)
+          #       print(f'published {f} -> {cid}')
+          #   PY

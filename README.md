@@ -1,3 +1,5 @@
+> **Note: All NFT-related workflows and development are currently on hold. NFT generation, deployment, and contract verification steps are disabled in CI/CD.**
+
 # Quantum Consciousness VAE
 
 This project implements a Variational Autoencoder (VAE) designed for quantum consciousness modeling, based on the training analysis from January 4, 2026.
