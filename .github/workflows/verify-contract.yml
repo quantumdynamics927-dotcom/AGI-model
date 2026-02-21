@@ -23,6 +23,7 @@ jobs:
           POLYGONSCAN_API_KEY: ${{ secrets.POLYGONSCAN_API_KEY }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           CONTRACT_ADDRESS: ${{ secrets.CONTRACT_ADDRESS }}
-        run: |
-          echo "Verifying $CONTRACT_ADDRESS on polygonAmoy"
-          npx hardhat verify --network polygonAmoy $CONTRACT_ADDRESS "TMT-OS Genesis" "TMTG" 100 ""
+          # NFT/contract verification step DISABLED (on hold)
+          # run: |
+          #   echo "Verifying $CONTRACT_ADDRESS on polygonAmoy"
+          #   npx hardhat verify --network polygonAmoy $CONTRACT_ADDRESS "TMT-OS Genesis" "TMTG" 100 ""
