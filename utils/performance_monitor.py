@@ -10,10 +10,47 @@ import numpy as np
 import matplotlib
 matplotlib.use('Agg')  # Use non-interactive backend for headless environments
 import matplotlib.pyplot as plt
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple, Union
 from pathlib import Path
 import json
 from datetime import datetime
+from sklearn.decomposition import PCA
+
+# Flag for sklearn availability (PAC already imported directly)
+SKLEARN_AVAILABLE = True
+
+
+class SafeJSONEncoder(json.JSONEncoder):
+    """Custom JSON encoder to handle PyTorch/NumPy types and other non-serializable objects."""
+    def default(self, obj):
+        # Handle Python bool explicitly (shouldn't be needed but defensive)
+        if isinstance(obj, bool):
+            return bool(obj)
+        # Handle Python int and float explicitly (defensive)
+        if isinstance(obj, (int, float)):
+            return obj
+        if hasattr(obj, 'item'):  # Handles PyTorch 0-dim tensors and NumPy scalars
+            return obj.item()
+        if hasattr(obj, 'tolist'):  # Handles PyTorch tensors and NumPy arrays
+            return obj.tolist()
+        # Fallback for other non-serializable objects
+        if isinstance(obj, np.bool_):
+            return bool(obj)
+        return super().default(obj)
+
+    def encode(self, obj):
+        """Override encode to handle dict keys that aren't JSON serializable."""
+        def sanitize_keys(o):
+            """Recursively convert tuple/non-string keys to strings."""
+            if isinstance(o, dict):
+                return {
+                    str(k) if not isinstance(k, (str, int, float, bool, type(None))) else k: sanitize_keys(v)
+                    for k, v in o.items()
+                }
+            elif isinstance(o, (list, tuple)):
+                return [sanitize_keys(item) for item in o]
+            return o
+        return super().encode(sanitize_keys(obj))
 
 class PerformanceMonitor:
     """
@@ -137,31 +174,49 @@ class PerformanceMonitor:
         else:
             plt.show()
     
+    def _extract_scalar(self, v, key=None):
+        """Extract scalar value from potentially dict input."""
+        if isinstance(v, dict):
+            if key and key in v:
+                return float(v[key])
+            # Try to extract first numeric value from dict
+            for val in v.values():
+                try:
+                    return float(val)
+                except (TypeError, ValueError):
+                    continue
+            return float('nan')
+        try:
+            return float(v)
+        except (TypeError, ValueError):
+            return float('nan')
+
     def plot_quantum_metrics(self, save_path: Optional[str] = None):
         """
         Plot quantum-specific metrics
-        
+
         Args:
             save_path: Path to save plot (optional)
         """
         if len(self.quantum_metrics) == 0:
             print("No quantum metrics to plot")
             return
-        
+
         n_metrics = len(self.quantum_metrics)
         cols = min(3, n_metrics)
         rows = (n_metrics + cols - 1) // cols
-        
+
         fig, axes = plt.subplots(rows, cols, figsize=(5*cols, 4*rows))
         if n_metrics == 1:
             axes = [axes]
         else:
             axes = axes.flatten()
-        
+
         for i, (metric, values) in enumerate(self.quantum_metrics.items()):
             ax = axes[i] if n_metrics > 1 else axes[0]
             epochs_to_plot = self.epochs[-len(values):] if len(values) < len(self.epochs) else self.epochs
-            ax.plot(epochs_to_plot, values, 'g-', marker='o', markersize=3)
+            scalar_values = [self._extract_scalar(v, key=metric) for v in values]
+            ax.plot(epochs_to_plot, scalar_values, 'g-', marker='o', markersize=3)
             ax.set_xlabel('Epoch')
             ax.set_ylabel('Value')
             ax.set_title(f'{metric.replace("_", " ").title()}')
@@ -179,13 +234,32 @@ class PerformanceMonitor:
         else:
             plt.show()
     
-    def save_metrics_json(self, save_path: Optional[str] = None):
-        """
-        Save all metrics to JSON file
-        
-        Args:
-            save_path: Path to save JSON (optional)
-        """
+    def save_metrics_json(self, filepath='artifacts/metrics_summary.json'):
+        """Save all metrics to JSON file with sanitized keys."""
+        import os
+
+        def sanitize_for_json(obj):
+            if isinstance(obj, dict):
+                # Force all keys to be strings to ensure JSON compatibility
+                sanitized_dict = {}
+                for k, v in obj.items():
+                    # Convert key to string, handling potential tuple keys
+                    str_key = str(k) if not isinstance(k, (str, int, float, bool, type(None))) else k
+                    sanitized_dict[str_key] = sanitize_for_json(v)
+                return sanitized_dict
+            elif isinstance(obj, (list, tuple, set)):
+                return [sanitize_for_json(i) for i in obj]
+            elif hasattr(obj, 'item'):
+                return obj.item()
+            elif hasattr(obj, 'tolist'):
+                return obj.tolist()
+            elif type(obj).__name__ == 'bool':
+                return bool(obj)
+            return obj
+
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+
+        # Build data structure with existing attributes
         data = {
             'epochs': self.epochs,
             'timestamps': self.timestamps,
@@ -193,16 +267,15 @@ class PerformanceMonitor:
             'val_metrics': self.val_metrics,
             'quantum_metrics': self.quantum_metrics
         }
-        
-        if save_path is None and self.save_dir:
-            save_path = self.save_dir / f'metrics_{datetime.now().strftime("%Y%m%d_%H%M%S")}.json'
-        elif save_path is None:
-            save_path = f'metrics_{datetime.now().strftime("%Y%m%d_%H%M%S")}.json'
-        
-        with open(save_path, 'w') as f:
-            json.dump(data, f, indent=2)
-        
-        print(f"Metrics saved to {save_path}")
+
+        # Sanitize everything to ensure JSON compatibility
+        safe_data = sanitize_for_json(data)
+
+        # Dump without the cls argument to avoid conflicts
+        with open(filepath, 'w') as f:
+            json.dump(safe_data, f, indent=2)
+
+        print(f"Metrics saved to {filepath}")
     
     def get_best_epoch(self, metric: str = 'total_loss', mode: str = 'val') -> Tuple[int, float]:
         """
@@ -256,5 +329,156 @@ class PerformanceMonitor:
                 }
                 for k, v in self.quantum_metrics.items()
             }
-        
+
         return summary
+
+
+def plot_phi_shell_geometry(model, dataloader, device, save_path="artifacts/phi_shell.png"):
+    """
+    Visualize the Phi-shell geometry in the latent space.
+
+    This function extracts latent embeddings (mu) from the model and creates:
+    1. A histogram of L2 radii showing concentration around the golden ratio shell
+    2. A 2D PCA projection with the theoretical phi-shell circle overlay
+
+    Args:
+        model: The trained VAE model with .encode() or forward method returning mu
+        dataloader: DataLoader containing the data to visualize
+        device: torch device ('cpu', 'cuda', etc.)
+        save_path: Path to save the visualization
+
+    Note: This requires sklearn.decomposition.PCA for dimensionality reduction.
+    """
+    import torch
+    import numpy as np
+    import matplotlib.pyplot as plt
+
+    model.eval()
+
+    all_mu = []
+    all_labels = []
+
+    # Extract latent embeddings
+    with torch.no_grad():
+        for batch_data in dataloader:
+            # Handle different dataloader formats (single tensor vs tuple)
+            if isinstance(batch_data, (list, tuple)):
+                batch_x = batch_data[0].to(device)
+            else:
+                batch_x = batch_data.to(device)
+
+            # Forward pass to get mu (latent mean)
+            if hasattr(model, 'encode'):
+                mu, log_var = model.encode(batch_x)
+            else:
+                # Assume forward returns (recon, mu, log_var, ...)
+                recon_x, mu, log_var, _ = model(batch_x)
+
+            all_mu.append(mu.cpu().numpy())
+
+            # Try to extract labels if available
+            if len(batch_data) > 1 and batch_data[1] is not None:
+                labels = batch_data[1].cpu().numpy()
+                all_labels.append(labels)
+            else:
+                # No labels provided, assign dummy label
+                all_labels.append(np.zeros(len(mu)))
+
+    # Concatenate all batches
+    mu_array = np.concatenate(all_mu, axis=0)
+    labels_array = np.concatenate(all_labels, axis=0)
+
+    # Calculate radii (L2 norm of each latent vector)
+    radii = np.linalg.norm(mu_array, axis=1)
+
+    # Target phi-shell radius (k * PHI where k=3.5, PHI=1.618...)
+    PHI = (1 + 5 ** 0.5) / 2
+    r_star = 3.5 * PHI  # ≈ 5.66
+
+    # Create figure with 2 subplots
+    fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+
+    # Subplot 1: Histogram of radii
+    ax1 = axes[0]
+    ax1.hist(radii, bins=50, alpha=0.7, color='steelblue', edgecolor='black', density=True)
+    ax1.axvline(r_star, color='red', linestyle='--', linewidth=2, label=f'φ-Shell (r* ≈ {r_star:.2f})')
+    ax1.axvline(radii.mean(), color='green', linestyle='-', linewidth=2, label=f'Mean (μ ≈ {radii.mean():.2f})')
+    ax1.set_xlabel('Latent Radius ||μ||₂', fontsize=12)
+    ax1.set_ylabel('Density', fontsize=12)
+    ax1.set_title('Phi-Shell Formation: Latent Radius Distribution', fontsize=14, fontweight='bold')
+    ax1.legend(fontsize=10)
+    ax1.grid(True, alpha=0.3)
+    ax1.set_xlim(0, max(radii.max() * 1.1, r_star * 1.5))
+
+    # Add statistics text
+    stats_text = f'Mean: {radii.mean():.3f}\nStd: {radii.std():.3f}\nMedian: {np.median(radii):.3f}'
+    ax1.text(0.95, 0.95, stats_text, transform=ax1.transAxes,
+             fontsize=9, verticalalignment='top', horizontalalignment='right',
+             bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
+
+    # Subplot 2: 2D PCA projection
+    ax2 = axes[1]
+    try:
+        from sklearn.decomposition import PCA
+
+        # Reduce to 2D
+        pca = PCA(n_components=2)
+        mu_2d = pca.fit_transform(mu_array)
+
+        # Scatter plot colored by domain labels
+        unique_labels = np.unique(labels_array)
+        colors = plt.cm.tab10(np.linspace(0, 1, len(unique_labels)))
+
+        for i, label in enumerate(unique_labels):
+            mask = labels_array == label
+            ax2.scatter(mu_2d[mask, 0], mu_2d[mask, 1],
+                       c=[colors[i]], label=f'Domain {int(label)}',
+                       alpha=0.6, s=20, edgecolors='none')
+
+        # Draw theoretical phi-shell circle (projected to 2D)
+        # The circle in PCA space will be an ellipse, but we draw as circle for visualization
+        theta = np.linspace(0, 2 * np.pi, 100)
+        circle_x = r_star * np.cos(theta)
+        circle_y = r_star * np.sin(theta)
+        ax2.plot(circle_x, circle_y, 'r--', linewidth=2, label=f'φ-Shell (r* ≈ {r_star:.2f})')
+
+        ax2.set_xlabel(f'PC1 ({pca.explained_variance_ratio_[0]*100:.1f}% var)', fontsize=12)
+        ax2.set_ylabel(f'PC2 ({pca.explained_variance_ratio_[1]*100:.1f}% var)', fontsize=12)
+        ax2.set_title('Phi-Shell Geometry: 2D PCA Projection', fontsize=14, fontweight='bold')
+        ax2.legend(fontsize=9, loc='upper right')
+        ax2.grid(True, alpha=0.3)
+        ax2.axis('equal')
+
+        # Center the view
+        max_radius_2d = np.max(np.abs(mu_2d)) * 1.1
+        ax2.set_xlim(-max_radius_2d, max_radius_2d)
+        ax2.set_ylim(-max_radius_2d, max_radius_2d)
+
+    except ImportError:
+        ax2.text(0.5, 0.5, 'sklearn not available\nCannot perform PCA projection',
+                 transform=ax2.transAxes, ha='center', va='center',
+                 fontsize=12, bbox=dict(boxstyle='round', facecolor='orange', alpha=0.5))
+        ax2.set_title('Phi-Shell Geometry: PCA Unavailable', fontsize=14, fontweight='bold')
+
+    plt.tight_layout()
+
+    # Ensure save directory exists
+    import os
+    os.makedirs(os.path.dirname(save_path) or '.', exist_ok=True)
+
+    plt.savefig(save_path, dpi=150, bbox_inches='tight')
+    plt.close(fig)
+
+    print(f"Phi-shell geometry visualization saved to: {save_path}")
+    print(f"  Latent radius statistics: mean={radii.mean():.3f}, std={radii.std():.3f}, target={r_star:.3f}")
+
+    # Return statistics for analysis
+    return {
+        'mean_radius': float(radii.mean()),
+        'std_radius': float(radii.std()),
+        'median_radius': float(np.median(radii)),
+        'target_radius': float(r_star),
+        'phi_alignment_score': float(np.exp(-np.abs(radii.mean() - r_star) / r_star))  # Higher = better alignment
+    }
+
+
