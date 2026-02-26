@@ -6,6 +6,7 @@ from torch.utils.data import DataLoader, TensorDataset
 import numpy as np
 import matplotlib.pyplot as plt
 from vae_model import QuantumVAE, total_loss, HybridQuantumOptimizer
+from src.quantum_vae.losses import kl_anneal_factor
 import os
 import sys
 import argparse
@@ -13,11 +14,19 @@ import time
 import threading
 import queue
 
+WS_BRIDGE_AVAILABLE = False
+try:
+    from ws_bridge import broadcast_message
+    from consciousness_streamer import ConsciousnessStreamer
+    WS_BRIDGE_AVAILABLE = True
+except ImportError:
+    pass
+
 # Add utils to path
 sys.path.append(os.path.join(os.path.dirname(__file__), 'utils'))
 try:
     from utils.golden_ratio_callback import GoldenRatioCallback, phi_regularization_loss
-    from utils.performance_monitor import PerformanceMonitor
+    from utils.performance_monitor import PerformanceMonitor, plot_phi_shell_geometry
     UTILS_AVAILABLE = True
 except ImportError:
     UTILS_AVAILABLE = False
@@ -369,8 +378,14 @@ def load_sacred_datasets(data_dir='sacred_datasets'):
 def create_unified_dataset(sacred_datasets, real_data, target_dim=128):
     """
     Create unified cross-domain dataset for consciousness VAE training
+
+    Returns:
+        unified_array: numpy array of shape (n_samples, target_dim)
+        domain_labels: numpy array of domain labels for each sample (for stratification)
     """
     unified_data = []
+    domain_labels = []
+    domain_id = 0
 
     # Process each domain
     for domain, data in sacred_datasets.items():
@@ -386,15 +401,23 @@ def create_unified_dataset(sacred_datasets, real_data, target_dim=128):
                 data_norm = np.concatenate([data_norm, padding], axis=1)
 
             unified_data.extend(data_norm)
-            print(f"Added {len(data_norm)} samples from {domain} domain")
+            domain_labels.extend([domain_id] * len(data_norm))
+            print(f"Added {len(data_norm)} samples from {domain} domain (label: {domain_id})")
+            domain_id += 1
 
-    # Add real consciousness data
+    # Add real consciousness data with its own domain label
     if real_data is not None:
-        unified_data.extend(real_data[:1000])  # Limit to balance
-    unified_array = np.array(unified_data, dtype=np.float32)
-    print(f"Unified dataset: {unified_array.shape}")
+        n_real = min(len(real_data), 1000)  # Limit to balance
+        unified_data.extend(real_data[:n_real])
+        domain_labels.extend([domain_id] * n_real)
+        print(f"Added {n_real} samples from real consciousness domain (label: {domain_id})")
 
-    return unified_array
+    unified_array = np.array(unified_data, dtype=np.float32)
+    domain_array = np.array(domain_labels, dtype=np.int32)
+    print(f"Unified dataset: {unified_array.shape}")
+    print(f"Domain distribution: {np.bincount(domain_array)}")
+
+    return unified_array, domain_array
 
 def load_real_consciousness_data(data_dir='real_data'):
     """
@@ -498,33 +521,44 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
     val_losses = []
 
     if console:
-        console.print("[bold blue]🚀 Starting Quantum VAE Training[/bold blue]")
+        console.print("[bold blue]>> Starting Quantum VAE Training[/bold blue]")
         console.print(f"Training on device: {device}")
         console.print(f"Target epochs: {num_epochs}, Early stopping patience: {early_stopping_patience}")
         console.print()
 
     for epoch in range(num_epochs):
+
         model.train()
         epoch_train_losses = {'total': 0, 'recon': 0, 'kl': 0, 'hamming': 0, 'coherence': 0, 'hw': 0, 'mixed_state': 0, 'fidelity': 0, 'entropy': 0, 'phi': 0, 'contrastive': 0}
+
+        # KL annealing setup
+        total_steps = num_epochs * len(train_loader)
+        if 'global_step' not in locals():
+            global_step = 0
 
         for batch_x, in train_loader:
             batch_x = batch_x.to(device)
             optimizer.zero_grad()
 
             recon_x, mu, log_var, density_matrix = model(batch_x)
-            total_tensor, losses = total_loss(recon_x, batch_x, mu, log_var, density_matrix, include_advanced=(epoch > 50))
 
-            # Add phi-target loss (use adaptive if enabled, else fixed)
-            if adaptive_phi_loss is not None:
-                phi_loss = adaptive_phi_loss(mu, epoch=epoch)
-            else:
-                phi_loss = phi_target_loss(mu) * 0.1
-            total_tensor += phi_loss
+            # KL annealing factor
+            beta = kl_anneal_factor(global_step, total_steps, max_beta=0.0008)
 
-            # Add golden ratio regularization if available (skip if using adaptive)
-            if UTILS_AVAILABLE and phi_callback and adaptive_phi_loss is None:
-                phi_reg_loss = phi_regularization_loss(mu, weight=0.05)
-                total_tensor += phi_reg_loss
+            # Loss weights including phi
+            weights = {
+                'recon': 1.0,
+                'kl': beta,
+                'hamming': 0.3,
+                'coherence': 0.1,
+                'mixed_state': 0.1,
+                'fidelity': 0.1,
+                'entropy': 0.05,
+                'hw': 0.01,
+                'phi': 0.01,
+            }
+
+            total_tensor, losses = model.compute_losses(recon_x, batch_x, mu, log_var, weights=weights)
 
             # Add contrastive loss
             batch_size = batch_x.shape[0] // 2
@@ -540,24 +574,26 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
                 feedback_score = consciousness_streamer.get_feedback_score()
                 consciousness_loss = (1.0 - feedback_score) * 0.1  # Encourage higher feedback
                 total_tensor += consciousness_loss
-            
+
             total_tensor.backward()
-            
+
             # Clip gradients to prevent NaN explosion
             torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
-            
+
             if use_hybrid_optimizer:
-                optimizer.step(lambda: total_loss(model(batch_x), batch_x, mu, log_var, density_matrix)[0])
+                optimizer.step(lambda: model.compute_losses(model(batch_x), batch_x, mu, log_var, weights=weights)[0])
             else:
                 optimizer.step()
 
             for key in epoch_train_losses:
                 if key == 'phi':
-                    epoch_train_losses[key] += phi_loss.item()
+                    epoch_train_losses[key] += losses['phi']
                 elif key == 'contrastive':
                     epoch_train_losses[key] += contrastive.item()
                 else:
                     epoch_train_losses[key] += losses[key]
+
+            global_step += 1
 
         # Average over batches
         num_batches = len(train_loader)
@@ -570,16 +606,28 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
         model.eval()
         epoch_val_losses = {'total': 0, 'recon': 0, 'kl': 0, 'hamming': 0, 'coherence': 0, 'hw': 0, 'mixed_state': 0, 'fidelity': 0, 'entropy': 0, 'phi': 0, 'contrastive': 0}
 
+        # Use same loss weights as training for consistent evaluation
+        weights = {
+            'recon': 1.0,
+            'kl': beta,  # Use current KL annealing weight
+            'hamming': 0.3,
+            'coherence': 0.1,
+            'mixed_state': 0.1,
+            'fidelity': 0.1,
+            'entropy': 0.05,
+            'hw': 0.01,
+            'phi': 0.01,
+        }
+
         with torch.no_grad():
             for batch_x, in val_loader:
                 batch_x = batch_x.to(device)
                 recon_x, mu, log_var, density_matrix = model(batch_x)
-                _, losses = total_loss(recon_x, batch_x, mu, log_var, density_matrix, include_advanced=(epoch > 50))
 
-                # Add phi-target loss
-                phi_loss = phi_target_loss(mu) * 0.1
+                # Use model.compute_losses like training loop for consistent metrics
+                total_tensor, losses = model.compute_losses(recon_x, batch_x, mu, log_var, weights=weights)
 
-                # Add contrastive loss
+                # Add contrastive loss (if batch size allows)
                 batch_size = batch_x.shape[0] // 2
                 if batch_size > 1:
                     z_i, z_j = mu[:batch_size], mu[batch_size:2*batch_size]
@@ -588,9 +636,7 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
                     contrastive = torch.tensor(0.0, device=device)
 
                 for key in epoch_val_losses:
-                    if key == 'phi':
-                        epoch_val_losses[key] += phi_loss.item()
-                    elif key == 'contrastive':
+                    if key == 'contrastive':
                         epoch_val_losses[key] += contrastive.item()
                     else:
                         epoch_val_losses[key] += losses[key]
@@ -636,6 +682,23 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
                     epoch_val_losses,
                     quantum_metrics
                 )
+            
+            # Broadcast training progress via WebSocket
+            if WS_BRIDGE_AVAILABLE:
+                phi_res = quantum_metrics.get('phi_resonance', 0.0)
+                broadcast_message({
+                    'type': 'training_progress',
+                    'epoch': epoch + 1,
+                    'total_epochs': num_epochs,
+                    'total_loss': float(epoch_val_losses['total']),
+                    'recon_loss': float(epoch_val_losses['recon']),
+                    'kl_loss': float(epoch_val_losses['kl']),
+                    'coherence_loss': float(epoch_val_losses['coherence']),
+                    'fidelity_loss': float(epoch_val_losses.get('fidelity', 0.0)),
+                    'phi_resonance': float(phi_res),
+                    'learning_rate': optimizer.param_groups[0]['lr'] if hasattr(optimizer, 'param_groups') else 0.0,
+                    'timestamp': time.time()
+                })
 
         current_val_loss = epoch_val_losses['total']
         scheduler.step(current_val_loss)
@@ -696,17 +759,28 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
     if perf_monitor:
         perf_monitor.plot_all_metrics(save_path='artifacts/training_metrics_full.png')
         perf_monitor.plot_quantum_metrics(save_path='artifacts/quantum_metrics.png')
-        perf_monitor.save_metrics_json()
+        # Save metrics JSON but continue even if it fails
+        try:
+            perf_monitor.save_metrics_json()
+        except Exception as e:
+            print(f"⚠️ Skipping JSON save due to error: {e}")
+            print("Continuing to visualization...")
         summary = perf_monitor.get_summary()
-        if console:
-            console.print("\n[bold green]📊 Performance Summary:[/bold green]")
-            console.print(f"Best validation loss: {summary.get('best_val_loss', 'N/A'):.6f} at epoch {summary.get('best_val_loss_epoch', 'N/A')}")
-    
-        phi_summary = phi_callback.get_summary()
-        if console:
-            console.print("\n[bold yellow]✨ Golden Ratio Summary:[/bold yellow]")
-            console.print(f"Final resonance: {phi_summary.get('final_resonance', 'N/A'):.4f}")
-            console.print(f"Phi-aligned: {phi_summary.get('phi_aligned', False)}")
+    else:
+        summary = None
+
+    # Generate Phi-shell geometry visualization
+    if UTILS_AVAILABLE:
+        try:
+            print("\n[bold cyan]>> Generating Phi-shell Geometry Visualization...[/bold cyan]")
+            phi_stats = plot_phi_shell_geometry(model, val_loader, device, save_path='artifacts/phi_shell.png')
+            if console:
+                console.print("\n[bold cyan]>> Phi-shell Geometry Statistics:[/bold cyan]")
+                console.print(f"Mean radius: {phi_stats.get('mean_radius', 'N/A'):.3f}")
+                console.print(f"Target radius: {phi_stats.get('target_radius', 'N/A'):.3f}")
+                console.print(f"Phi alignment score: {phi_stats.get('phi_alignment_score', 'N/A'):.3f}")
+        except Exception as e:
+            print(f"Warning: Could not generate phi-shell visualization: {e}")
     
     # Cleanup consciousness streaming
     if consciousness_streamer:
@@ -746,6 +820,8 @@ def main():
     parser.add_argument('--batch_size', type=int, default=32, help='Batch size')
     parser.add_argument('--latent_dim', type=int, default=32, help='Latent dimension')
     parser.add_argument('--hidden_dims', type=int, nargs='+', default=[256, 128], help='Hidden layer dimensions')
+    parser.add_argument('--device', type=str, default='auto', choices=['auto', 'cpu', 'cuda', 'mps'],
+                       help='Device to train on (auto=auto-detect)')
     parser.add_argument('--use_mps', action='store_true', help='Use Matrix Product State encoding')
     parser.add_argument('--mps_bond_dim', type=int, default=16, help='MPS bond dimension')
     parser.add_argument('--use_quantum_kernel', action='store_true', help='Use quantum kernel for learning')
@@ -784,11 +860,15 @@ def main():
     error_correction_type = args.error_correction_type
     error_correction_distance = args.error_correction_distance
     
-    device_setting = (cfg['training'].get('device') if cfg and 'training' in cfg else None)
-    if device_setting:
-        device = torch.device(device_setting)
+    # Device selection
+    if args.device == 'auto':
+        device_setting = (cfg['training'].get('device') if cfg and 'training' in cfg else None)
+        if device_setting:
+            device = torch.device(device_setting)
+        else:
+            device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     else:
-        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        device = torch.device(args.device)
 
     # Load unified sacred geometry and consciousness data
     print("Loading sacred geometry datasets...")
@@ -798,15 +878,32 @@ def main():
     real_data = load_real_consciousness_data()
 
     print("Creating unified cross-domain dataset...")
-    data = create_unified_dataset(sacred_datasets, real_data, input_dim)
+    data, domain_labels = create_unified_dataset(sacred_datasets, real_data, input_dim)
 
     # Adjust input_dim to match data
     input_dim = data.shape[1]
 
-    # Split into train/val
-    train_size = int(0.8 * len(data))
-    train_data = data[:train_size]
-    val_data = data[train_size:]
+    # Stratified train/val split using sklearn
+    try:
+        from sklearn.model_selection import train_test_split
+        train_indices, val_indices = train_test_split(
+            range(len(data)),
+            test_size=0.2,
+            stratify=domain_labels,
+            random_state=42
+        )
+        train_data = data[train_indices]
+        val_data = data[val_indices]
+        train_labels = domain_labels[train_indices]
+        val_labels = domain_labels[val_indices]
+        print(f"Stratified split: Train samples = {len(train_data)}, Val samples = {len(val_data)}")
+        print(f"Train domain distribution: {np.bincount(train_labels)}")
+        print(f"Val domain distribution: {np.bincount(val_labels)}")
+    except ImportError:
+        print("Warning: sklearn not available, using simple split")
+        train_size = int(0.8 * len(data))
+        train_data = data[:train_size]
+        val_data = data[train_size:]
 
     # Create data loaders
     train_dataset = TensorDataset(torch.from_numpy(train_data))
