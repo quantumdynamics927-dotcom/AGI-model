@@ -13,12 +13,22 @@ import argparse
 import time
 import threading
 import queue
+import json
+from pathlib import Path
 
 WS_BRIDGE_AVAILABLE = False
 try:
     from ws_bridge import broadcast_message
     from consciousness_streamer import ConsciousnessStreamer
     WS_BRIDGE_AVAILABLE = True
+except ImportError:
+    pass
+
+VAULT_INTEGRATION_AVAILABLE = False
+try:
+    from tmt_vault_integration import run_agent_task_validation
+    from ollama_cloud_models import get_ollama_cloud_model
+    VAULT_INTEGRATION_AVAILABLE = True
 except ImportError:
     pass
 
@@ -517,8 +527,10 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
     min_delta = 0.0001
     best_val_loss = float('inf')
     patience_counter = 0
+    early_stopped = False
     train_losses = []
     val_losses = []
+    best_checkpoint_summary = {}
 
     if console:
         console.print("[bold blue]>> Starting Quantum VAE Training[/bold blue]")
@@ -542,8 +554,10 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
 
             recon_x, mu, log_var, density_matrix = model(batch_x)
 
-            # KL annealing factor
-            beta = kl_anneal_factor(global_step, total_steps, max_beta=0.0008)
+            # The first full cloud research loop in research_loop_result.json
+            # flagged KL over-regularization, so halve the max beta for the
+            # next tuning pass and compare smoke metrics against that run.
+            beta = kl_anneal_factor(global_step, total_steps, max_beta=0.0004)
 
             # Loss weights including phi
             weights = {
@@ -701,6 +715,12 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
                 })
 
         current_val_loss = epoch_val_losses['total']
+        current_learning_rate = (
+            optimizer.param_groups[0]['lr']
+            if hasattr(optimizer, 'param_groups')
+            else None
+        )
+        improved = False
         scheduler.step(current_val_loss)
 
         # Early stopping
@@ -708,12 +728,44 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
             best_val_loss = current_val_loss
             patience_counter = 0
             torch.save(model.state_dict(), save_path)
+            improved = True
             print(f"Saved best model with val loss: {best_val_loss:.4f}")
         else:
             patience_counter += 1
             if patience_counter >= early_stopping_patience:
                 print(f"Early stopping at epoch {epoch+1}")
+                early_stopped = True
                 break
+
+        if improved:
+            best_checkpoint_summary = {
+                'epoch': epoch + 1,
+                'path': save_path,
+                'best_val_loss': float(best_val_loss),
+                'train_losses': {
+                    key: float(value)
+                    for key, value in epoch_train_losses.items()
+                },
+                'val_losses': {
+                    key: float(value)
+                    for key, value in epoch_val_losses.items()
+                },
+                'learning_rate': (
+                    float(current_learning_rate)
+                    if current_learning_rate is not None
+                    else None
+                ),
+                'quantum_metrics': {
+                    key: float(value)
+                    for key, value in quantum_metrics.items()
+                },
+                'consciousness_metrics': {
+                    'lz_original': float(lz_original),
+                    'lz_reconstructed': float(lz_reconstructed),
+                    'pci_original': float(pci_original),
+                    'pci_reconstructed': float(pci_reconstructed),
+                },
+            }
 
         # Display metrics with Rich table if available
         if console:
@@ -786,8 +838,17 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
     if consciousness_streamer:
         consciousness_streamer.stop_streaming()
         print("Consciousness streaming stopped")
-    
-    return train_losses, val_losses
+
+    training_summary = {
+        'save_path': save_path,
+        'num_epochs_completed': len(train_losses),
+        'requested_epochs': num_epochs,
+        'early_stopped': early_stopped,
+        'best_checkpoint': best_checkpoint_summary,
+        'performance_summary': summary,
+    }
+
+    return train_losses, val_losses, training_summary
 
 def plot_losses(train_losses, val_losses, save_path='training_curves.png'):
     epochs = range(1, len(train_losses) + 1)
@@ -814,6 +875,16 @@ def plot_losses(train_losses, val_losses, save_path='training_curves.png'):
     plt.savefig(save_path, dpi=300, bbox_inches='tight')
     # plt.show()  # Remove to avoid blocking in headless environment
 
+
+def write_training_summary(summary, output_path):
+    """Persist a structured training summary next to the checkpoint."""
+    output_file = Path(output_path)
+    output_file.write_text(
+        json.dumps(summary, indent=2),
+        encoding='utf-8',
+    )
+    return output_file
+
 def main():
     parser = argparse.ArgumentParser(description='Train Quantum Consciousness VAE')
     parser.add_argument('--epochs', type=int, default=200, help='Number of training epochs')
@@ -833,6 +904,12 @@ def main():
     parser.add_argument('--use_error_correction', action='store_true', help='Enable quantum error correction')
     parser.add_argument('--error_correction_type', type=str, default='surface', help='Type of error correction code')
     parser.add_argument('--error_correction_distance', type=int, default=3, help='Error correction code distance')
+    parser.add_argument('--vault_validate', action='store_true', help='Run TMT Quantum Vault agent-task validation after training')
+    parser.add_argument('--vault_repo', type=str, default=None, help='Path to a local TMT_Quantum_Vault checkout')
+    parser.add_argument('--vault_mode', type=str, default='cloud', help='TMT Quantum Vault mode for post-training validation')
+    parser.add_argument('--vault_model', type=str, default=None, help='Explicit Ollama model override for Vault validation')
+    parser.add_argument('--vault_extra_context', type=str, default=None, help='Extra context appended to the Vault validation prompt')
+    parser.add_argument('--summary_path', type=str, default='best_model.summary.json', help='Path to write structured training summary JSON')
     
     args = parser.parse_args()
     
@@ -924,14 +1001,55 @@ def main():
     print(f"Training samples: {len(train_data)}, Validation samples: {len(val_data)}")
 
     # Train
-    train_losses, val_losses = train_vae(model, train_loader, val_loader, num_epochs, device, consciousness_streaming=consciousness_streaming, use_hybrid_optimizer=use_hybrid_optimizer)
+    train_losses, val_losses, training_summary = train_vae(
+        model,
+        train_loader,
+        val_loader,
+        num_epochs,
+        device,
+        consciousness_streaming=consciousness_streaming,
+        use_hybrid_optimizer=use_hybrid_optimizer,
+    )
 
     # Plot results
     plot_losses(train_losses, val_losses)
 
+    summary_path = write_training_summary(training_summary, args.summary_path)
+
+    if args.vault_validate:
+        if not VAULT_INTEGRATION_AVAILABLE:
+            print(
+                'TMT Quantum Vault integration module is not available '
+                'in this environment.'
+            )
+        else:
+            try:
+                selected_vault_model = get_ollama_cloud_model(
+                    'vae_checkpoint_validation',
+                    override=args.vault_model,
+                )
+                vault_result = run_agent_task_validation(
+                    training_summary,
+                    checkpoint_path=training_summary.get(
+                        'save_path',
+                        'best_model.pt',
+                    ),
+                    repo_path=args.vault_repo,
+                    mode=args.vault_mode,
+                    model=selected_vault_model,
+                    extra_context=args.vault_extra_context,
+                )
+                training_summary['vault_validation'] = vault_result.to_dict()
+                training_summary['vault_validation']['selected_model'] = selected_vault_model
+                write_training_summary(training_summary, args.summary_path)
+                print('TMT Quantum Vault validation completed successfully.')
+            except Exception as exc:
+                print(f'TMT Quantum Vault validation failed: {exc}')
+
     print("Training completed!")
     print(f"Best model saved as 'best_model.pt'")
     print("Training curves saved as 'training_curves.png'")
+    print(f"Training summary saved as '{summary_path}'")
 
 if __name__ == "__main__":
     main()
