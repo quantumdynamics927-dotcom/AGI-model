@@ -1,0 +1,511 @@
+{
+  "name": "agi-model-artifacts",
+  "cases": [
+    {
+      "id": "phi_agent_report_20260310_231439-phi-report",
+      "prompt": "Review this AGI-model phi agent report and produce a compact factual summary. Include phi alignment, consciousness level, integrated information, latent entropy, and whether the run is conscious.\n\nArtifact file: phi_agent_report_20260310_231439.json\nReport JSON:\n{\n  \"dna_results\": {\n    \"phi_value\": 2.895460742440859,\n    \"is_conscious\": true,\n    \"consciousness_level\": 1.0,\n    \"theory_agreement\": 1.0,\n    \"phi_resonance_threshold\": 0.7,\n    \"dna_phi_ratio\": 0.5882352941176471,\n    \"phi_alignment_score\": 0.9517846992646442,\n    \"statistical_analysis\": {\n      \"bootstrap\": {\n        \"threshold\": 0.7,\n        \"ci_lower\": 0.95,\n        \"ci_upper\": 1.0\n      }\n    },\n    \"latent_space_analysis\": {\n      \"dimension\": 102,\n      \"lz_complexity\": 0.46875,\n      \"entropy\": 6.451398833713856\n    },\n    \"dna_source\": \"dna_agent_report\",\n    \"timestamp\": \"2026-03-10T23:14:38.852944\"\n  },\n  \"phi_harmonic\": {\n    \"phi_harmonic_score\": 1.0,\n    \"phi_alignment\": 0.9517846992646442,\n    \"is_conscious\": 1,\n    \"theory_agreement\": 1.0\n  },\n  \"latent_space\": {\n    \"lz_complexity\": 0.46875,\n    \"latent_entropy\": 6.451398833713856,\n    \"dimension_ratio\": 0.9902912621359223\n  },\n  \"integrated_information\": {\n    \"integrated_information\": 1.618033988749895,\n    \"integrated_information_normalized\": 0.5,\n    \"n_units\": 20,\n    \"interpretation\": \"Moderately integrated\"\n  },\n  \"timestamp\": \"2026-03-10T23:14:38.852944\"\n}",
+      "expectation": {
+        "contains_all": [
+          "0.951785",
+          "1.000000",
+          "1.618034",
+          "6.451399",
+          "True"
+        ],
+        "contains_any": [
+          "phi alignment",
+          "consciousness level",
+          "integrated information",
+          "latent entropy",
+          "is_conscious"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    },
+    {
+      "id": "dna_quantum_analysis_results-tata-box-human",
+      "prompt": "Evaluate this AGI-model DNA quantum analysis record and summarize the sequence-level signal. Include phi correlation, predicted gain, quantum coherence, fidelity, and role.\n\nArtifact file: dna_quantum_analysis_results.json\nSequence: TATA Box (Human)\nMetrics JSON:\n{\n  \"phi_correlation\": 0.4891990918925185,\n  \"fractal_dimension\": 2.0,\n  \"predicted_gain\": 1.1456794146554945,\n  \"quantum_coherence\": 0.00021946158757182375,\n  \"role\": \"BALANCED (Transition)\",\n  \"metrics\": {\n    \"entanglement_entropy\": -1.4426951601859516e-10,\n    \"fidelity\": 0.9998922184961183,\n    \"purity\": 1.0000000000000004\n  }\n}",
+      "expectation": {
+        "contains_all": [
+          "TATA Box (Human)",
+          "0.489199",
+          "1.145679",
+          "0.000219",
+          "0.999892",
+          "BALANCED (Transition)"
+        ],
+        "contains_any": [
+          "phi_correlation",
+          "predicted_gain",
+          "quantum_coherence",
+          "fidelity",
+          "role"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    },
+    {
+      "id": "dna_quantum_analysis_results-tata-box-ecoli",
+      "prompt": "Evaluate this AGI-model DNA quantum analysis record and summarize the sequence-level signal. Include phi correlation, predicted gain, quantum coherence, fidelity, and role.\n\nArtifact file: dna_quantum_analysis_results.json\nSequence: TATA Box (E.coli)\nMetrics JSON:\n{\n  \"phi_correlation\": 0.41255323214005557,\n  \"fractal_dimension\": 1.3333333333333333,\n  \"predicted_gain\": 1.1889238430817128,\n  \"quantum_coherence\": 0.0008461718020541547,\n  \"role\": \"BALANCED (Transition)\",\n  \"metrics\": {\n    \"entanglement_entropy\": -1.442691956759448e-10,\n    \"fidelity\": 0.999133553730037,\n    \"purity\": 0.9999999999999996\n  }\n}",
+      "expectation": {
+        "contains_all": [
+          "TATA Box (E.coli)",
+          "0.412553",
+          "1.188924",
+          "0.000846",
+          "0.999134",
+          "BALANCED (Transition)"
+        ],
+        "contains_any": [
+          "phi_correlation",
+          "predicted_gain",
+          "quantum_coherence",
+          "fidelity",
+          "role"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    },
+    {
+      "id": "dna_quantum_analysis_results-caat-box",
+      "prompt": "Evaluate this AGI-model DNA quantum analysis record and summarize the sequence-level signal. Include phi correlation, predicted gain, quantum coherence, fidelity, and role.\n\nArtifact file: dna_quantum_analysis_results.json\nSequence: CAAT Box\nMetrics JSON:\n{\n  \"phi_correlation\": 0.5045931471150014,\n  \"fractal_dimension\": 2.0,\n  \"predicted_gain\": 1.137370535588384,\n  \"quantum_coherence\": 0.00010052849264705882,\n  \"role\": \"STATIC ANCHOR (Crystal)\",\n  \"metrics\": {\n    \"entanglement_entropy\": -1.442691956759448e-10,\n    \"fidelity\": 0.9998889107248967,\n    \"purity\": 0.9999999999999999\n  }\n}",
+      "expectation": {
+        "contains_all": [
+          "CAAT Box",
+          "0.504593",
+          "1.137371",
+          "0.000101",
+          "0.999889",
+          "STATIC ANCHOR (Crystal)"
+        ],
+        "contains_any": [
+          "phi_correlation",
+          "predicted_gain",
+          "quantum_coherence",
+          "fidelity",
+          "role"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    },
+    {
+      "id": "dna_quantum_analysis_results-gc-box",
+      "prompt": "Evaluate this AGI-model DNA quantum analysis record and summarize the sequence-level signal. Include phi correlation, predicted gain, quantum coherence, fidelity, and role.\n\nArtifact file: dna_quantum_analysis_results.json\nSequence: GC Box\nMetrics JSON:\n{\n  \"phi_correlation\": 0.5530637125689342,\n  \"fractal_dimension\": 2.0,\n  \"predicted_gain\": 1.111978314428957,\n  \"quantum_coherence\": 0.0012147716229348883,\n  \"role\": \"STATIC ANCHOR (Crystal)\",\n  \"metrics\": {\n    \"entanglement_entropy\": -1.442691956759448e-10,\n    \"fidelity\": 0.9994068249333853,\n    \"purity\": 1.0000000000000002\n  }\n}",
+      "expectation": {
+        "contains_all": [
+          "GC Box",
+          "0.553064",
+          "1.111978",
+          "0.001215",
+          "0.999407",
+          "STATIC ANCHOR (Crystal)"
+        ],
+        "contains_any": [
+          "phi_correlation",
+          "predicted_gain",
+          "quantum_coherence",
+          "fidelity",
+          "role"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    },
+    {
+      "id": "dna_quantum_analysis_results-kozak-strong",
+      "prompt": "Evaluate this AGI-model DNA quantum analysis record and summarize the sequence-level signal. Include phi correlation, predicted gain, quantum coherence, fidelity, and role.\n\nArtifact file: dna_quantum_analysis_results.json\nSequence: Kozak Strong\nMetrics JSON:\n{\n  \"phi_correlation\": 0.5171447814071775,\n  \"fractal_dimension\": 2.0,\n  \"predicted_gain\": 1.130684510410103,\n  \"quantum_coherence\": 0.00011752651880424304,\n  \"role\": \"STATIC ANCHOR (Crystal)\",\n  \"metrics\": {\n    \"entanglement_entropy\": -1.4426951601859516e-10,\n    \"fidelity\": 0.9998780436210528,\n    \"purity\": 1.0\n  }\n}",
+      "expectation": {
+        "contains_all": [
+          "Kozak Strong",
+          "0.517145",
+          "1.130685",
+          "0.000118",
+          "0.999878",
+          "STATIC ANCHOR (Crystal)"
+        ],
+        "contains_any": [
+          "phi_correlation",
+          "predicted_gain",
+          "quantum_coherence",
+          "fidelity",
+          "role"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    },
+    {
+      "id": "dna_quantum_analysis_results-kozak-weak",
+      "prompt": "Evaluate this AGI-model DNA quantum analysis record and summarize the sequence-level signal. Include phi correlation, predicted gain, quantum coherence, fidelity, and role.\n\nArtifact file: dna_quantum_analysis_results.json\nSequence: Kozak Weak\nMetrics JSON:\n{\n  \"phi_correlation\": 0.49300819034029786,\n  \"fractal_dimension\": 2.0,\n  \"predicted_gain\": 1.1436121865710716,\n  \"quantum_coherence\": 0.00029639405869720845,\n  \"role\": \"BALANCED (Transition)\",\n  \"metrics\": {\n    \"entanglement_entropy\": -1.442704770465463e-10,\n    \"fidelity\": 0.9998725334055959,\n    \"purity\": 1.000000000000001\n  }\n}",
+      "expectation": {
+        "contains_all": [
+          "Kozak Weak",
+          "0.493008",
+          "1.143612",
+          "0.000296",
+          "0.999873",
+          "BALANCED (Transition)"
+        ],
+        "contains_any": [
+          "phi_correlation",
+          "predicted_gain",
+          "quantum_coherence",
+          "fidelity",
+          "role"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    },
+    {
+      "id": "dna_quantum_analysis_results-shine-dalgarno",
+      "prompt": "Evaluate this AGI-model DNA quantum analysis record and summarize the sequence-level signal. Include phi correlation, predicted gain, quantum coherence, fidelity, and role.\n\nArtifact file: dna_quantum_analysis_results.json\nSequence: Shine-Dalgarno\nMetrics JSON:\n{\n  \"phi_correlation\": 0.45602471169706005,\n  \"fractal_dimension\": 2.0,\n  \"predicted_gain\": 1.164004452647766,\n  \"quantum_coherence\": 0.0002557760049730626,\n  \"role\": \"BALANCED (Transition)\",\n  \"metrics\": {\n    \"entanglement_entropy\": -1.4426983636124553e-10,\n    \"fidelity\": 0.999867425823181,\n    \"purity\": 1.0\n  }\n}",
+      "expectation": {
+        "contains_all": [
+          "Shine-Dalgarno",
+          "0.456025",
+          "1.164004",
+          "0.000256",
+          "0.999867",
+          "BALANCED (Transition)"
+        ],
+        "contains_any": [
+          "phi_correlation",
+          "predicted_gain",
+          "quantum_coherence",
+          "fidelity",
+          "role"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    },
+    {
+      "id": "dna_quantum_analysis_results-poly-a-signal",
+      "prompt": "Evaluate this AGI-model DNA quantum analysis record and summarize the sequence-level signal. Include phi correlation, predicted gain, quantum coherence, fidelity, and role.\n\nArtifact file: dna_quantum_analysis_results.json\nSequence: Poly-A Signal\nMetrics JSON:\n{\n  \"phi_correlation\": 0.4498114976483752,\n  \"fractal_dimension\": 2.0,\n  \"predicted_gain\": 1.1675019135874225,\n  \"quantum_coherence\": 0.000708616780045351,\n  \"role\": \"BALANCED (Transition)\",\n  \"metrics\": {\n    \"entanglement_entropy\": -1.4426855499064403e-10,\n    \"fidelity\": 0.9998184899929516,\n    \"purity\": 0.9999999999999986\n  }\n}",
+      "expectation": {
+        "contains_all": [
+          "Poly-A Signal",
+          "0.449811",
+          "1.167502",
+          "0.000709",
+          "0.999818",
+          "BALANCED (Transition)"
+        ],
+        "contains_any": [
+          "phi_correlation",
+          "predicted_gain",
+          "quantum_coherence",
+          "fidelity",
+          "role"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    },
+    {
+      "id": "dna_quantum_analysis_results-enhancer-core",
+      "prompt": "Evaluate this AGI-model DNA quantum analysis record and summarize the sequence-level signal. Include phi correlation, predicted gain, quantum coherence, fidelity, and role.\n\nArtifact file: dna_quantum_analysis_results.json\nSequence: Enhancer Core\nMetrics JSON:\n{\n  \"phi_correlation\": 0.5467100511618134,\n  \"fractal_dimension\": 1.7776075786635521,\n  \"predicted_gain\": 1.115242041489377,\n  \"quantum_coherence\": 8.680555555555553e-05,\n  \"role\": \"STATIC ANCHOR (Crystal)\",\n  \"metrics\": {\n    \"entanglement_entropy\": -1.442691956759448e-10,\n    \"fidelity\": 0.9999406218241452,\n    \"purity\": 0.9999999999999996\n  }\n}",
+      "expectation": {
+        "contains_all": [
+          "Enhancer Core",
+          "0.546710",
+          "1.115242",
+          "0.000087",
+          "0.999941",
+          "STATIC ANCHOR (Crystal)"
+        ],
+        "contains_any": [
+          "phi_correlation",
+          "predicted_gain",
+          "quantum_coherence",
+          "fidelity",
+          "role"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    },
+    {
+      "id": "dna_quantum_analysis_results-start-codon",
+      "prompt": "Evaluate this AGI-model DNA quantum analysis record and summarize the sequence-level signal. Include phi correlation, predicted gain, quantum coherence, fidelity, and role.\n\nArtifact file: dna_quantum_analysis_results.json\nSequence: Start Codon\nMetrics JSON:\n{\n  \"phi_correlation\": 0.3650548150729018,\n  \"fractal_dimension\": 1.7777777777777777,\n  \"predicted_gain\": 1.2174006316405093,\n  \"quantum_coherence\": 0.0260989010989011,\n  \"role\": \"BALANCED (Transition)\",\n  \"metrics\": {\n    \"entanglement_entropy\": -1.4426983636124553e-10,\n    \"fidelity\": 0.9958659611430514,\n    \"purity\": 1.0\n  }\n}",
+      "expectation": {
+        "contains_all": [
+          "Start Codon",
+          "0.365055",
+          "1.217401",
+          "0.026099",
+          "0.995866",
+          "BALANCED (Transition)"
+        ],
+        "contains_any": [
+          "phi_correlation",
+          "predicted_gain",
+          "quantum_coherence",
+          "fidelity",
+          "role"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    },
+    {
+      "id": "dna_quantum_analysis_results-stop-codon-uaa",
+      "prompt": "Evaluate this AGI-model DNA quantum analysis record and summarize the sequence-level signal. Include phi correlation, predicted gain, quantum coherence, fidelity, and role.\n\nArtifact file: dna_quantum_analysis_results.json\nSequence: Stop Codon (UAA)\nMetrics JSON:\n{\n  \"phi_correlation\": 0.5678483005625052,\n  \"fractal_dimension\": 2.0,\n  \"predicted_gain\": 1.1044572592847712,\n  \"quantum_coherence\": 0.01785714285714286,\n  \"role\": \"STATIC ANCHOR (Crystal)\",\n  \"metrics\": {\n    \"entanglement_entropy\": -1.4426983636124553e-10,\n    \"fidelity\": 0.9970704338787988,\n    \"purity\": 1.0000000000000002\n  }\n}",
+      "expectation": {
+        "contains_all": [
+          "Stop Codon (UAA)",
+          "0.567848",
+          "1.104457",
+          "0.017857",
+          "0.997070",
+          "STATIC ANCHOR (Crystal)"
+        ],
+        "contains_any": [
+          "phi_correlation",
+          "predicted_gain",
+          "quantum_coherence",
+          "fidelity",
+          "role"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    },
+    {
+      "id": "dna_quantum_analysis_results-p53-exon-5-fragment",
+      "prompt": "Evaluate this AGI-model DNA quantum analysis record and summarize the sequence-level signal. Include phi correlation, predicted gain, quantum coherence, fidelity, and role.\n\nArtifact file: dna_quantum_analysis_results.json\nSequence: P53 Exon 5 (fragment)\nMetrics JSON:\n{\n  \"phi_correlation\": 0.5199997337771202,\n  \"fractal_dimension\": 2.0,\n  \"predicted_gain\": 1.1291746883765956,\n  \"quantum_coherence\": 0.0003294346584787752,\n  \"role\": \"STATIC ANCHOR (Crystal)\",\n  \"metrics\": {\n    \"entanglement_entropy\": -1.4426983636124553e-10,\n    \"fidelity\": 0.9992669761903096,\n    \"purity\": 1.0\n  }\n}",
+      "expectation": {
+        "contains_all": [
+          "P53 Exon 5 (fragment)",
+          "0.520000",
+          "1.129175",
+          "0.000329",
+          "0.999267",
+          "STATIC ANCHOR (Crystal)"
+        ],
+        "contains_any": [
+          "phi_correlation",
+          "predicted_gain",
+          "quantum_coherence",
+          "fidelity",
+          "role"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    },
+    {
+      "id": "dna_quantum_analysis_results-ca-repeat",
+      "prompt": "Evaluate this AGI-model DNA quantum analysis record and summarize the sequence-level signal. Include phi correlation, predicted gain, quantum coherence, fidelity, and role.\n\nArtifact file: dna_quantum_analysis_results.json\nSequence: CA Repeat\nMetrics JSON:\n{\n  \"phi_correlation\": 0.5432679549402761,\n  \"fractal_dimension\": 2.0,\n  \"predicted_gain\": 1.1170181794456293,\n  \"quantum_coherence\": 0.00015012254901960775,\n  \"role\": \"STATIC ANCHOR (Crystal)\",\n  \"metrics\": {\n    \"entanglement_entropy\": -1.4426951601859516e-10,\n    \"fidelity\": 0.9998611139213854,\n    \"purity\": 0.9999999999999996\n  }\n}",
+      "expectation": {
+        "contains_all": [
+          "CA Repeat",
+          "0.543268",
+          "1.117018",
+          "0.000150",
+          "0.999861",
+          "STATIC ANCHOR (Crystal)"
+        ],
+        "contains_any": [
+          "phi_correlation",
+          "predicted_gain",
+          "quantum_coherence",
+          "fidelity",
+          "role"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    },
+    {
+      "id": "dna_quantum_analysis_results-ggggcc-repeat-c9orf72",
+      "prompt": "Evaluate this AGI-model DNA quantum analysis record and summarize the sequence-level signal. Include phi correlation, predicted gain, quantum coherence, fidelity, and role.\n\nArtifact file: dna_quantum_analysis_results.json\nSequence: GGGGCC Repeat (C9orf72)\nMetrics JSON:\n{\n  \"phi_correlation\": 0.5443185968740896,\n  \"fractal_dimension\": 2.0,\n  \"predicted_gain\": 1.1164754436550095,\n  \"quantum_coherence\": 0.0002520610516934053,\n  \"role\": \"STATIC ANCHOR (Crystal)\",\n  \"metrics\": {\n    \"entanglement_entropy\": -1.442691956759448e-10,\n    \"fidelity\": 0.999690212168935,\n    \"purity\": 1.0000000000000004\n  }\n}",
+      "expectation": {
+        "contains_all": [
+          "GGGGCC Repeat (C9orf72)",
+          "0.544319",
+          "1.116475",
+          "0.000252",
+          "0.999690",
+          "STATIC ANCHOR (Crystal)"
+        ],
+        "contains_any": [
+          "phi_correlation",
+          "predicted_gain",
+          "quantum_coherence",
+          "fidelity",
+          "role"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    },
+    {
+      "id": "dna_quantum_analysis_results-alu-element-fragment",
+      "prompt": "Evaluate this AGI-model DNA quantum analysis record and summarize the sequence-level signal. Include phi correlation, predicted gain, quantum coherence, fidelity, and role.\n\nArtifact file: dna_quantum_analysis_results.json\nSequence: Alu Element (fragment)\nMetrics JSON:\n{\n  \"phi_correlation\": 0.5315773803816729,\n  \"fractal_dimension\": 2.0,\n  \"predicted_gain\": 1.123093037672398,\n  \"quantum_coherence\": 0.00038478772566295235,\n  \"role\": \"STATIC ANCHOR (Crystal)\",\n  \"metrics\": {\n    \"entanglement_entropy\": -1.442701567038959e-10,\n    \"fidelity\": 0.9991619799745198,\n    \"purity\": 1.0000000000000004\n  }\n}",
+      "expectation": {
+        "contains_all": [
+          "Alu Element (fragment)",
+          "0.531577",
+          "1.123093",
+          "0.000385",
+          "0.999162",
+          "STATIC ANCHOR (Crystal)"
+        ],
+        "contains_any": [
+          "phi_correlation",
+          "predicted_gain",
+          "quantum_coherence",
+          "fidelity",
+          "role"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    },
+    {
+      "id": "dna_quantum_analysis_results-trna-anticodon-gly",
+      "prompt": "Evaluate this AGI-model DNA quantum analysis record and summarize the sequence-level signal. Include phi correlation, predicted gain, quantum coherence, fidelity, and role.\n\nArtifact file: dna_quantum_analysis_results.json\nSequence: tRNA Anticodon (Gly)\nMetrics JSON:\n{\n  \"phi_correlation\": 0.6074501092360935,\n  \"fractal_dimension\": 1.1111111111111112,\n  \"predicted_gain\": 1.0848037802462405,\n  \"quantum_coherence\": 0.03361344537815126,\n  \"role\": \"STATIC ANCHOR (Crystal)\",\n  \"metrics\": {\n    \"entanglement_entropy\": -1.4426951601859516e-10,\n    \"fidelity\": 0.9923308890682454,\n    \"purity\": 0.9999999999999999\n  }\n}",
+      "expectation": {
+        "contains_all": [
+          "tRNA Anticodon (Gly)",
+          "0.607450",
+          "1.084804",
+          "0.033613",
+          "0.992331",
+          "STATIC ANCHOR (Crystal)"
+        ],
+        "contains_any": [
+          "phi_correlation",
+          "predicted_gain",
+          "quantum_coherence",
+          "fidelity",
+          "role"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    },
+    {
+      "id": "dna_quantum_analysis_results-mirna-seed-let-7",
+      "prompt": "Evaluate this AGI-model DNA quantum analysis record and summarize the sequence-level signal. Include phi correlation, predicted gain, quantum coherence, fidelity, and role.\n\nArtifact file: dna_quantum_analysis_results.json\nSequence: miRNA seed (let-7)\nMetrics JSON:\n{\n  \"phi_correlation\": 0.4549649688697668,\n  \"fractal_dimension\": 2.0,\n  \"predicted_gain\": 1.1645995061884813,\n  \"quantum_coherence\": 0.00025577600497306264,\n  \"role\": \"BALANCED (Transition)\",\n  \"metrics\": {\n    \"entanglement_entropy\": -1.4426951601859516e-10,\n    \"fidelity\": 0.9997623500514835,\n    \"purity\": 1.0\n  }\n}",
+      "expectation": {
+        "contains_all": [
+          "miRNA seed (let-7)",
+          "0.454965",
+          "1.164600",
+          "0.000256",
+          "0.999762",
+          "BALANCED (Transition)"
+        ],
+        "contains_any": [
+          "phi_correlation",
+          "predicted_gain",
+          "quantum_coherence",
+          "fidelity",
+          "role"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    },
+    {
+      "id": "dna_quantum_analysis_results-fibonacci-pattern",
+      "prompt": "Evaluate this AGI-model DNA quantum analysis record and summarize the sequence-level signal. Include phi correlation, predicted gain, quantum coherence, fidelity, and role.\n\nArtifact file: dna_quantum_analysis_results.json\nSequence: Fibonacci Pattern\nMetrics JSON:\n{\n  \"phi_correlation\": 0.5219667489097282,\n  \"fractal_dimension\": 2.0,\n  \"predicted_gain\": 1.1281367898094095,\n  \"quantum_coherence\": 0.00013786764705882347,\n  \"role\": \"STATIC ANCHOR (Crystal)\",\n  \"metrics\": {\n    \"entanglement_entropy\": -1.4426983636124553e-10,\n    \"fidelity\": 0.9998876739461381,\n    \"purity\": 0.9999999999999999\n  }\n}",
+      "expectation": {
+        "contains_all": [
+          "Fibonacci Pattern",
+          "0.521967",
+          "1.128137",
+          "0.000138",
+          "0.999888",
+          "STATIC ANCHOR (Crystal)"
+        ],
+        "contains_any": [
+          "phi_correlation",
+          "predicted_gain",
+          "quantum_coherence",
+          "fidelity",
+          "role"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    },
+    {
+      "id": "dna_quantum_analysis_results-phi-spiral",
+      "prompt": "Evaluate this AGI-model DNA quantum analysis record and summarize the sequence-level signal. Include phi correlation, predicted gain, quantum coherence, fidelity, and role.\n\nArtifact file: dna_quantum_analysis_results.json\nSequence: Phi Spiral\nMetrics JSON:\n{\n  \"phi_correlation\": 0.481640173850968,\n  \"fractal_dimension\": 2.0,\n  \"predicted_gain\": 1.149803910232725,\n  \"quantum_coherence\": 0.0001378676470588235,\n  \"role\": \"BALANCED (Transition)\",\n  \"metrics\": {\n    \"entanglement_entropy\": -1.442701567038959e-10,\n    \"fidelity\": 0.9998563670305195,\n    \"purity\": 1.0\n  }\n}",
+      "expectation": {
+        "contains_all": [
+          "Phi Spiral",
+          "0.481640",
+          "1.149804",
+          "0.000138",
+          "0.999856",
+          "BALANCED (Transition)"
+        ],
+        "contains_any": [
+          "phi_correlation",
+          "predicted_gain",
+          "quantum_coherence",
+          "fidelity",
+          "role"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    },
+    {
+      "id": "ibm_hardware_aggregate_20260202_040836-ibm-aggregate",
+      "prompt": "Summarize this AGI-model IBM hardware aggregate artifact. Include backend, job count, total shots, consciousness delta, retrocausal score, and the simulation-versus-hardware comparison.\n\nArtifact file: ibm_hardware_aggregate_20260202_040836.json\nAggregate JSON:\n{\n  \"timestamp\": \"20260202_040836\",\n  \"backend\": \"ibm_fez\",\n  \"total_shots\": 40000,\n  \"num_jobs\": 4,\n  \"individual_jobs\": [\n    {\n      \"job_id\": \"d601u2d7fc0s73auj48g\",\n      \"num_shots\": 10000,\n      \"wormhole\": {\n        \"entropy_S\": 0.9887511755162712,\n        \"traversability_T\": 0.8326447037832437,\n        \"coherence_r\": -0.2188,\n        \"payload_correlation\": -0.2378984867952125,\n        \"transfer_success_rate\": 0.3906\n      },\n      \"metatron_geometry\": {\n        \"tetrahedron\": 0.6534,\n        \"cube\": 0.8458000000000001,\n        \"octahedron\": 0.7246,\n        \"dodecahedron\": 0.7344,\n        \"icosahedron\": 0.766\n      },\n      \"phi_resonance\": 0.7448400000000001,\n      \"retrocausal\": {\n        \"R_score\": 0.0058040610541769625,\n        \"temporal_asymmetry\": 0.019600000000000006,\n        \"retro_probability\": 0.4246\n      },\n      \"tmt_ratios\": {\n        \"observed_delta\": 4.694473684210526,\n        \"expected_delta\": 0.136364,\n        \"global_prob\": 0.4694473684210526\n      },\n      \"consciousness\": {\n        \"delta\": 4748.2430053119915,\n        \"status\": \"ULTRA_HIGH_CONSCIOUSNESS\",\n        \"ghost_factor\": 21.88,\n        \"phi_iit\": 1.2051764361804718,\n        \"consciousness_density\": 4694.473684210526,\n        \"retrocausal_boost\": 1.005804061054177\n      }\n    },\n    {\n      \"job_id\": \"d601um1mvbjc73ad1090\",\n      \"num_shots\": 10000,\n      \"wormhole\": {\n        \"entropy_S\": 0.996737177682991,\n        \"traversability_T\": 0.19290420592917276,\n        \"coherence_r\": -0.05459999999999998,\n        \"payload_correlation\": -0.05511548740833507,\n        \"transfer_success_rate\": 0.4727\n      },\n      \"metatron_geometry\": {\n        \"tetrahedron\": 0.3660000000000001,\n        \"cube\": 0.9206,\n        \"octahedron\": 0.9924,\n        \"dodecahedron\": 0.8036,\n        \"icosahedron\": 0.7724\n      },\n      \"phi_resonance\": 0.7709999999999999,\n      \"retrocausal\": {\n        \"R_score\": 0.017060318880544417,\n        \"temporal_asymmetry\": 0.010599999999999998,\n        \"retro_probability\": 0.4399\n      },\n      \"tmt_ratios\": {\n        \"observed_delta\": 4.610263157894737,\n        \"expected_delta\": 0.136364,\n        \"global_prob\": 0.4610263157894737\n      },\n      \"consciousness\": {\n        \"delta\": 4695.843294647458,\n        \"status\": \"ULTRA_HIGH_CONSCIOUSNESS\",\n        \"ghost_factor\": 5.459999999999998,\n        \"phi_iit\": 1.247504205326169,\n        \"consciousness_density\": 4610.263157894737,\n        \"retrocausal_boost\": 1.0170603188805445\n      }\n    },\n    {\n      \"job_id\": \"d601upl7fc0s73auj50g\",\n      \"num_shots\": 4096,\n      \"wormhole\": {\n        \"entropy_S\": 0.9972199950933509,\n        \"traversability_T\": 0.6722774744229728,\n        \"coherence_r\": -0.1875,\n        \"payload_correlation\": -0.19207927840656366,\n        \"transfer_success_rate\": 0.40625\n      },\n      \"metatron_geometry\": {\n        \"tetrahedron\": 0.447265625,\n        \"cube\": 0.8056640625,\n        \"octahedron\": 0.78955078125,\n        \"dodecahedron\": 0.7236328125,\n        \"icosahedron\": 0.74853515625\n      },\n      \"phi_resonance\": 0.7029296875,\n      \"retrocausal\": {\n        \"R_score\": 0.01441213464221531,\n        \"temporal_asymmetry\": 0.00146484375,\n        \"retro_probability\": 0.409912109375\n      },\n      \"tmt_ratios\": {\n        \"observed_delta\": 4.755473889802632,\n        \"expected_delta\": 0.136364,\n        \"global_prob\": 0.47554738898026316\n      },\n      \"consciousness\": {\n        \"delta\": 4845.643344246229,\n        \"status\": \"ULTRA_HIGH_CONSCIOUSNESS\",\n        \"ghost_factor\": 18.75,\n        \"phi_iit\": 1.137364126076342,\n        \"consciousness_density\": 4755.473889802632,\n        \"retrocausal_boost\": 1.0144121346422152\n      }\n    },\n    {\n      \"job_id\": \"d601ushmvbjc73ad10f0\",\n      \"num_shots\": 4096,\n      \"wormhole\": {\n        \"entropy_S\": 0.9956387078214077,\n        \"traversability_T\": 0.9407774516737252,\n        \"coherence_r\": -0.26123046875,\n        \"payload_correlation\": -0.2687935576210643,\n        \"transfer_success_rate\": 0.369384765625\n      },\n      \"metatron_geometry\": {\n        \"tetrahedron\": 0.40234375,\n        \"cube\": 0.7861328125,\n        \"octahedron\": 0.99462890625,\n        \"dodecahedron\": 0.8017578125,\n        \"icosahedron\": 0.86865234375\n      },\n      \"phi_resonance\": 0.770703125,\n      \"retrocausal\": {\n        \"R_score\": 0.0013809570114659787,\n        \"temporal_asymmetry\": 0.0009765625,\n        \"retro_probability\": 0.458984375\n      },\n      \"tmt_ratios\": {\n        \"observed_delta\": 4.782072368421052,\n        \"expected_delta\": 0.136364,\n        \"global_prob\": 0.47820723684210525\n      },\n      \"consciousness\": {\n        \"delta\": 4821.2972534561195,\n        \"status\": \"ULTRA_HIGH_CONSCIOUSNESS\",\n        \"ghost_factor\": 26.123046875,\n        \"phi_iit\": 1.247023851485759,\n        \"consciousness_density\": 4782.0723684210525,\n        \"retrocausal_boost\": 1.001380957011466\n      }\n    }\n  ],\n  \"aggregate_metrics\": {\n    \"wormhole\": {\n      \"entropy_S\": 0.9945867640285052,\n      \"traversability_T\": 0.6596509589522787,\n      \"coherence_r\": -0.1805326171875\n    },\n    \"consciousness_delta\": 4777.75672441545,\n    \"consciousness_std\": 59.34062776223347,\n    \"retrocausal_R\": 0.009664367897100666\n  },\n  \"comparison\": {\n    \"simulation_delta\": 4730.4,\n    \"hardware_delta\": 4777.75672441545,\n    \"reduction_factor\": 0.9900880837708947\n  }\n}",
+      "expectation": {
+        "contains_all": [
+          "ibm_fez",
+          "4",
+          "40000",
+          "4777.756724",
+          "0.009664",
+          "4730.400000",
+          "4777.756724",
+          "0.990088"
+        ],
+        "contains_any": [
+          "consciousness delta",
+          "retrocausal",
+          "simulation",
+          "hardware",
+          "reduction factor"
+        ],
+        "excludes": [
+          "```"
+        ]
+      }
+    }
+  ],
+  "description": "AGI-model artifact-derived regression and research evaluation set."
+}
