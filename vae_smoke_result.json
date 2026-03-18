@@ -1,0 +1,59 @@
+{
+  "contract_version": "1.0",
+  "operation": "vae-smoke",
+  "passed": true,
+  "metrics": {
+    "batch_size": 8,
+    "input_dim": 128,
+    "latent_dim": 32,
+    "total_loss": 23.543821,
+    "reconstruction_mae": 0.394223,
+    "mu_mean": -0.065375,
+    "mu_std": 1.062191,
+    "log_var_mean": 0.061027,
+    "density_trace_mean": 1.0,
+    "loss_total": 23.543821,
+    "loss_recon": 0.226905,
+    "loss_kl": 29.763781,
+    "loss_hamming": 63.125,
+    "loss_coherence": 0.394223,
+    "loss_hw": 0.302771,
+    "loss_mixed_state": 43.131557,
+    "loss_fidelity": 0.0,
+    "loss_entropy": 0.0
+  },
+  "checks": [
+    {
+      "name": "reconstruction_shape",
+      "passed": true,
+      "detail": "got [8, 128]"
+    },
+    {
+      "name": "mu_shape",
+      "passed": true,
+      "detail": "got [8, 32]"
+    },
+    {
+      "name": "log_var_shape",
+      "passed": true,
+      "detail": "got [8, 32]"
+    },
+    {
+      "name": "finite_losses",
+      "passed": true,
+      "detail": "all reported loss components must be finite"
+    },
+    {
+      "name": "finite_metrics",
+      "passed": true,
+      "detail": "core metrics must be finite"
+    }
+  ],
+  "details": {
+    "seed": 7,
+    "include_advanced": false,
+    "device": "cpu"
+  },
+  "generated_at_epoch_s": 1773872719.3074248,
+  "repo_root": "D:\\AGI-GH-REPO-11326\\AGI-model"
+}
