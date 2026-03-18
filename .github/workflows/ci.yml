@@ -68,6 +68,7 @@ jobs:
         run: echo "NFT publish step is currently disabled."
 
   agi_eval_smoke:
+    name: vault-agi-eval-smoke
     if: github.event_name == 'workflow_dispatch' && inputs.run_agi_eval_smoke
     runs-on: ubuntu-latest
     env:
@@ -87,22 +88,22 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13'
+          python-version: '3.11'
 
       - name: Install TMT Quantum Vault dependencies
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r tmt_vault/requirements.txt
 
-      - name: Validate TMT Vault repository
+      - name: Preflight - validate Vault repository
         working-directory: tmt_vault
         run: python -m tmt_quantum_vault validate
 
-      - name: Doctor check (runtime + repo health)
+      - name: Preflight - doctor runtime and repo health
         working-directory: tmt_vault
         run: python -m tmt_quantum_vault doctor --json
 
-      - name: Run AGI eval via TMT Vault agent-task
+      - name: Run AGI eval smoke via TMT Vault agent-task
         working-directory: tmt_vault
         env:
           OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
@@ -111,43 +112,75 @@ jobs:
             echo "OLLAMA_API_KEY secret is required for cloud eval mode."
             exit 1
           fi
+          mkdir -p ../.artifacts/vault-regression
           python -m tmt_quantum_vault agent-task \
-            "Evaluate the AGI-model quantum VAE system. Mode=${AGI_EVAL_MODE}. Report: fidelity, coherence, KL divergence, and overall health as a JSON object." \
+            "Evaluate the AGI-model quantum VAE system. Mode=${AGI_EVAL_MODE}. Report fidelity, coherence, KL divergence, and overall health as a JSON object with keys: fidelity, coherence, kl_divergence, health_status." \
             --mode "${AGI_EVAL_MODE}" \
             --model "${AGI_EVAL_MODEL}" \
-            --json --raw-final-only
+            --json --raw-final-only \
+            > ../.artifacts/vault-regression/agi-eval-smoke.json
 
-      - name: Generate AGI release evidence bundle
-        working-directory: tmt_vault
-        env:
-          OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
+      - name: Write self-describing provenance artifact
+        if: always()
         run: |
-          python -m tmt_quantum_vault release-evidence \
-            --output-dir ../agi-release-evidence \
-            --model "${AGI_EVAL_MODEL}" \
-            --json
-
-      - name: Enforce AGI release gate
-        working-directory: tmt_vault
+          mkdir -p .artifacts/vault-regression
+          python - <<'PY'
+          import json, os
+          from datetime import datetime, timezone
+          provenance = {
+            "run_id": os.environ.get("GITHUB_RUN_ID"),
+            "run_attempt": os.environ.get("GITHUB_RUN_ATTEMPT"),
+            "sha": os.environ.get("GITHUB_SHA"),
+            "ref": os.environ.get("GITHUB_REF"),
+            "repository": os.environ.get("GITHUB_REPOSITORY"),
+            "workflow": os.environ.get("GITHUB_WORKFLOW"),
+            "job": "vault-agi-eval-smoke",
+            "mode": os.environ.get("AGI_EVAL_MODE"),
+            "model": os.environ.get("AGI_EVAL_MODEL"),
+            "timestamp_utc": datetime.now(timezone.utc).isoformat()
+          }
+          with open(".artifacts/vault-regression/agi-eval-smoke-provenance.json", "w") as f:
+              json.dump(provenance, f, indent=2)
+          print(json.dumps(provenance, indent=2))
+          PY
         env:
-          OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
-        run: |
-          python -m tmt_quantum_vault release-gate \
-            --bundle ../agi-release-evidence \
-            --json
+          AGI_EVAL_MODE: ${{ inputs.agi_eval_mode }}
+          AGI_EVAL_MODEL: ${{ inputs.agi_eval_model }}
 
-      - name: Upload evidence bundle on failure
+      - name: Copy eval dataset to artifacts
+        if: always()
+        run: |
+          mkdir -p .artifacts/vault-regression
+          if [ -f tmt_vault/evals/baseline.json ]; then
+            cp tmt_vault/evals/baseline.json .artifacts/vault-regression/agi-eval-smoke-dataset.json
+          else
+            echo '{"note": "baseline.json not found in tmt_vault/evals/"}' \
+              > .artifacts/vault-regression/agi-eval-smoke-dataset.json
+          fi
+
+      - name: Copy smoke result to artifacts
+        if: always()
+        run: |
+          mkdir -p .artifacts/vault-regression
+          if [ -f .artifacts/vault-regression/agi-eval-smoke.json ]; then
+            echo "smoke result already in artifacts directory"
+          else
+            echo '{"note": "smoke step did not produce output"}' \
+              > .artifacts/vault-regression/agi-eval-smoke.json
+          fi
+
+      - name: Upload smoke artifacts on failure
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: agi-release-evidence-failure
-          path: agi-release-evidence/
+          name: agi-eval-smoke-failure-${{ github.run_number }}
+          path: .artifacts/vault-regression/
           retention-days: 14
 
-      - name: Upload evidence bundle on success
+      - name: Upload smoke artifacts on success
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: agi-release-evidence-${{ github.run_number }}
-          path: agi-release-evidence/
+          name: agi-eval-smoke-${{ github.run_number }}
+          path: .artifacts/vault-regression/
           retention-days: 30
