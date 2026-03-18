@@ -5,6 +5,26 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      run_agi_eval_smoke:
+        description: 'Run AGI eval smoke via TMT Quantum Vault'
+        required: false
+        default: false
+        type: boolean
+      agi_eval_mode:
+        description: 'Eval mode: cloud or local'
+        required: false
+        default: cloud
+        type: choice
+        options:
+          - cloud
+          - local
+      agi_eval_model:
+        description: 'Override model tag (e.g. qwen3-coder-next:cloud)'
+        required: false
+        default: qwen3-coder-next:cloud
+        type: string
 
 jobs:
   test:
@@ -44,16 +64,90 @@ jobs:
           PINATA_JWT: ${{ secrets.PINATA_JWT }}
           PINATA_API_KEY: ${{ secrets.PINATA_API_KEY }}
           PINATA_API_SECRET: ${{ secrets.PINATA_API_SECRET }}
-          # NFT metadata publishing step DISABLED (on hold)
-          # run: |
-          #   python - <<'PY'
-          #   from pathlib import Path
-          #   from integrations import ipfs_adapter
-          #   p = Path('nft_metadata')
-          #   if not p.exists():
-          #       print('no metadata to publish')
-          #       exit(0)
-          #   for f in list(p.glob('*.nft.json'))[:3]:
-          #       cid = ipfs_adapter.upload_file(f)
-          #       print(f'published {f} -> {cid}')
-          #   PY
+        # NFT metadata publishing step DISABLED (on hold)
+        run: echo "NFT publish step is currently disabled."
+
+  agi_eval_smoke:
+    if: github.event_name == 'workflow_dispatch' && inputs.run_agi_eval_smoke
+    runs-on: ubuntu-latest
+    env:
+      AGI_EVAL_MODE: ${{ inputs.agi_eval_mode }}
+      AGI_EVAL_MODEL: ${{ inputs.agi_eval_model }}
+    steps:
+      - name: Check out AGI-model
+        uses: actions/checkout@v4
+
+      - name: Check out TMT_Quantum_Vault
+        uses: actions/checkout@v4
+        with:
+          repository: quantumdynamics927-dotcom/TMT_Quantum_Vault-
+          token: ${{ secrets.TMT_VAULT_TOKEN }}
+          path: tmt_vault
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install TMT Quantum Vault dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r tmt_vault/requirements.txt
+
+      - name: Validate TMT Vault repository
+        working-directory: tmt_vault
+        run: python -m tmt_quantum_vault validate
+
+      - name: Doctor check (runtime + repo health)
+        working-directory: tmt_vault
+        run: python -m tmt_quantum_vault doctor --json
+
+      - name: Run AGI eval via TMT Vault agent-task
+        working-directory: tmt_vault
+        env:
+          OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
+        run: |
+          if [ "${AGI_EVAL_MODE}" = "cloud" ] && [ -z "${OLLAMA_API_KEY}" ]; then
+            echo "OLLAMA_API_KEY secret is required for cloud eval mode."
+            exit 1
+          fi
+          python -m tmt_quantum_vault agent-task \
+            "Evaluate the AGI-model quantum VAE system. Mode=${AGI_EVAL_MODE}. Report: fidelity, coherence, KL divergence, and overall health as a JSON object." \
+            --mode "${AGI_EVAL_MODE}" \
+            --model "${AGI_EVAL_MODEL}" \
+            --json --raw-final-only
+
+      - name: Generate AGI release evidence bundle
+        working-directory: tmt_vault
+        env:
+          OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
+        run: |
+          python -m tmt_quantum_vault release-evidence \
+            --output-dir ../agi-release-evidence \
+            --model "${AGI_EVAL_MODEL}" \
+            --json
+
+      - name: Enforce AGI release gate
+        working-directory: tmt_vault
+        env:
+          OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
+        run: |
+          python -m tmt_quantum_vault release-gate \
+            --bundle ../agi-release-evidence \
+            --json
+
+      - name: Upload evidence bundle on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: agi-release-evidence-failure
+          path: agi-release-evidence/
+          retention-days: 14
+
+      - name: Upload evidence bundle on success
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: agi-release-evidence-${{ github.run_number }}
+          path: agi-release-evidence/
+          retention-days: 30
