@@ -1,7 +1,8 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import losses
+
+from . import losses
 
 class QuantumVAE(nn.Module):
     """Minimal QuantumVAE scaffold.

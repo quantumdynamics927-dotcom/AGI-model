@@ -1,6 +1,21 @@
 import torch
 
 
+def kl_anneal_factor(
+    current_step,
+    total_steps,
+    max_beta=1.0,
+    warmup_fraction=0.3,
+):
+    """Linearly anneal KL weight during the early portion of training."""
+    if total_steps <= 0:
+        return max_beta
+    warmup_steps = max(int(total_steps * warmup_fraction), 1)
+    if current_step >= warmup_steps:
+        return max_beta
+    return max_beta * (current_step / warmup_steps)
+
+
 def reconstruction_loss(recon_x, x):
     """Mean squared error reconstruction loss."""
     return torch.nn.functional.mse_loss(recon_x, x, reduction='mean')

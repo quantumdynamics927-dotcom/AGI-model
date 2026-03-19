@@ -473,6 +473,29 @@ def load_real_consciousness_data(data_dir='real_data'):
         print(f"Could not load real data: {e}")
         return None
 
+
+def _to_serializable_metric(value):
+    """Convert nested metric payloads to JSON-safe scalars or dictionaries."""
+    if isinstance(value, dict):
+        return {
+            str(key): _to_serializable_metric(nested_value)
+            for key, nested_value in value.items()
+        }
+    if isinstance(value, (list, tuple)):
+        return [_to_serializable_metric(item) for item in value]
+    if isinstance(value, np.generic):
+        return value.item()
+    if isinstance(value, torch.Tensor):
+        if value.numel() == 1:
+            return float(value.item())
+        return value.detach().cpu().tolist()
+    if isinstance(value, (int, float, str, bool)) or value is None:
+        return value
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return str(value)
+
 def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', save_path='best_model.pt',
               use_phi_callback: bool = True, use_performance_monitor: bool = True,
               consciousness_streaming: bool = False, use_hybrid_optimizer: bool = False,
@@ -756,7 +779,7 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
                     else None
                 ),
                 'quantum_metrics': {
-                    key: float(value)
+                    key: _to_serializable_metric(value)
                     for key, value in quantum_metrics.items()
                 },
                 'consciousness_metrics': {
@@ -817,7 +840,11 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
         except Exception as e:
             print(f"⚠️ Skipping JSON save due to error: {e}")
             print("Continuing to visualization...")
-        summary = perf_monitor.get_summary()
+        try:
+            summary = perf_monitor.get_summary()
+        except Exception as e:
+            print(f"⚠️ Skipping performance summary due to error: {e}")
+            summary = None
     else:
         summary = None
 
@@ -880,7 +907,7 @@ def write_training_summary(summary, output_path):
     """Persist a structured training summary next to the checkpoint."""
     output_file = Path(output_path)
     output_file.write_text(
-        json.dumps(summary, indent=2),
+        json.dumps(_to_serializable_metric(summary), indent=2),
         encoding='utf-8',
     )
     return output_file
@@ -909,6 +936,7 @@ def main():
     parser.add_argument('--vault_mode', type=str, default='cloud', help='TMT Quantum Vault mode for post-training validation')
     parser.add_argument('--vault_model', type=str, default=None, help='Explicit Ollama model override for Vault validation')
     parser.add_argument('--vault_extra_context', type=str, default=None, help='Extra context appended to the Vault validation prompt')
+    parser.add_argument('--save_path', type=str, default='best_model.pt', help='Path to save the best checkpoint')
     parser.add_argument('--summary_path', type=str, default='best_model.summary.json', help='Path to write structured training summary JSON')
     
     args = parser.parse_args()
@@ -1007,6 +1035,7 @@ def main():
         val_loader,
         num_epochs,
         device,
+        save_path=args.save_path,
         consciousness_streaming=consciousness_streaming,
         use_hybrid_optimizer=use_hybrid_optimizer,
     )
@@ -1047,7 +1076,7 @@ def main():
                 print(f'TMT Quantum Vault validation failed: {exc}')
 
     print("Training completed!")
-    print(f"Best model saved as 'best_model.pt'")
+    print(f"Best model saved as '{args.save_path}'")
     print("Training curves saved as 'training_curves.png'")
     print(f"Training summary saved as '{summary_path}'")
 
