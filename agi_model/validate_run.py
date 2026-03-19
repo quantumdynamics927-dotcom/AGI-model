@@ -25,6 +25,7 @@ DEFAULT_ARTIFACT_PATTERNS = (
     "phi_agent_report_*.json",
     "ibm_hardware_aggregate_*.json",
     "dna_quantum_analysis_results.json",
+    "artifacts/ibm_decoherence_job_analysis.json",
 )
 
 
@@ -90,9 +91,23 @@ def run_vae_smoke(
     input_dim: int,
     latent_dim: int,
     include_advanced: bool,
+    checkpoint_path: str | None = None,
 ) -> dict[str, Any]:
     torch.manual_seed(seed)
     model = QuantumVAE(input_dim=input_dim, latent_dim=latent_dim)
+    resolved_checkpoint_path: Path | None = None
+    if checkpoint_path:
+        resolved_checkpoint_path = Path(checkpoint_path)
+        if not resolved_checkpoint_path.is_absolute():
+            resolved_checkpoint_path = (
+                ROOT / resolved_checkpoint_path
+            ).resolve()
+        if not resolved_checkpoint_path.exists():
+            raise FileNotFoundError(
+                f"Checkpoint path does not exist: {resolved_checkpoint_path}"
+            )
+        state_dict = torch.load(resolved_checkpoint_path, map_location="cpu")
+        model.load_state_dict(state_dict)
     model.eval()
 
     with torch.no_grad():
@@ -165,6 +180,11 @@ def run_vae_smoke(
             "seed": seed,
             "include_advanced": include_advanced,
             "device": str(next(model.parameters()).device),
+            "checkpoint_path": (
+                str(resolved_checkpoint_path)
+                if resolved_checkpoint_path is not None
+                else None
+            ),
         },
     )
 
@@ -303,6 +323,82 @@ def _summarize_dna_quantum_analysis(
     return metrics, checks, details
 
 
+def _summarize_ibm_decoherence_analysis(
+    payload: dict[str, Any],
+) -> tuple[dict[str, Any], list[dict[str, Any]], dict[str, Any]]:
+    aggregate = payload.get("aggregate", {})
+    variants = (
+        aggregate.get("variants", {})
+        if isinstance(aggregate, dict)
+        else {}
+    )
+    backends = (
+        aggregate.get("backends", {})
+        if isinstance(aggregate, dict)
+        else {}
+    )
+
+    control = variants.get("control", {})
+    mild = variants.get("mild", {})
+    moderate = variants.get("moderate", {})
+    fez = backends.get("ibm_fez", {})
+    marrakesh = backends.get("ibm_marrakesh", {})
+
+    control_ghz = _round(control.get("avg_ghz_mass", 0.0))
+    mild_ghz = _round(mild.get("avg_ghz_mass", 0.0))
+    moderate_ghz = _round(moderate.get("avg_ghz_mass", 0.0))
+    control_entropy = _round(control.get("avg_entropy", 0.0))
+    mild_entropy = _round(mild.get("avg_entropy", 0.0))
+    moderate_entropy = _round(moderate.get("avg_entropy", 0.0))
+    fez_ghz = _round(fez.get("avg_ghz_mass", 0.0))
+    marrakesh_ghz = _round(marrakesh.get("avg_ghz_mass", 0.0))
+
+    metrics = {
+        "num_jobs": int(
+            aggregate.get("num_jobs", len(payload.get("job_results", [])))
+        ),
+        "num_variants": int(len(variants)),
+        "control_avg_ghz_mass": control_ghz,
+        "mild_avg_ghz_mass": mild_ghz,
+        "moderate_avg_ghz_mass": moderate_ghz,
+        "control_avg_entropy": control_entropy,
+        "mild_avg_entropy": mild_entropy,
+        "moderate_avg_entropy": moderate_entropy,
+        "ghz_mass_delta_control_to_moderate": _round(
+            moderate_ghz - control_ghz
+        ),
+        "entropy_delta_control_to_moderate": _round(
+            moderate_entropy - control_entropy
+        ),
+        "backend_gap_marrakesh_minus_fez": _round(marrakesh_ghz - fez_ghz),
+    }
+    checks = [
+        {
+            "name": "has_jobs",
+            "passed": metrics["num_jobs"] > 0,
+            "detail": f"found {metrics['num_jobs']} decoherence jobs",
+        },
+        {
+            "name": "has_variants",
+            "passed": len(variants) > 0,
+            "detail": f"found variants: {sorted(variants.keys())}",
+        },
+        {
+            "name": "finite_metrics",
+            "passed": all(_is_finite(value) for value in metrics.values()),
+            "detail": "all summary metrics must be finite",
+        },
+    ]
+    details = {
+        "artifact_type": "ibm-decoherence-analysis",
+        "jobs_dir": payload.get("jobs_dir"),
+        "variants_present": sorted(variants.keys()),
+        "backends_present": sorted(backends.keys()),
+        "interpretation": aggregate.get("interpretation"),
+    }
+    return metrics, checks, details
+
+
 def run_artifact_summary(artifact: str | None) -> dict[str, Any]:
     artifact_path = _resolve_artifact_path(ROOT, artifact)
     payload = json.loads(artifact_path.read_text(encoding="utf-8"))
@@ -321,6 +417,12 @@ def run_artifact_summary(artifact: str | None) -> dict[str, Any]:
         and "results" in payload
     ):
         metrics, checks, details = _summarize_dna_quantum_analysis(payload)
+    elif (
+        isinstance(payload, dict)
+        and "aggregate" in payload
+        and "job_results" in payload
+    ):
+        metrics, checks, details = _summarize_ibm_decoherence_analysis(payload)
     else:
         raise ValueError(
             f"Unsupported artifact format in {artifact_path.name}."
@@ -360,6 +462,12 @@ def _build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Include advanced fidelity and entropy loss terms.",
     )
+    vae_parser.add_argument(
+        "--checkpoint",
+        type=str,
+        default=None,
+        help="Optional checkpoint path to load before the smoke pass.",
+    )
 
     artifact_parser = subparsers.add_parser(
         "artifact-summary",
@@ -390,6 +498,7 @@ def main() -> int:
                 input_dim=args.input_dim,
                 latent_dim=args.latent_dim,
                 include_advanced=args.include_advanced,
+                checkpoint_path=args.checkpoint,
             )
         elif args.command == "artifact-summary":
             payload = run_artifact_summary(args.artifact)

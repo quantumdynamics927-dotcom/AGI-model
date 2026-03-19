@@ -156,14 +156,18 @@ def _extract_json_payload(text: str) -> Optional[Any]:
     if not stripped:
         return None
 
-    direct_candidates = [stripped]
-    direct_candidates.extend(
-        line.strip() for line in stripped.splitlines() if line.strip()
+    structured_candidates = [stripped]
+    structured_candidates.extend(
+        line.strip()
+        for line in stripped.splitlines()
+        if line.strip() and line.strip()[0] in "[{"
     )
 
-    for candidate in reversed(direct_candidates):
+    for candidate in reversed(structured_candidates):
         try:
-            return json.loads(candidate)
+            parsed = json.loads(candidate)
+            if isinstance(parsed, (dict, list)):
+                return parsed
         except json.JSONDecodeError:
             continue
 
@@ -173,10 +177,16 @@ def _extract_json_payload(text: str) -> Optional[Any]:
     for start in reversed(start_positions):
         candidate = stripped[start:]
         try:
-            return json.loads(candidate)
+            parsed = json.loads(candidate)
+            if isinstance(parsed, (dict, list)):
+                return parsed
         except json.JSONDecodeError:
             continue
-    return None
+
+    try:
+        return json.loads(stripped)
+    except json.JSONDecodeError:
+        return None
 
 
 def run_vault_command(
@@ -427,13 +437,24 @@ def _summarize_vae_analysis_for_audit(payload: Dict[str, Any]) -> Dict[str, Any]
 def _summarize_phi_analysis_for_audit(payload: Dict[str, Any]) -> Dict[str, Any]:
     contract = payload.get("contract", {}) if isinstance(payload, dict) else {}
     metrics = contract.get("metrics", {}) if isinstance(contract, dict) else {}
+    details = contract.get("details", {}) if isinstance(contract, dict) else {}
     analysis = payload.get("analysis", {}) if isinstance(payload, dict) else {}
     return {
         "artifact_path": payload.get("artifact_path"),
+        "artifact_type": details.get("artifact_type"),
         "phi_value": metrics.get("phi_value"),
         "phi_alignment_score": metrics.get("phi_alignment_score"),
         "consciousness_level": metrics.get("consciousness_level"),
         "integrated_information": metrics.get("integrated_information"),
+        "ghz_mass_delta_control_to_moderate": metrics.get(
+            "ghz_mass_delta_control_to_moderate"
+        ),
+        "entropy_delta_control_to_moderate": metrics.get(
+            "entropy_delta_control_to_moderate"
+        ),
+        "backend_gap_marrakesh_minus_fez": metrics.get(
+            "backend_gap_marrakesh_minus_fez"
+        ),
         "final_stage_output": _extract_final_stage_output(analysis),
     }
 
@@ -569,6 +590,31 @@ def build_phi_artifact_prompt(
 ) -> str:
     metrics = contract_payload.get("metrics", {})
     details = contract_payload.get("details", {})
+    artifact_type = details.get("artifact_type")
+    if artifact_type == "ibm-decoherence-analysis":
+        return (
+            "Given this AGI-model IBM decoherence artifact summary, interpret "
+            "the collapse kinetics across control, mild, and moderate pulse "
+            "variants. Focus on whether GHZ mass and entropy trends indicate "
+            "observable decoherence, whether backend differences dominate the "
+            "signal, and what the next experiment should be. Return JSON with "
+            "keys: analysis, collapse_kinetics, next_experiment, confidence, "
+            "cited_metrics.\n\n"
+            f"Artifact: {artifact_path.name}\n"
+            f"Summary JSON:\n{json.dumps(contract_payload, indent=2)}\n\n"
+            "Primary metrics: "
+            f"control_avg_ghz_mass={metrics.get('control_avg_ghz_mass')}, "
+            f"moderate_avg_ghz_mass={metrics.get('moderate_avg_ghz_mass')}, "
+            "ghz_mass_delta_control_to_moderate="
+            f"{metrics.get('ghz_mass_delta_control_to_moderate')}, "
+            f"control_avg_entropy={metrics.get('control_avg_entropy')}, "
+            f"moderate_avg_entropy={metrics.get('moderate_avg_entropy')}, "
+            "entropy_delta_control_to_moderate="
+            f"{metrics.get('entropy_delta_control_to_moderate')}, "
+            "backend_gap_marrakesh_minus_fez="
+            f"{metrics.get('backend_gap_marrakesh_minus_fez')}, "
+            f"interpretation={details.get('interpretation')}"
+        )
     return (
         "Given this AGI-model phi artifact summary, interpret what the phi "
         "and integrated-information values imply for the IIT consciousness "
@@ -782,6 +828,7 @@ def run_eval_case_generation(
 
 def run_research_loop(
     phi_artifact_path: str,
+    smoke_artifact_path: Optional[str] = None,
     contract_output_path: str = DEFAULT_VAE_SMOKE_ARTIFACT,
     vae_analysis_output_path: str = DEFAULT_VAE_INTERPRETATION_ARTIFACT,
     phi_analysis_output_path: str = DEFAULT_PHI_ANALYSIS_ARTIFACT,
@@ -792,11 +839,17 @@ def run_research_loop(
     model: Optional[str] = None,
 ) -> Dict[str, Any]:
     vae_result = run_vae_loss_interpreter(
+        artifact_path=smoke_artifact_path,
         contract_output_path=contract_output_path,
         analysis_output_path=vae_analysis_output_path,
         repo_path=repo_path,
         mode=mode,
         model=model,
+    )
+    vae_payload = (
+        vae_result.parsed_json
+        if isinstance(vae_result.parsed_json, dict)
+        else {}
     )
     phi_result = run_phi_artifact_analyst(
         phi_artifact_path,
@@ -817,7 +870,9 @@ def run_research_loop(
     loop_payload = {
         "mode": mode,
         "phi_artifact_path": str(Path(phi_artifact_path).resolve()),
-        "vae_contract_artifact": str(Path(contract_output_path).resolve()),
+        "vae_contract_artifact": str(
+            Path(vae_payload.get("contract_path", contract_output_path)).resolve()
+        ),
         "vae_analysis_artifact": str(Path(vae_analysis_output_path).resolve()),
         "phi_analysis_artifact": str(Path(phi_analysis_output_path).resolve()),
         "ci_audit_artifact": str(Path(ci_audit_output_path).resolve()),
@@ -1113,8 +1168,9 @@ def _cli() -> int:
                 raise VaultIntegrationError(
                     "--artifact is required for research-loop"
                 )
-            result = run_research_loop(
+            loop_result = run_research_loop(
                 phi_artifact_path=args.artifact,
+                smoke_artifact_path=args.smoke_artifact,
                 contract_output_path=args.contract_output,
                 vae_analysis_output_path=args.vae_analysis_artifact,
                 phi_analysis_output_path=args.phi_analysis_artifact,
@@ -1126,7 +1182,7 @@ def _cli() -> int:
                 mode=args.mode,
                 model=args.model,
             )
-            print(json.dumps(result, indent=2))
+            print(json.dumps(loop_result, indent=2))
             return 0
 
         if args.action in {"phi-analyst", "phi-artifact-analysis"}:

@@ -555,6 +555,45 @@ class QuantumVAE(nn.Module):
 
         recon = self.decode(z)
         return recon, mu, log_var, density_matrix
+
+    def compute_losses(
+        self,
+        recon_x,
+        x,
+        mu,
+        log_var,
+        weights=None,
+        include_advanced=False,
+    ):
+        """Match the training loop's expected model loss API."""
+        density_flat = self.latent_to_density(mu)
+        density_matrix = density_flat.view(
+            mu.size(0),
+            self.fc_mu.out_features,
+            self.fc_mu.out_features,
+        )
+        density_matrix = self.density_activation(
+            density_matrix.view(mu.size(0), -1)
+        ).view(density_matrix.shape)
+        density_matrix = (
+            density_matrix + density_matrix.transpose(-1, -2)
+        ) / 2
+        density_matrix = density_matrix / density_matrix.diagonal(
+            dim1=-2,
+            dim2=-1,
+        ).sum(-1, keepdim=True).unsqueeze(-1)
+
+        total, loss_dict = total_loss(
+            recon_x,
+            x,
+            mu,
+            log_var,
+            density_matrix,
+            weights=weights,
+            include_advanced=include_advanced,
+        )
+        loss_dict.setdefault('phi', 0.0)
+        return total, loss_dict
     
     def compute_phi_resonance(self, latent_z: torch.Tensor) -> float:
         """
