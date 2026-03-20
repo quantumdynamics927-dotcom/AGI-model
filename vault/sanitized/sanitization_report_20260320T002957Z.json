@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-03-20T00:29:57.994481Z",
+  "input_path": "/tmp/pytest-of-runner/pytest-2/test_ingest_and_synthesize_fil0/raw_samples.csv",
+  "input_rows": 2,
+  "input_columns": [
+    "patient_id",
+    "age",
+    "gender",
+    "visit_date",
+    "cholesterol"
+  ],
+  "removed_columns": [],
+  "transformed_columns": [
+    "patient_id -> subject_token",
+    "age -> age_group (bin=5)",
+    "visit_date -> period(M)"
+  ],
+  "pii_detection": {
+    "phone": [
+      "visit_date:2025-01-01",
+      "visit_date:2025-01-15"
+    ]
+  },
+  "post_pii_detection": {},
+  "sanitized_path": "vault/sanitized/sanitized_data_20260320T002957Z.csv",
+  "sanitized_format": "csv",
+  "sanitized_sha256": "4533d735dc15bb82e7881601e8e9eee02396acf6992b0c1da5ddeed45327d645"
+}
