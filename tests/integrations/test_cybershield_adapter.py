@@ -5,11 +5,15 @@ from integrations.cybershield_adapter import ingest_scan_file, ingest_scan_paylo
 from tools.syntheticizer import Syntheticizer
 
 
-def test_ingest_and_synthesize_file():
+def test_ingest_and_synthesize_file(tmp_path):
     os.environ.setdefault('PRIVATE_VAULT_SALT', 'test_salt_123')
-    # use existing example
-    raw = Path('data/test_examples/raw_samples.csv')
-    assert raw.exists()
+    raw = tmp_path / 'raw_samples.csv'
+    raw.write_text(
+        'patient_id,age,gender,visit_date,cholesterol\n'
+        'abc-123,42,M,2025-01-01,5.4\n'
+        'def-456,37,F,2025-01-15,4.9\n',
+        encoding='utf-8',
+    )
 
     res = ingest_scan_file(str(raw), source='unittest')
     assert 'sanitized_path' in res
