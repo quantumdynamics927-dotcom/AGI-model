@@ -77,7 +77,10 @@ from sklearn.decomposition import PCA
 
 
 def _train_pca_generator(data: np.ndarray, n_components: int = 4):
-    pca = PCA(n_components=n_components)
+    max_components = min(data.shape)
+    if max_components < 1:
+        raise ValueError("PCA training data must contain at least one sample and one feature")
+    pca = PCA(n_components=min(n_components, max_components))
     pca.fit(data)
     return pca
 
