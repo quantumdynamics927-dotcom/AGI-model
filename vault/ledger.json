@@ -1,0 +1,86 @@
+[
+  {
+    "file_hash": "7a7b9c7b50311c45cece97393a74f464085c24a28eb2ba512f454b2f1eff6b8e",
+    "file_path": "vault/gatekeeper_logs/raw_20260320T002957Z_raw_samples.csv",
+    "metadata": {
+      "raw_hash": "7a7b9c7b50311c45cece97393a74f464085c24a28eb2ba512f454b2f1eff6b8e",
+      "source": "unittest"
+    },
+    "operation": "CYBERSHIELD_SCAN_RAW",
+    "prev_hash": null,
+    "signature": null,
+    "timestamp": 1773966597.991321
+  },
+  {
+    "file_hash": "4533d735dc15bb82e7881601e8e9eee02396acf6992b0c1da5ddeed45327d645",
+    "file_path": "vault/sanitized/sanitized_data_20260320T002957Z.csv",
+    "metadata": {
+      "clean_sha256": "4533d735dc15bb82e7881601e8e9eee02396acf6992b0c1da5ddeed45327d645",
+      "raw_copy": "vault/gatekeeper_logs/raw_20260320T002957Z_raw_samples.csv",
+      "raw_sha256": "7a7b9c7b50311c45cece97393a74f464085c24a28eb2ba512f454b2f1eff6b8e",
+      "removed_columns": [],
+      "source": "unittest"
+    },
+    "operation": "GATEWAY_INGESTION",
+    "prev_hash": "7a7b9c7b50311c45cece97393a74f464085c24a28eb2ba512f454b2f1eff6b8e",
+    "signature": null,
+    "timestamp": 1773966598.0010283
+  },
+  {
+    "file_hash": "9a88ff32a743853c802cdff5f53a54c03356c7d34a526a249b04b4598d970062",
+    "file_path": "vault/synthetic/synthetic_output.csv",
+    "metadata": {
+      "epochs": 1,
+      "latent": 2,
+      "n_samples": 5,
+      "noise": 0.0,
+      "source_sanitized": "vault/sanitized/sanitized_data_20260320T002957Z.csv"
+    },
+    "operation": "SYNTHESIS",
+    "prev_hash": "4533d735dc15bb82e7881601e8e9eee02396acf6992b0c1da5ddeed45327d645",
+    "signature": null,
+    "timestamp": 1773966598.0067806
+  },
+  {
+    "file_hash": "dd6c0308deb692e0f06844571435ea7cd7b02f3549a760a9fd200f841203da57",
+    "file_path": "vault/gatekeeper_logs/raw_20260320T002958Z_payload_20260320T002958Z.csv",
+    "metadata": {
+      "raw_hash": "dd6c0308deb692e0f06844571435ea7cd7b02f3549a760a9fd200f841203da57",
+      "source": "unittest"
+    },
+    "operation": "CYBERSHIELD_SCAN_RAW",
+    "prev_hash": "9a88ff32a743853c802cdff5f53a54c03356c7d34a526a249b04b4598d970062",
+    "signature": null,
+    "timestamp": 1773966598.0096335
+  },
+  {
+    "file_hash": "788fc087c73ee7f4b9e50d521504127555114af48e3b54524cd2c9129729e567",
+    "file_path": "vault/sanitized/sanitized_data_20260320T002958Z.csv",
+    "metadata": {
+      "clean_sha256": "788fc087c73ee7f4b9e50d521504127555114af48e3b54524cd2c9129729e567",
+      "raw_copy": "vault/gatekeeper_logs/raw_20260320T002958Z_payload_20260320T002958Z.csv",
+      "raw_sha256": "dd6c0308deb692e0f06844571435ea7cd7b02f3549a760a9fd200f841203da57",
+      "removed_columns": [],
+      "source": "unittest"
+    },
+    "operation": "GATEWAY_INGESTION",
+    "prev_hash": "dd6c0308deb692e0f06844571435ea7cd7b02f3549a760a9fd200f841203da57",
+    "signature": null,
+    "timestamp": 1773966598.0150557
+  },
+  {
+    "file_hash": "a4968bdd2d82a7b658b14927c5e60f1ad6dc84ad704a2c909ca257c59f566f5f",
+    "file_path": "vault/synthetic/synthetic_output.csv",
+    "metadata": {
+      "epochs": 1,
+      "latent": 2,
+      "n_samples": 1,
+      "noise": 0.0,
+      "source_sanitized": "vault/single_row_tmp/row_20260320T002958Z.csv"
+    },
+    "operation": "SYNTHESIS",
+    "prev_hash": "788fc087c73ee7f4b9e50d521504127555114af48e3b54524cd2c9129729e567",
+    "signature": null,
+    "timestamp": 1773966598.0202487
+  }
+]
