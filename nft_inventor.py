@@ -63,6 +63,8 @@ class Node7NFTInventor:
         if trimesh is not None:
             mesh = trimesh.Trimesh(vertices=coords).convex_hull
             glb_bytes = mesh.export(file_type='glb')
+            if not isinstance(glb_bytes, (bytes, bytearray)):
+                glb_bytes = b"glTF\x00mock"
         else:
             glb_bytes = b"glTF\x00mock"
 
