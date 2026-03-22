@@ -1,0 +1,1 @@
+"""Wing occlusion package."""
