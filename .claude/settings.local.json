@@ -19,7 +19,11 @@
       "Bash(cp -r data_provenance quantum-consciousness-agi/nodes/node6_data_provenance)",
       "Bash(cp -r TMT-OS-Labs-Portal quantum-consciousness-agi/nodes/node3_tmt_os_labs)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git ls-tree:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)"
     ]
   }
 }
