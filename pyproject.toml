@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "quantum-consciousness-agi"
 version = "0.1.0"
-description = "Experimental Quantum Consciousness VAE scaffold"
+description = "Research platform for a quantum-inspired VAE, analysis workflows, and TMT-OS integrations"
 authors = ["GitHub Copilot <copilot@example.com>"]
 
 [tool.poetry.dependencies]

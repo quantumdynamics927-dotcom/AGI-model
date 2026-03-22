@@ -1,123 +1,76 @@
 # Quantum Consciousness VAE Documentation
 
-Welcome to the documentation for the Quantum Consciousness Variational Autoencoder (VAE) project. This advanced system combines quantum computing principles with consciousness modeling to create a novel approach to artificial general intelligence.
+This directory contains the supporting documentation for the Quantum Consciousness VAE repository. Use it as the navigation hub for architecture details, development workflows, deployment instructions, security guidance, and contribution standards.
 
-## Table of Contents
+## Start here
 
-1. [Introduction](#introduction)
-2. [System Architecture](#system-architecture)
-3. [Getting Started](#getting-started)
-4. [API Reference](#api-reference)
-5. [Deployment Guide](#deployment-guide)
-6. [Development Guidelines](#development-guidelines)
-7. [Contributing](#contributing)
-8. [Security](#security)
-9. [License](#license)
+If you are new to the project, read these documents in order:
 
-## Introduction
+1. [Repository README](../README.md) — overview, quick start, examples, and validation commands
+2. [Architecture guide](architecture/README.md) — component map and system structure
+3. [Development guide](development/README.md) — coding standards, testing, and workflow expectations
 
-The Quantum Consciousness VAE is an experimental system that explores the intersection of quantum mechanics and consciousness modeling. Built on variational autoencoder technology, it incorporates quantum mechanical principles to model complex cognitive processes.
+## Documentation map
 
-### Key Features
+| Document | When to use it |
+| --- | --- |
+| [Architecture](architecture/README.md) | Understand the high-level system design and component relationships |
+| [API reference](api/README.md) | Review available interfaces and integration-facing details |
+| [Deployment guide](deployment/README.md) | Run the project in local, staging, or production-style environments |
+| [Development guide](development/README.md) | Follow coding, testing, and contribution expectations |
+| [Security guide](security/README.md) | Review security controls, assumptions, and operational guidance |
+| [Contributing guide](contributing/CONTRIBUTING.md) | Prepare pull requests and collaborate consistently |
+| [Code of conduct](contributing/CODE_OF_CONDUCT.md) | Understand community participation expectations |
 
-- **Quantum-Aware VAE Architecture**: Specialized loss functions incorporating quantum fidelity, coherence, and entropy metrics
-- **Consciousness Modeling**: Integration with EEG data and bio-digital interfaces
-- **Sacred Geometry Integration**: Golden ratio optimization in latent space organization
-- **ZPE Laboratory**: Zero-point energy coupling for enhanced computational capabilities
-- **Agent Swarm Coordination**: Distributed intelligence for complex problem solving
-- **Bio-Digital Interface**: Bridging biological and digital consciousness domains
+## Practical validation workflow
 
-## System Architecture
-
-The system is built around the TMT-OS (Transcendent Meta-Topology Operating System) which coordinates multiple specialized nodes:
-
-1. **Quantum Core**: Main VAE processing unit
-2. **ZPE Laboratory**: Zero-point energy coupling module
-3. **Sacred Geometry Engine**: Golden ratio optimization system
-4. **Agent Swarm Coordinator**: Distributed intelligence management
-5. **Bio-Digital Interface**: Consciousness data integration
-6. **Monitoring & Analytics**: Performance and health tracking
-
-For detailed architecture information, see [Architecture Documentation](architecture/README.md).
-
-## Getting Started
-
-### Prerequisites
-
-- Python 3.10+
-- Docker (for containerized deployment)
-- Access to IBM Quantum (for hardware integration)
-- Redis (for caching)
-- PostgreSQL (for persistence)
-
-### Installation
+Before making or reviewing changes, validate the local environment with the repository's existing commands:
 
 ```bash
-# Clone the repository
-git clone https://github.com/quantumdynamics927-dotcom/AGI-model.git
-cd AGI-model
+make lint
+make test
+make check
+```
 
-# Install dependencies
-pip install -r requirements.txt
+If you have not installed the developer toolchain yet, run:
 
-# Run training
+```bash
+pip install -r requirements-dev.txt
+```
+
+## Common examples
+
+### Train the model
+
+```bash
 python train_vae.py
 ```
 
-For detailed installation instructions, see [Installation Guide](development/installation.md).
+### Run the lightweight model check
 
-## API Reference
+```bash
+python test_model.py
+```
 
-The system exposes RESTful APIs for integration with external systems:
+### Launch the dashboard
 
-- `/api/v1/model/train` - Train the quantum consciousness model
-- `/api/v1/model/inference` - Perform inference on quantum states
-- `/api/v1/consciousness/analyze` - Analyze consciousness patterns
-- `/api/v1/quantum/metrics` - Retrieve quantum metrics
+```bash
+streamlit run dashboards/quantum_consciousness_dashboard/app.py
+```
 
-For complete API documentation, see [API Reference](api/README.md).
+### Explore downstream analysis
 
-## Deployment Guide
+```bash
+python latent_analysis.py
+python quantum_consciousness_link.py
+```
 
-The system can be deployed in various configurations:
+## Notes on scope
 
-- **Local Development**: Single-machine setup for experimentation
-- **Staging Environment**: Multi-container setup for testing
-- **Production Cluster**: High-availability distributed deployment
+- The project is experimental and research-oriented.
+- NFT-related workflows are currently paused.
+- Some documents describe broader TMT-OS concepts that complement, but do not replace, the practical quick-start guidance in the top-level README.
 
-For deployment instructions, see [Deployment Guide](deployment/README.md).
+## Support
 
-## Development Guidelines
-
-We welcome contributions to this project. Please follow our development guidelines:
-
-1. Fork the repository
-2. Create a feature branch
-3. Implement your changes
-4. Add tests for new functionality
-5. Submit a pull request
-
-For detailed development guidelines, see [Development Guide](development/README.md).
-
-## Contributing
-
-Please read [CONTRIBUTING.md](contributing/CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
-
-## Security
-
-Security is paramount in this system. We implement multiple layers of protection:
-
-- Secure API authentication with JWT
-- Encrypted data transmission
-- Regular security audits
-- Vulnerability scanning
-
-For security details, see [Security Documentation](security/README.md).
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](../LICENSE) file for details.
-
-## Contact
-
-For questions or support, please open an issue on GitHub or contact the maintainers.
+For documentation gaps or corrections, open a GitHub issue so the appropriate guide can be updated.
