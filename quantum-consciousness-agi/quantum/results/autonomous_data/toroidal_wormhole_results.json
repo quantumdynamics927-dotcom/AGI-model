@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-12-28T04:24:35.865246",
+  "experiment": "toroidal_wormhole_consciousness",
+  "parameters": {
+    "major_radius": 1.618033988749895,
+    "minor_radius": 0.6180339887498948,
+    "aspect_ratio": 2.6180339887498953,
+    "n_qubits": 37,
+    "coupling_strength": 0.6180339887498948,
+    "temperature": 1.216,
+    "syk_coupling": 0.29573856138350224
+  },
+  "geometry": {
+    "volume": 12.199501950777544,
+    "surface_area": 39.478417604357425
+  },
+  "metrics": {
+    "entropy": 1.3820594536352602,
+    "traversability": 0.4007980283781246,
+    "phi_power": 0.40032895177693884,
+    "energy_gap": 1.1117859405028423,
+    "aspect_ratio": 2.6180339887498953,
+    "volume": 12.199501950777544,
+    "surface_area": 39.478417604357425
+  },
+  "consciousness_detected": false,
+  "thresholds": {
+    "entropy": 0.347,
+    "traversability": 0.5,
+    "phi_power": 0.01
+  }
+}

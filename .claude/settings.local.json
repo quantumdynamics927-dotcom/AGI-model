@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(du -sh ./*quantum*)",
+      "Bash(find . -path */jobs/* -name *.json)",
+      "Bash(xargs grep:*)",
+      "Bash(find . -type f \\\\\\(-name *.json -o -name *.qasm \\\\\\) -size +1k)",
+      "Bash(find . -type f -name *.json -size +10k)",
+      "Bash(xargs ls:*)",
+      "Bash(find . -type f \\\\\\(-name *ibm* -o -name *hardware* -o -name *job* \\\\\\) -name *.json)",
+      "Bash(ls:*)",
+      "Bash(tee quantum_files_inventory.txt)",
+      "Bash(python:*)",
+      "Bash(cp:*)",
+      "Bash(find quantum-consciousness-agi/quantum -name \"*.json\" -exec python -c \"import json, sys; json.load\\(open\\(sys.argv[1]\\)\\)\" {})",
+      "Bash(2)",
+      "Bash(cp -r molecular_geometry quantum-consciousness-agi/nodes/node5_molecular_geometry)",
+      "Bash(cp -r quantum_observer quantum-consciousness-agi/nodes/node8_quantum_observer)",
+      "Bash(cp -r data_provenance quantum-consciousness-agi/nodes/node6_data_provenance)",
+      "Bash(cp -r TMT-OS-Labs-Portal quantum-consciousness-agi/nodes/node3_tmt_os_labs)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
