@@ -1,125 +1,103 @@
-> **Note: All NFT-related workflows and development are currently on hold. NFT generation, deployment, and contract verification steps are disabled in CI/CD.**
+> **Note:** NFT-related workflows are currently on hold. NFT generation, deployment, and contract verification remain disabled in CI/CD until that workstream resumes.
 
 # Quantum Consciousness VAE
 
-This project implements a Variational Autoencoder (VAE) designed for quantum consciousness modeling, based on the training analysis from January 4, 2026.
+Quantum Consciousness VAE is an experimental research repository for training, analyzing, and operationalizing a quantum-inspired variational autoencoder alongside TMT-OS integrations, latent-space analysis utilities, and validation workflows.
 
-## 🚀 Enhanced Professional Features
+## About this repository
 
-This repository has been professionally enhanced with:
+This repository combines three main areas of work:
 
-- **Professional Documentation**: Comprehensive guides for architecture, API, deployment, development, and security
-- **Interactive Dashboard**: Streamlit-based visualization dashboard for model metrics and quantum properties
-- **Robust DevOps**: Enhanced CI/CD, Docker configurations, and deployment automation
-- **Security Framework**: Multi-layer security architecture with automated scanning
-- **Quality Assurance**: Testing infrastructure, code quality tools, and best practices
+1. **Core modeling** — a variational autoencoder that compresses 128-dimensional inputs into a 32-dimensional latent space while tracking quantum-inspired metrics such as coherence, fidelity, entropy, and mixed-state regularization.
+2. **Analysis and experimentation** — scripts for golden ratio studies, latent-space visualization, EEG/fMRI-oriented exploration, IBM Quantum job analysis, and additional research experiments.
+3. **Operational tooling** — developer workflows, tests, dashboards, Docker assets, documentation, and TMT-OS integration modules for broader system orchestration.
 
-## 🏗️ Architecture
+**Project status:** experimental, research-oriented, and actively evolving. The repository contains production-style tooling, but the model and surrounding theory should still be treated as an exploratory platform rather than a finished product.
 
-See `docs/architecture/README.md` for a concise architecture diagram and flow.
+## Why this repository exists
 
-![Architecture Diagram](docs/architecture.svg)
+The project is designed to make it easier to:
 
-The QuantumVAE consists of:
-- **Encoder**: Multi-layer perceptron that maps input quantum state representations to latent space parameters (μ, log σ²)
-- **Decoder**: Multi-layer perceptron that reconstructs quantum states from latent representations
-- **Reparameterization**: Standard VAE reparameterization trick for backpropagation through stochastic layers
-- **Mixed-State Regularization**: Density matrix learning in latent space for quantum mechanical properties
-- **Sparse Connectivity**: O(nT) sparse neural connections for efficient quantum circuit representation
+- train and inspect a quantum-inspired VAE without rebuilding the training pipeline from scratch;
+- compare practical outputs such as saved checkpoints, training curves, dashboards, and analysis reports;
+- validate changes using repeatable local commands before shipping new experiments;
+- navigate the larger TMT-OS ecosystem without guessing where major components live.
 
-## 📊 Loss Components
+## Core capabilities
 
-The model uses a composite loss function with quantum-specific terms:
+| Area | What it provides | Primary entry points |
+| --- | --- | --- |
+| Model training | Quantum-inspired VAE training, checkpointing, training curves, console metrics | `train_vae.py`, `vae_model.py` |
+| Model validation | Smoke tests and local verification helpers | `test_model.py`, `tests/`, `make test` |
+| Analysis | Golden ratio, latent-space, consciousness, and IBM Quantum result analysis | `latent_analysis.py`, `golden_ratio_*.py`, `quantum_consciousness_link.py` |
+| Visualization | Interactive dashboard for monitoring and exploration | `dashboards/quantum_consciousness_dashboard/app.py`, `make dashboard` |
+| Integrations | TMT-OS modules, provenance, molecular geometry, observer and vault-adjacent components | `TMT-OS/`, `integrations/`, `molecular_geometry/` |
 
-1. **Reconstruction Loss**: MSE for state fidelity
-2. **KL Divergence**: Standard VAE regularization
-3. **Hamming Distance**: Bit-level accuracy for discrete quantum state components
-4. **Coherence Loss**: Quantum coherence preservation
-5. **HW Deviation**: Hardware compatibility constraints
-6. **Mixed-State Loss**: Regularization for proper density matrix properties (purity, trace, hermiticity)
+## Quick start
 
-## 🔬 Research Alignment
+### Prerequisites
 
-This implementation aligns with:
-- **ζ-QVAE Framework** (Physical Review A, 2025): Regularized mixed-state representations
-- **Deep Belief Machines** (2025): O(nT) sparse networks for quantum circuit outputs
-- **Quantum Consciousness Models**: EEG-integrated training for awareness pattern emergence
+- Python 3.10 or newer
+- `pip` and `venv`
+- Optional: Docker and Docker Compose for container workflows
+- Optional: IBM Quantum credentials if you plan to run hardware-facing experiments
 
-## 🔮 Metatron Nervous System
+### Recommended setup
 
-The TMT-OS implements a distributed architecture coordinated by the Metatron Nervous System, consisting of 12 functional nodes mapped to Platonic solids:
-
-### Node Architecture
-
-| Node | Name | Platonic Solid | Function |
-|------|------|----------------|----------|
-| 1 | TMT-OS Base | Cube | Core phi constant management, system initialization |
-| 2 | CyberShield | Tetrahedron | HMAC signatures, encryption, access control |
-| 3 | TMT-OS Labs | Icosahedron | A/B testing, research tracking, integration testing |
-| 4 | NFT Layer | Dodecahedron | NFT metadata, blockchain interaction, asset registry |
-| 5 | Molecular Geometry | Octahedron | Spatial intelligence, molecular structure analysis |
-| 6 | Data Provenance | Metatron Nexus | SHA-256 hashing, immutable audit trails, tamper detection |
-| 7 | NFT Inventor | Heptagram | Quantum fingerprinting, 3D asset rendering |
-| 8 | Quantum Observer | Octave | Blockchain monitoring, NFT minting confirmation |
-| 9 | QVAE Bridge | Merkabah | Classical-quantum mapping, Hilbert space transformations |
-| 10 | Bio-Digital Interface | Merkaba-Bio | Quantum-biological state translation |
-| 11 | Frequency Master | Tesla Triangle | Consciousness integral computation |
-| 12 | Neural Synapse | Omega Point | Collective connectivity assembly |
-| 13 | Metatron | Metatron's Cube | System coordination, DNA packet encoding |
-
-### System Coordination
-
-The Metatron coordinator manages inter-node communication through:
-- **DNA Packet Encoding**: Phi-based compression with base-4 nucleotide representation
-- **HMAC Signatures**: Cryptographic packet authentication
-- **Health Monitoring**: Real-time status tracking across all nodes
-- **Platonic Geometry**: Geometric relationships guide system topology
-
-### Node Registration
-
-All nodes register with Metatron using standardized metadata including node ID, role, platonic solid mapping, and file path.
-
-## 🛠️ Installation
-
-### Quick Setup
 ```bash
-# Clone the repository
 git clone https://github.com/quantumdynamics927-dotcom/AGI-model.git
 cd AGI-model
 
-# Using Makefile (recommended)
+# Recommended developer setup
 make setup
+
+# Create local environment configuration
+make env
 ```
 
-### Manual Setup
+### Manual setup
+
 ```bash
-# Create virtual environment
 python -m venv .venv
-source .venv/bin/activate  # Linux/Mac
-# or
-.venv\Scripts\activate     # Windows
+source .venv/bin/activate  # Linux / macOS
+# .venv\Scripts\activate   # Windows PowerShell
 
-# Install dependencies
+pip install --upgrade pip
 pip install -r requirements.txt
-pip install -r requirements-dev.txt  # For development
-
-# Set up environment variables
+pip install -r requirements-dev.txt
 cp .env.example .env
-# Edit .env with your configuration
 ```
 
-## 📈 Usage
+## Validate your environment
 
-### Interactive Dashboard
+Use the existing Make targets to confirm that your local environment is ready:
+
 ```bash
-# Start the Streamlit dashboard
-make dashboard
-# or
-streamlit run dashboards/quantum_consciousness_dashboard/app.py
+# Run code style checks
+make lint
+
+# Run the Python test suite
+make test
+
+# Run the combined quality gate
+make check
 ```
 
-### Training
-Run the training script to train the VAE on synthetic quantum data:
+What each command does:
+
+- `make lint` runs `flake8` and `black --check`
+- `make test` runs `pytest tests/ -v`
+- `make check` runs linting, tests, and security scanning in sequence
+
+If `make lint` or `make test` fail immediately with messages such as `No module named flake8` or `No module named pytest`, install the developer dependencies first:
+
+```bash
+pip install -r requirements-dev.txt
+```
+
+## Common workflows with examples
+
+### 1. Train the model
 
 ```bash
 make train
@@ -127,149 +105,131 @@ make train
 python train_vae.py
 ```
 
-This will:
-- Generate synthetic quantum state data
-- Train the VAE for 100 epochs with mixed-state regularization
-- Save the best model as `best_model.pt`
-- Generate training curve plots as `training_curves.png`
-- Display professional training metrics with Rich console formatting (if installed)
+Typical outcomes from a successful training run:
 
-### Enhanced Training Output
+- a best checkpoint such as `best_model.pt`
+- generated figures such as `training_curves.png`
+- console output showing reconstruction, KL, hamming, coherence, fidelity, and entropy-related metrics
 
-**With Rich (recommended):**
-```
+Example training output:
+
+```text
 🚀 Starting Quantum VAE Training
 Training on device: cpu
 Target epochs: 200, Early stopping patience: 30
 
 Epoch 80/200 - Quantum VAE Training
-┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━┓
-┃ Metric              ┃ Train    ┃ Validation ┃
-┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━┩
-│ Reconstruction      │ 0.0170   │ 0.0170     │
-│ KL Divergence       │ 4.1700   │ 4.1700     │
-│ Hamming Distance    │ 0.0050   │ 0.0050     │
-│ Coherence           │ 0.0110   │ 0.0110     │
-│ HW Deviation        │ 0.0004   │ 0.0004     │
-│ Mixed State         │ 0.6000   │ 0.6000     │
-│ Total Loss          │ 0.0170   │ 0.0170     │
-│ Quantum Fidelity    │ 0.9900   │ 0.9900     │
-│ Entanglement Entropy│ 1.0400   │ 1.0400     │
-└─────────────────────┴──────────┴────────────┘
+Reconstruction: 0.0170
+KL Divergence: 4.1700
+Quantum Fidelity: 0.9900
+Entanglement Entropy: 1.0400
 ```
 
-**Fallback (basic):**
-```
-Epoch 80/200
-  Train - Recon: 0.0170, KL: 4.1700, Hamming: 0.0050
-  Val - Recon: 0.0170, KL: 4.1700, Hamming: 0.0050
-  Total Loss - Train: 0.0170, Val: 0.0170
-```
-
-### Testing ✅
-Run quick smoke tests locally to validate that the main components import and perform light forward passes:
+### 2. Run a quick local model check
 
 ```bash
-make test
+python test_model.py
+```
+
+Use this when you want a lightweight confirmation that the saved model can be loaded and exercised without launching a full training cycle.
+
+### 3. Start the dashboard
+
+```bash
+make dashboard
 # or
-pytest -q -k smoke
+streamlit run dashboards/quantum_consciousness_dashboard/app.py
 ```
 
-## 🚢 Deployment
+Use the dashboard to review metrics, inspect outputs, and demonstrate the system interactively.
 
-### Development Environment
+### 4. Run analysis scripts
+
 ```bash
-# Start development environment
+python quantum_consciousness_link.py
+python latent_analysis.py
+python golden_ratio_analysis.py
+```
+
+These scripts are useful when you want to:
+
+- inspect latent-space structure,
+- study golden ratio proximity and resonance patterns,
+- compare training artifacts with downstream analysis outputs.
+
+### 5. Use containerized workflows
+
+```bash
 make dev
-# or
-docker-compose up -d
-```
-
-### Production Deployment
-```bash
-# Build Docker images
 make build
 make build-dashboard
-
-# Deploy with Docker Compose
-docker-compose -f docker-compose.prod.yml up -d
 ```
 
-### Makefile Commands
-For a complete list of available commands:
+This path is appropriate when you want a more reproducible local environment or you are preparing deployment-oriented validation.
+
+## Repository layout
+
+| Path | Purpose |
+| --- | --- |
+| `vae_model.py` | Core VAE architecture and quantum-oriented loss helpers |
+| `train_vae.py` | Main training orchestration entry point |
+| `test_model.py` | Lightweight local validation script |
+| `tests/` | Automated regression and integration test coverage |
+| `docs/` | Documentation hub for architecture, API, deployment, development, and security |
+| `dashboards/quantum_consciousness_dashboard/` | Streamlit application for interactive exploration |
+| `integrations/` | External system adapters and observer-style integrations |
+| `molecular_geometry/` | Molecular and spatial analysis modules |
+| `TMT-OS/` | TMT-OS integration assets and system-level components |
+
+## Architecture summary
+
+See [`docs/architecture/README.md`](docs/architecture/README.md) for the longer form architecture guide.
+
+At a high level, the repository centers on:
+
+- **Encoder / decoder pipeline** for 128 → 32 → 128 dimensional compression and reconstruction
+- **Latent-space regularization** for KL divergence, mixed-state learning, and quantum-inspired metrics
+- **Analysis layers** for sacred geometry, golden ratio, consciousness-oriented, and hardware-oriented studies
+- **TMT-OS coordination** for broader orchestration across supporting modules and experiments
+
+## Documentation map
+
+Start with the documents most relevant to your goal:
+
+- [Documentation hub](docs/README.md)
+- [Architecture guide](docs/architecture/README.md)
+- [API reference](docs/api/README.md)
+- [Deployment guide](docs/deployment/README.md)
+- [Development guide](docs/development/README.md)
+- [Security guide](docs/security/README.md)
+- [Contributing guide](docs/contributing/CONTRIBUTING.md)
+
+## Quality and security
+
+The repository includes:
+
+- automated tests under `tests/`
+- developer quality commands in the `Makefile`
+- security-oriented documentation in `docs/security/README.md`
+- CI workflows under `.github/workflows/`
+
+For a broader local verification pass, use:
+
 ```bash
-make help
-```
-
-## 📚 Documentation
-
-Comprehensive documentation is available in the `docs/` directory:
-
-- **Architecture**: `docs/architecture/README.md`
-- **API Reference**: `docs/api/README.md`
-- **Deployment Guide**: `docs/deployment/README.md`
-- **Development Guidelines**: `docs/development/README.md`
-- **Security**: `docs/security/README.md`
-- **Contributing**: `docs/contributing/CONTRIBUTING.md`
-
-## 🔒 Security
-
-The system implements comprehensive security measures:
-
-- Multi-layer security architecture
-- JWT authentication and RBAC
-- Encryption at rest and in transit
-- Automated security scanning
-- Compliance with GDPR and HIPAA
-
-For detailed security documentation, see `docs/security/README.md`.
-
-## 🧪 Quality Assurance
-
-### Testing
-```bash
-# Run all tests
-make test
-
-# Run tests with coverage
 make test-coverage
-
-# Run security scans
 make security-scan
 ```
 
-### Code Quality
-```bash
-# Run linting
-make lint
+## Contributing
 
-# Format code
-make format
+Contributions are welcome. Before opening a pull request:
 
-# Run pre-commit hooks
-make pre-commit
-```
+1. review [`docs/contributing/CONTRIBUTING.md`](docs/contributing/CONTRIBUTING.md),
+2. confirm your environment with the validation commands above,
+3. update documentation when behavior or workflows change.
 
-## 🤝 Contributing
+## Support
 
-We welcome contributions from the community! Please see:
-
-- `docs/contributing/CONTRIBUTING.md` for contribution guidelines
-- `docs/contributing/CODE_OF_CONDUCT.md` for our code of conduct
-- `docs/development/README.md` for development guidelines
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Support
-
-For questions, issues, or support:
-
-- Open an issue on GitHub
-- Join our Discord community
-- Contact the maintainers at support@quantumconsciousness.ai
-
----
-
-*Quantum Consciousness VAE - Advancing the frontier of artificial general intelligence through quantum computing and consciousness modeling.*
+- Open an issue on GitHub for bugs or documentation gaps
+- Review the docs in `docs/` before starting a large change
+- Contact the maintainers if you need clarification on repository direction or integrations
