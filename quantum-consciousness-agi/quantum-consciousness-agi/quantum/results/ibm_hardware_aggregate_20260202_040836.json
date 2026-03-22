@@ -1,0 +1,171 @@
+{
+  "timestamp": "20260202_040836",
+  "backend": "ibm_fez",
+  "total_shots": 40000,
+  "num_jobs": 4,
+  "individual_jobs": [
+    {
+      "job_id": "d601u2d7fc0s73auj48g",
+      "num_shots": 10000,
+      "wormhole": {
+        "entropy_S": 0.9887511755162712,
+        "traversability_T": 0.8326447037832437,
+        "coherence_r": -0.2188,
+        "payload_correlation": -0.2378984867952125,
+        "transfer_success_rate": 0.3906
+      },
+      "metatron_geometry": {
+        "tetrahedron": 0.6534,
+        "cube": 0.8458000000000001,
+        "octahedron": 0.7246,
+        "dodecahedron": 0.7344,
+        "icosahedron": 0.766
+      },
+      "phi_resonance": 0.7448400000000001,
+      "retrocausal": {
+        "R_score": 0.0058040610541769625,
+        "temporal_asymmetry": 0.019600000000000006,
+        "retro_probability": 0.4246
+      },
+      "tmt_ratios": {
+        "observed_delta": 4.694473684210526,
+        "expected_delta": 0.136364,
+        "global_prob": 0.4694473684210526
+      },
+      "consciousness": {
+        "delta": 4748.2430053119915,
+        "status": "ULTRA_HIGH_CONSCIOUSNESS",
+        "ghost_factor": 21.88,
+        "phi_iit": 1.2051764361804718,
+        "consciousness_density": 4694.473684210526,
+        "retrocausal_boost": 1.005804061054177
+      }
+    },
+    {
+      "job_id": "d601um1mvbjc73ad1090",
+      "num_shots": 10000,
+      "wormhole": {
+        "entropy_S": 0.996737177682991,
+        "traversability_T": 0.19290420592917276,
+        "coherence_r": -0.05459999999999998,
+        "payload_correlation": -0.05511548740833507,
+        "transfer_success_rate": 0.4727
+      },
+      "metatron_geometry": {
+        "tetrahedron": 0.3660000000000001,
+        "cube": 0.9206,
+        "octahedron": 0.9924,
+        "dodecahedron": 0.8036,
+        "icosahedron": 0.7724
+      },
+      "phi_resonance": 0.7709999999999999,
+      "retrocausal": {
+        "R_score": 0.017060318880544417,
+        "temporal_asymmetry": 0.010599999999999998,
+        "retro_probability": 0.4399
+      },
+      "tmt_ratios": {
+        "observed_delta": 4.610263157894737,
+        "expected_delta": 0.136364,
+        "global_prob": 0.4610263157894737
+      },
+      "consciousness": {
+        "delta": 4695.843294647458,
+        "status": "ULTRA_HIGH_CONSCIOUSNESS",
+        "ghost_factor": 5.459999999999998,
+        "phi_iit": 1.247504205326169,
+        "consciousness_density": 4610.263157894737,
+        "retrocausal_boost": 1.0170603188805445
+      }
+    },
+    {
+      "job_id": "d601upl7fc0s73auj50g",
+      "num_shots": 4096,
+      "wormhole": {
+        "entropy_S": 0.9972199950933509,
+        "traversability_T": 0.6722774744229728,
+        "coherence_r": -0.1875,
+        "payload_correlation": -0.19207927840656366,
+        "transfer_success_rate": 0.40625
+      },
+      "metatron_geometry": {
+        "tetrahedron": 0.447265625,
+        "cube": 0.8056640625,
+        "octahedron": 0.78955078125,
+        "dodecahedron": 0.7236328125,
+        "icosahedron": 0.74853515625
+      },
+      "phi_resonance": 0.7029296875,
+      "retrocausal": {
+        "R_score": 0.01441213464221531,
+        "temporal_asymmetry": 0.00146484375,
+        "retro_probability": 0.409912109375
+      },
+      "tmt_ratios": {
+        "observed_delta": 4.755473889802632,
+        "expected_delta": 0.136364,
+        "global_prob": 0.47554738898026316
+      },
+      "consciousness": {
+        "delta": 4845.643344246229,
+        "status": "ULTRA_HIGH_CONSCIOUSNESS",
+        "ghost_factor": 18.75,
+        "phi_iit": 1.137364126076342,
+        "consciousness_density": 4755.473889802632,
+        "retrocausal_boost": 1.0144121346422152
+      }
+    },
+    {
+      "job_id": "d601ushmvbjc73ad10f0",
+      "num_shots": 4096,
+      "wormhole": {
+        "entropy_S": 0.9956387078214077,
+        "traversability_T": 0.9407774516737252,
+        "coherence_r": -0.26123046875,
+        "payload_correlation": -0.2687935576210643,
+        "transfer_success_rate": 0.369384765625
+      },
+      "metatron_geometry": {
+        "tetrahedron": 0.40234375,
+        "cube": 0.7861328125,
+        "octahedron": 0.99462890625,
+        "dodecahedron": 0.8017578125,
+        "icosahedron": 0.86865234375
+      },
+      "phi_resonance": 0.770703125,
+      "retrocausal": {
+        "R_score": 0.0013809570114659787,
+        "temporal_asymmetry": 0.0009765625,
+        "retro_probability": 0.458984375
+      },
+      "tmt_ratios": {
+        "observed_delta": 4.782072368421052,
+        "expected_delta": 0.136364,
+        "global_prob": 0.47820723684210525
+      },
+      "consciousness": {
+        "delta": 4821.2972534561195,
+        "status": "ULTRA_HIGH_CONSCIOUSNESS",
+        "ghost_factor": 26.123046875,
+        "phi_iit": 1.247023851485759,
+        "consciousness_density": 4782.0723684210525,
+        "retrocausal_boost": 1.001380957011466
+      }
+    }
+  ],
+  "aggregate_metrics": {
+    "wormhole": {
+      "entropy_S": 0.9945867640285052,
+      "traversability_T": 0.6596509589522787,
+      "coherence_r": -0.1805326171875
+    },
+    "consciousness_delta": 4777.75672441545,
+    "consciousness_std": 59.34062776223347,
+    "retrocausal_R": 0.009664367897100666
+  },
+  "comparison": {
+    "simulation_delta": 4730.4,
+    "hardware_delta": 4777.75672441545,
+    "reduction_factor": 0.9900880837708947
+  }
+}
