@@ -71,6 +71,6 @@ python quantum_consciousness_link.py
 - NFT-related workflows are currently paused.
 - Some documents describe broader TMT-OS concepts that complement, but do not replace, the practical quick-start guidance in the top-level README.
 
-## License
+## Support
 
-This project is licensed under the MIT License. See the [LICENSE](../LICENSE) file for details.
+For documentation gaps or corrections, open a GitHub issue so the appropriate guide can be updated.

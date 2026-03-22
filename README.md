@@ -183,7 +183,7 @@ This path is appropriate when you want a more reproducible local environment or 
 
 ## Architecture summary
 
-See [`docs/architecture/README.md`](docs/architecture/README.md) for the longer form architecture guide and [`docs/architecture.svg`](docs/architecture.svg) for the diagram.
+See [`docs/architecture/README.md`](docs/architecture/README.md) for the longer form architecture guide.
 
 At a high level, the repository centers on:
 
@@ -227,10 +227,6 @@ Contributions are welcome. Before opening a pull request:
 1. review [`docs/contributing/CONTRIBUTING.md`](docs/contributing/CONTRIBUTING.md),
 2. confirm your environment with the validation commands above,
 3. update documentation when behavior or workflows change.
-
-## License
-
-This project is licensed under the MIT License. See [`LICENSE`](LICENSE) for details.
 
 ## Support
 
