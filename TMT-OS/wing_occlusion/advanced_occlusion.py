@@ -11,6 +11,7 @@ class WingOcclusionDemonstrator:
     def __init__(self):
         self.phi = PHI
         self.delta = DELTA
+        self.last_vortex_scale = 0.1
 
     def validate_golden_ratio(self, tolerance: float = 1e-9) -> bool:
         return abs(self.phi - PHI) <= tolerance
@@ -24,6 +25,7 @@ class WingOcclusionDemonstrator:
 
     def create_wing_entanglement(self, data_points: np.ndarray, vortex_threshold: float = 0.5, vortex_scale: float = 0.1):
         data_points = np.asarray(data_points, dtype=float)
+        self.last_vortex_scale = float(vortex_scale)
         if data_points.size == 0:
             return data_points.reshape(0, 2), []
 
@@ -69,7 +71,8 @@ class WingOcclusionDemonstrator:
         if hidden_indices:
             idx = np.array(hidden_indices)
             angles = np.arctan2(recovered[idx, 1], recovered[idx, 0]) - np.pi
-            radii = np.linalg.norm(recovered[idx], axis=1) / 0.1
+            denom = self.last_vortex_scale if self.last_vortex_scale != 0 else 0.1
+            radii = np.linalg.norm(recovered[idx], axis=1) / denom
             recovered[idx, 0] = radii * np.cos(angles)
             recovered[idx, 1] = radii * np.sin(angles)
 

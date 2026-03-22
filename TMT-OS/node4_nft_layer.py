@@ -6,7 +6,7 @@ from copy import deepcopy
 
 class _MockIPFSNode:
     def upload_json(self, payload):
-        digest = hashlib.sha1(repr(payload).encode("utf-8")).hexdigest()[:40]
+        digest = hashlib.sha256(repr(payload).encode("utf-8")).hexdigest()[:40]
         return f"Qm{digest}"
 
 
