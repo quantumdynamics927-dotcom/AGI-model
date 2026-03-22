@@ -1,0 +1,15 @@
+repository:
+  name: AGI-model
+  description: Research platform for a quantum-inspired VAE, latent-space analysis, and TMT-OS integrations.
+  homepage: ""
+  topics:
+    - quantum-machine-learning
+    - variational-autoencoder
+    - pytorch
+    - scientific-computing
+    - consciousness-research
+    - latent-space-analysis
+    - tmt-os
+  has_issues: true
+  has_projects: true
+  has_wiki: false
