@@ -1,9 +1,13 @@
+import os
 import hashlib
 import hmac
 import time
 from pathlib import Path
 
-HMAC_SECRET_KEY = b"tmt_os_node2_secret_key"
+HMAC_SECRET_KEY = os.environ.get(
+    "TMT_OS_NODE2_HMAC_SECRET",
+    "tmt_os_node2_secret_key",
+).encode("utf-8")
 
 
 class Node2CyberShield:
