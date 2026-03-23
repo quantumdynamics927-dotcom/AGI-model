@@ -206,6 +206,24 @@ experiment_results/
 simulation_data/
 test_results/
 integration_test_results/
+best_model.summary.json
+temp_kl_probe.summary.json
+vae_smoke_checkpoint.json
+training_curves.png
+ci_audit_result.json
+phi_artifact_analysis.json
+research_loop_result.json
+vae_loss_interpretation.json
+
+# Local secure synthetic vault artifacts
+vault/gatekeeper_logs/
+vault/gatekeeper_tmp/
+vault/sanitized/
+vault/single_row_tmp/
+vault/synthetic/
+vault/models/
+vault/keys/
+vault/ledger.json
 
 # Quantum consciousness specific
 consciousness_cache/

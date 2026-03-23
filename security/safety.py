@@ -1,4 +1,9 @@
+import re
 from urllib.parse import urlparse
+
+
+_WINDOWS_DRIVE_PATH = re.compile(r"^[a-zA-Z]:[\\/]")
+_UNC_PATH = re.compile(r"^[\\/]{2}[^\\/]+[\\/][^\\/]+")
 
 
 def is_local_path(path_str: str) -> bool:
@@ -8,6 +13,8 @@ def is_local_path(path_str: str) -> bool:
     """
     if not path_str:
         return False
+    if _WINDOWS_DRIVE_PATH.match(path_str) or _UNC_PATH.match(path_str):
+        return True
     parsed = urlparse(path_str)
     # If a scheme exists and it is not file, treat as remote
     if parsed.scheme and parsed.scheme != 'file':

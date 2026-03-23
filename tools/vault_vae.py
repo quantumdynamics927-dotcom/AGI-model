@@ -13,6 +13,8 @@ from typing import Tuple, List
 import numpy as np
 import pandas as pd
 
+from tools.vault_ledger import vault_path
+
 # Use PyTorch when available, else fallback to a PCA-based generator
 try:
     import torch
@@ -103,7 +105,7 @@ def train_vault_model(input_path: str, latent_dim: int = 4, epochs: int = 200, d
 
     if HAS_TORCH:
         model, info = _train_torch_vae(data_scaled, latent_dim=latent_dim, epochs=epochs, device=device)
-        model_path = Path("vault/models/vault_vae.pth")
+        model_path = vault_path("models", "vault_vae.pth")
         model_path.parent.mkdir(parents=True, exist_ok=True)
         torch.save(model.state_dict(), model_path)
         return model, scaler, list(df_numeric.columns)
@@ -117,7 +119,7 @@ def generate_synthetic(model_obj, scaler, columns: List[str], n_samples: int = 1
         df_gen = _generate_torch(model_obj, n_samples, latent_dim, scaler, columns)
     else:
         df_gen = _generate_pca(model_obj, n_samples, scaler, columns)
-    outdir = Path("vault/synthetic")
+    outdir = vault_path("synthetic")
     outdir.mkdir(parents=True, exist_ok=True)
     path = outdir / "synthetic_output.csv"
     df_gen.to_csv(path, index=False)

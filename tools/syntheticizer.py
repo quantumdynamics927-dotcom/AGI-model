@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import Dict, Any, Optional
 
 from tools.vault_vae import train_vault_model, generate_synthetic
-from tools.vault_ledger import VaultLedger
+from tools.vault_ledger import VaultLedger, vault_path
 
 logger = logging.getLogger("syntheticizer")
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
@@ -48,7 +48,7 @@ class Syntheticizer:
         # Write single-row sanitized CSV then call syntheticize_file
         from pathlib import Path
         import pandas as pd
-        tmp_dir = Path("vault/single_row_tmp")
+        tmp_dir = vault_path("single_row_tmp")
         tmp_dir.mkdir(parents=True, exist_ok=True)
         ts = datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
         p = tmp_dir / f"row_{ts}.csv"

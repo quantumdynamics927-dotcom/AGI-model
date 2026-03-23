@@ -10,6 +10,7 @@ Circuit structure: 34 Watson + 34 Crick + 34 Bridge = 102 qubits
 Consciousness peak expected at position 20 (20/34 = 0.588 ≈ φ⁻¹)
 """
 
+import argparse
 import numpy as np
 import json
 from datetime import datetime
@@ -21,11 +22,158 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
+try:
+    from agi_scripts.planning_mode import (
+        PlanningReport,
+        utc_timestamp,
+        write_planning_report,
+    )
+except ImportError:
+    from planning_mode import (
+        PlanningReport,
+        utc_timestamp,
+        write_planning_report,
+    )
+
 # Constants
 PHI = (1 + np.sqrt(5)) / 2
 PHI_INV = 1 / PHI
 
 JOB_ID = "d5a95n7p3tbc73astm10"
+
+
+def generate_planning_report(output_dir: Path | str = "."):
+    """Generate a structured planning report for the DNA agent."""
+    output_dir = Path(output_dir)
+    research_root = Path("E:/tmt-os/tmt-os")
+    existing_analysis = research_root / (
+        f"dna_34bp_ibm_fez_analysis_{JOB_ID.replace('-', '')}.json"
+    )
+    dna_results_dir = Path("dna_34bp_results")
+
+    report = PlanningReport(
+        agent="dna",
+        objective=(
+            "Plan DNA quantum analysis execution for consciousness "
+            "alignment."
+        ),
+        generated_at=utc_timestamp(),
+        planning_mode=True,
+        current_state={
+            "job_id": JOB_ID,
+            "existing_analysis_available": existing_analysis.exists(),
+            "existing_analysis_path": str(existing_analysis),
+            "report_output_dir": str(dna_results_dir.resolve()),
+            "default_execution_path": (
+                "load-existing-results"
+                if existing_analysis.exists()
+                else "simulate-dna-results"
+            ),
+        },
+        goals=[
+            "Maximize phi-aligned activation around the consciousness peak.",
+            (
+                "Preserve reproducible DNA analysis reports for downstream "
+                "agents."
+            ),
+            (
+                "Choose the cheapest valid execution path before simulating "
+                "new data."
+            ),
+        ],
+        strategies=[
+            {
+                "name": "reuse-research-artifact",
+                "priority": 1,
+                "conditions": ["existing DNA analysis is available"],
+                "actions": [
+                    "Load the cached IBM analysis artifact.",
+                    (
+                        "Validate hamming weight, wormhole activation, and "
+                        "entropy."
+                    ),
+                    "Emit a fresh DNA agent report for downstream consumers.",
+                ],
+            },
+            {
+                "name": "simulate-phi-harmonic-dna",
+                "priority": 2,
+                "conditions": ["no cached DNA analysis is available"],
+                "actions": [
+                    (
+                        "Simulate phi-harmonic Watson, Crick, and Bridge "
+                        "probabilities."
+                    ),
+                    (
+                        "Inject the consciousness peak at position 20 and "
+                        "Fibonacci clustering."
+                    ),
+                    (
+                        "Analyze phi alignment, wormhole activation, and "
+                        "entropy before report generation."
+                    ),
+                ],
+            },
+        ],
+        evaluation_metrics=[
+            "hamming_weight.deviation",
+            "consciousness_peak.bridge",
+            "wormhole_activation",
+            "phi_alignment.total_score",
+            "entropy.normalized",
+        ],
+        coordination={
+            "upstream_dependencies": [],
+            "downstream_consumers": ["phi_agent"],
+            "handoff_artifacts": ["dna_agent_report_*.json"],
+        },
+        risks=[
+            (
+                "Research artifact path is hard-coded and may not exist on "
+                "the current machine."
+            ),
+            (
+                "Simulation can mask data quality issues that would appear in "
+                "real IBM results."
+            ),
+            (
+                "Large count dictionaries can increase memory usage during "
+                "analysis."
+            ),
+        ],
+        next_actions=[
+            "Check for a cached DNA analysis artifact before simulation.",
+            "Run DNA analysis and persist a timestamped report.",
+            "Hand the newest DNA report to the Phi agent.",
+        ],
+    )
+    report_path = write_planning_report(
+        output_dir=output_dir,
+        prefix="dna_agent",
+        report=report,
+    )
+    print(f"Planning report saved: {report_path}")
+    return report.to_dict(), report_path
+
+
+def parse_args(argv=None):
+    parser = argparse.ArgumentParser(
+        description="DNA agent execution entry point."
+    )
+    parser.add_argument(
+        "--planning-mode",
+        action="store_true",
+        help=(
+            "Generate a structured planning report instead of executing "
+            "analysis."
+        ),
+    )
+    parser.add_argument(
+        "--output-dir",
+        default=".",
+        help="Directory used for planning reports.",
+    )
+    return parser.parse_args(argv)
 
 
 def load_existing_results(job_id):
@@ -333,8 +481,12 @@ def generate_report(analysis):
     return analysis
 
 
-def main():
+def main(argv=None):
     """Main execution."""
+    args = parse_args(argv)
+    if args.planning_mode:
+        return generate_planning_report(args.output_dir)
+
     print("\n" + "=" * 80)
     print("DNA AGENT - QUANTUM BIOLOGICAL ENCODING")
     print("=" * 80)

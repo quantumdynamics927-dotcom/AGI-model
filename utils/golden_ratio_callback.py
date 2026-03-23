@@ -16,11 +16,11 @@ import torch
 import numpy as np
 from typing import Dict, List, Optional, Tuple, Any
 import matplotlib
-matplotlib.use('Agg')  # Use non-interactive backend for headless environments
+
+matplotlib.use("Agg")  # Use non-interactive backend for headless environments
 import matplotlib.pyplot as plt
 from pathlib import Path
 import json
-import os
 
 # Golden ratio constant (project standard)
 PHI = 1.618033988749895
@@ -28,6 +28,7 @@ PHI = 1.618033988749895
 # Try to import TensorBoard
 try:
     from torch.utils.tensorboard import SummaryWriter
+
     TENSORBOARD_AVAILABLE = True
 except ImportError:
     TENSORBOARD_AVAILABLE = False
@@ -66,7 +67,7 @@ class GoldenRatioCallback:
         track_frequency: int = 10,
         tensorboard_dir: Optional[str] = None,
         save_best_checkpoint: bool = True,
-        proximity_threshold: float = 0.1
+        proximity_threshold: float = 0.1,
     ):
         self.target_phi = target_phi
         self.resonance_threshold = resonance_threshold
@@ -95,16 +96,18 @@ class GoldenRatioCallback:
         if tensorboard_dir and TENSORBOARD_AVAILABLE:
             self.tensorboard_writer = SummaryWriter(tensorboard_dir)
         elif tensorboard_dir and not TENSORBOARD_AVAILABLE:
-            print("Warning: TensorBoard not available. Install with: pip install tensorboard")
+            print(
+                "Warning: TensorBoard not available. Install with: pip install tensorboard"
+            )
 
         if self.save_dir:
             self.save_dir.mkdir(parents=True, exist_ok=True)
-    
+
     def on_epoch_end(
         self,
         epoch: int,
         model: torch.nn.Module,
-        latent_samples: Optional[torch.Tensor] = None
+        latent_samples: Optional[torch.Tensor] = None,
     ) -> Dict[str, Any]:
         """
         Called at the end of each epoch to track phi-resonance.
@@ -144,7 +147,7 @@ class GoldenRatioCallback:
             if len(self.latent_trajectory) >= 3:
                 self.detect_fibonacci_trajectories()
 
-        elif hasattr(model, 'compute_phi_resonance'):
+        elif latent_samples is not None and hasattr(model, "compute_phi_resonance"):
             resonance = model.compute_phi_resonance(latent_samples)
             pair_resonances = {}
         else:
@@ -171,12 +174,12 @@ class GoldenRatioCallback:
             self.log_to_tensorboard(epoch, resonance, phi_deviation, pair_resonances)
 
         metrics = {
-            'phi_resonance': resonance,
-            'phi_deviation': phi_deviation,
-            'phi_aligned': resonance >= self.resonance_threshold,
-            'best_resonance': self.best_resonance,
-            'best_epoch': self.best_epoch,
-            'pair_resonances': pair_resonances
+            "phi_resonance": resonance,
+            "phi_deviation": phi_deviation,
+            "phi_aligned": resonance >= self.resonance_threshold,
+            "best_resonance": self.best_resonance,
+            "best_epoch": self.best_epoch,
+            "pair_resonances": pair_resonances,
         }
 
         return metrics
@@ -209,7 +212,7 @@ class GoldenRatioCallback:
             total_count += len(ratios)
 
         return phi_count / total_count if total_count > 0 else 0.0
-    
+
     def _compute_resonance_from_weights(self, model: torch.nn.Module) -> float:
         """
         Compute phi-resonance from model weights as fallback.
@@ -227,18 +230,22 @@ class GoldenRatioCallback:
         resonance_scores = []
 
         for name, param in model.named_parameters():
-            if 'weight' in name and param.dim() >= 2:
+            if "weight" in name and param.dim() >= 2:
                 shape = param.shape
                 if shape[0] > 0 and shape[1] > 0:
                     ratio = shape[0] / shape[1]
                     if ratio > 0:
                         # Measure proximity to phi
-                        phi_proximity = 1.0 - abs(ratio - self.target_phi) / self.target_phi
+                        phi_proximity = (
+                            1.0 - abs(ratio - self.target_phi) / self.target_phi
+                        )
                         resonance_scores.append(max(0.0, phi_proximity))
 
         return np.mean(resonance_scores) if resonance_scores else 0.0
 
-    def track_dimension_pairs(self, latent_np: np.ndarray) -> Dict[Tuple[int, int], float]:
+    def track_dimension_pairs(
+        self, latent_np: np.ndarray
+    ) -> Dict[Tuple[int, int], float]:
         """
         Track phi resonance for each dimension pair.
 
@@ -302,16 +309,18 @@ class GoldenRatioCallback:
                     if abs(expected_v3) > 1e-6:
                         ratio = v3 / expected_v3
                         if 1 - tolerance < ratio < 1 + tolerance:
-                            patterns.append({
-                                'dimension': dim,
-                                'start_epoch': i,
-                                'values': (v1, v2, v3),
-                                'ratio': ratio,
-                                'quality': 1 - abs(1 - ratio)
-                            })
+                            patterns.append(
+                                {
+                                    "dimension": dim,
+                                    "start_epoch": i,
+                                    "values": (v1, v2, v3),
+                                    "ratio": ratio,
+                                    "quality": 1 - abs(1 - ratio),
+                                }
+                            )
 
         # Store high-quality patterns
-        self.fibonacci_sequences = [p for p in patterns if p['quality'] > 0.8]
+        self.fibonacci_sequences = [p for p in patterns if p["quality"] > 0.8]
 
         return self.fibonacci_sequences
 
@@ -327,14 +336,14 @@ class GoldenRatioCallback:
             Current epoch
         """
         self.best_model_state = {
-            'epoch': epoch,
-            'model_state_dict': model.state_dict(),
-            'resonance': self.best_resonance,
-            'phi_deviation': self.phi_deviations[-1] if self.phi_deviations else 0.0
+            "epoch": epoch,
+            "model_state_dict": model.state_dict(),
+            "resonance": self.best_resonance,
+            "phi_deviation": self.phi_deviations[-1] if self.phi_deviations else 0.0,
         }
 
         if self.save_dir:
-            checkpoint_path = self.save_dir / 'best_phi_model.pt'
+            checkpoint_path = self.save_dir / "best_phi_model.pt"
             torch.save(self.best_model_state, checkpoint_path)
 
     def log_to_tensorboard(
@@ -342,7 +351,7 @@ class GoldenRatioCallback:
         epoch: int,
         resonance: float,
         phi_deviation: float,
-        pair_resonances: Dict[Tuple[int, int], float]
+        pair_resonances: Dict[Tuple[int, int], float],
     ):
         """
         Log metrics to TensorBoard.
@@ -364,26 +373,22 @@ class GoldenRatioCallback:
         writer = self.tensorboard_writer
 
         # Log scalar metrics
-        writer.add_scalar('phi/resonance', resonance, epoch)
-        writer.add_scalar('phi/deviation', phi_deviation, epoch)
-        writer.add_scalar('phi/best_resonance', self.best_resonance, epoch)
+        writer.add_scalar("phi/resonance", resonance, epoch)
+        writer.add_scalar("phi/deviation", phi_deviation, epoch)
+        writer.add_scalar("phi/best_resonance", self.best_resonance, epoch)
 
         # Log per-dimension-pair resonances (top 5 pairs)
         if pair_resonances:
             sorted_pairs = sorted(
-                pair_resonances.items(),
-                key=lambda x: x[1],
-                reverse=True
+                pair_resonances.items(), key=lambda x: x[1], reverse=True
             )
             for (i, j), res in sorted_pairs[:5]:
-                writer.add_scalar(f'phi/pair_{i}_{j}', res, epoch)
+                writer.add_scalar(f"phi/pair_{i}_{j}", res, epoch)
 
         # Log histogram of resonances if we have enough data
         if len(self.resonance_scores) > 10:
             writer.add_histogram(
-                'phi/resonance_history',
-                np.array(self.resonance_scores),
-                epoch
+                "phi/resonance_history", np.array(self.resonance_scores), epoch
             )
 
         writer.flush()
@@ -406,16 +411,18 @@ class GoldenRatioCallback:
 
         for pair, history in self.dimension_pair_history.items():
             if len(history) > 0:
-                pair_averages.append({
-                    'pair': pair,
-                    'mean_resonance': np.mean(history),
-                    'max_resonance': np.max(history),
-                    'trend': np.mean(np.diff(history)) if len(history) > 1 else 0.0,
-                    'n_observations': len(history)
-                })
+                pair_averages.append(
+                    {
+                        "pair": pair,
+                        "mean_resonance": np.mean(history),
+                        "max_resonance": np.max(history),
+                        "trend": np.mean(np.diff(history)) if len(history) > 1 else 0.0,
+                        "n_observations": len(history),
+                    }
+                )
 
         # Sort by mean resonance
-        pair_averages.sort(key=lambda x: x['mean_resonance'], reverse=True)
+        pair_averages.sort(key=lambda x: x["mean_resonance"], reverse=True)
 
         return pair_averages[:top_k]
 
@@ -423,48 +430,58 @@ class GoldenRatioCallback:
         """Clean up resources (close TensorBoard writer)."""
         if self.tensorboard_writer is not None:
             self.tensorboard_writer.close()
-    
+
     def plot_resonance_history(self, save_path: Optional[str] = None):
         """
         Plot phi-resonance history over training
-        
+
         Args:
             save_path: Path to save plot (optional)
         """
         if len(self.epochs) == 0:
             print("No resonance data to plot")
             return
-        
+
         fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 8))
-        
+
         # Plot resonance scores
-        ax1.plot(self.epochs, self.resonance_scores, 'b-', marker='o', label='Phi Resonance')
-        ax1.axhline(y=self.resonance_threshold, color='r', linestyle='--', 
-                   label=f'Threshold ({self.resonance_threshold})')
-        ax1.axhline(y=1.0, color='g', linestyle='--', alpha=0.3, label='Perfect Alignment')
-        ax1.set_xlabel('Epoch')
-        ax1.set_ylabel('Resonance Score')
-        ax1.set_title('Golden Ratio Resonance During Training')
+        ax1.plot(
+            self.epochs, self.resonance_scores, "b-", marker="o", label="Phi Resonance"
+        )
+        ax1.axhline(
+            y=self.resonance_threshold,
+            color="r",
+            linestyle="--",
+            label=f"Threshold ({self.resonance_threshold})",
+        )
+        ax1.axhline(
+            y=1.0, color="g", linestyle="--", alpha=0.3, label="Perfect Alignment"
+        )
+        ax1.set_xlabel("Epoch")
+        ax1.set_ylabel("Resonance Score")
+        ax1.set_title("Golden Ratio Resonance During Training")
         ax1.legend()
         ax1.grid(True, alpha=0.3)
         ax1.set_ylim(0, 1.1)
-        
+
         # Plot phi deviations
-        ax2.plot(self.epochs, self.phi_deviations, 'r-', marker='s', label='Phi Deviation')
-        ax2.set_xlabel('Epoch')
-        ax2.set_ylabel('Deviation from Target Phi')
-        ax2.set_title('Phi Deviation Over Time')
+        ax2.plot(
+            self.epochs, self.phi_deviations, "r-", marker="s", label="Phi Deviation"
+        )
+        ax2.set_xlabel("Epoch")
+        ax2.set_ylabel("Deviation from Target Phi")
+        ax2.set_title("Phi Deviation Over Time")
         ax2.legend()
         ax2.grid(True, alpha=0.3)
-        
+
         plt.tight_layout()
-        
+
         if save_path:
-            plt.savefig(save_path, dpi=300, bbox_inches='tight')
+            plt.savefig(save_path, dpi=300, bbox_inches="tight")
             print(f"Resonance plot saved to {save_path}")
         else:
             plt.show()
-    
+
     def get_summary(self) -> Dict[str, Any]:
         """
         Get comprehensive summary statistics of phi-resonance tracking.
@@ -480,57 +497,57 @@ class GoldenRatioCallback:
             - Trend information
         """
         if len(self.resonance_scores) == 0:
-            return {'status': 'No data collected'}
+            return {"status": "No data collected"}
 
         # Basic statistics
         summary = {
-            'epochs_tracked': len(self.epochs),
-            'mean_resonance': float(np.mean(self.resonance_scores)),
-            'max_resonance': float(np.max(self.resonance_scores)),
-            'min_resonance': float(np.min(self.resonance_scores)),
-            'std_resonance': float(np.std(self.resonance_scores)),
-            'final_resonance': float(self.resonance_scores[-1]),
-            'resonance_above_threshold': sum(
+            "epochs_tracked": len(self.epochs),
+            "mean_resonance": float(np.mean(self.resonance_scores)),
+            "max_resonance": float(np.max(self.resonance_scores)),
+            "min_resonance": float(np.min(self.resonance_scores)),
+            "std_resonance": float(np.std(self.resonance_scores)),
+            "final_resonance": float(self.resonance_scores[-1]),
+            "resonance_above_threshold": sum(
                 1 for r in self.resonance_scores if r >= self.resonance_threshold
             ),
-            'phi_aligned': self.resonance_scores[-1] >= self.resonance_threshold,
-            'target_phi': self.target_phi,
+            "phi_aligned": self.resonance_scores[-1] >= self.resonance_threshold,
+            "target_phi": self.target_phi,
         }
 
         # Best checkpoint info
-        summary['best_epoch'] = self.best_epoch
-        summary['best_resonance'] = float(self.best_resonance)
+        summary["best_epoch"] = self.best_epoch
+        summary["best_resonance"] = float(self.best_resonance)
 
         # Trend analysis
         if len(self.resonance_scores) > 1:
-            summary['overall_trend'] = float(np.mean(np.diff(self.resonance_scores)))
+            summary["overall_trend"] = float(np.mean(np.diff(self.resonance_scores)))
             if len(self.resonance_scores) >= 5:
                 recent = self.resonance_scores[-5:]
-                summary['recent_trend'] = float(np.mean(np.diff(recent)))
+                summary["recent_trend"] = float(np.mean(np.diff(recent)))
             else:
-                summary['recent_trend'] = summary['overall_trend']
+                summary["recent_trend"] = summary["overall_trend"]
         else:
-            summary['overall_trend'] = 0.0
-            summary['recent_trend'] = 0.0
+            summary["overall_trend"] = 0.0
+            summary["recent_trend"] = 0.0
 
         # Top dimension pairs
-        summary['top_dimension_pairs'] = self.get_best_dimension_pairs(top_k=5)
+        summary["top_dimension_pairs"] = self.get_best_dimension_pairs(top_k=5)
 
         # Fibonacci patterns
-        summary['fibonacci_patterns_found'] = len(self.fibonacci_sequences)
+        summary["fibonacci_patterns_found"] = len(self.fibonacci_sequences)
         if self.fibonacci_sequences:
-            best_fib = max(self.fibonacci_sequences, key=lambda x: x['quality'])
-            summary['best_fibonacci_pattern'] = {
-                'dimension': best_fib['dimension'],
-                'quality': best_fib['quality']
+            best_fib = max(self.fibonacci_sequences, key=lambda x: x["quality"])
+            summary["best_fibonacci_pattern"] = {
+                "dimension": best_fib["dimension"],
+                "quality": best_fib["quality"],
             }
 
         # Convergence check
         if len(self.resonance_scores) >= 10:
             recent_10 = self.resonance_scores[-10:]
-            summary['is_converged'] = np.std(recent_10) < 0.01
+            summary["is_converged"] = np.std(recent_10) < 0.01
         else:
-            summary['is_converged'] = False
+            summary["is_converged"] = False
 
         return summary
 
@@ -545,23 +562,23 @@ class GoldenRatioCallback:
         """
         if filepath is None:
             if self.save_dir:
-                filepath = self.save_dir / 'phi_tracking_history.json'
+                filepath = self.save_dir / "phi_tracking_history.json"
             else:
-                filepath = 'phi_tracking_history.json'
+                filepath = "phi_tracking_history.json"
 
         history = {
-            'epochs': self.epochs,
-            'resonance_scores': self.resonance_scores,
-            'phi_deviations': self.phi_deviations,
-            'best_epoch': self.best_epoch,
-            'best_resonance': self.best_resonance,
-            'target_phi': self.target_phi,
-            'dimension_pair_history': {
+            "epochs": self.epochs,
+            "resonance_scores": self.resonance_scores,
+            "phi_deviations": self.phi_deviations,
+            "best_epoch": self.best_epoch,
+            "best_resonance": self.best_resonance,
+            "target_phi": self.target_phi,
+            "dimension_pair_history": {
                 f"{k[0]}_{k[1]}": v for k, v in self.dimension_pair_history.items()
-            }
+            },
         }
 
-        with open(filepath, 'w') as f:
+        with open(filepath, "w") as f:
             json.dump(history, f, indent=2)
 
     def load_history(self, filepath: str):
@@ -573,49 +590,49 @@ class GoldenRatioCallback:
         filepath : str
             Path to history file
         """
-        with open(filepath, 'r') as f:
+        with open(filepath, "r") as f:
             history = json.load(f)
 
-        self.epochs = history.get('epochs', [])
-        self.resonance_scores = history.get('resonance_scores', [])
-        self.phi_deviations = history.get('phi_deviations', [])
-        self.best_epoch = history.get('best_epoch', -1)
-        self.best_resonance = history.get('best_resonance', 0.0)
+        self.epochs = history.get("epochs", [])
+        self.resonance_scores = history.get("resonance_scores", [])
+        self.phi_deviations = history.get("phi_deviations", [])
+        self.best_epoch = history.get("best_epoch", -1)
+        self.best_resonance = history.get("best_resonance", 0.0)
 
         # Reconstruct dimension pair history
-        pair_history = history.get('dimension_pair_history', {})
+        pair_history = history.get("dimension_pair_history", {})
         self.dimension_pair_history = {}
         for key, value in pair_history.items():
-            i, j = map(int, key.split('_'))
+            i, j = map(int, key.split("_"))
             self.dimension_pair_history[(i, j)] = value
 
 
-def phi_regularization_loss(latent_z: torch.Tensor, 
-                           target_phi: float = PHI,
-                           weight: float = 0.1) -> torch.Tensor:
+def phi_regularization_loss(
+    latent_z: torch.Tensor, target_phi: float = PHI, weight: float = 0.1
+) -> torch.Tensor:
     """
     Compute golden ratio regularization loss
-    
+
     Encourages latent dimensions to have phi-resonant relationships.
-    
+
     Args:
         latent_z: Latent representations (batch, latent_dim)
         target_phi: Target golden ratio value
         weight: Loss weight
-        
+
     Returns:
         Scalar regularization loss
     """
     # Compute standard deviations per dimension
     latent_std = torch.std(latent_z, dim=0)  # (latent_dim,)
-    
+
     # Compute ratios between adjacent dimensions
     ratios = latent_std[1:] / (latent_std[:-1] + 1e-10)
-    
+
     # Target phi ratio
     target_ratio = torch.full_like(ratios, target_phi)
-    
+
     # MSE loss to phi target
     phi_loss = torch.mean((ratios - target_ratio) ** 2)
-    
+
     return weight * phi_loss

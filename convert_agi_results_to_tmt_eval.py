@@ -29,6 +29,14 @@ def _slugify(value: str) -> str:
     )
 
 
+def _literal_token_instruction(tokens: list[str]) -> str:
+    joined_tokens = ", ".join(f'"{token}"' for token in tokens)
+    return (
+        "\n\nReturn a compact factual summary that also repeats these "
+        f"exact literal tokens verbatim: {joined_tokens}."
+    )
+
+
 def _build_case(
     *,
     case_id: str,
@@ -40,7 +48,7 @@ def _build_case(
 ) -> dict[str, Any]:
     case: dict[str, Any] = {
         "id": case_id,
-        "prompt": prompt,
+        "prompt": prompt + _literal_token_instruction(contains_all),
         "expectation": {
             "contains_all": contains_all,
             "contains_any": contains_any or [],

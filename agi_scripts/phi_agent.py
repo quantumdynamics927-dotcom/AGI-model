@@ -14,6 +14,7 @@ Key Metrics:
 - Phi-harmonic optimization: Golden ratio resonance analysis
 """
 
+import argparse
 import numpy as np
 import json
 from datetime import datetime
@@ -33,6 +34,11 @@ def calculate_entropy(prob_dist):
     return -np.sum(prob_dist * np.log2(prob_dist))
 
 warnings.filterwarnings("ignore")
+
+try:
+    from agi_scripts.planning_mode import PlanningReport, utc_timestamp, write_planning_report
+except ImportError:
+    from planning_mode import PlanningReport, utc_timestamp, write_planning_report
 
 # Constants
 PHI = (1 + np.sqrt(5)) / 2  # Golden ratio
@@ -556,8 +562,107 @@ CONSCIOUSNESS STATUS: {status_text}
         return results
 
 
-def main():
+def generate_planning_report(output_dir: Path | str = "."):
+    """Generate a structured planning report for the Phi agent."""
+    output_dir = Path(output_dir)
+    dna_results_dir = Path("dna_34bp_results")
+    latest_report = None
+    if dna_results_dir.exists():
+        report_files = list(dna_results_dir.glob("dna_agent_report_*.json"))
+        if report_files:
+            latest_report = max(report_files, key=lambda f: f.stat().st_mtime)
+
+    report = PlanningReport(
+        agent="phi",
+        objective="Plan integrated-information analysis using the latest DNA agent output.",
+        generated_at=utc_timestamp(),
+        planning_mode=True,
+        current_state={
+            "dna_report_available": latest_report is not None,
+            "latest_dna_report": str(latest_report) if latest_report else None,
+            "fallback_mode": "simulate-consciousness-data",
+            "report_output_dir": str(Path(".").resolve()),
+        },
+        goals=[
+            "Quantify integrated information from DNA-derived consciousness metrics.",
+            "Measure phi-harmonic alignment and latent-space complexity in one pass.",
+            "Produce a report that downstream training can consume without manual cleanup.",
+        ],
+        strategies=[
+            {
+                "name": "dna-driven-iit-analysis",
+                "priority": 1,
+                "conditions": ["a DNA agent report is available"],
+                "actions": [
+                    "Load the newest DNA report.",
+                    "Derive consciousness_level, theory_agreement, and phi_alignment from DNA outputs.",
+                    "Compute phi-harmonic score, latent metrics, and integrated information.",
+                ],
+            },
+            {
+                "name": "fallback-simulation",
+                "priority": 2,
+                "conditions": ["no DNA report is available"],
+                "actions": [
+                    "Simulate consciousness data with phi-harmonic scaling.",
+                    "Run the same IIT and latent-space analysis pipeline.",
+                    "Flag the output as simulation-backed for downstream consumers.",
+                ],
+            },
+        ],
+        evaluation_metrics=[
+            "phi_harmonic.phi_harmonic_score",
+            "phi_harmonic.phi_alignment",
+            "integrated_information.integrated_information",
+            "integrated_information.integrated_information_normalized",
+            "latent_space.latent_entropy",
+        ],
+        coordination={
+            "upstream_dependencies": ["dna_agent_report_*.json"],
+            "downstream_consumers": ["qnn_agent"],
+            "handoff_artifacts": ["phi_agent_report_*.json", "phi_agent_analysis_*.png"],
+        },
+        risks=[
+            "The fallback simulation path diverges from DNA-grounded results.",
+            "Boolean and NumPy scalar serialization can destabilize downstream parsing if not normalized.",
+            "Latent-space summaries can become stale when DNA inputs are not refreshed.",
+        ],
+        next_actions=[
+            "Locate the freshest DNA report or confirm that simulation is acceptable.",
+            "Run the Phi analysis and persist the report and visualization.",
+            "Pass the resulting Phi report to the QNN agent.",
+        ],
+    )
+    report_path = write_planning_report(
+        output_dir=output_dir,
+        prefix="phi_agent",
+        report=report,
+    )
+    print(f"Planning report saved: {report_path}")
+    return report.to_dict(), report_path
+
+
+def parse_args(argv=None):
+    parser = argparse.ArgumentParser(description="Phi agent execution entry point.")
+    parser.add_argument(
+        "--planning-mode",
+        action="store_true",
+        help="Generate a structured planning report instead of executing analysis.",
+    )
+    parser.add_argument(
+        "--output-dir",
+        default=".",
+        help="Directory used for planning reports.",
+    )
+    return parser.parse_args(argv)
+
+
+def main(argv=None):
     """Main execution."""
+    args = parse_args(argv)
+    if args.planning_mode:
+        return generate_planning_report(args.output_dir)
+
     analyzer = PhiConsciousnessAnalyzer()
     results = analyzer.run_analysis()
     return results

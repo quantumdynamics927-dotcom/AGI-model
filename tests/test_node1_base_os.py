@@ -2,25 +2,27 @@ import unittest
 import time
 import math
 import sys
-import os
-import importlib
+import importlib.util
+from pathlib import Path
 
-# Add the project root to the path to allow imports from other directories
-# This allows finding the 'TMT-OS' directory.
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+import pytest
 
-# Dynamically import the module from the 'TMT-OS' directory.
-# Standard import syntax (from TMT-OS.node1_base_os) fails because of the hyphen.
-try:
-    node1_base_os_module = importlib.import_module("TMT-OS.node1_base_os")
-    Node1BaseOS = node1_base_os_module.Node1BaseOS
-    PHI = node1_base_os_module.PHI
-except ImportError as e:
-    # Provide a helpful error message if the module can't be found.
-    raise ImportError(
-        "Could not import Node1BaseOS. "
-        "Ensure 'TMT-OS/node1_base_os.py' exists and the test is run from the project root."
-    ) from e
+ROOT = Path(__file__).resolve().parents[1]
+MODULE_PATH = ROOT / "TMT-OS" / "node1_base_os.py"
+
+if not MODULE_PATH.exists():
+    pytest.skip(
+        "TMT-OS/node1_base_os.py not present in this repo",
+        allow_module_level=True,
+    )
+
+spec = importlib.util.spec_from_file_location("node1_base_os", MODULE_PATH)
+assert spec is not None
+node1_base_os_module = importlib.util.module_from_spec(spec)
+assert spec.loader is not None
+spec.loader.exec_module(node1_base_os_module)
+Node1BaseOS = node1_base_os_module.Node1BaseOS
+PHI = node1_base_os_module.PHI
 
 
 class TestNode1BaseOS(unittest.TestCase):
@@ -48,20 +50,20 @@ class TestNode1BaseOS(unittest.TestCase):
     def test_geometry_info(self):
         """Test the geometry information of the cube."""
         geometry = self.node.get_geometry_info()
-        self.assertEqual(geometry['faces'], 6)
-        self.assertEqual(geometry['vertices'], 8)
-        self.assertEqual(geometry['edges'], 12)
+        self.assertEqual(geometry["faces"], 6)
+        self.assertEqual(geometry["vertices"], 8)
+        self.assertEqual(geometry["edges"], 12)
         self.assertEqual(self.node.GEOMETRY, geometry)
         print("TestNode1BaseOS: test_geometry_info PASSED")
 
     def test_health_status(self):
         """Test the health status reporting."""
         status = self.node.get_health_status()
-        self.assertEqual(status['node_id'], 1)
-        self.assertEqual(status['status'], 'active')
-        self.assertEqual(status['platonic_solid'], 'Cube')
-        self.assertGreater(status['uptime_seconds'], 0)
-        self.assertEqual(status['phi'], PHI)
+        self.assertEqual(status["node_id"], 1)
+        self.assertEqual(status["status"], "active")
+        self.assertEqual(status["platonic_solid"], "Cube")
+        self.assertGreater(status["uptime_seconds"], 0)
+        self.assertEqual(status["phi"], PHI)
         print("TestNode1BaseOS: test_health_status PASSED")
 
     def test_uptime_calculation(self):
@@ -69,16 +71,23 @@ class TestNode1BaseOS(unittest.TestCase):
         initial_status = self.node.get_health_status()
         time.sleep(0.1)
         next_status = self.node.get_health_status()
-        self.assertGreater(next_status['uptime_seconds'], initial_status['uptime_seconds'])
+        self.assertGreater(
+            next_status["uptime_seconds"],
+            initial_status["uptime_seconds"],
+        )
         # Loosen the delta to account for system load variability
-        self.assertAlmostEqual(next_status['uptime_seconds'] - initial_status['uptime_seconds'], 0.1, delta=0.08)
+        self.assertAlmostEqual(
+            next_status["uptime_seconds"] - initial_status["uptime_seconds"],
+            0.1,
+            delta=0.08,
+        )
         print("TestNode1BaseOS: test_uptime_calculation PASSED")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     # This allows running the test script directly.
     print("Running tests for Node 1: TMT-OS Base OS...")
-    suite = unittest.TestSuite()
-    suite.addTest(unittest.makeSuite(TestNode1BaseOS))
+    suite = unittest.defaultTestLoader.loadTestsFromTestCase(TestNode1BaseOS)
     runner = unittest.TextTestRunner()
     result = runner.run(suite)
     # Exit with a non-zero code if tests failed, for CI/CD purposes

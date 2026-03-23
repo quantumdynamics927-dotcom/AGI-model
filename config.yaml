@@ -18,15 +18,20 @@ training:
   reduce_lr_patience: 15
 
 # Loss weights (see vae_model.total_loss defaults)
+# Updated based on quantum consciousness literature:
+# - Increased coherence weight for better quantum state preservation
+# - Increased fidelity weight for consciousness state accuracy
+# - Adjusted KL divergence for quantum systems
+# - Enhanced entropy weight for consciousness complexity
 weights:
   recon: 1.0
-  kl: 0.0008
+  kl: 0.001  # Increased for better quantum regularization
   hamming: 0.3
-  coherence: 0.1
+  coherence: 0.2  # Increased from 0.1 for better quantum coherence
   hw: 0.01
-  mixed_state: 0.1
-  fidelity: 0.1
-  entropy: 0.05
+  mixed_state: 0.15  # Increased from 0.1 for better density matrix properties
+  fidelity: 0.15  # Increased from 0.1 for better consciousness state fidelity
+  entropy: 0.08  # Increased from 0.05 for better consciousness complexity
 
 # Experiment
 experiment:
