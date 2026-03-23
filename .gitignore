@@ -70,6 +70,7 @@ quantum_results/
 circuit_cache/
 backend_results/
 quantum_jobs/
+vault/
 
 # Data files
 data/
