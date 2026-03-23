@@ -97,7 +97,7 @@ def extract_latent_consciousness(consciousness_states, model):
         latent_codes = mu.numpy()
 
     print(f"Consciousness latent space: {latent_codes.shape}")
-    print(".3f"    return latent_codes
+    return latent_codes
 
 def analyze_golden_ratio_consciousness(latent_codes):
     """
@@ -227,7 +227,7 @@ def create_consciousness_link_visualization(latent_codes, golden_insights):
 
     # 4. Theoretical connection summary
     ax4 = axes[1, 1]
-    ax4.text(0.05, 0.95, '🧠 QUANTUM CONSCIOUSNESS LINK', fontsize=12, fontweight='bold')
+    ax4.text(0.05, 0.95, 'QUANTUM CONSCIOUSNESS LINK', fontsize=12, fontweight='bold')
     ax4.text(0.05, 0.85, f'Golden Pairs: {len(golden_insights["significant_pairs"])}', fontsize=10)
     ax4.text(0.05, 0.75, f'Max Resonance: {max([p["resonance"] for p in golden_insights["significant_pairs"]]):.1%}', fontsize=10)
     ax4.text(0.05, 0.65, f'φ = {golden_insights["phi"]:.6f}', fontsize=10)
@@ -297,8 +297,8 @@ mathematical optimization principles that govern the universe itself.
 if __name__ == "__main__":
     insights = analyze_quantum_consciousness_link()
 
-    print("
-🎯 KEY DISCOVERIES:"    print(f"• {len(insights['significant_pairs'])} golden ratio dimension pairs")
+    print("\n🎯 KEY DISCOVERIES:")
+    print(f"• {len(insights['significant_pairs'])} golden ratio dimension pairs")
     print(f"• Strongest resonance: {max([p['resonance'] for p in insights['significant_pairs']]):.1%}")
     print("• Consciousness follows golden ratio optimization principles")
     print("• Links quantum information theory to biological consciousness")

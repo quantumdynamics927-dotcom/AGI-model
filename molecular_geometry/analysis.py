@@ -3,6 +3,7 @@
 This module provides comprehensive geometric analysis capabilities including
 distances, angles, dihedrals, RMSD, superposition, and structural comparisons.
 """
+
 from __future__ import annotations
 from typing import List, Tuple, Optional, Dict, Any, Union
 import numpy as np
@@ -14,11 +15,8 @@ import os
 # Add current directory to path for direct execution
 sys.path.insert(0, os.path.dirname(__file__))
 
-from structures import Molecule, Atom, Bond, BondOrder
-from constants import (
-    COVALENT_RADII, get_covalent_radius, PHI, GOLDEN_ANGLE,
-    is_phi_harmonic
-)
+from structures import Molecule, Bond, BondOrder
+from constants import get_covalent_radius, PHI, GOLDEN_ANGLE, is_phi_harmonic
 
 
 class GeometryAnalyzer:
@@ -131,8 +129,9 @@ class GeometryAnalyzer:
     # ==================== Dihedral Calculations ====================
 
     @staticmethod
-    def compute_dihedral(p1: np.ndarray, p2: np.ndarray,
-                         p3: np.ndarray, p4: np.ndarray) -> float:
+    def compute_dihedral(
+        p1: np.ndarray, p2: np.ndarray, p3: np.ndarray, p4: np.ndarray
+    ) -> float:
         """Compute dihedral angle P1-P2-P3-P4 in degrees.
 
         The dihedral is the angle between planes (P1,P2,P3) and (P2,P3,P4).
@@ -200,8 +199,9 @@ class GeometryAnalyzer:
 
     # ==================== RMSD and Superposition ====================
 
-    def rmsd(self, other: Union[Molecule, GeometryAnalyzer, np.ndarray],
-             align: bool = False) -> float:
+    def rmsd(
+        self, other: Union[Molecule, GeometryAnalyzer, np.ndarray], align: bool = False
+    ) -> float:
         """Calculate RMSD between this molecule and another structure.
 
         Args:
@@ -213,7 +213,7 @@ class GeometryAnalyzer:
         """
         if isinstance(other, GeometryAnalyzer):
             other_coords = other.coords
-        elif isinstance(other, Molecule):
+        elif isinstance(other, Molecule) or hasattr(other, "coordinates"):
             other_coords = other.coordinates
         else:
             other_coords = np.asarray(other)
@@ -225,10 +225,9 @@ class GeometryAnalyzer:
             _, other_coords = self.kabsch_align(other_coords)
 
         diff = self.coords - other_coords
-        return float(np.sqrt(np.mean(np.sum(diff ** 2, axis=1))))
+        return float(np.sqrt(np.mean(np.sum(diff**2, axis=1))))
 
-    def kabsch_align(self, target_coords: np.ndarray
-                     ) -> Tuple[np.ndarray, np.ndarray]:
+    def kabsch_align(self, target_coords: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
         """Compute optimal rotation to align target to this molecule.
 
         Uses the Kabsch algorithm for optimal superposition.
@@ -288,12 +287,16 @@ class GeometryAnalyzer:
                 dist = self.distance(i, j)
                 if dist <= max_dist:
                     # Estimate bond order from distance
-                    order = self._estimate_bond_order(atom_i.symbol, atom_j.symbol, dist)
+                    order = self._estimate_bond_order(
+                        atom_i.symbol, atom_j.symbol, dist
+                    )
                     bonds.append(Bond(i, j, order, dist))
 
         return bonds
 
-    def _estimate_bond_order(self, elem1: str, elem2: str, distance: float) -> BondOrder:
+    def _estimate_bond_order(
+        self, elem1: str, elem2: str, distance: float
+    ) -> BondOrder:
         """Estimate bond order from distance."""
         r1 = get_covalent_radius(elem1)
         r2 = get_covalent_radius(elem2)
@@ -321,7 +324,7 @@ class GeometryAnalyzer:
 
         # Distance from center of mass
         diff = coords - com
-        sq_dist = np.sum(diff ** 2, axis=1)
+        sq_dist = np.sum(diff**2, axis=1)
 
         return float(np.sqrt(np.sum(masses * sq_dist) / np.sum(masses)))
 
@@ -339,20 +342,20 @@ class GeometryAnalyzer:
         r = coords - com
 
         # Build inertia tensor
-        I = np.zeros((3, 3))
-        for i, (ri, mi) in enumerate(zip(r, masses)):
-            I[0, 0] += mi * (ri[1]**2 + ri[2]**2)
-            I[1, 1] += mi * (ri[0]**2 + ri[2]**2)
-            I[2, 2] += mi * (ri[0]**2 + ri[1]**2)
-            I[0, 1] -= mi * ri[0] * ri[1]
-            I[0, 2] -= mi * ri[0] * ri[2]
-            I[1, 2] -= mi * ri[1] * ri[2]
+        inertia_tensor = np.zeros((3, 3))
+        for ri, mi in zip(r, masses):
+            inertia_tensor[0, 0] += mi * (ri[1] ** 2 + ri[2] ** 2)
+            inertia_tensor[1, 1] += mi * (ri[0] ** 2 + ri[2] ** 2)
+            inertia_tensor[2, 2] += mi * (ri[0] ** 2 + ri[1] ** 2)
+            inertia_tensor[0, 1] -= mi * ri[0] * ri[1]
+            inertia_tensor[0, 2] -= mi * ri[0] * ri[2]
+            inertia_tensor[1, 2] -= mi * ri[1] * ri[2]
 
-        I[1, 0] = I[0, 1]
-        I[2, 0] = I[0, 2]
-        I[2, 1] = I[1, 2]
+        inertia_tensor[1, 0] = inertia_tensor[0, 1]
+        inertia_tensor[2, 0] = inertia_tensor[0, 2]
+        inertia_tensor[2, 1] = inertia_tensor[1, 2]
 
-        eigenvalues, eigenvectors = np.linalg.eigh(I)
+        eigenvalues, eigenvectors = np.linalg.eigh(inertia_tensor)
         return eigenvalues, eigenvectors
 
     def asphericity(self) -> float:
@@ -364,9 +367,11 @@ class GeometryAnalyzer:
         Returns:
             Asphericity value
         """
-        I, _ = self.moments_of_inertia()
-        I_sorted = np.sort(I)
-        return float(I_sorted[2] - 0.5 * (I_sorted[0] + I_sorted[1]))
+        principal_moments, _ = self.moments_of_inertia()
+        principal_moments = np.sort(principal_moments)
+        return float(
+            principal_moments[2] - 0.5 * (principal_moments[0] + principal_moments[1])
+        )
 
     def eccentricity(self) -> float:
         """Calculate molecular eccentricity.
@@ -374,11 +379,11 @@ class GeometryAnalyzer:
         Returns:
             Eccentricity value [0, 1] where 0 is spherical
         """
-        I, _ = self.moments_of_inertia()
-        I_sorted = np.sort(I)
-        if I_sorted[2] < 1e-10:
+        principal_moments, _ = self.moments_of_inertia()
+        principal_moments = np.sort(principal_moments)
+        if principal_moments[2] < 1e-10:
             return 0.0
-        return float(1.0 - I_sorted[0] / I_sorted[2])
+        return float(1.0 - principal_moments[0] / principal_moments[2])
 
     def surface_area_estimate(self) -> float:
         """Estimate molecular surface area using convex hull.
@@ -399,7 +404,7 @@ class GeometryAnalyzer:
                 r = atom.vdw_radius
                 # Add points on sphere surface
                 for theta in np.linspace(0, np.pi, 8):
-                    for phi in np.linspace(0, 2*np.pi, 8):
+                    for phi in np.linspace(0, 2 * np.pi, 8):
                         x = atom.x + r * np.sin(theta) * np.cos(phi)
                         y = atom.y + r * np.sin(theta) * np.sin(phi)
                         z = atom.z + r * np.cos(theta)
@@ -424,7 +429,7 @@ class GeometryAnalyzer:
             for atom in self.molecule.atoms:
                 r = atom.vdw_radius
                 for theta in np.linspace(0, np.pi, 6):
-                    for phi in np.linspace(0, 2*np.pi, 6):
+                    for phi in np.linspace(0, 2 * np.pi, 6):
                         x = atom.x + r * np.sin(theta) * np.cos(phi)
                         y = atom.y + r * np.sin(theta) * np.sin(phi)
                         z = atom.z + r * np.cos(theta)
@@ -464,10 +469,10 @@ class GeometryAnalyzer:
             Dictionary containing phi-analysis results
         """
         results = {
-            'phi_distances': [],
-            'golden_angles': [],
-            'phi_score': 0.0,
-            'harmonics_found': 0,
+            "phi_distances": [],
+            "golden_angles": [],
+            "phi_score": 0.0,
+            "harmonics_found": 0,
         }
 
         # Analyze distances
@@ -479,14 +484,16 @@ class GeometryAnalyzer:
             for j in range(i + 1, n):
                 dist = dm[i, j]
                 if is_phi_harmonic(dist, tolerance=0.05):
-                    phi_distances.append({
-                        'atoms': (i, j),
-                        'distance': float(dist),
-                        'ratio_to_phi': float(dist / PHI),
-                    })
+                    phi_distances.append(
+                        {
+                            "atoms": (i, j),
+                            "distance": float(dist),
+                            "ratio_to_phi": float(dist / PHI),
+                        }
+                    )
 
-        results['phi_distances'] = phi_distances
-        results['harmonics_found'] += len(phi_distances)
+        results["phi_distances"] = phi_distances
+        results["harmonics_found"] += len(phi_distances)
 
         # Analyze angles for golden angle proximity
         golden_angles = []
@@ -494,27 +501,33 @@ class GeometryAnalyzer:
             idx1, vertex, idx3, angle = angle_data
             # Check proximity to golden angle (~137.5°) or its complement
             if abs(angle - GOLDEN_ANGLE) < 5.0:
-                golden_angles.append({
-                    'atoms': (idx1, vertex, idx3),
-                    'angle': angle,
-                    'deviation_from_golden': float(abs(angle - GOLDEN_ANGLE)),
-                })
+                golden_angles.append(
+                    {
+                        "atoms": (idx1, vertex, idx3),
+                        "angle": angle,
+                        "deviation_from_golden": float(abs(angle - GOLDEN_ANGLE)),
+                    }
+                )
             elif abs(angle - (360 - GOLDEN_ANGLE)) < 5.0:
-                golden_angles.append({
-                    'atoms': (idx1, vertex, idx3),
-                    'angle': angle,
-                    'deviation_from_golden_complement': float(abs(angle - (360 - GOLDEN_ANGLE))),
-                })
+                golden_angles.append(
+                    {
+                        "atoms": (idx1, vertex, idx3),
+                        "angle": angle,
+                        "deviation_from_golden_complement": float(
+                            abs(angle - (360 - GOLDEN_ANGLE))
+                        ),
+                    }
+                )
 
-        results['golden_angles'] = golden_angles
-        results['harmonics_found'] += len(golden_angles)
+        results["golden_angles"] = golden_angles
+        results["harmonics_found"] += len(golden_angles)
 
         # Compute overall phi score
         total_pairs = n * (n - 1) // 2
         total_angles = len(self.all_bond_angles())
         if total_pairs + total_angles > 0:
-            results['phi_score'] = float(
-                results['harmonics_found'] / (total_pairs + total_angles) * 100
+            results["phi_score"] = float(
+                results["harmonics_found"] / (total_pairs + total_angles) * 100
             )
 
         return results
@@ -555,7 +568,7 @@ class GeometryAnalyzer:
         chiral_centers = []
 
         for i, atom in enumerate(self.molecule.atoms):
-            if atom.symbol != 'C':
+            if atom.symbol != "C":
                 continue
 
             neighbors = self.molecule.get_neighbors(i)
@@ -587,25 +600,25 @@ class GeometryAnalyzer:
         phi_analysis = self.phi_ratio_analysis()
 
         return {
-            'name': self.molecule.name,
-            'formula': self.molecule.formula,
-            'n_atoms': self.molecule.n_atoms,
-            'n_bonds': self.molecule.n_bonds,
-            'total_mass': self.molecule.total_mass,
-            'center_of_mass': self.molecule.center_of_mass.tolist(),
-            'centroid': self.molecule.centroid.tolist(),
-            'radius_of_gyration': self.radius_of_gyration(),
-            'asphericity': self.asphericity(),
-            'eccentricity': self.eccentricity(),
-            'max_diameter': self.max_diameter(),
-            'span': self.span(),
-            'surface_area_estimate': self.surface_area_estimate(),
-            'volume_estimate': self.volume_estimate(),
-            'is_chiral': self.is_chiral(),
-            'chiral_centers': self.find_chiral_centers(),
-            'phi_score': phi_analysis['phi_score'],
-            'phi_harmonics_count': phi_analysis['harmonics_found'],
-            'moments_of_inertia': self.moments_of_inertia()[0].tolist(),
+            "name": self.molecule.name,
+            "formula": self.molecule.formula,
+            "n_atoms": self.molecule.n_atoms,
+            "n_bonds": self.molecule.n_bonds,
+            "total_mass": self.molecule.total_mass,
+            "center_of_mass": self.molecule.center_of_mass.tolist(),
+            "centroid": self.molecule.centroid.tolist(),
+            "radius_of_gyration": self.radius_of_gyration(),
+            "asphericity": self.asphericity(),
+            "eccentricity": self.eccentricity(),
+            "max_diameter": self.max_diameter(),
+            "span": self.span(),
+            "surface_area_estimate": self.surface_area_estimate(),
+            "volume_estimate": self.volume_estimate(),
+            "is_chiral": self.is_chiral(),
+            "chiral_centers": self.find_chiral_centers(),
+            "phi_score": phi_analysis["phi_score"],
+            "phi_harmonics_count": phi_analysis["harmonics_found"],
+            "moments_of_inertia": self.moments_of_inertia()[0].tolist(),
         }
 
 
@@ -622,8 +635,9 @@ def compute_angle(p1: np.ndarray, p2: np.ndarray, p3: np.ndarray) -> float:
     )
 
 
-def compute_dihedral(p1: np.ndarray, p2: np.ndarray,
-                     p3: np.ndarray, p4: np.ndarray) -> float:
+def compute_dihedral(
+    p1: np.ndarray, p2: np.ndarray, p3: np.ndarray, p4: np.ndarray
+) -> float:
     """Compute dihedral angle in degrees."""
     return GeometryAnalyzer.compute_dihedral(
         np.asarray(p1), np.asarray(p2), np.asarray(p3), np.asarray(p4)

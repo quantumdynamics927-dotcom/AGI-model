@@ -32,10 +32,22 @@ class LedgerEntry:
     signature: Optional[str] = None
 
 
+def vault_root() -> Path:
+    return Path(os.environ.get("AGI_VAULT_DIR", "vault"))
+
+
+def vault_path(*parts: str) -> Path:
+    return vault_root().joinpath(*parts)
+
+
 class VaultLedger:
-    def __init__(self, ledger_path: str = "vault/ledger.json", key_dir: str = "vault/keys"):
-        self.ledger_path = Path(ledger_path)
-        self.key_dir = Path(key_dir)
+    def __init__(
+        self,
+        ledger_path: str | Path | None = None,
+        key_dir: str | Path | None = None,
+    ):
+        self.ledger_path = Path(ledger_path) if ledger_path is not None else vault_path("ledger.json")
+        self.key_dir = Path(key_dir) if key_dir is not None else vault_path("keys")
         self.history: list[LedgerEntry] = []
         self._load()
 
@@ -163,7 +175,7 @@ if __name__ == "__main__":
 
     p = argparse.ArgumentParser()
     p.add_argument("--init-keys", action="store_true", help="Generate ed25519 keypair for signing ledger entries (requires cryptography)")
-    p.add_argument("--ledger", default="vault/ledger.json")
+    p.add_argument("--ledger", default=str(vault_path("ledger.json")))
     args = p.parse_args()
     ledger = VaultLedger(ledger_path=args.ledger)
     if args.init_keys:

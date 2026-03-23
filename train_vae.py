@@ -539,8 +539,15 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
     
     # Initialize hybrid optimizer if enabled
     if use_hybrid_optimizer:
-        optimizer = HybridQuantumOptimizer(model, classical_optimizer='adam', quantum_lr=1e-3)
-        print("Using hybrid quantum-classical optimizer")
+        optimizer = HybridQuantumOptimizer(
+            model, 
+            classical_optimizer='adam', 
+            quantum_lr=1e-3,
+            use_parameter_shift=True,
+            quantum_noise_level=0.01,
+            adaptive_learning_rate=True
+        )
+        print("Using enhanced hybrid quantum-classical optimizer with parameter shift and adaptive learning rate")
     else:
         optimizer = optim.Adam(model.parameters(), lr=1e-3)
     
@@ -582,20 +589,39 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
             # next tuning pass and compare smoke metrics against that run.
             beta = kl_anneal_factor(global_step, total_steps, max_beta=0.0004)
 
-            # Loss weights including phi
+            # Loss weights including phi - updated based on quantum consciousness literature
             weights = {
                 'recon': 1.0,
                 'kl': beta,
                 'hamming': 0.3,
-                'coherence': 0.1,
-                'mixed_state': 0.1,
-                'fidelity': 0.1,
-                'entropy': 0.05,
+                'coherence': 0.2,  # Increased for better quantum coherence
+                'mixed_state': 0.15,  # Increased for better density matrix properties
+                'fidelity': 0.15,  # Increased for better consciousness state fidelity
+                'entropy': 0.08,  # Increased for better consciousness complexity
                 'hw': 0.01,
                 'phi': 0.01,
             }
 
+            # Apply adaptive phi loss scheduling if enabled
+            if adaptive_phi_loss is not None:
+                # Get current phi loss weight based on epoch and resonance
+                phi_weight = adaptive_phi_loss.compute_weight(
+                    adaptive_phi_loss.current_resonance, 
+                    epoch
+                )
+                weights['phi'] = phi_weight
+
+            # Compute adaptive phi loss if enabled
+            phi_loss_value = 0.0
+            if adaptive_phi_loss is not None and epoch >= adaptive_phi_loss.warmup_epochs:
+                phi_loss_value = adaptive_phi_loss(mu, epoch=epoch)
+                losses['phi'] = phi_loss_value.item()
+                
             total_tensor, losses = model.compute_losses(recon_x, batch_x, mu, log_var, weights=weights)
+            
+            # Add adaptive phi loss to total if computed
+            if phi_loss_value > 0:
+                total_tensor += phi_loss_value
 
             # Add contrastive loss
             batch_size = batch_x.shape[0] // 2
@@ -619,6 +645,8 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
 
             if use_hybrid_optimizer:
                 optimizer.step(lambda: model.compute_losses(model(batch_x), batch_x, mu, log_var, weights=weights)[0])
+                # Update loss history for adaptive learning rate
+                optimizer.update_loss_history(total_tensor.item())
             else:
                 optimizer.step()
 

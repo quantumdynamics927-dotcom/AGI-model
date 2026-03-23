@@ -15,6 +15,7 @@ Key Features:
 - Visualization dashboard support
 """
 
+import argparse
 import numpy as np
 import json
 from datetime import datetime
@@ -25,6 +26,11 @@ import matplotlib.pyplot as plt
 import warnings
 
 warnings.filterwarnings("ignore")
+
+try:
+    from agi_scripts.planning_mode import PlanningReport, utc_timestamp, write_planning_report
+except ImportError:
+    from planning_mode import PlanningReport, utc_timestamp, write_planning_report
 
 # Constants
 PHI = (1 + np.sqrt(5)) / 2  # Golden ratio
@@ -509,8 +515,104 @@ QNN AGENT TRAINING SUMMARY
         }
 
 
-def main():
+def generate_planning_report(output_dir: Path | str = "."):
+    """Generate a structured planning report for the QNN agent."""
+    output_dir = Path(output_dir)
+    phi_reports = list(Path(".").glob("phi_agent_report_*.json"))
+    latest_phi_report = max(phi_reports, key=lambda f: f.stat().st_mtime) if phi_reports else None
+
+    report = PlanningReport(
+        agent="qnn",
+        objective="Plan quantum-classical training using the latest Phi agent output.",
+        generated_at=utc_timestamp(),
+        planning_mode=True,
+        current_state={
+            "phi_report_available": latest_phi_report is not None,
+            "latest_phi_report": str(latest_phi_report) if latest_phi_report else None,
+            "backend": "PyTorch" if TORCH_AVAILABLE else "NumPy",
+            "default_epochs": 50,
+            "default_input_dimension": 102,
+        },
+        goals=[
+            "Select the best available training backend before model creation.",
+            "Use Phi-derived consciousness metrics to shape the training schedule.",
+            "Produce a stable report and visualization for downstream review.",
+        ],
+        strategies=[
+            {
+                "name": "phi-conditioned-training",
+                "priority": 1,
+                "conditions": ["a Phi agent report is available"],
+                "actions": [
+                    "Load the newest Phi report.",
+                    "Derive model dimensions from latent-space metadata.",
+                    "Train with consciousness-guided loss and phi-harmonic learning rate scheduling.",
+                ],
+            },
+            {
+                "name": "backend-fallback",
+                "priority": 2,
+                "conditions": ["PyTorch is unavailable or Phi report is missing"],
+                "actions": [
+                    "Use the NumPy fallback network when torch is unavailable.",
+                    "Train on synthetic phi-scaled data and capture the limitation in the report.",
+                    "Evaluate convergence before accepting the run.",
+                ],
+            },
+        ],
+        evaluation_metrics=[
+            "evaluation.initial_loss",
+            "evaluation.final_loss",
+            "evaluation.loss_reduction",
+            "evaluation.convergence_rate",
+            "evaluation.phi_performance",
+        ],
+        coordination={
+            "upstream_dependencies": ["phi_agent_report_*.json"],
+            "downstream_consumers": ["manual-review", "vault-eval-conversion"],
+            "handoff_artifacts": ["qnn_agent_report_*.json", "qnn_agent_training_*.png"],
+        },
+        risks=[
+            "Synthetic training data can inflate apparent convergence quality.",
+            "The NumPy fallback does not match the PyTorch training path exactly.",
+            "Missing Phi reports force the model to ignore upstream consciousness metrics.",
+        ],
+        next_actions=[
+            "Confirm the preferred backend and the freshness of the latest Phi report.",
+            "Create the model and execute the configured training schedule.",
+            "Review convergence metrics before publishing the QNN report.",
+        ],
+    )
+    report_path = write_planning_report(
+        output_dir=output_dir,
+        prefix="qnn_agent",
+        report=report,
+    )
+    print(f"Planning report saved: {report_path}")
+    return report.to_dict(), report_path
+
+
+def parse_args(argv=None):
+    parser = argparse.ArgumentParser(description="QNN agent execution entry point.")
+    parser.add_argument(
+        "--planning-mode",
+        action="store_true",
+        help="Generate a structured planning report instead of executing training.",
+    )
+    parser.add_argument(
+        "--output-dir",
+        default=".",
+        help="Directory used for planning reports.",
+    )
+    return parser.parse_args(argv)
+
+
+def main(argv=None):
     """Main execution."""
+    args = parse_args(argv)
+    if args.planning_mode:
+        return generate_planning_report(args.output_dir)
+
     agent = QNNAgent()
     results = agent.run_training()
     return results
