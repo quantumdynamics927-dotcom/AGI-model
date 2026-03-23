@@ -208,4 +208,4 @@ Contributions are welcome. Before opening a pull request:
 
 ## License
 
-This repository is licensed under the [MIT License](LICENSE).
+This repository is licensed under the [GNU Affero General Public License v3.0](LICENSE).
