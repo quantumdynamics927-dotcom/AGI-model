@@ -5,8 +5,9 @@ from integrations.cybershield_adapter import ingest_scan_file, ingest_scan_paylo
 from tools.syntheticizer import Syntheticizer
 
 
-def test_ingest_and_synthesize_file(tmp_path):
-    os.environ.setdefault('PRIVATE_VAULT_SALT', 'test_salt_123')
+def test_ingest_and_synthesize_file(tmp_path, monkeypatch):
+    monkeypatch.setenv('PRIVATE_VAULT_SALT', 'test_salt_123')
+    monkeypatch.setenv('AGI_VAULT_DIR', str(tmp_path / 'vault'))
     raw = tmp_path / 'raw_samples.csv'
     raw.write_text(
         'patient_id,age,gender,visit_date,cholesterol\n'

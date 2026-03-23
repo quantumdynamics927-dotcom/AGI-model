@@ -13,7 +13,7 @@ from __future__ import annotations
 
 import logging
 import shutil
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional, Dict, Any
 
@@ -31,7 +31,7 @@ def _store_raw_copy(
     dest_dir: str | Path | None = None,
 ) -> str:
     p = Path(file_path)
-    ts = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
+    ts = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     destination_dir = (
         Path(dest_dir)
         if dest_dir is not None
@@ -104,7 +104,7 @@ def ingest_scan_payload(
     df = pd.DataFrame([payload])
     tmp_dir = vault_path("gatekeeper_tmp")
     tmp_dir.mkdir(parents=True, exist_ok=True)
-    ts = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
+    ts = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     tmp_path = tmp_dir / f"payload_{ts}.csv"
     df.to_csv(tmp_path, index=False)
     return ingest_scan_file(
