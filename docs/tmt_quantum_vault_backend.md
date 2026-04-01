@@ -45,7 +45,8 @@ The helper looks for the Vault checkout in one of these locations:
 - `./TMT_Quantum_Vault-`
 - `./TMT_Quantum_Vault`
 
-You can override discovery with the environment variable `TMT_QUANTUM_VAULT_REPO`.
+You can override discovery with `AGI_MODEL_VAULT_REPO` (preferred) or
+`TMT_QUANTUM_VAULT_REPO` (backward-compatible alias).
 
 ## Training Validation
 
