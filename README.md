@@ -1,8 +1,10 @@
-> **Status:** Experimental research repository. NFT deployment and contract-verification workflows remain paused while that workstream is on hold.
+> **Status:** Experimental research repository. NFT publishing and contract-verification flows remain paused while that workstream is on hold.
 
 # AGI-model
 
-AGI-model is a research platform for exploring a quantum-inspired variational autoencoder (VAE), consciousness-oriented analysis workflows, and TMT-OS integrations in one repository.
+AGI-model is a research platform for quantum-inspired variational autoencoder (VAE) experiments, latent-space analysis, consciousness-oriented exploration, and TMT-OS integrations.
+
+It brings together model training, scientific utilities, dashboards, data-processing scripts, and repository automation in a single workspace for exploratory research rather than production deployment.
 
 ## About this repository
 
@@ -11,104 +13,50 @@ AGI-model is a research platform for exploring a quantum-inspired variational au
 - **Main interfaces:** training scripts, analysis scripts, tests, Streamlit dashboard, optional FastAPI bridge
 - **Repository ops:** GitHub Actions CI, Dependabot updates, Docker build validation, repo settings as code
 
-## 🚀 Advanced Quantum Consciousness Features
-
-This repository has been significantly enhanced with cutting-edge quantum consciousness capabilities:
-
-### Novel Quantum Circuit Architectures
-Five biologically-inspired quantum circuits for consciousness processing:
-- Hierarchical Fractal Neural Networks
-- Biomimetic Spiking Quantum Circuits
-- Epigenetic Quantum Circuits
-- Neurotransmitter-Inspired Quantum Channels
-- Consciousness-Level Adaptive Circuits
-
-📁 Implementation: `novel_quantum_circuits.py`
-📚 Documentation: `ADVANCED_QUANTUM_CONSCIOUSNESS_FEATURES.md` (Section 1)
-
-### Quantum Teleportation for Consciousness Transfer
-Specialized protocols for secure consciousness state migration:
-- Consciousness Teleportation Protocol
-- Inter-Agent Consciousness Transfer
-- Consciousness Teleportation Manager
-
-📁 Implementation: `consciousness_teleportation.py`
-📚 Documentation: `ADVANCED_QUANTUM_CONSCIOUSNESS_FEATURES.md` (Section 2)
-
-### Ensemble Quantum Agents
-Collaborative intelligence models combining specialized quantum agents:
-- Quantum Agent Framework with specialized roles
-- Consciousness Fusion Engine
-- Adaptive Agent Coordinator
-
-📁 Implementation: `ensemble_quantum_agents.py`
-📚 Documentation: `ADVANCED_QUANTUM_CONSCIOUSNESS_FEATURES.md` (Section 3)
-
-### Integrated Consciousness System
-Unified framework demonstrating all advanced features working together:
-
-📁 Implementation: `integrated_consciousness_system.py`
-📊 Summary: `QUANTUM_CONSCIOUSNESS_ADVANCEMENT_SUMMARY.md`
-
-## 🚀 Enhanced Professional Features
-
-It combines model training, latent-space analysis, quantum experiment utilities, dashboards, and validation tooling for researchers and contributors working across machine learning, scientific computing, and experimental system integration.
-
-Benchmark note: This benchmark reports integrated workflow throughput and a derived token-equivalent processing rate; it does not measure literal LLM text-generation tokens/sec.
-
 ## Table of contents
 
-- [About this repository](#about-this-repository)
 - [Overview](#overview)
 - [Key capabilities](#key-capabilities)
-- [Technology stack](#technology-stack)
-- [Getting started](#getting-started)
+- [Repository setup](#repository-setup)
 - [Common workflows](#common-workflows)
+- [DevOps and repository management](#devops-and-repository-management)
 - [Repository structure](#repository-structure)
 - [Documentation](#documentation)
-- [Roadmap](#roadmap)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## Overview
 
-This repository brings together three complementary areas of work:
+This repository currently groups four complementary areas of work:
 
-1. **Quantum-inspired modeling** — a VAE pipeline centered on 128-dimensional inputs, 32-dimensional latent representations, and quantum-oriented metrics such as coherence, fidelity, entropy, and mixed-state regularization.
-2. **Analysis and experimentation** — scripts for golden ratio pattern analysis, latent-space visualization, EEG/fMRI-oriented exploration, sacred geometry experiments, and IBM Quantum job inspection.
-3. **Operational tooling** — tests, Docker assets, dashboards, developer workflows, documentation, and TMT-OS integration modules to support repeatable experimentation.
-
-The project should be treated as an actively evolving research codebase rather than a finished production product.
+1. **Quantum-inspired modeling** — VAE training, checkpointing, and quantum-oriented metrics such as coherence, fidelity, entropy, and mixed-state regularization.
+2. **Analysis and experimentation** — latent-space analysis, golden-ratio exploration, sacred-geometry tooling, EEG/fMRI-oriented scripts, and IBM Quantum adjacent experiments.
+3. **Integration surfaces** — TMT-OS modules, bridge utilities, provenance helpers, and experimental system-integration code.
+4. **Developer operations** — CI workflows, Docker assets, dependency automation, repo settings, and contributor documentation.
 
 ## Key capabilities
 
 | Area | Description | Primary entry points |
 | --- | --- | --- |
-| Model training | Train the core quantum-inspired VAE and persist checkpoints and plots | `train_vae.py`, `vae_model.py` |
-| Validation | Run automated tests and local smoke checks | `tests/`, `test_model.py`, `.github/workflows/ci.yml` |
-| Analysis | Explore latent space, golden ratio proximity, consciousness metrics, and IBM experiment outputs | `latent_analysis.py`, `golden_ratio_*.py`, `quantum_consciousness_link.py` |
-| Visualization | Launch an interactive Streamlit dashboard | `dashboards/quantum_consciousness_dashboard/app.py` |
-| Integration | Work across TMT-OS, provenance, geometry, and observer-related modules | `TMT-OS/`, `integrations/`, `molecular_geometry/`, `quantum_observer/` |
+| Model training | Train the core VAE and persist checkpoints and plots | `train_vae.py`, `vae_model.py` |
+| Validation | Run regression tests and local smoke checks | `tests/`, `test_model.py`, `.github/workflows/ci.yml` |
+| Analysis | Explore latent structure, golden-ratio proximity, and consciousness metrics | `latent_analysis.py`, `golden_ratio_*.py`, `quantum_consciousness_link.py` |
+| Dashboarding | Launch the Streamlit dashboard for local inspection | `dashboards/quantum_consciousness_dashboard/app.py` |
+| Integration | Work across TMT-OS, geometry, observer, and provenance modules | `TMT-OS/`, `integrations/`, `molecular_geometry/`, `quantum_observer/` |
+| Containerization | Build local runtime and dashboard images | `Dockerfile`, `Dockerfile.dashboard`, `.github/workflows/deploy.yml` |
 
-## Technology stack
-
-- **Language/runtime:** Python 3.10+
-- **Core ML/scientific libraries:** PyTorch, NumPy, SciPy, Matplotlib
-- **Developer tooling:** pytest, flake8, Black, pre-commit, Bandit, Safety
-- **App and ops tooling:** Streamlit, Docker, Docker Compose, GitHub Actions
-- **Adjacent integrations:** TMT-OS modules, IBM Quantum-oriented scripts, data provenance and dashboard assets
-
-## Getting started
+## Repository setup
 
 ### Prerequisites
 
 - Python 3.10 or newer
 - `pip` and `venv`
-- Optional: Docker and Docker Compose for containerized workflows
+- Optional: Docker for local image builds
+- Optional: Node.js 20+ for Hardhat-based NFT/contract tooling
 - Optional: IBM Quantum credentials for hardware-facing experiments
 
-### Recommended setup
+### Recommended bootstrap
 
 ```bash
 git clone https://github.com/quantumdynamics927-dotcom/AGI-model.git
@@ -117,18 +65,28 @@ make setup
 make env
 ```
 
-### Manual setup
+### Manual bootstrap
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # Linux / macOS
 # .venv\Scripts\activate   # Windows PowerShell
 
-pip install --upgrade pip
-pip install -r requirements.txt
-pip install -r requirements-dev.txt
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python -m pip install -r requirements-dev.txt
 cp .env.example .env
 ```
+
+### Python import path parity with CI
+
+The main CI workflow exports:
+
+```bash
+PYTHONPATH="$(pwd):$(pwd)/TMT-OS:$(pwd)/tmt-os-labs"
+```
+
+If local imports behave differently from CI, mirror that environment before running tests.
 
 ## Common workflows
 
@@ -143,7 +101,7 @@ make check
 What these commands do:
 
 - `make lint` runs `flake8` and `black --check`
-- `make test` runs the test suite under `tests/`
+- `make test` runs the Python test suite under `tests/`
 - `make check` runs linting, tests, and security scanning in sequence
 
 ### Train the model
@@ -154,11 +112,11 @@ make train
 python train_vae.py
 ```
 
-Expected outputs typically include:
+Typical outputs include:
 
-- a trained checkpoint such as `best_model.pt`
+- a checkpoint such as `best_model.pt`
 - generated plots such as training curves
-- console metrics covering reconstruction, KL divergence, coherence, fidelity, and entropy-related terms
+- console metrics for reconstruction, KL divergence, coherence, fidelity, and entropy-oriented terms
 
 ### Run a quick model smoke test
 
@@ -166,7 +124,13 @@ Expected outputs typically include:
 python test_model.py
 ```
 
-Use this when you want a lightweight verification that the saved model can be loaded and exercised locally.
+### Launch the API bridge
+
+```bash
+python main.py --mode serve --host 0.0.0.0 --port 8000
+```
+
+This serves the FastAPI bridge used by the Docker runtime image.
 
 ### Launch the dashboard
 
@@ -184,15 +148,27 @@ python latent_analysis.py
 python golden_ratio_analysis.py
 ```
 
-These scripts support exploratory analysis of latent structure, resonance patterns, and downstream artifacts.
-
-### Use container workflows
+### Build the container images locally
 
 ```bash
-make dev
-make build
-make build-dashboard
+docker build -t agi-model:local .
+docker build -f Dockerfile.dashboard -t agi-model-dashboard:local .
 ```
+
+## DevOps and repository management
+
+The repository devops setup is intentionally scoped to what is currently maintained in-tree:
+
+- **CI:** `.github/workflows/ci.yml` runs the Python test matrix and optional AGI eval smoke workflow dispatch.
+- **Container build validation:** `.github/workflows/deploy.yml` builds the runtime and dashboard images and can publish them to GHCR when explicitly requested.
+- **Security and dependency hygiene:** `.github/workflows/security.yml` and `.github/dependabot.yml`.
+- **Repository metadata as code:** `.github/settings.yml` tracks the GitHub repository description and topics.
+
+### Current repository stance
+
+- Staging and production server deployment steps are **not** committed as an active supported path in this repository.
+- NFT publishing and contract verification remain **paused**.
+- Container images are the maintained deployment artifact for repo-level automation.
 
 ## Repository structure
 
@@ -204,13 +180,8 @@ make build-dashboard
 | `tests/` | Automated regression and integration coverage |
 | `docs/` | Central documentation hub |
 | `dashboards/quantum_consciousness_dashboard/` | Streamlit dashboard |
-| `fastapi_bridge.py` | Optional FastAPI bridge for API-oriented integrations |
 | `integrations/` | External and system integration modules |
 | `molecular_geometry/` | Molecular and spatial analysis components |
-| `novel_quantum_circuits.py` | Biologically inspired quantum circuit experiments |
-| `consciousness_teleportation.py` | Consciousness transfer and teleportation protocols |
-| `ensemble_quantum_agents.py` | Multi-agent quantum coordination experiments |
-| `integrated_consciousness_system.py` | Unified advanced consciousness system entry point |
 | `TMT-OS/` | TMT-OS integration assets |
 | `real_data/` and `sacred_datasets/` | Input datasets used by research workflows |
 
@@ -221,46 +192,42 @@ Key documentation entry points:
 - [Documentation hub](docs/README.md)
 - [Architecture guide](docs/architecture/README.md)
 - [API reference](docs/api/README.md)
-- [Deployment guide](docs/deployment/README.md)
 - [Development guide](docs/development/README.md)
+- [Deployment guide](docs/deployment/README.md)
 - [Security guide](docs/security/README.md)
 - [Contributing guide](docs/contributing/CONTRIBUTING.md)
 - [Changelog](CHANGELOG.md)
-
-## Roadmap
-
-Current priorities for improving repository quality and maintainability include:
-
-- consolidating root-level experimental scripts into clearer domains
-- tightening the onboarding experience for training, testing, and dashboard workflows
-- improving documentation for deployment, hardware prerequisites, and data expectations
-- continuing to stabilize the research pipeline around repeatable validation and provenance
 
 ## Troubleshooting
 
 ### Missing development tools
 
-If `make lint` or `make test` fails because `flake8`, `pytest`, or other tools are unavailable, install the development dependencies:
+If `make lint` or `make test` fails because required tools are missing:
 
 ```bash
-pip install -r requirements-dev.txt
+python -m pip install -r requirements.txt
+python -m pip install -r requirements-dev.txt
 ```
 
-### CI import-path mismatches
+### Large dependency installs
 
-The CI workflow sets `PYTHONPATH` to include the repository root, `TMT-OS`, and `tmt-os-labs`. If local imports behave differently from CI, mirror that environment before running tests.
+This repository includes scientific Python dependencies such as PyTorch, NumPy, SciPy, Pandas, and Matplotlib. Initial environment setup can take longer than a lightweight Python project.
 
 ### Hardware-facing experiments
 
 IBM Quantum and other external-integration scripts may require credentials or services that are not present in a default local environment. Start with the Python-only workflows first, then enable external credentials deliberately.
 
+### Legacy subtrees and lint noise
+
+The repository contains broad experimental and imported subtrees. Some existing lint failures may originate outside the part of the repo you are actively changing.
+
 ## Contributing
 
-Contributions are welcome. Before opening a pull request:
+Before opening a pull request:
 
 1. review [the contributing guide](docs/contributing/CONTRIBUTING.md),
 2. validate your environment with the commands above,
-3. update relevant documentation when workflows or behavior change.
+3. update relevant documentation when repository behavior or workflows change.
 
 ## License
 

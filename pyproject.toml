@@ -1,8 +1,13 @@
 [tool.poetry]
 name = "quantum-consciousness-agi"
 version = "0.1.0"
-description = "Research platform for a quantum-inspired VAE, analysis workflows, and TMT-OS integrations"
+description = "Experimental research platform for a quantum-inspired VAE, analysis workflows, and TMT-OS integrations"
 authors = ["GitHub Copilot <copilot@example.com>"]
+readme = "README.md"
+homepage = "https://github.com/quantumdynamics927-dotcom/AGI-model"
+repository = "https://github.com/quantumdynamics927-dotcom/AGI-model"
+documentation = "https://github.com/quantumdynamics927-dotcom/AGI-model/tree/main/docs"
+keywords = ["quantum", "vae", "pytorch", "research", "tmt-os"]
 
 [tool.poetry.dependencies]
 python = ">=3.10"
