@@ -30,9 +30,7 @@ Use the Python environment directly when you want the most transparent local set
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-python -m pip install -r requirements-dev.txt
+python -m pip install --upgrade pip -r requirements.txt -r requirements-dev.txt
 python main.py --mode serve --host 0.0.0.0 --port 8000
 ```
 
