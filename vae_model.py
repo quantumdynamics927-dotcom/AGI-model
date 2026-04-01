@@ -38,20 +38,23 @@ class HybridQuantumOptimizer:
         self.adaptive_learning_rate = adaptive_learning_rate
 
         # Classical optimizer parameters
+        # Initialize moment estimates for all optimizer types
+        self.m = {}  # First moment
+        self.v = {}  # Second moment
+        self.t = 0  # Timestep
+        
         if self.classical_optimizer == "adam":
             self.beta1 = beta1
             self.beta2 = beta2
-            self.m = {}  # First moment
-            self.v = {}  # Second moment
-            self.t = 0  # Timestep
         elif self.classical_optimizer == "lbfgs":
             self.history_size = 10
             self.line_search_fn = "strong_wolfe"
 
-        # Initialize moment estimates
+        # Initialize moment estimates for all optimizer types
         for name, param in model.named_parameters():
             if param.requires_grad:
                 self.m[name] = torch.zeros_like(param)
+                self.v[name] = torch.zeros_like(param)
                 self.v[name] = torch.zeros_like(param)
 
         # Adaptive learning rate tracking
@@ -115,6 +118,9 @@ class HybridQuantumOptimizer:
                     grad += ((loss_plus - loss_minus) / (2 * epsilon) + noise) * direction
 
                 grad = grad / self.gradient_estimation_samples
+
+            # Store gradient for this parameter
+            gradients[name] = grad
 
         return gradients
 
@@ -805,7 +811,41 @@ class QuantumVAE(nn.Module):
     def decode(self, z):
         return self.decoder(z)
 
-    def forward(self, x):
+    def generate(self, num_samples: int, device: str = None) -> torch.Tensor:
+        """
+        Generate samples from the latent space.
+        
+        Args:
+            num_samples: Number of samples to generate
+            device: Device to generate samples on (default: model's device)
+            
+        Returns:
+            Generated samples of shape (num_samples, input_dim)
+        """
+        if device is None:
+            device = next(self.parameters()).device
+        
+        # Sample from prior N(0, I)
+        z = torch.randn(num_samples, self.fc_mu.out_features, device=device)
+        
+        # Decode to generate samples
+        with torch.no_grad():
+            samples = self.decode(z)
+        
+        return samples
+
+    def forward(self, x, return_density=False):
+        """
+        Forward pass through the VAE.
+        
+        Args:
+            x: Input tensor
+            return_density: If True, return density matrix as 4th output
+            
+        Returns:
+            If return_density=False: (recon, mu, log_var)
+            If return_density=True: (recon, mu, log_var, density_matrix)
+        """
         mu, log_var = self.encode(x)
         z = self.reparameterize(mu, log_var)
 
@@ -847,7 +887,10 @@ class QuantumVAE(nn.Module):
                 z = self.mps_encoder(z)
 
         recon = self.decode(z)
-        return recon, mu, log_var, density_matrix
+        
+        if return_density:
+            return recon, mu, log_var, density_matrix
+        return recon, mu, log_var
 
     def compute_losses(
         self,
