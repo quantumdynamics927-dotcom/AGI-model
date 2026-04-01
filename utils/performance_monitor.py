@@ -448,7 +448,7 @@ def plot_phi_shell_geometry(
                 mu, log_var = model.encode(batch_x)
             else:
                 # Assume forward returns (recon, mu, log_var, ...)
-                recon_x, mu, log_var, _ = model(batch_x)
+                recon_x, mu, log_var, _ = model(batch_x, return_density=True)
 
             all_mu.append(mu.cpu().numpy())
 

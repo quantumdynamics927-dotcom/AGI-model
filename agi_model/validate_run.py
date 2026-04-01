@@ -112,7 +112,7 @@ def run_vae_smoke(
 
     with torch.no_grad():
         inputs = torch.rand(batch_size, input_dim)
-        recon_x, mu, log_var, density_matrix = model(inputs)
+        recon_x, mu, log_var, density_matrix = model(inputs, return_density=True)
         total_tensor, losses = total_loss(
             recon_x,
             inputs,

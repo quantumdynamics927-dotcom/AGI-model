@@ -8,7 +8,7 @@ def test_vae_forward_and_loss_smoke():
     model.eval()
 
     x = torch.randn(2, 128)
-    recon, mu, log_var, density = model(x)
+    recon, mu, log_var, density = model(x, return_density=True)
 
     assert recon.shape == x.shape
 
