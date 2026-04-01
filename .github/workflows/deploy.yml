@@ -48,13 +48,13 @@ jobs:
       - name: Set push policy
         id: push-policy
         run: |
+          SHOULD_PUSH=false
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.publish_images }}" = "true" ]; then
-            echo "should-push=true" >> "$GITHUB_OUTPUT"
+            SHOULD_PUSH=true
           elif [ "${{ github.event_name }}" = "push" ]; then
-            echo "should-push=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "should-push=false" >> "$GITHUB_OUTPUT"
+            SHOULD_PUSH=true
           fi
+          echo "should-push=${SHOULD_PUSH}" >> "$GITHUB_OUTPUT"
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
