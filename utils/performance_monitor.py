@@ -108,6 +108,20 @@ class PerformanceMonitor:
             self.train_metrics[name] = []
             self.val_metrics[name] = []
 
+    def record_metric(self, name: str, value: float, mode: str = "train"):
+        """
+        Record a single metric value.
+
+        Args:
+            name: Metric name
+            value: Metric value
+            mode: 'train' or 'val'
+        """
+        metrics_dict = self.train_metrics if mode == "train" else self.val_metrics
+        if name not in metrics_dict:
+            metrics_dict[name] = []
+        metrics_dict[name].append(float(value))
+
     def record_epoch(
         self,
         epoch: int,
