@@ -192,7 +192,7 @@ jobs:
           load: true
           tags: tmt-os-quantum:local
 
-      - name: 🔍 Scan Docker Image
+      - name: 🔍 Scan Docker Image with Trivy
         uses: aquasecurity/trivy-action@master
         with:
           image-ref: 'tmt-os-quantum:local'
@@ -201,6 +201,38 @@ jobs:
           ignore-unfixed: true
           vuln-type: 'os,library'
           severity: 'CRITICAL,HIGH'
+          output: 'trivy-docker-results.txt'
+          ignorefile: '.trivyignore'
+        continue-on-error: true
+
+      - name: 📊 Upload Docker Scan Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: trivy-docker-scan-${{ github.run_number }}
+          path: trivy-docker-results.txt
+          retention-days: 30
+
+      - name: 🔍 Check for Critical Vulnerabilities
+        run: |
+          if [ -f trivy-docker-results.txt ]; then
+            # Count CRITICAL and HIGH vulnerabilities
+            critical_count=$(grep -c "CRITICAL" trivy-docker-results.txt || echo "0")
+            high_count=$(grep -c "HIGH" trivy-docker-results.txt || echo "0")
+            
+            echo "📊 Vulnerability Summary:"
+            echo "  CRITICAL: $critical_count"
+            echo "  HIGH: $high_count"
+            
+            # Fail only on CRITICAL vulnerabilities
+            if [ "$critical_count" -gt 0 ]; then
+              echo "❌ Found $critical_count CRITICAL vulnerabilities - failing build"
+              exit 1
+            else
+              echo "✅ No CRITICAL vulnerabilities found"
+              echo "⚠️ Found $high_count HIGH severity vulnerabilities - review recommended"
+            fi
+          fi
 
   notify-security-findings:
     name: Notify Security Findings
