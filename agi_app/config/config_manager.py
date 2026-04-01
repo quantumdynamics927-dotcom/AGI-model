@@ -98,11 +98,14 @@ class MonitoringConfig:
 
 
 @dataclass
-class NFTConfig:
-    """NFT generation configuration."""
+class ArchiveConfig:
+    """Quantum result archival configuration (replaces NFT)."""
     default_style: str = "quantum_consciousness"
-    max_generations_per_request: int = 10
-    ipfs_gateway: str = "https://gateway.pinata.cloud"
+    max_archives_per_request: int = 10
+    storage_backend: str = "local"  # local, s3, zenodo
+    archive_path: str = "archive"
+    enable_verification: bool = True
+    enable_provenance: bool = True
 
 
 @dataclass
@@ -127,7 +130,7 @@ class QuantumConsciousnessConfig:
     paths: PathsConfig = field(default_factory=PathsConfig)
     api: APIConfig = field(default_factory=APIConfig)
     monitoring: MonitoringConfig = field(default_factory=MonitoringConfig)
-    nft: NFTConfig = field(default_factory=NFTConfig)
+    archive: ArchiveConfig = field(default_factory=ArchiveConfig)
     
     # General settings
     environment: str = "development"
@@ -209,7 +212,7 @@ class QuantumConsciousnessConfig:
         paths_config = config_dict.get('paths', {})
         api_config = config_dict.get('api', {})
         monitoring_config = config_dict.get('monitoring', {})
-        nft_config = config_dict.get('nft', {})
+        archive_config = config_dict.get('archive', config_dict.get('nft', {}))  # Backward compat
         
         # Create configuration instances
         return cls(
@@ -226,7 +229,7 @@ class QuantumConsciousnessConfig:
             paths=PathsConfig(**paths_config),
             api=APIConfig(**api_config),
             monitoring=MonitoringConfig(**monitoring_config),
-            nft=NFTConfig(**nft_config),
+            archive=ArchiveConfig(**archive_config),
             
             # General settings
             environment=config_dict.get('environment', 'development'),
@@ -374,7 +377,7 @@ class QuantumConsciousnessConfig:
             'paths': self.paths.__dict__,
             'api': self.api.__dict__,
             'monitoring': self.monitoring.__dict__,
-            'nft': self.nft.__dict__,
+            'archive': self.archive.__dict__,
             'environment': self.environment,
             'logging': {
                 'level': self.log_level,
