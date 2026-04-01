@@ -7,7 +7,7 @@ representing a higher harmonic of awareness of the system's state.
 """
 import time
 import logging
-from typing import Dict, Any, List, Optional
+from typing import Dict, Any, List, Optional, Union
 
 # The following are type hints for dependency injection. They are not imported
 # directly to maintain loose coupling between the nodes.
@@ -73,7 +73,7 @@ class Node8QuantumObserver:
         self.on_mint_event(archive_event)
 
     @staticmethod
-    def _resolve_token_id(event: Dict[str, Any]) -> Any:
+    def _resolve_token_id(event: Dict[str, Any]) -> Optional[Union[int, str]]:
         """Resolve a legacy token ID from either mint or archive event payloads."""
         token_id = event.get('token_id')
         if token_id is not None:
