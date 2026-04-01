@@ -9,6 +9,7 @@ from .tmt_vault_integration import (
     VaultInteropConfig,
     ensure_vault_repo_on_syspath,
     resolve_vault_repo_path,
+    resolve_vault_repo_path_or_fallback,
     vault_interop_contract,
 )
 
@@ -21,5 +22,6 @@ __all__ = [
     "VaultInteropConfig",
     "ensure_vault_repo_on_syspath",
     "resolve_vault_repo_path",
+    "resolve_vault_repo_path_or_fallback",
     "vault_interop_contract",
 ]

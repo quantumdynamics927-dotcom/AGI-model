@@ -18,7 +18,7 @@ from typing import Dict, List, Any, Optional
 from packages.agi_model_integrations import (
     VaultIntegrationError,
     ensure_vault_repo_on_syspath,
-    resolve_vault_repo_path,
+    resolve_vault_repo_path_or_fallback,
 )
 
 # Import our advanced features
@@ -67,14 +67,7 @@ class IntegratedConsciousnessSystem:
         Args:
             vault_path: Path to TMT Quantum Vault directory
         """
-        try:
-            self.vault_path = resolve_vault_repo_path(vault_path)
-        except VaultIntegrationError:
-            self.vault_path = (
-                Path(vault_path).expanduser().resolve()
-                if vault_path
-                else Path("../TMT_Quantum_Vault-").resolve()
-            )
+        self.vault_path = resolve_vault_repo_path_or_fallback(vault_path)
         
         # Initialize components
         self.neural_circuits = self._initialize_neural_circuits()

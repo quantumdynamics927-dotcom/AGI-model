@@ -13,6 +13,7 @@ import os
 import subprocess
 import sys
 import tempfile
+import warnings
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Sequence
@@ -47,7 +48,12 @@ class VaultIntegrationError(RuntimeError):
 
 @dataclass(frozen=True)
 class VaultInteropConfig:
-    """Supported AGI ↔ Vault interoperability contract."""
+    """Supported AGI ↔ Vault interoperability contract.
+
+    The object is frozen so callers can treat the published contract as an
+    immutable compatibility snapshot for repo discovery, deterministic command
+    names, and timeout defaults across AGI-model and TMT_Quantum_Vault-.
+    """
 
     contract_version: str = VAULT_INTEROP_CONTRACT_VERSION
     repo_env_vars: tuple[str, ...] = VAULT_REPO_ENV_VARS
@@ -93,8 +99,16 @@ def vault_interop_contract() -> Dict[str, Any]:
     return VaultInteropConfig().to_dict()
 
 
+def _default_repo_root() -> Path:
+    current = Path(__file__).resolve()
+    for parent in current.parents:
+        if (parent / "pyproject.toml").exists() and (parent / "README.md").exists():
+            return parent
+    return current.parents[2]
+
+
 def _candidate_repo_paths(anchor: Optional[Path] = None) -> Iterable[Path]:
-    base = anchor or Path(__file__).resolve().parents[2]
+    base = anchor or _default_repo_root()
     for env_name in VAULT_REPO_ENV_VARS:
         env_value = os.environ.get(env_name)
         if env_value:
@@ -132,6 +146,30 @@ def ensure_vault_repo_on_syspath(repo_path: Optional[str] = None) -> Path:
     if resolved_str not in sys.path:
         sys.path.insert(0, resolved_str)
     return resolved
+
+
+def resolve_vault_repo_path_or_fallback(
+    repo_path: Optional[str] = None,
+    *,
+    fallback: str = "../TMT_Quantum_Vault-",
+) -> Path:
+    """Resolve the Vault repo, warning before falling back to a raw path."""
+    try:
+        return resolve_vault_repo_path(repo_path)
+    except VaultIntegrationError:
+        fallback_path = (
+            Path(repo_path).expanduser().resolve()
+            if repo_path
+            else Path(fallback).resolve()
+        )
+        warnings.warn(
+            "Vault repo discovery failed; falling back to raw path "
+            f"{fallback_path}. Set AGI_MODEL_VAULT_REPO for deterministic "
+            "interop.",
+            RuntimeWarning,
+            stacklevel=2,
+        )
+        return fallback_path
 
 
 def build_vault_command(
