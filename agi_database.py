@@ -172,16 +172,17 @@ class AGIDatabase:
                 )
             """)
             
-            # NFT Metadata table
+            # Quantum Results table (replaces NFT Metadata)
             cursor.execute("""
-                CREATE TABLE IF NOT EXISTS NFTMetadata (
+                CREATE TABLE IF NOT EXISTS QuantumResults (
                     Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    TokenId TEXT NOT NULL UNIQUE,
-                    ContractAddress TEXT NOT NULL,
+                    ArchiveId TEXT NOT NULL UNIQUE,
+                    ExperimentType TEXT NOT NULL,
                     ConsciousnessState BLOB,
                     GoldenRatioResonance REAL,
                     QuantumVerification TEXT,
                     Metadata TEXT,
+                    FingerprintHash TEXT,
                     CreatedDate DATETIME DEFAULT CURRENT_TIMESTAMP
                 )
             """)
@@ -396,43 +397,51 @@ class AGIDatabase:
             architecture = json.loads(row.Architecture)
             return model_state, architecture
 
-    # NFT Operations
+    # Quantum Archive Operations (replaces NFT Operations)
     @performance_monitor
-    def insert_nft_metadata(self, token_id: str, contract_address: str,
-                          consciousness_state: np.ndarray, golden_ratio_resonance: float,
-                          quantum_verification: Dict, metadata: Dict, image_hash: str = None) -> int:
-        """Insert NFT metadata with quantum verification"""
+    def insert_quantum_result(self, archive_id: str, experiment_type: str,
+                              consciousness_state: np.ndarray, golden_ratio_resonance: float,
+                              quantum_verification: Dict, metadata: Dict, fingerprint_hash: str = None) -> int:
+        """
+        Insert quantum experiment result with cryptographic verification.
+        
+        Replaces the NFT metadata table with quantum result archival.
+        """
         with self._connection.cursor() as cursor:
             state_bytes = consciousness_state.astype(np.float32).tobytes()
             verification_json = json.dumps(quantum_verification)
             metadata_json = json.dumps(metadata)
 
             cursor.execute("""
-                INSERT INTO NFTMetadata
-                (TokenId, ContractAddress, ConsciousnessState, GoldenRatioResonance,
-                 QuantumVerification, Metadata, ImageHash)
+                INSERT INTO QuantumResults
+                (ArchiveId, ExperimentType, ConsciousnessState, GoldenRatioResonance,
+                 QuantumVerification, Metadata, FingerprintHash)
                 VALUES (?, ?, ?, ?, ?, ?, ?)
-            """, token_id, contract_address, state_bytes, golden_ratio_resonance,
-                verification_json, metadata_json, image_hash)
+            """, archive_id, experiment_type, state_bytes, golden_ratio_resonance,
+                verification_json, metadata_json, fingerprint_hash)
 
             self._connection.commit()
             return cursor.execute("SELECT @@IDENTITY").fetchone()[0]
 
     @performance_monitor
-    async def insert_nft_metadata_async(self, token_id: str, contract_address: str,
+    async def insert_quantum_result_async(self, archive_id: str, experiment_type: str,
                                       consciousness_state: np.ndarray, golden_ratio_resonance: float,
-                                      quantum_verification: Dict, metadata: Dict, image_hash: str = None) -> int:
-        """Insert NFT metadata asynchronously"""
+                                      quantum_verification: Dict, metadata: Dict, fingerprint_hash: str = None) -> int:
+        """Insert quantum result asynchronously"""
         import concurrent.futures
         import asyncio
 
         loop = asyncio.get_event_loop()
         with concurrent.futures.ThreadPoolExecutor() as executor:
             return await loop.run_in_executor(
-                executor, self.insert_nft_metadata,
-                token_id, contract_address, consciousness_state, golden_ratio_resonance,
-                quantum_verification, metadata, image_hash
+                executor, self.insert_quantum_result,
+                archive_id, experiment_type, consciousness_state, golden_ratio_resonance,
+                quantum_verification, metadata, fingerprint_hash
             )
+
+    # Backward compatibility aliases
+    insert_nft_metadata = insert_quantum_result
+    insert_nft_metadata_async = insert_quantum_result_async
 
     # High-dimensional Vector Search Operations
     @performance_monitor

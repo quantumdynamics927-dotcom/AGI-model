@@ -1,0 +1,9 @@
+# Trivy vulnerability ignore file
+# Use this to suppress known false positives or acceptable risks
+# Format: one CVE per line
+
+# Example: If a CVE is a false positive or has been mitigated
+# CVE-2023-12345
+
+# Note: Only add CVEs here after proper risk assessment
+# Document the reason for each suppression in SECURITY_HARDENING.md
