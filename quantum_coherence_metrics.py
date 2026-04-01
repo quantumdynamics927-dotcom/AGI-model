@@ -33,6 +33,15 @@ class CoherenceMetrics:
     von_neumann_entropy: float
     participation_ratio: float
     effective_dimension: float
+    # Enhanced metrics
+    quantum_fisher_information: float = 0.0
+    coherence_of_formation: float = 0.0
+    skew_information: float = 0.0
+    superposition_degree: float = 0.0
+    entanglement_entropy: float = 0.0
+    golden_ratio_alignment: float = 0.0
+    phase_coherence: float = 0.0
+    decoherence_rate: float = 0.0
 
 
 class QuantumCoherenceAnalyzer:
@@ -345,7 +354,16 @@ class QuantumCoherenceAnalyzer:
             purity=self.compute_purity(density_matrix),
             von_neumann_entropy=self.compute_von_neumann_entropy(density_matrix),
             participation_ratio=self.compute_participation_ratio(density_matrix),
-            effective_dimension=self.compute_effective_dimension(latent_codes)
+            effective_dimension=self.compute_effective_dimension(latent_codes),
+            # Enhanced metrics
+            quantum_fisher_information=self.compute_quantum_fisher_information(density_matrix),
+            coherence_of_formation=self.compute_coherence_of_formation(density_matrix),
+            skew_information=self.compute_skew_information(density_matrix),
+            superposition_degree=self.compute_superposition_degree(density_matrix),
+            entanglement_entropy=self.compute_entanglement_entropy(density_matrix),
+            golden_ratio_alignment=self.compute_golden_ratio_alignment(latent_codes),
+            phase_coherence=self.compute_phase_coherence(latent_codes),
+            decoherence_rate=self.compute_decoherence_rate(density_matrix)
         )
         
         return metrics
@@ -356,6 +374,256 @@ class QuantumCoherenceAnalyzer:
         difference = density_matrix - maximally_mixed
         trace_distance = 0.5 * torch.trace(torch.sqrt(difference @ difference.T)).item()
         return trace_distance
+    
+    def compute_quantum_fisher_information(
+        self,
+        density_matrix: torch.Tensor,
+        parameter: str = 'phase'
+    ) -> float:
+        """
+        Compute quantum Fisher information.
+        
+        F_Q[ρ] = Tr(ρ L²)
+        
+        where L is the symmetric logarithmic derivative.
+        
+        Args:
+            density_matrix: Quantum state density matrix
+            parameter: Parameter type ('phase', 'amplitude')
+            
+        Returns:
+            Quantum Fisher information
+        """
+        eigenvalues = torch.linalg.eigvalsh(density_matrix)
+        eigenvalues = torch.clamp(eigenvalues, min=self.epsilon)
+        
+        # Compute Fisher information for phase estimation
+        # F_Q ≈ 4 * Var(H) for Hamiltonian H
+        # Simplified: use eigenvalue variance
+        mean_eigenvalue = torch.mean(eigenvalues)
+        variance = torch.mean((eigenvalues - mean_eigenvalue) ** 2)
+        
+        # Quantum Fisher information
+        qfi = 4 * variance.item()
+        
+        return qfi
+    
+    def compute_coherence_of_formation(
+        self,
+        density_matrix: torch.Tensor
+    ) -> float:
+        """
+        Compute coherence of formation.
+        
+        C_F(ρ) = min_{p_k, |ψ_k⟩} Σ_k p_k C(|ψ_k⟩)
+        
+        Approximated using entanglement of formation.
+        
+        Args:
+            density_matrix: Quantum state density matrix
+            
+        Returns:
+            Coherence of formation
+        """
+        # Use L1 coherence as lower bound
+        l1 = self.l1_coherence(density_matrix)
+        
+        # Compute eigenvalues for upper bound
+        eigenvalues = torch.linalg.eigvalsh(density_matrix)
+        eigenvalues = torch.clamp(eigenvalues, min=self.epsilon)
+        
+        # Entropy-based upper bound
+        entropy = -torch.sum(eigenvalues * torch.log2(eigenvalues + self.epsilon))
+        
+        # Approximate coherence of formation
+        cof = (l1 + entropy.item() / np.log2(self.latent_dim)) / 2
+        
+        return cof
+    
+    def compute_skew_information(
+        self,
+        density_matrix: torch.Tensor
+    ) -> float:
+        """
+        Compute skew information (Wigner-Yanase skew information).
+        
+        I(ρ, H) = -1/2 Tr([√ρ, H]²)
+        
+        Measures quantum uncertainty of observable H.
+        
+        Args:
+            density_matrix: Quantum state density matrix
+            
+        Returns:
+            Skew information
+        """
+        # Use identity operator as observable
+        # Simplified: measure deviation from diagonal
+        diag = torch.diag(torch.diag(density_matrix))
+        
+        # Compute sqrt of density matrix (approximate)
+        eigenvalues, eigenvectors = torch.linalg.eigh(density_matrix)
+        eigenvalues = torch.clamp(eigenvalues, min=self.epsilon)
+        sqrt_eigenvalues = torch.sqrt(eigenvalues)
+        sqrt_density = eigenvectors @ torch.diag(sqrt_eigenvalues) @ eigenvectors.T
+        
+        # Skew information approximation
+        # I(ρ, H) ≈ Tr(ρ H²) - Tr(√ρ H √ρ H)
+        # For identity: I ≈ Tr(ρ) - Tr(√ρ √ρ) = 0
+        # Use off-diagonal contribution instead
+        off_diag = density_matrix - diag
+        skew = 0.5 * torch.trace(sqrt_density @ off_diag @ sqrt_density @ off_diag.T).item()
+        
+        return abs(skew)
+    
+    def compute_superposition_degree(
+        self,
+        density_matrix: torch.Tensor
+    ) -> float:
+        """
+        Compute degree of superposition in the quantum state.
+        
+        Measures how much the state is in superposition vs. classical mixture.
+        
+        Args:
+            density_matrix: Quantum state density matrix
+            
+        Returns:
+            Superposition degree [0, 1]
+        """
+        # Off-diagonal elements indicate superposition
+        off_diag = density_matrix - torch.diag(torch.diag(density_matrix))
+        
+        # Sum of absolute off-diagonal values
+        superposition = torch.sum(torch.abs(off_diag)).item()
+        
+        # Normalize by maximum possible (n² - n for n×n matrix)
+        max_superposition = self.latent_dim ** 2 - self.latent_dim
+        
+        if max_superposition > 0:
+            return superposition / max_superposition
+        return 0.0
+    
+    def compute_entanglement_entropy(
+        self,
+        density_matrix: torch.Tensor,
+        subsystem_size: Optional[int] = None
+    ) -> float:
+        """
+        Compute entanglement entropy for bipartition.
+        
+        S_A = -Tr(ρ_A log₂ ρ_A)
+        
+        Args:
+            density_matrix: Quantum state density matrix
+            subsystem_size: Size of subsystem A (default: half)
+            
+        Returns:
+            Entanglement entropy
+        """
+        if subsystem_size is None:
+            subsystem_size = self.latent_dim // 2
+        
+        # Partial trace over subsystem B
+        # Simplified: use eigenvalue-based approximation
+        eigenvalues = torch.linalg.eigvalsh(density_matrix)
+        eigenvalues = torch.clamp(eigenvalues, min=self.epsilon)
+        
+        # Von Neumann entropy as entanglement proxy
+        entropy = -torch.sum(eigenvalues * torch.log2(eigenvalues + self.epsilon))
+        
+        # Normalize by maximum possible entanglement
+        max_entropy = np.log2(min(subsystem_size, self.latent_dim - subsystem_size))
+        
+        if max_entropy > 0:
+            return entropy.item() / max_entropy
+        return 0.0
+    
+    def compute_golden_ratio_alignment(
+        self,
+        latent_codes: torch.Tensor
+    ) -> float:
+        """
+        Compute alignment with golden ratio patterns.
+        
+        Measures how well latent dimensions follow φ relationships.
+        
+        Args:
+            latent_codes: Batch of latent vectors
+            
+        Returns:
+            Golden ratio alignment score [0, 1]
+        """
+        phi = 1.618033988749895
+        
+        # Sort by magnitude
+        sorted_latent, _ = torch.sort(torch.abs(latent_codes), dim=1, descending=True)
+        
+        # Compute consecutive ratios
+        ratios = sorted_latent[:, 1:] / (sorted_latent[:, :-1] + 1e-10)
+        
+        # Distance from golden ratio
+        phi_distance = torch.abs(ratios - phi)
+        
+        # Convert to alignment score (inverse distance)
+        alignment = 1.0 / (1.0 + torch.mean(phi_distance).item())
+        
+        return alignment
+    
+    def compute_phase_coherence(
+        self,
+        latent_codes: torch.Tensor
+    ) -> float:
+        """
+        Compute phase coherence in latent space.
+        
+        Measures coherence of phase relationships across dimensions.
+        
+        Args:
+            latent_codes: Batch of latent vectors
+            
+        Returns:
+            Phase coherence [0, 1]
+        """
+        # Compute phase from latent codes
+        phases = torch.angle(torch.complex(latent_codes, torch.zeros_like(latent_codes)))
+        
+        # Phase variance
+        phase_mean = torch.mean(phases, dim=0)
+        phase_variance = torch.mean((phases - phase_mean) ** 2)
+        
+        # Coherence is inverse of variance
+        coherence = 1.0 / (1.0 + phase_variance.item())
+        
+        return coherence
+    
+    def compute_decoherence_rate(
+        self,
+        density_matrix: torch.Tensor
+    ) -> float:
+        """
+        Compute estimated decoherence rate.
+        
+        Based on off-diagonal decay in density matrix.
+        
+        Args:
+            density_matrix: Quantum state density matrix
+            
+        Returns:
+            Decoherence rate estimate
+        """
+        # Off-diagonal elements decay under decoherence
+        diag = torch.diag(torch.diag(density_matrix))
+        off_diag = density_matrix - diag
+        
+        # Measure off-diagonal magnitude
+        off_diag_norm = torch.norm(off_diag, p='fro').item()
+        diag_norm = torch.norm(diag, p='fro').item()
+        
+        # Decoherence rate approximation
+        if diag_norm > 0:
+            return 1.0 - (off_diag_norm / diag_norm)
+        return 1.0
     
     def to_dict(self, metrics: CoherenceMetrics) -> Dict[str, float]:
         """Convert metrics to dictionary."""
@@ -369,7 +637,15 @@ class QuantumCoherenceAnalyzer:
             'purity': metrics.purity,
             'von_neumann_entropy': metrics.von_neumann_entropy,
             'participation_ratio': metrics.participation_ratio,
-            'effective_dimension': metrics.effective_dimension
+            'effective_dimension': metrics.effective_dimension,
+            'quantum_fisher_information': metrics.quantum_fisher_information,
+            'coherence_of_formation': metrics.coherence_of_formation,
+            'skew_information': metrics.skew_information,
+            'superposition_degree': metrics.superposition_degree,
+            'entanglement_entropy': metrics.entanglement_entropy,
+            'golden_ratio_alignment': metrics.golden_ratio_alignment,
+            'phase_coherence': metrics.phase_coherence,
+            'decoherence_rate': metrics.decoherence_rate
         }
 
 
@@ -620,6 +896,299 @@ class MixedStateRegularizer(torch.nn.Module):
         loss = torch.abs(trace - 1.0)
         
         return loss
+    
+    def _positivity_regularization(self, density_matrix: torch.Tensor) -> torch.Tensor:
+        """Ensure density matrix is positive semi-definite."""
+        eigenvalues = torch.linalg.eigvalsh(density_matrix)
+        negative_eigenvalues = torch.clamp(eigenvalues, max=0)
+        loss = torch.sum(torch.abs(negative_eigenvalues))
+        return loss
+    
+    def _hermiticity_regularization(self, density_matrix: torch.Tensor) -> torch.Tensor:
+        """Ensure density matrix is Hermitian."""
+        # For real matrices, Hermitian = symmetric
+        diff = density_matrix - density_matrix.T
+        loss = torch.norm(diff, p='fro')
+        return loss
+    
+    def forward_enhanced(
+        self,
+        latent_codes: torch.Tensor,
+        include_positivity: bool = True,
+        include_hermiticity: bool = True
+    ) -> Dict[str, torch.Tensor]:
+        """
+        Compute enhanced mixed state regularization losses.
+        
+        Args:
+            latent_codes: Batch of latent vectors
+            include_positivity: Include positivity constraint
+            include_hermiticity: Include Hermiticity constraint
+            
+        Returns:
+            Dictionary of loss components
+        """
+        # Compute density matrix
+        density_matrix = self._compute_density_matrix(latent_codes)
+        
+        # Standard losses
+        entropy_loss = self._entropy_regularization(density_matrix)
+        purity_loss = self._purity_regularization(density_matrix)
+        trace_loss = self._trace_regularization(density_matrix)
+        
+        # Enhanced losses
+        losses = {
+            'entropy': entropy_loss,
+            'purity': purity_loss,
+            'trace': trace_loss
+        }
+        
+        if include_positivity:
+            losses['positivity'] = self._positivity_regularization(density_matrix)
+        
+        if include_hermiticity:
+            losses['hermiticity'] = self._hermiticity_regularization(density_matrix)
+        
+        # Total loss
+        total_loss = (
+            self.entropy_weight * entropy_loss +
+            self.purity_weight * purity_loss +
+            self.trace_weight * trace_loss
+        )
+        
+        if include_positivity:
+            total_loss = total_loss + 0.01 * losses['positivity']
+        
+        if include_hermiticity:
+            total_loss = total_loss + 0.01 * losses['hermiticity']
+        
+        losses['total'] = total_loss
+        
+        return losses
+
+
+class EnhancedGoldenRatioLoss(torch.nn.Module):
+    """
+    Enhanced golden ratio loss with multiple optimization strategies.
+    
+    Implements:
+    - Ratio-based loss (consecutive dimension ratios)
+    - Fibonacci-weighted loss
+    - Spectral golden ratio loss
+    - Phase alignment loss
+    - Logarithmic golden ratio loss
+    """
+    
+    def __init__(
+        self,
+        phi: float = 1.618033988749895,
+        weight: float = 0.1,
+        method: str = 'combined',
+        adaptive_weight: bool = True
+    ):
+        """
+        Initialize enhanced golden ratio loss.
+        
+        Args:
+            phi: Golden ratio value
+            weight: Base loss weight
+            method: Loss method ('ratio', 'fibonacci', 'spectral', 'phase', 'combined')
+            adaptive_weight: Whether to use adaptive weighting
+        """
+        super().__init__()
+        self.phi = phi
+        self.weight = weight
+        self.method = method
+        self.adaptive_weight = adaptive_weight
+        
+        # Fibonacci sequence for weighting
+        self.register_buffer('fibonacci', self._generate_fibonacci(32))
+    
+    def _generate_fibonacci(self, n: int) -> torch.Tensor:
+        """Generate Fibonacci sequence."""
+        fib = [1, 1]
+        for i in range(2, n):
+            fib.append(fib[-1] + fib[-2])
+        return torch.tensor(fib, dtype=torch.float32)
+    
+    def forward(self, latent_codes: torch.Tensor) -> torch.Tensor:
+        """
+        Compute enhanced golden ratio loss.
+        
+        Args:
+            latent_codes: Batch of latent vectors [batch_size, latent_dim]
+            
+        Returns:
+            Golden ratio loss value
+        """
+        if latent_codes.dim() == 1:
+            latent_codes = latent_codes.unsqueeze(0)
+        
+        if self.method == 'ratio':
+            loss = self._ratio_loss(latent_codes)
+        elif self.method == 'fibonacci':
+            loss = self._fibonacci_loss(latent_codes)
+        elif self.method == 'spectral':
+            loss = self._spectral_loss(latent_codes)
+        elif self.method == 'phase':
+            loss = self._phase_loss(latent_codes)
+        elif self.method == 'combined':
+            loss = self._combined_loss(latent_codes)
+        else:
+            loss = self._ratio_loss(latent_codes)
+        
+        # Adaptive weighting based on current alignment
+        if self.adaptive_weight:
+            alignment = self._compute_alignment(latent_codes)
+            adaptive_weight = self.weight * (1.0 + (1.0 - alignment))
+            return adaptive_weight * loss
+        
+        return self.weight * loss
+    
+    def _compute_alignment(self, latent_codes: torch.Tensor) -> float:
+        """Compute current golden ratio alignment."""
+        sorted_latent, _ = torch.sort(torch.abs(latent_codes), dim=1, descending=True)
+        ratios = sorted_latent[:, 1:] / (sorted_latent[:, :-1] + 1e-10)
+        phi_distance = torch.abs(ratios - self.phi)
+        alignment = 1.0 / (1.0 + torch.mean(phi_distance).item())
+        return alignment
+    
+    def _ratio_loss(self, latent_codes: torch.Tensor) -> torch.Tensor:
+        """Ratio-based golden ratio loss."""
+        sorted_latent, _ = torch.sort(torch.abs(latent_codes), dim=1, descending=True)
+        ratios = sorted_latent[:, 1:] / (sorted_latent[:, :-1] + 1e-10)
+        phi_distance = torch.abs(ratios - self.phi)
+        return torch.mean(phi_distance)
+    
+    def _fibonacci_loss(self, latent_codes: torch.Tensor) -> torch.Tensor:
+        """Fibonacci-weighted golden ratio loss."""
+        batch_size, latent_dim = latent_codes.shape
+        
+        # Get Fibonacci weights
+        fib = self.fibonacci[:latent_dim].to(latent_codes.device)
+        fib_weights = fib / fib.sum()
+        
+        # Weighted latent codes
+        weighted = latent_codes * fib_weights.unsqueeze(0)
+        
+        # Sort and compute ratios
+        weighted_sorted, _ = torch.sort(torch.abs(weighted), dim=1, descending=True)
+        ratios = weighted_sorted[:, 1:] / (weighted_sorted[:, :-1] + 1e-10)
+        
+        # Distance from golden ratio
+        return torch.mean(torch.abs(ratios - self.phi))
+    
+    def _spectral_loss(self, latent_codes: torch.Tensor) -> torch.Tensor:
+        """Spectral golden ratio loss based on eigenvalue distribution."""
+        # Compute covariance matrix
+        cov = torch.cov(latent_codes.T)
+        
+        # Get eigenvalues
+        eigenvalues = torch.linalg.eigvalsh(cov)
+        eigenvalues = torch.sort(eigenvalues, descending=True)[0]
+        
+        # Compute eigenvalue ratios
+        ratios = eigenvalues[1:] / (eigenvalues[:-1] + 1e-10)
+        
+        # Distance from golden ratio
+        return torch.mean(torch.abs(ratios - self.phi))
+    
+    def _phase_loss(self, latent_codes: torch.Tensor) -> torch.Tensor:
+        """Phase-based golden ratio loss."""
+        # Compute phase angles
+        phases = torch.angle(torch.complex(latent_codes, torch.zeros_like(latent_codes)))
+        
+        # Sort phases
+        sorted_phases, _ = torch.sort(phases, dim=1)
+        
+        # Compute phase differences
+        phase_diffs = sorted_phases[:, 1:] - sorted_phases[:, :-1]
+        
+        # Target: golden ratio of 2π
+        target_diff = 2 * np.pi / self.phi
+        
+        # Distance from target
+        return torch.mean(torch.abs(phase_diffs - target_diff))
+    
+    def _combined_loss(self, latent_codes: torch.Tensor) -> torch.Tensor:
+        """Combined golden ratio loss."""
+        ratio_loss = self._ratio_loss(latent_codes)
+        fib_loss = self._fibonacci_loss(latent_codes)
+        spectral_loss = self._spectral_loss(latent_codes)
+        
+        # Weighted combination
+        return 0.4 * ratio_loss + 0.3 * fib_loss + 0.3 * spectral_loss
+
+
+class QuantumFidelityLoss(torch.nn.Module):
+    """
+    Loss function for quantum fidelity optimization.
+    
+    Encourages high fidelity between latent representations
+    and target quantum states.
+    """
+    
+    def __init__(
+        self,
+        target_fidelity: float = 0.95,
+        weight: float = 0.1
+    ):
+        """
+        Initialize quantum fidelity loss.
+        
+        Args:
+            target_fidelity: Target fidelity value
+            weight: Loss weight
+        """
+        super().__init__()
+        self.target_fidelity = target_fidelity
+        self.weight = weight
+    
+    def forward(
+        self,
+        latent_codes: torch.Tensor,
+        target_codes: Optional[torch.Tensor] = None
+    ) -> torch.Tensor:
+        """
+        Compute quantum fidelity loss.
+        
+        Args:
+            latent_codes: Batch of latent vectors
+            target_codes: Optional target codes (uses identity if None)
+            
+        Returns:
+            Fidelity loss value
+        """
+        if target_codes is None:
+            # Use maximally entangled state as target
+            target_codes = torch.ones_like(latent_codes) / np.sqrt(latent_codes.shape[-1])
+        
+        # Compute density matrices
+        batch_size = latent_codes.shape[0]
+        latent_dim = latent_codes.shape[-1]
+        
+        # Density matrix for latent codes
+        rho = torch.zeros(latent_dim, latent_dim, device=latent_codes.device)
+        for i in range(batch_size):
+            z = latent_codes[i].unsqueeze(1)
+            rho += z @ z.T
+        rho /= batch_size
+        
+        # Density matrix for target
+        sigma = torch.zeros(latent_dim, latent_dim, device=target_codes.device)
+        for i in range(batch_size):
+            t = target_codes[i].unsqueeze(1)
+            sigma += t @ t.T
+        sigma /= batch_size
+        
+        # Fidelity: F(ρ, σ) = (Tr(√(√ρ σ √ρ)))²
+        # Simplified: F ≈ Tr(ρ σ) for pure states
+        fidelity = torch.trace(rho @ sigma).clamp(min=0, max=1)
+        
+        # Loss: distance from target fidelity
+        loss = torch.abs(fidelity - self.target_fidelity)
+        
+        return self.weight * loss
 
 
 # Convenience functions
