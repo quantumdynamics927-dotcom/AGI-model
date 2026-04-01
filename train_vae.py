@@ -582,7 +582,7 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
             batch_x = batch_x.to(device)
             optimizer.zero_grad()
 
-            recon_x, mu, log_var, density_matrix = model(batch_x)
+            recon_x, mu, log_var, _ = model(batch_x, return_density=True)
 
             # The first full cloud research loop in research_loop_result.json
             # flagged KL over-regularization, so halve the max beta for the
@@ -687,7 +687,7 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
         with torch.no_grad():
             for batch_x, in val_loader:
                 batch_x = batch_x.to(device)
-                recon_x, mu, log_var, density_matrix = model(batch_x)
+                recon_x, mu, log_var, density_matrix = model(batch_x, return_density=True)
 
                 # Use model.compute_losses like training loop for consistent metrics
                 total_tensor, losses = model.compute_losses(recon_x, batch_x, mu, log_var, weights=weights)
@@ -724,7 +724,7 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
         with torch.no_grad():
             # Get a batch for metrics
             sample_batch = next(iter(val_loader))[0][:10].to(device)  # First 10 samples
-            recon_batch, mu_sample, _, density_sample = model(sample_batch)
+            recon_batch, mu_sample, _ = model(sample_batch)
 
             # Calculate LZ complexity on original and reconstructed
             lz_original = np.mean([calculate_lz_complexity(sample_batch[i]) for i in range(len(sample_batch))])

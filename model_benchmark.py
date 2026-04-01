@@ -290,7 +290,7 @@ def benchmark_model(model: nn.Module,
     # Reconstruction quality
     with torch.no_grad():
         if isinstance(model, QuantumVAE):
-            recon, mu, log_var, _ = model(test_data)
+            recon, mu, log_var, _ = model(test_data, return_density=True)
         else:
             recon, mu, log_var = model(test_data)
         

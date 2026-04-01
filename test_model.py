@@ -6,7 +6,7 @@ model = QuantumVAE(input_dim=128, latent_dim=32)
 x = torch.randn(10, 128)  # Batch of 10 samples
 
 print("Testing QuantumVAE forward pass...")
-recon_x, mu, log_var, density_matrix = model(x)
+recon_x, mu, log_var, density_matrix = model(x, return_density=True)
 print(f"Input shape: {x.shape}")
 print(f"Reconstructed shape: {recon_x.shape}")
 print(f"Mu shape: {mu.shape}")

@@ -81,7 +81,7 @@ def main(argv: Optional[list] = None):
                     inp = torch.rand(1, model.decoder[-2].out_features) if hasattr(model.decoder[-2], 'out_features') else torch.rand(1, 128)
                     # fallback input size guess
                     try:
-                        recon, mu, logvar, density = model(inp)
+                        recon, mu, logvar, density = model(inp, return_density=True)
                         result['inference_ok'] = True
                         result['recon_shape'] = list(recon.shape)
                     except Exception as e:

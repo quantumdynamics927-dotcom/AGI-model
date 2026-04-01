@@ -68,7 +68,7 @@ def test_model_with_phi_init(sample_model):
     
     # Test forward pass
     x = torch.randn(4, 128)
-    recon, mu, log_var, density = sample_model(x)
+    recon, mu, log_var, density = sample_model(x, return_density=True)
     
     assert recon.shape == x.shape
     assert mu.shape == (4, 32)
@@ -79,7 +79,7 @@ def test_model_with_phi_init(sample_model):
 def test_phi_resonance_computation(sample_model):
     """Test phi-resonance computation from model"""
     x = torch.randn(8, 128)
-    recon, mu, log_var, density = sample_model(x)
+    recon, mu, log_var, density = sample_model(x, return_density=True)
     
     # Test compute_phi_resonance method
     if hasattr(sample_model, 'compute_phi_resonance'):
@@ -99,7 +99,7 @@ def test_golden_ratio_callback_integration(sample_model, sample_loaders, temp_di
         for epoch in range(3):
             # Get a batch
             batch_x = next(iter(train_loader))[0]
-            recon, mu, log_var, density = sample_model(batch_x)
+            recon, mu, log_var, density = sample_model(batch_x, return_density=True)
             
             # Track resonance
             metrics = callback.on_epoch_end(epoch, sample_model, mu)
@@ -160,7 +160,7 @@ def test_training_step_with_utilities(sample_model, sample_loaders):
     
     # Forward pass
     optimizer.zero_grad()
-    recon, mu, log_var, density = sample_model(batch_x)
+    recon, mu, log_var, density = sample_model(batch_x, return_density=True)
     
     # Compute loss
     total_loss_val, loss_dict = total_loss(
@@ -197,7 +197,7 @@ def test_artifact_generation(temp_dir, sample_model, sample_loaders):
     with torch.no_grad():
         for epoch in range(5):
             batch_x = next(iter(train_loader))[0]
-            recon, mu, log_var, density = sample_model(batch_x)
+            recon, mu, log_var, density = sample_model(batch_x, return_density=True)
             
             # Track metrics
             phi_metrics = callback.on_epoch_end(epoch, sample_model, mu)
@@ -231,14 +231,14 @@ def test_backward_compatibility():
     # Model should work without phi_init
     model_old = QuantumVAE(input_dim=128, latent_dim=32, use_phi_init=False)
     x = torch.randn(4, 128)
-    recon, mu, log_var, density = model_old(x)
+    recon, mu, log_var, density = model_old(x, return_density=True)
     assert recon.shape == x.shape
     
     # Training should work without callbacks
     optimizer = torch.optim.Adam(model_old.parameters(), lr=1e-3)
     model_old.train()
     optimizer.zero_grad()
-    recon, mu, log_var, density = model_old(x)
+    recon, mu, log_var, density = model_old(x, return_density=True)
     loss, _ = total_loss(recon, x, mu, log_var, density)
     loss.backward()
     optimizer.step()
