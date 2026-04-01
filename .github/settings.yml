@@ -1,7 +1,7 @@
 repository:
   name: AGI-model
-  description: Research platform for a quantum-inspired VAE, latent-space analysis, and TMT-OS integrations.
-  homepage: ""
+  description: Experimental research platform for a quantum-inspired VAE, analysis workflows, and TMT-OS integrations.
+  homepage: "https://github.com/quantumdynamics927-dotcom/AGI-model#readme"
   topics:
     - quantum-machine-learning
     - variational-autoencoder
@@ -10,6 +10,8 @@ repository:
     - consciousness-research
     - latent-space-analysis
     - tmt-os
+    - docker
+    - github-actions
   has_issues: true
   has_projects: true
   has_wiki: false
