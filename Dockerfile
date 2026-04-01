@@ -1,6 +1,6 @@
 # Dockerfile for Quantum Consciousness VAE
-# Security-hardened base image with specific version pinning
-FROM python:3.11.9-slim-bookworm@sha256:bc38f7b5c8a9d5f6a0f4d5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5
+# Security-hardened base image with specific version
+FROM python:3.11-slim-bookworm
 
 # Security: Create non-root user early
 RUN groupadd -r tmtuser && useradd -r -g tmtuser tmtuser
@@ -15,12 +15,12 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PIP_NO_CACHE_DIR=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1
 
-# Install system dependencies with version pinning and cleanup
+# Install system dependencies with cleanup
 # Using --no-install-recommends to minimize attack surface
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential=12.9 \
-    curl=7.88.1-10+deb12u5 \
-    git=1:2.39.2-1.1 \
+    build-essential \
+    curl \
+    git \
     && apt-get upgrade -y \
     && apt-get autoremove -y \
     && apt-get clean \
