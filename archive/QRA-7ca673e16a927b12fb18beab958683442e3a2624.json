@@ -1,0 +1,8 @@
+{
+  "name": "Asset 2",
+  "experiment_type": "quantum_experiment",
+  "fingerprint": {
+    "sha3_256": "c8d61117eb05fdf26385fa70bfbdedf41c124efa2d81c65537f609aeac48dd79",
+    "timestamp": 1775083929.9337134
+  }
+}
