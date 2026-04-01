@@ -158,7 +158,7 @@ docker build -f Dockerfile.dashboard -t agi-model-dashboard:local .
 The repository devops setup is intentionally scoped to what is currently maintained in-tree:
 
 - **CI:** `.github/workflows/ci.yml` runs the Python test matrix and optional AGI eval smoke workflow dispatch.
-- **Container build validation:** `.github/workflows/deploy.yml` builds the runtime and dashboard images and can publish them to GHCR when explicitly requested.
+- **Container build and publish:** `.github/workflows/deploy.yml` builds the runtime and dashboard images and publishes them to GHCR on pushes to `main`/`master`, with optional manual dispatch for explicit image publication.
 - **Security and dependency hygiene:** `.github/workflows/security.yml` and `.github/dependabot.yml`.
 - **Repository metadata as code:** `.github/settings.yml` tracks the GitHub repository description and topics.
 
