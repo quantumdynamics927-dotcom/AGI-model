@@ -1,8 +1,0 @@
-{
-  "name": "Health Check Asset",
-  "experiment_type": "quantum_experiment",
-  "fingerprint": {
-    "sha3_256": "e46f8079f5b72f9f9b79ae296c37c25e6c9984ed1d1a6566e228fbe9faf9225f",
-    "timestamp": 1775083930.128592
-  }
-}
