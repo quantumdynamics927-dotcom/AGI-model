@@ -1,0 +1,105 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info
+dist
+build
+*.egg
+.pytest_cache
+.mypy_cache
+.coverage
+htmlcov
+.tox
+.nox
+
+# Virtual environments
+.venv
+venv
+ENV
+env
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Testing
+tests/
+test_*.py
+*_test.py
+coverage.xml
+*.cover
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+Jenkinsfile
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Security sensitive files
+.env
+.env.*
+*.pem
+*.key
+*.crt
+secrets/
+credentials/
+
+# Build artifacts
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large data files (should be mounted or downloaded)
+*.pt
+*.pth
+*.bin
+*.h5
+*.pkl
+*.pickle
+data/
+datasets/
+models/
+checkpoints/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Node modules (if any frontend)
+node_modules/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Local development
+.env.local
+.env.*.local
