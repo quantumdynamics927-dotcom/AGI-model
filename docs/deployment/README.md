@@ -14,7 +14,7 @@ Infrastructure-specific staging and production rollout logic is intentionally no
 ### Runtime image
 
 - **Definition:** `/Dockerfile`
-- **Purpose:** run the main Python application in API serve mode
+- **Purpose:** run the FastAPI websocket bridge exported by `ws_bridge.py`
 - **Default port:** `8000`
 
 ### Dashboard image
@@ -33,7 +33,7 @@ source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 python -m pip install -r requirements-dev.txt
-python main.py --mode serve --host 0.0.0.0 --port 8000
+python -m uvicorn ws_bridge:app --host 0.0.0.0 --port 8000
 ```
 
 ## Local container workflow

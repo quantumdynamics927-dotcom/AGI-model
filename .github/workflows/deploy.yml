@@ -3,22 +3,8 @@ name: Container Images
 on:
   push:
     branches: [main, master]
-    paths:
-      - Dockerfile
-      - Dockerfile.dashboard
-      - requirements.txt
-      - pyproject.toml
-      - dashboards/quantum_consciousness_dashboard/**
-      - .github/workflows/deploy.yml
   pull_request:
     branches: [main, master]
-    paths:
-      - Dockerfile
-      - Dockerfile.dashboard
-      - requirements.txt
-      - pyproject.toml
-      - dashboards/quantum_consciousness_dashboard/**
-      - .github/workflows/deploy.yml
   workflow_dispatch:
     inputs:
       publish_images:
@@ -50,8 +36,6 @@ jobs:
         run: |
           SHOULD_PUSH=false
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.publish_images }}" = "true" ]; then
-            SHOULD_PUSH=true
-          elif [ "${{ github.event_name }}" = "push" ]; then
             SHOULD_PUSH=true
           fi
           echo "should-push=${SHOULD_PUSH}" >> "$GITHUB_OUTPUT"

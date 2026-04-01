@@ -127,10 +127,10 @@ python test_model.py
 ### Launch the API bridge
 
 ```bash
-python main.py --mode serve --host 0.0.0.0 --port 8000
+python -m uvicorn ws_bridge:app --host 0.0.0.0 --port 8000
 ```
 
-This serves the FastAPI bridge used by the Docker runtime image.
+This serves the FastAPI bridge exported by `ws_bridge.py` and used by the Docker runtime image.
 
 ### Launch the dashboard
 
@@ -160,7 +160,7 @@ docker build -f Dockerfile.dashboard -t agi-model-dashboard:local .
 The repository devops setup is intentionally scoped to what is currently maintained in-tree:
 
 - **CI:** `.github/workflows/ci.yml` runs the Python test matrix and optional AGI eval smoke workflow dispatch.
-- **Container build validation:** `.github/workflows/deploy.yml` builds the runtime and dashboard images and can publish them to GHCR when explicitly requested.
+- **Container build validation:** `.github/workflows/deploy.yml` builds the runtime and dashboard images on push and pull request, and publishes them to GHCR only when explicitly requested.
 - **Security and dependency hygiene:** `.github/workflows/security.yml` and `.github/dependabot.yml`.
 - **Repository metadata as code:** `.github/settings.yml` tracks the GitHub repository description and topics.
 
