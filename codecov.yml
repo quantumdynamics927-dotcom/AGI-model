@@ -4,6 +4,7 @@
 codecov:
   require_ci_to_pass: true
   branch: main
+  token: 87b64133-c55c-4a4c-b134-4ff289cf8e94
 
 coverage:
   precision: 2
