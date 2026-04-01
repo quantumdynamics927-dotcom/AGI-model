@@ -72,9 +72,7 @@ python -m venv .venv
 source .venv/bin/activate  # Linux / macOS
 # .venv\Scripts\activate   # Windows PowerShell
 
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-python -m pip install -r requirements-dev.txt
+python -m pip install --upgrade pip -r requirements.txt -r requirements-dev.txt
 cp .env.example .env
 ```
 
