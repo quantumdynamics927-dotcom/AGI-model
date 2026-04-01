@@ -724,7 +724,7 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
         with torch.no_grad():
             # Get a batch for metrics
             sample_batch = next(iter(val_loader))[0][:10].to(device)  # First 10 samples
-            recon_batch, mu_sample, _, density_sample = model(sample_batch, return_density=True)
+            recon_batch, mu_sample, _ = model(sample_batch)
 
             # Calculate LZ complexity on original and reconstructed
             lz_original = np.mean([calculate_lz_complexity(sample_batch[i]) for i in range(len(sample_batch))])
