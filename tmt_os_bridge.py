@@ -20,12 +20,12 @@ import threading
 import queue
 from pathlib import Path
 from typing import Dict, List, Optional, Any
-from vae_model import QuantumVAE
 import argparse
-
-# Add parent directory to path for imports
-import sys
-sys.path.append(str(Path(__file__).parent.parent / "TMT_Quantum_Vault-"))
+from packages.agi_model_core import QuantumVAE
+from packages.agi_model_integrations import (
+    VaultIntegrationError,
+    resolve_vault_repo_path,
+)
 
 class TMTOSBridge:
     """
@@ -37,7 +37,7 @@ class TMTOSBridge:
     
     def __init__(self, 
                  vae_model_path: str = "best_model.pt",
-                 vault_path: str = "../TMT_Quantum_Vault-",
+                 vault_path: Optional[str] = None,
                  sync_interval: float = 1.0):
         """
         Initialize the TMT-OS bridge.
@@ -52,7 +52,14 @@ class TMTOSBridge:
             Interval between synchronization cycles in seconds
         """
         self.vae_model_path = vae_model_path
-        self.vault_path = Path(vault_path)
+        try:
+            self.vault_path = resolve_vault_repo_path(vault_path)
+        except VaultIntegrationError:
+            self.vault_path = (
+                Path(vault_path).expanduser().resolve()
+                if vault_path
+                else Path("../TMT_Quantum_Vault-").resolve()
+            )
         self.sync_interval = sync_interval
         
         # Load QuantumVAE model
