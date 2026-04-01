@@ -238,7 +238,7 @@ jobs:
     name: Notify Security Findings
     runs-on: ubuntu-latest
     needs: [code-security-scan, dependency-security-scan, container-security-scan]
-    if: failure()
+    if: failure() && secrets.SLACK_WEBHOOK_URL != ''
 
     steps:
       - name: ⚠️ Security Alert Notification
