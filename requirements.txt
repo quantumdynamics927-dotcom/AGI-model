@@ -28,6 +28,5 @@ certifi>=2024.2.0
 cryptography>=42.0.0
 
 # Scientific Data Archival (replaces NFT/blockchain)
-# For research data provenance and archival
-pysha3>=1.0.2  # Cryptographic hashing for experiment verification
+# Python's built-in hashlib.sha3_256 provides SHA-3 support for provenance hashing
 jsonschema>=4.21.0  # Schema validation for experiment metadata
