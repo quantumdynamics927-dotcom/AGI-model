@@ -60,7 +60,7 @@ It is responsible for:
 
 - validating that both Docker images build successfully,
 - generating OCI metadata,
-- optionally publishing images to GitHub Container Registry when explicitly requested.
+- publishing images to GitHub Container Registry on pushes to the main branches and when manually triggered via the workflow.
 
 ## Environment and secrets
 
