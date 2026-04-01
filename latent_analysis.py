@@ -73,7 +73,7 @@ def extract_quantum_fingerprint(consciousness_state, model_path='best_model.pt')
     with torch.no_grad():
         state_tensor = torch.from_numpy(consciousness_state).float().unsqueeze(0)
         mu, log_var = model.encode(state_tensor)
-        recon, _, _, density_matrix = model(state_tensor)
+        recon, _, _, density_matrix = model(state_tensor, return_density=True)
 
         # Compute metrics
         from vae_model import fidelity_loss, entanglement_entropy
