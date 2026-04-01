@@ -1,6 +1,10 @@
-> **Status:** Experimental research repository. NFT publishing and contract-verification flows remain paused while that workstream is on hold.
-
 # AGI-model
+
+[![codecov](https://codecov.io/gh/quantumdynamics927-dotcom/AGI-model/branch/main/graph/badge.svg?token=MY3MH0L5L9)](https://codecov.io/gh/quantumdynamics927-dotcom/AGI-model)
+[![CI](https://github.com/quantumdynamics927-dotcom/AGI-model/actions/workflows/ci.yml/badge.svg)](https://github.com/quantumdynamics927-dotcom/AGI-model/actions/workflows/ci.yml)
+[![Security](https://github.com/quantumdynamics927-dotcom/AGI-model/actions/workflows/security.yml/badge.svg)](https://github.com/quantumdynamics927-dotcom/AGI-model/actions/workflows/security.yml)
+
+> **Status:** Experimental research repository. Quantum result archival system with cryptographic verification and provenance tracking.
 
 AGI-model is a research platform for quantum-inspired variational autoencoder (VAE) experiments, latent-space analysis, consciousness-oriented exploration, and TMT-OS integrations.
 
