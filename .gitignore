@@ -87,6 +87,7 @@ artifacts/
 deployments/
 .cache/
 coverage.xml
+junit.xml
 .coverage
 htmlcov/
 .pytest_cache/
@@ -207,6 +208,7 @@ experiment_results/
 simulation_data/
 test_results/
 integration_test_results/
+archive/QRA-*.json
 best_model.summary.json
 temp_kl_probe.summary.json
 vae_smoke_checkpoint.json
