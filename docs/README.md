@@ -18,6 +18,7 @@ If you are new to the project, read these documents in order:
 | [API reference](api/README.md) | Review available interfaces and integration-facing details |
 | [Deployment guide](deployment/README.md) | Run the project in local, staging, or production-style environments |
 | [Development guide](development/README.md) | Follow coding, testing, and contribution expectations |
+| [Environment contract](development/environment-contract.md) | Configure local, CI, and sibling Vault interoperability variables |
 | [Security guide](security/README.md) | Review security controls, assumptions, and operational guidance |
 | [Contributing guide](contributing/CONTRIBUTING.md) | Prepare pull requests and collaborate consistently |
 | [Code of conduct](contributing/CODE_OF_CONDUCT.md) | Understand community participation expectations |

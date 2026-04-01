@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import argparse
-import importlib
 import json
 import math
 import sys
@@ -10,14 +9,9 @@ from pathlib import Path
 from typing import Any
 
 import torch
+from packages.agi_model_core import QuantumVAE, total_loss
 
 ROOT = Path(__file__).resolve().parents[1]
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
-
-_vae_model = importlib.import_module("vae_model")
-QuantumVAE = _vae_model.QuantumVAE
-total_loss = _vae_model.total_loss
 
 
 CONTRACT_VERSION = "1.0"
@@ -112,7 +106,9 @@ def run_vae_smoke(
 
     with torch.no_grad():
         inputs = torch.rand(batch_size, input_dim)
-        recon_x, mu, log_var, density_matrix = model(inputs, return_density=True)
+        recon_x, mu, log_var, density_matrix = model(
+            inputs, return_density=True
+        )
         total_tensor, losses = total_loss(
             recon_x,
             inputs,

@@ -8,6 +8,10 @@ homepage = "https://github.com/quantumdynamics927-dotcom/AGI-model"
 repository = "https://github.com/quantumdynamics927-dotcom/AGI-model"
 documentation = "https://github.com/quantumdynamics927-dotcom/AGI-model/tree/main/docs"
 keywords = ["quantum", "vae", "pytorch", "research", "tmt-os"]
+packages = [
+    { include = "packages" },
+    { include = "agi_model" },
+]
 
 [tool.poetry.dependencies]
 python = ">=3.10"

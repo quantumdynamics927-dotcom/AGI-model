@@ -6,7 +6,7 @@
 
 > **Status:** Experimental research repository. Quantum result archival system with cryptographic verification and provenance tracking.
 
-AGI-model is a research platform for quantum-inspired variational autoencoder (VAE) experiments, latent-space analysis, consciousness-oriented exploration, and TMT-OS integrations.
+AGI-model is a research platform for quantum-inspired variational autoencoder (VAE) experiments, latent-space analysis, consciousness-oriented exploration, package-oriented runtime foundations, and TMT-OS / TMT_Quantum_Vault interoperability.
 
 It brings together model training, scientific utilities, dashboards, data-processing scripts, and repository automation in a single workspace for exploratory research rather than production deployment.
 
@@ -47,7 +47,7 @@ This repository currently groups four complementary areas of work:
 | Validation | Run regression tests and local smoke checks | `tests/`, `test_model.py`, `.github/workflows/ci.yml` |
 | Analysis | Explore latent structure, golden-ratio proximity, and consciousness metrics | `latent_analysis.py`, `golden_ratio_*.py`, `quantum_consciousness_link.py` |
 | Dashboarding | Launch the Streamlit dashboard for local inspection | `dashboards/quantum_consciousness_dashboard/app.py` |
-| Integration | Work across TMT-OS, geometry, observer, and provenance modules | `TMT-OS/`, `integrations/`, `molecular_geometry/`, `quantum_observer/` |
+| Integration | Work across TMT-OS, Vault, geometry, observer, and provenance modules | `packages/`, `TMT-OS/`, `integrations/`, `molecular_geometry/`, `quantum_observer/` |
 | Containerization | Build local runtime and dashboard images | `Dockerfile`, `Dockerfile.dashboard`, `.github/workflows/deploy.yml` |
 
 ## Repository setup
@@ -181,6 +181,7 @@ The repository devops setup is intentionally scoped to what is currently maintai
 | `test_model.py` | Lightweight local model validation |
 | `tests/` | Automated regression and integration coverage |
 | `docs/` | Central documentation hub |
+| `packages/` | Package-oriented foundation for core, apps, and integrations |
 | `dashboards/quantum_consciousness_dashboard/` | Streamlit dashboard |
 | `integrations/` | External and system integration modules |
 | `molecular_geometry/` | Molecular and spatial analysis components |
