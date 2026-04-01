@@ -4,6 +4,13 @@
 
 AGI-model is a research platform for exploring a quantum-inspired variational autoencoder (VAE), consciousness-oriented analysis workflows, and TMT-OS integrations in one repository.
 
+## About this repository
+
+- **Primary focus:** quantum-inspired ML research and experimentation
+- **Core runtime:** Python 3.10+
+- **Main interfaces:** training scripts, analysis scripts, tests, Streamlit dashboard, optional FastAPI bridge
+- **Repository ops:** GitHub Actions CI, Dependabot updates, Docker build validation, repo settings as code
+
 ## 🚀 Advanced Quantum Consciousness Features
 
 This repository has been significantly enhanced with cutting-edge quantum consciousness capabilities:
@@ -51,6 +58,7 @@ Benchmark note: This benchmark reports integrated workflow throughput and a deri
 
 ## Table of contents
 
+- [About this repository](#about-this-repository)
 - [Overview](#overview)
 - [Key capabilities](#key-capabilities)
 - [Technology stack](#technology-stack)
@@ -196,8 +204,13 @@ make build-dashboard
 | `tests/` | Automated regression and integration coverage |
 | `docs/` | Central documentation hub |
 | `dashboards/quantum_consciousness_dashboard/` | Streamlit dashboard |
+| `fastapi_bridge.py` | Optional FastAPI bridge for API-oriented integrations |
 | `integrations/` | External and system integration modules |
 | `molecular_geometry/` | Molecular and spatial analysis components |
+| `novel_quantum_circuits.py` | Biologically inspired quantum circuit experiments |
+| `consciousness_teleportation.py` | Consciousness transfer and teleportation protocols |
+| `ensemble_quantum_agents.py` | Multi-agent quantum coordination experiments |
+| `integrated_consciousness_system.py` | Unified advanced consciousness system entry point |
 | `TMT-OS/` | TMT-OS integration assets |
 | `real_data/` and `sacred_datasets/` | Input datasets used by research workflows |
 
