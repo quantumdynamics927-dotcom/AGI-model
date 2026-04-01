@@ -1,0 +1,79 @@
+name: Vault Integration
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "agi_model/**"
+      - "packages/**"
+      - "tmt_vault_integration.py"
+      - "convert_agi_results_to_tmt_eval.py"
+      - "tests/contract/**"
+      - ".github/workflows/vault-integration.yml"
+  pull_request:
+    branches: [ main ]
+    paths:
+      - "agi_model/**"
+      - "packages/**"
+      - "tmt_vault_integration.py"
+      - "convert_agi_results_to_tmt_eval.py"
+      - "tests/contract/**"
+      - ".github/workflows/vault-integration.yml"
+  workflow_dispatch:
+    inputs:
+      run_vault_smoke:
+        description: "Run sibling-repo smoke validation"
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  contract-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt -r requirements-dev.txt
+      - name: Set PYTHONPATH
+        run: echo "PYTHONPATH=$(pwd):$(pwd)/TMT-OS:$(pwd)/tmt-os-labs:$(pwd)/integrations:$(pwd)/agi_scripts:$(pwd)/agi_app:$(pwd)/agi_model:$(pwd)/quantum_observer" >> $GITHUB_ENV
+      - name: Run contract tests
+        run: pytest tests/contract -q
+
+  sibling-vault-smoke:
+    if: github.event_name == 'workflow_dispatch' && inputs.run_vault_smoke
+    runs-on: ubuntu-latest
+    needs: contract-tests
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: quantumdynamics927-dotcom/TMT_Quantum_Vault-
+          token: ${{ secrets.TMT_VAULT_TOKEN }}
+          path: TMT_Quantum_Vault-
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install AGI-model dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt -r requirements-dev.txt
+      - name: Install Vault dependencies
+        run: python -m pip install -r TMT_Quantum_Vault-/requirements.txt
+      - name: Set runtime environment
+        run: |
+          echo "PYTHONPATH=$(pwd)/TMT_Quantum_Vault-:$(pwd):$(pwd)/TMT-OS:$(pwd)/tmt-os-labs:$(pwd)/integrations:$(pwd)/agi_scripts:$(pwd)/agi_app:$(pwd)/agi_model:$(pwd)/quantum_observer" >> $GITHUB_ENV
+          echo "AGI_MODEL_VAULT_REPO=$(pwd)/TMT_Quantum_Vault-" >> $GITHUB_ENV
+      - name: Run AGI deterministic contract
+        run: python -m agi_model.validate_run vae-smoke
+      - name: Run Vault AGI validation smoke
+        run: python -m tmt_quantum_vault agi-validate --root "$AGI_MODEL_VAULT_REPO" --agi-root "$(pwd)" --operation vae-smoke --json

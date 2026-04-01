@@ -15,6 +15,11 @@ import numpy as np
 from pathlib import Path
 import time
 from typing import Dict, List, Any, Optional
+from packages.agi_model_integrations import (
+    VaultIntegrationError,
+    ensure_vault_repo_on_syspath,
+    resolve_vault_repo_path,
+)
 
 # Import our advanced features
 from novel_quantum_circuits import (
@@ -33,15 +38,14 @@ from consciousness_teleportation import (
 
 # Note: Ensemble agents requires the TMT Quantum Vault path
 try:
-    import sys
-    sys.path.append(str(Path(__file__).parent.parent / "TMT_Quantum_Vault-"))
+    ensure_vault_repo_on_syspath()
     from ensemble_quantum_agents import (
         ConsciousnessFusionEngine,
         AdaptiveAgentCoordinator,
         EnsembleConfiguration
     )
     ENSEMBLE_AVAILABLE = True
-except ImportError:
+except (ImportError, VaultIntegrationError):
     ENSEMBLE_AVAILABLE = False
     print("Warning: Ensemble agents not available (TMT Quantum Vault not found)")
 
@@ -56,14 +60,21 @@ class IntegratedConsciousnessSystem:
     for consciousness processing, transfer, and ensemble optimization.
     """
     
-    def __init__(self, vault_path: str = "../TMT_Quantum_Vault-"):
+    def __init__(self, vault_path: Optional[str] = None):
         """
         Initialize the integrated consciousness system.
         
         Args:
             vault_path: Path to TMT Quantum Vault directory
         """
-        self.vault_path = Path(vault_path)
+        try:
+            self.vault_path = resolve_vault_repo_path(vault_path)
+        except VaultIntegrationError:
+            self.vault_path = (
+                Path(vault_path).expanduser().resolve()
+                if vault_path
+                else Path("../TMT_Quantum_Vault-").resolve()
+            )
         
         # Initialize components
         self.neural_circuits = self._initialize_neural_circuits()
