@@ -582,7 +582,7 @@ def train_vae(model, train_loader, val_loader, num_epochs=200, device='cpu', sav
             batch_x = batch_x.to(device)
             optimizer.zero_grad()
 
-            recon_x, mu, log_var, density_matrix = model(batch_x, return_density=True)
+            recon_x, mu, log_var, _ = model(batch_x, return_density=True)
 
             # The first full cloud research loop in research_loop_result.json
             # flagged KL over-regularization, so halve the max beta for the
