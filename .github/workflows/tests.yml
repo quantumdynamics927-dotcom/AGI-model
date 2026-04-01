@@ -70,8 +70,9 @@ jobs:
           python -m pytest core/tests/ -v --cov=core --cov-report=xml --cov-report=html --cov-report=term-missing || true
 
       - name: 📊 Upload Coverage to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v5
         with:
+          token: ${{ secrets.CODECOV_TOKEN }}
           file: TMT-OS/coverage.xml
           flags: unittests
           name: codecov-umbrella
