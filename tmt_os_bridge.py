@@ -23,8 +23,7 @@ from typing import Dict, List, Optional, Any
 import argparse
 from packages.agi_model_core import QuantumVAE
 from packages.agi_model_integrations import (
-    VaultIntegrationError,
-    resolve_vault_repo_path,
+    resolve_vault_repo_path_or_fallback,
 )
 
 class TMTOSBridge:
@@ -52,14 +51,7 @@ class TMTOSBridge:
             Interval between synchronization cycles in seconds
         """
         self.vae_model_path = vae_model_path
-        try:
-            self.vault_path = resolve_vault_repo_path(vault_path)
-        except VaultIntegrationError:
-            self.vault_path = (
-                Path(vault_path).expanduser().resolve()
-                if vault_path
-                else Path("../TMT_Quantum_Vault-").resolve()
-            )
+        self.vault_path = resolve_vault_repo_path_or_fallback(vault_path)
         self.sync_interval = sync_interval
         
         # Load QuantumVAE model
