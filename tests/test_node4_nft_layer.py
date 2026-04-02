@@ -145,6 +145,7 @@ class TestNode4NFTLayer(unittest.TestCase):
         convert = self.node4.provenance_chain._compat_mint_event
 
         self.assertEqual(convert({"archive_id": 7})["token_id"], 7)
+        self.assertEqual(convert({"archive_id": "QRA-000007"})["token_id"], 7)
         self.assertEqual(convert({"archive_id": "QRA-000123"})["token_id"], 123)
         self.assertEqual(convert({"archive_id": "456"})["token_id"], 456)
         self.assertIsNone(convert({"archive_id": None})["token_id"])
@@ -185,6 +186,7 @@ class TestNode4NFTLayer(unittest.TestCase):
         self.assertEqual(archive_events[0]["archive_id"], asset["archive_id"])
 
         self.assertEqual(dual_events, [("archive", archive_events[0])])
+        self.assertFalse(any(kind == "mint" for kind, _ in dual_events))
 
 
 if __name__ == "__main__":
