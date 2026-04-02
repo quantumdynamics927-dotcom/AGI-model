@@ -70,7 +70,9 @@ class Node8QuantumObserver:
 
     def on_archive_event(self, archive_event: Dict[str, Any]):
         """Callback method triggered by the archive layer for backward-compatible mint notifications."""
-        self.on_mint_event(archive_event)
+        mint_event = dict(archive_event)
+        mint_event['token_id'] = self._resolve_token_id(archive_event)
+        self.on_mint_event(mint_event)
 
     @staticmethod
     def _resolve_token_id(event: Dict[str, Any]) -> Optional[Union[int, str]]:
