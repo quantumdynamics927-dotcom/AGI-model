@@ -392,7 +392,11 @@ class AGIDatabase:
 
             # Deserialize model state
             model_buffer = io.BytesIO(row.ModelData)
-            model_state = torch.load(model_buffer)
+            model_state = torch.load(
+                model_buffer,
+                map_location="cpu",
+                weights_only=True,
+            )
 
             architecture = json.loads(row.Architecture)
             return model_state, architecture
