@@ -84,11 +84,17 @@ class _MockProvenanceChain:
     def _compat_mint_event(event: Dict[str, Any]) -> Dict[str, Any]:
         """Build a legacy mint event payload from an archive event."""
         archive_id = event.get("archive_id")
-        token_id = archive_id
-        if isinstance(archive_id, str):
+        token_id = None
+        if isinstance(archive_id, int):
+            token_id = archive_id
+        elif isinstance(archive_id, str):
             parts = archive_id.rsplit("-", 1)
             if len(parts) == 2 and parts[1].isdigit():
                 token_id = int(parts[1])
+            elif archive_id.isdigit():
+                token_id = int(archive_id)
+            else:
+                token_id = archive_id
         compat_event = dict(event)
         compat_event["token_id"] = token_id
         return compat_event
@@ -130,12 +136,13 @@ class _MockProvenanceChain:
         
         # Notify listeners
         for listener in list(self.listeners):
-            legacy_cb = getattr(listener, "on_mint_event", None)
-            if callable(legacy_cb):
-                legacy_cb(self._compat_mint_event(event))
             cb = getattr(listener, "on_archive_event", None)
             if callable(cb):
                 cb(event)
+                continue
+            legacy_cb = getattr(listener, "on_mint_event", None)
+            if callable(legacy_cb):
+                legacy_cb(self._compat_mint_event(event))
         
         return tx_hash
     
