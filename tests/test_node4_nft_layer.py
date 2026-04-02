@@ -140,6 +140,52 @@ class TestNode4NFTLayer(unittest.TestCase):
         self.assertEqual(health_after_two[assets_key], 2)
         print("TestNode4: test_health_status_updates PASSED")
 
+    def test_compat_mint_event_conversion(self):
+        """Test legacy mint event payload conversion for archive events."""
+        convert = self.node4.provenance_chain._compat_mint_event
+
+        self.assertEqual(convert({"archive_id": 7})["token_id"], 7)
+        self.assertEqual(convert({"archive_id": "QRA-000123"})["token_id"], 123)
+        self.assertEqual(convert({"archive_id": "456"})["token_id"], 456)
+        self.assertIsNone(convert({"archive_id": None})["token_id"])
+        self.assertIsNone(convert({"archive_id": "not-a-token"})["token_id"])
+
+    def test_listener_backward_compatibility(self):
+        """Test that archive listeners and legacy mint listeners are notified compatibly."""
+        legacy_events = []
+        archive_events = []
+        dual_events = []
+
+        class LegacyListener:
+            def on_mint_event(self, event):
+                legacy_events.append(event)
+
+        class ArchiveListener:
+            def on_archive_event(self, event):
+                archive_events.append(event)
+
+        class DualListener:
+            def on_mint_event(self, event):
+                dual_events.append(("mint", event))
+
+            def on_archive_event(self, event):
+                dual_events.append(("archive", event))
+
+        self.node4.blockchain.add_listener(LegacyListener())
+        self.node4.blockchain.add_listener(ArchiveListener())
+        self.node4.blockchain.add_listener(DualListener())
+
+        asset = self.node4.create_asset(self.owner_address, self.raw_metadata)
+
+        self.assertEqual(len(legacy_events), 1)
+        self.assertEqual(legacy_events[0]["token_id"], 0)
+        self.assertEqual(legacy_events[0]["archive_id"], asset["archive_id"])
+
+        self.assertEqual(len(archive_events), 1)
+        self.assertEqual(archive_events[0]["archive_id"], asset["archive_id"])
+
+        self.assertEqual(dual_events, [("archive", archive_events[0])])
+
 
 if __name__ == "__main__":
     print("Running tests for Node 4: Quantum Archive Layer...")
