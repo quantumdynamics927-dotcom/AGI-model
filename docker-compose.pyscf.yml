@@ -1,0 +1,30 @@
+# Docker Compose for AGI-model PySCF Environment
+# =================================================
+# Usage:
+#   docker-compose up -d          # Start container in background
+#   docker-compose exec agi-pyscf bash  # Enter container
+#   docker-compose down           # Stop container
+
+version: '3.8'
+
+services:
+  agi-pyscf:
+    build:
+      context: .
+      dockerfile: Dockerfile.pyscf
+    image: agi-pyscf:latest
+    container_name: agi-pyscf
+    volumes:
+      - .:/workspace
+      - pyscf-cache:/root/.cache/pyscf
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    environment:
+      - PYTHONUNBUFFERED=1
+      - MPLCONFIGDIR=/tmp/matplotlib
+    command: /bin/bash
+
+volumes:
+  pyscf-cache:
+    driver: local
