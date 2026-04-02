@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+import os
 import hmac
 import hashlib
 import json
@@ -6,12 +7,17 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-ALCHEMY_SIGNING_KEY = "nEQfWc6DNi6VeiWGNW8DHfRd4CvPC2R7"
+SIGNING_KEY_ENV = "ALCHEMY_SIGNING_KEY"
 
-def verify_signature(payload, signature):
+def _get_signing_key() -> str | None:
+    signing_key = os.getenv(SIGNING_KEY_ENV, "").strip()
+    return signing_key or None
+
+
+def verify_signature(payload, signature, signing_key):
     """Verifica que el webhook viene de Alchemy"""
     expected = hmac.new(
-        ALCHEMY_SIGNING_KEY.encode(),
+        signing_key.encode(),
         payload,
         hashlib.sha256
     ).hexdigest()
@@ -20,12 +26,15 @@ def verify_signature(payload, signature):
 @app.route("/webhook/alchemy", methods=["POST"])
 def alchemy_webhook():
     signature = request.headers.get("X-Alchemy-Signature", "")
+    signing_key = _get_signing_key()
 
-    # Verificar firma (opcional pero recomendado)
-    # if not verify_signature(request.data, signature):
-    #     return jsonify({"error": "Invalid signature"}), 401
+    if not signing_key:
+        return jsonify({"error": "Signing key not configured"}), 503
 
-    data = request.json
+    if not verify_signature(request.data, signature, signing_key):
+        return jsonify({"error": "Invalid signature"}), 401
+
+    data = request.get_json(silent=True) or {}
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     print(f"\n{'='*50}")
@@ -71,10 +80,14 @@ def home():
     """
 
 if __name__ == "__main__":
+    host = os.getenv("WEBHOOK_HOST", "127.0.0.1")
+    port = int(os.getenv("PORT", "8000"))
+    debug = os.getenv("FLASK_DEBUG", "false").lower() == "true"
+
     print("="*50)
     print("Alchemy Webhook Server")
     print("="*50)
-    print("Endpoint: http://localhost:80/webhook/alchemy")
-    print("Health:   http://localhost:80/health")
+    print(f"Endpoint: http://{host}:{port}/webhook/alchemy")
+    print(f"Health:   http://{host}:{port}/health")
     print("="*50)
-    app.run(host="0.0.0.0", port=80, debug=True)
+    app.run(host=host, port=port, debug=debug)

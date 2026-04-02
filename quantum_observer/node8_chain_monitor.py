@@ -59,10 +59,10 @@ class Node8QuantumObserver:
         """
         Callback method triggered by the MockBlockchain upon a successful mint event.
         """
-        token_id = self._resolve_token_id(mint_event)
+        token_id = mint_event.get('token_id')
         owner = mint_event.get('owner')
         logger.info(f"EVENT DETECTED: New asset (Token {token_id}) was minted to owner {owner}.")
-
+        
         # Trigger confirmation and notification process
         self.confirm_minting(token_id)
         notification_msg = f"NFT Mint Confirmed: Token ID {token_id} is now verifiably owned by {owner}."

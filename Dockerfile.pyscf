@@ -1,0 +1,59 @@
+# PySCF Docker Environment for Quantum Chemistry
+# ================================================
+# This Dockerfile provides a complete PySCF environment for molecular VQE calculations.
+# 
+# Usage:
+#   docker build -f Dockerfile.pyscf -t agi-pyscf .
+#   docker run -it -v ${PWD}:/workspace agi-pyscf python your_script.py
+#
+# Author: AGI-model Quantum Computing Team
+# Date: April 2, 2026
+
+FROM python:3.11-slim
+
+LABEL maintainer="AGI-model Quantum Computing Team"
+LABEL description="PySCF environment for quantum chemistry calculations"
+LABEL version="1.0"
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install system dependencies for PySCF
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    gfortran \
+    libopenblas-dev \
+    liblapack-dev \
+    cmake \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create working directory
+WORKDIR /workspace
+
+# Upgrade pip and install Python dependencies
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel
+
+# Install quantum computing libraries
+RUN pip install --no-cache-dir \
+    numpy \
+    scipy \
+    h5py \
+    qiskit>=2.0 \
+    qiskit-nature \
+    qiskit-algorithms \
+    matplotlib \
+    rich
+
+# Install PySCF (this may take a while)
+RUN pip install --no-cache-dir pyscf
+
+# Verify installations
+RUN python -c "import pyscf; print(f'PySCF version: {pyscf.__version__}')" && \
+    python -c "import qiskit; print(f'Qiskit version: {qiskit.__version__}')" && \
+    python -c "from qiskit_nature.second_q.drivers import PySCFDriver; print('qiskit-nature PySCFDriver available')"
+
+# Set default command
+CMD ["/bin/bash"]

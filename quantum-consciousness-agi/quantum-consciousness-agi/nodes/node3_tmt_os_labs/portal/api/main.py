@@ -36,6 +36,25 @@ async def startup_event():
     _validate_delivery_root() 
 
 
+def _safe_upload_destination(directory: Path, filename: str) -> Path:
+    """Return a validated upload destination within the certificate directory."""
+    raw_name = (filename or "").strip()
+    safe_name = Path(raw_name).name
+    if (
+        not raw_name
+        or raw_name != safe_name
+        or safe_name in {".", ".."}
+        or any(separator in raw_name for separator in ("/", "\\"))
+    ):
+        raise HTTPException(status_code=400, detail="Invalid upload filename")
+
+    base_dir = directory.resolve()
+    destination = (base_dir / safe_name).resolve()
+    if destination.parent != base_dir:
+        raise HTTPException(status_code=400, detail="Invalid upload filename")
+    return destination
+
+
 @app.get("/")
 async def root():
     return FileResponse(Path(__file__).parent.parent / "frontend" / "index.html", media_type='text/html')
@@ -134,16 +153,17 @@ async def upload_certificate(nft: UploadFile = File(...), certificate_img: Uploa
         raise HTTPException(status_code=500, detail="Delivery root not available")
 
     # Save nft.json
-    name = nft.filename
-    dest = CERT_DIR / name
+    dest = _safe_upload_destination(CERT_DIR, nft.filename or "")
     with dest.open('wb') as f:
         shutil.copyfileobj(nft.file, f)
 
     # Save image if provided
     img_path = None
     if certificate_img:
-        img_name = certificate_img.filename
-        img_path = CERT_DIR / img_name
+        img_path = _safe_upload_destination(
+            CERT_DIR,
+            certificate_img.filename or "",
+        )
         with img_path.open('wb') as f:
             shutil.copyfileobj(certificate_img.file, f)
 

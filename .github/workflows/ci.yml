@@ -45,13 +45,14 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install pytest requests; fi
-          pip install pytest-cov pytest-junit
+          if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
+          pip install pytest-cov
       
       - name: Set PYTHONPATH
         run: echo "PYTHONPATH=$(pwd):$(pwd)/TMT-OS:$(pwd)/tmt-os-labs:$(pwd)/integrations:$(pwd)/agi_scripts:$(pwd)/agi_app:$(pwd)/agi_model:$(pwd)/quantum_observer" >> $GITHUB_ENV
       
       - name: Run tests with coverage
-        run: pytest --cov --cov-branch --cov-report=xml --cov-report=html --junitxml=junit.xml -o junit_family=legacy -v || true
+        run: pytest --cov --cov-branch --cov-report=xml --cov-report=html --junitxml=junit.xml -o junit_family=legacy -v
       
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
