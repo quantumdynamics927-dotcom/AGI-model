@@ -7,7 +7,7 @@ representing a higher harmonic of awareness of the system's state.
 """
 import time
 import logging
-from typing import Dict, Any, List, Optional
+from typing import Dict, Any, List, Optional, Union
 
 # The following are type hints for dependency injection. They are not imported
 # directly to maintain loose coupling between the nodes.
@@ -67,6 +67,25 @@ class Node8QuantumObserver:
         self.confirm_minting(token_id)
         notification_msg = f"NFT Mint Confirmed: Token ID {token_id} is now verifiably owned by {owner}."
         self.send_notification("MINT_CONFIRMATION", notification_msg)
+
+    def on_archive_event(self, archive_event: Dict[str, Any]):
+        """Callback method triggered by the archive layer for backward-compatible mint notifications."""
+        self.on_mint_event(archive_event)
+
+    @staticmethod
+    def _resolve_token_id(event: Dict[str, Any]) -> Optional[Union[int, str]]:
+        """Resolve a legacy token ID from either mint or archive event payloads."""
+        token_id = event.get('token_id')
+        if token_id is not None:
+            return token_id
+
+        archive_id = event.get('archive_id')
+        if isinstance(archive_id, str) and '-' in archive_id:
+            suffix = archive_id.rsplit('-', 1)[-1]
+            if suffix.isdigit():
+                return int(suffix)
+
+        return archive_id
 
     def confirm_minting(self, token_id: int, required_confirmations: int = 3):
         """Simulates waiting for a number of blockchain confirmations to consider a transaction final."""
