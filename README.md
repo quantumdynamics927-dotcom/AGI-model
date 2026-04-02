@@ -6,7 +6,7 @@
 
 > **Status:** Experimental research repository. Quantum result archival system with cryptographic verification and provenance tracking.
 
-AGI-model is a research platform for quantum-inspired variational autoencoder (VAE) experiments, latent-space analysis, consciousness-oriented exploration, and TMT-OS integrations.
+AGI-model is a research platform for quantum-inspired variational autoencoder (VAE) experiments, latent-space analysis, consciousness-oriented exploration, package-oriented runtime foundations, and TMT-OS / TMT_Quantum_Vault interoperability.
 
 It brings together model training, scientific utilities, dashboards, data-processing scripts, and repository automation in a single workspace for exploratory research rather than production deployment.
 
@@ -47,8 +47,20 @@ This repository currently groups four complementary areas of work:
 | Validation | Run regression tests and local smoke checks | `tests/`, `test_model.py`, `.github/workflows/ci.yml` |
 | Analysis | Explore latent structure, golden-ratio proximity, and consciousness metrics | `latent_analysis.py`, `golden_ratio_*.py`, `quantum_consciousness_link.py` |
 | Dashboarding | Launch the Streamlit dashboard for local inspection | `dashboards/quantum_consciousness_dashboard/app.py` |
-| Integration | Work across TMT-OS, geometry, observer, and provenance modules | `TMT-OS/`, `integrations/`, `molecular_geometry/`, `quantum_observer/` |
+| Integration | Work across TMT-OS, Vault, geometry, observer, and provenance modules | `packages/`, `TMT-OS/`, `integrations/`, `molecular_geometry/`, `quantum_observer/` |
 | Containerization | Build local runtime and dashboard images | `Dockerfile`, `Dockerfile.dashboard`, `.github/workflows/deploy.yml` |
+
+### Recent Implementations (April 2026)
+
+| Module | Description | Key Features |
+| --- | --- | --- |
+| `universal_symmetry.py` | Hydrogen vs Opposition decompression with Fibonacci/Lucas sequences | Three-phase sign classifier (positive/zero/negative), perturbation analysis, sign-flip robustness testing, symmetry operator S[f] = Π f[i] / φ^n |
+| `watch_agents.py` | Real-time 12-agent telemetry monitor | AgentMetrics dataclass, TelemetryBackend abstract class, MockTelemetryBackend for testing, RealTelemetryBackend for production, status classification (HEALTHY/DEGRADED/CRITICAL/OFFLINE), resonance lock classification (GOLDEN_FLOW/PHI_LOCKED/DELTA_ALIGNING/UNSTABLE/SEEKING) |
+| `TMT_God_Gene_Test_v2.py` | DNA sequence analysis with independent metrics | Entropy gain (r=-0.15), transition gain (r=+0.13), positional gain, expanded panels (n=20), multiple encodings (integer/purine-pyrimidine/GC-content), ANOVA statistical separation |
+| `TMT_God_Gene_Test_Enhanced.py` | Statistical validation with controls | Shuffled negative controls, ANOVA analysis, category separation testing, hypothesis validation framework |
+| `cloud_quantum_chemistry.py` | Cloud-based molecular VQE | Literature-based Hamiltonians for H₂, LiH, H₂O, N₂, CH₄, synthetic fallback for Windows compatibility |
+| `dna_quantum_circuits.py` | DNA-to-quantum circuit encoder | Multiple encoding schemes, Qiskit 2.x compatibility, VQE integration |
+| `test_dna_molecular_vqe.py` | Comprehensive DNA VQE tests | Qiskit 2.x API compatibility tests, synthetic Hamiltonian validation |
 
 ## Repository setup
 
@@ -150,6 +162,43 @@ python latent_analysis.py
 python golden_ratio_analysis.py
 ```
 
+### Run DNA sequence analysis (God Gene Test)
+
+```bash
+# Enhanced test with statistical validation
+python TMT_God_Gene_Test_Enhanced.py
+
+# v2 with independent metrics and expanded panels
+python TMT_God_Gene_Test_v2.py
+```
+
+### Run universal symmetry analysis
+
+```bash
+# Fibonacci/Lucas decompression with sign phase analysis
+python universal_symmetry.py
+```
+
+### Run agent telemetry monitoring
+
+```bash
+# Quick health check
+python watch_agents.py --health
+
+# Real-time monitoring (mock backend)
+python watch_agents.py
+
+# Real-time monitoring (production backend)
+python watch_agents.py --real --state-dir ./agent_states
+```
+
+### Run molecular VQE (cloud-based)
+
+```bash
+# Requires qiskit-nature (pyscf optional on Windows)
+python cloud_quantum_chemistry.py
+```
+
 ### Build the container images locally
 
 ```bash
@@ -179,8 +228,16 @@ The repository devops setup is intentionally scoped to what is currently maintai
 | `vae_model.py` | Core VAE architecture and quantum-oriented loss logic |
 | `train_vae.py` | Main training entry point |
 | `test_model.py` | Lightweight local model validation |
+| `universal_symmetry.py` | Fibonacci/Lucas decompression with three-phase sign classifier |
+| `watch_agents.py` | Real-time 12-agent telemetry monitoring with pluggable backends |
+| `TMT_God_Gene_Test_v2.py` | DNA sequence analysis with independent gain metrics |
+| `TMT_God_Gene_Test_Enhanced.py` | Statistical validation with negative controls |
+| `cloud_quantum_chemistry.py` | Cloud-based molecular VQE with literature Hamiltonians |
+| `dna_quantum_circuits.py` | DNA-to-quantum circuit encoder |
+| `test_dna_molecular_vqe.py` | DNA VQE test suite |
 | `tests/` | Automated regression and integration coverage |
 | `docs/` | Central documentation hub |
+| `packages/` | Package-oriented foundation for core, apps, and integrations |
 | `dashboards/quantum_consciousness_dashboard/` | Streamlit dashboard |
 | `integrations/` | External and system integration modules |
 | `molecular_geometry/` | Molecular and spatial analysis components |

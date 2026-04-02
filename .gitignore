@@ -235,6 +235,12 @@ zpe_experiment_cache/
 bio_signal_cache/
 agent_swarm_cache/
 
+# Quantum result archives
+archive/
+
+# Test output
+junit.xml
+
 # Database
 *.db
 *.sqlite
