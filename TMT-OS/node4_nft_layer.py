@@ -79,6 +79,23 @@ class _MockProvenanceChain:
     def add_listener(self, listener):
         """Add a listener for archive events."""
         self.listeners.append(listener)
+
+    @staticmethod
+    def _compat_mint_event(event: Dict[str, Any]) -> Dict[str, Any]:
+        """Convert an archive event to a legacy mint payload by adding token_id."""
+        archive_id = event.get("archive_id")
+        token_id = None
+        if isinstance(archive_id, int):
+            token_id = archive_id
+        elif isinstance(archive_id, str):
+            parts = archive_id.rsplit("-", 1)
+            if len(parts) == 2 and parts[1].isdigit():
+                token_id = int(parts[1])
+            elif archive_id.isdigit():
+                token_id = int(archive_id)
+        compat_event = {**event}
+        compat_event["token_id"] = token_id
+        return compat_event
     
     def archive_result(
         self,
@@ -120,6 +137,10 @@ class _MockProvenanceChain:
             cb = getattr(listener, "on_archive_event", None)
             if callable(cb):
                 cb(event)
+            else:
+                legacy_cb = getattr(listener, "on_mint_event", None)
+                if callable(legacy_cb):
+                    legacy_cb(self._compat_mint_event(event))
         
         return tx_hash
     
