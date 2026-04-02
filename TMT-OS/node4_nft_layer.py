@@ -82,7 +82,7 @@ class _MockProvenanceChain:
 
     @staticmethod
     def _compat_mint_event(event: Dict[str, Any]) -> Dict[str, Any]:
-        """Build a legacy mint event payload from an archive event."""
+        """Convert an archive event to a legacy mint payload by adding token_id."""
         archive_id = event.get("archive_id")
         token_id = None
         if isinstance(archive_id, int):
@@ -93,7 +93,7 @@ class _MockProvenanceChain:
                 token_id = int(parts[1])
             elif archive_id.isdigit():
                 token_id = int(archive_id)
-        compat_event = deepcopy(event)
+        compat_event = {**event}
         compat_event["token_id"] = token_id
         return compat_event
     
