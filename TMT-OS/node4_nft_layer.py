@@ -93,8 +93,6 @@ class _MockProvenanceChain:
                 token_id = int(parts[1])
             elif archive_id.isdigit():
                 token_id = int(archive_id)
-            else:
-                token_id = archive_id
         compat_event = dict(event)
         compat_event["token_id"] = token_id
         return compat_event
@@ -143,6 +141,7 @@ class _MockProvenanceChain:
             legacy_cb = getattr(listener, "on_mint_event", None)
             if callable(legacy_cb):
                 legacy_cb(self._compat_mint_event(event))
+                continue
         
         return tx_hash
     
