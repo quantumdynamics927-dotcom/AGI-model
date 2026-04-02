@@ -59,8 +59,11 @@ class Node8QuantumObserver:
         """
         Callback method triggered by the MockBlockchain upon a successful mint event.
         """
-        token_id = mint_event.get('token_id')
+        token_id = self._resolve_token_id(mint_event)
         owner = mint_event.get('owner')
+        if token_id is None:
+            logger.warning("Skipping mint event without a resolvable token identifier.")
+            return
         logger.info(f"EVENT DETECTED: New asset (Token {token_id}) was minted to owner {owner}.")
         
         # Trigger confirmation and notification process
@@ -70,9 +73,7 @@ class Node8QuantumObserver:
 
     def on_archive_event(self, archive_event: Dict[str, Any]):
         """Callback method triggered by the archive layer for backward-compatible mint notifications."""
-        mint_event = dict(archive_event)
-        mint_event['token_id'] = self._resolve_token_id(archive_event)
-        self.on_mint_event(mint_event)
+        self.on_mint_event(archive_event)
 
     @staticmethod
     def _resolve_token_id(event: Dict[str, Any]) -> Optional[Union[int, str]]:
