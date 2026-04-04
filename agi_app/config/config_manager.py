@@ -10,9 +10,10 @@ Supports YAML, JSON, and environment variable overrides.
 import os
 import yaml
 import json
+import re
 from pathlib import Path
 from typing import Dict, Any, Optional, Union
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, fields, is_dataclass
 import logging
 
 logger = logging.getLogger(__name__)
@@ -36,7 +37,7 @@ class TrainingConfig:
     weight_decay: float = 1e-5
     early_stopping_patience: int = 30
     reduce_lr_patience: int = 15
-    
+
     # Loss weights
     loss_weights: Dict[str, float] = field(default_factory=lambda: {
         'reconstruction': 1.0,
@@ -112,176 +113,284 @@ class ArchiveConfig:
 class QuantumConsciousnessConfig:
     """
     Main configuration class for Quantum Consciousness AGI.
-    
+
     Combines all sub-configurations and provides methods for loading,
     validation, and environment variable overrides.
     """
-    
+
     # Scientific constants
     golden_ratio: float = 1.618033988749895
     planck_constant: float = 6.62607015e-34
     boltzmann_constant: float = 1.380649e-23
-    
+
     # Sub-configurations
     model: ModelConfig = field(default_factory=ModelConfig)
     training: TrainingConfig = field(default_factory=TrainingConfig)
     quantum: QuantumConfig = field(default_factory=QuantumConfig)
-    golden_ratio_analysis: GoldenRatioConfig = field(default_factory=GoldenRatioConfig)
+    golden_ratio_analysis: GoldenRatioConfig = field(
+        default_factory=GoldenRatioConfig
+    )
     paths: PathsConfig = field(default_factory=PathsConfig)
     api: APIConfig = field(default_factory=APIConfig)
     monitoring: MonitoringConfig = field(default_factory=MonitoringConfig)
     archive: ArchiveConfig = field(default_factory=ArchiveConfig)
-    
+
     # General settings
     environment: str = "development"
     log_level: str = "INFO"
     log_format: str = "%(asctime)s | %(levelname)s | %(name)s | %(message)s"
-    
+    _provenance: Dict[str, str] = field(
+        default_factory=dict,
+        init=False,
+        repr=False,
+    )
+
+    def __post_init__(self) -> None:
+        """Initialize provenance for all default-backed fields."""
+        self._initialize_default_provenance()
+
     @classmethod
-    def from_yaml(cls, config_path: Union[str, Path]) -> 'QuantumConsciousnessConfig':
+    def from_yaml(
+        cls,
+        config_path: Union[str, Path],
+    ) -> 'QuantumConsciousnessConfig':
         """
         Load configuration from YAML file.
-        
+
         Args:
             config_path: Path to YAML configuration file
-            
+
         Returns:
             QuantumConsciousnessConfig instance
         """
         config_path = Path(config_path)
-        
+
         if not config_path.exists():
-            logger.warning(f"Config file {config_path} not found, using defaults")
+            logger.warning(
+                "Config file %s not found, using defaults",
+                config_path,
+            )
             return cls()
-        
+
         try:
             with open(config_path, 'r', encoding='utf-8') as f:
-                config_dict = yaml.safe_load(f)
-            
-            logger.info(f"Loaded configuration from {config_path}")
-            return cls.from_dict(config_dict)
-            
-        except Exception as e:
-            logger.error(f"Failed to load config from {config_path}: {e}")
+                config_dict = yaml.safe_load(f) or {}
+
+            logger.info("Loaded configuration from %s", config_path)
+            return cls.from_dict(config_dict, source='yaml')
+
+        except (OSError, TypeError, ValueError, yaml.YAMLError) as exc:
+            logger.error("Failed to load config from %s: %s", config_path, exc)
             return cls()
-    
+
     @classmethod
-    def from_json(cls, config_path: Union[str, Path]) -> 'QuantumConsciousnessConfig':
+    def from_json(
+        cls,
+        config_path: Union[str, Path],
+    ) -> 'QuantumConsciousnessConfig':
         """
         Load configuration from JSON file.
-        
+
         Args:
             config_path: Path to JSON configuration file
-            
+
         Returns:
             QuantumConsciousnessConfig instance
         """
         config_path = Path(config_path)
-        
+
         if not config_path.exists():
-            logger.warning(f"Config file {config_path} not found, using defaults")
+            logger.warning(
+                "Config file %s not found, using defaults",
+                config_path,
+            )
             return cls()
-        
+
         try:
             with open(config_path, 'r', encoding='utf-8') as f:
                 config_dict = json.load(f)
-            
-            logger.info(f"Loaded configuration from {config_path}")
-            return cls.from_dict(config_dict)
-            
-        except Exception as e:
-            logger.error(f"Failed to load config from {config_path}: {e}")
+
+            logger.info("Loaded configuration from %s", config_path)
+            return cls.from_dict(config_dict, source='json')
+
+        except (OSError, TypeError, ValueError, json.JSONDecodeError) as exc:
+            logger.error("Failed to load config from %s: %s", config_path, exc)
             return cls()
-    
+
     @classmethod
-    def from_dict(cls, config_dict: Dict[str, Any]) -> 'QuantumConsciousnessConfig':
+    def from_dict(
+        cls,
+        config_dict: Dict[str, Any],
+        source: str = 'dict',
+    ) -> 'QuantumConsciousnessConfig':
         """
         Create configuration from dictionary.
-        
+
         Args:
             config_dict: Configuration dictionary
-            
+
         Returns:
             QuantumConsciousnessConfig instance
         """
-        # Extract top-level configs
-        model_config = config_dict.get('model', {})
-        training_config = config_dict.get('training', {})
-        quantum_config = config_dict.get('quantum', {})
-        golden_ratio_config = config_dict.get('golden_ratio_analysis', {})
-        paths_config = config_dict.get('paths', {})
-        api_config = config_dict.get('api', {})
-        monitoring_config = config_dict.get('monitoring', {})
-        archive_config = config_dict.get('archive', config_dict.get('nft', {}))  # Backward compat
-        
-        # Create configuration instances
-        return cls(
-            # Scientific constants
-            golden_ratio=config_dict.get('golden_ratio', 1.618033988749895),
-            planck_constant=config_dict.get('planck_constant', 6.62607015e-34),
-            boltzmann_constant=config_dict.get('boltzmann_constant', 1.380649e-23),
-            
-            # Sub-configurations
-            model=ModelConfig(**model_config),
-            training=TrainingConfig(**training_config),
-            quantum=QuantumConfig(**quantum_config),
-            golden_ratio_analysis=GoldenRatioConfig(**golden_ratio_config),
-            paths=PathsConfig(**paths_config),
-            api=APIConfig(**api_config),
-            monitoring=MonitoringConfig(**monitoring_config),
-            archive=ArchiveConfig(**archive_config),
-            
-            # General settings
-            environment=config_dict.get('environment', 'development'),
-            log_level=config_dict.get('logging', {}).get('level', 'INFO'),
-            log_format=config_dict.get('logging', {}).get('format', 
-                "%(asctime)s | %(levelname)s | %(name)s | %(message)s")
+        instance = cls()
+
+        for key in (
+            'golden_ratio',
+            'planck_constant',
+            'boltzmann_constant',
+            'environment',
+        ):
+            if key in config_dict:
+                setattr(instance, key, config_dict[key])
+                instance._set_provenance(key, source)
+
+        nested_sections = {
+            'model': instance.model,
+            'training': instance.training,
+            'quantum': instance.quantum,
+            'golden_ratio_analysis': instance.golden_ratio_analysis,
+            'paths': instance.paths,
+            'api': instance.api,
+            'monitoring': instance.monitoring,
+            'archive': instance.archive,
+            'nft': instance.archive,
+        }
+
+        for section_name, section_obj in nested_sections.items():
+            section_values = config_dict.get(section_name)
+            if not isinstance(section_values, dict):
+                continue
+            instance._apply_section_values(
+                section_name,
+                section_obj,
+                section_values,
+                source,
+            )
+
+        logging_config = config_dict.get('logging', {})
+        if isinstance(logging_config, dict):
+            if 'level' in logging_config:
+                instance.log_level = logging_config['level']
+                instance._set_provenance('log_level', source)
+            if 'format' in logging_config:
+                instance.log_format = logging_config['format']
+                instance._set_provenance('log_format', source)
+
+            return instance
+
+    def _initialize_default_provenance(self) -> None:
+        """Mark all leaf fields as default unless overridden later."""
+        self._provenance.clear()
+        self._mark_default_provenance(self)
+
+    def _mark_default_provenance(self, obj: Any, prefix: str = "") -> None:
+        """Recursively record default provenance for dataclass leaf fields."""
+        for dataclass_field in fields(obj):
+            if dataclass_field.name.startswith('_'):
+                continue
+
+            field_path = (
+                f"{prefix}.{dataclass_field.name}"
+                if prefix else dataclass_field.name
+            )
+            value = getattr(obj, dataclass_field.name)
+
+            if is_dataclass(value):
+                self._mark_default_provenance(value, field_path)
+            else:
+                self._provenance[field_path] = 'default'
+
+    def _set_provenance(self, field_path: str, source: str) -> None:
+        """Record where a field value came from."""
+        self._provenance[field_path] = source
+
+    def _apply_section_values(
+        self,
+        section_name: str,
+        section_obj: Any,
+        values: Dict[str, Any],
+        source: str,
+    ) -> None:
+        """Apply nested config values and mark provenance."""
+        provenance_section = (
+            'archive' if section_name == 'nft' else section_name
         )
-    
+        for key, value in values.items():
+            if hasattr(section_obj, key):
+                setattr(section_obj, key, value)
+                self._set_provenance(f"{provenance_section}.{key}", source)
+            else:
+                logger.warning(
+                    "Unknown configuration key ignored: %s.%s",
+                    section_name,
+                    key,
+                )
+
+    def get_provenance(self) -> Dict[str, Any]:
+        """Return provenance as a nested dictionary keyed by config path."""
+        nested: Dict[str, Any] = {}
+        for field_path, source in sorted(self._provenance.items()):
+            current = nested
+            path_parts = field_path.split('.')
+            for part in path_parts[:-1]:
+                current = current.setdefault(part, {})
+            current[path_parts[-1]] = source
+        return nested
+
     def apply_env_overrides(self) -> None:
         """
         Apply environment variable overrides.
-        
+
         Environment variables should be prefixed with QUANTUM_AGI_
         Example: QUANTUM_AGI_MODEL_INPUT_DIM=256
         """
         prefix = "QUANTUM_AGI_"
-        
+
+        section_lookup = {
+            'model': self.model,
+            'training': self.training,
+            'quantum': self.quantum,
+            'golden_ratio_analysis': self.golden_ratio_analysis,
+            'paths': self.paths,
+            'api': self.api,
+            'monitoring': self.monitoring,
+            'archive': self.archive,
+        }
+
         for key, value in os.environ.items():
             if not key.startswith(prefix):
                 continue
-                
+
             config_key = key[len(prefix):].lower()
-            
-            # Apply overrides based on nested keys
-            if config_key.startswith('model_'):
-                sub_key = config_key[6:]
-                if hasattr(self.model, sub_key):
-                    setattr(self.model, sub_key, self._convert_env_value(value))
-                    logger.info(f"Override model.{sub_key} = {value}")
-                    
-            elif config_key.startswith('training_'):
-                sub_key = config_key[9:]
-                if hasattr(self.training, sub_key):
-                    setattr(self.training, sub_key, self._convert_env_value(value))
-                    logger.info(f"Override training.{sub_key} = {value}")
-                    
-            elif config_key.startswith('quantum_'):
-                sub_key = config_key[8:]
-                if hasattr(self.quantum, sub_key):
-                    setattr(self.quantum, sub_key, self._convert_env_value(value))
-                    logger.info(f"Override quantum.{sub_key} = {value}")
-                    
-            elif config_key.startswith('api_'):
-                sub_key = config_key[4:]
-                if hasattr(self.api, sub_key):
-                    setattr(self.api, sub_key, self._convert_env_value(value))
-                    logger.info(f"Override api.{sub_key} = {value}")
-                    
-            elif hasattr(self, config_key):
+
+            matched = False
+            for section_name, section_obj in section_lookup.items():
+                prefix_name = f"{section_name}_"
+                if not config_key.startswith(prefix_name):
+                    continue
+
+                sub_key = config_key[len(prefix_name):]
+                if hasattr(section_obj, sub_key):
+                    converted = self._convert_env_value(value)
+                    setattr(section_obj, sub_key, converted)
+                    self._set_provenance(f"{section_name}.{sub_key}", 'env')
+                    logger.info(
+                        "Override %s.%s = %s",
+                        section_name,
+                        sub_key,
+                        value,
+                    )
+                matched = True
+                break
+
+            if matched:
+                continue
+
+            if hasattr(self, config_key):
                 setattr(self, config_key, self._convert_env_value(value))
-                logger.info(f"Override {config_key} = {value}")
-    
+                self._set_provenance(config_key, 'env')
+                logger.info("Override %s = %s", config_key, value)
+
     def _convert_env_value(self, value: str) -> Union[str, int, float, bool]:
         """Convert environment variable string to appropriate type."""
         # Boolean conversion
@@ -289,62 +398,193 @@ class QuantumConsciousnessConfig:
             return True
         elif value.lower() in ('false', 'no', '0'):
             return False
-        
+
         # Numeric conversion
         try:
-            if '.' in value:
+            if any(marker in value.lower() for marker in ('.', 'e')):
                 return float(value)
             else:
                 return int(value)
         except ValueError:
             return value
-    
+
     def validate(self) -> bool:
         """
         Validate configuration parameters.
-        
+
         Returns:
             True if configuration is valid, False otherwise
         """
         valid = True
-        
+
+        backend_pattern = re.compile(r'^[A-Za-z0-9._:-]+$')
+        allowed_storage_backends = {'local', 's3', 'zenodo'}
+
         # Validate model parameters
         if self.model.input_dim <= 0:
             logger.error("model.input_dim must be positive")
             valid = False
-            
-        if self.model.latent_dim <= 0 or self.model.latent_dim >= self.model.input_dim:
-            logger.error("model.latent_dim must be positive and less than input_dim")
+
+        if (
+            self.model.latent_dim <= 0
+            or self.model.latent_dim >= self.model.input_dim
+        ):
+            logger.error(
+                "model.latent_dim must be positive and less than input_dim"
+            )
             valid = False
-        
+
+        if self.model.hidden_dim <= 0:
+            logger.error("model.hidden_dim must be positive")
+            valid = False
+
+        if self.model.hidden_dim < self.model.latent_dim:
+            logger.error(
+                "model.hidden_dim must be greater than or equal to latent_dim"
+            )
+            valid = False
+
+        if not 0 < self.model.sparsity_factor < 1:
+            logger.error("model.sparsity_factor must be between 0 and 1")
+            valid = False
+
         # Validate training parameters
         if self.training.epochs <= 0:
             logger.error("training.epochs must be positive")
             valid = False
-            
+
         if self.training.batch_size <= 0:
             logger.error("training.batch_size must be positive")
             valid = False
-            
+
         if not 0 < self.training.learning_rate < 1:
             logger.error("training.learning_rate must be between 0 and 1")
             valid = False
-        
+
+        if self.training.weight_decay < 0:
+            logger.error("training.weight_decay must be non-negative")
+            valid = False
+
+        if self.training.early_stopping_patience <= 0:
+            logger.error("training.early_stopping_patience must be positive")
+            valid = False
+
+        if self.training.reduce_lr_patience <= 0:
+            logger.error("training.reduce_lr_patience must be positive")
+            valid = False
+
+        for loss_name, loss_weight in self.training.loss_weights.items():
+            if loss_weight < 0:
+                logger.error(
+                    "training.loss_weights.%s must be non-negative",
+                    loss_name,
+                )
+                valid = False
+
         # Validate quantum parameters
         if self.quantum.n_qubits <= 0:
             logger.error("quantum.n_qubits must be positive")
             valid = False
-            
+
         if self.quantum.shots <= 0:
             logger.error("quantum.shots must be positive")
             valid = False
-        
+
+        if self.quantum.coherence_time <= 0:
+            logger.error("quantum.coherence_time must be positive")
+            valid = False
+
+        if not 0 < self.quantum.gate_fidelity_target <= 1:
+            logger.error(
+                "quantum.gate_fidelity_target must be between 0 and 1"
+            )
+            valid = False
+
+        if (
+            not self.quantum.backend
+            or not backend_pattern.match(self.quantum.backend)
+        ):
+            logger.error(
+                "quantum.backend must be a non-empty backend identifier"
+            )
+            valid = False
+
+        if not 0 < self.golden_ratio_analysis.threshold < 1:
+            logger.error(
+                "golden_ratio_analysis.threshold must be between 0 and 1"
+            )
+            valid = False
+
+        if self.golden_ratio_analysis.bootstrap_iterations <= 0:
+            logger.error(
+                "golden_ratio_analysis.bootstrap_iterations must be positive"
+            )
+            valid = False
+
+        if self.golden_ratio_analysis.permutation_iterations <= 0:
+            logger.error(
+                "golden_ratio_analysis.permutation_iterations must be positive"
+            )
+            valid = False
+
+        if not 0 < self.golden_ratio_analysis.resonance_threshold <= 1:
+            logger.error(
+                "golden_ratio_analysis.resonance_threshold must be between "
+                "0 and 1"
+            )
+            valid = False
+
+        for path_name in (
+            'output_dir',
+            'checkpoint_dir',
+            'visualization_dir',
+            'data_dir',
+            'log_dir',
+        ):
+            if not getattr(self.paths, path_name):
+                logger.error("paths.%s must be non-empty", path_name)
+                valid = False
+
+        if not 1 <= self.api.port <= 65535:
+            logger.error("api.port must be between 1 and 65535")
+            valid = False
+
+        if self.monitoring.track_frequency <= 0:
+            logger.error("monitoring.track_frequency must be positive")
+            valid = False
+
+        if self.monitoring.save_frequency <= 0:
+            logger.error("monitoring.save_frequency must be positive")
+            valid = False
+
+        if self.archive.max_archives_per_request <= 0:
+            logger.error("archive.max_archives_per_request must be positive")
+            valid = False
+
+        if self.archive.storage_backend not in allowed_storage_backends:
+            logger.error(
+                "archive.storage_backend must be one of %s",
+                sorted(allowed_storage_backends),
+            )
+            valid = False
+
+        if not self.archive.archive_path:
+            logger.error("archive.archive_path must be non-empty")
+            valid = False
+
+        if not self.environment:
+            logger.error("environment must be non-empty")
+            valid = False
+
         # Validate golden ratio
         if abs(self.golden_ratio - 1.618033988749895) > 0.01:
-            logger.warning("golden_ratio seems incorrect, should be approximately 1.618033988749895")
-        
+            logger.warning(
+                "golden_ratio seems incorrect, should be approximately "
+                "1.618033988749895"
+            )
+
         return valid
-    
+
     def create_directories(self) -> None:
         """Create all necessary directories specified in configuration."""
         directories = [
@@ -354,19 +594,19 @@ class QuantumConsciousnessConfig:
             self.paths.data_dir,
             self.paths.log_dir
         ]
-        
+
         for directory in directories:
             Path(directory).mkdir(parents=True, exist_ok=True)
-            logger.debug(f"Ensured directory exists: {directory}")
-    
-    def to_dict(self) -> Dict[str, Any]:
+            logger.debug("Ensured directory exists: %s", directory)
+
+    def to_dict(self, include_provenance: bool = False) -> Dict[str, Any]:
         """
         Convert configuration to dictionary.
-        
+
         Returns:
             Configuration dictionary
         """
-        return {
+        config_dict = {
             'golden_ratio': self.golden_ratio,
             'planck_constant': self.planck_constant,
             'boltzmann_constant': self.boltzmann_constant,
@@ -384,49 +624,68 @@ class QuantumConsciousnessConfig:
                 'format': self.log_format
             }
         }
-    
-    def save_yaml(self, output_path: Union[str, Path]) -> None:
+
+        if include_provenance:
+            config_dict['_provenance'] = self.get_provenance()
+
+        return config_dict
+
+    def save_yaml(
+        self,
+        output_path: Union[str, Path],
+        include_provenance: bool = False,
+    ) -> None:
         """
         Save configuration to YAML file.
-        
+
         Args:
             output_path: Path to save configuration
         """
         output_path = Path(output_path)
         output_path.parent.mkdir(parents=True, exist_ok=True)
-        
+
         with open(output_path, 'w', encoding='utf-8') as f:
-            yaml.dump(self.to_dict(), f, default_flow_style=False, indent=2)
-        
-        logger.info(f"Configuration saved to {output_path}")
-    
+            yaml.dump(
+                self.to_dict(include_provenance=include_provenance),
+                f,
+                default_flow_style=False,
+                indent=2,
+                sort_keys=False,
+            )
+
+        logger.info("Configuration saved to %s", output_path)
+
     def __str__(self) -> str:
         """String representation of configuration."""
-        return f"QuantumConsciousnessConfig(\n" + \
-               f"  golden_ratio={self.golden_ratio:.12f},\n" + \
-               f"  model={self.model},\n" + \
-               f"  training={self.training},\n" + \
-               f"  quantum={self.quantum},\n" + \
-               f"  environment='{self.environment}'\n" + \
-               f")"
+        return (
+            "QuantumConsciousnessConfig(\n"
+            f"  golden_ratio={self.golden_ratio:.12f},\n"
+            f"  model={self.model},\n"
+            f"  training={self.training},\n"
+            f"  quantum={self.quantum},\n"
+            f"  environment='{self.environment}'\n"
+            ")"
+        )
 
 
 # Global configuration instance
 _config: Optional[QuantumConsciousnessConfig] = None
 
 
-def get_config(config_path: Optional[str] = None) -> QuantumConsciousnessConfig:
+def get_config(
+    config_path: Optional[str] = None,
+) -> QuantumConsciousnessConfig:
     """
     Get global configuration instance.
-    
+
     Args:
         config_path: Optional path to configuration file
-        
+
     Returns:
         QuantumConsciousnessConfig instance
     """
     global _config
-    
+
     if _config is None:
         if config_path:
             _config = QuantumConsciousnessConfig.from_yaml(config_path)
@@ -437,7 +696,7 @@ def get_config(config_path: Optional[str] = None) -> QuantumConsciousnessConfig:
                 "config/default.yaml",
                 "default.yaml"
             ]
-            
+
             for path in default_paths:
                 if Path(path).exists():
                     _config = QuantumConsciousnessConfig.from_yaml(path)
@@ -445,15 +704,15 @@ def get_config(config_path: Optional[str] = None) -> QuantumConsciousnessConfig:
             else:
                 logger.warning("No configuration file found, using defaults")
                 _config = QuantumConsciousnessConfig()
-        
+
         # Apply environment overrides and validate
         _config.apply_env_overrides()
-        
+
         if not _config.validate():
             raise ValueError("Invalid configuration")
-        
+
         _config.create_directories()
-    
+
     return _config
 
 
@@ -467,7 +726,7 @@ if __name__ == "__main__":
     # Test configuration loading
     config = get_config()
     print(config)
-    
+
     # Test saving
-    config.save_yaml("test_config.yaml")
-    print("Test configuration saved to test_config.yaml")
+    config.save_yaml("test_config.yaml", include_provenance=True)
+    print("Test configuration with provenance saved to test_config.yaml")

@@ -1,0 +1,72 @@
+{
+  "agent": "phi",
+  "objective": "Plan integrated-information analysis using the latest DNA agent output.",
+  "generated_at": "2026-04-03T19:16:21.098191+00:00",
+  "planning_mode": true,
+  "current_state": {
+    "dna_report_available": true,
+    "latest_dna_report": "dna_34bp_results\\dna_agent_report_20260310_210905.json",
+    "fallback_mode": "simulate-consciousness-data",
+    "report_output_dir": "D:\\AGI-GH-REPO-11326\\AGI-model"
+  },
+  "goals": [
+    "Quantify integrated information from DNA-derived consciousness metrics.",
+    "Measure phi-harmonic alignment and latent-space complexity in one pass.",
+    "Produce a report that downstream training can consume without manual cleanup."
+  ],
+  "strategies": [
+    {
+      "name": "dna-driven-iit-analysis",
+      "priority": 1,
+      "conditions": [
+        "a DNA agent report is available"
+      ],
+      "actions": [
+        "Load the newest DNA report.",
+        "Derive consciousness_level, theory_agreement, and phi_alignment from DNA outputs.",
+        "Compute phi-harmonic score, latent metrics, and integrated information."
+      ]
+    },
+    {
+      "name": "fallback-simulation",
+      "priority": 2,
+      "conditions": [
+        "no DNA report is available"
+      ],
+      "actions": [
+        "Simulate consciousness data with phi-harmonic scaling.",
+        "Run the same IIT and latent-space analysis pipeline.",
+        "Flag the output as simulation-backed for downstream consumers."
+      ]
+    }
+  ],
+  "evaluation_metrics": [
+    "phi_harmonic.phi_harmonic_score",
+    "phi_harmonic.phi_alignment",
+    "integrated_information.integrated_information",
+    "integrated_information.integrated_information_normalized",
+    "latent_space.latent_entropy"
+  ],
+  "coordination": {
+    "upstream_dependencies": [
+      "dna_agent_report_*.json"
+    ],
+    "downstream_consumers": [
+      "qnn_agent"
+    ],
+    "handoff_artifacts": [
+      "phi_agent_report_*.json",
+      "phi_agent_analysis_*.png"
+    ]
+  },
+  "risks": [
+    "The fallback simulation path diverges from DNA-grounded results.",
+    "Boolean and NumPy scalar serialization can destabilize downstream parsing if not normalized.",
+    "Latent-space summaries can become stale when DNA inputs are not refreshed."
+  ],
+  "next_actions": [
+    "Locate the freshest DNA report or confirm that simulation is acceptable.",
+    "Run the Phi analysis and persist the report and visualization.",
+    "Pass the resulting Phi report to the QNN agent."
+  ]
+}

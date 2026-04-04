@@ -1,0 +1,1095 @@
+{
+  "manifest_type": "promoter_replicate_schedule",
+  "generated_at": "2026-04-04T18:31:54.798794",
+  "reference_backend": "ibm_fez",
+  "comparison_backends": [
+    "ibm_kingston"
+  ],
+  "replicates_per_backend": 3,
+  "shots_per_run": 8192,
+  "comparison_report": "promoter_panel_comparison",
+  "comparison_generated_at": "2026-04-04T00:12:27.608704",
+  "selected_promoters": [
+    "SRY",
+    "FOXG1",
+    "DCTN1",
+    "TP53",
+    "OXT"
+  ],
+  "matrix_dimensions": {
+    "promoters": 5,
+    "backends": 2,
+    "replicates": 3,
+    "total_runs": 30
+  },
+  "artifact_metadata": {
+    "evidence_class": "secondary",
+    "artifact_type": "derived_metrics",
+    "artifact_id": "replicate_schedule_20260404_183154",
+    "audit_note": "Replicate-aware backend scheduling matrix preserving ibm_fez continuity baseline",
+    "parent_artifacts": [
+      "tmt_os_panel_results/promoter_panel_comparison.json"
+    ],
+    "data_lineage": {
+      "derived_from_prior_runs": true,
+      "transform_chain": [
+        "load_comparison_report",
+        "select_promoters",
+        "assign_selection_tags",
+        "expand_backend_replicate_matrix"
+      ]
+    }
+  },
+  "scheduled_runs": [
+    {
+      "run_id": "SRY_ibm_fez_r01",
+      "promoter_id": "SRY",
+      "sephirot_label": "Yesod",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 1,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.698,
+        "phi_alignment_score": 2769.1245809448374,
+        "entropy_shannon": 5.794728530978488,
+        "artifact_id": "promoter_SRY_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "SRY_ibm_fez_r02",
+      "promoter_id": "SRY",
+      "sephirot_label": "Yesod",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 2,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.698,
+        "phi_alignment_score": 2769.1245809448374,
+        "entropy_shannon": 5.794728530978488,
+        "artifact_id": "promoter_SRY_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "SRY_ibm_fez_r03",
+      "promoter_id": "SRY",
+      "sephirot_label": "Yesod",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 3,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.698,
+        "phi_alignment_score": 2769.1245809448374,
+        "entropy_shannon": 5.794728530978488,
+        "artifact_id": "promoter_SRY_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "SRY_ibm_kingston_r01",
+      "promoter_id": "SRY",
+      "sephirot_label": "Yesod",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 1,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.698,
+        "phi_alignment_score": 2769.1245809448374,
+        "entropy_shannon": 5.794728530978488,
+        "artifact_id": "promoter_SRY_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "SRY_ibm_kingston_r02",
+      "promoter_id": "SRY",
+      "sephirot_label": "Yesod",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 2,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.698,
+        "phi_alignment_score": 2769.1245809448374,
+        "entropy_shannon": 5.794728530978488,
+        "artifact_id": "promoter_SRY_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "SRY_ibm_kingston_r03",
+      "promoter_id": "SRY",
+      "sephirot_label": "Yesod",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 3,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.698,
+        "phi_alignment_score": 2769.1245809448374,
+        "entropy_shannon": 5.794728530978488,
+        "artifact_id": "promoter_SRY_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "FOXG1_ibm_fez_r01",
+      "promoter_id": "FOXG1",
+      "sephirot_label": "Kether",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 1,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.742,
+        "phi_alignment_score": 2868.9230117578127,
+        "entropy_shannon": 5.262217739893234,
+        "artifact_id": "promoter_FOXG1_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "FOXG1_ibm_fez_r02",
+      "promoter_id": "FOXG1",
+      "sephirot_label": "Kether",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 2,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.742,
+        "phi_alignment_score": 2868.9230117578127,
+        "entropy_shannon": 5.262217739893234,
+        "artifact_id": "promoter_FOXG1_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "FOXG1_ibm_fez_r03",
+      "promoter_id": "FOXG1",
+      "sephirot_label": "Kether",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 3,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.742,
+        "phi_alignment_score": 2868.9230117578127,
+        "entropy_shannon": 5.262217739893234,
+        "artifact_id": "promoter_FOXG1_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "FOXG1_ibm_kingston_r01",
+      "promoter_id": "FOXG1",
+      "sephirot_label": "Kether",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 1,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.742,
+        "phi_alignment_score": 2868.9230117578127,
+        "entropy_shannon": 5.262217739893234,
+        "artifact_id": "promoter_FOXG1_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "FOXG1_ibm_kingston_r02",
+      "promoter_id": "FOXG1",
+      "sephirot_label": "Kether",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 2,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.742,
+        "phi_alignment_score": 2868.9230117578127,
+        "entropy_shannon": 5.262217739893234,
+        "artifact_id": "promoter_FOXG1_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "FOXG1_ibm_kingston_r03",
+      "promoter_id": "FOXG1",
+      "sephirot_label": "Kether",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 3,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.742,
+        "phi_alignment_score": 2868.9230117578127,
+        "entropy_shannon": 5.262217739893234,
+        "artifact_id": "promoter_FOXG1_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "DCTN1_ibm_fez_r01",
+      "promoter_id": "DCTN1",
+      "sephirot_label": "Binah",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 1,
+      "shots": 8192,
+      "selection_tags": [
+        "structural_outlier"
+      ],
+      "cohort_logic_label": "structural_outlier",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.655,
+        "phi_alignment_score": 2666.503522055221,
+        "entropy_shannon": 5.240954126220305,
+        "artifact_id": "promoter_DCTN1_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "DCTN1_ibm_fez_r02",
+      "promoter_id": "DCTN1",
+      "sephirot_label": "Binah",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 2,
+      "shots": 8192,
+      "selection_tags": [
+        "structural_outlier"
+      ],
+      "cohort_logic_label": "structural_outlier",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.655,
+        "phi_alignment_score": 2666.503522055221,
+        "entropy_shannon": 5.240954126220305,
+        "artifact_id": "promoter_DCTN1_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "DCTN1_ibm_fez_r03",
+      "promoter_id": "DCTN1",
+      "sephirot_label": "Binah",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 3,
+      "shots": 8192,
+      "selection_tags": [
+        "structural_outlier"
+      ],
+      "cohort_logic_label": "structural_outlier",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.655,
+        "phi_alignment_score": 2666.503522055221,
+        "entropy_shannon": 5.240954126220305,
+        "artifact_id": "promoter_DCTN1_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "DCTN1_ibm_kingston_r01",
+      "promoter_id": "DCTN1",
+      "sephirot_label": "Binah",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 1,
+      "shots": 8192,
+      "selection_tags": [
+        "structural_outlier"
+      ],
+      "cohort_logic_label": "structural_outlier",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.655,
+        "phi_alignment_score": 2666.503522055221,
+        "entropy_shannon": 5.240954126220305,
+        "artifact_id": "promoter_DCTN1_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "DCTN1_ibm_kingston_r02",
+      "promoter_id": "DCTN1",
+      "sephirot_label": "Binah",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 2,
+      "shots": 8192,
+      "selection_tags": [
+        "structural_outlier"
+      ],
+      "cohort_logic_label": "structural_outlier",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.655,
+        "phi_alignment_score": 2666.503522055221,
+        "entropy_shannon": 5.240954126220305,
+        "artifact_id": "promoter_DCTN1_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "DCTN1_ibm_kingston_r03",
+      "promoter_id": "DCTN1",
+      "sephirot_label": "Binah",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 3,
+      "shots": 8192,
+      "selection_tags": [
+        "structural_outlier"
+      ],
+      "cohort_logic_label": "structural_outlier",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.655,
+        "phi_alignment_score": 2666.503522055221,
+        "entropy_shannon": 5.240954126220305,
+        "artifact_id": "promoter_DCTN1_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "TP53_ibm_fez_r01",
+      "promoter_id": "TP53",
+      "sephirot_label": "Gevurah",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 1,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.901,
+        "phi_alignment_score": 2702.33079907861,
+        "entropy_shannon": 5.706175159194664,
+        "artifact_id": "promoter_TP53_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "TP53_ibm_fez_r02",
+      "promoter_id": "TP53",
+      "sephirot_label": "Gevurah",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 2,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.901,
+        "phi_alignment_score": 2702.33079907861,
+        "entropy_shannon": 5.706175159194664,
+        "artifact_id": "promoter_TP53_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "TP53_ibm_fez_r03",
+      "promoter_id": "TP53",
+      "sephirot_label": "Gevurah",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 3,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.901,
+        "phi_alignment_score": 2702.33079907861,
+        "entropy_shannon": 5.706175159194664,
+        "artifact_id": "promoter_TP53_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "TP53_ibm_kingston_r01",
+      "promoter_id": "TP53",
+      "sephirot_label": "Gevurah",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 1,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.901,
+        "phi_alignment_score": 2702.33079907861,
+        "entropy_shannon": 5.706175159194664,
+        "artifact_id": "promoter_TP53_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "TP53_ibm_kingston_r02",
+      "promoter_id": "TP53",
+      "sephirot_label": "Gevurah",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 2,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.901,
+        "phi_alignment_score": 2702.33079907861,
+        "entropy_shannon": 5.706175159194664,
+        "artifact_id": "promoter_TP53_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "TP53_ibm_kingston_r03",
+      "promoter_id": "TP53",
+      "sephirot_label": "Gevurah",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 3,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.901,
+        "phi_alignment_score": 2702.33079907861,
+        "entropy_shannon": 5.706175159194664,
+        "artifact_id": "promoter_TP53_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "OXT_ibm_fez_r01",
+      "promoter_id": "OXT",
+      "sephirot_label": "Chesed",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 1,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.786,
+        "phi_alignment_score": 3089.1424798367552,
+        "entropy_shannon": 5.017058119290484,
+        "artifact_id": "promoter_OXT_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "OXT_ibm_fez_r02",
+      "promoter_id": "OXT",
+      "sephirot_label": "Chesed",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 2,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.786,
+        "phi_alignment_score": 3089.1424798367552,
+        "entropy_shannon": 5.017058119290484,
+        "artifact_id": "promoter_OXT_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "OXT_ibm_fez_r03",
+      "promoter_id": "OXT",
+      "sephirot_label": "Chesed",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 3,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.786,
+        "phi_alignment_score": 3089.1424798367552,
+        "entropy_shannon": 5.017058119290484,
+        "artifact_id": "promoter_OXT_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "OXT_ibm_kingston_r01",
+      "promoter_id": "OXT",
+      "sephirot_label": "Chesed",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 1,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.786,
+        "phi_alignment_score": 3089.1424798367552,
+        "entropy_shannon": 5.017058119290484,
+        "artifact_id": "promoter_OXT_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "OXT_ibm_kingston_r02",
+      "promoter_id": "OXT",
+      "sephirot_label": "Chesed",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 2,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.786,
+        "phi_alignment_score": 3089.1424798367552,
+        "entropy_shannon": 5.017058119290484,
+        "artifact_id": "promoter_OXT_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "OXT_ibm_kingston_r03",
+      "promoter_id": "OXT",
+      "sephirot_label": "Chesed",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 3,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.786,
+        "phi_alignment_score": 3089.1424798367552,
+        "entropy_shannon": 5.017058119290484,
+        "artifact_id": "promoter_OXT_20260404_001227"
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    }
+  ]
+}

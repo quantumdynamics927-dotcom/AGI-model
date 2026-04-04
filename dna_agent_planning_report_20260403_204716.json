@@ -1,0 +1,88 @@
+{
+  "agent": "dna",
+  "objective": "Plan DNA quantum analysis execution for consciousness alignment using multi-source data integration.",
+  "generated_at": "2026-04-03T19:47:16.159801+00:00",
+  "planning_mode": true,
+  "current_state": {
+    "job_id": "d5a95n7p3tbc73astm10",
+    "data_sources": {
+      "ibm_analysis": "E:/tmt-os/tmt-os/dna_34bp_ibm_fez_analysis_*.json",
+      "dna_quantum_analysis": "E:/tmt-os/dna_quantum_analysis/*.qasm,*.json",
+      "dna_quantum_circuits": "E:/tmt-os/dna_quantum_circuits/*_info.json",
+      "dna_rubiks_results": "E:/tmt-os/dna_rubiks_cube_results/discovery_session_*.json",
+      "scientific_synthesis": "E:/tmt-os/autonomous_synthesis_results/scientific_synthesis_discoveries.json"
+    },
+    "report_output_dir": "D:\\AGI-GH-REPO-11326\\AGI-model\\dna_34bp_results",
+    "default_execution_path": "load-multi-source-data"
+  },
+  "goals": [
+    "Maximize phi-aligned activation around the consciousness peak.",
+    "Preserve reproducible DNA analysis reports for downstream agents.",
+    "Integrate all available E:\\tmt-os DNA data sources before simulation.",
+    "Extract consciousness sequences from Rubik's cube optimization.",
+    "Apply scientific synthesis discoveries to analysis."
+  ],
+  "strategies": [
+    {
+      "name": "multi-source-data-integration",
+      "priority": 1,
+      "conditions": [
+        "E:\\tmt-os DNA directories are available"
+      ],
+      "actions": [
+        "Load IBM analysis artifact if available.",
+        "Scan dna_quantum_analysis for QASM circuits and JSON analyses.",
+        "Load dna_quantum_circuits info files for geometry data.",
+        "Extract conscious sequences from dna_rubiks_cube_results.",
+        "Apply scientific synthesis discoveries to interpretation.",
+        "Validate hamming weight, wormhole activation, and entropy across all sources.",
+        "Emit a unified DNA agent report for downstream consumers."
+      ]
+    },
+    {
+      "name": "simulate-phi-harmonic-dna",
+      "priority": 2,
+      "conditions": [
+        "no E:\\tmt-os DNA data sources are available"
+      ],
+      "actions": [
+        "Simulate phi-harmonic Watson, Crick, and Bridge probabilities.",
+        "Inject the consciousness peak at position 20 and Fibonacci clustering.",
+        "Analyze phi alignment, wormhole activation, and entropy before report generation."
+      ]
+    }
+  ],
+  "evaluation_metrics": [
+    "hamming_weight.deviation",
+    "consciousness_peak.bridge",
+    "wormhole_activation",
+    "phi_alignment.total_score",
+    "entropy.normalized",
+    "conscious_sequences_found",
+    "golden_ratio_circuits",
+    "scientific_discoveries_applied"
+  ],
+  "coordination": {
+    "upstream_dependencies": [
+      "E:/tmt-os/dna_* directories"
+    ],
+    "downstream_consumers": [
+      "phi_agent"
+    ],
+    "handoff_artifacts": [
+      "dna_agent_report_*.json"
+    ]
+  },
+  "risks": [
+    "E:\\tmt-os paths may not exist on all machines.",
+    "Multiple data sources may have conflicting measurements.",
+    "Simulation can mask data quality issues that would appear in real IBM results.",
+    "Large count dictionaries can increase memory usage during analysis."
+  ],
+  "next_actions": [
+    "Scan all E:\\tmt-os DNA data sources.",
+    "Integrate multi-source data into unified analysis.",
+    "Run DNA analysis and persist a timestamped report.",
+    "Hand the newest DNA report to the Phi agent."
+  ]
+}
