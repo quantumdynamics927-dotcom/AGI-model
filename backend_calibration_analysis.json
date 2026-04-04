@@ -1,0 +1,131 @@
+{
+  "report_version": "1.0",
+  "generated": "2026-04-04T02:24:06.976809",
+  "summary": {
+    "backends_analyzed": 3,
+    "best_backend": "ibm_kingston",
+    "recommendation": "Use highest-ranked backend for promoter panel validation"
+  },
+  "backend_analyses": [
+    {
+      "backend": "ibm_fez",
+      "timestamp": "calibrations",
+      "summary": {
+        "total_qubits": 155,
+        "operational_qubits": 155,
+        "operational_percentage": 100.0
+      },
+      "coherence": {
+        "avg_t1_us": 147.53,
+        "avg_t2_us": 103.08,
+        "median_t1_us": 142.09,
+        "median_t2_us": 99.95,
+        "t2_t1_ratio": 0.699,
+        "quality_score": 0.996
+      },
+      "gate_performance": {
+        "single_qubit_error": 0.000438,
+        "two_qubit_error": 0.004841,
+        "readout_error": 0.025321,
+        "quality_score": 0.9974
+      },
+      "overall": {
+        "quality_score": 0.9968,
+        "ranking": 2
+      }
+    },
+    {
+      "backend": "ibm_kingston",
+      "timestamp": "calibrations",
+      "summary": {
+        "total_qubits": 153,
+        "operational_qubits": 153,
+        "operational_percentage": 100.0
+      },
+      "coherence": {
+        "avg_t1_us": 256.17,
+        "avg_t2_us": 158.1,
+        "median_t1_us": 258.38,
+        "median_t2_us": 134.49,
+        "t2_t1_ratio": 0.617,
+        "quality_score": 0.9976
+      },
+      "gate_performance": {
+        "single_qubit_error": 0.000439,
+        "two_qubit_error": 0.0039,
+        "readout_error": 0.02011,
+        "quality_score": 0.9978
+      },
+      "overall": {
+        "quality_score": 0.9977,
+        "ranking": 1
+      }
+    },
+    {
+      "backend": "ibm_marrakesh",
+      "timestamp": "calibrations",
+      "summary": {
+        "total_qubits": 152,
+        "operational_qubits": 152,
+        "operational_percentage": 100.0
+      },
+      "coherence": {
+        "avg_t1_us": 192.96,
+        "avg_t2_us": 116.44,
+        "median_t1_us": 182.7,
+        "median_t2_us": 95.26,
+        "t2_t1_ratio": 0.603,
+        "quality_score": 0.9968
+      },
+      "gate_performance": {
+        "single_qubit_error": 0.00042,
+        "two_qubit_error": 0.005995,
+        "readout_error": 0.017433,
+        "quality_score": 0.9968
+      },
+      "overall": {
+        "quality_score": 0.9968,
+        "ranking": 3
+      }
+    }
+  ],
+  "phi_resonance_correlation": {
+    "measured_phi_baseline": 0.6183,
+    "backend_comparison": [
+      {
+        "backend": "ibm_fez",
+        "quality_score": 0.9968,
+        "estimated_phi_shift": 0.0003,
+        "predicted_phi": 0.6186,
+        "recommendation": "Excellent - Primary choice for promoter panel"
+      },
+      {
+        "backend": "ibm_kingston",
+        "quality_score": 0.9977,
+        "estimated_phi_shift": 0.0002,
+        "predicted_phi": 0.6185,
+        "recommendation": "Excellent - Primary choice for promoter panel"
+      },
+      {
+        "backend": "ibm_marrakesh",
+        "quality_score": 0.9968,
+        "estimated_phi_shift": 0.0003,
+        "predicted_phi": 0.6186,
+        "recommendation": "Excellent - Primary choice for promoter panel"
+      }
+    ],
+    "hypotheses": [
+      "Higher T1/T2 coherence times correlate with more stable phi measurements",
+      "Lower two-qubit gate errors reduce systematic offset in phi-resonance",
+      "Backends with quality_score > 0.95 should produce phi within \u00b10.05 of baseline",
+      "Readout errors contribute to measured phi compression (60:1 observed)"
+    ]
+  },
+  "recommendations": {
+    "primary_backend": "ibm_kingston",
+    "validation_backend": "ibm_fez",
+    "avoid_backends": [
+      "ibm_marrakesh"
+    ]
+  }
+}
