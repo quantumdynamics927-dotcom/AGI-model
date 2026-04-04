@@ -3,565 +3,702 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AGI-Model | Quantum Consciousness VAE</title>
-    <meta name="description" content="Advanced Quantum Consciousness Variational Autoencoder with ZPE coupling, sacred geometry analysis, and consciousness modeling">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    <title>AGI-model | Hardware-Calibrated Promoter Validation</title>
+    <meta name="description" content="AGI-model: IBM Quantum promoter analysis with explicit hardware calibration, audit-grade artifacts, and replicate-aware next milestones.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>φ</text></svg>">
     <style>
         :root {
-            --phi: 1.618033988749895;
-            --primary: #6929C4;
-            --secondary: #4A1A7C;
-            --accent: #FFD700;
-            --bg-dark: #0a0a0f;
-            --bg-card: #12121a;
-            --bg-gradient: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
-            --text: #e0e0e0;
-            --text-muted: #888;
-            --success: #00d4aa;
-            --warning: #ffa500;
+            --bg: #07111f;
+            --panel: rgba(14, 23, 42, 0.84);
+            --panel-strong: #101a31;
+            --line: rgba(108, 125, 187, 0.35);
+            --text: #eef2ff;
+            --muted: #b3bfdc;
+            --primary: #7c5cff;
+            --accent: #f5c451;
+            --success: #6ee7b7;
+            --warning: #f59e0b;
+            --danger: #f87171;
+            --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
         }
-        
+
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: var(--bg-gradient);
+            font-family: Inter, "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--text);
-            line-height: 1.6;
+            background:
+                radial-gradient(circle at top right, rgba(124, 92, 255, 0.2), transparent 28%),
+                radial-gradient(circle at bottom left, rgba(245, 196, 81, 0.16), transparent 24%),
+                linear-gradient(145deg, #050b16, #0e1630 52%, #1a123f 100%);
             min-height: 100vh;
+            line-height: 1.6;
         }
-        
+
+        a {
+            color: inherit;
+        }
+
         .container {
-            max-width: 1200px;
+            width: min(1160px, calc(100% - 2rem));
             margin: 0 auto;
-            padding: 0 2rem;
         }
-        
-        /* Header */
-        header {
-            padding: 2rem 0;
-            border-bottom: 1px solid rgba(105, 41, 196, 0.3);
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            backdrop-filter: blur(16px);
+            background: rgba(5, 11, 22, 0.72);
+            border-bottom: 1px solid rgba(124, 92, 255, 0.18);
         }
-        
-        .header-content {
+
+        .topbar-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
         }
-        
-        .logo {
+
+        .brand {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.9rem;
         }
-        
-        .logo-icon {
-            font-size: 2.5rem;
+
+        .brand-mark {
+            width: 44px;
+            height: 44px;
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #0b1020;
+            font-size: 1.4rem;
+            font-weight: 800;
         }
-        
-        .logo-text h1 {
-            font-size: 1.5rem;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+
+        .brand h1 {
+            font-size: 1.1rem;
+            letter-spacing: 0.02em;
         }
-        
-        .logo-text span {
-            font-size: 0.85rem;
-            color: var(--text-muted);
+
+        .brand p {
+            color: var(--muted);
+            font-size: 0.9rem;
         }
-        
-        nav a {
-            color: var(--text);
-            text-decoration: none;
-            margin-left: 2rem;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        nav a:hover {
-            background: rgba(105, 41, 196, 0.2);
-            color: var(--accent);
-        }
-        
-        /* Hero */
-        .hero {
-            padding: 4rem 0;
-            text-align: center;
-        }
-        
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(90deg, #fff, var(--primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            max-width: 700px;
-            margin: 0 auto 2rem;
-        }
-        
-        .hero-badges {
+
+        nav {
             display: flex;
-            justify-content: center;
-            gap: 1rem;
+            gap: 0.75rem;
             flex-wrap: wrap;
-            margin-bottom: 2rem;
+            justify-content: flex-end;
         }
-        
-        .badge {
+
+        nav a {
+            text-decoration: none;
+            color: var(--muted);
+            padding: 0.55rem 0.9rem;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            transition: 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--text);
+            border-color: rgba(245, 196, 81, 0.28);
+            background: rgba(245, 196, 81, 0.08);
+        }
+
+        main section {
+            padding: 4.5rem 0;
+        }
+
+        .hero {
+            padding-top: 5.5rem;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+            gap: 2rem;
+            align-items: stretch;
+        }
+
+        .hero-copy,
+        .panel,
+        .metric-card,
+        .artifact-card,
+        .step,
+        .next-card,
+        .repo-card {
+            border: 1px solid var(--line);
+            background: var(--panel);
+            box-shadow: var(--shadow);
+        }
+
+        .hero-copy {
+            border-radius: 28px;
+            padding: 2.5rem;
+        }
+
+        .eyebrow {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: var(--bg-card);
-            border: 1px solid rgba(105, 41, 196, 0.3);
-            border-radius: 20px;
+            padding: 0.45rem 0.8rem;
+            border-radius: 999px;
+            background: rgba(110, 231, 183, 0.12);
+            border: 1px solid rgba(110, 231, 183, 0.2);
+            color: var(--success);
+            margin-bottom: 1rem;
             font-size: 0.9rem;
         }
-        
-        .badge-success { border-color: var(--success); color: var(--success); }
-        .badge-warning { border-color: var(--warning); color: var(--warning); }
-        
-        /* Stats */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            padding: 2rem 0;
-        }
-        
-        .stat-card {
-            background: var(--bg-card);
-            border: 1px solid rgba(105, 41, 196, 0.2);
-            border-radius: 12px;
-            padding: 1.5rem;
-            text-align: center;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-        
-        .stat-value {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--accent);
-        }
-        
-        .stat-label {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-        
-        /* Features */
-        .features {
-            padding: 3rem 0;
-        }
-        
-        .section-title {
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .feature-card {
-            background: var(--bg-card);
-            border: 1px solid rgba(105, 41, 196, 0.2);
-            border-radius: 12px;
-            padding: 1.5rem;
-            transition: all 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            border-color: var(--primary);
-            box-shadow: 0 0 20px rgba(105, 41, 196, 0.2);
-        }
-        
-        .feature-icon {
-            font-size: 2rem;
+
+        .hero h2 {
+            font-size: clamp(2.2rem, 4vw, 4rem);
+            line-height: 1.05;
             margin-bottom: 1rem;
         }
-        
-        .feature-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
+
+        .hero h2 span {
             color: var(--accent);
         }
-        
-        .feature-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
+
+        .hero p {
+            color: var(--muted);
+            font-size: 1.08rem;
+            max-width: 64ch;
         }
-        
-        /* Architecture */
-        .architecture {
-            padding: 3rem 0;
-        }
-        
-        .arch-diagram {
-            background: var(--bg-card);
-            border: 1px solid rgba(105, 41, 196, 0.2);
-            border-radius: 12px;
-            padding: 2rem;
-            overflow-x: auto;
-        }
-        
-        .arch-flow {
+
+        .hero-actions {
             display: flex;
-            align-items: center;
-            justify-content: center;
             gap: 1rem;
             flex-wrap: wrap;
+            margin-top: 1.75rem;
         }
-        
-        .arch-node {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            min-width: 120px;
-        }
-        
-        .arch-arrow {
-            color: var(--accent);
-            font-size: 1.5rem;
-        }
-        
-        /* Quick Start */
-        .quickstart {
-            padding: 3rem 0;
-        }
-        
-        .code-block {
-            background: #1a1a2e;
-            border: 1px solid rgba(105, 41, 196, 0.3);
-            border-radius: 8px;
-            padding: 1.5rem;
-            overflow-x: auto;
-            margin: 1rem 0;
-        }
-        
-        .code-block code {
-            font-family: 'Consolas', 'Monaco', monospace;
-            color: #e0e0e0;
-        }
-        
-        .code-block .comment { color: #6a9955; }
-        .code-block .keyword { color: #569cd6; }
-        .code-block .string { color: #ce9178; }
-        .code-block .function { color: #dcdcaa; }
-        
-        /* Links */
-        .links {
-            padding: 3rem 0;
-        }
-        
-        .link-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .link-card {
-            background: var(--bg-card);
-            border: 1px solid rgba(105, 41, 196, 0.2);
-            border-radius: 12px;
-            padding: 1.5rem;
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.45rem;
             text-decoration: none;
-            color: var(--text);
-            transition: all 0.3s ease;
+            padding: 0.85rem 1.2rem;
+            border-radius: 14px;
+            font-weight: 600;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-1px);
+            opacity: 0.95;
+        }
+
+        .button-primary {
+            background: linear-gradient(135deg, var(--primary), #9d7cff);
+            color: white;
+        }
+
+        .button-secondary {
+            background: rgba(245, 196, 81, 0.08);
+            border: 1px solid rgba(245, 196, 81, 0.24);
+            color: var(--accent);
+        }
+
+        .panel {
+            border-radius: 28px;
+            padding: 1.75rem;
+        }
+
+        .panel h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .status-list {
+            list-style: none;
+            display: grid;
+            gap: 0.9rem;
+        }
+
+        .status-list li {
+            padding: 0.95rem 1rem;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .status-list strong {
             display: block;
+            margin-bottom: 0.2rem;
         }
-        
-        .link-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-3px);
+
+        .status-list span {
+            color: var(--muted);
+            font-size: 0.95rem;
         }
-        
-        .link-card h3 {
+
+        .section-heading {
+            margin-bottom: 1.5rem;
+        }
+
+        .section-heading h3 {
+            font-size: clamp(1.6rem, 2vw, 2.4rem);
+            margin-bottom: 0.4rem;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            max-width: 72ch;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .metric-card {
+            border-radius: 22px;
+            padding: 1.5rem;
+        }
+
+        .metric-card small {
+            color: var(--muted);
+            display: block;
+            margin-bottom: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.76rem;
+        }
+
+        .metric-card strong {
+            display: block;
+            font-size: 2rem;
             color: var(--accent);
             margin-bottom: 0.5rem;
         }
-        
-        .link-card p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
+
+        .metric-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
         }
-        
-        /* Footer */
-        footer {
-            padding: 2rem 0;
-            border-top: 1px solid rgba(105, 41, 196, 0.3);
-            text-align: center;
-            color: var(--text-muted);
+
+        .two-col {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.2rem;
         }
-        
-        footer a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-        
-        footer a:hover {
+
+        .panel h4 {
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
             color: var(--accent);
         }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
+
+        .bullet-list {
+            list-style: none;
+            display: grid;
+            gap: 0.8rem;
+            color: var(--muted);
+        }
+
+        .bullet-list li {
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .bullet-list li::before {
+            content: "";
+            width: 0.45rem;
+            height: 0.45rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            position: absolute;
+            left: 0;
+            top: 0.62rem;
+        }
+
+        .workflow {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .step {
+            border-radius: 24px;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step::after {
+            content: "";
+            position: absolute;
+            inset: auto -16% -30% 50%;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: rgba(124, 92, 255, 0.08);
+        }
+
+        .step-number {
+            display: inline-flex;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 999px;
+            align-items: center;
+            justify-content: center;
+            background: rgba(245, 196, 81, 0.12);
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .step p {
+            color: var(--muted);
+            margin-top: 0.5rem;
+        }
+
+        .artifact-grid,
+        .next-grid,
+        .repo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .artifact-card,
+        .next-card,
+        .repo-card {
+            border-radius: 24px;
+            padding: 1.5rem;
+        }
+
+        .artifact-card code {
+            display: inline-block;
+            margin-bottom: 0.9rem;
+            color: var(--accent);
+            background: rgba(245, 196, 81, 0.08);
+            border: 1px solid rgba(245, 196, 81, 0.2);
+            padding: 0.35rem 0.55rem;
+            border-radius: 10px;
+        }
+
+        .artifact-card p,
+        .next-card p,
+        .repo-card p {
+            color: var(--muted);
+        }
+
+        .badge-row {
+            display: flex;
+            gap: 0.7rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .mini-badge {
+            padding: 0.4rem 0.7rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--muted);
+        }
+
+        .mini-badge.warning {
+            color: var(--warning);
+            border-color: rgba(245, 158, 11, 0.24);
+            background: rgba(245, 158, 11, 0.08);
+        }
+
+        .mini-badge.success {
+            color: var(--success);
+            border-color: rgba(110, 231, 183, 0.24);
+            background: rgba(110, 231, 183, 0.08);
+        }
+
+        .mini-badge.danger {
+            color: var(--danger);
+            border-color: rgba(248, 113, 113, 0.22);
+            background: rgba(248, 113, 113, 0.08);
+        }
+
+        footer {
+            padding: 2rem 0 3rem;
+            color: var(--muted);
+        }
+
+        footer .panel {
+            border-radius: 24px;
+            padding: 1.5rem;
+        }
+
+        @media (max-width: 980px) {
+            .hero-grid,
+            .metrics,
+            .two-col,
+            .workflow,
+            .artifact-grid,
+            .next-grid,
+            .repo-grid {
+                grid-template-columns: 1fr;
             }
-            
+        }
+
+        @media (max-width: 760px) {
+            .topbar-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
             nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
+                width: 100%;
+                justify-content: flex-start;
             }
-            
-            nav a {
-                margin: 0.5rem;
+
+            main section {
+                padding: 3.5rem 0;
             }
-            
-            .hero h2 {
-                font-size: 1.8rem;
-            }
-            
-            .arch-flow {
-                flex-direction: column;
-            }
-            
-            .arch-arrow {
-                transform: rotate(90deg);
+
+            .hero-copy,
+            .panel {
+                padding: 1.4rem;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <span class="logo-icon">🧠</span>
-                    <div class="logo-text">
-                        <h1>AGI-Model</h1>
-                        <span>Quantum Consciousness VAE</span>
-                    </div>
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <div class="brand">
+                <div class="brand-mark">φ</div>
+                <div>
+                    <h1>AGI-model</h1>
+                    <p>Hardware-calibrated promoter validation v1</p>
                 </div>
-                <nav>
-                    <a href="#features">Features</a>
-                    <a href="#architecture">Architecture</a>
-                    <a href="#quickstart">Quick Start</a>
-                    <a href="https://github.com/quantumdynamics927-dotcom/AGI-model" target="_blank">GitHub</a>
-                </nav>
             </div>
+            <nav>
+                <a href="#status">Status</a>
+                <a href="#workflow">Workflow</a>
+                <a href="#artifacts">Artifacts</a>
+                <a href="#next">Next phase</a>
+                <a href="https://github.com/quantumdynamics927-dotcom/AGI-model" target="_blank" rel="noreferrer">GitHub</a>
+            </nav>
         </div>
     </header>
-    
+
     <main>
         <section class="hero">
-            <div class="container">
-                <h2>Quantum Consciousness Variational Autoencoder</h2>
-                <p>Advanced research platform implementing quantum-inspired machine learning with ZPE coupling, sacred geometry analysis, and consciousness modeling through the TMT-OS integration.</p>
-                
-                <div class="hero-badges">
-                    <span class="badge badge-success">✓ Python 3.10+</span>
-                    <span class="badge badge-success">✓ PyTorch 2.0+</span>
-                    <span class="badge">Qiskit Integration</span>
-                    <span class="badge">IBM Quantum Ready</span>
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <div class="eyebrow">● Scientifically mature next step</div>
+                    <h2>From pass/fail validation to <span>explicit hardware calibration</span></h2>
+                    <p>
+                        AGI-model now frames IBM Quantum promoter analysis around a modelable calibration layer:
+                        raw hardware observations, calibration logic, interpreted reporting, and audit trail are treated as distinct artifacts.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="README.md">Read the new README</a>
+                        <a class="button button-secondary" href="CALIBRATION_REPORT_v2.0.md">Open calibration report</a>
+                    </div>
+                    <div class="badge-row">
+                        <span class="mini-badge success">Stable IBM hardware baseline</span>
+                        <span class="mini-badge warning">Promoter separation still compressed</span>
+                        <span class="mini-badge danger">Replicates required next</span>
+                    </div>
                 </div>
-                
-                <div class="stats">
-                    <div class="stat-card">
-                        <div class="stat-value">128→32→128</div>
-                        <div class="stat-label">VAE Architecture</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-value">φ ≈ 1.618</div>
-                        <div class="stat-label">Golden Ratio Analysis</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-value">10%</div>
-                        <div class="stat-label">Sparse Connectivity</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-value">8</div>
-                        <div class="stat-label">Loss Components</div>
-                    </div>
+                <aside class="panel">
+                    <h3>Current judgment</h3>
+                    <ul class="status-list">
+                        <li>
+                            <strong>Architecturally excellent</strong>
+                            <span>Calibration is now a first-class layer in the promoter pipeline.</span>
+                        </li>
+                        <li>
+                            <strong>Methodologically stronger</strong>
+                            <span>The repository now models systematic hardware effects rather than treating them as unexplained misses.</span>
+                        </li>
+                        <li>
+                            <strong>Scientifically cautious</strong>
+                            <span>The post-calibration 100% pass rate is documented, but not presented as the main claim.</span>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section id="status">
+            <div class="container">
+                <div class="section-heading">
+                    <h3>Validation snapshot</h3>
+                    <p>The important result is not perfect pass/fail optics. The important result is that hardware deviation is stable enough to model explicitly.</p>
+                </div>
+                <div class="metrics">
+                    <article class="metric-card">
+                        <small>Systematic offset</small>
+                        <strong>-0.1381</strong>
+                        <p>Offset-only v1 calibration against the current five-job IBM batch.</p>
+                    </article>
+                    <article class="metric-card">
+                        <small>Hardware baseline</small>
+                        <strong>0.6183 ± 0.0010</strong>
+                        <p>Tight clustering on <code>ibm_fez</code> suggests backend stability.</p>
+                    </article>
+                    <article class="metric-card">
+                        <small>Batch size</small>
+                        <strong>5 jobs</strong>
+                        <p>Useful for an initial empirical layer, but still underconstrained.</p>
+                    </article>
+                    <article class="metric-card">
+                        <small>Next milestone</small>
+                        <strong>3–5 replicates</strong>
+                        <p>Needed per promoter to estimate within- and between-promoter variance.</p>
+                    </article>
                 </div>
             </div>
         </section>
-        
-        <section class="features" id="features">
+
+        <section>
+            <div class="container two-col">
+                <article class="panel">
+                    <h4>What is scientifically good here</h4>
+                    <ul class="bullet-list">
+                        <li>The offset-only model is a reasonable v1 because the observed error appears systematic, not chaotic.</li>
+                        <li>The backend appears stable while promoter-specific spread is compressed, which is informative for future design.</li>
+                        <li>The repository already supports this direction through IBM execution, promoter panels, and artifact governance.</li>
+                    </ul>
+                </article>
+                <article class="panel">
+                    <h4>What to avoid overclaiming</h4>
+                    <ul class="bullet-list">
+                        <li>Do not present the 100% post-calibration pass rate as the central scientific claim.</li>
+                        <li>Do not treat the current five-job batch as proof of calibration portability.</li>
+                        <li>Keep the baseline near 1/φ as an observational note until it reproduces across more jobs and backends.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="workflow">
             <div class="container">
-                <h2 class="section-title">Core Features</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🔮</div>
-                        <h3>Quantum VAE</h3>
-                        <p>128→32→128 dimensional compression with mixed-state regularization and density matrix learning in latent space.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📐</div>
-                        <h3>Sacred Geometry</h3>
-                        <p>Golden ratio (φ) pattern detection in latent space with consciousness complexity metrics and DNA-to-quantum encoding.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🧬</div>
-                        <h3>Consciousness Modeling</h3>
-                        <p>LZ complexity, PCI metrics, and integrated information theory for consciousness state analysis.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">⚡</div>
-                        <h3>ZPE Coupling</h3>
-                        <p>Zero-point energy integration with quantum vacuum fluctuations for enhanced state representation.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🎨</div>
-                        <h3>Quantum NFTs</h3>
-                        <p>Verifiable quantum NFT generation with consciousness metadata and quantum fingerprints.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🔬</div>
-                        <h3>IBM Quantum</h3>
-                        <p>Hardware integration with IBM Quantum for qubit-efficient representations and quantum experiment utilities.</p>
-                    </div>
+                <div class="section-heading">
+                    <h3>Calibration workflow</h3>
+                    <p>The repository is now easier to read as a pipeline from empirical input to calibrated interpretation.</p>
+                </div>
+                <div class="workflow">
+                    <article class="step">
+                        <div class="step-number">1</div>
+                        <h4>Promoter artifacts</h4>
+                        <p>Promoter panels, reconstructed outputs, and lineage-ready inputs enter the workflow.</p>
+                    </article>
+                    <article class="step">
+                        <div class="step-number">2</div>
+                        <h4>IBM hardware execution</h4>
+                        <p>Promoter-encoded circuits run on IBM Quantum backends and emit raw observables.</p>
+                    </article>
+                    <article class="step">
+                        <div class="step-number">3</div>
+                        <h4>Explicit calibration layer</h4>
+                        <p>The calibration framework models systematic offset instead of collapsing to a pass/fail framing.</p>
+                    </article>
+                    <article class="step">
+                        <div class="step-number">4</div>
+                        <h4>Replicate expansion</h4>
+                        <p>Residual analysis, backend transferability, and promoter variance become the next empirical tests.</p>
+                    </article>
                 </div>
             </div>
         </section>
-        
-        <section class="architecture" id="architecture">
+
+        <section id="artifacts">
             <div class="container">
-                <h2 class="section-title">System Architecture</h2>
-                <div class="arch-diagram">
-                    <div class="arch-flow">
-                        <div class="arch-node">
-                            <strong>Input Data</strong><br>
-                            <small>EEG/fMRI/Sacred</small>
-                        </div>
-                        <span class="arch-arrow">→</span>
-                        <div class="arch-node">
-                            <strong>Encoder</strong><br>
-                            <small>128→32</small>
-                        </div>
-                        <span class="arch-arrow">→</span>
-                        <div class="arch-node">
-                            <strong>Latent Space</strong><br>
-                            <small>Quantum States</small>
-                        </div>
-                        <span class="arch-arrow">→</span>
-                        <div class="arch-node">
-                            <strong>Decoder</strong><br>
-                            <small>32→128</small>
-                        </div>
-                        <span class="arch-arrow">→</span>
-                        <div class="arch-node">
-                            <strong>Output</strong><br>
-                            <small>Reconstruction</small>
-                        </div>
-                    </div>
+                <div class="section-heading">
+                    <h3>Repository artifacts aligned with the new stage</h3>
+                    <p>The latest update is reflected in dedicated framework, report, and documentation surfaces.</p>
+                </div>
+                <div class="artifact-grid">
+                    <article class="artifact-card">
+                        <code>quantum_calibration_framework.py</code>
+                        <h4>Calibration logic</h4>
+                        <p>Separates the mapping layer from raw hardware results and makes the offset model inspectable.</p>
+                    </article>
+                    <article class="artifact-card">
+                        <code>CALIBRATION_REPORT_v2.0.md</code>
+                        <h4>Interpreted report</h4>
+                        <p>Documents the current batch with hardware baseline, deviations, artifact lineage, and next questions.</p>
+                    </article>
+                    <article class="artifact-card">
+                        <code>README.md + index.html</code>
+                        <h4>Repository narrative</h4>
+                        <p>Reframes the repo around calibration, audit artifacts, and replicate-aware promoter validation.</p>
+                    </article>
                 </div>
             </div>
         </section>
-        
-        <section class="quickstart" id="quickstart">
+
+        <section id="next">
             <div class="container">
-                <h2 class="section-title">Quick Start</h2>
-                
-                <h3>Installation</h3>
-                <div class="code-block">
-                    <code>
-                        <span class="comment"># Clone the repository</span><br>
-                        git clone https://github.com/quantumdynamics927-dotcom/AGI-model.git<br>
-                        cd AGI-model<br><br>
-                        <span class="comment"># Install dependencies</span><br>
-                        pip install -r requirements.txt<br>
-                        pip install -r requirements-dev.txt<br>
-                    </code>
+                <div class="section-heading">
+                    <h3>Next required milestone</h3>
+                    <p>Move from job-level calibration to replicate-aware promoter calibration.</p>
                 </div>
-                
-                <h3>Training</h3>
-                <div class="code-block">
-                    <code>
-                        <span class="comment"># Train the VAE model</span><br>
-                        python train_vae.py<br><br>
-                        <span class="comment"># Run consciousness analysis</span><br>
-                        python quantum_consciousness_link.py<br>
-                    </code>
-                </div>
-                
-                <h3>Testing</h3>
-                <div class="code-block">
-                    <code>
-                        <span class="comment"># Run tests with coverage</span><br>
-                        pytest --cov --cov-branch --cov-report=xml<br>
-                    </code>
+                <div class="next-grid">
+                    <article class="next-card">
+                        <h4>Capture richer metadata</h4>
+                        <p>Store promoter ID, replicate index, backend, shots, transpiled depth, layout, measured phi, calibrated phi, residual, and timestamp.</p>
+                    </article>
+                    <article class="next-card">
+                        <h4>Estimate variance structure</h4>
+                        <p>Compute within-promoter variance, between-promoter separation, and calibration residual distributions.</p>
+                    </article>
+                    <article class="next-card">
+                        <h4>Test transferability</h4>
+                        <p>Compare offset behavior across backends to learn whether calibration is portable or batch-specific.</p>
+                    </article>
                 </div>
             </div>
         </section>
-        
-        <section class="links">
+
+        <section>
             <div class="container">
-                <h2 class="section-title">Documentation</h2>
-                <div class="link-grid">
-                    <a href="https://github.com/quantumdynamics927-dotcom/AGI-model/blob/master/README.md" class="link-card">
-                        <h3>📖 README</h3>
-                        <p>Project overview, setup instructions, and usage guide.</p>
-                    </a>
-                    <a href="https://github.com/quantumdynamics927-dotcom/AGI-model/blob/master/COMPREHENSIVE_PROJECT_OVERVIEW_FEB1_2026.md" class="link-card">
-                        <h3>📋 Project Overview</h3>
-                        <p>Comprehensive documentation of all components and features.</p>
-                    </a>
-                    <a href="https://github.com/quantumdynamics927-dotcom/AGI-model/blob/master/ADVANCED_QUANTUM_CONSCIOUSNESS_FEATURES.md" class="link-card">
-                        <h3>🔬 Advanced Features</h3>
-                        <p>Deep dive into quantum consciousness capabilities.</p>
-                    </a>
-                    <a href="https://github.com/quantumdynamics927-dotcom/AGI-model/tree/master/dashboards" class="link-card">
-                        <h3>📊 Dashboards</h3>
-                        <p>Streamlit visualization dashboards for model analysis.</p>
-                    </a>
-                    <a href="https://app.codecov.io/gh/quantumdynamics927-dotcom/AGI-model" class="link-card">
-                        <h3>📈 Code Coverage</h3>
-                        <p>Test coverage reports and analysis on Codecov.</p>
-                    </a>
-                    <a href="https://github.com/quantumdynamics927-dotcom/TMT_Quantum_Vault-" class="link-card">
-                        <h3>🔐 TMT Quantum Vault</h3>
-                        <p>Related quantum vault and agent ecosystem.</p>
-                    </a>
+                <div class="section-heading">
+                    <h3>Repository map</h3>
+                    <p>Key entry points for the current phase.</p>
+                </div>
+                <div class="repo-grid">
+                    <article class="repo-card">
+                        <h4>Model core</h4>
+                        <p><code>vae_model.py</code>, <code>train_vae.py</code>, and <code>test_model.py</code> drive the quantum-inspired modeling layer.</p>
+                    </article>
+                    <article class="repo-card">
+                        <h4>Calibration and hardware</h4>
+                        <p><code>quantum_calibration_framework.py</code>, IBM analysis scripts, and reports cover empirical hardware mapping.</p>
+                    </article>
+                    <article class="repo-card">
+                        <h4>Provenance and TMT-OS</h4>
+                        <p><code>TMT-OS/</code>, <code>packages/</code>, <code>integrations/</code>, and <code>archive/</code> support governance and interop.</p>
+                    </article>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <footer>
         <div class="container">
-            <p>
-                AGI-Model Quantum Consciousness VAE • 
-                <a href="https://github.com/quantumdynamics927-dotcom/AGI-model">GitHub</a> • 
-                <a href="https://github.com/quantumdynamics927-dotcom/AGI-model/blob/master/LICENSE">AGPL-3.0 License</a>
-            </p>
-            <p style="margin-top: 0.5rem; font-size: 0.85rem;">
-                Built with 🧠 for quantum consciousness research
-            </p>
+            <div class="panel">
+                <p>
+                    AGI-model is an experimental research repository. Current framing:
+                    <strong>hardware-calibrated promoter validation v1</strong>, with replicate-aware expansion as the next required milestone.
+                </p>
+            </div>
         </div>
     </footer>
 </body>

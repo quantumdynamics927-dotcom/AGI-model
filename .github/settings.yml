@@ -1,8 +1,12 @@
 repository:
   name: AGI-model
-  description: Experimental research platform for a quantum-inspired VAE, analysis workflows, and TMT-OS integrations.
+  description: Hardware-calibrated promoter validation on IBM Quantum with audit-grade artifacts, calibration logic, and TMT-OS-aligned research workflows.
   homepage: "https://github.com/quantumdynamics927-dotcom/AGI-model#readme"
   topics:
+    - ibm-quantum
+    - promoter-analysis
+    - hardware-calibration
+    - scientific-auditing
     - quantum-machine-learning
     - variational-autoencoder
     - pytorch
@@ -10,7 +14,7 @@ repository:
     - consciousness-research
     - latent-space-analysis
     - tmt-os
-    - docker
+    - provenance
     - github-actions
   has_issues: true
   has_projects: true
