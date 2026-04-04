@@ -1,0 +1,138 @@
+================================================================================
+QUANTUM HARDWARE VALIDATION REPORT
+Generated: 2026-04-04T01:43:58.544627
+================================================================================
+
+EXECUTIVE SUMMARY
+----------------------------------------
+Total Jobs Analyzed: 5
+Validation Passed: 3/5 (60.0%)
+
+PER-JOB ANALYSIS
+----------------------------------------
+
+============================================================
+Job ID: job-d7854nak86tc739us8o0
+Gene: OXT
+Execution Time: 2.997s
+Qubits: 62
+
+Phi-Harmonic Analysis:
+  Measured Resonance: 0.5998
+  Expected Resonance: 0.7860
+  Deviation: 0.1862
+  Status: ❌ FAIL
+
+  Statistics:
+    Shots: 1000
+    Mean Probability: 0.4898
+    Std Probability: 0.1058
+    Entropy: 29.6488
+    Top Active Bits: [43, 38, 51, 41, 44]
+
+============================================================
+Job ID: job-d7854nik86tc739us8p0
+Gene: FOXG1
+Execution Time: 2.966s
+Qubits: 62
+
+Phi-Harmonic Analysis:
+  Measured Resonance: 0.5985
+  Expected Resonance: 0.7420
+  Deviation: 0.1435
+  Status: ✅ PASS
+
+  Statistics:
+    Shots: 1000
+    Mean Probability: 0.4917
+    Std Probability: 0.1047
+    Entropy: 29.6139
+    Top Active Bits: [51, 18, 10, 12, 43]
+
+============================================================
+Job ID: job-d7854nrc6das739hfjc0
+Gene: SRY
+Execution Time: 2.958s
+Qubits: 62
+
+Phi-Harmonic Analysis:
+  Measured Resonance: 0.5973
+  Expected Resonance: 0.6980
+  Deviation: 0.1007
+  Status: ✅ PASS
+
+  Statistics:
+    Shots: 1000
+    Mean Probability: 0.4903
+    Std Probability: 0.1043
+    Entropy: 29.6572
+    Top Active Bits: [12, 49, 46, 18, 43]
+
+============================================================
+Job ID: job-d7854oak86tc739us8rg
+Gene: SRY
+Execution Time: 2.964s
+Qubits: 62
+
+Phi-Harmonic Analysis:
+  Measured Resonance: 0.5959
+  Expected Resonance: 0.6980
+  Deviation: 0.1021
+  Status: ✅ PASS
+
+  Statistics:
+    Shots: 1000
+    Mean Probability: 0.4946
+    Std Probability: 0.1050
+    Entropy: 29.5324
+    Top Active Bits: [44, 52, 25, 18, 43]
+
+============================================================
+Job ID: job-d7854oik86tc739us8sg
+Gene: OXT
+Execution Time: 2.992s
+Qubits: 62
+
+Phi-Harmonic Analysis:
+  Measured Resonance: 0.5987
+  Expected Resonance: 0.7860
+  Deviation: 0.1873
+  Status: ❌ FAIL
+
+  Statistics:
+    Shots: 1000
+    Mean Probability: 0.4870
+    Std Probability: 0.1033
+    Entropy: 29.7592
+    Top Active Bits: [41, 37, 11, 18, 43]
+
+============================================================
+STATISTICAL SUMMARY
+----------------------------------------
+
+Phi Resonance (Measured):
+  Mean: 0.5980
+  Std: 0.0013
+  Min: 0.5959
+  Max: 0.5998
+
+Phi Resonance (Expected):
+  Mean: 0.7420
+  Std: 0.0394
+
+Deviation Analysis:
+  Mean Deviation: 0.1440
+  Max Deviation: 0.1873
+  Within Tolerance: 3/5
+
+============================================================
+VALIDATION CERTIFICATION
+----------------------------------------
+
+⚠️  2 JOB(S) FAILED VALIDATION
+   Review individual job analyses above
+
+============================================================
+Report Hash: e197cdca126f0f4c
+Audit Trail: SHA256:e197cdca126f0f4c
+============================================================
