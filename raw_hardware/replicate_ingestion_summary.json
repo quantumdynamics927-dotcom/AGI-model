@@ -1,0 +1,250 @@
+{
+  "generated_at": "2026-04-04T23:13:27.850444",
+  "runs_total": 30,
+  "status_counts": {
+    "DONE": 30
+  },
+  "completed_runs": 30,
+  "run_summaries": [
+    {
+      "run_id": "SRY_ibm_fez_r01",
+      "status": "DONE",
+      "job_id": "d78o4e1q1efs73d1vsh0",
+      "output_path": "raw_hardware\\promoter_SRY_ibm_fez_r01_d78o4e1q1efs73d1vsh0.json",
+      "measured_phi": 0.6173137751818651,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "SRY_ibm_fez_r02",
+      "status": "DONE",
+      "job_id": "d78o4eak86tc739vgmvg",
+      "output_path": "raw_hardware\\promoter_SRY_ibm_fez_r02_d78o4eak86tc739vgmvg.json",
+      "measured_phi": 0.6173512956446123,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "SRY_ibm_fez_r03",
+      "status": "DONE",
+      "job_id": "d78o4ehq1efs73d1vsig",
+      "output_path": "raw_hardware\\promoter_SRY_ibm_fez_r03_d78o4ehq1efs73d1vsig.json",
+      "measured_phi": 0.6170207501741933,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "SRY_ibm_kingston_r01",
+      "status": "DONE",
+      "job_id": "d78o4f8eecps73d7dkeg",
+      "output_path": "raw_hardware\\promoter_SRY_ibm_kingston_r01_d78o4f8eecps73d7dkeg.json",
+      "measured_phi": 0.6149855869956934,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "SRY_ibm_kingston_r02",
+      "status": "DONE",
+      "job_id": "d78o4fik86tc739vgn10",
+      "output_path": "raw_hardware\\promoter_SRY_ibm_kingston_r02_d78o4fik86tc739vgn10.json",
+      "measured_phi": 0.6142981196386417,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "SRY_ibm_kingston_r03",
+      "status": "DONE",
+      "job_id": "d78o4fpq1efs73d1vskg",
+      "output_path": "raw_hardware\\promoter_SRY_ibm_kingston_r03_d78o4fpq1efs73d1vskg.json",
+      "measured_phi": 0.6156122473145117,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "FOXG1_ibm_fez_r01",
+      "status": "DONE",
+      "job_id": "d78o4g0eecps73d7dkh0",
+      "output_path": "raw_hardware\\promoter_FOXG1_ibm_fez_r01_d78o4g0eecps73d7dkh0.json",
+      "measured_phi": 0.6151266079650309,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "FOXG1_ibm_fez_r02",
+      "status": "DONE",
+      "job_id": "d78o4g9q1efs73d1vslg",
+      "output_path": "raw_hardware\\promoter_FOXG1_ibm_fez_r02_d78o4g9q1efs73d1vslg.json",
+      "measured_phi": 0.6156544516683644,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "FOXG1_ibm_fez_r03",
+      "status": "DONE",
+      "job_id": "d78o4ggeecps73d7dki0",
+      "output_path": "raw_hardware\\promoter_FOXG1_ibm_fez_r03_d78o4ggeecps73d7dki0.json",
+      "measured_phi": 0.6162155411512674,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "FOXG1_ibm_kingston_r01",
+      "status": "DONE",
+      "job_id": "d78o4gpq1efs73d1vsn0",
+      "output_path": "raw_hardware\\promoter_FOXG1_ibm_kingston_r01_d78o4gpq1efs73d1vsn0.json",
+      "measured_phi": 0.6139740375757878,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "FOXG1_ibm_kingston_r02",
+      "status": "DONE",
+      "job_id": "d78o4h0eecps73d7dkig",
+      "output_path": "raw_hardware\\promoter_FOXG1_ibm_kingston_r02_d78o4h0eecps73d7dkig.json",
+      "measured_phi": 0.6131781942013217,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "FOXG1_ibm_kingston_r03",
+      "status": "DONE",
+      "job_id": "d78o4hak86tc739vgn30",
+      "output_path": "raw_hardware\\promoter_FOXG1_ibm_kingston_r03_d78o4hak86tc739vgn30.json",
+      "measured_phi": 0.6123425608423776,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "DCTN1_ibm_fez_r01",
+      "status": "DONE",
+      "job_id": "d78o4hgeecps73d7dkk0",
+      "output_path": "raw_hardware\\promoter_DCTN1_ibm_fez_r01_d78o4hgeecps73d7dkk0.json",
+      "measured_phi": 0.6153640163426529,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "DCTN1_ibm_fez_r02",
+      "status": "DONE",
+      "job_id": "d78o4hoeecps73d7dkkg",
+      "output_path": "raw_hardware\\promoter_DCTN1_ibm_fez_r02_d78o4hoeecps73d7dkkg.json",
+      "measured_phi": 0.6156660349101599,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "DCTN1_ibm_fez_r03",
+      "status": "DONE",
+      "job_id": "d78o4i2k86tc739vgn4g",
+      "output_path": "raw_hardware\\promoter_DCTN1_ibm_fez_r03_d78o4i2k86tc739vgn4g.json",
+      "measured_phi": 0.616368372890229,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "DCTN1_ibm_kingston_r01",
+      "status": "DONE",
+      "job_id": "d78o4i9q1efs73d1vspg",
+      "output_path": "raw_hardware\\promoter_DCTN1_ibm_kingston_r01_d78o4i9q1efs73d1vspg.json",
+      "measured_phi": 0.6123337658747259,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "DCTN1_ibm_kingston_r02",
+      "status": "DONE",
+      "job_id": "d78o4igeecps73d7dkm0",
+      "output_path": "raw_hardware\\promoter_DCTN1_ibm_kingston_r02_d78o4igeecps73d7dkm0.json",
+      "measured_phi": 0.613365335156389,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "DCTN1_ibm_kingston_r03",
+      "status": "DONE",
+      "job_id": "d78o4ioeecps73d7dkn0",
+      "output_path": "raw_hardware\\promoter_DCTN1_ibm_kingston_r03_d78o4ioeecps73d7dkn0.json",
+      "measured_phi": 0.6133143600900509,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "TP53_ibm_fez_r01",
+      "status": "DONE",
+      "job_id": "d78o4j3c6das739i406g",
+      "output_path": "raw_hardware\\promoter_TP53_ibm_fez_r01_d78o4j3c6das739i406g.json",
+      "measured_phi": 0.614727460906422,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "TP53_ibm_fez_r02",
+      "status": "DONE",
+      "job_id": "d78o4j9q1efs73d1vss0",
+      "output_path": "raw_hardware\\promoter_TP53_ibm_fez_r02_d78o4j9q1efs73d1vss0.json",
+      "measured_phi": 0.615920268666356,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "TP53_ibm_fez_r03",
+      "status": "DONE",
+      "job_id": "d78o4jik86tc739vgn7g",
+      "output_path": "raw_hardware\\promoter_TP53_ibm_fez_r03_d78o4jik86tc739vgn7g.json",
+      "measured_phi": 0.6159347948757407,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "TP53_ibm_kingston_r01",
+      "status": "DONE",
+      "job_id": "d78o4jpq1efs73d1vst0",
+      "output_path": "raw_hardware\\promoter_TP53_ibm_kingston_r01_d78o4jpq1efs73d1vst0.json",
+      "measured_phi": 0.6133590854867028,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "TP53_ibm_kingston_r02",
+      "status": "DONE",
+      "job_id": "d78o4k2k86tc739vgn90",
+      "output_path": "raw_hardware\\promoter_TP53_ibm_kingston_r02_d78o4k2k86tc739vgn90.json",
+      "measured_phi": 0.6131889284383053,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "TP53_ibm_kingston_r03",
+      "status": "DONE",
+      "job_id": "d78o4k2k86tc739vgna0",
+      "output_path": "raw_hardware\\promoter_TP53_ibm_kingston_r03_d78o4k2k86tc739vgna0.json",
+      "measured_phi": 0.6120949787215275,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "OXT_ibm_fez_r01",
+      "status": "DONE",
+      "job_id": "d78o4kjc6das739i4090",
+      "output_path": "raw_hardware\\promoter_OXT_ibm_fez_r01_d78o4kjc6das739i4090.json",
+      "measured_phi": 0.6162225647862716,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "OXT_ibm_fez_r02",
+      "status": "DONE",
+      "job_id": "d78o4krc6das739i40a0",
+      "output_path": "raw_hardware\\promoter_OXT_ibm_fez_r02_d78o4krc6das739i40a0.json",
+      "measured_phi": 0.6153261376349005,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "OXT_ibm_fez_r03",
+      "status": "DONE",
+      "job_id": "d78o4l0eecps73d7dkqg",
+      "output_path": "raw_hardware\\promoter_OXT_ibm_fez_r03_d78o4l0eecps73d7dkqg.json",
+      "measured_phi": 0.6157032333704343,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "OXT_ibm_kingston_r01",
+      "status": "DONE",
+      "job_id": "d78o4l9q1efs73d1vsvg",
+      "output_path": "raw_hardware\\promoter_OXT_ibm_kingston_r01_d78o4l9q1efs73d1vsvg.json",
+      "measured_phi": 0.6133336920245039,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "OXT_ibm_kingston_r02",
+      "status": "DONE",
+      "job_id": "d78o4l9q1efs73d1vt0g",
+      "output_path": "raw_hardware\\promoter_OXT_ibm_kingston_r02_d78o4l9q1efs73d1vt0g.json",
+      "measured_phi": 0.6133967108241288,
+      "unique_states": 8192
+    },
+    {
+      "run_id": "OXT_ibm_kingston_r03",
+      "status": "DONE",
+      "job_id": "d78o4lgeecps73d7dks0",
+      "output_path": "raw_hardware\\promoter_OXT_ibm_kingston_r03_d78o4lgeecps73d7dks0.json",
+      "measured_phi": 0.6121919492708241,
+      "unique_states": 8192
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "backend": "ibm_fez",
+  "created": "2026-04-04T21:27:34.22939Z",
+  "estimated_running_time_seconds": 4.415108935,
+  "id": "d78o4hgeecps73d7dkk0",
+  "cost": 600,
+  "params": {
+    "options": {},
+    "pubs": [
+      [
+        {
+          "__type__": "QuantumCircuit",
+          "__value__": "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"
+        },
+        {
+          "__type__": "ndarray",
+          "__value__": "eJyb7BfqGxDJyFDGUK2eklqcXKRupaBuk2ahrqOgnpZfVFKUmBefX5SSChJ3S8wpTgWKF2ckFqQC+RoGOpo6CrUKFAAuAFOzG1s="
+        },
+        8192
+      ]
+    ],
+    "support_qiskit": true,
+    "version": 2
+  },
+  "program": {
+    "id": "sampler"
+  },
+  "state": {
+    "status": "Completed"
+  },
+  "status": "Completed",
+  "user_id": "IBMid-6960018DI1"
+}

@@ -262,7 +262,7 @@ class ArtifactValidator:
         total_infos = len(self.infos)
         
         if total_errors == 0 and total_warnings == 0:
-            print("\n[✓] All validations passed!")
+            print("\n[OK] All validations passed!")
         else:
             print(f"\nErrors: {total_errors}, Warnings: {total_warnings}, Infos: {total_infos}\n")
             
@@ -351,7 +351,7 @@ def main():
         # Validate single file
         artifact_path = Path(args.artifact)
         if not artifact_path.exists():
-            print(f"[✗] File not found: {artifact_path}")
+            print(f"[ERROR] File not found: {artifact_path}")
             sys.exit(2)
         
         validator = ArtifactValidator()
@@ -363,7 +363,7 @@ def main():
         # Validate all artifacts
         base_dir = Path(args.dir)
         if not base_dir.exists():
-            print(f"[✗] Directory not found: {base_dir}")
+            print(f"[ERROR] Directory not found: {base_dir}")
             sys.exit(2)
         
         is_valid = validate_all_artifacts(base_dir)
