@@ -38,7 +38,7 @@
     <rect x="340" y="238" width="240" height="210" rx="24" fill="#10192e" stroke="#4f63a0" />
     <text x="374" y="286" fill="#7ae7cf" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Hardware stage</text>
     <text x="374" y="328" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">IBM Quantum execution</text>
-    <text x="374" y="362" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Stable baseline: 0.6183 ± 0.0010</text>
+    <text x="374" y="362" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Stable baseline: 0.6183 +/- 0.0010</text>
     <text x="374" y="396" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Current batch: 5 jobs</text>
   </g>
 
