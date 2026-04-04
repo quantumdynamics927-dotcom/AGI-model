@@ -65,6 +65,9 @@ flowchart LR
     F --> G[Replicate-aware expansion]
 ```
 
+If your Markdown viewer does not render Mermaid diagrams, read the flow as:
+promoter artifacts → encoding → IBM hardware execution → raw measurements → calibration layer → calibrated report → replicate-aware expansion.
+
 ## Key artifacts from the latest update
 
 | Artifact | Role |
