@@ -29,7 +29,7 @@ The recent calibration work is a structural upgrade, not just a better score:
 | Validation label | Hardware-calibrated promoter validation v1 |
 | Calibration model | Offset-only calibration |
 | Systematic offset | `-0.1381` |
-| Hardware baseline | `0.6183 ± 0.0010` on `ibm_fez` (inverse-phi neighborhood, approx. `1/1.618`) |
+| Hardware baseline | `0.6183 ± 0.0010` on `ibm_fez` (interesting because it sits near inverse phi, `1/1.618`) |
 | Current batch size | 5 hardware jobs |
 | Current interpretation | Promising, but sample-poor |
 | Required next milestone | 3-5 replicates per promoter with backend-aware residual analysis |

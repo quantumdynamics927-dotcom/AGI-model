@@ -14,7 +14,7 @@ repository:
     - consciousness-research
     - latent-space-analysis
     - tmt-os
-    - artifact-provenance
+    - artifact-governance
     - github-actions
   has_issues: true
   has_projects: true
