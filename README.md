@@ -29,7 +29,7 @@ The recent calibration work is a structural upgrade, not just a better score:
 | Validation label | Hardware-calibrated promoter validation v1 |
 | Calibration model | Offset-only calibration |
 | Systematic offset | `-0.1381` |
-| Hardware baseline | `0.6183 ± 0.0010` on `ibm_fez` |
+| Hardware baseline | `0.6183 ± 0.0010` on `ibm_fez` (inverse-phi neighborhood, approx. `1/1.618`) |
 | Current batch size | 5 hardware jobs |
 | Current interpretation | Promising, but sample-poor |
 | Required next milestone | 3-5 replicates per promoter with backend-aware residual analysis |
@@ -60,7 +60,7 @@ flowchart LR
     A[Promoter panel artifacts] --> B[Phi-harmonic encoding]
     B --> C[IBM Quantum execution]
     C --> D[Raw hardware measurements]
-    D --> E[Calibration framework v2.0]
+    D --> E[quantum_calibration_framework.py]
     E --> F[Calibrated validation report]
     F --> G[Replicate-aware expansion]
 ```
