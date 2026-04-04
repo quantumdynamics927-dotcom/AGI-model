@@ -26,7 +26,7 @@
     IBM Quantum promoter analysis with explicit calibration, audit-grade artifacts, and replicate-aware expansion.
   </text>
 
-  <g filter="url(#shadow)">
+  <g filter="url(#shadow)" aria-label="Artifact input stage">
     <rect x="72" y="238" width="220" height="210" rx="24" fill="#111b31" stroke="#394a76" />
     <text x="104" y="286" fill="#f5c451" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Artifact inputs</text>
     <text x="104" y="328" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Promoter panels</text>
@@ -34,7 +34,7 @@
     <text x="104" y="396" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Lineage-ready evidence</text>
   </g>
 
-  <g filter="url(#shadow)">
+  <g filter="url(#shadow)" aria-label="Hardware stage">
     <rect x="340" y="238" width="240" height="210" rx="24" fill="#10192e" stroke="#4f63a0" />
     <text x="374" y="286" fill="#7ae7cf" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Hardware stage</text>
     <text x="374" y="328" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">IBM Quantum execution</text>
@@ -42,7 +42,7 @@
     <text x="374" y="396" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Current batch: 5 jobs</text>
   </g>
 
-  <g filter="url(#shadow)">
+  <g filter="url(#shadow)" aria-label="Calibration layer stage">
     <rect x="628" y="218" width="258" height="250" rx="24" fill="#121325" stroke="#7b57ff" />
     <text x="662" y="266" fill="#f5c451" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Calibration layer</text>
     <text x="662" y="308" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Offset-only v1 model</text>
@@ -52,7 +52,7 @@
     <text x="662" y="438" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">not pass/fail only</text>
   </g>
 
-  <g filter="url(#shadow)">
+  <g filter="url(#shadow)" aria-label="Next milestone stage">
     <rect x="936" y="238" width="194" height="210" rx="24" fill="#111b31" stroke="#394a76" />
     <text x="968" y="286" fill="#7ae7cf" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Next milestone</text>
     <text x="968" y="328" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">3-5 replicates</text>
