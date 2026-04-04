@@ -1,0 +1,92 @@
+{
+  "report_type": "backend_aware_calibration",
+  "generated_at": "2026-04-04T23:13:43.370453",
+  "input_manifests": [
+    "replicate_schedule_20260404_222712"
+  ],
+  "coverage": {
+    "runs_total": 30,
+    "runs_by_backend": {
+      "ibm_fez": 15,
+      "ibm_kingston": 15
+    },
+    "runs_by_promoter": {
+      "SRY": 6,
+      "FOXG1": 6,
+      "DCTN1": 6,
+      "TP53": 6,
+      "OXT": 6
+    },
+    "replicates_by_promoter_backend": {
+      "DCTN1:ibm_fez": 3,
+      "DCTN1:ibm_kingston": 3,
+      "FOXG1:ibm_fez": 3,
+      "FOXG1:ibm_kingston": 3,
+      "OXT:ibm_fez": 3,
+      "OXT:ibm_kingston": 3,
+      "SRY:ibm_fez": 3,
+      "SRY:ibm_kingston": 3,
+      "TP53:ibm_fez": 3,
+      "TP53:ibm_kingston": 3
+    }
+  },
+  "observations_present": true,
+  "backend_offsets": {
+    "ibm_fez": -0.1404056462554333,
+    "ibm_kingston": -0.14300202983630056
+  },
+  "promoter_backend_interaction": {
+    "SRY": {
+      "offset_ibm_fez": -0.08077139299977636,
+      "offset_ibm_kingston": -0.08303468201705104,
+      "backend_spread": 0.0022632890172746833
+    },
+    "FOXG1": {
+      "offset_ibm_fez": -0.1263344664051124,
+      "offset_ibm_kingston": -0.12883506912683762,
+      "backend_spread": 0.002500602721725226
+    },
+    "DCTN1": {
+      "offset_ibm_fez": -0.03920052528565273,
+      "offset_ibm_kingston": -0.041995512959611424,
+      "backend_spread": 0.002794987673958693
+    },
+    "TP53": {
+      "offset_ibm_fez": -0.2854724918504938,
+      "offset_ibm_kingston": -0.2881190024511548,
+      "backend_spread": 0.0026465106006610117
+    },
+    "OXT": {
+      "offset_ibm_fez": -0.17024935473613123,
+      "offset_ibm_kingston": -0.17302588262684773,
+      "backend_spread": 0.0027765278907165014
+    }
+  },
+  "variance": {
+    "within_promoter_variance": {
+      "SRY": 1.7226616739775963e-06,
+      "FOXG1": 2.260742990635276e-06,
+      "DCTN1": 2.5850218015018908e-06,
+      "TP53": 2.4814923074305172e-06,
+      "OXT": 2.5776978874417603e-06
+    },
+    "between_promoter_variance_by_backend": {
+      "ibm_fez": 4.867050648863686e-07,
+      "ibm_kingston": 7.781568345836356e-07
+    }
+  },
+  "transferability": {
+    "reference_backend": "ibm_fez",
+    "reference_offset": -0.1404056462554333,
+    "backend_rmse": {
+      "ibm_fez": 0.08477335322001434,
+      "ibm_kingston": 0.08484662980048369
+    },
+    "status": "ok"
+  },
+  "recommendation": {
+    "keep_reference_backend": "ibm_fez",
+    "primary_throughput_backend": "ibm_kingston",
+    "policy_gate": "Switch default backend only after replicate-aware calibration shows stable RMSE and low backend interaction spread."
+  }
+}
