@@ -4,289 +4,166 @@
 [![CI](https://github.com/quantumdynamics927-dotcom/AGI-model/actions/workflows/ci.yml/badge.svg)](https://github.com/quantumdynamics927-dotcom/AGI-model/actions/workflows/ci.yml)
 [![Security](https://github.com/quantumdynamics927-dotcom/AGI-model/actions/workflows/security.yml/badge.svg)](https://github.com/quantumdynamics927-dotcom/AGI-model/actions/workflows/security.yml)
 
-> **Status:** Experimental research repository. Quantum result archival system with cryptographic verification and provenance tracking.
+> **Current stage:** **hardware-calibrated promoter validation v1**  
+> The project now treats IBM Quantum hardware deviation as a modelable calibration layer, with replicate-aware expansion as the next required milestone.
 
-AGI-model is a research platform for quantum-inspired variational autoencoder (VAE) experiments, latent-space analysis, consciousness-oriented exploration, package-oriented runtime foundations, and TMT-OS / TMT_Quantum_Vault interoperability.
+![Hardware-calibrated promoter validation overview](docs/assets/hardware-calibrated-promoter-validation.svg)
 
-It brings together model training, scientific utilities, dashboards, data-processing scripts, and repository automation in a single workspace for exploratory research rather than production deployment.
+AGI-model is an experimental research repository for quantum-inspired modeling, IBM Quantum promoter-panel analysis, audit-grade artifact generation, and TMT-OS-aligned provenance workflows. The latest repository evolution shifts the headline from pass/fail validation to a scientifically stronger question:
 
-## About this repository
+**What transformation maps promoter-model predictions to hardware observables?**
 
-- **Primary focus:** quantum-inspired ML research and experimentation
-- **Core runtime:** Python 3.10+
-- **Main interfaces:** training scripts, analysis scripts, tests, Streamlit dashboard, optional FastAPI bridge
-- **Repository ops:** GitHub Actions CI, Dependabot updates, Docker build validation, repo settings as code
+## Why this update matters
 
-## Table of contents
+The recent calibration work is a structural upgrade, not just a better score:
 
-- [Overview](#overview)
-- [Key capabilities](#key-capabilities)
-- [Repository setup](#repository-setup)
-- [Common workflows](#common-workflows)
-- [DevOps and repository management](#devops-and-repository-management)
-- [Repository structure](#repository-structure)
-- [Documentation](#documentation)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
+- hardware deviation is now treated as a **systematic empirical effect** instead of an unexplained failure,
+- calibration logic is separated from raw execution artifacts and interpreted reports,
+- the repository is positioned around **real hardware execution, promoter analysis, and lineage-ready evidence**,
+- the next research step is explicit: **replicate-aware promoter calibration**.
 
-## Overview
+## Latest validation snapshot
 
-This repository currently groups four complementary areas of work:
+| Signal | Current reading |
+| --- | --- |
+| Validation label | Hardware-calibrated promoter validation v1 |
+| Calibration model | Offset-only calibration |
+| Systematic offset | `-0.1381` |
+| Hardware baseline | `0.6183 ± 0.0010` on `ibm_fez` (interesting because it sits near inverse phi, `1/1.618`) |
+| Current batch size | 5 hardware jobs |
+| Current interpretation | Promising, but sample-poor |
+| Required next milestone | 3-5 replicates per promoter with backend-aware residual analysis |
 
-1. **Quantum-inspired modeling** — VAE training, checkpointing, and quantum-oriented metrics such as coherence, fidelity, entropy, and mixed-state regularization.
-2. **Analysis and experimentation** — latent-space analysis, golden-ratio exploration, sacred-geometry tooling, EEG/fMRI-oriented scripts, and IBM Quantum adjacent experiments.
-3. **Integration surfaces** — TMT-OS modules, bridge utilities, provenance helpers, and experimental system-integration code.
-4. **Developer operations** — CI workflows, Docker assets, dependency automation, repo settings, and contributor documentation.
+## Scientific position
 
-## Key capabilities
+### What is supported today
+
+- IBM hardware execution appears **stable and repeatable** for the current promoter batch.
+- Promoter separation appears **compressed by hardware execution**, which is scientifically informative.
+- The calibration framework is a valid **v1 empirical mapping layer** for this batch.
+- Artifact governance now cleanly separates:
+  - raw hardware observation,
+  - calibration logic,
+  - interpreted report output,
+  - audit trail.
+
+### What should not be overclaimed
+
+- The **100% post-calibration pass rate is not the headline claim**.
+- Five jobs are not enough to establish transferability across promoters or backends.
+- The observed baseline near `1/φ` is an interesting observation, not yet a confirmed theory result.
+
+## Calibration workflow
+
+```mermaid
+flowchart LR
+    A[Promoter panel artifacts] --> B[Phi-harmonic encoding]
+    B --> C[IBM Quantum execution]
+    C --> D[Raw hardware measurements]
+    D --> E[quantum_calibration_framework.py]
+    E --> F[Calibrated validation report]
+    F --> G[Replicate-aware expansion]
+```
+
+If your Markdown viewer does not render Mermaid diagrams, read the flow as:
+promoter artifacts → encoding → IBM hardware execution → raw measurements → calibration layer → calibrated report → replicate-aware expansion.
+
+## Key artifacts from the latest update
+
+| Artifact | Role |
+| --- | --- |
+| `quantum_calibration_framework.py` | Applies the explicit hardware-calibration layer and validation logic |
+| `CALIBRATION_REPORT_v2.0.md` | Human-readable audit report for the current IBM hardware batch |
+| `quantum_calibration_report.json` | Machine-readable calibration summary |
+| `README_PROMOTER_PANEL.md` | Promoter-panel context and workflow reference |
+| `README_TMT_OS_PROMOTERS.md` | TMT-OS promoter integration context |
+
+## Repository focus areas
 
 | Area | Description | Primary entry points |
 | --- | --- | --- |
-| Model training | Train the core VAE and persist checkpoints and plots | `train_vae.py`, `vae_model.py` |
-| Validation | Run regression tests and local smoke checks | `tests/`, `test_model.py`, `.github/workflows/ci.yml` |
-| Analysis | Explore latent structure, golden-ratio proximity, and consciousness metrics | `latent_analysis.py`, `golden_ratio_*.py`, `quantum_consciousness_link.py` |
-| Dashboarding | Launch the Streamlit dashboard for local inspection | `dashboards/quantum_consciousness_dashboard/app.py` |
-| Integration | Work across TMT-OS, Vault, geometry, observer, and provenance modules | `packages/`, `TMT-OS/`, `integrations/`, `molecular_geometry/`, `quantum_observer/` |
-| Containerization | Build local runtime and dashboard images | `Dockerfile`, `Dockerfile.dashboard`, `.github/workflows/deploy.yml` |
+| Hardware-calibrated promoter validation | IBM Quantum execution, phi-resonance measurement, calibration, and reporting | `quantum_calibration_framework.py`, `CALIBRATION_REPORT_v2.0.md`, `agi_scripts/`, `analyze_ibm_hardware_jobs.py` |
+| Quantum-inspired modeling | VAE training, latent compression, density-matrix-aware losses | `vae_model.py`, `train_vae.py`, `test_model.py` |
+| Analysis and interpretation | Golden-ratio analysis, latent-space inspection, consciousness-oriented metrics | `latent_analysis.py`, `golden_ratio_*.py`, `quantum_consciousness_link.py` |
+| TMT-OS and provenance | Interop layers, artifact lineage, audit-oriented utilities | `TMT-OS/`, `packages/`, `integrations/`, `provenance/`, `archive/` |
+| Local inspection surfaces | Dashboard and lightweight bridge surfaces | `dashboards/quantum_consciousness_dashboard/`, `main.py`, `index.html` |
 
-### Recent Implementations (April 2026)
+## Getting started
 
-| Module | Description | Key Features |
-| --- | --- | --- |
-| `universal_symmetry.py` | Hydrogen vs Opposition decompression with Fibonacci/Lucas sequences | Three-phase sign classifier (positive/zero/negative), perturbation analysis, sign-flip robustness testing, symmetry operator S[f] = Π f[i] / φ^n |
-| `watch_agents.py` | Real-time 12-agent telemetry monitor | AgentMetrics dataclass, TelemetryBackend abstract class, MockTelemetryBackend for testing, RealTelemetryBackend for production, status classification (HEALTHY/DEGRADED/CRITICAL/OFFLINE), resonance lock classification (GOLDEN_FLOW/PHI_LOCKED/DELTA_ALIGNING/UNSTABLE/SEEKING) |
-| `TMT_God_Gene_Test_v2.py` | DNA sequence analysis with independent metrics | Entropy gain (r=-0.15), transition gain (r=+0.13), positional gain, expanded panels (n=20), multiple encodings (integer/purine-pyrimidine/GC-content), ANOVA statistical separation |
-| `TMT_God_Gene_Test_Enhanced.py` | Statistical validation with controls | Shuffled negative controls, ANOVA analysis, category separation testing, hypothesis validation framework |
-| `cloud_quantum_chemistry.py` | Cloud-based molecular VQE | Literature-based Hamiltonians for H₂, LiH, H₂O, N₂, CH₄, synthetic fallback for Windows compatibility |
-| `dna_quantum_circuits.py` | DNA-to-quantum circuit encoder | Multiple encoding schemes, Qiskit 2.x compatibility, VQE integration |
-| `test_dna_molecular_vqe.py` | Comprehensive DNA VQE tests | Qiskit 2.x API compatibility tests, synthetic Hamiltonian validation |
-
-## Repository setup
-
-### Prerequisites
-
-- Python 3.10 or newer
-- `pip` and `venv`
-- Optional: Docker for local image builds
-- Optional: Node.js 20+ for Hardhat-based NFT/contract tooling
-- Optional: IBM Quantum credentials for hardware-facing experiments
-
-### Recommended bootstrap
-
-```bash
-git clone https://github.com/quantumdynamics927-dotcom/AGI-model.git
-cd AGI-model
-make setup
-make env
-```
-
-### Manual bootstrap
+### Environment setup
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate  # Linux / macOS
-# .venv\Scripts\activate   # Windows PowerShell
-
+source .venv/bin/activate
 python -m pip install --upgrade pip -r requirements.txt -r requirements-dev.txt
 cp .env.example .env
 ```
 
-### Python import path parity with CI
-
-The main CI workflow exports:
+### CI-parity test command
 
 ```bash
-PYTHONPATH="$(pwd):$(pwd)/TMT-OS:$(pwd)/tmt-os-labs"
+PYTHONPATH="$(pwd):$(pwd)/TMT-OS:$(pwd)/tmt-os-labs" python -m pytest -q
 ```
 
-If local imports behave differently from CI, mirror that environment before running tests.
-
-## Common workflows
-
-### Validate the local environment
+### Common workflows
 
 ```bash
-make lint
-make test
-make check
-```
-
-What these commands do:
-
-- `make lint` runs `flake8` and `black --check`
-- `make test` runs the Python test suite under `tests/`
-- `make check` runs linting, tests, and security scanning in sequence
-
-### Train the model
-
-```bash
-make train
-# or
+# Train the VAE
 python train_vae.py
-```
 
-Typical outputs include:
-
-- a checkpoint such as `best_model.pt`
-- generated plots such as training curves
-- console metrics for reconstruction, KL divergence, coherence, fidelity, and entropy-oriented terms
-
-### Run a quick model smoke test
-
-```bash
+# Run a lightweight model check
 python test_model.py
-```
 
-### Launch the API bridge
+# Analyze the latest calibration stage
+python quantum_calibration_framework.py
 
-```bash
-python main.py --mode serve --host 0.0.0.0 --port 8000
-```
+# Explore downstream analysis
+python latent_analysis.py
+python quantum_consciousness_link.py
 
-This serves the FastAPI bridge used by the Docker runtime image.
-
-### Launch the dashboard
-
-```bash
-make dashboard
-# or
+# Launch the dashboard
 streamlit run dashboards/quantum_consciousness_dashboard/app.py
 ```
 
-### Run analysis workflows
+## Replicate-aware next phase
 
-```bash
-python quantum_consciousness_link.py
-python latent_analysis.py
-python golden_ratio_analysis.py
-```
+The next milestone is to move from job-level calibration to **replicate-aware promoter calibration**.
 
-### Run DNA sequence analysis (God Gene Test)
+For each selected promoter, store:
 
-```bash
-# Enhanced test with statistical validation
-python TMT_God_Gene_Test_Enhanced.py
+- promoter ID,
+- replicate index,
+- backend,
+- shots,
+- transpiled depth,
+- layout,
+- measured phi,
+- calibrated phi,
+- residual,
+- execution timestamp.
 
-# v2 with independent metrics and expanded panels
-python TMT_God_Gene_Test_v2.py
-```
+Then evaluate:
 
-### Run universal symmetry analysis
+- within-promoter mean and variance,
+- between-promoter effect size,
+- calibration residual distribution,
+- backend-specific offset transferability.
 
-```bash
-# Fibonacci/Lucas decompression with sign phase analysis
-python universal_symmetry.py
-```
-
-### Run agent telemetry monitoring
-
-```bash
-# Quick health check
-python watch_agents.py --health
-
-# Real-time monitoring (mock backend)
-python watch_agents.py
-
-# Real-time monitoring (production backend)
-python watch_agents.py --real --state-dir ./agent_states
-```
-
-### Run molecular VQE (cloud-based)
-
-```bash
-# Requires qiskit-nature (pyscf optional on Windows)
-python cloud_quantum_chemistry.py
-```
-
-### Build the container images locally
-
-```bash
-docker build -t agi-model:local .
-docker build -f Dockerfile.dashboard -t agi-model-dashboard:local .
-```
-
-## DevOps and repository management
-
-The repository devops setup is intentionally scoped to what is currently maintained in-tree:
-
-- **CI:** `.github/workflows/ci.yml` runs the Python test matrix and optional AGI eval smoke workflow dispatch.
-- **Container build and publish:** `.github/workflows/deploy.yml` builds the runtime and dashboard images and publishes them to GHCR on pushes to `main`/`master`, with optional manual dispatch for explicit image publication.
-- **Security and dependency hygiene:** `.github/workflows/security.yml` and `.github/dependabot.yml`.
-- **Repository metadata as code:** `.github/settings.yml` tracks the GitHub repository description and topics.
-
-### Current repository stance
-
-- Staging and production server deployment steps are **not** committed as an active supported path in this repository.
-- NFT publishing and contract verification remain **paused**.
-- Container images are the maintained deployment artifact for repo-level automation.
-
-## Repository structure
-
-| Path | Purpose |
-| --- | --- |
-| `vae_model.py` | Core VAE architecture and quantum-oriented loss logic |
-| `train_vae.py` | Main training entry point |
-| `test_model.py` | Lightweight local model validation |
-| `universal_symmetry.py` | Fibonacci/Lucas decompression with three-phase sign classifier |
-| `watch_agents.py` | Real-time 12-agent telemetry monitoring with pluggable backends |
-| `TMT_God_Gene_Test_v2.py` | DNA sequence analysis with independent gain metrics |
-| `TMT_God_Gene_Test_Enhanced.py` | Statistical validation with negative controls |
-| `cloud_quantum_chemistry.py` | Cloud-based molecular VQE with literature Hamiltonians |
-| `dna_quantum_circuits.py` | DNA-to-quantum circuit encoder |
-| `test_dna_molecular_vqe.py` | DNA VQE test suite |
-| `tests/` | Automated regression and integration coverage |
-| `docs/` | Central documentation hub |
-| `packages/` | Package-oriented foundation for core, apps, and integrations |
-| `dashboards/quantum_consciousness_dashboard/` | Streamlit dashboard |
-| `integrations/` | External and system integration modules |
-| `molecular_geometry/` | Molecular and spatial analysis components |
-| `TMT-OS/` | TMT-OS integration assets |
-| `real_data/` and `sacred_datasets/` | Input datasets used by research workflows |
+That will determine whether the calibration layer is portable or merely fit to the current five-job batch.
 
 ## Documentation
 
-Key documentation entry points:
-
 - [Documentation hub](docs/README.md)
 - [Architecture guide](docs/architecture/README.md)
-- [API reference](docs/api/README.md)
 - [Development guide](docs/development/README.md)
 - [Deployment guide](docs/deployment/README.md)
 - [Security guide](docs/security/README.md)
 - [Contributing guide](docs/contributing/CONTRIBUTING.md)
-- [Changelog](CHANGELOG.md)
 
-## Troubleshooting
+## Validation notes
 
-### Missing development tools
-
-If `make lint` or `make test` fails because required tools are missing:
-
-```bash
-python -m pip install -r requirements.txt
-python -m pip install -r requirements-dev.txt
-```
-
-### Large dependency installs
-
-This repository includes scientific Python dependencies such as PyTorch, NumPy, SciPy, Pandas, and Matplotlib. Initial environment setup can take longer than a lightweight Python project.
-
-### Hardware-facing experiments
-
-IBM Quantum and other external-integration scripts may require credentials or services that are not present in a default local environment. Start with the Python-only workflows first, then enable external credentials deliberately.
-
-### Legacy subtrees and lint noise
-
-The repository contains broad experimental and imported subtrees. Some existing lint failures may originate outside the part of the repo you are actively changing.
-
-## Contributing
-
-Before opening a pull request:
-
-1. review [the contributing guide](docs/contributing/CONTRIBUTING.md),
-2. validate your environment with the commands above,
-3. update relevant documentation when repository behavior or workflows change.
+- Local `pytest` currently passes with `PYTHONPATH="$(pwd):$(pwd)/TMT-OS:$(pwd)/tmt-os-labs"`.
+- Repository-wide linting currently reports pre-existing failures in legacy/imported subtrees outside this documentation refresh.
 
 ## License
 
