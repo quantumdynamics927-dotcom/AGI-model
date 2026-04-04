@@ -1,0 +1,54 @@
+{
+  "report_type": "backend_aware_calibration",
+  "generated_at": "2026-04-04T18:31:55.330702",
+  "input_manifests": [
+    "replicate_schedule_20260404_183154"
+  ],
+  "coverage": {
+    "runs_total": 30,
+    "runs_by_backend": {
+      "ibm_fez": 15,
+      "ibm_kingston": 15
+    },
+    "runs_by_promoter": {
+      "SRY": 6,
+      "FOXG1": 6,
+      "DCTN1": 6,
+      "TP53": 6,
+      "OXT": 6
+    },
+    "replicates_by_promoter_backend": {
+      "DCTN1:ibm_fez": 3,
+      "DCTN1:ibm_kingston": 3,
+      "FOXG1:ibm_fez": 3,
+      "FOXG1:ibm_kingston": 3,
+      "OXT:ibm_fez": 3,
+      "OXT:ibm_kingston": 3,
+      "SRY:ibm_fez": 3,
+      "SRY:ibm_kingston": 3,
+      "TP53:ibm_fez": 3,
+      "TP53:ibm_kingston": 3
+    }
+  },
+  "observations_present": false,
+  "backend_offsets": {
+    "ibm_fez": 0.0,
+    "ibm_kingston": 0.0,
+    "ibm_fez_baseline_phi": 0.6183
+  },
+  "promoter_backend_interaction": {},
+  "variance": {
+    "within_promoter_variance": {},
+    "between_promoter_variance_by_backend": {}
+  },
+  "transferability": {
+    "reference_backend": "ibm_fez",
+    "reference_offset": null,
+    "status": "insufficient_observations"
+  },
+  "recommendation": {
+    "keep_reference_backend": "ibm_fez",
+    "primary_throughput_backend": "ibm_kingston",
+    "policy_gate": "Switch default backend only after replicate-aware calibration shows stable RMSE and low backend interaction spread."
+  }
+}

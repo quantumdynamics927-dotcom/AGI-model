@@ -1,0 +1,117 @@
+golden_ratio: 1.618033988749895
+planck_constant: 6.62607015e-34
+boltzmann_constant: 1.380649e-23
+model:
+  input_dim: 128
+  latent_dim: 32
+  hidden_dim: 64
+  sparsity_factor: 0.1
+training:
+  epochs: 200
+  batch_size: 64
+  learning_rate: 0.0003
+  weight_decay: 1.0e-05
+  early_stopping_patience: 30
+  reduce_lr_patience: 15
+  loss_weights:
+    reconstruction: 1.0
+    kl_divergence: 0.0008
+    hamming: 0.3
+    coherence: 0.1
+    hardware: 0.01
+    mixed_state: 0.1
+    fidelity: 0.1
+    entropy: 0.05
+quantum:
+  n_qubits: 6
+  backend: ibm_brisbane
+  shots: 8192
+  coherence_time: 0.0001
+  gate_fidelity_target: 0.999
+golden_ratio_analysis:
+  threshold: 0.05
+  bootstrap_iterations: 10000
+  permutation_iterations: 5000
+  resonance_threshold: 0.7
+paths:
+  output_dir: outputs
+  checkpoint_dir: checkpoints
+  visualization_dir: visualizations
+  data_dir: data
+  log_dir: logs
+api:
+  host: 0.0.0.0
+  port: 8000
+  debug: false
+  cors_origins:
+  - '*'
+monitoring:
+  track_frequency: 5
+  save_frequency: 10
+  generate_plots: true
+  export_metrics: true
+archive:
+  default_style: quantum_consciousness
+  max_archives_per_request: 10
+  storage_backend: local
+  archive_path: archive
+  enable_verification: true
+  enable_provenance: true
+environment: development
+logging:
+  level: INFO
+  format: '%(asctime)s | %(levelname)s | %(name)s | %(message)s'
+_provenance:
+  api:
+    cors_origins: default
+    debug: default
+    host: default
+    port: default
+  archive:
+    archive_path: default
+    default_style: default
+    enable_provenance: default
+    enable_verification: default
+    max_archives_per_request: default
+    storage_backend: default
+  boltzmann_constant: default
+  environment: default
+  golden_ratio: default
+  golden_ratio_analysis:
+    bootstrap_iterations: default
+    permutation_iterations: default
+    resonance_threshold: default
+    threshold: default
+  log_format: default
+  log_level: default
+  model:
+    hidden_dim: default
+    input_dim: default
+    latent_dim: default
+    sparsity_factor: default
+  monitoring:
+    export_metrics: default
+    generate_plots: default
+    save_frequency: default
+    track_frequency: default
+  paths:
+    checkpoint_dir: default
+    data_dir: default
+    log_dir: default
+    output_dir: default
+    visualization_dir: default
+  planck_constant: default
+  quantum:
+    backend: default
+    coherence_time: default
+    gate_fidelity_target: default
+    n_qubits: default
+    shots: default
+  training:
+    batch_size: default
+    early_stopping_patience: default
+    epochs: default
+    learning_rate: default
+    loss_weights: default
+    reduce_lr_patience: default
+    weight_decay: default

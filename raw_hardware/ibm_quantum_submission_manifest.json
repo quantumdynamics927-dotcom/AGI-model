@@ -1,0 +1,58 @@
+{
+  "manifest_type": "ibm_quantum_submission",
+  "generated_at": "2026-04-04T00:50:57.853861",
+  "backend": "ibm_fez",
+  "total_jobs": 5,
+  "jobs": [
+    {
+      "promoter_id": "SRY",
+      "job_id": "d7854nak86tc739us8o0",
+      "backend": "ibm_fez",
+      "shots": 8192,
+      "circuit_depth": 16,
+      "submitted_at": "2026-04-04T00:50:53.028858",
+      "status": "SUBMITTED"
+    },
+    {
+      "promoter_id": "FOXG1",
+      "job_id": "d7854nik86tc739us8p0",
+      "backend": "ibm_fez",
+      "shots": 8192,
+      "circuit_depth": 16,
+      "submitted_at": "2026-04-04T00:50:54.335586",
+      "status": "SUBMITTED"
+    },
+    {
+      "promoter_id": "DCTN1",
+      "job_id": "d7854nrc6das739hfjc0",
+      "backend": "ibm_fez",
+      "shots": 8192,
+      "circuit_depth": 16,
+      "submitted_at": "2026-04-04T00:50:55.654362",
+      "status": "SUBMITTED"
+    },
+    {
+      "promoter_id": "TP53",
+      "job_id": "d7854oak86tc739us8rg",
+      "backend": "ibm_fez",
+      "shots": 8192,
+      "circuit_depth": 16,
+      "submitted_at": "2026-04-04T00:50:56.817395",
+      "status": "SUBMITTED"
+    },
+    {
+      "promoter_id": "OXT",
+      "job_id": "d7854oik86tc739us8sg",
+      "backend": "ibm_fez",
+      "shots": 8192,
+      "circuit_depth": 16,
+      "submitted_at": "2026-04-04T00:50:57.852405",
+      "status": "SUBMITTED"
+    }
+  ],
+  "artifact_metadata": {
+    "evidence_class": "primary",
+    "artifact_type": "raw_hardware",
+    "validation_status": "submitted"
+  }
+}
