@@ -1,0 +1,191 @@
+{
+  "report_version": "2.0",
+  "generated": "2026-04-04T01:58:56.172856",
+  "calibration_status": {
+    "is_calibrated": true,
+    "systematic_offset": -0.138101330547555,
+    "baseline_phi": 0.618298669452445,
+    "tolerance": 0.15
+  },
+  "summary": {
+    "total_jobs": 5,
+    "passed": 5,
+    "failed": 0,
+    "pass_rate": 1.0
+  },
+  "statistics": {
+    "measured_phi": {
+      "mean": 0.618298669452445,
+      "std": 0.001371150879832747,
+      "min": 0.6161359362146973,
+      "max": 0.6201542679232299
+    },
+    "predicted_phi": {
+      "mean": 0.7564,
+      "std": 0.08448100378191538
+    },
+    "deviation": {
+      "mean": 0.06980285390678513,
+      "std": 0.04878921303046577,
+      "max": 0.1467627332377477
+    }
+  },
+  "gene_breakdown": {
+    "UNKNOWN": {
+      "count": 2,
+      "passed": 2,
+      "mean_measured_phi": 0.6194484493702984,
+      "std_measured_phi": 0.0007058185529315031,
+      "mean_predicted_phi": 0.764,
+      "mean_deviation": 0.021294181447068516
+    },
+    "SRY": {
+      "count": 2,
+      "passed": 2,
+      "mean_measured_phi": 0.6168168397026721,
+      "std_measured_phi": 0.0006809034879747267,
+      "mean_predicted_phi": 0.7995,
+      "mean_deviation": 0.10218090348797476
+    },
+    "OXT": {
+      "count": 1,
+      "passed": 1,
+      "mean_measured_phi": 0.6189627691162841,
+      "std_measured_phi": 0.0,
+      "mean_predicted_phi": 0.655,
+      "mean_deviation": 0.10206409966383911
+    }
+  },
+  "results": [
+    {
+      "job_id": "d7854nak86tc739us8o0",
+      "gene": "UNKNOWN",
+      "backend": "ibm_fez",
+      "shots": 8192,
+      "execution_time": 2.996782,
+      "predicted_phi": 0.786,
+      "measured_phi": 0.6201542679232299,
+      "raw_phi": 0.6201542679232299,
+      "deviation": -0.02774440152921509,
+      "absolute_deviation": 0.02774440152921509,
+      "passed": true,
+      "entropy": 29.6487772720164,
+      "mean_probability": 0.48977419354838714,
+      "std_probability": 0.10575129364797672,
+      "top_active_bits": [
+        43,
+        38,
+        51,
+        41,
+        44
+      ],
+      "replicate_index": 0,
+      "calibration_applied": true,
+      "calibration_offset": -0.138101330547555
+    },
+    {
+      "job_id": "d7854nik86tc739us8p0",
+      "gene": "UNKNOWN",
+      "backend": "ibm_fez",
+      "shots": 8192,
+      "execution_time": 2.966262,
+      "predicted_phi": 0.742,
+      "measured_phi": 0.6187426308173669,
+      "raw_phi": 0.6187426308173669,
+      "deviation": 0.014843961364921943,
+      "absolute_deviation": 0.014843961364921943,
+      "passed": true,
+      "entropy": 29.613877576007702,
+      "mean_probability": 0.49167741935483866,
+      "std_probability": 0.10470985629941193,
+      "top_active_bits": [
+        51,
+        18,
+        10,
+        12,
+        43
+      ],
+      "replicate_index": 0,
+      "calibration_applied": true,
+      "calibration_offset": -0.138101330547555
+    },
+    {
+      "job_id": "d7854nrc6das739hfjc0",
+      "gene": "SRY",
+      "backend": "ibm_fez",
+      "shots": 8192,
+      "execution_time": 2.957595,
+      "predicted_phi": 0.698,
+      "measured_phi": 0.6174977431906468,
+      "raw_phi": 0.6174977431906468,
+      "deviation": 0.057599073738201834,
+      "absolute_deviation": 0.057599073738201834,
+      "passed": true,
+      "entropy": 29.657217071700696,
+      "mean_probability": 0.4902741935483872,
+      "std_probability": 0.10432226270225056,
+      "top_active_bits": [
+        12,
+        49,
+        46,
+        18,
+        43
+      ],
+      "replicate_index": 0,
+      "calibration_applied": true,
+      "calibration_offset": -0.138101330547555
+    },
+    {
+      "job_id": "d7854oak86tc739us8rg",
+      "gene": "SRY",
+      "backend": "ibm_fez",
+      "shots": 8192,
+      "execution_time": 2.964242,
+      "predicted_phi": 0.901,
+      "measured_phi": 0.6161359362146973,
+      "raw_phi": 0.6161359362146973,
+      "deviation": -0.1467627332377477,
+      "absolute_deviation": 0.1467627332377477,
+      "passed": true,
+      "entropy": 29.532412626915455,
+      "mean_probability": 0.4946290322580645,
+      "std_probability": 0.10499465944497702,
+      "top_active_bits": [
+        44,
+        52,
+        25,
+        18,
+        43
+      ],
+      "replicate_index": 0,
+      "calibration_applied": true,
+      "calibration_offset": -0.138101330547555
+    },
+    {
+      "job_id": "d7854oik86tc739us8sg",
+      "gene": "OXT",
+      "backend": "ibm_fez",
+      "shots": 8192,
+      "execution_time": 2.99157,
+      "predicted_phi": 0.655,
+      "measured_phi": 0.6189627691162841,
+      "raw_phi": 0.6189627691162841,
+      "deviation": 0.10206409966383911,
+      "absolute_deviation": 0.10206409966383911,
+      "passed": true,
+      "entropy": 29.759179841874776,
+      "mean_probability": 0.486983870967742,
+      "std_probability": 0.10329280209995645,
+      "top_active_bits": [
+        41,
+        37,
+        11,
+        18,
+        43
+      ],
+      "replicate_index": 0,
+      "calibration_applied": true,
+      "calibration_offset": -0.138101330547555
+    }
+  ]
+}

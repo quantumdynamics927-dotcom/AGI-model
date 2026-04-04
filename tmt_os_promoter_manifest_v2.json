@@ -1,0 +1,585 @@
+{
+  "manifest_version": "v2.0",
+  "generated_at": "2026-04-04T00:11:16.110164",
+  "panel_name": "TMT_OS_Labs_Sephirot_10_Promoter_Panel",
+  "panel_description": "NFT-certified quantum-genetic promoter panel from TMT-OS Labs with cryptographic verification",
+  "source": "TMT-OS Labs Boveda Cuantica",
+  "framework": "TMT-OS v4.0",
+  "researcher": "Jose/Agent 13",
+  "total_promoters": 10,
+  "verification_summary": {
+    "sha256_verified": 10,
+    "hmac_verified": 0,
+    "nft_loaded": 10,
+    "fully_verified": 0
+  },
+  "promoters": [
+    {
+      "file_path": "E:\\AGI model\\tmt-os-labs\\promoters\\ACTB_Malkuth_promoter.fa",
+      "gene_name": "ACTB",
+      "sephirot_label": "Malkuth",
+      "verification": {
+        "sha256_verified": true,
+        "hmac_verified": false,
+        "nft_loaded": true,
+        "integrity_status": "sha256_only"
+      },
+      "nft_metadata": {
+        "name": "TMT-OS Research: PromoterDelivery - Batch #C5A3F5DB",
+        "description": "Certified Quantum-Genetic Research generated via TMT-OS Boveda Cuantica.",
+        "image": "ipfs://[Link_To_Your_Graph_Or_Logo]",
+        "external_url": "https://www.upwork.com/freelancers/~your_id",
+        "attributes": [
+          {
+            "trait_type": "Researcher",
+            "value": "Jose/Agent 13"
+          },
+          {
+            "trait_type": "Framework",
+            "value": "TMT-OS v4.0"
+          },
+          {
+            "trait_type": "Integrity_Hash",
+            "value": "fd45538406de276d4b94cfacdd8c3b07b74a47bafe8aff2d340862e9a228ce62"
+          },
+          {
+            "trait_type": "Timestamp",
+            "value": 1768358798
+          },
+          {
+            "trait_type": "Phi Score",
+            "value": 1.0
+          },
+          {
+            "trait_type": "Size",
+            "value": 74
+          }
+        ]
+      },
+      "sha256_metadata": {
+        "path": "E:\\AGI model\\data\\promoters\\ACTB_Malkuth_promoter.fa",
+        "filename": "ACTB_Malkuth_promoter.fa",
+        "sha256": "fd45538406de276d4b94cfacdd8c3b07b74a47bafe8aff2d340862e9a228ce62",
+        "size": 74,
+        "timestamp": 1768358798.505004,
+        "nft_metadata": "e:\\AGI model\\data\\promoters\\ACTB_Malkuth_promoter.fa.nft.json",
+        "hmac_signature": "eb4f42645851887e13822fbbcd6cfcb1250c1d26c6953928e22afbc73d076e2e"
+      },
+      "sequence": "GGAATCACTTGCACCCGGGAGGCGGAGGCTG",
+      "sequence_length": 31,
+      "gc_content": 0.6774193548387096,
+      "header": ">chromosome:GRCh38:7:5563902:5563932:-1"
+    },
+    {
+      "file_path": "E:\\AGI model\\tmt-os-labs\\promoters\\BDNF_Tiferet_promoter.fa",
+      "gene_name": "BDNF",
+      "sephirot_label": "Tiferet",
+      "verification": {
+        "sha256_verified": true,
+        "hmac_verified": false,
+        "nft_loaded": true,
+        "integrity_status": "sha256_only"
+      },
+      "nft_metadata": {
+        "name": "TMT-OS Research: PromoterDelivery - Batch #75B9E2EB",
+        "description": "Certified Quantum-Genetic Research generated via TMT-OS Boveda Cuantica.",
+        "image": "ipfs://[Link_To_Your_Graph_Or_Logo]",
+        "external_url": "https://www.upwork.com/freelancers/~your_id",
+        "attributes": [
+          {
+            "trait_type": "Researcher",
+            "value": "Jose/Agent 13"
+          },
+          {
+            "trait_type": "Framework",
+            "value": "TMT-OS v4.0"
+          },
+          {
+            "trait_type": "Integrity_Hash",
+            "value": "f27de6b6c1156f2891e620ba44b0e822d0ae0ba6a3a802b90d903735efdd0dd8"
+          },
+          {
+            "trait_type": "Timestamp",
+            "value": 1768358802
+          },
+          {
+            "trait_type": "Phi Score",
+            "value": 1.0
+          },
+          {
+            "trait_type": "Size",
+            "value": 77
+          }
+        ]
+      },
+      "sha256_metadata": {
+        "path": "E:\\AGI model\\data\\promoters\\BDNF_Tiferet_promoter.fa",
+        "filename": "BDNF_Tiferet_promoter.fa",
+        "sha256": "f27de6b6c1156f2891e620ba44b0e822d0ae0ba6a3a802b90d903735efdd0dd8",
+        "size": 77,
+        "timestamp": 1768358802.5109887,
+        "nft_metadata": "e:\\AGI model\\data\\promoters\\BDNF_Tiferet_promoter.fa.nft.json",
+        "hmac_signature": "111188527ec65bff21eb4f04dd349998e2fe983814fd5698963a911e14f8b5c4"
+      },
+      "sequence": "ACCCCCTCCCTGCTGCGCTTTTCTGGTATTA",
+      "sequence_length": 31,
+      "gc_content": 0.5483870967741935,
+      "header": ">chromosome:GRCh38:11:27722058:27722088:-1"
+    },
+    {
+      "file_path": "E:\\AGI model\\tmt-os-labs\\promoters\\DCTN1_Binah_promoter.fa",
+      "gene_name": "DCTN1",
+      "sephirot_label": "Binah",
+      "verification": {
+        "sha256_verified": true,
+        "hmac_verified": false,
+        "nft_loaded": true,
+        "integrity_status": "sha256_only"
+      },
+      "nft_metadata": {
+        "name": "TMT-OS Research: PromoterDelivery - Batch #CCA33732",
+        "description": "Certified Quantum-Genetic Research generated via TMT-OS Boveda Cuantica.",
+        "image": "ipfs://[Link_To_Your_Graph_Or_Logo]",
+        "external_url": "https://www.upwork.com/freelancers/~your_id",
+        "attributes": [
+          {
+            "trait_type": "Researcher",
+            "value": "Jose/Agent 13"
+          },
+          {
+            "trait_type": "Framework",
+            "value": "TMT-OS v4.0"
+          },
+          {
+            "trait_type": "Integrity_Hash",
+            "value": "41523223fa284814c746d4491349a8c8f18c2655ce9d62e09517cef708cd8195"
+          },
+          {
+            "trait_type": "Timestamp",
+            "value": 1768358803
+          },
+          {
+            "trait_type": "Phi Score",
+            "value": 1.0
+          },
+          {
+            "trait_type": "Size",
+            "value": 76
+          }
+        ]
+      },
+      "sha256_metadata": {
+        "path": "E:\\AGI model\\data\\promoters\\DCTN1_Binah_promoter.fa",
+        "filename": "DCTN1_Binah_promoter.fa",
+        "sha256": "41523223fa284814c746d4491349a8c8f18c2655ce9d62e09517cef708cd8195",
+        "size": 76,
+        "timestamp": 1768358803.1450806,
+        "nft_metadata": "e:\\AGI model\\data\\promoters\\DCTN1_Binah_promoter.fa.nft.json",
+        "hmac_signature": "4f041d2d62656ebc55420833c03c95dcd2abc6ca2e5058072083be3ee682f2f0"
+      },
+      "sequence": "TTTCTTATGGTCCTAATCGGCTTCCCAGGCA",
+      "sequence_length": 31,
+      "gc_content": 0.4838709677419355,
+      "header": ">chromosome:GRCh38:2:74392087:74392117:-1"
+    },
+    {
+      "file_path": "E:\\AGI model\\tmt-os-labs\\promoters\\FOS_Netzach_promoter.fa",
+      "gene_name": "FOS",
+      "sephirot_label": "Netzach",
+      "verification": {
+        "sha256_verified": true,
+        "hmac_verified": false,
+        "nft_loaded": true,
+        "integrity_status": "sha256_only"
+      },
+      "nft_metadata": {
+        "name": "TMT-OS Research: PromoterDelivery - Batch #58468406",
+        "description": "Certified Quantum-Genetic Research generated via TMT-OS Boveda Cuantica.",
+        "image": "ipfs://[Link_To_Your_Graph_Or_Logo]",
+        "external_url": "https://www.upwork.com/freelancers/~your_id",
+        "attributes": [
+          {
+            "trait_type": "Researcher",
+            "value": "Jose/Agent 13"
+          },
+          {
+            "trait_type": "Framework",
+            "value": "TMT-OS v4.0"
+          },
+          {
+            "trait_type": "Integrity_Hash",
+            "value": "ef8600636d2460e7fa958c615f2dd39ea262db4dc4c0dd5902ee2b6fbe822725"
+          },
+          {
+            "trait_type": "Timestamp",
+            "value": 1768358806
+          },
+          {
+            "trait_type": "Phi Score",
+            "value": 1.0
+          },
+          {
+            "trait_type": "Size",
+            "value": 76
+          }
+        ]
+      },
+      "sha256_metadata": {
+        "path": "E:\\AGI model\\data\\promoters\\FOS_Netzach_promoter.fa",
+        "filename": "FOS_Netzach_promoter.fa",
+        "sha256": "ef8600636d2460e7fa958c615f2dd39ea262db4dc4c0dd5902ee2b6fbe822725",
+        "size": 76,
+        "timestamp": 1768358806.047189,
+        "nft_metadata": "e:\\AGI model\\data\\promoters\\FOS_Netzach_promoter.fa.nft.json",
+        "hmac_signature": "cedc204b7f876b08c8af9778bc5578bed3ddce09a5d5d8358f94f2d63e359a35"
+      },
+      "sequence": "ATAAAAGCAGTGGCTGCGGCGCCTCGTACTC",
+      "sequence_length": 31,
+      "gc_content": 0.5806451612903226,
+      "header": ">chromosome:GRCh38:14:75278796:75278826:1"
+    },
+    {
+      "file_path": "E:\\AGI model\\tmt-os-labs\\promoters\\FOXG1_Kether_promoter.fa",
+      "gene_name": "FOXG1",
+      "sephirot_label": "Kether",
+      "verification": {
+        "sha256_verified": true,
+        "hmac_verified": false,
+        "nft_loaded": true,
+        "integrity_status": "sha256_only"
+      },
+      "nft_metadata": {
+        "name": "TMT-OS Research: PromoterDelivery - Batch #D298E063",
+        "description": "Certified Quantum-Genetic Research generated via TMT-OS Boveda Cuantica.",
+        "image": "ipfs://[Link_To_Your_Graph_Or_Logo]",
+        "external_url": "https://www.upwork.com/freelancers/~your_id",
+        "attributes": [
+          {
+            "trait_type": "Researcher",
+            "value": "Jose/Agent 13"
+          },
+          {
+            "trait_type": "Framework",
+            "value": "TMT-OS v4.0"
+          },
+          {
+            "trait_type": "Integrity_Hash",
+            "value": "68a6fdbd2c4a82fe5907cab4f6413f132e03dd32939b138d7270e77c9ca5bad2"
+          },
+          {
+            "trait_type": "Timestamp",
+            "value": 1768358817
+          },
+          {
+            "trait_type": "Phi Score",
+            "value": 1.0
+          },
+          {
+            "trait_type": "Size",
+            "value": 76
+          }
+        ]
+      },
+      "sha256_metadata": {
+        "path": "E:\\AGI model\\data\\promoters\\FOXG1_Kether_promoter.fa",
+        "filename": "FOXG1_Kether_promoter.fa",
+        "sha256": "68a6fdbd2c4a82fe5907cab4f6413f132e03dd32939b138d7270e77c9ca5bad2",
+        "size": 76,
+        "timestamp": 1768358814.47626,
+        "nft_metadata": "e:\\AGI model\\data\\promoters\\FOXG1_Kether_promoter.fa.nft.json",
+        "hmac_signature": "b4a2d109fcad763486ecac22669a637d8019ea769c26f833829272327a02cbef"
+      },
+      "sequence": "CCCAAGAATCCGGTTACACCGAATCATTTCA",
+      "sequence_length": 31,
+      "gc_content": 0.45161290322580644,
+      "header": ">chromosome:GRCh38:14:28764299:28764329:1"
+    },
+    {
+      "file_path": "E:\\AGI model\\tmt-os-labs\\promoters\\JUN_Hod_promoter.fa",
+      "gene_name": "JUN",
+      "sephirot_label": "Hod",
+      "verification": {
+        "sha256_verified": true,
+        "hmac_verified": false,
+        "nft_loaded": true,
+        "integrity_status": "sha256_only"
+      },
+      "nft_metadata": {
+        "name": "TMT-OS Research: PromoterDelivery - Batch #63B12E78",
+        "description": "Certified Quantum-Genetic Research generated via TMT-OS Boveda Cuantica.",
+        "image": "ipfs://[Link_To_Your_Graph_Or_Logo]",
+        "external_url": "https://www.upwork.com/freelancers/~your_id",
+        "attributes": [
+          {
+            "trait_type": "Researcher",
+            "value": "Jose/Agent 13"
+          },
+          {
+            "trait_type": "Framework",
+            "value": "TMT-OS v4.0"
+          },
+          {
+            "trait_type": "Integrity_Hash",
+            "value": "fc7ed7a2ddd4efd321b219a41df6c2c7017a0202c65525d54536b55787b4012e"
+          },
+          {
+            "trait_type": "Timestamp",
+            "value": 1768358818
+          },
+          {
+            "trait_type": "Phi Score",
+            "value": 1.0
+          },
+          {
+            "trait_type": "Size",
+            "value": 76
+          }
+        ]
+      },
+      "sha256_metadata": {
+        "path": "E:\\AGI model\\data\\promoters\\JUN_Hod_promoter.fa",
+        "filename": "JUN_Hod_promoter.fa",
+        "sha256": "fc7ed7a2ddd4efd321b219a41df6c2c7017a0202c65525d54536b55787b4012e",
+        "size": 76,
+        "timestamp": 1768358818.0931146,
+        "nft_metadata": "e:\\AGI model\\data\\promoters\\JUN_Hod_promoter.fa.nft.json",
+        "hmac_signature": "fc16d659f19fa1760689be89934f7df0188123a2493f2cb308ec63e0292b7ead"
+      },
+      "sequence": "CAGATAAGTGTTGAGCTCGGGCTGGATAAGG",
+      "sequence_length": 31,
+      "gc_content": 0.5161290322580645,
+      "header": ">chromosome:GRCh38:1:58784048:58784078:-1"
+    },
+    {
+      "file_path": "E:\\AGI model\\tmt-os-labs\\promoters\\NCAM1_Chokmah_promoter.fa",
+      "gene_name": "NCAM1",
+      "sephirot_label": "Chokmah",
+      "verification": {
+        "sha256_verified": true,
+        "hmac_verified": false,
+        "nft_loaded": true,
+        "integrity_status": "sha256_only"
+      },
+      "nft_metadata": {
+        "name": "TMT-OS Research: PromoterDelivery - Batch #2D0FFA8E",
+        "description": "Certified Quantum-Genetic Research generated via TMT-OS Boveda Cuantica.",
+        "image": "ipfs://[Link_To_Your_Graph_Or_Logo]",
+        "external_url": "https://www.upwork.com/freelancers/~your_id",
+        "attributes": [
+          {
+            "trait_type": "Researcher",
+            "value": "Jose/Agent 13"
+          },
+          {
+            "trait_type": "Framework",
+            "value": "TMT-OS v4.0"
+          },
+          {
+            "trait_type": "Integrity_Hash",
+            "value": "c8a838968e3b2280cbe599d5d7420d828e977967a06266c2d31e72ded4486a2e"
+          },
+          {
+            "trait_type": "Timestamp",
+            "value": 1768358818
+          },
+          {
+            "trait_type": "Phi Score",
+            "value": 1.0
+          },
+          {
+            "trait_type": "Size",
+            "value": 78
+          }
+        ]
+      },
+      "sha256_metadata": {
+        "path": "E:\\AGI model\\data\\promoters\\NCAM1_Chokmah_promoter.fa",
+        "filename": "NCAM1_Chokmah_promoter.fa",
+        "sha256": "c8a838968e3b2280cbe599d5d7420d828e977967a06266c2d31e72ded4486a2e",
+        "size": 78,
+        "timestamp": 1768358818.7998147,
+        "nft_metadata": "e:\\AGI model\\data\\promoters\\NCAM1_Chokmah_promoter.fa.nft.json",
+        "hmac_signature": "8eea80aae835d1705ca28b8a595e46bb7a0c7cdd22c32ca368e5a76b0ec1fcc2"
+      },
+      "sequence": "CCTGTCTCTCTTACCTCCTTGATGTTCGGCA",
+      "sequence_length": 31,
+      "gc_content": 0.5161290322580645,
+      "header": ">chromosome:GRCh38:11:112961245:112961275:1"
+    },
+    {
+      "file_path": "E:\\AGI model\\tmt-os-labs\\promoters\\OXT_Chesed_promoter.fa",
+      "gene_name": "OXT",
+      "sephirot_label": "Chesed",
+      "verification": {
+        "sha256_verified": true,
+        "hmac_verified": false,
+        "nft_loaded": true,
+        "integrity_status": "sha256_only"
+      },
+      "nft_metadata": {
+        "name": "TMT-OS Research: PromoterDelivery - Batch #A097F779",
+        "description": "Certified Quantum-Genetic Research generated via TMT-OS Boveda Cuantica.",
+        "image": "ipfs://[Link_To_Your_Graph_Or_Logo]",
+        "external_url": "https://www.upwork.com/freelancers/~your_id",
+        "attributes": [
+          {
+            "trait_type": "Researcher",
+            "value": "Jose/Agent 13"
+          },
+          {
+            "trait_type": "Framework",
+            "value": "TMT-OS v4.0"
+          },
+          {
+            "trait_type": "Integrity_Hash",
+            "value": "ed0a37263f0b352c970d5a9333ecc136b712747dee5bd1bff61bf044e97e6e40"
+          },
+          {
+            "trait_type": "Timestamp",
+            "value": 1768358820
+          },
+          {
+            "trait_type": "Phi Score",
+            "value": 1.0
+          },
+          {
+            "trait_type": "Size",
+            "value": 74
+          }
+        ]
+      },
+      "sha256_metadata": {
+        "path": "E:\\AGI model\\data\\promoters\\OXT_Chesed_promoter.fa",
+        "filename": "OXT_Chesed_promoter.fa",
+        "sha256": "ed0a37263f0b352c970d5a9333ecc136b712747dee5bd1bff61bf044e97e6e40",
+        "size": 74,
+        "timestamp": 1768358819.635056,
+        "nft_metadata": "e:\\AGI model\\data\\promoters\\OXT_Chesed_promoter.fa.nft.json",
+        "hmac_signature": "1d623b23046bb6d13cf092a2103c715752b8c01b084a36d5f237f5319a3332f6"
+      },
+      "sequence": "GCATAAAAAGGCCAGGCCGGAGAGACCGCCA",
+      "sequence_length": 31,
+      "gc_content": 0.6129032258064516,
+      "header": ">chromosome:GRCh38:20:3071590:3071620:1"
+    },
+    {
+      "file_path": "E:\\AGI model\\tmt-os-labs\\promoters\\SRY_Yesod_promoter.fa",
+      "gene_name": "SRY",
+      "sephirot_label": "Yesod",
+      "verification": {
+        "sha256_verified": true,
+        "hmac_verified": false,
+        "nft_loaded": true,
+        "integrity_status": "sha256_only"
+      },
+      "nft_metadata": {
+        "name": "TMT-OS Research: PromoterDelivery - Batch #080C4370",
+        "description": "Certified Quantum-Genetic Research generated via TMT-OS Boveda Cuantica.",
+        "image": "ipfs://[Link_To_Your_Graph_Or_Logo]",
+        "external_url": "https://www.upwork.com/freelancers/~your_id",
+        "attributes": [
+          {
+            "trait_type": "Researcher",
+            "value": "Jose/Agent 13"
+          },
+          {
+            "trait_type": "Framework",
+            "value": "TMT-OS v4.0"
+          },
+          {
+            "trait_type": "Integrity_Hash",
+            "value": "9fcfbc9e7142c25915837b0988955a2844b86948a67ebfddf5312324eece3710"
+          },
+          {
+            "trait_type": "Timestamp",
+            "value": 1768358820
+          },
+          {
+            "trait_type": "Phi Score",
+            "value": 1.0
+          },
+          {
+            "trait_type": "Size",
+            "value": 74
+          }
+        ]
+      },
+      "sha256_metadata": {
+        "path": "E:\\AGI model\\data\\promoters\\SRY_Yesod_promoter.fa",
+        "filename": "SRY_Yesod_promoter.fa",
+        "sha256": "9fcfbc9e7142c25915837b0988955a2844b86948a67ebfddf5312324eece3710",
+        "size": 74,
+        "timestamp": 1768358820.7360272,
+        "nft_metadata": "e:\\AGI model\\data\\promoters\\SRY_Yesod_promoter.fa.nft.json",
+        "hmac_signature": "857c5c49c5befbe50b2c65898a60a01561ac388fe3b46c4665760bc464db8102"
+      },
+      "sequence": "TACAAAAGTTAACGTAACAAAGAATCTGGTA",
+      "sequence_length": 31,
+      "gc_content": 0.2903225806451613,
+      "header": ">chromosome:GRCh38:Y:2787682:2787712:-1"
+    },
+    {
+      "file_path": "E:\\AGI model\\tmt-os-labs\\promoters\\TP53_Gevurah_promoter.fa",
+      "gene_name": "TP53",
+      "sephirot_label": "Gevurah",
+      "verification": {
+        "sha256_verified": true,
+        "hmac_verified": false,
+        "nft_loaded": true,
+        "integrity_status": "sha256_only"
+      },
+      "nft_metadata": {
+        "name": "TMT-OS Research: PromoterDelivery - Batch #5A4EAF49",
+        "description": "Certified Quantum-Genetic Research generated via TMT-OS Boveda Cuantica.",
+        "image": "ipfs://[Link_To_Your_Graph_Or_Logo]",
+        "external_url": "https://www.upwork.com/freelancers/~your_id",
+        "attributes": [
+          {
+            "trait_type": "Researcher",
+            "value": "Jose/Agent 13"
+          },
+          {
+            "trait_type": "Framework",
+            "value": "TMT-OS v4.0"
+          },
+          {
+            "trait_type": "Integrity_Hash",
+            "value": "cc0a9dfba9fc27b37c3483cae7e6343c5ce9d134c462cb612707406a813d4e3f"
+          },
+          {
+            "trait_type": "Timestamp",
+            "value": 1768358822
+          },
+          {
+            "trait_type": "Phi Score",
+            "value": 1.0
+          },
+          {
+            "trait_type": "Size",
+            "value": 75
+          }
+        ]
+      },
+      "sha256_metadata": {
+        "path": "E:\\AGI model\\data\\promoters\\TP53_Gevurah_promoter.fa",
+        "filename": "TP53_Gevurah_promoter.fa",
+        "sha256": "cc0a9dfba9fc27b37c3483cae7e6343c5ce9d134c462cb612707406a813d4e3f",
+        "size": 75,
+        "timestamp": 1768358822.1389043,
+        "nft_metadata": "e:\\AGI model\\data\\promoters\\TP53_Gevurah_promoter.fa.nft.json",
+        "hmac_signature": "98dc0d3daaefc5e85f503adbbcf4b21a7cc3df5f9eb67e03cb003ae61f232355"
+      },
+      "sequence": "TTTGTGCCAGGAGCCTCGCAGGGGTTGATGG",
+      "sequence_length": 31,
+      "gc_content": 0.6129032258064516,
+      "header": ">chromosome:GRCh38:17:7687546:7687576:-1"
+    }
+  ],
+  "audit_metadata": {
+    "schema_version": "2.0",
+    "evidence_class": "primary",
+    "artifact_type": "raw_hardware",
+    "validation_status": "verified",
+    "cryptographic_attestation": "sha256+hmac+nft"
+  }
+}

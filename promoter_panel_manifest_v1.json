@@ -1,0 +1,230 @@
+{
+  "manifest_version": "v1.0",
+  "generated_at": "2026-04-04T00:01:09.229015",
+  "panel_name": "Sephirot_10_Promoter_Panel",
+  "panel_description": "Curated experimental cohort of 10 gene promoters mapped to Sephirot",
+  "panel_directory": "C:\\FASTA",
+  "total_promoters": 10,
+  "valid_promoters": 10,
+  "failed_promoters": 0,
+  "sephirot_mapping": {
+    "ACTB": "Malkuth",
+    "BDNF": "Tiferet",
+    "DCTN1": "Binah",
+    "FOS": "Netzach",
+    "FOXG1": "Kether",
+    "JUN": "Hod",
+    "NCAM1": "Chokmah",
+    "OXT": "Chesed",
+    "SRY": "Yesod",
+    "TP53": "Gevurah"
+  },
+  "validation_criteria": {
+    "min_length": 10,
+    "valid_bases": [
+      "C",
+      "A",
+      "G",
+      "T"
+    ],
+    "required_header_format": ">chromosome:assembly:chr:start:end:strand"
+  },
+  "promoters": [
+    {
+      "file_path": "C:\\FASTA\\ACTB_Malkuth_promoter.fa",
+      "gene_name": "ACTB",
+      "sephirot_label": "Malkuth",
+      "sequence_length": 31,
+      "sequence": "GGAATCACTTGCACCCGGGAGGCGGAGGCTG",
+      "sha256": "fd45538406de276d4b94cfacdd8c3b07b74a47bafe8aff2d340862e9a228ce62",
+      "promoter_header": {
+        "assembly": "GRCh38",
+        "chromosome": "7",
+        "start": 5563902,
+        "end": 5563932,
+        "strand": -1,
+        "raw_header": ">chromosome:GRCh38:7:5563902:5563932:-1"
+      },
+      "parse_status": "VALID",
+      "parse_errors": [],
+      "gc_content": 0.6774193548387096
+    },
+    {
+      "file_path": "C:\\FASTA\\BDNF_Tiferet_promoter.fa",
+      "gene_name": "BDNF",
+      "sephirot_label": "Tiferet",
+      "sequence_length": 31,
+      "sequence": "ACCCCCTCCCTGCTGCGCTTTTCTGGTATTA",
+      "sha256": "f27de6b6c1156f2891e620ba44b0e822d0ae0ba6a3a802b90d903735efdd0dd8",
+      "promoter_header": {
+        "assembly": "GRCh38",
+        "chromosome": "11",
+        "start": 27722058,
+        "end": 27722088,
+        "strand": -1,
+        "raw_header": ">chromosome:GRCh38:11:27722058:27722088:-1"
+      },
+      "parse_status": "VALID",
+      "parse_errors": [],
+      "gc_content": 0.5483870967741935
+    },
+    {
+      "file_path": "C:\\FASTA\\DCTN1_Binah_promoter.fa",
+      "gene_name": "DCTN1",
+      "sephirot_label": "Binah",
+      "sequence_length": 31,
+      "sequence": "TTTCTTATGGTCCTAATCGGCTTCCCAGGCA",
+      "sha256": "41523223fa284814c746d4491349a8c8f18c2655ce9d62e09517cef708cd8195",
+      "promoter_header": {
+        "assembly": "GRCh38",
+        "chromosome": "2",
+        "start": 74392087,
+        "end": 74392117,
+        "strand": -1,
+        "raw_header": ">chromosome:GRCh38:2:74392087:74392117:-1"
+      },
+      "parse_status": "VALID",
+      "parse_errors": [],
+      "gc_content": 0.4838709677419355
+    },
+    {
+      "file_path": "C:\\FASTA\\FOS_Netzach_promoter.fa",
+      "gene_name": "FOS",
+      "sephirot_label": "Netzach",
+      "sequence_length": 31,
+      "sequence": "ATAAAAGCAGTGGCTGCGGCGCCTCGTACTC",
+      "sha256": "ef8600636d2460e7fa958c615f2dd39ea262db4dc4c0dd5902ee2b6fbe822725",
+      "promoter_header": {
+        "assembly": "GRCh38",
+        "chromosome": "14",
+        "start": 75278796,
+        "end": 75278826,
+        "strand": 1,
+        "raw_header": ">chromosome:GRCh38:14:75278796:75278826:1"
+      },
+      "parse_status": "VALID",
+      "parse_errors": [],
+      "gc_content": 0.5806451612903226
+    },
+    {
+      "file_path": "C:\\FASTA\\FOXG1_Kether_promoter.fa",
+      "gene_name": "FOXG1",
+      "sephirot_label": "Kether",
+      "sequence_length": 31,
+      "sequence": "CCCAAGAATCCGGTTACACCGAATCATTTCA",
+      "sha256": "68a6fdbd2c4a82fe5907cab4f6413f132e03dd32939b138d7270e77c9ca5bad2",
+      "promoter_header": {
+        "assembly": "GRCh38",
+        "chromosome": "14",
+        "start": 28764299,
+        "end": 28764329,
+        "strand": 1,
+        "raw_header": ">chromosome:GRCh38:14:28764299:28764329:1"
+      },
+      "parse_status": "VALID",
+      "parse_errors": [],
+      "gc_content": 0.45161290322580644
+    },
+    {
+      "file_path": "C:\\FASTA\\JUN_Hod_promoter.fa",
+      "gene_name": "JUN",
+      "sephirot_label": "Hod",
+      "sequence_length": 31,
+      "sequence": "CAGATAAGTGTTGAGCTCGGGCTGGATAAGG",
+      "sha256": "fc7ed7a2ddd4efd321b219a41df6c2c7017a0202c65525d54536b55787b4012e",
+      "promoter_header": {
+        "assembly": "GRCh38",
+        "chromosome": "1",
+        "start": 58784048,
+        "end": 58784078,
+        "strand": -1,
+        "raw_header": ">chromosome:GRCh38:1:58784048:58784078:-1"
+      },
+      "parse_status": "VALID",
+      "parse_errors": [],
+      "gc_content": 0.5161290322580645
+    },
+    {
+      "file_path": "C:\\FASTA\\NCAM1_Chokmah_promoter.fa",
+      "gene_name": "NCAM1",
+      "sephirot_label": "Chokmah",
+      "sequence_length": 31,
+      "sequence": "CCTGTCTCTCTTACCTCCTTGATGTTCGGCA",
+      "sha256": "c8a838968e3b2280cbe599d5d7420d828e977967a06266c2d31e72ded4486a2e",
+      "promoter_header": {
+        "assembly": "GRCh38",
+        "chromosome": "11",
+        "start": 112961245,
+        "end": 112961275,
+        "strand": 1,
+        "raw_header": ">chromosome:GRCh38:11:112961245:112961275:1"
+      },
+      "parse_status": "VALID",
+      "parse_errors": [],
+      "gc_content": 0.5161290322580645
+    },
+    {
+      "file_path": "C:\\FASTA\\OXT_Chesed_promoter.fa",
+      "gene_name": "OXT",
+      "sephirot_label": "Chesed",
+      "sequence_length": 31,
+      "sequence": "GCATAAAAAGGCCAGGCCGGAGAGACCGCCA",
+      "sha256": "ed0a37263f0b352c970d5a9333ecc136b712747dee5bd1bff61bf044e97e6e40",
+      "promoter_header": {
+        "assembly": "GRCh38",
+        "chromosome": "20",
+        "start": 3071590,
+        "end": 3071620,
+        "strand": 1,
+        "raw_header": ">chromosome:GRCh38:20:3071590:3071620:1"
+      },
+      "parse_status": "VALID",
+      "parse_errors": [],
+      "gc_content": 0.6129032258064516
+    },
+    {
+      "file_path": "C:\\FASTA\\SRY_Yesod_promoter.fa",
+      "gene_name": "SRY",
+      "sephirot_label": "Yesod",
+      "sequence_length": 31,
+      "sequence": "TACAAAAGTTAACGTAACAAAGAATCTGGTA",
+      "sha256": "9fcfbc9e7142c25915837b0988955a2844b86948a67ebfddf5312324eece3710",
+      "promoter_header": {
+        "assembly": "GRCh38",
+        "chromosome": "Y",
+        "start": 2787682,
+        "end": 2787712,
+        "strand": -1,
+        "raw_header": ">chromosome:GRCh38:Y:2787682:2787712:-1"
+      },
+      "parse_status": "VALID",
+      "parse_errors": [],
+      "gc_content": 0.2903225806451613
+    },
+    {
+      "file_path": "C:\\FASTA\\TP53_Gevurah_promoter.fa",
+      "gene_name": "TP53",
+      "sephirot_label": "Gevurah",
+      "sequence_length": 31,
+      "sequence": "TTTGTGCCAGGAGCCTCGCAGGGGTTGATGG",
+      "sha256": "cc0a9dfba9fc27b37c3483cae7e6343c5ce9d134c462cb612707406a813d4e3f",
+      "promoter_header": {
+        "assembly": "GRCh38",
+        "chromosome": "17",
+        "start": 7687546,
+        "end": 7687576,
+        "strand": -1,
+        "raw_header": ">chromosome:GRCh38:17:7687546:7687576:-1"
+      },
+      "parse_status": "VALID",
+      "parse_errors": [],
+      "gc_content": 0.6129032258064516
+    }
+  ],
+  "audit_metadata": {
+    "schema_version": "1.0",
+    "evidence_class": "primary",
+    "artifact_type": "raw_hardware",
+    "validation_status": "validated"
+  }
+}
