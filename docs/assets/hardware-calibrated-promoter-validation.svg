@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Hardware-calibrated promoter validation v1</title>
+  <desc id="desc">AGI-model overview showing promoter artifacts, IBM Quantum execution, calibration layer, and replicate-aware next phase.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08111f" />
+      <stop offset="50%" stop-color="#141f3a" />
+      <stop offset="100%" stop-color="#25114d" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6f49ff" />
+      <stop offset="100%" stop-color="#f5c451" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)" rx="28" />
+  <circle cx="980" cy="110" r="170" fill="#6f49ff" opacity="0.08" />
+  <circle cx="160" cy="520" r="190" fill="#f5c451" opacity="0.08" />
+
+  <text x="72" y="98" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">AGI-model</text>
+  <text x="72" y="138" fill="#f5c451" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700">Hardware-calibrated promoter validation v1</text>
+  <text x="72" y="186" fill="#c7d0ea" font-family="Arial, Helvetica, sans-serif" font-size="24">
+    IBM Quantum promoter analysis with explicit calibration, audit-grade artifacts, and replicate-aware expansion.
+  </text>
+
+  <g filter="url(#shadow)" aria-label="Artifact input stage">
+    <rect x="72" y="238" width="220" height="210" rx="24" fill="#111b31" stroke="#394a76" />
+    <text x="104" y="286" fill="#f5c451" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Artifact inputs</text>
+    <text x="104" y="328" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Promoter panels</text>
+    <text x="104" y="362" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Phi-harmonic encoding</text>
+    <text x="104" y="396" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Lineage-ready evidence</text>
+  </g>
+
+  <g filter="url(#shadow)" aria-label="Hardware stage">
+    <rect x="340" y="238" width="240" height="210" rx="24" fill="#10192e" stroke="#4f63a0" />
+    <text x="374" y="286" fill="#7ae7cf" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Hardware stage</text>
+    <text x="374" y="328" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">IBM Quantum execution</text>
+    <text x="374" y="362" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Stable baseline: 0.6183 +/- 0.0010</text>
+    <text x="374" y="396" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Current batch: 5 jobs</text>
+  </g>
+
+  <g filter="url(#shadow)" aria-label="Calibration layer stage">
+    <rect x="628" y="218" width="258" height="250" rx="24" fill="#121325" stroke="#7b57ff" />
+    <text x="662" y="266" fill="#f5c451" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Calibration layer</text>
+    <text x="662" y="308" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Offset-only v1 model</text>
+    <text x="662" y="342" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Systematic offset: -0.1381</text>
+    <text x="662" y="376" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Framework + report split</text>
+    <text x="662" y="410" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Model systematic effects,</text>
+    <text x="662" y="438" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">not pass/fail only</text>
+  </g>
+
+  <g filter="url(#shadow)" aria-label="Next milestone stage">
+    <rect x="936" y="238" width="194" height="210" rx="24" fill="#111b31" stroke="#394a76" />
+    <text x="968" y="286" fill="#7ae7cf" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Next milestone</text>
+    <text x="968" y="328" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">3-5 replicates</text>
+    <text x="968" y="362" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Per promoter</text>
+    <text x="968" y="396" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Residual transferability</text>
+  </g>
+
+  <path d="M292 342 H330" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" />
+  <polygon points="330,342 314,330 314,354" fill="#f5c451" />
+
+  <path d="M580 342 H618" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" />
+  <polygon points="618,342 602,330 602,354" fill="#f5c451" />
+
+  <path d="M886 342 H924" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" />
+  <polygon points="924,342 908,330 908,354" fill="#f5c451" />
+
+  <rect x="72" y="516" width="1058" height="58" rx="16" fill="#0f172a" stroke="#273a63" />
+  <text x="106" y="553" fill="#d7def2" font-family="Arial, Helvetica, sans-serif" font-size="22">
+    Scientifically mature framing: stable hardware baseline, compressed promoter separation, replicate-aware calibration next.
+  </text>
+</svg>
