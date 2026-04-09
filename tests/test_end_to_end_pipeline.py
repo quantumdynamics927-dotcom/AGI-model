@@ -65,11 +65,11 @@ class TestEndToEndPipeline(unittest.TestCase):
         print(f"Test completed: {datetime.now().isoformat()}")
         print("=" * 70)
 
-    def _record_pipeline_stage(self, stage: str, **details):
-        """Record a successful pipeline stage with shared test state."""
+    def _record_pipeline_stage(self, stage: str, status: str = 'passed', **details):
+        """Record a pipeline stage with shared test state."""
         self.test_results['pipeline_stages'].append({
             'stage': stage,
-            'status': 'passed',
+            'status': status,
             **details,
         })
 
