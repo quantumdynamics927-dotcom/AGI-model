@@ -81,11 +81,11 @@ NODE_REGISTRY = {
         'path': 'data_provenance/node6_audit_trails.py',
         'contact': 'metatron'
     },
-    'node7_nft_inventor': {
+    'node7_discovery_validator': {
         'node_id': 7,
-        'role': 'NFT Inventor: Crystallizes Research into Sovereign Digital Assets',
+        'role': 'Scientific Discovery Validator: Validates and Certifies AGI Research Findings',
         'platonic_solid': 'Heptagram',
-        'path': 'nft_inventor.py',
+        'path': 'node7_discovery_validator.py',
         'contact': 'metatron'
     },
     'node8_chain_monitor': {
@@ -298,9 +298,9 @@ class Node13MetatronCoordinator:
                 mod = __import__("data_provenance.node6_audit_trails", fromlist=['Node6AuditTrails'])
                 self.node_instances[node_name] = mod.Node6AuditTrails()
                 
-            elif 'nft_inventor' in node_path:
-                mod = __import__("nft_inventor", fromlist=['Node7NFTInventor'])
-                self.node_instances[node_name] = mod.Node7NFTInventor()
+            elif 'nft_inventor' in node_path or 'discovery_validator' in node_path:
+                mod = __import__("node7_discovery_validator", fromlist=['Node7DiscoveryValidator'])
+                self.node_instances[node_name] = mod.Node7DiscoveryValidator()
                 
             elif 'node8_chain_monitor' in node_path:
                 # Node 8 requires special handling due to dependencies

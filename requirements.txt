@@ -31,3 +31,13 @@ cryptography>=42.0.0
 # For research data provenance and archival
 # SHA3 hashing uses Python's built-in hashlib.sha3_256; no external pysha3 package.
 jsonschema>=4.21.0  # Schema validation for experiment metadata
+
+# Quantum Computing - DNA-to-Circuit & VQE
+# qiskit-nature provides molecular Hamiltonians via PySCFDriver
+qiskit>=1.0.0
+qiskit-nature>=0.6.0  # Quantum chemistry integration
+qiskit-algorithms>=0.2.0  # VQE and other quantum algorithms
+pyscf>=2.4.0  # Python-based quantum chemistry (for PySCFDriver)
+
+# Optional: Enhanced quantum computing features
+# qiskit-aer>=0.13.0  # High-performance simulators (optional, may require compilation)
