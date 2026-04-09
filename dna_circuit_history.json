@@ -1,9 +1,0 @@
-[
-  {
-    "sequence": "ATGCATGCATGCATGCATGCATGCATGCATGC",
-    "scheme": "watson_crick",
-    "num_qubits": 32,
-    "circuit_depth": 2,
-    "timestamp": "2026-04-09T01:42:21"
-  }
-]
