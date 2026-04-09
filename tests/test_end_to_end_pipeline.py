@@ -21,6 +21,7 @@ import json
 import tempfile
 import shutil
 import numpy as np
+import torch
 from pathlib import Path
 from datetime import datetime
 
@@ -191,6 +192,13 @@ class TestEndToEndPipeline(unittest.TestCase):
             
             # Store metrics
             self.test_results['metrics']['consciousness'] = metrics
+            self.test_results['pipeline_stages'].append({
+                'stage': 'Consciousness Metrics',
+                'status': 'passed',
+                'complexity': metrics['complexity'],
+                'coherence': metrics['coherence'],
+                'phi_resonance': metrics['phi_resonance']
+            })
             
             print("✓ Consciousness metrics calculated")
             print(f"  - Complexity: {metrics['complexity']:.4f}")
@@ -270,6 +278,12 @@ class TestEndToEndPipeline(unittest.TestCase):
             
             # Store results
             self.test_results['metrics']['tesla_consciousness'] = result
+            self.test_results['pipeline_stages'].append({
+                'stage': 'Tesla Consciousness Analysis',
+                'status': 'passed',
+                'consciousness_integral': result['_oint'],
+                'entropy': result.get('H_entropy', 0)
+            })
             
             print("✓ Tesla consciousness analysis successful")
             print(f"  - Consciousness integral (_oint): {result['_oint']:.4f}")
@@ -327,6 +341,12 @@ class TestEndToEndPipeline(unittest.TestCase):
             
             # Store certificate
             self.test_results['certificates'].append(certificate)
+            self.test_results['pipeline_stages'].append({
+                'stage': 'Discovery Certification',
+                'status': 'passed',
+                'discovery_id': certificate['discovery_id'],
+                'validation_status': certificate['validation_status']
+            })
             
             print("✓ Discovery certified successfully")
             print(f"  - Discovery ID: {certificate['discovery_id']}")
