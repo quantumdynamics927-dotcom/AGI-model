@@ -56,6 +56,15 @@ venv.bak/
 ehthumbs.db
 Thumbs.db
 
+# Runtime artifacts (generated during execution)
+discovery_validations/*.json
+*.certificate.json
+*_history.json
+*_statistics.json
+dna_circuit_history.json
+demo_circuit_history.json
+demo_circuit_statistics.json
+
 # Node.js
 node_modules/
 npm-debug.log*
