@@ -987,9 +987,6 @@ class GoldenRatioAnalyzer:
         return results
 
 
-class PhiAnalyzer(GoldenRatioAnalyzer):
-    """Backward-compatible alias that inherits GoldenRatioAnalyzer unchanged."""
-
     def bootstrap_confidence_interval(
         self,
         vectors: np.ndarray,
@@ -1152,6 +1149,10 @@ class PhiAnalyzer(GoldenRatioAnalyzer):
             'sequences': sequences_found,
             'max_length': max([s['length'] for s in sequences_found], default=0)
         }
+
+
+class PhiAnalyzer(GoldenRatioAnalyzer):
+    """Backward-compatible alias that inherits GoldenRatioAnalyzer unchanged."""
 
 
 # =============================================================================
