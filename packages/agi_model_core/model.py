@@ -13,18 +13,20 @@ QuantumVAE = _root_model.QuantumVAE
 
 
 def _default_density_matrix(mu: torch.Tensor) -> torch.Tensor:
-    """Create a trace-normalized diagonal density matrix for compatibility callers."""
-    probabilities = torch.softmax(mu.abs(), dim=-1)
-    return torch.diag_embed(probabilities)
+    """Create a trace-normalized Hermitian density matrix for compatibility callers."""
+    amplitudes = torch.sqrt(torch.softmax(mu.abs(), dim=-1)).to(torch.complex64)
+    phases = torch.exp(1j * mu.to(torch.complex64))
+    state = amplitudes * phases
+    density_matrix = state.unsqueeze(-1) * state.conj().unsqueeze(-2)
+    trace = torch.diagonal(density_matrix, dim1=-2, dim2=-1).sum(dim=-1, keepdim=True)
+    return density_matrix / trace.unsqueeze(-1)
 
 
 class HybridQuantumOptimizer(_root_model.HybridQuantumOptimizer):
     """Package-level optimizer shim with a default model for compatibility tests."""
 
-    def __init__(self, model=None, *args, **kwargs):
+    def __init__(self, model=None, *args, input_dim=128, latent_dim=32, **kwargs):
         if model is None:
-            input_dim = kwargs.pop("input_dim", 128)
-            latent_dim = kwargs.pop("latent_dim", 32)
             model = QuantumVAE(input_dim=input_dim, latent_dim=latent_dim)
         super().__init__(model=model, *args, **kwargs)
 
@@ -39,7 +41,7 @@ def total_loss(recon_x, x, mu, log_var, density_matrix=None, *args, **kwargs):
         total, _ = _root_model.total_loss(
             recon_x, x, mu, log_var, density_matrix, *args, **kwargs
         )
-        return total
+        return total.real
     return _root_model.total_loss(
         recon_x, x, mu, log_var, density_matrix, *args, **kwargs
     )
