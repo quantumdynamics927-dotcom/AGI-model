@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 
 from ai_app_builder_scientific_script import GoldenRatioAnalyzer
 
+__all__ = ["GoldenRatioAnalyzer", "analyze_golden_ratio_in_latent_space"]
+
 def analyze_golden_ratio_in_latent_space(model_path='best_model.pt', num_samples=1000):
     """
     Analyze if the VAE latent space exhibits golden ratio properties
