@@ -55,18 +55,27 @@ Value: [your Hugging Face username]
 
 ### Step 5: Manual Deploy (Optional)
 
-If you want to deploy immediately:
+If you want to deploy immediately (workflow does this automatically):
 
 ```bash
 # Clone your Hugging Face Space
 git clone https://huggingface.co/spaces/YOUR_USERNAME/agi-model
 cd agi-model
 
-# Copy files from AGI-model repo
+# Copy ONLY Space files from AGI-model repo
 cp /path/to/AGI-model/space_app.py .
-cp /path/to/AGI-model/Dockerfile .
-cp /path/to/AGI-model/README_HF_SPACE.md README.md
-cp -r /path/to/AGI-model/.github .
+cp /path/to/AGI-model/Dockerfile.space ./Dockerfile
+cp /path/to/AGI-model/README_HF_SPACE.md ./README.md
+cp /path/to/AGI-model/requirements.txt .
+
+# Create .gitignore
+cat > .gitignore << 'EOF'
+*.pyc
+__pycache__/
+*.py[cod]
+.env
+*.log
+EOF
 
 # Push to Space
 git add .
@@ -74,14 +83,23 @@ git commit -m "Initial deployment: AGI Model v0.98.0-rc"
 git push
 ```
 
+**Note**: The GitHub Actions workflow automatically handles this deployment on every push to `main`!
+
 ## 📊 What Gets Deployed
 
-### Files Included
-- ✅ `space_app.py` - Gradio interface
-- ✅ `Dockerfile` - Container configuration
-- ✅ `README_HF_SPACE.md` - Space documentation
-- ✅ `.github/workflows/` - Auto-sync workflow
+### Files Included (Space-Only)
+- ✅ `space_app.py` - Gradio interface (renamed from HF deployment)
+- ✅ `Dockerfile.space` → `Dockerfile` - Space-specific container config
+- ✅ `README_HF_SPACE.md` → `README.md` - Space front matter and docs
 - ✅ `requirements.txt` - Python dependencies
+- ✅ `.gitignore` - Space-specific ignores
+
+### Files Excluded (Keep on GitHub)
+- ❌ Full research codebase
+- ❌ Test suites
+- ❌ Documentation files (USER_MANUAL.md, etc.)
+- ❌ Large artifacts
+- ❌ Internal project files
 
 ### Features Available
 - 🔬 **Discovery Validator**: Interactive certification demo
@@ -91,17 +109,26 @@ git push
 
 ## 🔧 Configuration
 
-### Dockerfile Settings
+### Dockerfile Settings (Space-Optimized)
 
-The Dockerfile is configured for:
-- **Python**: 3.10-slim
-- **Port**: 7860 (Gradio default)
+The `Dockerfile.space` is configured for:
+- **Base Image**: python:3.10-slim
+- **Port**: 7860 (Gradio standard)
 - **Health Check**: Every 30 seconds
-- **Security**: Non-root user
+- **Server Binding**: 0.0.0.0 (required for Space proxy)
+- **Startup**: `python space_app.py`
 
-### Space Metadata
+**Critical Settings**:
+```dockerfile
+EXPOSE 7860
+ENV GRADIO_SERVER_NAME="0.0.0.0"
+ENV GRADIO_SERVER_PORT=7860
+CMD ["python", "space_app.py"]
+```
 
-Edit `README_HF_SPACE.md` front matter:
+### Space Metadata (README.md Front Matter)
+
+The `README.md` on the Space must include:
 
 ```yaml
 ---
@@ -114,6 +141,8 @@ pinned: false
 license: mit
 ---
 ```
+
+**Important**: This YAML front matter MUST be in the root `README.md` of the Space repository, not in a separate file.
 
 ## 🎨 Customization
 
