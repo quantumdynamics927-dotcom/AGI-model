@@ -1,0 +1,2927 @@
+{
+  "manifest_type": "promoter_replicate_schedule",
+  "generated_at": "2026-04-05T00:25:08.103010",
+  "reference_backend": "ibm_fez",
+  "comparison_backends": [
+    "ibm_kingston"
+  ],
+  "replicates_per_backend": 3,
+  "shots_per_run": 8192,
+  "comparison_report": "promoter_panel_comparison",
+  "comparison_generated_at": "2026-04-04T00:12:27.608704",
+  "selected_promoters": [
+    "SRY",
+    "FOXG1",
+    "DCTN1",
+    "TP53",
+    "OXT"
+  ],
+  "matrix_dimensions": {
+    "promoters": 5,
+    "backends": 2,
+    "replicates": 3,
+    "total_runs": 30
+  },
+  "artifact_metadata": {
+    "evidence_class": "secondary",
+    "artifact_type": "derived_metrics",
+    "artifact_id": "replicate_schedule_20260405_002508",
+    "audit_note": "Replicate-aware backend scheduling matrix preserving ibm_fez continuity baseline",
+    "parent_artifacts": [
+      "tmt_os_panel_results/promoter_panel_comparison.json",
+      "data\\external_imports\\tmt_os_20260405\\promoter_asset_inventory.json"
+    ],
+    "data_lineage": {
+      "derived_from_prior_runs": true,
+      "transform_chain": [
+        "load_comparison_report",
+        "select_promoters",
+        "assign_selection_tags",
+        "expand_backend_replicate_matrix",
+        "attach_imported_promoter_assets"
+      ]
+    }
+  },
+  "scheduled_runs": [
+    {
+      "run_id": "SRY_ibm_fez_r01",
+      "promoter_id": "SRY",
+      "sephirot_label": "Yesod",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 1,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.698,
+        "phi_alignment_score": 2769.1245809448374,
+        "entropy_shannon": 5.794728530978488,
+        "artifact_id": "promoter_SRY_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "SRY",
+        "fasta_31bp": {
+          "gene_name": "SRY",
+          "sephirot_label": "Yesod",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\SRY_Yesod_promoter.fa",
+          "file_name": "SRY_Yesod_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.3548387096774194,
+          "sequence_preview": "AACAAAGAATCTGGTAGAAG",
+          "header": {
+            "raw_header": ">SRY|Yesod|ENSG00000184895|GRCh38|Y:2787667-2787697:-1",
+            "assembly": "GRCh38",
+            "coordinates": "Y:2787667-2787697:-1",
+            "ensembl_gene_id": "ENSG00000184895",
+            "header_gene": "SRY",
+            "header_label": "Yesod"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "SRY",
+          "sephirot_label": "Yesod",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\SRY_Yesod_promoter.fa",
+          "file_name": "SRY_Yesod_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.32098765432098764,
+          "sequence_preview": "CAAGTTTCATTACAAAAGTT",
+          "header": {
+            "raw_header": ">SRY|Yesod|ENSG00000184895|GRCh38|Y:2787642-2787722:-1",
+            "assembly": "GRCh38",
+            "coordinates": "Y:2787642-2787722:-1",
+            "ensembl_gene_id": "ENSG00000184895",
+            "header_gene": "SRY",
+            "header_label": "Yesod"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "SRY",
+          "sephirot_label": "Yesod",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\SRY_Yesod.qasm",
+          "file_name": "SRY_Yesod.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Yesod"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "SRY_ibm_fez_r02",
+      "promoter_id": "SRY",
+      "sephirot_label": "Yesod",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 2,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.698,
+        "phi_alignment_score": 2769.1245809448374,
+        "entropy_shannon": 5.794728530978488,
+        "artifact_id": "promoter_SRY_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "SRY",
+        "fasta_31bp": {
+          "gene_name": "SRY",
+          "sephirot_label": "Yesod",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\SRY_Yesod_promoter.fa",
+          "file_name": "SRY_Yesod_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.3548387096774194,
+          "sequence_preview": "AACAAAGAATCTGGTAGAAG",
+          "header": {
+            "raw_header": ">SRY|Yesod|ENSG00000184895|GRCh38|Y:2787667-2787697:-1",
+            "assembly": "GRCh38",
+            "coordinates": "Y:2787667-2787697:-1",
+            "ensembl_gene_id": "ENSG00000184895",
+            "header_gene": "SRY",
+            "header_label": "Yesod"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "SRY",
+          "sephirot_label": "Yesod",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\SRY_Yesod_promoter.fa",
+          "file_name": "SRY_Yesod_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.32098765432098764,
+          "sequence_preview": "CAAGTTTCATTACAAAAGTT",
+          "header": {
+            "raw_header": ">SRY|Yesod|ENSG00000184895|GRCh38|Y:2787642-2787722:-1",
+            "assembly": "GRCh38",
+            "coordinates": "Y:2787642-2787722:-1",
+            "ensembl_gene_id": "ENSG00000184895",
+            "header_gene": "SRY",
+            "header_label": "Yesod"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "SRY",
+          "sephirot_label": "Yesod",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\SRY_Yesod.qasm",
+          "file_name": "SRY_Yesod.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Yesod"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "SRY_ibm_fez_r03",
+      "promoter_id": "SRY",
+      "sephirot_label": "Yesod",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 3,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.698,
+        "phi_alignment_score": 2769.1245809448374,
+        "entropy_shannon": 5.794728530978488,
+        "artifact_id": "promoter_SRY_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "SRY",
+        "fasta_31bp": {
+          "gene_name": "SRY",
+          "sephirot_label": "Yesod",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\SRY_Yesod_promoter.fa",
+          "file_name": "SRY_Yesod_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.3548387096774194,
+          "sequence_preview": "AACAAAGAATCTGGTAGAAG",
+          "header": {
+            "raw_header": ">SRY|Yesod|ENSG00000184895|GRCh38|Y:2787667-2787697:-1",
+            "assembly": "GRCh38",
+            "coordinates": "Y:2787667-2787697:-1",
+            "ensembl_gene_id": "ENSG00000184895",
+            "header_gene": "SRY",
+            "header_label": "Yesod"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "SRY",
+          "sephirot_label": "Yesod",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\SRY_Yesod_promoter.fa",
+          "file_name": "SRY_Yesod_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.32098765432098764,
+          "sequence_preview": "CAAGTTTCATTACAAAAGTT",
+          "header": {
+            "raw_header": ">SRY|Yesod|ENSG00000184895|GRCh38|Y:2787642-2787722:-1",
+            "assembly": "GRCh38",
+            "coordinates": "Y:2787642-2787722:-1",
+            "ensembl_gene_id": "ENSG00000184895",
+            "header_gene": "SRY",
+            "header_label": "Yesod"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "SRY",
+          "sephirot_label": "Yesod",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\SRY_Yesod.qasm",
+          "file_name": "SRY_Yesod.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Yesod"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "SRY_ibm_kingston_r01",
+      "promoter_id": "SRY",
+      "sephirot_label": "Yesod",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 1,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.698,
+        "phi_alignment_score": 2769.1245809448374,
+        "entropy_shannon": 5.794728530978488,
+        "artifact_id": "promoter_SRY_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "SRY",
+        "fasta_31bp": {
+          "gene_name": "SRY",
+          "sephirot_label": "Yesod",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\SRY_Yesod_promoter.fa",
+          "file_name": "SRY_Yesod_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.3548387096774194,
+          "sequence_preview": "AACAAAGAATCTGGTAGAAG",
+          "header": {
+            "raw_header": ">SRY|Yesod|ENSG00000184895|GRCh38|Y:2787667-2787697:-1",
+            "assembly": "GRCh38",
+            "coordinates": "Y:2787667-2787697:-1",
+            "ensembl_gene_id": "ENSG00000184895",
+            "header_gene": "SRY",
+            "header_label": "Yesod"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "SRY",
+          "sephirot_label": "Yesod",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\SRY_Yesod_promoter.fa",
+          "file_name": "SRY_Yesod_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.32098765432098764,
+          "sequence_preview": "CAAGTTTCATTACAAAAGTT",
+          "header": {
+            "raw_header": ">SRY|Yesod|ENSG00000184895|GRCh38|Y:2787642-2787722:-1",
+            "assembly": "GRCh38",
+            "coordinates": "Y:2787642-2787722:-1",
+            "ensembl_gene_id": "ENSG00000184895",
+            "header_gene": "SRY",
+            "header_label": "Yesod"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "SRY",
+          "sephirot_label": "Yesod",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\SRY_Yesod.qasm",
+          "file_name": "SRY_Yesod.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Yesod"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "SRY_ibm_kingston_r02",
+      "promoter_id": "SRY",
+      "sephirot_label": "Yesod",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 2,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.698,
+        "phi_alignment_score": 2769.1245809448374,
+        "entropy_shannon": 5.794728530978488,
+        "artifact_id": "promoter_SRY_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "SRY",
+        "fasta_31bp": {
+          "gene_name": "SRY",
+          "sephirot_label": "Yesod",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\SRY_Yesod_promoter.fa",
+          "file_name": "SRY_Yesod_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.3548387096774194,
+          "sequence_preview": "AACAAAGAATCTGGTAGAAG",
+          "header": {
+            "raw_header": ">SRY|Yesod|ENSG00000184895|GRCh38|Y:2787667-2787697:-1",
+            "assembly": "GRCh38",
+            "coordinates": "Y:2787667-2787697:-1",
+            "ensembl_gene_id": "ENSG00000184895",
+            "header_gene": "SRY",
+            "header_label": "Yesod"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "SRY",
+          "sephirot_label": "Yesod",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\SRY_Yesod_promoter.fa",
+          "file_name": "SRY_Yesod_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.32098765432098764,
+          "sequence_preview": "CAAGTTTCATTACAAAAGTT",
+          "header": {
+            "raw_header": ">SRY|Yesod|ENSG00000184895|GRCh38|Y:2787642-2787722:-1",
+            "assembly": "GRCh38",
+            "coordinates": "Y:2787642-2787722:-1",
+            "ensembl_gene_id": "ENSG00000184895",
+            "header_gene": "SRY",
+            "header_label": "Yesod"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "SRY",
+          "sephirot_label": "Yesod",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\SRY_Yesod.qasm",
+          "file_name": "SRY_Yesod.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Yesod"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "SRY_ibm_kingston_r03",
+      "promoter_id": "SRY",
+      "sephirot_label": "Yesod",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 3,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.698,
+        "phi_alignment_score": 2769.1245809448374,
+        "entropy_shannon": 5.794728530978488,
+        "artifact_id": "promoter_SRY_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "SRY",
+        "fasta_31bp": {
+          "gene_name": "SRY",
+          "sephirot_label": "Yesod",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\SRY_Yesod_promoter.fa",
+          "file_name": "SRY_Yesod_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.3548387096774194,
+          "sequence_preview": "AACAAAGAATCTGGTAGAAG",
+          "header": {
+            "raw_header": ">SRY|Yesod|ENSG00000184895|GRCh38|Y:2787667-2787697:-1",
+            "assembly": "GRCh38",
+            "coordinates": "Y:2787667-2787697:-1",
+            "ensembl_gene_id": "ENSG00000184895",
+            "header_gene": "SRY",
+            "header_label": "Yesod"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "SRY",
+          "sephirot_label": "Yesod",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\SRY_Yesod_promoter.fa",
+          "file_name": "SRY_Yesod_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.32098765432098764,
+          "sequence_preview": "CAAGTTTCATTACAAAAGTT",
+          "header": {
+            "raw_header": ">SRY|Yesod|ENSG00000184895|GRCh38|Y:2787642-2787722:-1",
+            "assembly": "GRCh38",
+            "coordinates": "Y:2787642-2787722:-1",
+            "ensembl_gene_id": "ENSG00000184895",
+            "header_gene": "SRY",
+            "header_label": "Yesod"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "SRY",
+          "sephirot_label": "Yesod",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\SRY_Yesod.qasm",
+          "file_name": "SRY_Yesod.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Yesod"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "FOXG1_ibm_fez_r01",
+      "promoter_id": "FOXG1",
+      "sephirot_label": "Kether",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 1,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.742,
+        "phi_alignment_score": 2868.9230117578127,
+        "entropy_shannon": 5.262217739893234,
+        "artifact_id": "promoter_FOXG1_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "FOXG1",
+        "fasta_31bp": {
+          "gene_name": "FOXG1",
+          "sephirot_label": "Kether",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\FOXG1_Kether_promoter.fa",
+          "file_name": "FOXG1_Kether_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.4838709677419355,
+          "sequence_preview": "ACACCGAATCATTTCACGCT",
+          "header": {
+            "raw_header": ">FOXG1|Kether|ENSG00000176165|GRCh38|14:28764314-28764344:1",
+            "assembly": "GRCh38",
+            "coordinates": "14:28764314-28764344:1",
+            "ensembl_gene_id": "ENSG00000176165",
+            "header_gene": "FOXG1",
+            "header_label": "Kether"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "FOXG1",
+          "sephirot_label": "Kether",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\FOXG1_Kether_promoter.fa",
+          "file_name": "FOXG1_Kether_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.5432098765432098,
+          "sequence_preview": "CCTGTCCTTTCCCAAGAATC",
+          "header": {
+            "raw_header": ">FOXG1|Kether|ENSG00000176165|GRCh38|14:28764289-28764369:1",
+            "assembly": "GRCh38",
+            "coordinates": "14:28764289-28764369:1",
+            "ensembl_gene_id": "ENSG00000176165",
+            "header_gene": "FOXG1",
+            "header_label": "Kether"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "FOXG1",
+          "sephirot_label": "Kether",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\FOXG1_Kether.qasm",
+          "file_name": "FOXG1_Kether.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Kether"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "FOXG1_ibm_fez_r02",
+      "promoter_id": "FOXG1",
+      "sephirot_label": "Kether",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 2,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.742,
+        "phi_alignment_score": 2868.9230117578127,
+        "entropy_shannon": 5.262217739893234,
+        "artifact_id": "promoter_FOXG1_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "FOXG1",
+        "fasta_31bp": {
+          "gene_name": "FOXG1",
+          "sephirot_label": "Kether",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\FOXG1_Kether_promoter.fa",
+          "file_name": "FOXG1_Kether_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.4838709677419355,
+          "sequence_preview": "ACACCGAATCATTTCACGCT",
+          "header": {
+            "raw_header": ">FOXG1|Kether|ENSG00000176165|GRCh38|14:28764314-28764344:1",
+            "assembly": "GRCh38",
+            "coordinates": "14:28764314-28764344:1",
+            "ensembl_gene_id": "ENSG00000176165",
+            "header_gene": "FOXG1",
+            "header_label": "Kether"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "FOXG1",
+          "sephirot_label": "Kether",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\FOXG1_Kether_promoter.fa",
+          "file_name": "FOXG1_Kether_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.5432098765432098,
+          "sequence_preview": "CCTGTCCTTTCCCAAGAATC",
+          "header": {
+            "raw_header": ">FOXG1|Kether|ENSG00000176165|GRCh38|14:28764289-28764369:1",
+            "assembly": "GRCh38",
+            "coordinates": "14:28764289-28764369:1",
+            "ensembl_gene_id": "ENSG00000176165",
+            "header_gene": "FOXG1",
+            "header_label": "Kether"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "FOXG1",
+          "sephirot_label": "Kether",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\FOXG1_Kether.qasm",
+          "file_name": "FOXG1_Kether.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Kether"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "FOXG1_ibm_fez_r03",
+      "promoter_id": "FOXG1",
+      "sephirot_label": "Kether",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 3,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.742,
+        "phi_alignment_score": 2868.9230117578127,
+        "entropy_shannon": 5.262217739893234,
+        "artifact_id": "promoter_FOXG1_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "FOXG1",
+        "fasta_31bp": {
+          "gene_name": "FOXG1",
+          "sephirot_label": "Kether",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\FOXG1_Kether_promoter.fa",
+          "file_name": "FOXG1_Kether_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.4838709677419355,
+          "sequence_preview": "ACACCGAATCATTTCACGCT",
+          "header": {
+            "raw_header": ">FOXG1|Kether|ENSG00000176165|GRCh38|14:28764314-28764344:1",
+            "assembly": "GRCh38",
+            "coordinates": "14:28764314-28764344:1",
+            "ensembl_gene_id": "ENSG00000176165",
+            "header_gene": "FOXG1",
+            "header_label": "Kether"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "FOXG1",
+          "sephirot_label": "Kether",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\FOXG1_Kether_promoter.fa",
+          "file_name": "FOXG1_Kether_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.5432098765432098,
+          "sequence_preview": "CCTGTCCTTTCCCAAGAATC",
+          "header": {
+            "raw_header": ">FOXG1|Kether|ENSG00000176165|GRCh38|14:28764289-28764369:1",
+            "assembly": "GRCh38",
+            "coordinates": "14:28764289-28764369:1",
+            "ensembl_gene_id": "ENSG00000176165",
+            "header_gene": "FOXG1",
+            "header_label": "Kether"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "FOXG1",
+          "sephirot_label": "Kether",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\FOXG1_Kether.qasm",
+          "file_name": "FOXG1_Kether.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Kether"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "FOXG1_ibm_kingston_r01",
+      "promoter_id": "FOXG1",
+      "sephirot_label": "Kether",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 1,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.742,
+        "phi_alignment_score": 2868.9230117578127,
+        "entropy_shannon": 5.262217739893234,
+        "artifact_id": "promoter_FOXG1_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "FOXG1",
+        "fasta_31bp": {
+          "gene_name": "FOXG1",
+          "sephirot_label": "Kether",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\FOXG1_Kether_promoter.fa",
+          "file_name": "FOXG1_Kether_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.4838709677419355,
+          "sequence_preview": "ACACCGAATCATTTCACGCT",
+          "header": {
+            "raw_header": ">FOXG1|Kether|ENSG00000176165|GRCh38|14:28764314-28764344:1",
+            "assembly": "GRCh38",
+            "coordinates": "14:28764314-28764344:1",
+            "ensembl_gene_id": "ENSG00000176165",
+            "header_gene": "FOXG1",
+            "header_label": "Kether"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "FOXG1",
+          "sephirot_label": "Kether",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\FOXG1_Kether_promoter.fa",
+          "file_name": "FOXG1_Kether_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.5432098765432098,
+          "sequence_preview": "CCTGTCCTTTCCCAAGAATC",
+          "header": {
+            "raw_header": ">FOXG1|Kether|ENSG00000176165|GRCh38|14:28764289-28764369:1",
+            "assembly": "GRCh38",
+            "coordinates": "14:28764289-28764369:1",
+            "ensembl_gene_id": "ENSG00000176165",
+            "header_gene": "FOXG1",
+            "header_label": "Kether"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "FOXG1",
+          "sephirot_label": "Kether",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\FOXG1_Kether.qasm",
+          "file_name": "FOXG1_Kether.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Kether"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "FOXG1_ibm_kingston_r02",
+      "promoter_id": "FOXG1",
+      "sephirot_label": "Kether",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 2,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.742,
+        "phi_alignment_score": 2868.9230117578127,
+        "entropy_shannon": 5.262217739893234,
+        "artifact_id": "promoter_FOXG1_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "FOXG1",
+        "fasta_31bp": {
+          "gene_name": "FOXG1",
+          "sephirot_label": "Kether",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\FOXG1_Kether_promoter.fa",
+          "file_name": "FOXG1_Kether_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.4838709677419355,
+          "sequence_preview": "ACACCGAATCATTTCACGCT",
+          "header": {
+            "raw_header": ">FOXG1|Kether|ENSG00000176165|GRCh38|14:28764314-28764344:1",
+            "assembly": "GRCh38",
+            "coordinates": "14:28764314-28764344:1",
+            "ensembl_gene_id": "ENSG00000176165",
+            "header_gene": "FOXG1",
+            "header_label": "Kether"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "FOXG1",
+          "sephirot_label": "Kether",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\FOXG1_Kether_promoter.fa",
+          "file_name": "FOXG1_Kether_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.5432098765432098,
+          "sequence_preview": "CCTGTCCTTTCCCAAGAATC",
+          "header": {
+            "raw_header": ">FOXG1|Kether|ENSG00000176165|GRCh38|14:28764289-28764369:1",
+            "assembly": "GRCh38",
+            "coordinates": "14:28764289-28764369:1",
+            "ensembl_gene_id": "ENSG00000176165",
+            "header_gene": "FOXG1",
+            "header_label": "Kether"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "FOXG1",
+          "sephirot_label": "Kether",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\FOXG1_Kether.qasm",
+          "file_name": "FOXG1_Kether.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Kether"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "FOXG1_ibm_kingston_r03",
+      "promoter_id": "FOXG1",
+      "sephirot_label": "Kether",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 3,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.742,
+        "phi_alignment_score": 2868.9230117578127,
+        "entropy_shannon": 5.262217739893234,
+        "artifact_id": "promoter_FOXG1_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "FOXG1",
+        "fasta_31bp": {
+          "gene_name": "FOXG1",
+          "sephirot_label": "Kether",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\FOXG1_Kether_promoter.fa",
+          "file_name": "FOXG1_Kether_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.4838709677419355,
+          "sequence_preview": "ACACCGAATCATTTCACGCT",
+          "header": {
+            "raw_header": ">FOXG1|Kether|ENSG00000176165|GRCh38|14:28764314-28764344:1",
+            "assembly": "GRCh38",
+            "coordinates": "14:28764314-28764344:1",
+            "ensembl_gene_id": "ENSG00000176165",
+            "header_gene": "FOXG1",
+            "header_label": "Kether"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "FOXG1",
+          "sephirot_label": "Kether",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\FOXG1_Kether_promoter.fa",
+          "file_name": "FOXG1_Kether_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.5432098765432098,
+          "sequence_preview": "CCTGTCCTTTCCCAAGAATC",
+          "header": {
+            "raw_header": ">FOXG1|Kether|ENSG00000176165|GRCh38|14:28764289-28764369:1",
+            "assembly": "GRCh38",
+            "coordinates": "14:28764289-28764369:1",
+            "ensembl_gene_id": "ENSG00000176165",
+            "header_gene": "FOXG1",
+            "header_label": "Kether"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "FOXG1",
+          "sephirot_label": "Kether",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\FOXG1_Kether.qasm",
+          "file_name": "FOXG1_Kether.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Kether"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "DCTN1_ibm_fez_r01",
+      "promoter_id": "DCTN1",
+      "sephirot_label": "Binah",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 1,
+      "shots": 8192,
+      "selection_tags": [
+        "structural_outlier"
+      ],
+      "cohort_logic_label": "structural_outlier",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.655,
+        "phi_alignment_score": 2666.503522055221,
+        "entropy_shannon": 5.240954126220305,
+        "artifact_id": "promoter_DCTN1_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "DCTN1",
+        "fasta_31bp": {
+          "gene_name": "DCTN1",
+          "sephirot_label": "Binah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\DCTN1_Binah_promoter.fa",
+          "file_name": "DCTN1_Binah_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.6774193548387096,
+          "sequence_preview": "ATCGGCTTCCCAGGCACAGT",
+          "header": {
+            "raw_header": ">DCTN1|Binah|ENSG00000204843|GRCh38|2:74392072-74392102:-1",
+            "assembly": "GRCh38",
+            "coordinates": "2:74392072-74392102:-1",
+            "ensembl_gene_id": "ENSG00000204843",
+            "header_gene": "DCTN1",
+            "header_label": "Binah"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "DCTN1",
+          "sephirot_label": "Binah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\DCTN1_Binah_promoter.fa",
+          "file_name": "DCTN1_Binah_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.5679012345679012,
+          "sequence_preview": "GACACGCCGATTTCTTATGG",
+          "header": {
+            "raw_header": ">DCTN1|Binah|ENSG00000204843|GRCh38|2:74392047-74392127:-1",
+            "assembly": "GRCh38",
+            "coordinates": "2:74392047-74392127:-1",
+            "ensembl_gene_id": "ENSG00000204843",
+            "header_gene": "DCTN1",
+            "header_label": "Binah"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "DCTN1",
+          "sephirot_label": "Binah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\DCTN1_Binah.qasm",
+          "file_name": "DCTN1_Binah.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Binah"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "DCTN1_ibm_fez_r02",
+      "promoter_id": "DCTN1",
+      "sephirot_label": "Binah",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 2,
+      "shots": 8192,
+      "selection_tags": [
+        "structural_outlier"
+      ],
+      "cohort_logic_label": "structural_outlier",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.655,
+        "phi_alignment_score": 2666.503522055221,
+        "entropy_shannon": 5.240954126220305,
+        "artifact_id": "promoter_DCTN1_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "DCTN1",
+        "fasta_31bp": {
+          "gene_name": "DCTN1",
+          "sephirot_label": "Binah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\DCTN1_Binah_promoter.fa",
+          "file_name": "DCTN1_Binah_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.6774193548387096,
+          "sequence_preview": "ATCGGCTTCCCAGGCACAGT",
+          "header": {
+            "raw_header": ">DCTN1|Binah|ENSG00000204843|GRCh38|2:74392072-74392102:-1",
+            "assembly": "GRCh38",
+            "coordinates": "2:74392072-74392102:-1",
+            "ensembl_gene_id": "ENSG00000204843",
+            "header_gene": "DCTN1",
+            "header_label": "Binah"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "DCTN1",
+          "sephirot_label": "Binah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\DCTN1_Binah_promoter.fa",
+          "file_name": "DCTN1_Binah_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.5679012345679012,
+          "sequence_preview": "GACACGCCGATTTCTTATGG",
+          "header": {
+            "raw_header": ">DCTN1|Binah|ENSG00000204843|GRCh38|2:74392047-74392127:-1",
+            "assembly": "GRCh38",
+            "coordinates": "2:74392047-74392127:-1",
+            "ensembl_gene_id": "ENSG00000204843",
+            "header_gene": "DCTN1",
+            "header_label": "Binah"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "DCTN1",
+          "sephirot_label": "Binah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\DCTN1_Binah.qasm",
+          "file_name": "DCTN1_Binah.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Binah"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "DCTN1_ibm_fez_r03",
+      "promoter_id": "DCTN1",
+      "sephirot_label": "Binah",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 3,
+      "shots": 8192,
+      "selection_tags": [
+        "structural_outlier"
+      ],
+      "cohort_logic_label": "structural_outlier",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.655,
+        "phi_alignment_score": 2666.503522055221,
+        "entropy_shannon": 5.240954126220305,
+        "artifact_id": "promoter_DCTN1_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "DCTN1",
+        "fasta_31bp": {
+          "gene_name": "DCTN1",
+          "sephirot_label": "Binah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\DCTN1_Binah_promoter.fa",
+          "file_name": "DCTN1_Binah_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.6774193548387096,
+          "sequence_preview": "ATCGGCTTCCCAGGCACAGT",
+          "header": {
+            "raw_header": ">DCTN1|Binah|ENSG00000204843|GRCh38|2:74392072-74392102:-1",
+            "assembly": "GRCh38",
+            "coordinates": "2:74392072-74392102:-1",
+            "ensembl_gene_id": "ENSG00000204843",
+            "header_gene": "DCTN1",
+            "header_label": "Binah"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "DCTN1",
+          "sephirot_label": "Binah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\DCTN1_Binah_promoter.fa",
+          "file_name": "DCTN1_Binah_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.5679012345679012,
+          "sequence_preview": "GACACGCCGATTTCTTATGG",
+          "header": {
+            "raw_header": ">DCTN1|Binah|ENSG00000204843|GRCh38|2:74392047-74392127:-1",
+            "assembly": "GRCh38",
+            "coordinates": "2:74392047-74392127:-1",
+            "ensembl_gene_id": "ENSG00000204843",
+            "header_gene": "DCTN1",
+            "header_label": "Binah"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "DCTN1",
+          "sephirot_label": "Binah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\DCTN1_Binah.qasm",
+          "file_name": "DCTN1_Binah.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Binah"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "DCTN1_ibm_kingston_r01",
+      "promoter_id": "DCTN1",
+      "sephirot_label": "Binah",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 1,
+      "shots": 8192,
+      "selection_tags": [
+        "structural_outlier"
+      ],
+      "cohort_logic_label": "structural_outlier",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.655,
+        "phi_alignment_score": 2666.503522055221,
+        "entropy_shannon": 5.240954126220305,
+        "artifact_id": "promoter_DCTN1_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "DCTN1",
+        "fasta_31bp": {
+          "gene_name": "DCTN1",
+          "sephirot_label": "Binah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\DCTN1_Binah_promoter.fa",
+          "file_name": "DCTN1_Binah_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.6774193548387096,
+          "sequence_preview": "ATCGGCTTCCCAGGCACAGT",
+          "header": {
+            "raw_header": ">DCTN1|Binah|ENSG00000204843|GRCh38|2:74392072-74392102:-1",
+            "assembly": "GRCh38",
+            "coordinates": "2:74392072-74392102:-1",
+            "ensembl_gene_id": "ENSG00000204843",
+            "header_gene": "DCTN1",
+            "header_label": "Binah"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "DCTN1",
+          "sephirot_label": "Binah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\DCTN1_Binah_promoter.fa",
+          "file_name": "DCTN1_Binah_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.5679012345679012,
+          "sequence_preview": "GACACGCCGATTTCTTATGG",
+          "header": {
+            "raw_header": ">DCTN1|Binah|ENSG00000204843|GRCh38|2:74392047-74392127:-1",
+            "assembly": "GRCh38",
+            "coordinates": "2:74392047-74392127:-1",
+            "ensembl_gene_id": "ENSG00000204843",
+            "header_gene": "DCTN1",
+            "header_label": "Binah"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "DCTN1",
+          "sephirot_label": "Binah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\DCTN1_Binah.qasm",
+          "file_name": "DCTN1_Binah.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Binah"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "DCTN1_ibm_kingston_r02",
+      "promoter_id": "DCTN1",
+      "sephirot_label": "Binah",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 2,
+      "shots": 8192,
+      "selection_tags": [
+        "structural_outlier"
+      ],
+      "cohort_logic_label": "structural_outlier",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.655,
+        "phi_alignment_score": 2666.503522055221,
+        "entropy_shannon": 5.240954126220305,
+        "artifact_id": "promoter_DCTN1_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "DCTN1",
+        "fasta_31bp": {
+          "gene_name": "DCTN1",
+          "sephirot_label": "Binah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\DCTN1_Binah_promoter.fa",
+          "file_name": "DCTN1_Binah_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.6774193548387096,
+          "sequence_preview": "ATCGGCTTCCCAGGCACAGT",
+          "header": {
+            "raw_header": ">DCTN1|Binah|ENSG00000204843|GRCh38|2:74392072-74392102:-1",
+            "assembly": "GRCh38",
+            "coordinates": "2:74392072-74392102:-1",
+            "ensembl_gene_id": "ENSG00000204843",
+            "header_gene": "DCTN1",
+            "header_label": "Binah"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "DCTN1",
+          "sephirot_label": "Binah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\DCTN1_Binah_promoter.fa",
+          "file_name": "DCTN1_Binah_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.5679012345679012,
+          "sequence_preview": "GACACGCCGATTTCTTATGG",
+          "header": {
+            "raw_header": ">DCTN1|Binah|ENSG00000204843|GRCh38|2:74392047-74392127:-1",
+            "assembly": "GRCh38",
+            "coordinates": "2:74392047-74392127:-1",
+            "ensembl_gene_id": "ENSG00000204843",
+            "header_gene": "DCTN1",
+            "header_label": "Binah"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "DCTN1",
+          "sephirot_label": "Binah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\DCTN1_Binah.qasm",
+          "file_name": "DCTN1_Binah.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Binah"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "DCTN1_ibm_kingston_r03",
+      "promoter_id": "DCTN1",
+      "sephirot_label": "Binah",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 3,
+      "shots": 8192,
+      "selection_tags": [
+        "structural_outlier"
+      ],
+      "cohort_logic_label": "structural_outlier",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.655,
+        "phi_alignment_score": 2666.503522055221,
+        "entropy_shannon": 5.240954126220305,
+        "artifact_id": "promoter_DCTN1_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "DCTN1",
+        "fasta_31bp": {
+          "gene_name": "DCTN1",
+          "sephirot_label": "Binah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\DCTN1_Binah_promoter.fa",
+          "file_name": "DCTN1_Binah_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.6774193548387096,
+          "sequence_preview": "ATCGGCTTCCCAGGCACAGT",
+          "header": {
+            "raw_header": ">DCTN1|Binah|ENSG00000204843|GRCh38|2:74392072-74392102:-1",
+            "assembly": "GRCh38",
+            "coordinates": "2:74392072-74392102:-1",
+            "ensembl_gene_id": "ENSG00000204843",
+            "header_gene": "DCTN1",
+            "header_label": "Binah"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "DCTN1",
+          "sephirot_label": "Binah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\DCTN1_Binah_promoter.fa",
+          "file_name": "DCTN1_Binah_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.5679012345679012,
+          "sequence_preview": "GACACGCCGATTTCTTATGG",
+          "header": {
+            "raw_header": ">DCTN1|Binah|ENSG00000204843|GRCh38|2:74392047-74392127:-1",
+            "assembly": "GRCh38",
+            "coordinates": "2:74392047-74392127:-1",
+            "ensembl_gene_id": "ENSG00000204843",
+            "header_gene": "DCTN1",
+            "header_label": "Binah"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "DCTN1",
+          "sephirot_label": "Binah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\DCTN1_Binah.qasm",
+          "file_name": "DCTN1_Binah.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Binah"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "TP53_ibm_fez_r01",
+      "promoter_id": "TP53",
+      "sephirot_label": "Gevurah",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 1,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.901,
+        "phi_alignment_score": 2702.33079907861,
+        "entropy_shannon": 5.706175159194664,
+        "artifact_id": "promoter_TP53_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "TP53",
+        "fasta_31bp": {
+          "gene_name": "TP53",
+          "sephirot_label": "Gevurah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\TP53_Gevurah_promoter.fa",
+          "file_name": "TP53_Gevurah_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.5806451612903226,
+          "sequence_preview": "TCGCAGGGGTTGATGGGATT",
+          "header": {
+            "raw_header": ">TP53|Gevurah|ENSG00000141510|GRCh38|17:7687531-7687561:-1",
+            "assembly": "GRCh38",
+            "coordinates": "17:7687531-7687561:-1",
+            "ensembl_gene_id": "ENSG00000141510",
+            "header_gene": "TP53",
+            "header_label": "Gevurah"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "TP53",
+          "sephirot_label": "Gevurah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\TP53_Gevurah_promoter.fa",
+          "file_name": "TP53_Gevurah_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.5925925925925926,
+          "sequence_preview": "ACTGTCCAGCTTTGTGCCAG",
+          "header": {
+            "raw_header": ">TP53|Gevurah|ENSG00000141510|GRCh38|17:7687506-7687586:-1",
+            "assembly": "GRCh38",
+            "coordinates": "17:7687506-7687586:-1",
+            "ensembl_gene_id": "ENSG00000141510",
+            "header_gene": "TP53",
+            "header_label": "Gevurah"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "TP53",
+          "sephirot_label": "Gevurah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\TP53_Gevurah.qasm",
+          "file_name": "TP53_Gevurah.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Gevurah"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "TP53_ibm_fez_r02",
+      "promoter_id": "TP53",
+      "sephirot_label": "Gevurah",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 2,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.901,
+        "phi_alignment_score": 2702.33079907861,
+        "entropy_shannon": 5.706175159194664,
+        "artifact_id": "promoter_TP53_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "TP53",
+        "fasta_31bp": {
+          "gene_name": "TP53",
+          "sephirot_label": "Gevurah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\TP53_Gevurah_promoter.fa",
+          "file_name": "TP53_Gevurah_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.5806451612903226,
+          "sequence_preview": "TCGCAGGGGTTGATGGGATT",
+          "header": {
+            "raw_header": ">TP53|Gevurah|ENSG00000141510|GRCh38|17:7687531-7687561:-1",
+            "assembly": "GRCh38",
+            "coordinates": "17:7687531-7687561:-1",
+            "ensembl_gene_id": "ENSG00000141510",
+            "header_gene": "TP53",
+            "header_label": "Gevurah"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "TP53",
+          "sephirot_label": "Gevurah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\TP53_Gevurah_promoter.fa",
+          "file_name": "TP53_Gevurah_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.5925925925925926,
+          "sequence_preview": "ACTGTCCAGCTTTGTGCCAG",
+          "header": {
+            "raw_header": ">TP53|Gevurah|ENSG00000141510|GRCh38|17:7687506-7687586:-1",
+            "assembly": "GRCh38",
+            "coordinates": "17:7687506-7687586:-1",
+            "ensembl_gene_id": "ENSG00000141510",
+            "header_gene": "TP53",
+            "header_label": "Gevurah"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "TP53",
+          "sephirot_label": "Gevurah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\TP53_Gevurah.qasm",
+          "file_name": "TP53_Gevurah.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Gevurah"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "TP53_ibm_fez_r03",
+      "promoter_id": "TP53",
+      "sephirot_label": "Gevurah",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 3,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.901,
+        "phi_alignment_score": 2702.33079907861,
+        "entropy_shannon": 5.706175159194664,
+        "artifact_id": "promoter_TP53_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "TP53",
+        "fasta_31bp": {
+          "gene_name": "TP53",
+          "sephirot_label": "Gevurah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\TP53_Gevurah_promoter.fa",
+          "file_name": "TP53_Gevurah_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.5806451612903226,
+          "sequence_preview": "TCGCAGGGGTTGATGGGATT",
+          "header": {
+            "raw_header": ">TP53|Gevurah|ENSG00000141510|GRCh38|17:7687531-7687561:-1",
+            "assembly": "GRCh38",
+            "coordinates": "17:7687531-7687561:-1",
+            "ensembl_gene_id": "ENSG00000141510",
+            "header_gene": "TP53",
+            "header_label": "Gevurah"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "TP53",
+          "sephirot_label": "Gevurah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\TP53_Gevurah_promoter.fa",
+          "file_name": "TP53_Gevurah_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.5925925925925926,
+          "sequence_preview": "ACTGTCCAGCTTTGTGCCAG",
+          "header": {
+            "raw_header": ">TP53|Gevurah|ENSG00000141510|GRCh38|17:7687506-7687586:-1",
+            "assembly": "GRCh38",
+            "coordinates": "17:7687506-7687586:-1",
+            "ensembl_gene_id": "ENSG00000141510",
+            "header_gene": "TP53",
+            "header_label": "Gevurah"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "TP53",
+          "sephirot_label": "Gevurah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\TP53_Gevurah.qasm",
+          "file_name": "TP53_Gevurah.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Gevurah"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "TP53_ibm_kingston_r01",
+      "promoter_id": "TP53",
+      "sephirot_label": "Gevurah",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 1,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.901,
+        "phi_alignment_score": 2702.33079907861,
+        "entropy_shannon": 5.706175159194664,
+        "artifact_id": "promoter_TP53_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "TP53",
+        "fasta_31bp": {
+          "gene_name": "TP53",
+          "sephirot_label": "Gevurah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\TP53_Gevurah_promoter.fa",
+          "file_name": "TP53_Gevurah_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.5806451612903226,
+          "sequence_preview": "TCGCAGGGGTTGATGGGATT",
+          "header": {
+            "raw_header": ">TP53|Gevurah|ENSG00000141510|GRCh38|17:7687531-7687561:-1",
+            "assembly": "GRCh38",
+            "coordinates": "17:7687531-7687561:-1",
+            "ensembl_gene_id": "ENSG00000141510",
+            "header_gene": "TP53",
+            "header_label": "Gevurah"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "TP53",
+          "sephirot_label": "Gevurah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\TP53_Gevurah_promoter.fa",
+          "file_name": "TP53_Gevurah_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.5925925925925926,
+          "sequence_preview": "ACTGTCCAGCTTTGTGCCAG",
+          "header": {
+            "raw_header": ">TP53|Gevurah|ENSG00000141510|GRCh38|17:7687506-7687586:-1",
+            "assembly": "GRCh38",
+            "coordinates": "17:7687506-7687586:-1",
+            "ensembl_gene_id": "ENSG00000141510",
+            "header_gene": "TP53",
+            "header_label": "Gevurah"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "TP53",
+          "sephirot_label": "Gevurah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\TP53_Gevurah.qasm",
+          "file_name": "TP53_Gevurah.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Gevurah"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "TP53_ibm_kingston_r02",
+      "promoter_id": "TP53",
+      "sephirot_label": "Gevurah",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 2,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.901,
+        "phi_alignment_score": 2702.33079907861,
+        "entropy_shannon": 5.706175159194664,
+        "artifact_id": "promoter_TP53_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "TP53",
+        "fasta_31bp": {
+          "gene_name": "TP53",
+          "sephirot_label": "Gevurah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\TP53_Gevurah_promoter.fa",
+          "file_name": "TP53_Gevurah_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.5806451612903226,
+          "sequence_preview": "TCGCAGGGGTTGATGGGATT",
+          "header": {
+            "raw_header": ">TP53|Gevurah|ENSG00000141510|GRCh38|17:7687531-7687561:-1",
+            "assembly": "GRCh38",
+            "coordinates": "17:7687531-7687561:-1",
+            "ensembl_gene_id": "ENSG00000141510",
+            "header_gene": "TP53",
+            "header_label": "Gevurah"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "TP53",
+          "sephirot_label": "Gevurah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\TP53_Gevurah_promoter.fa",
+          "file_name": "TP53_Gevurah_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.5925925925925926,
+          "sequence_preview": "ACTGTCCAGCTTTGTGCCAG",
+          "header": {
+            "raw_header": ">TP53|Gevurah|ENSG00000141510|GRCh38|17:7687506-7687586:-1",
+            "assembly": "GRCh38",
+            "coordinates": "17:7687506-7687586:-1",
+            "ensembl_gene_id": "ENSG00000141510",
+            "header_gene": "TP53",
+            "header_label": "Gevurah"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "TP53",
+          "sephirot_label": "Gevurah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\TP53_Gevurah.qasm",
+          "file_name": "TP53_Gevurah.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Gevurah"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "TP53_ibm_kingston_r03",
+      "promoter_id": "TP53",
+      "sephirot_label": "Gevurah",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 3,
+      "shots": 8192,
+      "selection_tags": [
+        "high_entropy"
+      ],
+      "cohort_logic_label": "high_entropy",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.901,
+        "phi_alignment_score": 2702.33079907861,
+        "entropy_shannon": 5.706175159194664,
+        "artifact_id": "promoter_TP53_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "TP53",
+        "fasta_31bp": {
+          "gene_name": "TP53",
+          "sephirot_label": "Gevurah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\TP53_Gevurah_promoter.fa",
+          "file_name": "TP53_Gevurah_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.5806451612903226,
+          "sequence_preview": "TCGCAGGGGTTGATGGGATT",
+          "header": {
+            "raw_header": ">TP53|Gevurah|ENSG00000141510|GRCh38|17:7687531-7687561:-1",
+            "assembly": "GRCh38",
+            "coordinates": "17:7687531-7687561:-1",
+            "ensembl_gene_id": "ENSG00000141510",
+            "header_gene": "TP53",
+            "header_label": "Gevurah"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "TP53",
+          "sephirot_label": "Gevurah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\TP53_Gevurah_promoter.fa",
+          "file_name": "TP53_Gevurah_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.5925925925925926,
+          "sequence_preview": "ACTGTCCAGCTTTGTGCCAG",
+          "header": {
+            "raw_header": ">TP53|Gevurah|ENSG00000141510|GRCh38|17:7687506-7687586:-1",
+            "assembly": "GRCh38",
+            "coordinates": "17:7687506-7687586:-1",
+            "ensembl_gene_id": "ENSG00000141510",
+            "header_gene": "TP53",
+            "header_label": "Gevurah"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "TP53",
+          "sephirot_label": "Gevurah",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\TP53_Gevurah.qasm",
+          "file_name": "TP53_Gevurah.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Gevurah"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "OXT_ibm_fez_r01",
+      "promoter_id": "OXT",
+      "sephirot_label": "Chesed",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 1,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.786,
+        "phi_alignment_score": 3089.1424798367552,
+        "entropy_shannon": 5.017058119290484,
+        "artifact_id": "promoter_OXT_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "OXT",
+        "fasta_31bp": {
+          "gene_name": "OXT",
+          "sephirot_label": "Chesed",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\OXT_Chesed_promoter.fa",
+          "file_name": "OXT_Chesed_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.7096774193548387,
+          "sequence_preview": "GCCGGAGAGACCGCCACCAG",
+          "header": {
+            "raw_header": ">OXT|Chesed|ENSG00000101405|GRCh38|20:3071605-3071635:1",
+            "assembly": "GRCh38",
+            "coordinates": "20:3071605-3071635:1",
+            "ensembl_gene_id": "ENSG00000101405",
+            "header_gene": "OXT",
+            "header_label": "Chesed"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "OXT",
+          "sephirot_label": "Chesed",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\OXT_Chesed_promoter.fa",
+          "file_name": "OXT_Chesed_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.6666666666666666,
+          "sequence_preview": "CAATGCCCAGGCATAAAAAG",
+          "header": {
+            "raw_header": ">OXT|Chesed|ENSG00000101405|GRCh38|20:3071580-3071660:1",
+            "assembly": "GRCh38",
+            "coordinates": "20:3071580-3071660:1",
+            "ensembl_gene_id": "ENSG00000101405",
+            "header_gene": "OXT",
+            "header_label": "Chesed"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "OXT",
+          "sephirot_label": "Chesed",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\OXT_Chesed.qasm",
+          "file_name": "OXT_Chesed.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Chesed"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "OXT_ibm_fez_r02",
+      "promoter_id": "OXT",
+      "sephirot_label": "Chesed",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 2,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.786,
+        "phi_alignment_score": 3089.1424798367552,
+        "entropy_shannon": 5.017058119290484,
+        "artifact_id": "promoter_OXT_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "OXT",
+        "fasta_31bp": {
+          "gene_name": "OXT",
+          "sephirot_label": "Chesed",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\OXT_Chesed_promoter.fa",
+          "file_name": "OXT_Chesed_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.7096774193548387,
+          "sequence_preview": "GCCGGAGAGACCGCCACCAG",
+          "header": {
+            "raw_header": ">OXT|Chesed|ENSG00000101405|GRCh38|20:3071605-3071635:1",
+            "assembly": "GRCh38",
+            "coordinates": "20:3071605-3071635:1",
+            "ensembl_gene_id": "ENSG00000101405",
+            "header_gene": "OXT",
+            "header_label": "Chesed"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "OXT",
+          "sephirot_label": "Chesed",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\OXT_Chesed_promoter.fa",
+          "file_name": "OXT_Chesed_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.6666666666666666,
+          "sequence_preview": "CAATGCCCAGGCATAAAAAG",
+          "header": {
+            "raw_header": ">OXT|Chesed|ENSG00000101405|GRCh38|20:3071580-3071660:1",
+            "assembly": "GRCh38",
+            "coordinates": "20:3071580-3071660:1",
+            "ensembl_gene_id": "ENSG00000101405",
+            "header_gene": "OXT",
+            "header_label": "Chesed"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "OXT",
+          "sephirot_label": "Chesed",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\OXT_Chesed.qasm",
+          "file_name": "OXT_Chesed.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Chesed"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "OXT_ibm_fez_r03",
+      "promoter_id": "OXT",
+      "sephirot_label": "Chesed",
+      "backend": "ibm_fez",
+      "backend_role": "reference_backend",
+      "replicate_index": 3,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.786,
+        "phi_alignment_score": 3089.1424798367552,
+        "entropy_shannon": 5.017058119290484,
+        "artifact_id": "promoter_OXT_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "OXT",
+        "fasta_31bp": {
+          "gene_name": "OXT",
+          "sephirot_label": "Chesed",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\OXT_Chesed_promoter.fa",
+          "file_name": "OXT_Chesed_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.7096774193548387,
+          "sequence_preview": "GCCGGAGAGACCGCCACCAG",
+          "header": {
+            "raw_header": ">OXT|Chesed|ENSG00000101405|GRCh38|20:3071605-3071635:1",
+            "assembly": "GRCh38",
+            "coordinates": "20:3071605-3071635:1",
+            "ensembl_gene_id": "ENSG00000101405",
+            "header_gene": "OXT",
+            "header_label": "Chesed"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "OXT",
+          "sephirot_label": "Chesed",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\OXT_Chesed_promoter.fa",
+          "file_name": "OXT_Chesed_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.6666666666666666,
+          "sequence_preview": "CAATGCCCAGGCATAAAAAG",
+          "header": {
+            "raw_header": ">OXT|Chesed|ENSG00000101405|GRCh38|20:3071580-3071660:1",
+            "assembly": "GRCh38",
+            "coordinates": "20:3071580-3071660:1",
+            "ensembl_gene_id": "ENSG00000101405",
+            "header_gene": "OXT",
+            "header_label": "Chesed"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "OXT",
+          "sephirot_label": "Chesed",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\OXT_Chesed.qasm",
+          "file_name": "OXT_Chesed.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Chesed"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "OXT_ibm_kingston_r01",
+      "promoter_id": "OXT",
+      "sephirot_label": "Chesed",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 1,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.786,
+        "phi_alignment_score": 3089.1424798367552,
+        "entropy_shannon": 5.017058119290484,
+        "artifact_id": "promoter_OXT_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "OXT",
+        "fasta_31bp": {
+          "gene_name": "OXT",
+          "sephirot_label": "Chesed",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\OXT_Chesed_promoter.fa",
+          "file_name": "OXT_Chesed_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.7096774193548387,
+          "sequence_preview": "GCCGGAGAGACCGCCACCAG",
+          "header": {
+            "raw_header": ">OXT|Chesed|ENSG00000101405|GRCh38|20:3071605-3071635:1",
+            "assembly": "GRCh38",
+            "coordinates": "20:3071605-3071635:1",
+            "ensembl_gene_id": "ENSG00000101405",
+            "header_gene": "OXT",
+            "header_label": "Chesed"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "OXT",
+          "sephirot_label": "Chesed",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\OXT_Chesed_promoter.fa",
+          "file_name": "OXT_Chesed_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.6666666666666666,
+          "sequence_preview": "CAATGCCCAGGCATAAAAAG",
+          "header": {
+            "raw_header": ">OXT|Chesed|ENSG00000101405|GRCh38|20:3071580-3071660:1",
+            "assembly": "GRCh38",
+            "coordinates": "20:3071580-3071660:1",
+            "ensembl_gene_id": "ENSG00000101405",
+            "header_gene": "OXT",
+            "header_label": "Chesed"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "OXT",
+          "sephirot_label": "Chesed",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\OXT_Chesed.qasm",
+          "file_name": "OXT_Chesed.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Chesed"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "OXT_ibm_kingston_r02",
+      "promoter_id": "OXT",
+      "sephirot_label": "Chesed",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 2,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.786,
+        "phi_alignment_score": 3089.1424798367552,
+        "entropy_shannon": 5.017058119290484,
+        "artifact_id": "promoter_OXT_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "OXT",
+        "fasta_31bp": {
+          "gene_name": "OXT",
+          "sephirot_label": "Chesed",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\OXT_Chesed_promoter.fa",
+          "file_name": "OXT_Chesed_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.7096774193548387,
+          "sequence_preview": "GCCGGAGAGACCGCCACCAG",
+          "header": {
+            "raw_header": ">OXT|Chesed|ENSG00000101405|GRCh38|20:3071605-3071635:1",
+            "assembly": "GRCh38",
+            "coordinates": "20:3071605-3071635:1",
+            "ensembl_gene_id": "ENSG00000101405",
+            "header_gene": "OXT",
+            "header_label": "Chesed"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "OXT",
+          "sephirot_label": "Chesed",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\OXT_Chesed_promoter.fa",
+          "file_name": "OXT_Chesed_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.6666666666666666,
+          "sequence_preview": "CAATGCCCAGGCATAAAAAG",
+          "header": {
+            "raw_header": ">OXT|Chesed|ENSG00000101405|GRCh38|20:3071580-3071660:1",
+            "assembly": "GRCh38",
+            "coordinates": "20:3071580-3071660:1",
+            "ensembl_gene_id": "ENSG00000101405",
+            "header_gene": "OXT",
+            "header_label": "Chesed"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "OXT",
+          "sephirot_label": "Chesed",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\OXT_Chesed.qasm",
+          "file_name": "OXT_Chesed.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Chesed"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    },
+    {
+      "run_id": "OXT_ibm_kingston_r03",
+      "promoter_id": "OXT",
+      "sephirot_label": "Chesed",
+      "backend": "ibm_kingston",
+      "backend_role": "comparison_backend",
+      "replicate_index": 3,
+      "shots": 8192,
+      "selection_tags": [
+        "top_phi_aligned"
+      ],
+      "cohort_logic_label": "top_phi_aligned",
+      "planned_metrics": {
+        "sequence_length": 31,
+        "qubit_count": 62,
+        "predicted_phi": 0.786,
+        "phi_alignment_score": 3089.1424798367552,
+        "entropy_shannon": 5.017058119290484,
+        "artifact_id": "promoter_OXT_20260404_001227"
+      },
+      "source_assets": {
+        "promoter_id": "OXT",
+        "fasta_31bp": {
+          "gene_name": "OXT",
+          "sephirot_label": "Chesed",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_31bp\\OXT_Chesed_promoter.fa",
+          "file_name": "OXT_Chesed_promoter.fa",
+          "sequence_length": 31,
+          "gc_content": 0.7096774193548387,
+          "sequence_preview": "GCCGGAGAGACCGCCACCAG",
+          "header": {
+            "raw_header": ">OXT|Chesed|ENSG00000101405|GRCh38|20:3071605-3071635:1",
+            "assembly": "GRCh38",
+            "coordinates": "20:3071605-3071635:1",
+            "ensembl_gene_id": "ENSG00000101405",
+            "header_gene": "OXT",
+            "header_label": "Chesed"
+          }
+        },
+        "fasta_81bp": {
+          "gene_name": "OXT",
+          "sephirot_label": "Chesed",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoters_fasta_81bp\\OXT_Chesed_promoter.fa",
+          "file_name": "OXT_Chesed_promoter.fa",
+          "sequence_length": 81,
+          "gc_content": 0.6666666666666666,
+          "sequence_preview": "CAATGCCCAGGCATAAAAAG",
+          "header": {
+            "raw_header": ">OXT|Chesed|ENSG00000101405|GRCh38|20:3071580-3071660:1",
+            "assembly": "GRCh38",
+            "coordinates": "20:3071580-3071660:1",
+            "ensembl_gene_id": "ENSG00000101405",
+            "header_gene": "OXT",
+            "header_label": "Chesed"
+          }
+        },
+        "promoter_qasm": {
+          "gene_name": "OXT",
+          "sephirot_label": "Chesed",
+          "file_path": "data\\external_imports\\tmt_os_20260405\\promoter_qasm\\OXT_Chesed.qasm",
+          "file_name": "OXT_Chesed.qasm",
+          "declared_qubits": 31,
+          "declared_classical_registers": [
+            31,
+            31
+          ],
+          "line_count": 98
+        },
+        "consistency": {
+          "has_fasta_31bp": true,
+          "has_fasta_81bp": true,
+          "has_promoter_qasm": true,
+          "fasta_lengths": [
+            31,
+            81
+          ],
+          "qasm_declared_qubits": 31,
+          "qasm_matches_31bp": true,
+          "shared_sephirot_label": "Chesed"
+        }
+      },
+      "execution": {
+        "status": "SCHEDULED",
+        "job_id": null,
+        "submitted_at": null,
+        "transpiled_depth": null,
+        "qubit_layout": [],
+        "backend_timestamp": null
+      },
+      "observed_metrics": {
+        "measured_phi": null,
+        "calibrated_phi": null,
+        "residual": null,
+        "timestamp": null
+      }
+    }
+  ]
+}

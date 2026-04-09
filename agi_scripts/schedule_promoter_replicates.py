@@ -64,6 +64,9 @@ EXPECTED_RESONANCE = {
 DEFAULT_BACKEND_MATRIX = ["ibm_fez", "ibm_kingston"]
 DEFAULT_REPLICATES = 3
 DEFAULT_SHOTS = 8192
+DEFAULT_ASSET_INVENTORY_GLOB = (
+    "data/external_imports/*/promoter_asset_inventory.json"
+)
 
 
 def parse_backend_list(raw_backends: str) -> List[str]:
@@ -79,6 +82,32 @@ def parse_backend_list(raw_backends: str) -> List[str]:
     if not backends:
         raise ValueError("At least one backend is required")
     return backends
+
+
+def resolve_asset_inventory_path(raw_path: str | None) -> Path | None:
+    """Resolve an explicit or latest imported promoter asset inventory path."""
+    if raw_path:
+        path = Path(raw_path)
+        return path if path.exists() else None
+
+    candidates = sorted(Path().glob(DEFAULT_ASSET_INVENTORY_GLOB))
+    return candidates[-1] if candidates else None
+
+
+def load_asset_inventory(path: Path | None) -> Dict[str, Dict]:
+    """Load imported promoter asset inventory and index by promoter ID."""
+    if path is None:
+        return {}
+
+    with open(path, "r", encoding="utf-8") as handle:
+        inventory = json.load(handle)
+
+    promoter_assets = {}
+    for promoter in inventory.get("promoters", []):
+        promoter_id = promoter.get("promoter_id")
+        if promoter_id:
+            promoter_assets[promoter_id] = promoter
+    return promoter_assets
 
 
 def build_selection_tags(comparison: Dict) -> Dict[str, List[str]]:
@@ -155,6 +184,7 @@ def make_run_record(
     replicate_index: int,
     shots: int,
     selection_tags: List[str],
+    source_assets: Dict | None = None,
 ) -> Dict:
     """Create a single scheduled run record."""
     promoter_id = promoter["promoter_id"]
@@ -184,6 +214,7 @@ def make_run_record(
             "entropy_shannon": promoter.get("entropy_shannon"),
             "artifact_id": promoter.get("artifact_id"),
         },
+        "source_assets": source_assets or {},
         "execution": {
             "status": "SCHEDULED",
             "job_id": None,
@@ -207,15 +238,19 @@ def build_schedule_manifest(
     backends: List[str],
     replicates: int,
     shots: int,
+    promoter_assets: Dict[str, Dict] | None = None,
+    asset_inventory_path: Path | None = None,
 ) -> Dict:
     """Build the full replicate matrix manifest."""
     promoter_records = get_promoter_records(comparison, promoters)
     selection_tags = build_selection_tags(comparison)
 
     scheduled_runs: List[Dict] = []
+    promoter_assets = promoter_assets or {}
     for promoter_id in promoters:
         promoter = promoter_records[promoter_id]
         tags = selection_tags.get(promoter_id, ["explicit_selection"])
+        source_assets = promoter_assets.get(promoter_id, {})
         for backend in backends:
             for replicate_index in range(1, replicates + 1):
                 scheduled_runs.append(
@@ -225,6 +260,7 @@ def build_schedule_manifest(
                         replicate_index=replicate_index,
                         shots=shots,
                         selection_tags=tags,
+                        source_assets=source_assets,
                     )
                 )
 
@@ -259,6 +295,11 @@ def build_schedule_manifest(
             ),
             "parent_artifacts": [
                 "tmt_os_panel_results/promoter_panel_comparison.json",
+                *(
+                    [str(asset_inventory_path)]
+                    if asset_inventory_path
+                    else []
+                ),
             ],
             "data_lineage": {
                 "derived_from_prior_runs": True,
@@ -267,6 +308,11 @@ def build_schedule_manifest(
                     "select_promoters",
                     "assign_selection_tags",
                     "expand_backend_replicate_matrix",
+                    *(
+                        ["attach_imported_promoter_assets"]
+                        if asset_inventory_path
+                        else []
+                    ),
                 ],
             },
         },
@@ -457,6 +503,13 @@ def main() -> int:
         help="Submit scheduled runs immediately after building the manifest",
     )
     parser.add_argument(
+        "--asset-inventory",
+        help=(
+            "Optional promoter asset inventory JSON produced by "
+            "inventory_imported_promoter_assets.py"
+        ),
+    )
+    parser.add_argument(
         "--api-key",
         default=os.environ.get("IBM_QUANTUM_API_KEY"),
         help="IBM Quantum API key; required only with --submit",
@@ -481,12 +534,16 @@ def main() -> int:
 
     comparison = load_comparison_report(report_path)
     promoters = choose_promoters(args, comparison)
+    asset_inventory_path = resolve_asset_inventory_path(args.asset_inventory)
+    promoter_assets = load_asset_inventory(asset_inventory_path)
     manifest = build_schedule_manifest(
         comparison=comparison,
         promoters=promoters,
         backends=backends,
         replicates=args.replicates,
         shots=args.shots,
+        promoter_assets=promoter_assets,
+        asset_inventory_path=asset_inventory_path,
     )
 
     print("\n" + "=" * 80)
@@ -497,6 +554,8 @@ def main() -> int:
     print(f"Replicates per backend: {args.replicates}")
     print(f"Total runs: {manifest['matrix_dimensions']['total_runs']}")
     print(f"Reference backend: {manifest['reference_backend']}")
+    if asset_inventory_path:
+        print(f"Imported asset inventory: {asset_inventory_path}")
 
     if args.submit:
         if not args.api_key:
