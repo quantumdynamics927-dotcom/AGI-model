@@ -3,6 +3,8 @@ import numpy as np
 from vae_model import QuantumVAE
 import matplotlib.pyplot as plt
 
+from ai_app_builder_scientific_script import GoldenRatioAnalyzer
+
 def analyze_golden_ratio_in_latent_space(model_path='best_model.pt', num_samples=1000):
     """
     Analyze if the VAE latent space exhibits golden ratio properties

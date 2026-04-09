@@ -31,16 +31,27 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 class TestEndToEndPipeline(unittest.TestCase):
     """End-to-end pipeline tests for the complete AGI Model workflow."""
 
-    def setUp(self):
-        """Set up test fixtures and temporary directories."""
-        self.temp_dir = tempfile.mkdtemp()
-        self.test_results = {
+    @classmethod
+    def setUpClass(cls):
+        """Set up shared test fixtures for the pipeline sequence."""
+        cls.temp_dir = tempfile.mkdtemp()
+        cls.test_results = {
             'pipeline_stages': [],
             'metrics': {},
             'certificates': [],
             'errors': []
         }
-        
+
+    @classmethod
+    def tearDownClass(cls):
+        """Clean up shared temporary directory."""
+        shutil.rmtree(cls.temp_dir, ignore_errors=True)
+
+    def setUp(self):
+        """Attach shared test fixtures to the current test instance."""
+        self.temp_dir = self.__class__.temp_dir
+        self.test_results = self.__class__.test_results
+
         print("\n" + "=" * 70)
         print("End-to-End AGI Model Pipeline Test")
         print("=" * 70)
@@ -48,8 +59,7 @@ class TestEndToEndPipeline(unittest.TestCase):
         print("=" * 70)
 
     def tearDown(self):
-        """Clean up temporary directory."""
-        shutil.rmtree(self.temp_dir, ignore_errors=True)
+        """Print test completion banner."""
         print("\n" + "=" * 70)
         print(f"Test completed: {datetime.now().isoformat()}")
         print("=" * 70)

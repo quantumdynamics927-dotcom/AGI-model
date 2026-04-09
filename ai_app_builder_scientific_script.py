@@ -888,12 +888,12 @@ class GoldenRatioAnalyzer:
     to golden ratio principles (like biological growth patterns).
     """
 
-    def __init__(self, config: AGIConfiguration):
-        self.config = config
+    def __init__(self, config: Optional[AGIConfiguration] = None):
+        self.config = config or AGIConfiguration()
         self.phi = PHI
-        self.threshold = config.golden_ratio_threshold
-        self.n_bootstrap = config.bootstrap_iterations
-        self.n_permutations = config.permutation_iterations
+        self.threshold = self.config.golden_ratio_threshold
+        self.n_bootstrap = self.config.bootstrap_iterations
+        self.n_permutations = self.config.permutation_iterations
 
     def detect_phi_ratios(
         self,
@@ -985,6 +985,10 @@ class GoldenRatioAnalyzer:
             results['all_ratios'] = all_ratios.tolist()
 
         return results
+
+
+class PhiAnalyzer(GoldenRatioAnalyzer):
+    """Backward-compatible alias for older phi analysis integrations."""
 
     def bootstrap_confidence_interval(
         self,
