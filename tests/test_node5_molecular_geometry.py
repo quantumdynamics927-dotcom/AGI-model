@@ -112,7 +112,8 @@ class TestNode5SpatialIntelligence(unittest.TestCase):
 if __name__ == '__main__':
     print("Running tests for Node 5: Molecular Geometry...")
     suite = unittest.TestSuite()
-    suite.addTest(unittest.makeSuite(TestNode5SpatialIntelligence))
+    loader = unittest.TestLoader()
+    suite.addTests(loader.loadTestsFromTestCase(TestNode5SpatialIntelligence))
     runner = unittest.TextTestRunner(verbosity=2)
     result = runner.run(suite)
     if result.failures or result.errors:
