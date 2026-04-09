@@ -162,6 +162,7 @@ appendonly.aof
 *.temp
 temp/
 tmp/
+hf-deploy/
 
 # Build artifacts
 *.tar.gz

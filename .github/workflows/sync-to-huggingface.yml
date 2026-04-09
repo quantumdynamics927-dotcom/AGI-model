@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - 'space_app.py'
-      - 'Dockerfile'
+      - 'Dockerfile.space'
       - 'README_HF_SPACE.md'
       - 'requirements.txt'
       - '.github/workflows/sync-to-huggingface.yml'

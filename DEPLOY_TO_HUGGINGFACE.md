@@ -12,8 +12,47 @@ This guide walks you through deploying the AGI Model to Hugging Face Spaces as a
 
 ## 🚀 Quick Start
 
+### Option A: Automated Deployment (GitHub Actions) - RECOMMENDED
+
+This is the easiest method - fully automated deployment on every push to `main`.
+
+**Steps:**
+1. Create Hugging Face Space (see Step 1 below)
+2. Configure GitHub Secrets (see Step 3 below)
+3. Push to GitHub → Automatic deployment!
+
+### Option B: Manual Deployment (Hugging Face CLI)
+
+For advanced users who want direct control via CLI.
+
+**Prerequisites:**
+```bash
+# Install hf CLI
+pip install -U "huggingface_hub[cli]"
+
+# Login to Hugging Face
+hf login
+
+# Add CLI skill for AI agents (optional but recommended)
+hf skills add --global
+```
+
+**Deploy Commands:**
+```bash
+# Create Space (one-time setup)
+hf repos create Quantum927/agi-model --repo-type space --space-sdk docker --public --exist-ok
+
+# Deploy Space files
+cd hf-deploy
+hf upload spaces/Quantum927/agi-model . .
+
+# Check Space status
+hf spaces info Quantum927/agi-model
+```
+
 ### Step 1: Create Hugging Face Space
 
+**Via Web Interface:**
 1. Go to https://huggingface.co/spaces
 2. Click "Create new Space"
 3. Configure:
@@ -22,6 +61,11 @@ This guide walks you through deploying the AGI Model to Hugging Face Spaces as a
    - **SDK**: Docker
    - **Visibility**: Public
 4. Click "Create Space"
+
+**Via CLI (Alternative):**
+```bash
+hf repos create Quantum927/agi-model --repo-type space --space-sdk docker --public --exist-ok
+```
 
 ### Step 2: Get Hugging Face Token
 
@@ -55,6 +99,8 @@ Value: [your Hugging Face username]
 
 ### Step 5: Manual Deploy (Optional)
 
+**Option 5A: Via Git (Traditional)**
+
 If you want to deploy immediately (workflow does this automatically):
 
 ```bash
@@ -81,6 +127,23 @@ EOF
 git add .
 git commit -m "Initial deployment: AGI Model v0.98.0-rc"
 git push
+```
+
+**Option 5B: Via hf CLI (Recommended for Agents)**
+
+For AI agents and automated workflows:
+
+```bash
+# Ensure you're logged in
+hf login
+
+# Deploy directly from hf-deploy directory
+cd hf-deploy
+hf upload spaces/YOUR_USERNAME/agi-model . . \
+    --commit-message "Deploy AGI Model Space"
+
+# Check Space status
+hf spaces info YOUR_USERNAME/agi-model
 ```
 
 **Note**: The GitHub Actions workflow automatically handles this deployment on every push to `main`!
@@ -180,6 +243,7 @@ with gr.TabItem("🔬 Custom Demo"):
 1. Go to your Space: https://huggingface.co/spaces/YOUR_USERNAME/agi-model
 2. Click "Files" → See latest commit
 3. Click "Logs" → View build logs
+4. Optional CLI check: `hf spaces info YOUR_USERNAME/agi-model`
 
 ### Troubleshooting
 
@@ -246,6 +310,53 @@ Access via: Space → Settings → Analytics
 ✅ Demo workflows execute  
 ✅ System status displays correctly  
 ✅ Links to GitHub work  
+
+## 🤖 AI Agent Integration
+
+### Hugging Face CLI Skill for Agents
+
+The `hf` CLI provides powerful tools for AI agents to interact with Hugging Face:
+
+**Install CLI Skill:**
+```bash
+# Global installation (all projects)
+hf skills add --global
+
+# Claude Code specific
+hf skills add --claude --global
+
+# Project-specific only
+hf skills add
+```
+
+**Agent Capabilities:**
+- 🔍 **Search Models**: Find and evaluate models
+- 📊 **Manage Datasets**: Upload/download training data
+- 🚀 **Launch Spaces**: Deploy and manage Spaces programmatically
+- 💼 **Run Jobs**: Execute compute jobs on Hugging Face infrastructure
+- 🪣 **Storage Management**: Manage buckets and files
+
+**Example Agent Commands:**
+```bash
+# Search for quantum models
+hf search models "quantum variational autoencoder"
+
+# Upload dataset
+hf upload dataset YOUR_USERNAME/agi-datasets ./real_data
+
+# Deploy Space
+hf upload spaces/YOUR_USERNAME/agi-model hf-deploy .
+
+# Check Space status
+hf spaces info YOUR_USERNAME/agi-model
+```
+
+**Resources:**
+- [CLI Reference](https://huggingface.co/docs/huggingface_hub/guides/cli) - Complete command documentation
+- [Agent Skills](https://agentskills.io) - CLI skill documentation
+- [Jobs Documentation](https://huggingface.co/docs/huggingface_hub/guides/cli#hf-jobs) - Compute jobs guide
+
+---
 
 ## 📞 Support
 
