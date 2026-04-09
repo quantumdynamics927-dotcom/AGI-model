@@ -9,6 +9,7 @@ Provides a Gradio interface for:
 - DNA quantum circuit exploration
 """
 
+import inspect
 import os
 
 import gradio as gr
@@ -173,100 +174,121 @@ def get_system_status():
     return status.strip()
 
 
-# Create Gradio Interface.
-with gr.Blocks(title="AGI Model - Scientific Discovery Validator") as app:
-    gr.Markdown("""
-    # 🧠 AGI Model v0.98.0 - Scientific Discovery Validator
-    
-    **Interactive demo for the AGI Model research platform**
-    
-    Validate discoveries, calculate consciousness metrics, and explore the end-to-end pipeline.
-    """)
-    
-    with gr.Tabs():
-        # Tab 1: Discovery Validation
-        with gr.TabItem("🔬 Discovery Validator"):
-            gr.Markdown("### Validate and Certify Scientific Discoveries")
-            
-            with gr.Row():
-                with gr.Column():
-                    title_input = gr.Textbox(
-                        label="Discovery Title",
-                        placeholder="e.g., Phi Resonance in VAE Latent Space",
-                        value="Demo Discovery"
-                    )
-                    desc_input = gr.Textbox(
-                        label="Description",
-                        placeholder="Brief description of your discovery",
-                        value="Demonstration of AGI Model discovery validation",
-                        lines=3
-                    )
-                    
-                    with gr.Row():
-                        complexity_input = gr.Slider(
-                            minimum=0, maximum=10, value=3.5, step=0.1,
-                            label="Complexity"
-                        )
-                        coherence_input = gr.Slider(
-                            minimum=0, maximum=1, value=0.85, step=0.01,
-                            label="Coherence"
-                        )
-                        phi_input = gr.Slider(
-                            minimum=0, maximum=1, value=0.92, step=0.01,
-                            label="Phi Score"
-                        )
-                    
-                    validate_btn = gr.Button("🔬 Validate Discovery", variant="primary")
+def create_app():
+    """Create the Gradio Space application."""
+    with gr.Blocks(title="AGI Model - Scientific Discovery Validator") as app:
+        gr.Markdown("""
+        # 🧠 AGI Model v0.98.0 - Scientific Discovery Validator
+        
+        **Interactive demo for the AGI Model research platform**
+        
+        Validate discoveries, calculate consciousness metrics, and explore the end-to-end pipeline.
+        """)
+        
+        with gr.Tabs():
+            # Tab 1: Discovery Validation
+            with gr.TabItem("🔬 Discovery Validator"):
+                gr.Markdown("### Validate and Certify Scientific Discoveries")
                 
-                with gr.Column():
-                    output = gr.Markdown(label="Validation Result")
+                with gr.Row():
+                    with gr.Column():
+                        title_input = gr.Textbox(
+                            label="Discovery Title",
+                            placeholder="e.g., Phi Resonance in VAE Latent Space",
+                            value="Demo Discovery"
+                        )
+                        desc_input = gr.Textbox(
+                            label="Description",
+                            placeholder="Brief description of your discovery",
+                            value="Demonstration of AGI Model discovery validation",
+                            lines=3
+                        )
+                        
+                        with gr.Row():
+                            complexity_input = gr.Slider(
+                                minimum=0, maximum=10, value=3.5, step=0.1,
+                                label="Complexity"
+                            )
+                            coherence_input = gr.Slider(
+                                minimum=0, maximum=1, value=0.85, step=0.01,
+                                label="Coherence"
+                            )
+                            phi_input = gr.Slider(
+                                minimum=0, maximum=1, value=0.92, step=0.01,
+                                label="Phi Score"
+                            )
+                        
+                        validate_btn = gr.Button("🔬 Validate Discovery", variant="primary")
+                    
+                    with gr.Column():
+                        output = gr.Markdown(label="Validation Result")
+                
+                validate_btn.click(
+                    fn=validate_discovery,
+                    inputs=[title_input, desc_input, complexity_input, coherence_input, phi_input],
+                    outputs=output
+                )
             
-            validate_btn.click(
-                fn=validate_discovery,
-                inputs=[title_input, desc_input, complexity_input, coherence_input, phi_input],
-                outputs=output
-            )
+            # Tab 2: Pipeline Demo
+            with gr.TabItem("🚀 Pipeline Demo"):
+                gr.Markdown("### End-to-End AGI Pipeline (8 Stages)")
+                
+                pipeline_btn = gr.Button("▶️ Run Pipeline Test", variant="primary")
+                pipeline_output = gr.Markdown(label="Pipeline Results")
+                
+                pipeline_btn.click(fn=run_pipeline_demo, inputs=None, outputs=pipeline_output)
+            
+            # Tab 3: Metrics Calculator
+            with gr.TabItem("📊 Metrics Calculator"):
+                gr.Markdown("### Calculate Consciousness Metrics")
+                
+                data_input = gr.Textbox(
+                    label="Data Points (comma-separated)",
+                    placeholder="1.0, 2.0, 3.0, 4.0, 5.0",
+                    value="1.0, 2.0, 3.0, 4.0, 5.0"
+                )
+                metrics_btn = gr.Button("📊 Calculate Metrics", variant="primary")
+                metrics_output = gr.Markdown(label="Metrics")
+                
+                metrics_btn.click(fn=calculate_metrics, inputs=data_input, outputs=metrics_output)
+            
+            # Tab 4: System Status
+            with gr.TabItem("ℹ️ System Info"):
+                gr.Markdown(get_system_status())
         
-        # Tab 2: Pipeline Demo
-        with gr.TabItem("🚀 Pipeline Demo"):
-            gr.Markdown("### End-to-End AGI Pipeline (8 Stages)")
-            
-            pipeline_btn = gr.Button("▶️ Run Pipeline Test", variant="primary")
-            pipeline_output = gr.Markdown(label="Pipeline Results")
-            
-            pipeline_btn.click(fn=run_pipeline_demo, inputs=None, outputs=pipeline_output)
-        
-        # Tab 3: Metrics Calculator
-        with gr.TabItem("📊 Metrics Calculator"):
-            gr.Markdown("### Calculate Consciousness Metrics")
-            
-            data_input = gr.Textbox(
-                label="Data Points (comma-separated)",
-                placeholder="1.0, 2.0, 3.0, 4.0, 5.0",
-                value="1.0, 2.0, 3.0, 4.0, 5.0"
-            )
-            metrics_btn = gr.Button("📊 Calculate Metrics", variant="primary")
-            metrics_output = gr.Markdown(label="Metrics")
-            
-            metrics_btn.click(fn=calculate_metrics, inputs=data_input, outputs=metrics_output)
-        
-        # Tab 4: System Status
-        with gr.TabItem("ℹ️ System Info"):
-            status_output = gr.Markdown()
-            status_output.value = get_system_status()
+        gr.Markdown("""
+        ---
+        **AGI Model v0.98.0-rc** | [GitHub](https://github.com/quantumdynamics927-dotcom/AGI-model) | [Docs](https://github.com/quantumdynamics927-dotcom/AGI-model/blob/main/USER_MANUAL.md)
+        """)
     
-    gr.Markdown("""
-    ---
-    **AGI Model v0.98.0-rc** | [GitHub](https://github.com/quantumdynamics927-dotcom/AGI-model) | [Docs](https://github.com/quantumdynamics927-dotcom/AGI-model/blob/main/USER_MANUAL.md)
-    """)
+    return app
+
+
+def _build_launch_kwargs(launch_callable, server_name, server_port):
+    """Build launch kwargs compatible with multiple Gradio versions."""
+    kwargs = {
+        "server_name": server_name,
+        "server_port": server_port,
+        "prevent_thread_lock": False,
+    }
+    try:
+        launch_params = inspect.signature(launch_callable).parameters
+    except (TypeError, ValueError):
+        launch_params = {}
+
+    if "show_api" in launch_params:
+        kwargs["show_api"] = False
+
+    return kwargs
+
+
+def main():
+    """Run the Gradio Space application."""
+    app = create_app()
+    server_name = os.getenv("GRADIO_SERVER_NAME", "0.0.0.0")
+    server_port = int(os.getenv("GRADIO_SERVER_PORT", "7860"))
+    app.launch(**_build_launch_kwargs(app.launch, server_name, server_port))
 
 
 if __name__ == "__main__":
-    server_name = os.getenv("GRADIO_SERVER_NAME", "0.0.0.0")
-    server_port = int(os.getenv("GRADIO_SERVER_PORT", "7860"))
-    app.launch(
-        server_name=server_name,
-        server_port=server_port,
-        show_api=False,
-        prevent_thread_lock=False,
-    )
+    main()
