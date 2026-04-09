@@ -19,7 +19,7 @@ def _default_density_matrix(mu: torch.Tensor) -> torch.Tensor:
     state = amplitudes * phases
     density_matrix = state.unsqueeze(-1) * state.conj().unsqueeze(-2)
     trace = torch.diagonal(density_matrix, dim1=-2, dim2=-1).sum(dim=-1, keepdim=True)
-    return density_matrix / trace.unsqueeze(-1)
+    return density_matrix / (trace.unsqueeze(-1) + 1e-10)
 
 
 class HybridQuantumOptimizer(_root_model.HybridQuantumOptimizer):
@@ -41,7 +41,7 @@ def total_loss(recon_x, x, mu, log_var, density_matrix=None, *args, **kwargs):
         total, _ = _root_model.total_loss(
             recon_x, x, mu, log_var, density_matrix, *args, **kwargs
         )
-        return total.real
+        return total.abs()
     return _root_model.total_loss(
         recon_x, x, mu, log_var, density_matrix, *args, **kwargs
     )
