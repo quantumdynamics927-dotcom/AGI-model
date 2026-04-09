@@ -9,16 +9,13 @@ Provides a Gradio interface for:
 - DNA quantum circuit exploration
 """
 
+import os
+
 import gradio as gr
-import numpy as np
-import json
-from pathlib import Path
-import time
 
 # Import AGI Model components
 try:
     from node7_discovery_validator import Node7DiscoveryValidator
-    from node13_metatron import Node13MetatronCoordinator
     HAVE_NODES = True
 except ImportError:
     HAVE_NODES = False
@@ -28,7 +25,10 @@ except ImportError:
 def validate_discovery(title, description, complexity, coherence, phi_score):
     """Validate a scientific discovery using Node 7."""
     if not HAVE_NODES:
-        return "Demo Mode: Node 7 not available. Please use GitHub repository for full functionality."
+        return (
+            "Demo Mode: Node 7 not available. "
+            "Please use GitHub repository for full functionality."
+        )
     
     try:
         validator = Node7DiscoveryValidator()
@@ -173,8 +173,8 @@ def get_system_status():
     return status.strip()
 
 
-# Create Gradio Interface
-with gr.Blocks(title="AGI Model - Scientific Discovery Validator", theme=gr.themes.Soft()) as app:
+# Create Gradio Interface.
+with gr.Blocks(title="AGI Model - Scientific Discovery Validator") as app:
     gr.Markdown("""
     # 🧠 AGI Model v0.98.0 - Scientific Discovery Validator
     
@@ -262,4 +262,11 @@ with gr.Blocks(title="AGI Model - Scientific Discovery Validator", theme=gr.them
 
 
 if __name__ == "__main__":
-    app.launch(server_name="0.0.0.0", server_port=7860)
+    server_name = os.getenv("GRADIO_SERVER_NAME", "0.0.0.0")
+    server_port = int(os.getenv("GRADIO_SERVER_PORT", "7860"))
+    app.launch(
+        server_name=server_name,
+        server_port=server_port,
+        show_api=False,
+        prevent_thread_lock=False,
+    )
