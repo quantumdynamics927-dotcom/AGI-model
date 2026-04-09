@@ -13,11 +13,15 @@ QuantumVAE = _root_model.QuantumVAE
 
 
 def _default_density_matrix(mu: torch.Tensor) -> torch.Tensor:
-    """Create a trace-normalized Hermitian density matrix for compatibility callers."""
-    amplitudes = torch.sqrt(torch.softmax(mu.abs(), dim=-1)).to(torch.complex64)
-    phases = torch.exp(1j * mu.to(torch.complex64))
-    state = amplitudes * phases
-    density_matrix = state.unsqueeze(-1) * state.conj().unsqueeze(-2)
+    """
+    Create a trace-normalized Hermitian density matrix for compatibility callers.
+
+    Package-level callers that omit ``density_matrix`` only need a stable quantum-like
+    mixed state so the root loss function can run. A diagonal matrix from softmax-normalized
+    latent magnitudes stays Hermitian, trace-1, numerically stable, and yields a real loss.
+    """
+    probabilities = torch.softmax(mu.abs(), dim=-1)
+    density_matrix = torch.diag_embed(probabilities)
     trace = torch.diagonal(density_matrix, dim1=-2, dim2=-1).sum(dim=-1, keepdim=True)
     return density_matrix / (trace.unsqueeze(-1) + 1e-10)
 
@@ -41,7 +45,7 @@ def total_loss(recon_x, x, mu, log_var, density_matrix=None, *args, **kwargs):
         total, _ = _root_model.total_loss(
             recon_x, x, mu, log_var, density_matrix, *args, **kwargs
         )
-        return total.abs()
+        return total
     return _root_model.total_loss(
         recon_x, x, mu, log_var, density_matrix, *args, **kwargs
     )
