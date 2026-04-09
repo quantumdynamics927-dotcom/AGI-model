@@ -1,14 +1,20 @@
-name: Sync to Hugging Face Space
+name: Deploy to Hugging Face Space
 
 on:
   push:
     branches:
       - main
+    paths:
+      - 'space_app.py'
+      - 'Dockerfile'
+      - 'README_HF_SPACE.md'
+      - 'requirements.txt'
+      - '.github/workflows/sync-to-huggingface.yml'
   release:
     types: [published]
 
 jobs:
-  sync-to-hub:
+  deploy-to-hub:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -24,26 +30,41 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
       
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-      
-      - name: Install dependencies
+      - name: Create deployment directory
         run: |
-          python -m pip install --upgrade pip
-          pip install huggingface_hub
+          mkdir -p hf-deploy
+          cd hf-deploy
+          git init
       
-      - name: Run tests (optional - can be skipped for demo)
+      - name: Copy Space files only
         run: |
-          echo "Running quick validation..."
-          python -c "print('✅ Quick validation passed')"
+          cp space_app.py hf-deploy/
+          cp Dockerfile.space hf-deploy/Dockerfile
+          cp README_HF_SPACE.md hf-deploy/README.md
+          cp requirements.txt hf-deploy/
+          
+          # Create .gitignore for Space
+          cat > hf-deploy/.gitignore << 'EOF'
+          *.pyc
+          __pycache__/
+          *.py[cod]
+          .env
+          *.log
+          *.md
+          !README.md
+          EOF
       
       - name: Push to Hugging Face Space
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_USER: ${{ secrets.HF_USER }}
         run: |
+          cd hf-deploy
           git add .
-          git commit -m "Sync from GitHub: ${{ github.sha }}" || echo "No changes to commit"
+          git commit -m "Deploy from GitHub: ${{ github.sha }}"
+          
+          # Push to Hugging Face Space
           git push https://${HF_USER}:${HF_TOKEN}@huggingface.co/spaces/${HF_USER}/agi-model main --force
-          echo "✅ Synced to Hugging Face Space"
+          
+          echo "✅ Deployed to Hugging Face Space"
+          echo "🔗 View at: https://huggingface.co/spaces/${HF_USER}/agi-model"
