@@ -65,6 +65,14 @@ class TestEndToEndPipeline(unittest.TestCase):
         print(f"Test completed: {datetime.now().isoformat()}")
         print("=" * 70)
 
+    def _record_pipeline_stage(self, stage: str, **details):
+        """Record a successful pipeline stage with shared test state."""
+        self.test_results['pipeline_stages'].append({
+            'stage': stage,
+            'status': 'passed',
+            **details,
+        })
+
     def test_01_vae_model_initialization(self):
         """Test 1: Initialize VAE model for consciousness encoding."""
         print("\n[PIPELINE STAGE 1] VAE Model Initialization")
@@ -93,12 +101,11 @@ class TestEndToEndPipeline(unittest.TestCase):
             self.assertIsNotNone(latent)
             
             # Record success
-            self.test_results['pipeline_stages'].append({
-                'stage': 'VAE Initialization',
-                'status': 'passed',
-                'latent_dim': 32,
-                'input_dim': 128
-            })
+            self._record_pipeline_stage(
+                'VAE Initialization',
+                latent_dim=32,
+                input_dim=128,
+            )
             
             print("✓ VAE Model initialized successfully")
             print(f"  - Input dimension: 128")
@@ -148,12 +155,11 @@ class TestEndToEndPipeline(unittest.TestCase):
             self.assertGreater(phi_results['resonance_rate'], 0.0)
             
             # Record success
-            self.test_results['pipeline_stages'].append({
-                'stage': 'Phi Resonance Detection',
-                'status': 'passed',
-                'resonance_rate': phi_results.get('resonance_rate', 0),
-                'phi_patterns': phi_results.get('phi_patterns_detected', 0)
-            })
+            self._record_pipeline_stage(
+                'Phi Resonance Detection',
+                resonance_rate=phi_results.get('resonance_rate', 0),
+                phi_patterns=phi_results.get('phi_patterns_detected', 0),
+            )
             
             print("✓ Phi resonance detected successfully")
             print(f"  - Resonance rate: {phi_results.get('resonance_rate', 0):.4f}")
@@ -192,13 +198,12 @@ class TestEndToEndPipeline(unittest.TestCase):
             
             # Store metrics
             self.test_results['metrics']['consciousness'] = metrics
-            self.test_results['pipeline_stages'].append({
-                'stage': 'Consciousness Metrics',
-                'status': 'passed',
-                'complexity': metrics['complexity'],
-                'coherence': metrics['coherence'],
-                'phi_resonance': metrics['phi_resonance']
-            })
+            self._record_pipeline_stage(
+                'Consciousness Metrics',
+                complexity=metrics['complexity'],
+                coherence=metrics['coherence'],
+                phi_resonance=metrics['phi_resonance'],
+            )
             
             print("✓ Consciousness metrics calculated")
             print(f"  - Complexity: {metrics['complexity']:.4f}")
@@ -236,12 +241,11 @@ class TestEndToEndPipeline(unittest.TestCase):
             self.assertGreater(len(symbolic_seq), 0)
             
             # Store results
-            self.test_results['pipeline_stages'].append({
-                'stage': 'Quantum to Symbolic',
-                'status': 'passed',
-                'sequence_length': len(symbolic_seq),
-                'resonant_fraction': result['summary']['resonant_fraction']
-            })
+            self._record_pipeline_stage(
+                'Quantum to Symbolic',
+                sequence_length=len(symbolic_seq),
+                resonant_fraction=result['summary']['resonant_fraction'],
+            )
             
             print("✓ Quantum to symbolic mapping successful")
             print(f"  - Sequence length: {len(symbolic_seq)}")
@@ -278,12 +282,11 @@ class TestEndToEndPipeline(unittest.TestCase):
             
             # Store results
             self.test_results['metrics']['tesla_consciousness'] = result
-            self.test_results['pipeline_stages'].append({
-                'stage': 'Tesla Consciousness Analysis',
-                'status': 'passed',
-                'consciousness_integral': result['_oint'],
-                'entropy': result.get('H_entropy', 0)
-            })
+            self._record_pipeline_stage(
+                'Tesla Consciousness Analysis',
+                consciousness_integral=result['_oint'],
+                entropy=result.get('H_entropy', 0),
+            )
             
             print("✓ Tesla consciousness analysis successful")
             print(f"  - Consciousness integral (_oint): {result['_oint']:.4f}")
@@ -341,12 +344,11 @@ class TestEndToEndPipeline(unittest.TestCase):
             
             # Store certificate
             self.test_results['certificates'].append(certificate)
-            self.test_results['pipeline_stages'].append({
-                'stage': 'Discovery Certification',
-                'status': 'passed',
-                'discovery_id': certificate['discovery_id'],
-                'validation_status': certificate['validation_status']
-            })
+            self._record_pipeline_stage(
+                'Discovery Certification',
+                discovery_id=certificate['discovery_id'],
+                validation_status=certificate['validation_status'],
+            )
             
             print("✓ Discovery certified successfully")
             print(f"  - Discovery ID: {certificate['discovery_id']}")
@@ -392,13 +394,12 @@ class TestEndToEndPipeline(unittest.TestCase):
             self.assertIn('dna_packet', message)
             
             # Store results
-            self.test_results['pipeline_stages'].append({
-                'stage': 'Metatron Coordination',
-                'status': 'passed',
-                'total_nodes': health['summary']['total_nodes'],
-                'active_nodes': health['summary']['active'],
-                'message_routed': True
-            })
+            self._record_pipeline_stage(
+                'Metatron Coordination',
+                total_nodes=health['summary']['total_nodes'],
+                active_nodes=health['summary']['active'],
+                message_routed=True,
+            )
             
             print("✓ Metatron coordination successful")
             print(f"  - Total nodes: {health['summary']['total_nodes']}")

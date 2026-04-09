@@ -988,7 +988,7 @@ class GoldenRatioAnalyzer:
 
 
 class PhiAnalyzer(GoldenRatioAnalyzer):
-    """Backward-compatible alias for older phi analysis integrations."""
+    """Backward-compatible alias that inherits GoldenRatioAnalyzer unchanged."""
 
     def bootstrap_confidence_interval(
         self,
