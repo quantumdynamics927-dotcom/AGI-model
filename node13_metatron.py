@@ -18,6 +18,7 @@ Role: Central coordination and orchestration
 import time
 import json
 import logging
+import importlib.util
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 import hashlib
@@ -35,6 +36,107 @@ if not logger.handlers:
     ch = logging.StreamHandler()
     ch.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(message)s"))
     logger.addHandler(ch)
+
+
+def _load_module_from_path(module_name: str, path: Path):
+    """Load a Python module directly from a file path."""
+    spec = importlib.util.spec_from_file_location(module_name, path)
+    if spec is None or spec.loader is None:
+        raise ImportError(f"Unable to load module spec for {path}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+class _Node10Adapter:
+    """Small adapter for function-based Node 10 APIs."""
+
+    NODE_ID = 10
+    NODE_NAME = "Bio-Digital Interface"
+    PLATONIC_SOLID = "Merkaba-Bio"
+
+    def __init__(self, module):
+        self.module = module
+        self.status = "active"
+
+    def process(self, data: Dict[str, Any]) -> Dict[str, Any]:
+        qubit_states = data.get("qubit_states") or [
+            {"phase": 0.2, "probability": 0.85},
+            {"phase": 1.0, "probability": 0.72},
+            {"phase": 1.6, "probability": 0.91},
+            {"phase": 2.2, "probability": 0.68},
+        ]
+        return self.module.quantum_to_symbolic(qubit_states)
+
+    def get_health_status(self) -> Dict[str, Any]:
+        return {
+            "node_id": self.NODE_ID,
+            "node_name": self.NODE_NAME,
+            "status": self.status,
+            "platonic_solid": self.PLATONIC_SOLID,
+            "mode": "function_adapter",
+        }
+
+
+class _Node11Adapter:
+    """Adapter for Node 11 FrequencyMaster class."""
+
+    NODE_ID = 11
+    NODE_NAME = "Frequency Master"
+    PLATONIC_SOLID = "Tesla Triangle"
+
+    def __init__(self, impl):
+        self.impl = impl
+        self.status = "active"
+
+    def process(self, data: Dict[str, Any]) -> Dict[str, Any]:
+        counts = data.get("counts") or {"00": 600, "01": 200, "10": 150, "11": 50}
+        experiment_type = data.get("experiment_type", "triangle")
+        return self.impl.analyze_counts(counts, experiment_type)
+
+    def get_health_status(self) -> Dict[str, Any]:
+        return {
+            "node_id": self.NODE_ID,
+            "node_name": self.NODE_NAME,
+            "status": self.status,
+            "platonic_solid": self.PLATONIC_SOLID,
+            "mode": "adapter",
+        }
+
+
+class _Node12Adapter:
+    """Adapter for function-based Node 12 APIs."""
+
+    NODE_ID = 12
+    NODE_NAME = "Neural Synapse"
+    PLATONIC_SOLID = "Omega Point"
+
+    def __init__(self, module):
+        self.module = module
+        self.status = "active"
+
+    def process(self, data: Dict[str, Any]) -> Dict[str, Any]:
+        sequences = data.get("symbolic_sequences") or {
+            "n0": "ATCGATCGATCG",
+            "n1": "ATCGATCGATCG",
+            "n2": "NNNNNNNNNNNN",
+            "n3": "GCGTATGCTAGC",
+        }
+        mat, meta = self.module.build_connectivity(sequences)
+        return {
+            "connectivity_shape": list(mat.shape),
+            "connectivity_preview": mat[: min(3, mat.shape[0]), : min(3, mat.shape[1])].round(3).tolist(),
+            "metadata": meta,
+        }
+
+    def get_health_status(self) -> Dict[str, Any]:
+        return {
+            "node_id": self.NODE_ID,
+            "node_name": self.NODE_NAME,
+            "status": self.status,
+            "platonic_solid": self.PLATONIC_SOLID,
+            "mode": "function_adapter",
+        }
 
 
 # Node registry: map functional node names to metadata including Platonic solid mapping
@@ -256,6 +358,26 @@ class Node13MetatronCoordinator:
         logger.info(f"Initialized {self.NODE_NAME} (Node {self.NODE_ID}, {self.PLATONIC_SOLID})")
         logger.info(f"Metatron's Cube contains {len(self.GEOMETRY['contains'])} Platonic solids")
         logger.info(f"Coordinating {len(NODE_REGISTRY)} functional nodes")
+
+    def _load_repo_module(
+        self,
+        module_name: str,
+        relative_path: str,
+        fallback_relative_path: str = None,
+    ):
+        """Load a module from a repo-relative file path, with optional fallback."""
+        root = Path(__file__).resolve().parent
+        candidates = [root / relative_path]
+        if fallback_relative_path:
+            candidates.append(root / fallback_relative_path)
+
+        for candidate in candidates:
+            if candidate.exists():
+                return _load_module_from_path(module_name, candidate)
+
+        raise FileNotFoundError(
+            f"Could not locate module for {module_name}: {relative_path}"
+        )
     
     def _load_node_instance(self, node_name: str) -> Optional[Any]:
         """Lazily load and cache a node instance by name."""
@@ -272,23 +394,30 @@ class Node13MetatronCoordinator:
             
             # Dynamic node loading based on path
             if 'node1_base_os' in node_path:
-                import importlib
-                mod = importlib.import_module("TMT-OS.node1_base_os")
+                mod = self._load_repo_module(
+                    "node1_base_os_mod", "TMT-OS/node1_base_os.py"
+                )
                 self.node_instances[node_name] = mod.Node1BaseOS()
                 
             elif 'node2_cybershield' in node_path:
-                import importlib
-                mod = importlib.import_module("TMT-OS.node2_cybershield")
+                mod = self._load_repo_module(
+                    "node2_cybershield_mod", "TMT-OS/node2_cybershield.py"
+                )
                 self.node_instances[node_name] = mod.Node2CyberShield()
                 
             elif 'node3_experimental_labs' in node_path:
-                mod = __import__("tmt_os_labs.node3_experimental_labs", fromlist=['Node3ExperimentalLabs'])
+                mod = self._load_repo_module(
+                    "node3_experimental_labs_mod",
+                    "tmt_os_labs/node3_experimental_labs.py",
+                    fallback_relative_path="tmt-os-labs/node3_experimental_labs.py",
+                )
                 self.node_instances[node_name] = mod.Node3ExperimentalLabs()
                 
             elif 'node4_nft_layer' in node_path:
-                import importlib
-                mod = importlib.import_module("TMT-OS.node4_nft_layer")
-                self.node_instances[node_name] = mod.Node4NFTLayer()
+                mod = self._load_repo_module(
+                    "node4_archive_mod", "TMT-OS/node4_nft_layer.py"
+                )
+                self.node_instances[node_name] = mod.Node4QuantumArchive()
                 
             elif 'node5_spatial_intelligence' in node_path:
                 mod = __import__("molecular_geometry.node5_spatial_intelligence", fromlist=['Node5SpatialIntelligence'])
@@ -303,10 +432,14 @@ class Node13MetatronCoordinator:
                 self.node_instances[node_name] = mod.Node7DiscoveryValidator()
                 
             elif 'node8_chain_monitor' in node_path:
-                # Node 8 requires special handling due to dependencies
                 try:
-                    mod = __import__("quantum_observer.node8_chain_monitor", fromlist=['Node8ChainMonitor'])
-                    self.node_instances[node_name] = mod.Node8ChainMonitor()
+                    mod = __import__(
+                        "quantum_observer.node8_chain_monitor",
+                        fromlist=['Node8QuantumObserver'],
+                    )
+                    node4 = self._load_node_instance('node4_nft_layer')
+                    node9 = self._load_node_instance('node9_qvae_bridge')
+                    self.node_instances[node_name] = mod.Node8QuantumObserver(node4, node9)
                 except Exception as e:
                     logger.debug(f"Node 8 loading deferred (dependencies): {e}")
                     return None
@@ -316,16 +449,16 @@ class Node13MetatronCoordinator:
                 self.node_instances[node_name] = mod.get_bridge()
                 
             elif 'node10_biodigital' in node_path:
-                mod = __import__("node10_biodigital", fromlist=['Node10BioDigital'])
-                self.node_instances[node_name] = mod.Node10BioDigital()
+                mod = __import__("node10_biodigital", fromlist=['quantum_to_symbolic'])
+                self.node_instances[node_name] = _Node10Adapter(mod)
                 
             elif 'node11_frequency_master' in node_path:
-                mod = __import__("node11_frequency_master", fromlist=['Node11FrequencyMaster'])
-                self.node_instances[node_name] = mod.Node11FrequencyMaster()
+                mod = __import__("node11_frequency_master", fromlist=['FrequencyMaster'])
+                self.node_instances[node_name] = _Node11Adapter(mod.FrequencyMaster())
                 
             elif 'node12_neural_synapse' in node_path:
-                mod = __import__("node12_neural_synapse", fromlist=['Node12NeuralSynapse'])
-                self.node_instances[node_name] = mod.Node12NeuralSynapse()
+                mod = __import__("node12_neural_synapse", fromlist=['build_connectivity'])
+                self.node_instances[node_name] = _Node12Adapter(mod)
                 
             else:
                 logger.debug(f"No loader defined for node: {node_name}")

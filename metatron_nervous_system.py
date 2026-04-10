@@ -57,13 +57,19 @@ NODE_REGISTRY = {
         'path': 'TMT-OS-Labs/node3_experimental_labs.py',
         'contact': 'metatron'
     },
-    'node4_nft_layer': {
+    'node4_research_planner': {
         'node_id': 4,
-        'role': 'NFT / Asset Layer',
+        'role': 'Research Planner: decomposes AGI goals into executable experiment plans',
         'platonic_solid': 'Dodecahedron',
         'path': 'TMT-OS/node4_nft_layer.py',
         'contact': 'metatron'
     }
+}
+
+# Deprecated node aliases for backward compatibility
+DEPRECATED_NODE_ALIASES = {
+    'node7_nft_inventor': 'node7_discovery_validator',
+    'node4_nft_layer': 'node4_research_planner'
 }
 
 
@@ -81,6 +87,10 @@ def register_node(name: str, node_id: int, role: str, path: str, platonic_solid:
 
 def get_node_info(name: str) -> Optional[Dict[str, Any]]:
     """Retrieve registered node metadata by name."""
+    # Handle deprecated aliases
+    if name in DEPRECATED_NODE_ALIASES:
+        logger.warning('Deprecated node name used: %s -> %s', name, DEPRECATED_NODE_ALIASES[name])
+        name = DEPRECATED_NODE_ALIASES[name]
     return NODE_REGISTRY.get(name)
 
 
@@ -108,13 +118,13 @@ if 'node6_audit_trails' not in NODE_REGISTRY:
     )
 
 
-# Register NFT Inventor node (Node 7)
-if 'node7_nft_inventor' not in NODE_REGISTRY:
+# Register Discovery Validator node (Node 7)
+if 'node7_discovery_validator' not in NODE_REGISTRY:
     register_node(
-        name='node7_nft_inventor',
+        name='node7_discovery_validator',
         node_id=7,
-        role='NFT Inventor: crystallizes research into sovereign digital assets',
-        path='nft_inventor.py',
+        role='Discovery Validator: validates scientific findings and ensures reproducibility',
+        path='node7_discovery_validator.py',
         platonic_solid='Heptagram',
         contact='metatron'
     )
