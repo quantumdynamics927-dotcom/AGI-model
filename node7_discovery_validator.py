@@ -17,12 +17,12 @@ all cryptographic verification capabilities.
 """
 import hashlib
 import json
+import logging
 import time
-from pathlib import Path
-from typing import Dict, Any, List, Optional
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
-import logging
+from pathlib import Path
+from typing import Any, Dict, List, Optional
 
 import numpy as np
 
@@ -80,11 +80,17 @@ class Node7DiscoveryValidator:
         'symbolism': 'Seven-fold discovery validation'
     }
     
-    def __init__(self, validation_dir: str = "discovery_validations"):
+    def __init__(
+        self,
+        validation_dir: str = "discovery_validations",
+        assets_dir: Optional[str] = None,
+    ):
         """Initialize the Discovery Validator."""
         self.status = "active"
         self.initialized_at = time.time()
-        self.validation_dir = Path(validation_dir)
+        storage_dir = assets_dir or validation_dir
+        self.validation_dir = Path(storage_dir)
+        self.assets_dir = self.validation_dir
         self.validation_dir.mkdir(parents=True, exist_ok=True)
         self.discovery_registry: Dict[str, DiscoveryCertificate] = {}
         self.validation_count = 0
@@ -173,7 +179,77 @@ class Node7DiscoveryValidator:
             'phi_resonance': max(0.0, phi_resonance)
         }
     
-    def validate_discovery(self, discovery_data: Dict[str, Any]) -> Dict[str, Any]:
+    def _normalize_discovery_input(
+        self,
+        discovery_data: Dict[str, Any],
+        analysis_data: Optional[Any] = None,
+    ) -> Dict[str, Any]:
+        """Normalize legacy concept payloads to discovery payloads."""
+        normalized = dict(discovery_data)
+        if analysis_data is not None:
+            normalized["analysis"] = analysis_data
+        if "title" not in normalized and "name" in normalized:
+            normalized["title"] = normalized["name"]
+        if "description" not in normalized:
+            normalized["description"] = ""
+        return normalized
+
+    def render_3d_asset(self, discovery_id: str, coordinates: Any) -> Path:
+        """Render a GLB asset for discovery visualization."""
+        coords = np.asarray(coordinates, dtype=float)
+        out_path = self.assets_dir / f"{discovery_id}.glb"
+
+        if trimesh is not None:
+            mesh = trimesh.Trimesh(vertices=coords).convex_hull
+            glb_bytes = mesh.export(file_type="glb")
+            if not isinstance(glb_bytes, (bytes, bytearray)):
+                logger.warning("Trimesh export for discovery %s did not return bytes; using fallback GLB.", discovery_id)
+                glb_bytes = b"glTF\x00mock"
+        else:
+            glb_bytes = b"glTF\x00mock"
+
+        with open(out_path, "wb") as f:
+            f.write(glb_bytes)
+
+        return out_path
+
+    def _build_legacy_metadata(
+        self,
+        discovery_data: Dict[str, Any],
+        analysis_data: Any,
+    ) -> Dict[str, Any]:
+        """Build backwards-compatible discovery metadata for legacy tests."""
+        normalized = self._normalize_discovery_input(discovery_data, analysis_data)
+        fingerprint = self.generate_quantum_fingerprint(normalized)
+        discovery_id = fingerprint[:16]
+        metrics = self.calculate_consciousness_metrics(analysis_data)
+
+        coordinates = normalized.get("coordinates", np.zeros((3, 3)))
+        self.render_3d_asset(discovery_id, coordinates)
+
+        metadata = {
+            "discovery_id": discovery_id,
+            "name": normalized.get("name", normalized.get("title", "Untitled Discovery")),
+            "description": normalized.get("description", ""),
+            "attributes": normalized.get("attributes", []),
+            "scientific_data": {
+                "fingerprint": fingerprint,
+                "consciousness_metrics": metrics,
+            },
+        }
+        metadata = self.add_tmtos_certification(metadata, fingerprint)
+
+        json_path = self.assets_dir / f"{discovery_id}.discovery.json"
+        with open(json_path, "w", encoding="utf-8") as f:
+            json.dump(metadata, f, indent=2)
+
+        return metadata
+
+    def validate_discovery(
+        self,
+        discovery_data: Dict[str, Any],
+        analysis_data: Optional[Any] = None,
+    ) -> Dict[str, Any]:
         """
         Validate a scientific discovery.
         
@@ -183,6 +259,11 @@ class Node7DiscoveryValidator:
         Returns:
             Validation result with status and metrics
         """
+        if analysis_data is not None:
+            return self._build_legacy_metadata(discovery_data, analysis_data)
+
+        discovery_data = self._normalize_discovery_input(discovery_data)
+
         validation_result = {
             'is_valid': True,
             'checks': [],
@@ -251,7 +332,11 @@ class Node7DiscoveryValidator:
             'fingerprint': fingerprint,
             'signature': validator_signature,
             'certification_timestamp': time.time(),
-            'certification_standard': 'TMT-OS-Scientific-v1.0'
+            'certification_standard': 'TMT-OS-Scientific-v1.0',
+            'data': {
+                'issuer': 'TMT-OS Metatron Authority',
+                'fingerprint': fingerprint,
+            },
         }
         
         return certificate

@@ -7,6 +7,7 @@ import json
 import inspect
 import os
 from pathlib import Path
+from typing import Any, Callable, Dict
 
 import gradio as gr
 import numpy as np
@@ -23,7 +24,6 @@ except Exception as exc:  # pragma: no cover
     HAVE_CORE = False
     IMPORT_ERROR = str(exc)
     NODE_REGISTRY = {}
-
 
 def _dump(data):
     return json.dumps(data, indent=2, default=str)
@@ -330,76 +330,10 @@ def validate_discovery(title, description, complexity, coherence, phi_score):
 NODE_CHOICES = ["node13_metatron"] + sorted(NODE_REGISTRY.keys())
 
 
-with gr.Blocks(title="AGI Model - 13 Node Control Panel") as app:
-    gr.Markdown(
-        """
-        # AGI Model v0.98.0 - 13 Node Control Panel
-
-        This Space exposes the AGI Model coordinator, the 13-node registry,
-        the Quantum VAE core, and concrete node actions from the packaged project modules.
-        """
-    )
-
-
-    with gr.Tabs():
-        with gr.TabItem("System Overview"):
-            overview_btn = gr.Button("Load 13-Node System Health", variant="primary")
-            overview_md = gr.Markdown()
-            overview_json = gr.Code(language="json", label="System Health JSON")
-            overview_btn.click(get_system_overview, outputs=[overview_md, overview_json])
-
-        with gr.TabItem("Node Inspector"):
-            with gr.Row():
-                node_dropdown = gr.Dropdown(choices=NODE_CHOICES, value="node13_metatron", label="Select node")
-                inspect_btn = gr.Button("Inspect Node", variant="primary")
-            node_md = gr.Markdown()
-            node_json = gr.Code(language="json", label="Node Details")
-            inspect_btn.click(inspect_node, inputs=node_dropdown, outputs=[node_md, node_json])
-
-        with gr.TabItem("Coordinator Workflow"):
-            workflow_btn = gr.Button("Run Workflow Probe", variant="primary")
-            workflow_md = gr.Markdown()
-            workflow_json = gr.Code(language="json", label="Workflow Result")
-            workflow_btn.click(run_workflow_probe, outputs=[workflow_md, workflow_json])
-
-        with gr.TabItem("Model Core"):
-            model_btn = gr.Button("Inspect Quantum VAE Core", variant="primary")
-            model_md = gr.Markdown()
-            model_json = gr.Code(language="json", label="Model Details")
-            model_btn.click(get_model_core_overview, outputs=[model_md, model_json])
-
-        with gr.TabItem("Node 7 Validation"):
-            title_input = gr.Textbox(label="Discovery Title", value="HF Space Full-Stack Discovery")
-            desc_input = gr.Textbox(
-                label="Description",
-                value="Validate a discovery using the packaged AGI Model node stack.",
-                lines=3,
-            )
-            with gr.Row():
-                complexity_input = gr.Slider(0, 10, value=3.5, step=0.1, label="Complexity")
-                coherence_input = gr.Slider(0, 1, value=0.85, step=0.01, label="Coherence")
-                phi_input = gr.Slider(0, 1, value=0.92, step=0.01, label="Phi Score")
-            validate_btn = gr.Button("Validate Discovery", variant="primary")
-            validate_output = gr.Markdown()
-            validate_btn.click(
-                validate_discovery,
-                inputs=[title_input, desc_input, complexity_input, coherence_input, phi_input],
-                outputs=validate_output,
-            )
-
-    gr.Markdown(
-        """
-        ---
-        AGI Model v0.98.0-rc | 13 nodes | Quantum VAE core | Hugging Face full-stack Space bundle
-        """
-    )
-        
-
-
 
 def calculate_metrics(data_points):
     """Calculate consciousness metrics from sample data."""
-    if not HAVE_NODES:
+    if not HAVE_CORE:
         return "Demo Mode: Metrics calculation requires Node 7."
     
     try:
@@ -547,14 +481,38 @@ def create_app():
     return app
 
 
+def _build_launch_kwargs(
+    launch_callable: Callable[..., Any],
+    server_name: str,
+    server_port: int,
+) -> Dict[str, Any]:
+    """Build Gradio launch kwargs compatible with multiple versions."""
+    params = inspect.signature(launch_callable).parameters
+    accepts_kwargs = any(
+        parameter.kind == inspect.Parameter.VAR_KEYWORD
+        for parameter in params.values()
+    )
+
+    kwargs = {
+        "server_name": server_name,
+        "server_port": server_port,
+    }
+    if "prevent_thread_lock" in params or accepts_kwargs:
+        kwargs["prevent_thread_lock"] = False
+    if "show_api" in params or accepts_kwargs:
+        kwargs["show_api"] = False
+    return kwargs
+
+
 def main():
     """Run the Gradio Space application."""
+    if not hasattr(gr, "Blocks"):
+        raise RuntimeError("Gradio Blocks API is unavailable in this environment.")
     app = create_app()
     server_name = os.getenv("GRADIO_SERVER_NAME", "0.0.0.0")
     server_port = int(os.getenv("GRADIO_SERVER_PORT", "7860"))
-    
-    # Simple launch for Hugging Face Spaces compatibility
-    app.launch(server_name=server_name, server_port=server_port)
+
+    app.launch(**_build_launch_kwargs(app.launch, server_name, server_port))
 
 
 if __name__ == "__main__":
