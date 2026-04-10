@@ -47,11 +47,22 @@ class Node8QuantumObserver:
         self.qvae_bridge = qvae_bridge_node
         self.notifications: List[str] = []
         
-        # Register itself as a listener to the blockchain mock object within the NFT node
-        if self.nft_layer and hasattr(self.nft_layer.blockchain, 'add_listener'):
-            self.nft_layer.blockchain.add_listener(self)
+        # Register against either the newer archive provenance chain or the legacy
+        # blockchain listener interface, depending on which Node 4 implementation is loaded.
+        if self.nft_layer and hasattr(self.nft_layer, 'provenance_chain'):
+            chain = getattr(self.nft_layer, 'provenance_chain', None)
+            if chain and hasattr(chain, 'add_listener'):
+                chain.add_listener(self)
+            else:
+                logger.warning("Node 4 provenance chain is present but has no listener API.")
+        elif self.nft_layer and hasattr(self.nft_layer, 'blockchain'):
+            blockchain = getattr(self.nft_layer, 'blockchain', None)
+            if blockchain and hasattr(blockchain, 'add_listener'):
+                blockchain.add_listener(self)
+            else:
+                logger.warning("Node 4 blockchain interface is present but has no listener API.")
         else:
-            logger.warning("Could not register as a listener to the provided NFT layer node.")
+            logger.warning("Could not register as a listener to the provided Node 4 implementation.")
         
         logger.info(f"Initialized {self.NODE_NAME} (Node {self.NODE_ID}, {self.PLATONIC_SOLID}).")
 
