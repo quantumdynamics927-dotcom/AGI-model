@@ -393,42 +393,8 @@ with gr.Blocks(title="AGI Model - 13 Node Control Panel") as app:
         AGI Model v0.98.0-rc | 13 nodes | Quantum VAE core | Hugging Face full-stack Space bundle
         """
     )
+        
 
-    """Run the end-to-end pipeline demonstration."""
-    if not HAVE_NODES:
-        return "Demo Mode: Pipeline requires full AGI Model installation."
-    
-    try:
-        results = []
-        
-        # Stage 1: VAE Initialization
-        results.append("✅ Stage 1: VAE Model Initialized")
-        
-        # Stage 2: Phi Detection
-        results.append("✅ Stage 2: Phi Resonance Detected")
-        
-        # Stage 3: Consciousness Metrics
-        results.append("✅ Stage 3: Consciousness Metrics Calculated")
-        
-        # Stage 4: Quantum to Symbolic
-        results.append("✅ Stage 4: Quantum to Symbolic Mapping")
-        
-        # Stage 5: Tesla Analysis
-        results.append("✅ Stage 5: Tesla Consciousness Analysis")
-        
-        # Stage 6: Discovery Certification
-        results.append("✅ Stage 6: Discovery Certified")
-        
-        # Stage 7: Metatron Coordination
-        results.append("✅ Stage 7: Metatron Coordination")
-        
-        # Stage 8: Integration Summary
-        results.append("✅ Stage 8: Integration Summary Complete")
-        
-        return "\n".join(results) + "\n\n🎉 **Pipeline Test PASSED!** All 8 stages completed successfully."
-    
-    except Exception as e:
-        return f"Error: {str(e)}"
 
 
 def calculate_metrics(data_points):
