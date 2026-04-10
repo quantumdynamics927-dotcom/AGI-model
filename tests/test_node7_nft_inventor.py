@@ -120,7 +120,7 @@ class TestNode7DiscoveryValidator(unittest.TestCase):
 
         # 4. Check that the corresponding asset files were created on disk
         fingerprint = final_metadata["scientific_data"]["fingerprint"]
-        token_id = fingerprint[:16]
+        discovery_id = final_metadata["discovery_id"]
         json_path = self.validator.assets_dir / f"{discovery_id}.discovery.json"
         glb_path = self.validator.assets_dir / f"{discovery_id}.glb"
 
