@@ -685,6 +685,8 @@ class QuantumVAE(nn.Module):
     ):
         super(QuantumVAE, self).__init__()
 
+        self.input_dim = input_dim
+        self.latent_dim = latent_dim
         self.sparsity = sparsity  # Sparsity parameter for sparse connectivity
         self.use_phi_init = use_phi_init  # Use golden ratio-aware initialization
         self.phi = PHI
