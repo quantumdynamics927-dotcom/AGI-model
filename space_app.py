@@ -340,7 +340,7 @@ with gr.Blocks(title="AGI Model - 13 Node Control Panel") as app:
         """
     )
 
-<<<<<<< HEAD
+
     with gr.Tabs():
         with gr.TabItem("System Overview"):
             overview_btn = gr.Button("Load 13-Node System Health", variant="primary")
@@ -393,8 +393,7 @@ with gr.Blocks(title="AGI Model - 13 Node Control Panel") as app:
         AGI Model v0.98.0-rc | 13 nodes | Quantum VAE core | Hugging Face full-stack Space bundle
         """
     )
-=======
-def run_pipeline_demo():
+
     """Run the end-to-end pipeline demonstration."""
     if not HAVE_NODES:
         return "Demo Mode: Pipeline requires full AGI Model installation."
@@ -582,31 +581,14 @@ def create_app():
     return app
 
 
-def _build_launch_kwargs(launch_callable, server_name, server_port):
-    """Build launch kwargs compatible with multiple Gradio versions."""
-    kwargs = {
-        "server_name": server_name,
-        "server_port": server_port,
-        "prevent_thread_lock": False,
-    }
-    try:
-        launch_params = inspect.signature(launch_callable).parameters
-    except (TypeError, ValueError):
-        launch_params = {}
-
-    if "show_api" in launch_params:
-        kwargs["show_api"] = False
-
-    return kwargs
-
-
 def main():
     """Run the Gradio Space application."""
     app = create_app()
     server_name = os.getenv("GRADIO_SERVER_NAME", "0.0.0.0")
     server_port = int(os.getenv("GRADIO_SERVER_PORT", "7860"))
-    app.launch(**_build_launch_kwargs(app.launch, server_name, server_port))
->>>>>>> 5308ec0c4708ec7ae79e519cf624baf435fd595f
+    
+    # Simple launch for Hugging Face Spaces compatibility
+    app.launch(server_name=server_name, server_port=server_port)
 
 
 if __name__ == "__main__":
