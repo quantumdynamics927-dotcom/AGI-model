@@ -6,23 +6,24 @@ from unittest.mock import patch, MagicMock
 
 import pytest
 
-# Add project root to path to allow importing 'nft_inventor'
+# Add project root to path to allow importing 'node7_discovery_validator'
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 # Mock the trimesh library before importing the node module. This allows tests
 # to run even if this heavy optional dependency is not installed.
 sys.modules["trimesh"] = MagicMock()
 
-Node7NFTInventor = pytest.importorskip("nft_inventor").Node7NFTInventor
+# Import the new Discovery Validator class
+Node7DiscoveryValidator = pytest.importorskip("node7_discovery_validator").Node7DiscoveryValidator
 
 
-class TestNode7NFTInventor(unittest.TestCase):
-    """Unit tests for the enhanced Node7NFTInventor class."""
+class TestNode7DiscoveryValidator(unittest.TestCase):
+    """Unit tests for the enhanced Node7DiscoveryValidator class."""
 
     def setUp(self):
         """Set up a new Node7 instance and test data before each test."""
-        self.test_assets_dir = "test_nft_assets"
-        self.inventor = Node7NFTInventor(assets_dir=self.test_assets_dir)
+        self.test_assets_dir = "test_discovery_assets"
+        self.validator = Node7DiscoveryValidator(assets_dir=self.test_assets_dir)
         self.concept_data = {
             "name": "Test Concept",
             "description": "A concept for testing the enhanced functionality of Node 7.",
@@ -33,15 +34,15 @@ class TestNode7NFTInventor(unittest.TestCase):
 
     def tearDown(self):
         """Clean up any created asset files and directories after each test."""
-        if os.path.exists(self.inventor.assets_dir):
-            for f in os.listdir(self.inventor.assets_dir):
-                os.remove(os.path.join(self.inventor.assets_dir, f))
-            os.rmdir(self.inventor.assets_dir)
+        if os.path.exists(self.validator.assets_dir):
+            for f in os.listdir(self.validator.assets_dir):
+                os.remove(os.path.join(self.validator.assets_dir, f))
+            os.rmdir(self.validator.assets_dir)
 
     def test_fingerprints_are_distinct(self):
         """Test that quantum and deterministic fingerprints are generated and are different."""
-        det_fp = self.inventor.generate_deterministic_fingerprint(self.concept_data)
-        q_fp = self.inventor.generate_quantum_fingerprint(self.concept_data)
+        det_fp = self.validator.generate_discovery_fingerprint(self.concept_data)
+        q_fp = self.validator.generate_quantum_fingerprint(self.concept_data)
 
         self.assertIsInstance(det_fp, str)
         self.assertIsInstance(q_fp, str)
@@ -56,7 +57,7 @@ class TestNode7NFTInventor(unittest.TestCase):
 
     def test_consciousness_metrics_calculation(self):
         """Test the calculation of consciousness metrics returns a valid structure."""
-        metrics = self.inventor.calculate_consciousness_metrics(self.analysis_data)
+        metrics = self.validator.calculate_consciousness_metrics(self.analysis_data)
 
         self.assertIn("complexity", metrics)
         self.assertIn("coherence", metrics)
@@ -70,7 +71,7 @@ class TestNode7NFTInventor(unittest.TestCase):
         """Test the addition of the TMT-OS certification block to metadata."""
         metadata = {}
         fingerprint = "test_fingerprint_123"
-        certified_metadata = self.inventor.add_tmtos_certification(
+        certified_metadata = self.validator.add_tmtos_certification(
             metadata, fingerprint
         )
 
@@ -82,7 +83,7 @@ class TestNode7NFTInventor(unittest.TestCase):
         self.assertEqual(len(cert_block["signature"]), 64)
         print("TestNode7: test_tmtos_certification_block PASSED")
 
-    @patch("nft_inventor.trimesh")
+    @patch("node7_discovery_validator.trimesh")
     def test_render_3d_asset_with_mock_trimesh(self, mock_trimesh):
         """Test that the 3D asset rendering function is called correctly, using a mock."""
         # Configure the mock to simulate the export method returning bytes
@@ -90,7 +91,7 @@ class TestNode7NFTInventor(unittest.TestCase):
         mock_trimesh.Trimesh.return_value.convex_hull = mock_mesh
         mock_mesh.export.return_value = b"mock_glb_binary_data"
 
-        asset_path = self.inventor.render_3d_asset(
+        asset_path = self.validator.render_3d_asset(
             "test_asset_render", coordinates=self.concept_data["coordinates"]
         )
 
@@ -101,9 +102,9 @@ class TestNode7NFTInventor(unittest.TestCase):
             self.assertEqual(f.read(), b"mock_glb_binary_data")
         print("TestNode7: test_render_3d_asset_with_mock_trimesh PASSED")
 
-    def test_full_invent_nft_pipeline(self):
-        """Test the full invent_nft pipeline to ensure all pieces are integrated."""
-        final_metadata = self.inventor.invent_nft(self.concept_data, self.analysis_data)
+    def test_full_validate_discovery_pipeline(self):
+        """Test the full validate_discovery pipeline to ensure all pieces are integrated."""
+        final_metadata = self.validator.validate_discovery(self.concept_data, self.analysis_data)
 
         # 1. Check for quantum fingerprint in the scientific data
         self.assertIn("fingerprint", final_metadata["scientific_data"])
@@ -120,20 +121,20 @@ class TestNode7NFTInventor(unittest.TestCase):
         # 4. Check that the corresponding asset files were created on disk
         fingerprint = final_metadata["scientific_data"]["fingerprint"]
         token_id = fingerprint[:16]
-        json_path = self.inventor.assets_dir / f"{token_id}.nft.json"
-        glb_path = self.inventor.assets_dir / f"{token_id}.glb"
+        json_path = self.validator.assets_dir / f"{discovery_id}.discovery.json"
+        glb_path = self.validator.assets_dir / f"{discovery_id}.glb"
 
         self.assertTrue(
             os.path.exists(json_path), "Metadata JSON file should be created."
         )
         self.assertTrue(os.path.exists(glb_path), "GLB asset file should be created.")
-        print("TestNode7: test_full_invent_nft_pipeline PASSED")
+        print("TestNode7: test_full_validate_discovery_pipeline PASSED")
 
 
 if __name__ == "__main__":
-    print("Running tests for Node 7: NFT Inventor...")
+    print("Running tests for Node 7: Discovery Validator...")
     suite = unittest.TestSuite()
-    suite.addTest(unittest.makeSuite(TestNode7NFTInventor))
+    suite.addTest(unittest.makeSuite(TestNode7DiscoveryValidator))
     runner = unittest.TextTestRunner(verbosity=2)
     result = runner.run(suite)
     if result.failures or result.errors:
