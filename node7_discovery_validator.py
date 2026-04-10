@@ -88,8 +88,8 @@ class Node7DiscoveryValidator:
         """Initialize the Discovery Validator."""
         self.status = "active"
         self.initialized_at = time.time()
-        base_dir = assets_dir or validation_dir
-        self.validation_dir = Path(base_dir)
+        storage_dir = assets_dir or validation_dir
+        self.validation_dir = Path(storage_dir)
         self.assets_dir = self.validation_dir
         self.validation_dir.mkdir(parents=True, exist_ok=True)
         self.discovery_registry: Dict[str, DiscoveryCertificate] = {}
@@ -203,6 +203,7 @@ class Node7DiscoveryValidator:
             mesh = trimesh.Trimesh(vertices=coords).convex_hull
             glb_bytes = mesh.export(file_type="glb")
             if not isinstance(glb_bytes, (bytes, bytearray)):
+                logger.warning("Trimesh export for discovery %s did not return bytes; using fallback GLB.", discovery_id)
                 glb_bytes = b"glTF\x00mock"
         else:
             glb_bytes = b"glTF\x00mock"
