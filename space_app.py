@@ -7,6 +7,7 @@ import json
 import inspect
 import os
 from pathlib import Path
+from typing import Any, Callable, Dict
 
 import gradio as gr
 import numpy as np
@@ -23,9 +24,6 @@ except Exception as exc:  # pragma: no cover
     HAVE_CORE = False
     IMPORT_ERROR = str(exc)
     NODE_REGISTRY = {}
-
-NODE_SYSTEM_AVAILABLE = HAVE_CORE
-
 
 def _dump(data):
     return json.dumps(data, indent=2, default=str)
@@ -335,7 +333,7 @@ NODE_CHOICES = ["node13_metatron"] + sorted(NODE_REGISTRY.keys())
 
 def calculate_metrics(data_points):
     """Calculate consciousness metrics from sample data."""
-    if not NODE_SYSTEM_AVAILABLE:
+    if not HAVE_CORE:
         return "Demo Mode: Metrics calculation requires Node 7."
     
     try:
@@ -483,7 +481,11 @@ def create_app():
     return app
 
 
-def _build_launch_kwargs(launch_callable, server_name, server_port):
+def _build_launch_kwargs(
+    launch_callable: Callable[..., Any],
+    server_name: str,
+    server_port: int,
+) -> Dict[str, Any]:
     """Build Gradio launch kwargs compatible with multiple versions."""
     params = inspect.signature(launch_callable).parameters
     accepts_kwargs = any(
