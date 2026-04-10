@@ -29,14 +29,29 @@ jobs:
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
+
+      - name: Check Hugging Face secrets
+        id: hf-secrets
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_USER: ${{ secrets.HF_USER }}
+        run: |
+          if [ -z "${HF_TOKEN}" ] || [ -z "${HF_USER}" ]; then
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "Hugging Face credentials are not configured; skipping deployment."
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          fi
       
       - name: Create deployment directory
+        if: steps.hf-secrets.outputs.configured == 'true'
         run: |
           mkdir -p hf-deploy
           cd hf-deploy
-          git init
+          git init -b main
       
       - name: Copy Space files only
+        if: steps.hf-secrets.outputs.configured == 'true'
         run: |
           cp space_app.py hf-deploy/
           cp Dockerfile.space hf-deploy/Dockerfile
@@ -55,6 +70,7 @@ jobs:
           EOF
       
       - name: Push to Hugging Face Space
+        if: steps.hf-secrets.outputs.configured == 'true'
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           HF_USER: ${{ secrets.HF_USER }}
@@ -64,7 +80,11 @@ jobs:
           git commit -m "Deploy from GitHub: ${{ github.sha }}"
           
           # Push to Hugging Face Space
-          git push https://${HF_USER}:${HF_TOKEN}@huggingface.co/spaces/${HF_USER}/agi-model main --force
+          git push https://${HF_USER}:${HF_TOKEN}@huggingface.co/spaces/${HF_USER}/agi-model HEAD:main --force
           
           echo "✅ Deployed to Hugging Face Space"
           echo "🔗 View at: https://huggingface.co/spaces/${HF_USER}/agi-model"
+
+      - name: Skip deployment without secrets
+        if: steps.hf-secrets.outputs.configured != 'true'
+        run: echo "Skipping Hugging Face deployment because HF_USER and/or HF_TOKEN are not configured."
