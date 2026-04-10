@@ -24,7 +24,7 @@ except Exception as exc:  # pragma: no cover
     IMPORT_ERROR = str(exc)
     NODE_REGISTRY = {}
 
-HAVE_NODES = HAVE_CORE
+NODE_SYSTEM_AVAILABLE = HAVE_CORE
 
 
 def _dump(data):
@@ -335,7 +335,7 @@ NODE_CHOICES = ["node13_metatron"] + sorted(NODE_REGISTRY.keys())
 
 def calculate_metrics(data_points):
     """Calculate consciousness metrics from sample data."""
-    if not HAVE_NODES:
+    if not NODE_SYSTEM_AVAILABLE:
         return "Demo Mode: Metrics calculation requires Node 7."
     
     try:

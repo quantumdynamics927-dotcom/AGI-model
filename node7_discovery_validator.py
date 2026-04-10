@@ -18,7 +18,6 @@ all cryptographic verification capabilities.
 import hashlib
 import json
 import logging
-import sys
 import time
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
@@ -243,12 +242,6 @@ class Node7DiscoveryValidator:
         with open(json_path, "w", encoding="utf-8") as f:
             json.dump(metadata, f, indent=2)
 
-        legacy_test_module = sys.modules.get("tests.test_node7_nft_inventor") or sys.modules.get(
-            "test_node7_nft_inventor"
-        )
-        if legacy_test_module is not None:
-            setattr(legacy_test_module, "discovery_id", discovery_id)
-
         return metadata
 
     def validate_discovery(
@@ -331,19 +324,18 @@ class Node7DiscoveryValidator:
             (fingerprint + "|TMT-OS-Metatron").encode('utf-8')
         ).hexdigest()
         
-        certification_data = {
-            'issuer': 'TMT-OS Metatron Authority',
-            'fingerprint': fingerprint,
-        }
         certificate['tmtos_certification'] = {
-            'issuer': certification_data['issuer'],
+            'issuer': 'TMT-OS Metatron Authority',
             'validator_node': self.NODE_ID,
             'validator_name': self.NODE_NAME,
             'fingerprint': fingerprint,
             'signature': validator_signature,
             'certification_timestamp': time.time(),
             'certification_standard': 'TMT-OS-Scientific-v1.0',
-            'data': certification_data,
+            'data': {
+                'issuer': 'TMT-OS Metatron Authority',
+                'fingerprint': fingerprint,
+            },
         }
         
         return certificate
