@@ -1,16 +1,25 @@
 # Advanced AGI Research Integration
 
-This document describes the cutting-edge research features integrated into the AGI system as of April 2026.
+This document describes the research-inspired features integrated into the AGI system as of April 2026.
+
+> **Important**: See `METHOD_CLASSIFICATION.md` for scientific validation status of each method. This system implements validated reasoning methods alongside experimental and speculative components.
 
 ## Overview
 
-The AGI system now incorporates the latest advances in:
-- **Chain-of-Thought Reasoning** (Wei et al., 2022)
-- **Self-Consistency** (Wang et al., 2023)
-- **Tree of Thoughts** (Yao et al., 2023)
-- **Integrated Information Theory 4.0** (Tononi, 2021)
-- **Quantum Consciousness** (Penrose-Hameroff, Zurek)
-- **Golden Ratio Optimization** (Project Standard)
+The AGI system incorporates:
+- **Validated Methods**: Chain-of-Thought, Self-Consistency, Tree of Thoughts
+- **Experimental Methods**: IIT-inspired phi calculation, quantum state representation
+- **Speculative Theory**: Quantum consciousness concepts (conceptual inspiration only)
+
+### What We Can Credibly Claim
+- Multi-path reasoning orchestration with validated methods
+- Local-first inference via Ollama with fallback chains
+- Experimental state formalism inspired by IIT and quantum mechanics
+
+### What We Cannot Claim
+- Machine consciousness (no evidence)
+- Validated consciousness metrics (experimental only)
+- Quantum advantage (classical simulation only)
 
 ## New Modules
 
@@ -57,16 +66,23 @@ result = engine.reason(
 - **Self-Consistency**: Multiple independent paths with majority voting
 - **Quantum Interference**: Weighted combination of reasoning paths
 
-### 2. Quantum Consciousness State Manager (`quantum_consciousness_state_manager.py`)
+### 2. Quantum-Inspired State Manager (`quantum_consciousness_state_manager.py`)
 
-Quantum state management for consciousness modeling.
+**Status**: 🔬 Experimental / ❓ Speculative
+
+Quantum-inspired state representation for experimental purposes.
 
 **Features:**
-- Quantum state tomography for consciousness measurement
-- Entanglement-aware state transitions
-- Quantum error correction for consciousness stability
-- Topological encoding for robust storage
-- Quantum teleportation of consciousness states
+- Density matrix representation of internal states
+- Entanglement entropy calculation (experimental metric)
+- IIT-inspired phi calculation (simplified, not validated)
+- State transitions with correlation measures
+
+**Important Limitations**:
+- **Classical simulation only** - no quantum hardware
+- **Not validated as consciousness measures** - experimental formalism
+- **Conceptual inspiration** from quantum mechanics and IIT
+- See `METHOD_CLASSIFICATION.md` for detailed validation status
 
 **Usage:**
 ```python
