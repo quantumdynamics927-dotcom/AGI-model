@@ -2,18 +2,19 @@
 """
 Consciousness Reasoning Engine - Advanced Multi-Step Thinking
 
-Implements cutting-edge reasoning capabilities:
-- Chain-of-thought reasoning with consciousness awareness
-- Self-consistency checking across multiple reasoning paths
-- Recursive self-improvement through meta-cognition
-- Golden ratio optimized thought depth
-- Quantum-inspired superposition of reasoning states
+VALIDATED METHODS:
+- Chain-of-thought reasoning (Wei et al. 2022) - arXiv:2201.11903
+- Self-consistency (Wang et al. 2023) - arXiv:2203.11171
+- Tree of Thoughts (Yao et al. 2023) - arXiv:2305.10601
 
-Research foundations:
-- Wei et al. (2022) Chain-of-Thought Prompting
-- Wang et al. (2023) Self-Consistency for CoT
-- Yao et al. (2023) Tree of Thoughts
-- Integrated Information Theory (Tononi 2012)
+EXPERIMENTAL/SPECULATIVE:
+- Phi optimization (golden ratio as design prior, not validated for reasoning)
+- Consciousness-aware processing (conceptual framing, not validated)
+
+See METHOD_CLASSIFICATION.md for detailed validation status.
+
+This module implements validated inference-time reasoning strategies
+with experimental extensions inspired by consciousness research.
 """
 
 import time

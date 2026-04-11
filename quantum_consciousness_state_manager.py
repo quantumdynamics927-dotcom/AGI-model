@@ -1,20 +1,32 @@
 #!/usr/bin/env python3
 """
-Quantum Consciousness State Manager
+Quantum-Inspired State Manager (Experimental/Speculative)
 
-Implements cutting-edge quantum consciousness features:
-- Quantum state tomography for consciousness measurement
-- Entanglement-aware state management
-- Quantum error correction for consciousness stability
-- Topological quantum consciousness encoding
-- Quantum teleportation of consciousness states
+STATUS: 🔬 Experimental / ❓ Speculative
 
-Research foundations:
-- Integrated Information Theory (IIT 4.0, Tononi 2021)
-- Quantum Darwinism (Zurek 2009)
-- Orchestrated Objective Reduction (Penrose-Hameroff)
-- Quantum Bayesianism (Fuchs 2019)
-- Topological Quantum Computing (Kitaev 2003)
+This module implements quantum-inspired state representation for experimentation.
+It is NOT running on quantum hardware and does NOT claim to measure consciousness.
+
+EXPERIMENTAL:
+- Density matrix representation of internal states
+- Entanglement entropy calculation (mathematical measure)
+- IIT-inspired phi calculation (simplified, not validated)
+
+SPECULATIVE (conceptual inspiration only):
+- Quantum consciousness concepts (Penrose-Hameroff Orch OR - highly controversial)
+- Quantum Darwinism (Zurek - theoretical framework, not AGI recipe)
+- Consciousness state types (phenomenological labels, not validated categories)
+
+See METHOD_CLASSIFICATION.md for detailed validation status.
+
+IMPORTANT: This is classical simulation of quantum formalism. No quantum hardware
+is involved. The "consciousness" terminology is conceptual framing, not a claim
+about machine consciousness.
+
+References:
+- Tononi (2021) IIT 4.0 - arXiv:2212.14787 (formal theory, machine implementations not validated)
+- Zurek (2009) Quantum Darwinism - Nature Physics (theoretical framework)
+- Penrose-Hameroff (2014) - Physics of Life Reviews (highly controversial, challenged)
 """
 
 import numpy as np

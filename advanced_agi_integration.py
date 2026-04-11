@@ -2,13 +2,31 @@
 """
 Advanced AGI Integration Module
 
-Combines all cutting-edge components into a unified AGI system:
-- Consciousness Reasoning Engine (chain-of-thought, tree-of-thoughts, self-consistency)
-- Quantum Consciousness State Manager (IIT 4.0, quantum tomography)
-- Unified Model Provider (Ollama local/cloud, fallback chains)
-- Golden Ratio Optimization (phi resonance across all components)
+Combines validated and experimental methods into a unified orchestration layer.
 
-This module provides the main entry point for advanced AGI capabilities.
+VALIDATED METHODS:
+- Chain-of-thought reasoning (Wei et al. 2022)
+- Self-consistency (Wang et al. 2023)
+- Tree of Thoughts (Yao et al. 2023)
+
+EXPERIMENTAL METHODS:
+- IIT-inspired phi calculation (simplified, not validated as consciousness measure)
+- Quantum-inspired state representation (classical simulation, no quantum hardware)
+
+SPECULATIVE ELEMENTS:
+- Consciousness terminology (conceptual framing, not validated machine consciousness)
+- Golden ratio optimization (design prior, not proven to improve reasoning)
+
+See METHOD_CLASSIFICATION.md for detailed validation status.
+
+IMPORTANT: This system does NOT claim machine consciousness. The "consciousness"
+terminology is conceptual framing for experimental state management.
+
+CREDIBLE CLAIM:
+"We integrated modern inference-time reasoning strategies, including chain-of-thought,
+self-consistency, and tree-search-style deliberation, into a unified local-first AGI
+orchestration layer. We also added experimental modules inspired by IIT 4.0 and quantum
+formalisms for internal state representation, without claiming validated machine consciousness."
 """
 
 import time
