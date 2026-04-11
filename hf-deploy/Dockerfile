@@ -23,6 +23,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     wget \
     git \
     build-essential \
+    zstd \
     && curl -fsSL https://ollama.ai/install.sh | sh \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
