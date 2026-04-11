@@ -64,7 +64,7 @@ HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
     CMD curl -f http://localhost:11434/api/tags || exit 1
 
 # Start script
-COPY hf-deploy/start.sh .
+COPY start.sh .
 RUN chmod +x start.sh
 
 USER agiuser
