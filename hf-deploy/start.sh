@@ -15,9 +15,17 @@ if ! curl -s http://localhost:11434/api/tags > /dev/null; then
 fi
 
 echo "Ollama started successfully"
+
+# Pull models at runtime
+echo "Pulling llama3.2:1b..."
+ollama pull llama3.2:1b
+
+echo "Pulling qwen3:1.7b..."
+ollama pull qwen3:1.7b
+
 echo "Available models:"
-curl -s http://localhost:11434/api/tags | jq -r '.models[].name'
+curl -s http://localhost:11434/api/tags
 
 # Start the FastAPI/Gradio app
 echo "Starting Biomimetic AGI API..."
-python hf-deploy/space_app.py
+python space_app.py

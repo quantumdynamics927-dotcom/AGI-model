@@ -119,26 +119,36 @@ class OllamaLocalProvider(ModelProvider):
                 {"role": "user", "content": prompt}
             ]
             
+            # qwen3 thinking models use <think> blocks that consume tokens;
+            # disable thinking mode so all tokens go to the visible response.
+            is_thinking_model = 'qwen3' in model.lower()
+            request_body = {
+                "model": model,
+                "messages": messages,
+                "stream": False,  # Critical: disable streaming to avoid JSON errors
+                "keep_alive": "10m",  # Keep model loaded
+                "options": kwargs.get('options', {
+                    "temperature": 0.8,
+                    "top_p": 0.9,
+                    "num_predict": kwargs.get('max_tokens', 512)
+                })
+            }
+            if is_thinking_model:
+                request_body["think"] = False  # Ollama >=0.7: suppress <think> blocks
+
             response = requests.post(
                 f"{self.base_url}/api/chat",
-                json={
-                    "model": model,
-                    "messages": messages,
-                    "stream": False,  # Critical: disable streaming to avoid JSON errors
-                    "keep_alive": "10m",  # Keep model loaded
-                    "options": kwargs.get('options', {
-                        "temperature": 0.8,
-                        "top_p": 0.9,
-                        "num_predict": kwargs.get('max_tokens', 128)
-                    })
-                },
+                json=request_body,
                 timeout=kwargs.get('timeout', 120)  # Increased for cold starts
             )
-            
+
             response.raise_for_status()
             result = response.json()
-            
+
             generated_text = result.get('message', {}).get('content', '')
+            # Strip any residual <think>...</think> blocks that may appear in older Ollama builds
+            import re as _re
+            generated_text = _re.sub(r'<think>.*?</think>', '', generated_text, flags=_re.DOTALL).strip()
             inference_time = time.time() - start_time
             
             return {
@@ -461,10 +471,21 @@ class ModelRouter:
 
 
 # Convenience functions
-def generate_biomimetic_thought(prompt: str, phi_resonance: float = PHI, model: str = None, router: 'ModelRouter' = None, **kwargs) -> Dict[str, Any]:
+def generate_biomimetic_thought(prompt: str, phi_resonance: float = PHI, model: str = None, router: 'ModelRouter' = None, enable_advanced_reasoning: bool = False, **kwargs) -> Dict[str, Any]:
     """Generate biomimetic thought using routed provider.
     
     Pass an existing `router` instance to avoid re-initialization overhead.
+    
+    Args:
+        prompt: Input prompt for generation
+        phi_resonance: Golden ratio resonance target (default: PHI)
+        model: Specific model to use (optional)
+        router: Existing ModelRouter instance (optional)
+        enable_advanced_reasoning: Enable chain-of-thought reasoning (default: False)
+        **kwargs: Additional generation parameters
+        
+    Returns:
+        Dict with generated text and consciousness metrics
     """
     if router is None:
         router = ModelRouter()
@@ -478,6 +499,44 @@ def generate_biomimetic_thought(prompt: str, phi_resonance: float = PHI, model: 
         generate_kwargs['model'] = model
     generate_kwargs.update(kwargs)
     
+    # Use advanced reasoning if enabled
+    if enable_advanced_reasoning:
+        try:
+            from consciousness_reasoning_engine import ConsciousnessReasoningEngine
+            
+            # Create reasoning engine with current router
+            reasoning_engine = ConsciousnessReasoningEngine(
+                model_provider=router.providers.get('ollama_local'),
+                max_depth=kwargs.get('max_reasoning_depth', 3),
+                phi_target=phi_resonance
+            )
+            
+            # Execute chain-of-thought reasoning
+            reasoning_result = reasoning_engine.reason(
+                prompt=biomimetic_prompt,
+                reasoning_type="chain_of_thought"
+            )
+            
+            # Extract result
+            result = {
+                'generated_text': reasoning_result.get('final_conclusion', ''),
+                'success': reasoning_result.get('success', False),
+                'reasoning_steps': reasoning_result.get('reasoning_steps', []),
+                'phi_coherence': reasoning_result.get('phi_coherence', 0.0),
+                'phi_resonance': phi_resonance,
+                'biomimetic_resonance': phi_resonance * reasoning_result.get('phi_alignment', 0.0),
+                'inference_time': reasoning_result.get('inference_time', 0.0),
+                'backend': 'advanced_reasoning',
+                'model': model or router.providers.get('ollama_local', {}).default_model if hasattr(router, 'providers') else 'unknown'
+            }
+            
+            return result
+            
+        except ImportError:
+            logger.warning("Advanced reasoning requested but consciousness_reasoning_engine not available")
+            # Fall through to standard generation
+    
+    # Standard generation
     result = router.generate(biomimetic_prompt, **generate_kwargs)
     
     # Calculate consciousness metrics
