@@ -54,8 +54,10 @@ RUN ollama pull llama3.2:1b \
     && ollama pull qwen3:1.7b
 
 # Expose ports
-EXPOSE 7860  # Hugging Face Spaces
-EXPOSE 11434 # Ollama API
+# Hugging Face Spaces uses port 7860
+# Ollama API uses port 11434
+EXPOSE 7860
+EXPOSE 11434
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
