@@ -1,5 +1,35 @@
 # Dockerfile for Quantum Consciousness VAE
-# Security-hardened base image with specific version
+# Security-hardened multi-stage build with optimized size
+# Stage 1: Builder
+FROM python:3.11-slim-bookworm AS builder
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
+
+WORKDIR /build
+
+# Install build dependencies (will be discarded)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    curl \
+    git \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements and install to a separate location
+COPY requirements.txt pyproject.toml ./
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel \
+    && pip install --no-cache-dir --target=/install -r requirements.txt \
+    && find /install -type f -name '*.pyc' -delete \
+    && find /install -type d -name '__pycache__' -exec rm -rf {} + 2>/dev/null || true \
+    && find /install -type f -name '*.pyo' -delete \
+    && find /install -type d -name 'tests' -exec rm -rf {} + 2>/dev/null || true \
+    && find /install -type d -name 'test' -exec rm -rf {} + 2>/dev/null || true
+
+# Stage 2: Runtime
 FROM python:3.11-slim-bookworm
 
 # Security: Create non-root user early
@@ -12,28 +42,20 @@ WORKDIR /app
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     TMT_OS_ENV=production \
+    PYTHONPATH=/app:/app/lib \
     PIP_NO_CACHE_DIR=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1
 
-# Install system dependencies with cleanup
-# Using --no-install-recommends to minimize attack surface
+# Install minimal runtime dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
     curl \
-    git \
     && apt-get upgrade -y \
     && apt-get autoremove -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# Copy requirements first to leverage Docker cache
-COPY requirements.txt .
-COPY pyproject.toml .
-
-# Install Python dependencies with security checks
-RUN pip install --no-cache-dir --upgrade pip setuptools wheel \
-    && pip install --no-cache-dir -r requirements.txt \
-    && pip check
+# Copy installed packages from builder
+COPY --from=builder /install /app/lib
 
 # Copy application code with proper ownership
 COPY --chown=tmtuser:tmtuser . .
@@ -44,10 +66,10 @@ RUN mkdir -p /app/TMT-OS/data \
     && mkdir -p /app/TMT-OS/cache \
     && chown -R tmtuser:tmtuser /app
 
-# Security: Remove unnecessary packages and files
-RUN apt-get purge -y --auto-remove build-essential \
-    && find /usr/local -type f -name '*.pyc' -delete \
-    && find /usr/local -type d -name '__pycache__' -exec rm -rf {} + 2>/dev/null || true
+# Security: Remove unnecessary files
+RUN find /app -type f -name '*.pyc' -delete \
+    && find /app -type d -name '__pycache__' -exec rm -rf {} + 2>/dev/null || true \
+    && find /app -type f -name '*.pyo' -delete
 
 # Switch to non-root user
 USER tmtuser
