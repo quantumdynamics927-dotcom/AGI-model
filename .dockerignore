@@ -93,6 +93,7 @@ raw_hardware/
 autonomous_data/
 artifacts/
 publication_figures/
+nft_metadata/
 AGI_EXPERIMENT_*/
 experiment_results/
 simulation_data/
