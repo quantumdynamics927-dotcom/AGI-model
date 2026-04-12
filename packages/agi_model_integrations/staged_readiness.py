@@ -235,6 +235,33 @@ V121_CONTRACT_REVISION = TargetedContractRevision(
 )
 
 
+# v1.2.2 Contract Revision - Narrow scope for verdict and confidence
+V122_CONTRACT_REVISION = TargetedContractRevision(
+    version="1.2.2",
+    target_fields=["verdict", "confidence"],
+    changes=[
+        # Explicit instruction block near end of prompt
+        "Added instruction block: 'Return a JSON object only'",
+        "Added instruction: 'verdict is required and must be one of: healthy, warning, fail'",
+        "Added instruction: 'confidence is required and must be a number in the allowed range'",
+        # Positive and negative examples
+        "Added positive example: {\"verdict\": \"healthy\", \"confidence\": 0.95}",
+        "Added negative example (missing verdict): {\"confidence\": 0.9} - INVALID",
+        "Added negative example (invalid verdict): {\"verdict\": \"pass\", \"confidence\": 0.9} - INVALID",
+        "Added negative example (confidence out of range): {\"verdict\": \"healthy\", \"confidence\": 1.5} - INVALID",
+        # Checklist immediately before generation
+        "Added pre-generation checklist: 'Required fields: verdict, confidence'",
+        "Added checklist item: 'verdict ∈ {healthy, warning, fail}'",
+        "Added checklist item: 'confidence ∈ [0.0, 1.0]'",
+    ],
+    expected_improvement={
+        "verdict_miss_rate": 0.6,  # Expect 60% reduction (from 5/100 to <3/100)
+        "confidence_bounds_rate": 0.7,  # Expect 70% reduction (from 3/100 to <2/100)
+        "schema_per_1000": 0.0625,  # Target: 80 → 75 to reach PREPROD
+    },
+)
+
+
 @dataclass
 class LikeForLikeComparison:
     """
@@ -331,6 +358,10 @@ class StagedReadiness:
         self.latencies: List[float] = []
         self.schema_invalid_count: int = 0
         
+        # Dedicated metrics for v1.2.2
+        self.verdict_miss_count: int = 0
+        self.confidence_bounds_violation_count: int = 0
+        
         # Version history
         self.version_metrics: Dict[str, Dict[str, Any]] = {}
     
@@ -361,6 +392,16 @@ class StagedReadiness:
     def record_required_field_miss(self, field: str) -> None:
         """Record a required field miss."""
         self.required_field_metrics.record_miss(field)
+        
+        # Track dedicated metrics for verdict and confidence
+        if field == "verdict":
+            self.verdict_miss_count += 1
+        elif field == "confidence":
+            self.confidence_bounds_violation_count += 1
+    
+    def record_confidence_bounds_violation(self) -> None:
+        """Record a confidence bounds violation."""
+        self.confidence_bounds_violation_count += 1
     
     def get_first_pass_validity(self) -> float:
         """Get first-pass validity rate."""
@@ -391,6 +432,20 @@ class StagedReadiness:
             return 0.0
         return (self.schema_invalid_count / total) * 1000
     
+    def get_verdict_miss_per_1000(self) -> float:
+        """Get verdict miss rate per 1000."""
+        total = self.required_field_metrics.total_executions
+        if total == 0:
+            return 0.0
+        return (self.verdict_miss_count / total) * 1000
+    
+    def get_confidence_bounds_per_1000(self) -> float:
+        """Get confidence bounds violation rate per 1000."""
+        total = self.required_field_metrics.total_executions
+        if total == 0:
+            return 0.0
+        return (self.confidence_bounds_violation_count / total) * 1000
+    
     def evaluate_staged_gate(self) -> Dict[str, Any]:
         """Evaluate staged promotion gate."""
         return self.staged_gate.evaluate(
@@ -409,6 +464,8 @@ class StagedReadiness:
             "retry_adjusted_success": self.get_retry_adjusted_success(),
             "p95_latency_s": self.get_p95_latency(),
             "schema_invalid_per_1000": self.get_schema_invalid_per_1000(),
+            "verdict_miss_per_1000": self.get_verdict_miss_per_1000(),
+            "confidence_bounds_per_1000": self.get_confidence_bounds_per_1000(),
             "required_field_miss_per_1000": self.required_field_metrics.get_miss_rate_per_1000(),
             "top_miss_fields": self.required_field_metrics.get_top_miss_fields(3),
             "total_executions": self.required_field_metrics.total_executions,
@@ -431,10 +488,62 @@ class StagedReadiness:
                 "retry_adjusted_success": self.get_retry_adjusted_success(),
                 "p95_latency_s": self.get_p95_latency(),
                 "schema_invalid_per_1000": self.get_schema_invalid_per_1000(),
+                "verdict_miss_per_1000": self.get_verdict_miss_per_1000(),
+                "confidence_bounds_per_1000": self.get_confidence_bounds_per_1000(),
                 "required_field_miss_per_1000": self.required_field_metrics.get_miss_rate_per_1000(),
             },
             "version_table": self.get_version_table(),
         }
+    
+    def compare_versions(self, from_version: str, to_version: str) -> Dict[str, Any]:
+        """Compare two versions on same metrics."""
+        if from_version not in self.version_metrics or to_version not in self.version_metrics:
+            return {"error": "Version not found", "available_versions": list(self.version_metrics.keys())}
+        
+        from_data = self.version_metrics[from_version]
+        to_data = self.version_metrics[to_version]
+        
+        metrics_to_compare = [
+            "first_pass_validity",
+            "retry_adjusted_success",
+            "p95_latency_s",
+            "schema_invalid_per_1000",
+            "verdict_miss_per_1000",
+            "confidence_bounds_per_1000",
+        ]
+        
+        comparison = {
+            "from_version": from_version,
+            "to_version": to_version,
+            "metrics": {},
+            "verdict": None,
+        }
+        
+        all_improved = True
+        for metric in metrics_to_compare:
+            from_val = from_data.get(metric, 0.0)
+            to_val = to_data.get(metric, 0.0)
+            
+            # For latency and error rates, lower is better
+            if metric in ["p95_latency_s", "schema_invalid_per_1000", "verdict_miss_per_1000", "confidence_bounds_per_1000"]:
+                improved = to_val < from_val
+                delta = from_val - to_val
+            else:
+                improved = to_val > from_val
+                delta = to_val - from_val
+            
+            comparison["metrics"][metric] = {
+                "from": from_val,
+                "to": to_val,
+                "delta": delta,
+                "improved": improved,
+            }
+            
+            if not improved:
+                all_improved = False
+        
+        comparison["verdict"] = "✅ IMPROVED" if all_improved else "⚠️ MIXED"
+        return comparison
 
 
 def create_staged_readiness(
@@ -455,6 +564,7 @@ __all__ = [
     "RequiredFieldMetrics",
     "TargetedContractRevision",
     "V121_CONTRACT_REVISION",
+    "V122_CONTRACT_REVISION",
     "LikeForLikeComparison",
     "StagedReadiness",
     "create_staged_readiness",

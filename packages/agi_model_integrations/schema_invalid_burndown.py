@@ -4,14 +4,17 @@ Focused effort to reduce schema-invalid failures from 12 to < transport failures
 
 Target metrics:
 - Success rate: ≥ 0.90
+- Retry-adjusted success rate: ≥ 0.80
 - Schema-invalid share: < transport-failure share
 - Schema-invalid count: < 9 (current transport failures)
+- P95 latency: < 3.0s
 
 Strategies:
 1. Tighten prompt contracts with explicit schema requirements
 2. Add per-outcome retry policies
-3. Implement release gates
-4. Track burn-down progress
+3. Implement release gates with retry-adjusted metrics
+4. Track burn-down progress with error leaderboard
+5. Regression testing against canonical failure cases
 """
 
 from dataclasses import dataclass, field
