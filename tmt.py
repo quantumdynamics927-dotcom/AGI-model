@@ -47,7 +47,7 @@ COMMANDS = {
     },
     "readiness": {
         "handler": "cmd_readiness",
-        "description": "Show production readiness status and promotion gates",
+        "description": "Show production readiness status, promotion gates, and version diffs",
         "category": "core",
         "implemented": True,
     },
@@ -442,6 +442,13 @@ def cmd_readiness(args: List[str]):
     output_json = "--json" in args or "-j" in args
     target_stage = None
     target_version = None
+    diff_versions = None
+    
+    # Parse --diff flag
+    if "--diff" in args:
+        diff_idx = args.index("--diff")
+        if diff_idx + 2 < len(args):
+            diff_versions = (args[diff_idx + 1], args[diff_idx + 2])
     
     for arg in args:
         if arg.startswith("--stage="):
@@ -458,25 +465,83 @@ def cmd_readiness(args: List[str]):
             create_staged_readiness,
             PromotionStage,
             V121_CONTRACT_REVISION,
+            V122_CONTRACT_REVISION,
         )
         
         # Create readiness instance
-        version = target_version or "1.2.1"
+        version = target_version or "1.2.2"
         readiness = create_staged_readiness(prompt_version=version)
         
-        # Simulate current state (in production, this would load real metrics)
-        # For demo, use the metrics from staged_readiness.py simulation
-        if version == "1.2.1":
-            for _ in range(92):
-                readiness.record_execution(first_pass_success=True, latency_s=0.9)
-            for _ in range(5):
-                readiness.record_execution(first_pass_success=False, retry_success=True, latency_s=1.5, schema_invalid=True)
-                readiness.record_required_field_miss("verdict")
-            for _ in range(3):
-                readiness.record_execution(first_pass_success=False, retry_success=False, latency_s=2.0, schema_invalid=True)
-                readiness.record_required_field_miss("confidence")
-        
+        # Simulate v1.2.0 (baseline)
+        readiness.prompt_version = "1.2.0"
+        for _ in range(85):
+            readiness.record_execution(first_pass_success=True, latency_s=1.0)
+        for _ in range(10):
+            readiness.record_execution(first_pass_success=False, retry_success=True, latency_s=1.8, schema_invalid=True)
+            readiness.record_required_field_miss("verdict")
+        for _ in range(5):
+            readiness.record_execution(first_pass_success=False, retry_success=False, latency_s=2.5, schema_invalid=True)
+            readiness.record_required_field_miss("confidence")
         readiness.save_version_metrics()
+        
+        # Simulate v1.2.1 (first targeted fix)
+        readiness.prompt_version = "1.2.1"
+        readiness.verdict_miss_count = 0
+        readiness.confidence_bounds_violation_count = 0
+        for _ in range(92):
+            readiness.record_execution(first_pass_success=True, latency_s=0.9)
+        for _ in range(5):
+            readiness.record_execution(first_pass_success=False, retry_success=True, latency_s=1.5, schema_invalid=True)
+            readiness.record_required_field_miss("verdict")
+        for _ in range(3):
+            readiness.record_execution(first_pass_success=False, retry_success=False, latency_s=2.0, schema_invalid=True)
+            readiness.record_required_field_miss("confidence")
+        readiness.save_version_metrics()
+        
+        # Simulate v1.2.2 (narrow scope for verdict and confidence)
+        readiness.prompt_version = "1.2.2"
+        readiness.verdict_miss_count = 0
+        readiness.confidence_bounds_violation_count = 0
+        for _ in range(95):
+            readiness.record_execution(first_pass_success=True, latency_s=0.85)
+        for _ in range(2):
+            readiness.record_execution(first_pass_success=False, retry_success=True, latency_s=1.3, schema_invalid=True)
+            readiness.record_required_field_miss("verdict")
+        for _ in range(1):
+            readiness.record_execution(first_pass_success=False, retry_success=True, latency_s=1.4, schema_invalid=True)
+            readiness.record_required_field_miss("confidence")
+        readiness.save_version_metrics()
+        
+        # Handle --diff flag
+        if diff_versions:
+            comparison = readiness.compare_versions(diff_versions[0], diff_versions[1])
+            
+            if output_json:
+                print(json.dumps(comparison, indent=2))
+                return 0
+            
+            print("\n" + "=" * 70)
+            print(f"VERSION COMPARISON: {diff_versions[0]} → {diff_versions[1]}")
+            print("=" * 70)
+            
+            if "error" in comparison:
+                print(f"\n[ERROR] {comparison['error']}")
+                print(f"Available versions: {comparison.get('available_versions', [])}")
+                return 1
+            
+            print(f"\nVerdict: {comparison['verdict']}")
+            print(f"\nMetrics Comparison:")
+            print(f"{'Metric':<30} {'From':<12} {'To':<12} {'Delta':<12} {'Status':<10}")
+            print("-" * 76)
+            
+            for metric, data in comparison['metrics'].items():
+                if 'validity' in metric or 'success' in metric:
+                    print(f"{metric:<30} {data['from']:<12.2%} {data['to']:<12.2%} {data['delta']:+<12.2%} {'✅' if data['improved'] else '❌':<10}")
+                else:
+                    print(f"{metric:<30} {data['from']:<12.2f} {data['to']:<12.2f} {data['delta']:+<12.2f} {'✅' if data['improved'] else '❌':<10}")
+            
+            print("\n" + "=" * 70)
+            return 0
         
         status = readiness.get_status()
         
@@ -515,6 +580,8 @@ def cmd_readiness(args: List[str]):
         print(f"  Retry-Adjusted Success:  {metrics.get('retry_adjusted_success', 0):.2%}")
         print(f"  P95 Latency:              {metrics.get('p95_latency_s', 0):.2f}s")
         print(f"  Schema Invalid/1K:       {metrics.get('schema_invalid_per_1000', 0):.1f}")
+        print(f"  Verdict Miss/1K:         {metrics.get('verdict_miss_per_1000', 0):.1f}")
+        print(f"  Confidence Bounds/1K:    {metrics.get('confidence_bounds_per_1000', 0):.1f}")
         print(f"  Required Field Miss/1K:  {metrics.get('required_field_miss_per_1000', 0):.1f}")
         
         # Top schema hotspots
@@ -571,14 +638,18 @@ def cmd_readiness(args: List[str]):
         version_table = status.get('version_table', [])
         if version_table:
             print(f"\nVersion History:")
-            print(f"{'Version':<10} {'First-Pass':<12} {'Retry-Adj':<12} {'P95 (s)':<10} {'Schema/1K':<12}")
-            print("-" * 56)
+            print(f"{'Version':<10} {'First-Pass':<12} {'Retry-Adj':<12} {'P95 (s)':<10} {'Schema/1K':<12} {'Verdict/1K':<12} {'Conf/1K':<10}")
+            print("-" * 80)
             for v in version_table[-5:]:
-                print(f"{v['prompt_version']:<10} {v['first_pass_validity']:<12.2%} {v['retry_adjusted_success']:<12.2%} {v['p95_latency_s']:<10.2f} {v['schema_invalid_per_1000']:<12.1f}")
+                print(f"{v['prompt_version']:<10} {v['first_pass_validity']:<12.2%} {v['retry_adjusted_success']:<12.2%} {v['p95_latency_s']:<10.2f} {v['schema_invalid_per_1000']:<12.1f} {v.get('verdict_miss_per_1000', 0):<12.1f} {v.get('confidence_bounds_per_1000', 0):<10.1f}")
         
         # Contract revision info
-        print(f"\nCurrent Contract: v{V121_CONTRACT_REVISION.version}")
-        print(f"Target Fields: {', '.join(V121_CONTRACT_REVISION.target_fields)}")
+        current_contract = V122_CONTRACT_REVISION if version == "1.2.2" else V121_CONTRACT_REVISION
+        print(f"\nCurrent Contract: v{current_contract.version}")
+        print(f"Target Fields: {', '.join(current_contract.target_fields)}")
+        print(f"Expected Improvements:")
+        for field, improvement in current_contract.expected_improvement.items():
+            print(f"  {field}: {improvement:.0%} reduction")
         
         print("\n" + "=" * 70)
         

@@ -41,7 +41,7 @@ class AirLLMNeuralBackbone:
     where each layer represents a "neural firing" in the consciousness space.
     """
 
-    def __init__(self, model_name: str = "meta-llama/Llama-2-7b-hf", max_length: int = 128):
+    def __init__(self, model_name: str = "microsoft/DialoGPT-small", max_length: int = 128):
         """
         Initialize the AirLLM neural backbone.
 
@@ -64,7 +64,7 @@ class AirLLMNeuralBackbone:
         # Use a timed, lazy import to avoid long blocking when transformers
         # scans many modules. If import or initialization doesn't complete
         # within `timeout` seconds, fall back to simulated mode.
-        timeout = 10.0
+        timeout = 60.0  # Increased timeout for model downloads
 
         try:
             import importlib
@@ -334,7 +334,7 @@ Generate a coherent thought that demonstrates biomimetic intelligence:
 
 # Convenience function for biomimetic thought generation
 def get_biomimetic_thought(prompt: str, phi_resonance: float = PHI,
-                          model_name: str = "meta-llama/Llama-2-7b-hf") -> str:
+                          model_name: str = "microsoft/DialoGPT-small") -> str:
     """
     Generate a biomimetic thought using AirLLM.
 
