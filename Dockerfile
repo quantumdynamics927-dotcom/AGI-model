@@ -54,17 +54,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# Copy installed packages from builder
-COPY --from=builder /install /app/lib
+# Copy installed packages from builder with final ownership
+COPY --from=builder --chown=tmtuser:tmtuser /install /app/lib
 
 # Copy application code with proper ownership
 COPY --chown=tmtuser:tmtuser . .
 
-# Create necessary directories with proper permissions
-RUN mkdir -p /app/TMT-OS/data \
-    && mkdir -p /app/TMT-OS/logs \
-    && mkdir -p /app/TMT-OS/cache \
-    && chown -R tmtuser:tmtuser /app
+# Create necessary writable directories without recursively re-owning dependencies
+RUN install -d -o tmtuser -g tmtuser /app/TMT-OS/data \
+    && install -d -o tmtuser -g tmtuser /app/TMT-OS/logs \
+    && install -d -o tmtuser -g tmtuser /app/TMT-OS/cache
 
 # Security: Remove unnecessary files
 RUN find /app -type f -name '*.pyc' -delete \

@@ -87,6 +87,26 @@ data/
 datasets/
 models/
 checkpoints/
+real_data/
+sacred_datasets/
+raw_hardware/
+autonomous_data/
+artifacts/
+publication_figures/
+nft_metadata/
+AGI_EXPERIMENT_*/
+experiment_results/
+simulation_data/
+test_results/
+integration_test_results/
+archive/
+outputs/
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+*.npz
 
 # Temporary files
 tmp/
