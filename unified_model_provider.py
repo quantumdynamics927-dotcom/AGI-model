@@ -22,11 +22,82 @@ import time
 import logging
 import json
 from pathlib import Path
-from typing import Dict, Any, List, Optional
+from typing import Dict, Any, List, Optional, Tuple
 from abc import ABC, abstractmethod
+from dataclasses import dataclass, field
+from datetime import datetime, timedelta
+from enum import Enum
 
 # Golden ratio constants
 PHI = (1 + math.sqrt(5)) / 2
+
+
+class FailureClass(Enum):
+    """Failure classification for provider errors."""
+    NONE = "none"
+    PROVIDER_UNAVAILABLE_TLS = "provider_unavailable_tls"
+    PROVIDER_UNAVAILABLE_TIMEOUT = "provider_unavailable_timeout"
+    PROVIDER_UNAVAILABLE_CONNECTION = "provider_unavailable_connection"
+    PROVIDER_UNAVAILABLE_AUTH = "provider_unavailable_auth"
+    MODEL_LOAD_FAILED = "model_load_failed"
+    GENERATION_FAILED = "generation_failed"
+    RATE_LIMITED = "rate_limited"
+    UNKNOWN = "unknown"
+
+
+@dataclass
+class ProviderHealthDetail:
+    """Detailed provider health status with failure tracking."""
+    available: bool = False
+    failure_class: FailureClass = FailureClass.NONE
+    last_error_at: Optional[datetime] = None
+    last_error_msg: str = ""
+    retry_after_s: float = 0.0
+    cooldown_until: Optional[datetime] = None
+    consecutive_failures: int = 0
+    
+    def should_retry(self) -> bool:
+        """Check if provider is ready to retry after cooldown."""
+        if not self.cooldown_until:
+            return True
+        return datetime.now() >= self.cooldown_until
+    
+    def mark_failure(self, failure_class: FailureClass, error_msg: str, cooldown_seconds: float = 60.0):
+        """Mark a failure and set cooldown."""
+        self.failure_class = failure_class
+        self.last_error_at = datetime.now()
+        self.last_error_msg = error_msg
+        self.consecutive_failures += 1
+        self.available = False
+        
+        # Exponential backoff for cooldown
+        backoff_multiplier = min(2 ** (self.consecutive_failures - 1), 8)  # Cap at 8x
+        cooldown_seconds = cooldown_seconds * backoff_multiplier
+        self.cooldown_until = datetime.now() + timedelta(seconds=cooldown_seconds)
+        self.retry_after_s = cooldown_seconds
+    
+    def mark_success(self):
+        """Mark a successful operation."""
+        self.failure_class = FailureClass.NONE
+        self.last_error_at = None
+        self.last_error_msg = ""
+        self.consecutive_failures = 0
+        self.available = True
+        self.cooldown_until = None
+        self.retry_after_s = 0.0
+    
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert to dictionary for status reporting."""
+        return {
+            'available': self.available,
+            'failure_class': self.failure_class.value,
+            'last_error_at': self.last_error_at.isoformat() if self.last_error_at else None,
+            'last_error_msg': self.last_error_msg[:200] if self.last_error_msg else "",
+            'retry_after_s': self.retry_after_s,
+            'cooldown_until': self.cooldown_until.isoformat() if self.cooldown_until else None,
+            'consecutive_failures': self.consecutive_failures,
+            'should_retry': self.should_retry(),
+        }
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -233,18 +304,66 @@ class OllamaCloudProvider(ModelProvider):
     - Cloud-based powerful models
     - OpenAI-compatible /v1 interface
     - Authentication via local sign-in or API keys
+    - Automatic failure classification and cooldown
     """
     
     def __init__(self, base_url: str = "https://api.ollama.cloud", default_model: str = "claude-code"):
         self.base_url = base_url
         self.default_model = default_model
         self.available_models = []
+        self.health_detail = ProviderHealthDetail()
         
         logger.info(f"Initializing Ollama Cloud Provider: {base_url}")
     
+    def _classify_failure(self, error: Exception) -> FailureClass:
+        """Classify failure type from exception."""
+        error_str = str(error).lower()
+        
+        # SSL/TLS certificate errors
+        if 'ssl' in error_str or 'certificate' in error_str or 'cert' in error_str:
+            if 'expired' in error_str:
+                return FailureClass.PROVIDER_UNAVAILABLE_TLS
+            elif 'verify' in error_str:
+                return FailureClass.PROVIDER_UNAVAILABLE_TLS
+            else:
+                return FailureClass.PROVIDER_UNAVAILABLE_TLS
+        
+        # Timeout errors
+        if 'timeout' in error_str or 'timed out' in error_str:
+            return FailureClass.PROVIDER_UNAVAILABLE_TIMEOUT
+        
+        # Connection errors
+        if 'connection' in error_str or 'connect' in error_str:
+            return FailureClass.PROVIDER_UNAVAILABLE_CONNECTION
+        
+        # Authentication errors
+        if '401' in error_str or '403' in error_str or 'auth' in error_str:
+            return FailureClass.PROVIDER_UNAVAILABLE_AUTH
+        
+        # Rate limiting
+        if '429' in error_str or 'rate' in error_str:
+            return FailureClass.RATE_LIMITED
+        
+        return FailureClass.UNKNOWN
+    
     def generate(self, prompt: str, model: str = None, **kwargs) -> Dict[str, Any]:
-        """Generate text using Ollama Cloud API."""
+        """Generate text using Ollama Cloud API with failure classification."""
         model = model or self.default_model
+        
+        # Check if provider is in cooldown
+        if not self.health_detail.should_retry():
+            logger.warning(f"Ollama Cloud in cooldown until {self.health_detail.cooldown_until}")
+            return {
+                'generated_text': '',
+                'inference_time': 0,
+                'model': model,
+                'backend': 'ollama_cloud',
+                'success': False,
+                'error': f'Provider in cooldown: {self.health_detail.failure_class.value}',
+                'failure_class': self.health_detail.failure_class.value,
+                'retry_after_s': self.health_detail.retry_after_s,
+                'timestamp': time.time()
+            }
         
         start_time = time.time()
         
@@ -268,6 +387,9 @@ class OllamaCloudProvider(ModelProvider):
             generated_text = result['choices'][0]['message']['content']
             inference_time = time.time() - start_time
             
+            # Mark success
+            self.health_detail.mark_success()
+            
             return {
                 'generated_text': generated_text,
                 'inference_time': inference_time,
@@ -278,27 +400,55 @@ class OllamaCloudProvider(ModelProvider):
             }
             
         except Exception as e:
-            logger.error(f"Ollama Cloud generation failed: {e}")
+            # Classify failure
+            failure_class = self._classify_failure(e)
+            error_msg = str(e)
+            
+            # Determine cooldown based on failure type
+            cooldown_map = {
+                FailureClass.PROVIDER_UNAVAILABLE_TLS: 300.0,  # 5 minutes for SSL issues
+                FailureClass.PROVIDER_UNAVAILABLE_TIMEOUT: 60.0,  # 1 minute for timeouts
+                FailureClass.PROVIDER_UNAVAILABLE_CONNECTION: 120.0,  # 2 minutes for connection issues
+                FailureClass.PROVIDER_UNAVAILABLE_AUTH: 600.0,  # 10 minutes for auth issues
+                FailureClass.RATE_LIMITED: 120.0,  # 2 minutes for rate limits
+                FailureClass.UNKNOWN: 60.0,  # 1 minute default
+            }
+            
+            cooldown_seconds = cooldown_map.get(failure_class, 60.0)
+            self.health_detail.mark_failure(failure_class, error_msg, cooldown_seconds)
+            
+            logger.error(f"Ollama Cloud generation failed [{failure_class.value}]: {e}")
+            logger.info(f"Provider demoted for {cooldown_seconds}s cooldown")
+            
             return {
                 'generated_text': '',
                 'inference_time': time.time() - start_time,
                 'model': model,
                 'backend': 'ollama_cloud',
                 'success': False,
-                'error': str(e),
+                'error': error_msg,
+                'failure_class': failure_class.value,
+                'retry_after_s': self.health_detail.retry_after_s,
                 'timestamp': time.time()
             }
     
     def healthcheck(self) -> bool:
         """Check if Ollama Cloud is available."""
+        # Check cooldown first
+        if not self.health_detail.should_retry():
+            return False
+        
         try:
             response = requests.get(f"{self.base_url}/v1/models", timeout=10)
             if response.status_code == 200:
                 models = response.json().get('data', [])
                 self.available_models = [model.get('id', '') for model in models]
+                self.health_detail.mark_success()
                 return True
             return False
-        except Exception:
+        except Exception as e:
+            failure_class = self._classify_failure(e)
+            self.health_detail.mark_failure(failure_class, str(e), 60.0)
             return False
     
     def list_models(self) -> List[str]:
@@ -308,14 +458,15 @@ class OllamaCloudProvider(ModelProvider):
         return self.available_models
     
     def get_status(self) -> Dict[str, Any]:
-        """Get provider status."""
+        """Get provider status with health details."""
         return {
             'provider': 'ollama_cloud',
             'base_url': self.base_url,
             'default_model': self.default_model,
-            'available': self.healthcheck(),
+            'available': self.health_detail.available,
             'models_count': len(self.available_models),
-            'phi_constant': PHI
+            'phi_constant': PHI,
+            'health_detail': self.health_detail.to_dict()
         }
 
 
@@ -415,10 +566,11 @@ class ModelRouter:
     
     Routing Rules:
     - Default: Ollama Local (fast, always available)
-    - Scientific validation: Ollama Cloud
-    - Deep code review: Ollama Cloud
-    - Complex planning: Ollama Cloud
+    - Scientific validation: Ollama Cloud (with fallback)
+    - Deep code review: Ollama Cloud (with fallback)
+    - Complex planning: Ollama Cloud (with fallback)
     - Quick tasks: Ollama Local small model
+    - Automatic fallback to local when cloud fails
     """
     
     def __init__(self):
@@ -441,6 +593,14 @@ class ModelRouter:
             'consciousness_processing': 'ollama_local'
         }
         
+        # Fallback chain: cloud tasks fall back to local
+        self.fallback_chain = {
+            'ollama_cloud': 'ollama_local',
+            'bitnet': 'ollama_local',
+            'airllm': 'ollama_local',
+            'ollama_local': None  # No fallback for local
+        }
+        
         logger.info("Model Router initialized")
         logger.info(f"Default provider: {self.routing_rules['default']}")
         logger.info(f"Available providers: {list(self.providers.keys())}")
@@ -451,9 +611,35 @@ class ModelRouter:
         return self.providers.get(provider_name, self.providers['ollama_local'])
     
     def generate(self, prompt: str, task_type: str = 'default', **kwargs) -> Dict[str, Any]:
-        """Generate text using routed provider."""
-        provider = self.get_provider(task_type)
-        return provider.generate(prompt, **kwargs)
+        """Generate text using routed provider with automatic fallback."""
+        provider_name = self.routing_rules.get(task_type, 'default')
+        provider = self.providers.get(provider_name, self.providers['ollama_local'])
+        
+        # Try primary provider
+        result = provider.generate(prompt, **kwargs)
+        
+        # Check if we should fallback
+        if not result.get('success', False):
+            failure_class = result.get('failure_class', 'unknown')
+            
+            # Fallback for cloud failures
+            if provider_name in ['ollama_cloud', 'bitnet', 'airllm']:
+                fallback_provider_name = self.fallback_chain.get(provider_name)
+                
+                if fallback_provider_name and fallback_provider_name in self.providers:
+                    logger.warning(f"Falling back from {provider_name} to {fallback_provider_name} due to {failure_class}")
+                    
+                    fallback_provider = self.providers[fallback_provider_name]
+                    fallback_result = fallback_provider.generate(prompt, **kwargs)
+                    
+                    # Add fallback metadata
+                    fallback_result['fallback_from'] = provider_name
+                    fallback_result['fallback_reason'] = failure_class
+                    fallback_result['original_error'] = result.get('error', '')
+                    
+                    return fallback_result
+        
+        return result
     
     def healthcheck_all(self) -> Dict[str, bool]:
         """Check health of all providers."""
