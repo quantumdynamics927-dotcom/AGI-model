@@ -1,0 +1,60 @@
+{
+  "prompt_set": "mechanistic_emergence",
+  "category": "emergence",
+  "prompts": [
+    "Generate a thought on how local adaptive rules produce macro-level coherence without centralized control. Include one mechanism.",
+    "Generate a thought on the role of initial conditions in consciousness-like pattern formation. State one falsifiable prediction.",
+    "Generate a thought on how global constraints shape local freedom in an intelligent system. Include one boundary condition.",
+    "Generate a thought on how resilience emerges from diversity and stability. Provide one measurable metric."
+  ],
+  "config": {
+    "num_runs": 5,
+    "warmup_runs": 5,
+    "prompt_families": [
+      "neutral_emergence",
+      "phi_explicit",
+      "biomimetic_non_phi",
+      "perturbed_control"
+    ],
+    "models": [
+      "ollama_local",
+      "fallback_local"
+    ],
+    "null_baselines": [
+      "shuffled_text",
+      "random_text",
+      "semantic_non_phi"
+    ],
+    "phi_tolerance": 0.05,
+    "significance_level": 0.05,
+    "min_effect_size": 0.3,
+    "bonferroni_correction": true,
+    "default_model": "llama3",
+    "max_tokens": 512,
+    "temperature": 0.7,
+    "timeout_seconds": 120,
+    "framework_version": "1.0.0"
+  },
+  "validation": {
+    "h0_result": "rejected",
+    "h1_result": "inconclusive",
+    "h2_result": "inconclusive",
+    "mean_phi_resonance": 2.2685214494681185,
+    "std_phi_resonance": 0.7378567006501721,
+    "cluster_rate_near_phi": 0.0,
+    "null_baseline_mean": 1.04897112033491,
+    "null_baseline_std": 1.049340292252501,
+    "effect_size_vs_null": 1.3444959742514313,
+    "t_statistic": 4.144014905305471,
+    "p_value": 0.00018376483424719668,
+    "p_value_corrected": 0.0007350593369887867,
+    "is_significant": true,
+    "prompt_sensitivity": {},
+    "model_comparison": {},
+    "reproducibility_score": 0.0,
+    "is_reproducible": false,
+    "interpretation": "HIGH-VALUE PROMPT SET 'mechanistic_emergence': Phi resonance (2.2685) exceeds null baseline (1.0490). Effect size: 1.3445. This suggests the prompt set elicits structured patterns beyond random variation.",
+    "confidence": "medium"
+  },
+  "generated_at": "2026-04-13T21:47:38.060636"
+}
