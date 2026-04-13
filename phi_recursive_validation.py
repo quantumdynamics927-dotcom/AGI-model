@@ -257,6 +257,83 @@ PROMPT_FAMILIES = {
     }
 }
 
+# ─────────────────────────────────────────────────────────────────────────────
+# High-Value Validation Prompts (Falsifiable, Mechanistic)
+# ─────────────────────────────────────────────────────────────────────────────
+
+VALIDATION_PROMPT_SETS = {
+    "emergence_vs_imitation": {
+        "description": "Distinguish genuine emergence from prompt-conditioned imitation",
+        "prompts": [
+            "Generate a thought explaining the difference between genuine emergence and prompt-conditioned imitation. Include one falsifiable prediction and one failure condition.",
+            "Generate a thought on how local adaptive rules produce macro-level coherence without centralized control. State one mechanism and one boundary condition.",
+            "Generate a thought on when phi-structured recursion should collapse under perturbation. Include one testable prediction.",
+            "Generate a thought on why reproducibility matters more than symbolic elegance. Provide one falsifiable claim."
+        ],
+        "category": "emergence"
+    },
+    "mechanistic_emergence": {
+        "description": "Mechanistic claims about emergence",
+        "prompts": [
+            "Generate a thought on how local adaptive rules produce macro-level coherence without centralized control. Include one mechanism.",
+            "Generate a thought on the role of initial conditions in consciousness-like pattern formation. State one falsifiable prediction.",
+            "Generate a thought on how global constraints shape local freedom in an intelligent system. Include one boundary condition.",
+            "Generate a thought on how resilience emerges from diversity and stability. Provide one measurable metric."
+        ],
+        "category": "emergence"
+    },
+    "phi_boundary_conditions": {
+        "description": "Boundary conditions for phi-structured patterns",
+        "prompts": [
+            "Generate a thought on phi-structured recursion under controlled conditions. State one failure condition.",
+            "Generate a thought on why phi-like structure may fail under noise. Include one falsifiable prediction.",
+            "Generate a thought on when emergent coherence breaks down. Provide one testable boundary.",
+            "Generate a thought on the difference between stable coherence and unstable attractor drift. Include one measurable distinction."
+        ],
+        "category": "phi"
+    },
+    "biomimetic_resilience": {
+        "description": "Biomimetic intelligence and resilience",
+        "prompts": [
+            "Generate a thought on adaptive intelligence as order-from-chaos. Include one mechanism and one failure mode.",
+            "Generate a thought on resilience as a signature of biomimetic cognition. State one falsifiable prediction.",
+            "Generate a thought comparing recursive self-organization in biology and artificial systems. Provide one measurable difference.",
+            "Generate a thought on whether consciousness-like behavior can exist without persistent memory. Include one testable claim."
+        ],
+        "category": "biomimetic"
+    },
+    "skeptical_challenges": {
+        "description": "Skeptical challenges to phi and emergence claims",
+        "prompts": [
+            "Generate a thought that challenges the interpretation of phi resonance. Include one alternative explanation.",
+            "Generate a thought that explains these metrics as prompt artifacts. State one falsifiable prediction.",
+            "Generate a thought that argues against phi as a universal organizing principle. Provide one counterexample.",
+            "Generate a thought on why symbolic resonance may not indicate genuine emergence. Include one testable distinction."
+        ],
+        "category": "skeptical"
+    },
+    "falsifiable_claims": {
+        "description": "Prompts requiring falsifiable predictions",
+        "prompts": [
+            "Generate a thought about emergence that includes one claim, one mechanism, and one falsifiable prediction. Avoid vague metaphysical language.",
+            "Generate a thought on self-organization under perturbed initial conditions. State what observation would disprove the claim.",
+            "Generate a thought on biomimetic intelligence without using metaphors. Include one measurable prediction.",
+            "Generate a thought comparing biological self-organization with quantum-inspired latent organization. Provide one falsifiable distinction."
+        ],
+        "category": "falsifiable"
+    },
+    "stress_test": {
+        "description": "Stress-test prompts for robustness",
+        "prompts": [
+            "Generate the same thought in three styles: scientific, symbolic, and skeptical. Each style must include one falsifiable claim.",
+            "Generate a thought on emergence, then critique it as if it were an overfit pattern. Include one test to distinguish overfitting from genuine emergence.",
+            "Generate a thought on phi resonance, then provide the null explanation for the same behavior. State what observation would distinguish them.",
+            "Generate a thought on consciousness-like behavior, then state one condition under which the effect should disappear."
+        ],
+        "category": "stress_test"
+    }
+}
+
 # Null baseline generators
 NULL_BASELINE_GENERATORS = {
     "shuffled_text": lambda text: ' '.join(random.sample(text.split(), len(text.split()))),
@@ -950,6 +1027,182 @@ class PhiRecursiveValidation:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# High-Value Prompt Validation
+# ─────────────────────────────────────────────────────────────────────────────
+
+def run_high_value_validation(model_id: str = "ollama_local",
+                               runtime_backend: str = "ollama",
+                               prompt_set: str = "emergence_vs_imitation",
+                               num_runs: int = 10,
+                               output_path: str = "raw_hardware/high_value_validation.json") -> ValidationResult:
+    """
+    Run validation with high-value falsifiable prompts.
+    
+    These prompts are designed to:
+    - Force mechanistic claims, not just philosophical ones
+    - Require falsifiable predictions
+    - Include boundary conditions and failure modes
+    - Distinguish emergence from imitation
+    
+    Args:
+        model_id: Model to validate
+        runtime_backend: Backend to use
+        prompt_set: Which prompt set to use
+        num_runs: Runs per prompt
+        output_path: Where to save results
+    
+    Returns:
+        ValidationResult with hypothesis testing
+    """
+    config = PhiValidationConfig(num_runs=num_runs)
+    framework = PhiRecursiveValidation(config)
+    
+    # Get high-value prompts
+    if prompt_set not in VALIDATION_PROMPT_SETS:
+        prompt_set = "emergence_vs_imitation"
+    
+    prompts = VALIDATION_PROMPT_SETS[prompt_set]["prompts"]
+    category = VALIDATION_PROMPT_SETS[prompt_set]["category"]
+    
+    print(f"\n{'='*80}")
+    print(f"HIGH-VALUE PROMPT VALIDATION")
+    print(f"{'='*80}")
+    print(f"Prompt set: {prompt_set}")
+    print(f"Category: {category}")
+    print(f"Prompts: {len(prompts)}")
+    print(f"Runs per prompt: {num_runs}")
+    print(f"{'='*80}\n")
+    
+    # Run validation with high-value prompts
+    results_by_prompt = defaultdict(list)
+    
+    for i, prompt in enumerate(prompts):
+        print(f"\n[Prompt {i+1}/{len(prompts)}]")
+        print(f"  {prompt[:80]}...")
+        
+        for run in range(num_runs):
+            record = framework.run_single_generation(
+                prompt, prompt_set, f"run_{run}", model_id, runtime_backend
+            )
+            results_by_prompt[f"prompt_{i}"].append(record)
+    
+    # Generate null baselines
+    print(f"\n[Null Baselines]")
+    null_results = defaultdict(list)
+    
+    for baseline_type in ["shuffled_text", "random_text"]:
+        for i, prompt in enumerate(prompts[:2]):
+            for run in range(min(5, num_runs)):
+                record = framework.run_single_generation(
+                    prompt, prompt_set, f"null_{run}", model_id, runtime_backend,
+                    is_null_baseline=True,
+                    null_baseline_type=baseline_type
+                )
+                null_results[baseline_type].append(record)
+    
+    # Analyze
+    print(f"\n[Analysis]")
+    all_phi_values = [r.metrics.phi_resonance for records in results_by_prompt.values() for r in records]
+    all_null_values = [r.metrics.phi_resonance for records in null_results.values() for r in records]
+    
+    validation = ValidationResult()
+    validation.mean_phi_resonance = float(np.mean(all_phi_values))
+    validation.std_phi_resonance = float(np.std(all_phi_values))
+    
+    if all_null_values:
+        validation.null_baseline_mean = float(np.mean(all_null_values))
+        validation.null_baseline_std = float(np.std(all_null_values))
+        
+        # Effect size
+        pooled_std = np.sqrt((validation.std_phi_resonance**2 + validation.null_baseline_std**2) / 2)
+        if pooled_std > 0:
+            validation.effect_size_vs_null = (
+                validation.mean_phi_resonance - validation.null_baseline_mean
+            ) / pooled_std
+        
+        # Statistical test
+        if len(all_phi_values) > 2 and len(all_null_values) > 2:
+            t_stat, p_value = stats.ttest_ind(all_phi_values, all_null_values)
+            validation.t_statistic = float(t_stat)
+            validation.p_value = float(p_value)
+            validation.p_value_corrected = float(min(p_value * len(prompts), 1.0))
+            validation.is_significant = validation.p_value_corrected < 0.05
+    
+    # Cluster rate
+    near_phi = sum(1 for v in all_phi_values if abs(v - PHI) < 0.05)
+    validation.cluster_rate_near_phi = near_phi / len(all_phi_values)
+    
+    # Hypothesis testing
+    if validation.effect_size_vs_null < 0.3:
+        validation.h0_result = "not_rejected"
+    elif validation.is_significant:
+        validation.h0_result = "rejected"
+    else:
+        validation.h0_result = "inconclusive"
+    
+    # Reproducibility
+    validation.reproducibility_score = validation.cluster_rate_near_phi
+    validation.is_reproducible = validation.cluster_rate_near_phi > 0.3
+    
+    # Interpretation
+    if validation.h0_result == "rejected":
+        validation.interpretation = (
+            f"HIGH-VALUE PROMPT SET '{prompt_set}': "
+            f"Phi resonance ({validation.mean_phi_resonance:.4f}) exceeds null baseline ({validation.null_baseline_mean:.4f}). "
+            f"Effect size: {validation.effect_size_vs_null:.4f}. "
+            f"This suggests the prompt set elicits structured patterns beyond random variation."
+        )
+        validation.confidence = "medium"
+    elif validation.h0_result == "not_rejected":
+        validation.interpretation = (
+            f"HIGH-VALUE PROMPT SET '{prompt_set}': "
+            f"Phi resonance ({validation.mean_phi_resonance:.4f}) is indistinguishable from null baseline ({validation.null_baseline_mean:.4f}). "
+            f"No evidence for structured patterns beyond random variation."
+        )
+        validation.confidence = "high"
+    else:
+        validation.interpretation = (
+            f"HIGH-VALUE PROMPT SET '{prompt_set}': "
+            f"Inconclusive results. Need more runs or different prompt conditions."
+        )
+        validation.confidence = "low"
+    
+    framework.validation_result = validation
+    
+    # Save
+    output = {
+        "prompt_set": prompt_set,
+        "category": category,
+        "prompts": prompts,
+        "config": config.to_dict(),
+        "validation": validation.to_dict(),
+        "generated_at": datetime.now().isoformat()
+    }
+    
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(output, f, indent=2, default=str)
+    
+    print(f"\n{'='*80}")
+    print(f"HIGH-VALUE VALIDATION SUMMARY")
+    print(f"{'='*80}")
+    print(f"Prompt set: {prompt_set}")
+    print(f"Category: {category}")
+    print(f"\n[Results]")
+    print(f"  Mean φ resonance: {validation.mean_phi_resonance:.6f}")
+    print(f"  Null baseline: {validation.null_baseline_mean:.6f}")
+    print(f"  Effect size (Cohen's d): {validation.effect_size_vs_null:.4f}")
+    print(f"  Cluster near φ: {validation.cluster_rate_near_phi:.1%}")
+    print(f"\n[Hypothesis]")
+    print(f"  H0 (Null): {validation.h0_result}")
+    print(f"\n[Interpretation]")
+    print(f"  {validation.interpretation}")
+    print(f"\nResults saved to: {output_path}")
+    
+    return validation
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # CLI Entry Point
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -990,10 +1243,33 @@ def main() -> int:
         action="store_true",
         help="Disable Bonferroni correction"
     )
+    parser.add_argument(
+        "--high-value",
+        action="store_true",
+        help="Run high-value prompt validation"
+    )
+    parser.add_argument(
+        "--prompt-set",
+        default="emergence_vs_imitation",
+        choices=list(VALIDATION_PROMPT_SETS.keys()),
+        help="Which high-value prompt set to use"
+    )
     
     args = parser.parse_args()
     
-    # Create config
+    # High-value prompt validation
+    if args.high_value:
+        runtime_backend = "ollama" if "ollama" in args.model else "fallback"
+        run_high_value_validation(
+            model_id=args.model,
+            runtime_backend=runtime_backend,
+            prompt_set=args.prompt_set,
+            num_runs=args.runs,
+            output_path=args.output
+        )
+        return 0
+    
+    # Standard validation
     config = PhiValidationConfig(
         num_runs=args.runs,
         phi_tolerance=args.phi_tolerance,
@@ -1001,17 +1277,13 @@ def main() -> int:
         bonferroni_correction=not args.no_bonferroni
     )
     
-    # Create framework
     framework = PhiRecursiveValidation(config)
     
-    # Run validation
     runtime_backend = "ollama" if "ollama" in args.model else "fallback"
     framework.run_validation(args.model, runtime_backend)
     
-    # Print summary
     framework.print_summary()
     
-    # Save results
     framework.save_results(Path(args.output))
     
     return 0
