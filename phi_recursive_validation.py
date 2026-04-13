@@ -56,6 +56,35 @@ except ImportError:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Recommended Ollama Cloud Models
+# ─────────────────────────────────────────────────────────────────────────────
+
+RECOMMENDED_CLOUD_MODELS = {
+    "glm-5:cloud": {
+        "description": "Best general reasoning for research prompts, structured outputs, agentic workflows",
+        "use_case": "Default benchmark model for mechanistic/falsifiable prompts",
+        "provider": "ollama_cloud",
+        "recommended_for": ["mechanistic_emergence", "falsifiable_claims", "skeptical_challenges"]
+    },
+    "qwen3-coder:480b": {
+        "description": "Best for heavy code work, repo refactors, validation-pipeline edits",
+        "use_case": "Code-centric tasks and patch generation",
+        "provider": "ollama_cloud",
+        "recommended_for": ["code_generation", "validation_framework"]
+    },
+    "kimi-k2.5:cloud": {
+        "description": "Best for broad agent behavior and long-form thought generation",
+        "use_case": "Generated Thought experiments and comparative runs",
+        "provider": "ollama_cloud",
+        "recommended_for": ["biomimetic_resilience", "stress_test", "narrative"]
+    }
+}
+
+# Default model for benchmark runs
+DEFAULT_BENCHMARK_MODEL = "glm-5:cloud"
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Measurement Classes (for clean experimental attribution)
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -1533,7 +1562,12 @@ def main() -> int:
     parser.add_argument(
         "--model",
         default="llama3",
-        help="Model ID to validate (e.g., llama3, gpt-oss:120b)"
+        help="Model ID to validate (e.g., llama3, glm-5:cloud, qwen3-coder:480b, kimi-k2.5:cloud)"
+    )
+    parser.add_argument(
+        "--list-models",
+        action="store_true",
+        help="List recommended cloud models and exit"
     )
     parser.add_argument(
         "--output",
@@ -1586,6 +1620,32 @@ def main() -> int:
     )
     
     args = parser.parse_args()
+    
+    # List recommended models
+    if args.list_models:
+        print("\n" + "=" * 70)
+        print("RECOMMENDED OLLAMA CLOUD MODELS")
+        print("=" * 70)
+        for model, info in RECOMMENDED_CLOUD_MODELS.items():
+            print(f"\n{model}:")
+            print(f"  Description: {info['description']}")
+            print(f"  Use case: {info['use_case']}")
+            print(f"  Recommended for: {', '.join(info['recommended_for'])}")
+        print(f"\nDefault benchmark model: {DEFAULT_BENCHMARK_MODEL}")
+        print("\nUsage examples:")
+        print("  # General reasoning benchmark")
+        print("  OLLAMA_API_KEY=your_key python phi_recursive_validation.py \\")
+        print("    --backend ollama_cloud --model glm-5:cloud --high-value")
+        print("")
+        print("  # Code-centric validation")
+        print("  OLLAMA_API_KEY=your_key python phi_recursive_validation.py \\")
+        print("    --backend ollama_cloud --model qwen3-coder:480b --high-value")
+        print("")
+        print("  # Long-form thought experiments")
+        print("  OLLAMA_API_KEY=your_key python phi_recursive_validation.py \\")
+        print("    --backend ollama_cloud --model kimi-k2.5:cloud --high-value")
+        print("")
+        return 0
     
     # High-value prompt validation
     if args.high_value:
