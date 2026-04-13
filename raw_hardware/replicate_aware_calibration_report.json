@@ -1,7 +1,7 @@
 {
   "report_type": "replicate_aware_promoter_calibration",
   "report_version": "2.0",
-  "generated_at": "2026-04-13T18:55:53.044038",
+  "generated_at": "2026-04-13T19:17:29.578774",
   "schema": {
     "version": "2.0",
     "layers": [
@@ -196,7 +196,7 @@
       "offsets": {
         "backend_offset_applied": -0.1404056462554333,
         "promoter_backend_offset_applied": -0.08077139299977636,
-        "total_offset_applied": -0.1404056462554333,
+        "selected_offset_applied": -0.1404056462554333,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -294,7 +294,7 @@
       "offsets": {
         "backend_offset_applied": -0.1404056462554333,
         "promoter_backend_offset_applied": -0.08077139299977636,
-        "total_offset_applied": -0.1404056462554333,
+        "selected_offset_applied": -0.1404056462554333,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -392,7 +392,7 @@
       "offsets": {
         "backend_offset_applied": -0.1404056462554333,
         "promoter_backend_offset_applied": -0.08077139299977636,
-        "total_offset_applied": -0.1404056462554333,
+        "selected_offset_applied": -0.1404056462554333,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -490,7 +490,7 @@
       "offsets": {
         "backend_offset_applied": -0.14300202983630056,
         "promoter_backend_offset_applied": -0.08303468201705104,
-        "total_offset_applied": -0.14300202983630056,
+        "selected_offset_applied": -0.14300202983630056,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -588,7 +588,7 @@
       "offsets": {
         "backend_offset_applied": -0.14300202983630056,
         "promoter_backend_offset_applied": -0.08303468201705104,
-        "total_offset_applied": -0.14300202983630056,
+        "selected_offset_applied": -0.14300202983630056,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -686,7 +686,7 @@
       "offsets": {
         "backend_offset_applied": -0.14300202983630056,
         "promoter_backend_offset_applied": -0.08303468201705104,
-        "total_offset_applied": -0.14300202983630056,
+        "selected_offset_applied": -0.14300202983630056,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -784,7 +784,7 @@
       "offsets": {
         "backend_offset_applied": -0.1404056462554333,
         "promoter_backend_offset_applied": -0.1263344664051124,
-        "total_offset_applied": -0.1404056462554333,
+        "selected_offset_applied": -0.1404056462554333,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -882,7 +882,7 @@
       "offsets": {
         "backend_offset_applied": -0.1404056462554333,
         "promoter_backend_offset_applied": -0.1263344664051124,
-        "total_offset_applied": -0.1404056462554333,
+        "selected_offset_applied": -0.1404056462554333,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -980,7 +980,7 @@
       "offsets": {
         "backend_offset_applied": -0.1404056462554333,
         "promoter_backend_offset_applied": -0.1263344664051124,
-        "total_offset_applied": -0.1404056462554333,
+        "selected_offset_applied": -0.1404056462554333,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -1078,7 +1078,7 @@
       "offsets": {
         "backend_offset_applied": -0.14300202983630056,
         "promoter_backend_offset_applied": -0.12883506912683762,
-        "total_offset_applied": -0.14300202983630056,
+        "selected_offset_applied": -0.14300202983630056,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -1176,7 +1176,7 @@
       "offsets": {
         "backend_offset_applied": -0.14300202983630056,
         "promoter_backend_offset_applied": -0.12883506912683762,
-        "total_offset_applied": -0.14300202983630056,
+        "selected_offset_applied": -0.14300202983630056,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -1274,7 +1274,7 @@
       "offsets": {
         "backend_offset_applied": -0.14300202983630056,
         "promoter_backend_offset_applied": -0.12883506912683762,
-        "total_offset_applied": -0.14300202983630056,
+        "selected_offset_applied": -0.14300202983630056,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -1372,7 +1372,7 @@
       "offsets": {
         "backend_offset_applied": -0.1404056462554333,
         "promoter_backend_offset_applied": -0.03920052528565273,
-        "total_offset_applied": -0.1404056462554333,
+        "selected_offset_applied": -0.1404056462554333,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -1470,7 +1470,7 @@
       "offsets": {
         "backend_offset_applied": -0.1404056462554333,
         "promoter_backend_offset_applied": -0.03920052528565273,
-        "total_offset_applied": -0.1404056462554333,
+        "selected_offset_applied": -0.1404056462554333,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -1568,7 +1568,7 @@
       "offsets": {
         "backend_offset_applied": -0.1404056462554333,
         "promoter_backend_offset_applied": -0.03920052528565273,
-        "total_offset_applied": -0.1404056462554333,
+        "selected_offset_applied": -0.1404056462554333,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -1666,7 +1666,7 @@
       "offsets": {
         "backend_offset_applied": -0.14300202983630056,
         "promoter_backend_offset_applied": -0.041995512959611424,
-        "total_offset_applied": -0.14300202983630056,
+        "selected_offset_applied": -0.14300202983630056,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -1764,7 +1764,7 @@
       "offsets": {
         "backend_offset_applied": -0.14300202983630056,
         "promoter_backend_offset_applied": -0.041995512959611424,
-        "total_offset_applied": -0.14300202983630056,
+        "selected_offset_applied": -0.14300202983630056,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -1862,7 +1862,7 @@
       "offsets": {
         "backend_offset_applied": -0.14300202983630056,
         "promoter_backend_offset_applied": -0.041995512959611424,
-        "total_offset_applied": -0.14300202983630056,
+        "selected_offset_applied": -0.14300202983630056,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -1960,7 +1960,7 @@
       "offsets": {
         "backend_offset_applied": -0.1404056462554333,
         "promoter_backend_offset_applied": -0.2854724918504938,
-        "total_offset_applied": -0.1404056462554333,
+        "selected_offset_applied": -0.1404056462554333,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -2058,7 +2058,7 @@
       "offsets": {
         "backend_offset_applied": -0.1404056462554333,
         "promoter_backend_offset_applied": -0.2854724918504938,
-        "total_offset_applied": -0.1404056462554333,
+        "selected_offset_applied": -0.1404056462554333,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -2156,7 +2156,7 @@
       "offsets": {
         "backend_offset_applied": -0.1404056462554333,
         "promoter_backend_offset_applied": -0.2854724918504938,
-        "total_offset_applied": -0.1404056462554333,
+        "selected_offset_applied": -0.1404056462554333,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -2254,7 +2254,7 @@
       "offsets": {
         "backend_offset_applied": -0.14300202983630056,
         "promoter_backend_offset_applied": -0.2881190024511548,
-        "total_offset_applied": -0.14300202983630056,
+        "selected_offset_applied": -0.14300202983630056,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -2352,7 +2352,7 @@
       "offsets": {
         "backend_offset_applied": -0.14300202983630056,
         "promoter_backend_offset_applied": -0.2881190024511548,
-        "total_offset_applied": -0.14300202983630056,
+        "selected_offset_applied": -0.14300202983630056,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -2450,7 +2450,7 @@
       "offsets": {
         "backend_offset_applied": -0.14300202983630056,
         "promoter_backend_offset_applied": -0.2881190024511548,
-        "total_offset_applied": -0.14300202983630056,
+        "selected_offset_applied": -0.14300202983630056,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -2548,7 +2548,7 @@
       "offsets": {
         "backend_offset_applied": -0.1404056462554333,
         "promoter_backend_offset_applied": -0.17024935473613123,
-        "total_offset_applied": -0.1404056462554333,
+        "selected_offset_applied": -0.1404056462554333,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -2646,7 +2646,7 @@
       "offsets": {
         "backend_offset_applied": -0.1404056462554333,
         "promoter_backend_offset_applied": -0.17024935473613123,
-        "total_offset_applied": -0.1404056462554333,
+        "selected_offset_applied": -0.1404056462554333,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -2744,7 +2744,7 @@
       "offsets": {
         "backend_offset_applied": -0.1404056462554333,
         "promoter_backend_offset_applied": -0.17024935473613123,
-        "total_offset_applied": -0.1404056462554333,
+        "selected_offset_applied": -0.1404056462554333,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -2842,7 +2842,7 @@
       "offsets": {
         "backend_offset_applied": -0.14300202983630056,
         "promoter_backend_offset_applied": -0.17302588262684773,
-        "total_offset_applied": -0.14300202983630056,
+        "selected_offset_applied": -0.14300202983630056,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -2940,7 +2940,7 @@
       "offsets": {
         "backend_offset_applied": -0.14300202983630056,
         "promoter_backend_offset_applied": -0.17302588262684773,
-        "total_offset_applied": -0.14300202983630056,
+        "selected_offset_applied": -0.14300202983630056,
         "calibration_source": "backend_default"
       },
       "provenance": {
@@ -3038,7 +3038,7 @@
       "offsets": {
         "backend_offset_applied": -0.14300202983630056,
         "promoter_backend_offset_applied": -0.17302588262684773,
-        "total_offset_applied": -0.14300202983630056,
+        "selected_offset_applied": -0.14300202983630056,
         "calibration_source": "backend_default"
       },
       "provenance": {
