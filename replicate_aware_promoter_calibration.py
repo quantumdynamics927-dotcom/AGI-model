@@ -75,8 +75,8 @@ class PromoterCalibrationRecord:
     # ─────────────────────────────────────────────────────────────────────────
     backend_offset_applied: float = 0.0
     promoter_backend_offset_applied: float = 0.0
-    calibration_offset_applied: float = 0.0  # Total offset applied
-    calibration_source: str = "none"  # none, backend_default, promoter_specific
+    calibration_offset_applied: float = 0.0  # Selected offset applied (renamed from total_offset_applied)
+    calibration_source: str = "none"  # none, backend_default, promoter_specific, unified_reference
     
     # ─────────────────────────────────────────────────────────────────────────
     # PROVENANCE LAYER (transformation metadata)
@@ -124,7 +124,7 @@ class PromoterCalibrationRecord:
             "offsets": {
                 "backend_offset_applied": data["backend_offset_applied"],
                 "promoter_backend_offset_applied": data["promoter_backend_offset_applied"],
-                "total_offset_applied": data["calibration_offset_applied"],
+                "selected_offset_applied": data["calibration_offset_applied"],
                 "calibration_source": data["calibration_source"],
             },
             # Provenance layer
@@ -172,7 +172,7 @@ class PromoterCalibrationRecord:
                 residual=derived.get('residual'),
                 backend_offset_applied=offsets.get('backend_offset_applied', 0.0),
                 promoter_backend_offset_applied=offsets.get('promoter_backend_offset_applied', 0.0),
-                calibration_offset_applied=offsets.get('total_offset_applied', 0.0),
+                calibration_offset_applied=offsets.get('selected_offset_applied', offsets.get('total_offset_applied', 0.0)),  # Support both names
                 calibration_source=offsets.get('calibration_source', 'none'),
                 calibration_version=provenance.get('calibration_version', '1.0'),
                 calibration_method=provenance.get('calibration_method', 'replicate_aware_mean_offset'),
