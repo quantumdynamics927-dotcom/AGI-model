@@ -1,0 +1,83 @@
+{
+  "prompt_set": "biomimetic_resilience",
+  "category": "biomimetic",
+  "prompts": [
+    "Generate a thought on adaptive intelligence as order-from-chaos. Include one mechanism and one failure mode.",
+    "Generate a thought on resilience as a signature of biomimetic cognition. State one falsifiable prediction.",
+    "Generate a thought comparing recursive self-organization in biology and artificial systems. Provide one measurable difference.",
+    "Generate a thought on whether consciousness-like behavior can exist without persistent memory. Include one testable claim."
+  ],
+  "config": {
+    "num_runs": 10,
+    "warmup_runs": 5,
+    "prompt_families": [
+      "neutral_emergence",
+      "phi_explicit",
+      "biomimetic_non_phi",
+      "perturbed_control"
+    ],
+    "models": [
+      "ollama_local",
+      "fallback_local"
+    ],
+    "null_baselines": [
+      "shuffled_text",
+      "random_text",
+      "semantic_non_phi"
+    ],
+    "phi_tolerance": 0.05,
+    "significance_level": 0.05,
+    "min_effect_size": 0.3,
+    "bonferroni_correction": true,
+    "default_model": "llama3",
+    "max_tokens": 512,
+    "temperature": 0.7,
+    "timeout_seconds": 120,
+    "min_runs_per_prompt": 10,
+    "min_total_samples": 50,
+    "require_single_backend": false,
+    "no_fallback": false,
+    "ollama_cloud_host": "https://ollama.com",
+    "ollama_local_host": "http://localhost:11434",
+    "ollama_api_key_env": "OLLAMA_API_KEY",
+    "framework_version": "1.0.0"
+  },
+  "validation": {
+    "h0_result": "rejected",
+    "h1_result": "inconclusive",
+    "h2_result": "inconclusive",
+    "mean_phi_resonance": 1.6985184806686409,
+    "std_phi_resonance": 0.1440012040557318,
+    "cluster_rate_near_phi": 0.0,
+    "null_baseline_mean": 0.7029039162791576,
+    "null_baseline_std": 0.39811520048485566,
+    "effect_size_vs_null": 3.3258173238274895,
+    "t_statistic": 13.844552276864256,
+    "p_value": 4.889908786902385e-20,
+    "p_value_corrected": 1.955963514760954e-19,
+    "is_significant": true,
+    "prompt_sensitivity": {},
+    "model_comparison": {},
+    "reproducibility_score": 0.0,
+    "is_reproducible": false,
+    "interpretation": "PROVISIONAL: Under current execution, 'biomimetic_resilience' showed \u03c6 resonance (1.6985) exceeding null baseline (0.7029). Effect size: 3.3258. This suggests prompt framing affects measured \u03c6-resonance behavior.",
+    "confidence": "medium"
+  },
+  "statistics": {
+    "p_value": 4.889908786902385e-20,
+    "p_value_corrected": 1.955963514760954e-19,
+    "ci_95_low": 1.6538920451876076,
+    "ci_95_high": 1.7431449161496742,
+    "n_samples": 40,
+    "n_null_samples": 20
+  },
+  "provider_path": {
+    "sources": {
+      "fallback": 40
+    },
+    "purity": 1.0,
+    "is_mixed": false,
+    "warning": null
+  },
+  "generated_at": "2026-04-13T22:12:35.356022"
+}

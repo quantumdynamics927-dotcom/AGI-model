@@ -29,6 +29,7 @@ References:
 import argparse
 import hashlib
 import json
+import os
 import random
 import re
 import string
@@ -110,6 +111,19 @@ class PhiValidationConfig:
     temperature: float = 0.7
     timeout_seconds: int = 120
     
+    # Sample size requirements (minimum for statistical validity)
+    min_runs_per_prompt: int = 10  # Minimum runs per prompt for effect detection
+    min_total_samples: int = 50    # Minimum total samples for hypothesis testing
+    
+    # Backend enforcement
+    require_single_backend: bool = True  # Fail if backend mixing occurs
+    no_fallback: bool = False  # Never silently downgrade (for measurement mode)
+    
+    # Ollama cloud configuration
+    ollama_cloud_host: str = "https://ollama.com"
+    ollama_local_host: str = "http://localhost:11434"
+    ollama_api_key_env: str = "OLLAMA_API_KEY"  # Environment variable for cloud auth
+    
     # Provenance
     framework_version: str = "1.0.0"
     
@@ -171,8 +185,14 @@ class GenerationRecord:
     generation_tokens: int
     inference_time_ms: float
     
-    # Metrics
+    # Metrics (required, no default)
     metrics: PhiMetrics
+    
+    # Backend tracking (critical for clean analysis)
+    actual_backend: str = "unknown"  # "ollama_local", "ollama_cloud", "fallback", "shuffled", "random"
+    backend_success: bool = True  # True if intended backend was used
+    host: str = "localhost:11434"  # API endpoint used
+    auth_mode: str = "none"  # "none", "bearer", "session"
     
     # Null baseline flag
     is_null_baseline: bool = False
@@ -683,30 +703,114 @@ class PhiRecursiveValidation:
         
         start_time = time.time()
         
-        # Try actual model inference via Ollama
+        # Track backend source for clean analysis
+        actual_backend = "unknown"
+        backend_success = True
+        host = self.config.ollama_local_host
+        auth_mode = "none"
         generated_text = None
-        if OLLAMA_INTEGRATION and ollama_available() and runtime_backend == "ollama":
-            try:
-                # Extract model name from model_id (e.g., "ollama_local" -> use default model)
-                model_name = self.config.default_model or "llama3"
-                if ":" in model_id:
-                    model_name = model_id.split(":")[1]
+        
+        # Determine provider type from runtime_backend
+        is_cloud = runtime_backend in ("ollama_cloud", "cloud")
+        is_local = runtime_backend in ("ollama", "ollama_local", "local")
+        is_fallback = runtime_backend in ("fallback", "fallback_local")
+        
+        # Cloud Ollama inference
+        if is_cloud:
+            host = self.config.ollama_cloud_host
+            api_key = os.environ.get(self.config.ollama_api_key_env)
+            
+            if not api_key:
+                if self.config.no_fallback or self.config.require_single_backend:
+                    raise RuntimeError(
+                        f"Cloud mode requires {self.config.ollama_api_key_env} environment variable. "
+                        f"Set the API key or use --backend fallback for local testing."
+                    )
+                warnings.warn(f"Missing {self.config.ollama_api_key_env}. Falling back to local.")
+                is_local = True
+                backend_success = False
+            else:
+                auth_mode = "bearer"
+                actual_backend = "ollama_cloud"
                 
-                response = ollama_run(
-                    model=model_name,
-                    prompt=prompt,
-                    num_predict=self.config.max_tokens,
-                    temperature=self.config.temperature,
-                    timeout=self.config.timeout_seconds
-                )
-                generated_text = response.response
-            except Exception as e:
-                warnings.warn(f"Ollama inference failed: {e}. Using fallback.")
-                generated_text = None
+                try:
+                    # Use requests directly for cloud endpoint
+                    import requests
+                    model_name = self.config.default_model or "llama3"
+                    if ":" in model_id:
+                        model_name = model_id.split(":")[1]
+                    
+                    response = requests.post(
+                        f"{host.rstrip('/')}/api/generate",
+                        json={
+                            "model": model_name,
+                            "prompt": prompt,
+                            "stream": False,
+                            "options": {
+                                "num_predict": self.config.max_tokens,
+                                "temperature": self.config.temperature,
+                            }
+                        },
+                        headers={"Authorization": f"Bearer {api_key}"},
+                        timeout=self.config.timeout_seconds
+                    )
+                    response.raise_for_status()
+                    generated_text = response.json().get("response", "").strip()
+                    actual_backend = "ollama_cloud"
+                except Exception as e:
+                    if self.config.no_fallback or self.config.require_single_backend:
+                        raise RuntimeError(
+                            f"Ollama cloud inference failed: {e}. "
+                            f"Set --no-fallback=false to allow fallback, or check API key."
+                        )
+                    warnings.warn(f"Ollama cloud failed: {e}. Using fallback.")
+                    generated_text = None
+                    backend_success = False
+        
+        # Local Ollama inference
+        if is_local and generated_text is None:
+            host = self.config.ollama_local_host
+            actual_backend = "ollama_local"
+            
+            if OLLAMA_INTEGRATION and ollama_available():
+                try:
+                    model_name = self.config.default_model or "llama3"
+                    if ":" in model_id:
+                        model_name = model_id.split(":")[1]
+                    
+                    response = ollama_run(
+                        model=model_name,
+                        prompt=prompt,
+                        num_predict=self.config.max_tokens,
+                        temperature=self.config.temperature,
+                        timeout=self.config.timeout_seconds
+                    )
+                    generated_text = response.response
+                    actual_backend = "ollama_local"
+                except Exception as e:
+                    if self.config.no_fallback or self.config.require_single_backend:
+                        raise RuntimeError(
+                            f"Ollama local inference failed: {e}. "
+                            f"Set require_single_backend=False to allow fallback, "
+                            f"or ensure Ollama is running at localhost:11434"
+                        )
+                    warnings.warn(f"Ollama local failed: {e}. Using fallback.")
+                    generated_text = None
+                    backend_success = False
+            else:
+                if self.config.no_fallback or self.config.require_single_backend:
+                    raise RuntimeError(
+                        f"Ollama not available but runtime_backend='ollama'. "
+                        f"Set require_single_backend=False to allow fallback, "
+                        f"or start Ollama at localhost:11434"
+                    )
+                backend_success = False
         
         # Fallback: Generate structured response based on prompt patterns
-        if generated_text is None:
+        if generated_text is None or is_fallback:
             generated_text = self._generate_fallback_response(prompt, prompt_family)
+            actual_backend = "fallback"
+            host = "internal"
         
         inference_time = (time.time() - start_time) * 1000
         
@@ -732,6 +836,10 @@ class PhiRecursiveValidation:
             generation_tokens=len(generated_text.split()),
             inference_time_ms=inference_time,
             metrics=metrics,
+            actual_backend=actual_backend,
+            backend_success=backend_success,
+            host=host,
+            auth_mode=auth_mode,
             is_null_baseline=is_null_baseline,
             null_baseline_type=null_baseline_type
         )
@@ -1104,7 +1212,8 @@ def run_high_value_validation(model_id: str = "ollama_local",
                                runtime_backend: str = "ollama",
                                prompt_set: str = "emergence_vs_imitation",
                                num_runs: int = 10,
-                               output_path: str = "raw_hardware/high_value_validation.json") -> ValidationResult:
+                               output_path: str = "raw_hardware/high_value_validation.json",
+                               require_single_backend: bool = False) -> ValidationResult:
     """
     Run validation with high-value falsifiable prompts.
     
@@ -1116,15 +1225,27 @@ def run_high_value_validation(model_id: str = "ollama_local",
     
     Args:
         model_id: Model to validate
-        runtime_backend: Backend to use
+        runtime_backend: Backend to use ("ollama" or "fallback")
         prompt_set: Which prompt set to use
-        num_runs: Runs per prompt
+        num_runs: Runs per prompt (minimum 10 recommended)
         output_path: Where to save results
+        require_single_backend: If True, fail on backend mixing (recommended for clean analysis)
     
     Returns:
         ValidationResult with hypothesis testing
     """
-    config = PhiValidationConfig(num_runs=num_runs)
+    # Sample size warning
+    if num_runs < 10:
+        warnings.warn(
+            f"num_runs={num_runs} is below recommended minimum of 10. "
+            f"Small samples may produce inconclusive results for subtle effects. "
+            f"Consider using --runs 20 or higher for statistical validity."
+        )
+    
+    config = PhiValidationConfig(
+        num_runs=num_runs,
+        require_single_backend=require_single_backend
+    )
     framework = PhiRecursiveValidation(config)
     
     # Get high-value prompts
@@ -1141,7 +1262,11 @@ def run_high_value_validation(model_id: str = "ollama_local",
     print(f"Category: {category}")
     print(f"Prompts: {len(prompts)}")
     print(f"Runs per prompt: {num_runs}")
+    print(f"Require single backend: {require_single_backend}")
     print(f"{'='*80}\n")
+    
+    # Track backend sources for clean analysis
+    backend_sources = defaultdict(int)
     
     # Run validation with high-value prompts
     results_by_prompt = defaultdict(list)
@@ -1155,6 +1280,21 @@ def run_high_value_validation(model_id: str = "ollama_local",
                 prompt, prompt_set, f"run_{run}", model_id, runtime_backend
             )
             results_by_prompt[f"prompt_{i}"].append(record)
+            backend_sources[record.actual_backend] += 1
+    
+    # Backend purity check
+    print(f"\n[Backend Sources]")
+    for backend, count in backend_sources.items():
+        print(f"  {backend}: {count} samples")
+    
+    if len(backend_sources) > 1:
+        warnings.warn(
+            f"MIXED BACKENDS DETECTED: {dict(backend_sources)}. "
+            f"Results may be confounded. For clean analysis, either:\n"
+            f"  1. Set require_single_backend=True to enforce single backend\n"
+            f"  2. Run separate validations for each backend\n"
+            f"  3. Use --backend fallback to use fallback templates consistently"
+        )
     
     # Generate null baselines
     print(f"\n[Null Baselines]")
@@ -1214,30 +1354,46 @@ def run_high_value_validation(model_id: str = "ollama_local",
     validation.reproducibility_score = validation.cluster_rate_near_phi
     validation.is_reproducible = validation.cluster_rate_near_phi > 0.3
     
-    # Interpretation
+    # Interpretation - qualified by provider path
+    is_mixed = len(backend_sources) > 1
+    provider_note = " (mixed provider paths)" if is_mixed else ""
+    
     if validation.h0_result == "rejected":
         validation.interpretation = (
-            f"HIGH-VALUE PROMPT SET '{prompt_set}': "
-            f"Phi resonance ({validation.mean_phi_resonance:.4f}) exceeds null baseline ({validation.null_baseline_mean:.4f}). "
+            f"PROVISIONAL{provider_note}: Under current execution, '{prompt_set}' showed "
+            f"φ resonance ({validation.mean_phi_resonance:.4f}) exceeding null baseline ({validation.null_baseline_mean:.4f}). "
             f"Effect size: {validation.effect_size_vs_null:.4f}. "
-            f"This suggests the prompt set elicits structured patterns beyond random variation."
+            f"This suggests prompt framing affects measured φ-resonance behavior."
         )
-        validation.confidence = "medium"
+        validation.confidence = "low" if is_mixed else "medium"
     elif validation.h0_result == "not_rejected":
         validation.interpretation = (
-            f"HIGH-VALUE PROMPT SET '{prompt_set}': "
-            f"Phi resonance ({validation.mean_phi_resonance:.4f}) is indistinguishable from null baseline ({validation.null_baseline_mean:.4f}). "
-            f"No evidence for structured patterns beyond random variation."
+            f"PROVISIONAL{provider_note}: Under current execution, '{prompt_set}' showed "
+            f"φ resonance ({validation.mean_phi_resonance:.4f}) near null baseline ({validation.null_baseline_mean:.4f}). "
+            f"No evidence for structured patterns beyond random variation in this run."
         )
-        validation.confidence = "high"
+        validation.confidence = "low" if is_mixed else "high"
     else:
         validation.interpretation = (
-            f"HIGH-VALUE PROMPT SET '{prompt_set}': "
-            f"Inconclusive results. Need more runs or different prompt conditions."
+            f"INCONCLUSIVE{provider_note}: Insufficient evidence for '{prompt_set}'. "
+            f"Need more runs (current n={len(all_phi_values)}) or backend-isolated conditions."
         )
         validation.confidence = "low"
     
     framework.validation_result = validation
+    
+    # Calculate confidence intervals
+    n_samples = len(all_phi_values)
+    if n_samples > 1:
+        se = validation.std_phi_resonance / np.sqrt(n_samples)
+        ci_95_low = validation.mean_phi_resonance - 1.96 * se
+        ci_95_high = validation.mean_phi_resonance + 1.96 * se
+    else:
+        ci_95_low = ci_95_high = validation.mean_phi_resonance
+    
+    # Provider path summary
+    provider_summary = dict(backend_sources)
+    provider_purity = max(backend_sources.values()) / sum(backend_sources.values()) if backend_sources else 0.0
     
     # Save
     output = {
@@ -1246,6 +1402,20 @@ def run_high_value_validation(model_id: str = "ollama_local",
         "prompts": prompts,
         "config": config.to_dict(),
         "validation": validation.to_dict(),
+        "statistics": {
+            "p_value": float(validation.p_value) if validation.p_value else None,
+            "p_value_corrected": float(validation.p_value_corrected) if validation.p_value_corrected else None,
+            "ci_95_low": float(ci_95_low),
+            "ci_95_high": float(ci_95_high),
+            "n_samples": n_samples,
+            "n_null_samples": len(all_null_values)
+        },
+        "provider_path": {
+            "sources": provider_summary,
+            "purity": float(provider_purity),
+            "is_mixed": len(backend_sources) > 1,
+            "warning": "Results are confounded by mixed provider paths" if len(backend_sources) > 1 else None
+        },
         "generated_at": datetime.now().isoformat()
     }
     
@@ -1258,15 +1428,31 @@ def run_high_value_validation(model_id: str = "ollama_local",
     print(f"{'='*80}")
     print(f"Prompt set: {prompt_set}")
     print(f"Category: {category}")
+    print(f"\n[Provider Path]")
+    print(f"  Sources: {provider_summary}")
+    print(f"  Purity: {provider_purity:.1%}")
+    if len(backend_sources) > 1:
+        print(f"  ⚠️  WARNING: Mixed provider paths - results are confounded")
     print(f"\n[Results]")
     print(f"  Mean φ resonance: {validation.mean_phi_resonance:.6f}")
+    print(f"  95% CI: [{ci_95_low:.6f}, {ci_95_high:.6f}]")
     print(f"  Null baseline: {validation.null_baseline_mean:.6f}")
     print(f"  Effect size (Cohen's d): {validation.effect_size_vs_null:.4f}")
     print(f"  Cluster near φ: {validation.cluster_rate_near_phi:.1%}")
+    print(f"\n[Statistics]")
+    print(f"  n samples: {n_samples}")
+    print(f"  n null: {len(all_null_values)}")
+    if validation.p_value is not None:
+        print(f"  p-value: {validation.p_value:.6f}")
+        print(f"  p-value (corrected): {validation.p_value_corrected:.6f}")
     print(f"\n[Hypothesis]")
     print(f"  H0 (Null): {validation.h0_result}")
     print(f"\n[Interpretation]")
     print(f"  {validation.interpretation}")
+    if len(backend_sources) > 1:
+        print(f"\n[Provisional Status]")
+        print(f"  Results are PROVISIONAL due to mixed provider paths.")
+        print(f"  Re-run with --require-single-backend or --backend fallback for clean analysis.")
     print(f"\nResults saved to: {output_path}")
     
     return validation
@@ -1288,8 +1474,8 @@ def main() -> int:
     )
     parser.add_argument(
         "--model",
-        default="ollama_local",
-        help="Model ID to validate"
+        default="llama3",
+        help="Model ID to validate (e.g., llama3, gpt-oss:120b)"
     )
     parser.add_argument(
         "--output",
@@ -1324,18 +1510,35 @@ def main() -> int:
         choices=list(VALIDATION_PROMPT_SETS.keys()),
         help="Which high-value prompt set to use"
     )
+    parser.add_argument(
+        "--require-single-backend",
+        action="store_true",
+        help="Fail if backend mixing occurs (recommended for clean analysis)"
+    )
+    parser.add_argument(
+        "--no-fallback",
+        action="store_true",
+        help="Never silently downgrade (for measurement mode)"
+    )
+    parser.add_argument(
+        "--backend",
+        default="fallback",
+        choices=["ollama", "ollama_cloud", "fallback"],
+        help="Backend: 'ollama' (local), 'ollama_cloud' (requires OLLAMA_API_KEY), 'fallback' (templates)"
+    )
     
     args = parser.parse_args()
     
     # High-value prompt validation
     if args.high_value:
-        runtime_backend = "ollama" if "ollama" in args.model else "fallback"
+        runtime_backend = args.backend
         run_high_value_validation(
             model_id=args.model,
             runtime_backend=runtime_backend,
             prompt_set=args.prompt_set,
             num_runs=args.runs,
-            output_path=args.output
+            output_path=args.output,
+            require_single_backend=args.require_single_backend
         )
         return 0
     
@@ -1344,12 +1547,13 @@ def main() -> int:
         num_runs=args.runs,
         phi_tolerance=args.phi_tolerance,
         significance_level=args.significance,
-        bonferroni_correction=not args.no_bonferroni
+        bonferroni_correction=not args.no_bonferroni,
+        no_fallback=args.no_fallback
     )
     
     framework = PhiRecursiveValidation(config)
     
-    runtime_backend = "ollama" if "ollama" in args.model else "fallback"
+    runtime_backend = args.backend
     framework.run_validation(args.model, runtime_backend)
     
     framework.print_summary()
