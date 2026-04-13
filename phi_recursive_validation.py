@@ -56,6 +56,29 @@ except ImportError:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Measurement Classes (for clean experimental attribution)
+# ─────────────────────────────────────────────────────────────────────────────
+
+MEASUREMENT_CLASSES = {
+    "measurement_clean": {
+        "description": "Research-grade single-provider measurement",
+        "requirements": ["provider_purity == 1.0", "no_fallback == True", "require_single_backend == True"],
+        "use_case": "Scientific publication, hypothesis testing"
+    },
+    "measurement_mixed": {
+        "description": "Measurement with provider path contamination",
+        "requirements": ["provider_purity < 1.0"],
+        "use_case": "Exploratory analysis, not for publication"
+    },
+    "production_resilient": {
+        "description": "Operational run with fallback tolerance",
+        "requirements": ["no_fallback == False", "require_single_backend == False"],
+        "use_case": "Production deployment, robustness testing"
+    }
+}
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Constants
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -376,6 +399,33 @@ NULL_BASELINE_GENERATORS = {
     "random_text": lambda text: ' '.join(random.choices(text.split(), k=min(50, len(text.split())))),
     "semantic_non_phi": lambda text: re.sub(r'\b(phi|golden|1\.618|φ)\b', 'X', text, flags=re.IGNORECASE)
 }
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Measurement Classification
+# ─────────────────────────────────────────────────────────────────────────────
+
+def classify_measurement(config: "PhiValidationConfig", provider_purity: float) -> str:
+    """
+    Classify measurement run for proper attribution.
+    
+    Returns one of:
+    - measurement_clean: Research-grade single-provider measurement
+    - measurement_mixed: Measurement with provider path contamination
+    - production_resilient: Operational run with fallback tolerance
+    
+    Classification criteria:
+    - measurement_clean: provider_purity == 1.0 AND (no_fallback OR require_single_backend)
+    - measurement_mixed: provider_purity < 1.0
+    - production_resilient: everything else (default operational mode)
+    """
+    if provider_purity < 1.0:
+        return "measurement_mixed"
+    elif config.no_fallback or config.require_single_backend:
+        # Single provider with explicit measurement flags = clean
+        return "measurement_clean"
+    else:
+        return "production_resilient"
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1395,6 +1445,9 @@ def run_high_value_validation(model_id: str = "ollama_local",
     provider_summary = dict(backend_sources)
     provider_purity = max(backend_sources.values()) / sum(backend_sources.values()) if backend_sources else 0.0
     
+    # Classify measurement
+    measurement_class = classify_measurement(config, provider_purity)
+    
     # Save
     output = {
         "prompt_set": prompt_set,
@@ -1416,6 +1469,8 @@ def run_high_value_validation(model_id: str = "ollama_local",
             "is_mixed": len(backend_sources) > 1,
             "warning": "Results are confounded by mixed provider paths" if len(backend_sources) > 1 else None
         },
+        "measurement_class": measurement_class,
+        "measurement_requirements": MEASUREMENT_CLASSES[measurement_class]["requirements"],
         "generated_at": datetime.now().isoformat()
     }
     
@@ -1428,6 +1483,9 @@ def run_high_value_validation(model_id: str = "ollama_local",
     print(f"{'='*80}")
     print(f"Prompt set: {prompt_set}")
     print(f"Category: {category}")
+    print(f"\n[Measurement Class]")
+    print(f"  Class: {measurement_class}")
+    print(f"  Description: {MEASUREMENT_CLASSES[measurement_class]['description']}")
     print(f"\n[Provider Path]")
     print(f"  Sources: {provider_summary}")
     print(f"  Purity: {provider_purity:.1%}")
@@ -1443,16 +1501,16 @@ def run_high_value_validation(model_id: str = "ollama_local",
     print(f"  n samples: {n_samples}")
     print(f"  n null: {len(all_null_values)}")
     if validation.p_value is not None:
-        print(f"  p-value: {validation.p_value:.6f}")
-        print(f"  p-value (corrected): {validation.p_value_corrected:.6f}")
+        print(f"  p-value: {validation.p_value:.6e}")
+        print(f"  p-value (corrected): {validation.p_value_corrected:.6e}")
     print(f"\n[Hypothesis]")
     print(f"  H0 (Null): {validation.h0_result}")
     print(f"\n[Interpretation]")
     print(f"  {validation.interpretation}")
-    if len(backend_sources) > 1:
+    if measurement_class == "measurement_mixed":
         print(f"\n[Provisional Status]")
         print(f"  Results are PROVISIONAL due to mixed provider paths.")
-        print(f"  Re-run with --require-single-backend or --backend fallback for clean analysis.")
+        print(f"  Re-run with --no-fallback --require-single-backend for clean measurement.")
     print(f"\nResults saved to: {output_path}")
     
     return validation
