@@ -701,5 +701,18 @@
             </div>
         </div>
     </footer>
+    
+    <!-- GitHub API Client -->
+    <script src="/github-client.js"></script>
+    <script>
+        // Initialize GitHub client if container exists
+        document.addEventListener('DOMContentLoaded', function() {
+            const reposContainer = document.getElementById('github-repos');
+            if (reposContainer) {
+                const client = new GitHubClient();
+                client.displayRepositories('github-repos', 'quantumdynamics927-dotcom');
+            }
+        });
+    </script>
 </body>
 </html>
