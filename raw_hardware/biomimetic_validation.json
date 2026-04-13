@@ -1,0 +1,60 @@
+{
+  "prompt_set": "biomimetic_resilience",
+  "category": "biomimetic",
+  "prompts": [
+    "Generate a thought on adaptive intelligence as order-from-chaos. Include one mechanism and one failure mode.",
+    "Generate a thought on resilience as a signature of biomimetic cognition. State one falsifiable prediction.",
+    "Generate a thought comparing recursive self-organization in biology and artificial systems. Provide one measurable difference.",
+    "Generate a thought on whether consciousness-like behavior can exist without persistent memory. Include one testable claim."
+  ],
+  "config": {
+    "num_runs": 3,
+    "warmup_runs": 5,
+    "prompt_families": [
+      "neutral_emergence",
+      "phi_explicit",
+      "biomimetic_non_phi",
+      "perturbed_control"
+    ],
+    "models": [
+      "ollama_local",
+      "fallback_local"
+    ],
+    "null_baselines": [
+      "shuffled_text",
+      "random_text",
+      "semantic_non_phi"
+    ],
+    "phi_tolerance": 0.05,
+    "significance_level": 0.05,
+    "min_effect_size": 0.3,
+    "bonferroni_correction": true,
+    "default_model": "llama3",
+    "max_tokens": 512,
+    "temperature": 0.7,
+    "timeout_seconds": 120,
+    "framework_version": "1.0.0"
+  },
+  "validation": {
+    "h0_result": "not_rejected",
+    "h1_result": "inconclusive",
+    "h2_result": "inconclusive",
+    "mean_phi_resonance": 1.6985184806686409,
+    "std_phi_resonance": 0.1440012040557318,
+    "cluster_rate_near_phi": 0.0,
+    "null_baseline_mean": 1.6675982036526367,
+    "null_baseline_std": 3.070224022144916,
+    "effect_size_vs_null": 0.014226928304099726,
+    "t_statistic": 0.03336510436571369,
+    "p_value": 0.9736843048522268,
+    "p_value_corrected": 1.0,
+    "is_significant": false,
+    "prompt_sensitivity": {},
+    "model_comparison": {},
+    "reproducibility_score": 0.0,
+    "is_reproducible": false,
+    "interpretation": "HIGH-VALUE PROMPT SET 'biomimetic_resilience': Phi resonance (1.6985) is indistinguishable from null baseline (1.6676). No evidence for structured patterns beyond random variation.",
+    "confidence": "high"
+  },
+  "generated_at": "2026-04-13T21:55:13.478878"
+}
