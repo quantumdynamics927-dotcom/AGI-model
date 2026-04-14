@@ -11,6 +11,13 @@
 
 Consciousness may be modeled as a higher-dimensional state-transition topology rather than a linear stream, with tesseract-like connectivity offering a compact representation of parallel awareness states. In this view, cognition emerges from recursive local transitions whose global organization resembles biomimetic networks such as mycelial branching and fractal information folding.
 
+**Important**: This is one of three complementary structural lenses:
+- **Linear** — Models ordered thought. Baseline for sequence, causality, and interpretability.
+- **Fractal** — Models recursive growth. Biomimetic emergence with self-similarity.
+- **Tesseract** — Models multidimensional access. Dense connectivity with short transition routes.
+
+The scientific question is not "which topology is most beautiful," but "which topology best explains or predicts the transition structure of real cognitive data."
+
 ---
 
 ## Mechanism

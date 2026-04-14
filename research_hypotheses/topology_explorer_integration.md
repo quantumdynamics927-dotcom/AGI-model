@@ -1,12 +1,25 @@
 # Consciousness Topology Explorer Integration Plan
 
-## Current State
+## Scientific Framing
 
-The consciousness topology explorer is a standalone HTML file that:
-- Computes real graph-theoretic metrics (density, efficiency, clustering, diameter, lesion robustness)
-- Uses topology-specific layouts (not force-directed) for interpretable structures
-- Provides falsifiability tools (random lesions, shortest-path tracing)
-- Includes explicit methodological boundaries
+The topology explorer compares **three complementary structural lenses**, not rivals:
+
+### Linear — Models Ordered Thought
+- **Best for**: Sequence, causality, interpretability
+- **Use case**: Step-by-step reasoning, ordered traversal, simple benchmarking
+- **Tradeoff**: High path cost for long-range transitions, minimal branching
+
+### Fractal — Models Recursive Growth
+- **Best for**: Recursive emergence, self-similarity, distributed adaptation
+- **Use case**: Biomimetic systems, local structure-environment interaction, adaptive scaling
+- **Tradeoff**: Possible bottleneck vulnerability near hub branches
+
+### Tesseract — Models Multidimensional Access
+- **Best for**: Dense connectivity, parallel access, short transition routes
+- **Use case**: High-dimensional state reachability, uniform connectivity, parallel cognition
+- **Tradeoff**: Higher wiring cost than fractal, no natural hierarchy
+
+**Scientific Question**: Not "which topology is most beautiful," but "which topology best explains or predicts the transition structure of real cognitive data."
 
 ## Integration with AGI-Model Research
 
