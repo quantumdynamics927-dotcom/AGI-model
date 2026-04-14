@@ -237,20 +237,46 @@ class CognitionMetrics:
 @dataclass
 class AlignmentIndicators:
     """
-    Secondary Panel: Thematic Alignment Indicators
+    Secondary Panel: Model-Conditioned Signals
     
-    NOT quality metrics - these track elaboration and thematic alignment.
+    NOT quality metrics - these are model-specific learned correlation signals.
+    Raw values are NOT comparable across models without normalization.
+    
+    Evidence from controlled experiments:
+    - Same prompt can flip sign between models (local vs cloud)
+    - Technical style: positive on local, negative on cloud
+    - Creative style: lower on local, higher on cloud
+    - Values reflect model training correlations, not content quality
     """
-    phi_coherence: float = 0.0  # Elaboration proxy
-    biomimetic_resonance: float = 0.0  # Thematic alignment
+    # Raw values (model-conditioned, not cross-model comparable)
+    raw_phi_coherence: float = 0.0  # Model-conditioned phi signal
+    raw_biomimetic_resonance: float = 0.0  # Model-conditioned biomimetic signal
+    phi_resonance: float = 1.6180  # Reference phi baseline (usually constant)
+    
+    # Normalized values (z-score per model baseline)
+    z_phi_coherence: float = 0.0  # Z-score normalized phi signal
+    z_biomimetic_resonance: float = 0.0  # Z-score normalized biomimetic signal
+    
+    # Other indicators
     information_density: float = 0.0  # Concepts per token
+    
+    # Calibration metadata
+    model_baseline_version: str = ""  # Version of baseline used for normalization
+    baseline_prompt_family: str = ""  # Prompt family used for calibration
+    cross_model_comparable: bool = False  # Whether raw values can be compared across models
     
     def to_dict(self) -> Dict:
         return {
-            'phi_coherence': self.phi_coherence,
-            'biomimetic_resonance': self.biomimetic_resonance,
+            'raw_phi_coherence': self.raw_phi_coherence,
+            'raw_biomimetic_resonance': self.raw_biomimetic_resonance,
+            'phi_resonance': self.phi_resonance,
+            'z_phi_coherence': self.z_phi_coherence,
+            'z_biomimetic_resonance': self.z_biomimetic_resonance,
             'information_density': self.information_density,
-            'note': 'SECONDARY INDICATORS - NOT quality metrics'
+            'model_baseline_version': self.model_baseline_version,
+            'baseline_prompt_family': self.baseline_prompt_family,
+            'cross_model_comparable': self.cross_model_comparable,
+            'note': 'MODEL-CONDITIONED SIGNALS - NOT quality metrics, NOT cross-model comparable without normalization'
         }
 
 
@@ -549,6 +575,86 @@ class StructuralFieldDetector:
 # INFORMATION DENSITY CALCULATOR
 # =============================================================================
 
+# =============================================================================
+# MODEL BASELINE CALIBRATION
+# =============================================================================
+
+@dataclass
+class ModelBaseline:
+    """
+    Baseline calibration for a specific model.
+    
+    Used to normalize model-conditioned signals for cross-model comparison.
+    """
+    model_id: str
+    baseline_version: str
+    prompt_family: str
+    
+    # Raw metric statistics
+    phi_coherence_mean: float = 0.0
+    phi_coherence_std: float = 1.0
+    biomimetic_resonance_mean: float = 0.0
+    biomimetic_resonance_std: float = 1.0
+    
+    # Calibration metadata
+    num_samples: int = 0
+    calibration_date: str = ""
+    
+    def to_dict(self) -> Dict:
+        return {
+            'model_id': self.model_id,
+            'baseline_version': self.baseline_version,
+            'prompt_family': self.prompt_family,
+            'phi_coherence_mean': self.phi_coherence_mean,
+            'phi_coherence_std': self.phi_coherence_std,
+            'biomimetic_resonance_mean': self.biomimetic_resonance_mean,
+            'biomimetic_resonance_std': self.biomimetic_resonance_std,
+            'num_samples': self.num_samples,
+            'calibration_date': self.calibration_date
+        }
+    
+    def normalize_phi(self, raw_value: float) -> float:
+        """Compute z-score normalized phi coherence."""
+        if self.phi_coherence_std == 0:
+            return 0.0
+        return (raw_value - self.phi_coherence_mean) / self.phi_coherence_std
+    
+    def normalize_biomimetic(self, raw_value: float) -> float:
+        """Compute z-score normalized biomimetic resonance."""
+        if self.biomimetic_resonance_std == 0:
+            return 0.0
+        return (raw_value - self.biomimetic_resonance_mean) / self.biomimetic_resonance_std
+
+
+# Default baselines from controlled experiments
+DEFAULT_BASELINES = {
+    # Local model (qwen3:1.7b) - technical style produces high positive
+    'qwen3:1.7b': ModelBaseline(
+        model_id='qwen3:1.7b',
+        baseline_version='v1_20260414',
+        prompt_family='distributed_memory_2x2',
+        phi_coherence_mean=0.90,
+        phi_coherence_std=0.10,
+        biomimetic_resonance_mean=1.45,
+        biomimetic_resonance_std=0.15,
+        num_samples=4,
+        calibration_date='2026-04-14'
+    ),
+    # Cloud model (qwen3-coder:480b) - creative style produces positive
+    'qwen3-coder:480b': ModelBaseline(
+        model_id='qwen3-coder:480b',
+        baseline_version='v1_20260414',
+        prompt_family='distributed_memory_2x2',
+        phi_coherence_mean=-0.04,  # Near zero (mixed positive/negative)
+        phi_coherence_std=0.40,
+        biomimetic_resonance_mean=-0.11,
+        biomimetic_resonance_std=0.60,
+        num_samples=4,
+        calibration_date='2026-04-14'
+    ),
+}
+
+
 def calculate_information_density(text: str) -> float:
     """
     Calculate information density (unique concepts per token).
@@ -606,6 +712,11 @@ class QAGIEvaluator:
     
     def __init__(self):
         self.field_detector = StructuralFieldDetector()
+        self.model_baselines = DEFAULT_BASELINES.copy()
+    
+    def register_baseline(self, baseline: ModelBaseline):
+        """Register a model baseline for normalization."""
+        self.model_baselines[baseline.model_id] = baseline
     
     def evaluate(
         self,
@@ -620,7 +731,10 @@ class QAGIEvaluator:
         run_id: str = "",
         provider_purity: float = 1.0,
         fallback_used: bool = False,
-        run_mode: str = "standard"
+        run_mode: str = "standard",
+        raw_phi_coherence: float = 0.0,
+        raw_biomimetic_resonance: float = 0.0,
+        phi_resonance: float = 1.6180
     ) -> QAGIIntelligenceScore:
         """
         Evaluate a response and compute full QAGI Intelligence Score.
@@ -638,6 +752,9 @@ class QAGIEvaluator:
             provider_purity: 1.0 for clean run, <1.0 for mixed providers
             fallback_used: True if fallback provider was used
             run_mode: "standard", "stress_test", "ablation", or "recovery"
+            raw_phi_coherence: Raw phi coherence from model (model-conditioned)
+            raw_biomimetic_resonance: Raw biomimetic resonance from model (model-conditioned)
+            phi_resonance: Reference phi baseline (usually 1.6180)
         
         Returns:
             QAGIIntelligenceScore with all metrics populated
@@ -676,8 +793,25 @@ class QAGIEvaluator:
         if integration_metrics:
             score.integration = IntegrationMetrics(**integration_metrics)
         
-        # Secondary: Alignment indicators
+        # Secondary: Model-conditioned signals (NOT quality metrics)
+        score.alignment.raw_phi_coherence = raw_phi_coherence
+        score.alignment.raw_biomimetic_resonance = raw_biomimetic_resonance
+        score.alignment.phi_resonance = phi_resonance
         score.alignment.information_density = calculate_information_density(response_text)
+        
+        # Normalize using model baseline if available
+        if model in self.model_baselines:
+            baseline = self.model_baselines[model]
+            score.alignment.z_phi_coherence = baseline.normalize_phi(raw_phi_coherence)
+            score.alignment.z_biomimetic_resonance = baseline.normalize_biomimetic(raw_biomimetic_resonance)
+            score.alignment.model_baseline_version = baseline.baseline_version
+            score.alignment.baseline_prompt_family = baseline.prompt_family
+            score.alignment.cross_model_comparable = True  # Normalized values are comparable
+        else:
+            # No baseline - raw values are not cross-model comparable
+            score.alignment.z_phi_coherence = 0.0
+            score.alignment.z_biomimetic_resonance = 0.0
+            score.alignment.cross_model_comparable = False
         
         return score
     
@@ -772,9 +906,13 @@ class QAGIEvaluator:
 │ TOTAL QAGI SCORE: {composites['total_qagi_score']:>5.3f}                                    │
 │ STRUCTURAL SCORE: {composites['structural_score']:>5.1f}/10                                 │
 ├─────────────────────────────────────────────────────────────┤
-│ SECONDARY: THEMATIC ALIGNMENT (NOT quality metrics)         │
-│   Phi Coherence: {score.alignment.phi_coherence:>10.4f} (elaboration proxy)            │
-│   Biomimetic Resonance: {score.alignment.biomimetic_resonance:>10.4f} (thematic align)   │
+│ SECONDARY: MODEL-CONDITIONED SIGNALS (NOT quality metrics)  │
+│   Raw Phi Coherence: {score.alignment.raw_phi_coherence:>10.4f} (model-conditioned)     │
+│   Raw Biomimetic: {score.alignment.raw_biomimetic_resonance:>10.4f} (model-conditioned)   │
+│   Z-Phi Coherence: {score.alignment.z_phi_coherence:>10.4f} (normalized)              │
+│   Z-Biomimetic: {score.alignment.z_biomimetic_resonance:>10.4f} (normalized)            │
+│   Cross-Model Comparable: {str(score.alignment.cross_model_comparable):<5}                    │
+│   Baseline Version: {score.alignment.model_baseline_version:<20}             │
 │   Information Density: {score.alignment.information_density:>10.4f} (concepts/token)     │
 ├─────────────────────────────────────────────────────────────┤
 │ EXTRACTED FIELD SPANS (for audit):                          │
