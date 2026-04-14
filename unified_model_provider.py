@@ -6,7 +6,6 @@ This module provides a clean abstraction layer for model routing:
 - Ollama Local: Primary backbone (fast, always available)
 - Ollama Cloud: Heavy reasoning (powerful, for complex tasks)
 - BitNet Adapter: Future CPU optimization (optional)
-- AirLLM: Experimental oversized models (research only)
 
 Architecture:
 - Single provider interface: generate(), healthcheck(), list_models()
@@ -517,49 +516,6 @@ class BitNetAdapter(ModelProvider):
         }
 
 
-class AirLLMExperimental(ModelProvider):
-    """
-    AirLLM Experimental - Oversized local models (research only).
-    
-    This is for research when you need to run models that don't fit in memory.
-    Not recommended for production use.
-    """
-    
-    def __init__(self):
-        self.available = False
-        logger.info("Initializing AirLLM Experimental (research only)")
-        logger.warning("AirLLM is experimental - not for production")
-    
-    def generate(self, prompt: str, **kwargs) -> Dict[str, Any]:
-        """Generate text using AirLLM (placeholder)."""
-        return {
-            'generated_text': 'AirLLM experimental not enabled',
-            'inference_time': 0,
-            'model': 'airllm',
-            'backend': 'airllm_experimental',
-            'success': False,
-            'error': 'AirLLM not enabled',
-            'timestamp': time.time()
-        }
-    
-    def healthcheck(self) -> bool:
-        """Check if AirLLM is available."""
-        return self.available
-    
-    def list_models(self) -> List[str]:
-        """List available AirLLM models."""
-        return []
-    
-    def get_status(self) -> Dict[str, Any]:
-        """Get provider status."""
-        return {
-            'provider': 'airllm_experimental',
-            'available': False,
-            'enabled': False,
-            'phi_constant': PHI
-        }
-
-
 class ModelRouter:
     """
     Model Router - Routes requests to appropriate provider.
@@ -579,7 +535,6 @@ class ModelRouter:
             'ollama_local': OllamaLocalProvider(default_model="llama3.2:1b"),  # Use working model
             'ollama_cloud': OllamaCloudProvider(default_model="claude-code"),
             'bitnet': BitNetAdapter(),  # Disabled by default
-            'airllm': AirLLMExperimental()  # Disabled by default
         }
         
         # Routing rules
@@ -597,7 +552,6 @@ class ModelRouter:
         self.fallback_chain = {
             'ollama_cloud': 'ollama_local',
             'bitnet': 'ollama_local',
-            'airllm': 'ollama_local',
             'ollama_local': None  # No fallback for local
         }
         
@@ -623,7 +577,7 @@ class ModelRouter:
             failure_class = result.get('failure_class', 'unknown')
             
             # Fallback for cloud failures
-            if provider_name in ['ollama_cloud', 'bitnet', 'airllm']:
+            if provider_name in ['ollama_cloud', 'bitnet']:
                 fallback_provider_name = self.fallback_chain.get(provider_name)
                 
                 if fallback_provider_name and fallback_provider_name in self.providers:

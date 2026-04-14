@@ -41,6 +41,21 @@ class ThoughtRecord:
     created_at: str = ""
     reviewed_at: str = ""
     
+    # Evolution chain
+    parent_thought_id: Optional[int] = None  # ID of thought this builds on
+    generation_depth: int = 0  # 0 = original, 1 = builds on 1, etc.
+    
+    # Retrieval tracking
+    retrieval_count: int = 0  # How many times this thought was retrieved
+    last_retrieved_at: str = ""  # When last retrieved for context
+    
+    # Experiment grouping
+    prompt_family: str = ""  # e.g., "distributed_memory_2x2"
+    experiment_id: str = ""  # e.g., "exp_20260414_001"
+    
+    # Curation state (separate from review)
+    curation_state: str = "raw"  # raw, reviewed, training_set, validation_set, archived
+    
     # Model-conditioned signals (secondary diagnostics)
     raw_phi_coherence: float = 0.0
     raw_biomimetic_resonance: float = 0.0
@@ -95,6 +110,13 @@ class ThoughtRecord:
             'provider': self.provider,
             'created_at': self.created_at,
             'reviewed_at': self.reviewed_at,
+            'parent_thought_id': self.parent_thought_id,
+            'generation_depth': self.generation_depth,
+            'retrieval_count': self.retrieval_count,
+            'last_retrieved_at': self.last_retrieved_at,
+            'prompt_family': self.prompt_family,
+            'experiment_id': self.experiment_id,
+            'curation_state': self.curation_state,
             'raw_phi_coherence': self.raw_phi_coherence,
             'raw_biomimetic_resonance': self.raw_biomimetic_resonance,
             'z_phi_coherence': self.z_phi_coherence,
@@ -167,6 +189,21 @@ class ThoughtMemoryDB:
                 provider TEXT DEFAULT '',
                 created_at TEXT NOT NULL,
                 reviewed_at TEXT DEFAULT '',
+                
+                -- Evolution chain
+                parent_thought_id INTEGER DEFAULT NULL,
+                generation_depth INTEGER DEFAULT 0,
+                
+                -- Retrieval tracking
+                retrieval_count INTEGER DEFAULT 0,
+                last_retrieved_at TEXT DEFAULT '',
+                
+                -- Experiment grouping
+                prompt_family TEXT DEFAULT '',
+                experiment_id TEXT DEFAULT '',
+                
+                -- Curation state
+                curation_state TEXT DEFAULT 'raw',
                 
                 -- Model-conditioned signals
                 raw_phi_coherence REAL DEFAULT 0.0,
@@ -244,6 +281,10 @@ class ThoughtMemoryDB:
         cursor.execute('CREATE INDEX IF NOT EXISTS idx_structural_score ON thought_memory(structural_score)')
         cursor.execute('CREATE INDEX IF NOT EXISTS idx_review_status ON thought_memory(review_status)')
         cursor.execute('CREATE INDEX IF NOT EXISTS idx_created_at ON thought_memory(created_at)')
+        cursor.execute('CREATE INDEX IF NOT EXISTS idx_curation_state ON thought_memory(curation_state)')
+        cursor.execute('CREATE INDEX IF NOT EXISTS idx_prompt_family ON thought_memory(prompt_family)')
+        cursor.execute('CREATE INDEX IF NOT EXISTS idx_experiment_id ON thought_memory(experiment_id)')
+        cursor.execute('CREATE INDEX IF NOT EXISTS idx_parent_thought_id ON thought_memory(parent_thought_id)')
         
         conn.commit()
         conn.close()
@@ -260,6 +301,12 @@ class ThoughtMemoryDB:
         if not record.created_at:
             record.created_at = datetime.now().isoformat()
         
+        # Calculate generation depth from parent
+        if record.parent_thought_id and record.generation_depth == 0:
+            parent = self.get_thought(record.parent_thought_id)
+            if parent:
+                record.generation_depth = parent.generation_depth + 1
+        
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
@@ -267,6 +314,9 @@ class ThoughtMemoryDB:
             cursor.execute('''
                 INSERT OR REPLACE INTO thought_memory (
                     prompt, generated_thought, model, backend, provider, created_at,
+                    parent_thought_id, generation_depth,
+                    retrieval_count, last_retrieved_at,
+                    prompt_family, experiment_id, curation_state,
                     raw_phi_coherence, raw_biomimetic_resonance,
                     z_phi_coherence, z_biomimetic_resonance,
                     phi_resonance, information_density,
@@ -278,10 +328,13 @@ class ThoughtMemoryDB:
                     review_status, review_labels, review_notes,
                     run_mode, provider_purity, fallback_used, baseline_version,
                     content_hash
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ''', (
                 record.prompt, record.generated_thought, record.model, record.backend,
                 record.provider, record.created_at,
+                record.parent_thought_id, record.generation_depth,
+                record.retrieval_count, record.last_retrieved_at,
+                record.prompt_family, record.experiment_id, record.curation_state,
                 record.raw_phi_coherence, record.raw_biomimetic_resonance,
                 record.z_phi_coherence, record.z_biomimetic_resonance,
                 record.phi_resonance, record.information_density,
@@ -465,6 +518,10 @@ class ThoughtMemoryDB:
         cursor.execute('SELECT review_status, COUNT(*) FROM thought_memory GROUP BY review_status')
         by_status = dict(cursor.fetchall())
         
+        # By curation state
+        cursor.execute('SELECT curation_state, COUNT(*) FROM thought_memory GROUP BY curation_state')
+        by_curation = dict(cursor.fetchall())
+        
         # Average scores
         cursor.execute('SELECT AVG(structural_score), AVG(cognition_quality) FROM thought_memory')
         avg_structural, avg_cognition = cursor.fetchone()
@@ -473,16 +530,195 @@ class ThoughtMemoryDB:
         cursor.execute('SELECT run_mode, COUNT(*) FROM thought_memory GROUP BY run_mode')
         by_mode = dict(cursor.fetchall())
         
+        # Evolution chain depth
+        cursor.execute('SELECT MAX(generation_depth), AVG(generation_depth) FROM thought_memory')
+        max_depth, avg_depth = cursor.fetchone()
+        
+        # Total retrievals
+        cursor.execute('SELECT SUM(retrieval_count) FROM thought_memory')
+        total_retrievals = cursor.fetchone()[0] or 0
+        
         conn.close()
         
         return {
             'total_thoughts': total,
             'by_model': by_model,
             'by_review_status': by_status,
+            'by_curation_state': by_curation,
             'by_run_mode': by_mode,
             'avg_structural_score': avg_structural or 0.0,
             'avg_cognition_quality': avg_cognition or 0.0,
+            'max_generation_depth': max_depth or 0,
+            'avg_generation_depth': avg_depth or 0.0,
+            'total_retrievals': total_retrievals,
         }
+    
+    # =========================================================================
+    # RETRIEVAL METHODS
+    # =========================================================================
+    
+    def retrieve_for_context(
+        self,
+        prompt: str,
+        model: str = "",
+        min_structural_score: float = 5.0,
+        limit: int = 3,
+        exclude_cloud: bool = True
+    ) -> List[ThoughtRecord]:
+        """
+        Retrieve relevant thoughts for context before generation.
+        
+        Only retrieves reviewed/high-quality thoughts to avoid amplifying bad patterns.
+        """
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        # Build query
+        query = '''
+            SELECT * FROM thought_memory 
+            WHERE (prompt LIKE ? OR generated_thought LIKE ?)
+            AND structural_score >= ?
+            AND curation_state IN ('reviewed', 'training_set', 'validation_set')
+        '''
+        params = [f'%{prompt}%', f'%{prompt}%', min_structural_score]
+        
+        if model:
+            query += ' AND model = ?'
+            params.append(model)
+        
+        if exclude_cloud:
+            query += " AND run_mode != 'comparison'"
+        
+        query += ' ORDER BY structural_score DESC, retrieval_count ASC LIMIT ?'
+        params.append(limit)
+        
+        cursor.execute(query, params)
+        rows = cursor.fetchall()
+        
+        # Update retrieval count for each retrieved thought
+        now = datetime.now().isoformat()
+        for row in rows:
+            thought_id = row[0]
+            cursor.execute('''
+                UPDATE thought_memory 
+                SET retrieval_count = retrieval_count + 1, last_retrieved_at = ?
+                WHERE id = ?
+            ''', (now, thought_id))
+        
+        conn.commit()
+        conn.close()
+        
+        return [self._row_to_record(row) for row in rows]
+    
+    def get_evolution_chain(self, thought_id: int) -> List[ThoughtRecord]:
+        """Get the full evolution chain for a thought (from root to this thought)."""
+        chain = []
+        current = self.get_thought(thought_id)
+        
+        while current:
+            chain.append(current)
+            if current.parent_thought_id:
+                current = self.get_thought(current.parent_thought_id)
+            else:
+                break
+        
+        # Reverse to get root first
+        return list(reversed(chain))
+    
+    def get_children(self, thought_id: int) -> List[ThoughtRecord]:
+        """Get all thoughts that build on this thought."""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute('''
+            SELECT * FROM thought_memory 
+            WHERE parent_thought_id = ?
+            ORDER BY created_at ASC
+        ''', (thought_id,))
+        
+        rows = cursor.fetchall()
+        conn.close()
+        
+        return [self._row_to_record(row) for row in rows]
+    
+    # =========================================================================
+    # CURATION METHODS
+    # =========================================================================
+    
+    def update_curation_state(self, thought_id: int, state: str) -> bool:
+        """Update curation state (raw, reviewed, training_set, validation_set, archived)."""
+        valid_states = ['raw', 'reviewed', 'training_set', 'validation_set', 'archived']
+        if state not in valid_states:
+            return False
+        
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute('''
+            UPDATE thought_memory SET curation_state = ? WHERE id = ?
+        ''', (state, thought_id))
+        
+        conn.commit()
+        conn.close()
+        return True
+    
+    def promote_to_training_set(self, thought_id: int) -> bool:
+        """Promote a thought to the training set."""
+        return self.update_curation_state(thought_id, 'training_set')
+    
+    def promote_to_validation_set(self, thought_id: int) -> bool:
+        """Promote a thought to the validation set."""
+        return self.update_curation_state(thought_id, 'validation_set')
+    
+    def get_by_curation_state(self, state: str, limit: int = 100) -> List[ThoughtRecord]:
+        """Get thoughts by curation state."""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute('''
+            SELECT * FROM thought_memory 
+            WHERE curation_state = ?
+            ORDER BY structural_score DESC
+            LIMIT ?
+        ''', (state, limit))
+        
+        rows = cursor.fetchall()
+        conn.close()
+        
+        return [self._row_to_record(row) for row in rows]
+    
+    def get_by_experiment(self, experiment_id: str) -> List[ThoughtRecord]:
+        """Get all thoughts from a specific experiment."""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute('''
+            SELECT * FROM thought_memory 
+            WHERE experiment_id = ?
+            ORDER BY created_at ASC
+        ''', (experiment_id,))
+        
+        rows = cursor.fetchall()
+        conn.close()
+        
+        return [self._row_to_record(row) for row in rows]
+    
+    def get_by_prompt_family(self, prompt_family: str, limit: int = 100) -> List[ThoughtRecord]:
+        """Get all thoughts from a specific prompt family."""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute('''
+            SELECT * FROM thought_memory 
+            WHERE prompt_family = ?
+            ORDER BY structural_score DESC
+            LIMIT ?
+        ''', (prompt_family, limit))
+        
+        rows = cursor.fetchall()
+        conn.close()
+        
+        return [self._row_to_record(row) for row in rows]
     
     def compare_runs(self, local_thought_id: int, cloud_thought_id: int, notes: str = "") -> int:
         """Record a comparison between local and cloud runs."""
@@ -501,7 +737,18 @@ class ThoughtMemoryDB:
     
     def export_training_set(self, output_path: str, min_structural_score: float = 7.0) -> int:
         """Export training set to JSON file."""
-        thoughts = self.get_best_thoughts(min_structural_score)
+        thoughts = self.get_by_curation_state('training_set')
+        # Filter by structural score
+        thoughts = [t for t in thoughts if t.structural_score >= min_structural_score]
+        
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump([t.to_dict() for t in thoughts], f, indent=2, default=str)
+        
+        return len(thoughts)
+    
+    def export_validation_set(self, output_path: str) -> int:
+        """Export validation set to JSON file."""
+        thoughts = self.get_by_curation_state('validation_set')
         
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump([t.to_dict() for t in thoughts], f, indent=2, default=str)
@@ -519,31 +766,38 @@ class ThoughtMemoryDB:
             provider=row[5],
             created_at=row[6],
             reviewed_at=row[7],
-            raw_phi_coherence=row[8],
-            raw_biomimetic_resonance=row[9],
-            z_phi_coherence=row[10],
-            z_biomimetic_resonance=row[11],
-            phi_resonance=row[12],
-            information_density=row[13],
-            structural_score=row[14],
-            cognition_quality=row[15],
-            total_qagi_score=row[16],
-            mechanism_score=row[17],
-            measurable_outcome_score=row[18],
-            boundary_condition_score=row[19],
-            failure_condition_score=row[20],
-            mechanism_text=row[21],
-            measurable_outcome_text=row[22],
-            boundary_condition_text=row[23],
-            failure_condition_text=row[24],
-            review_status=row[25],
-            review_labels=row[26],
-            review_notes=row[27],
-            run_mode=row[28],
-            provider_purity=row[29],
-            fallback_used=bool(row[30]),
-            baseline_version=row[31],
-            content_hash=row[32],
+            parent_thought_id=row[8],
+            generation_depth=row[9],
+            retrieval_count=row[10],
+            last_retrieved_at=row[11],
+            prompt_family=row[12],
+            experiment_id=row[13],
+            curation_state=row[14],
+            raw_phi_coherence=row[15],
+            raw_biomimetic_resonance=row[16],
+            z_phi_coherence=row[17],
+            z_biomimetic_resonance=row[18],
+            phi_resonance=row[19],
+            information_density=row[20],
+            structural_score=row[21],
+            cognition_quality=row[22],
+            total_qagi_score=row[23],
+            mechanism_score=row[24],
+            measurable_outcome_score=row[25],
+            boundary_condition_score=row[26],
+            failure_condition_score=row[27],
+            mechanism_text=row[28],
+            measurable_outcome_text=row[29],
+            boundary_condition_text=row[30],
+            failure_condition_text=row[31],
+            review_status=row[32],
+            review_labels=row[33],
+            review_notes=row[34],
+            run_mode=row[35],
+            provider_purity=row[36],
+            fallback_used=bool(row[37]),
+            baseline_version=row[38],
+            content_hash=row[39],
         )
 
 
