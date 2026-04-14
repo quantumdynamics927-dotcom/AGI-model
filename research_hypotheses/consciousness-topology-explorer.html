@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scientific Consciousness Topology Explorer</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a2f;
+      --panel-2: #17213c;
+      --text: #e9eefc;
+      --muted: #9fb0d6;
+      --border: rgba(255,255,255,0.12);
+      --accent: #6ee7ff;
+      --accent-2: #b794ff;
+      --good: #7ee787;
+      --warn: #ffb86b;
+      --bad: #ff7b72;
+      --node: #8be9fd;
+      --removed: #3a4668;
+      --edge: rgba(181, 201, 255, 0.32);
+      --edge-strong: rgba(110, 231, 255, 0.85);
+      --shadow: 0 16px 40px rgba(0,0,0,0.32);
+      --radius: 18px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      --sans: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(110,231,255,0.08), transparent 35%),
+        radial-gradient(circle at top right, rgba(183,148,255,0.08), transparent 30%),
+        linear-gradient(180deg, #09101d 0%, #0b1020 100%);
+      min-height: 100vh;
+    }
+    .wrap {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 24px;
+      display: grid;
+      gap: 20px;
+    }
+    .hero, .panel {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+    .hero {
+      padding: 28px;
+      display: grid;
+      gap: 16px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 18px rgba(110,231,255,0.65);
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 1.4rem + 2vw, 3.6rem);
+      line-height: 1.05;
+      max-width: 16ch;
+    }
+    .sub {
+      margin: 0;
+      max-width: 100ch;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 1.03rem;
+    }
+    .formula {
+      font-family: var(--mono);
+      color: #dce7ff;
+      font-size: 0.92rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+    }
+    .content {
+      display: grid;
+      grid-template-columns: 360px minmax(0, 1fr);
+      gap: 20px;
+      align-items: start;
+    }
+    .panel { padding: 18px; }
+    .controls {
+      display: grid;
+      gap: 16px;
+      position: sticky;
+      top: 20px;
+    }
+    .section-title {
+      margin: 0 0 10px;
+      font-size: 0.86rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .control-grid {
+      display: grid;
+      gap: 12px;
+    }
+    label {
+      display: grid;
+      gap: 8px;
+      font-size: 0.94rem;
+      color: #dce7ff;
+    }
+    select, button {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      padding: 12px 14px;
+      background: var(--panel-2);
+      color: var(--text);
+      font: inherit;
+    }
+    button {
+      cursor: pointer;
+      background: linear-gradient(135deg, rgba(110,231,255,0.15), rgba(183,148,255,0.16));
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+    button:hover {
+      transform: translateY(-1px);
+      border-color: rgba(110,231,255,0.45);
+    }
+    button:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .button-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .button-row.stack {
+      grid-template-columns: 1fr;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .swatch {
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .metric {
+      background: rgba(255,255,255,0.028);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px;
+      min-height: 94px;
+    }
+    .metric .name {
+      color: var(--muted);
+      font-size: 0.84rem;
+      margin-bottom: 8px;
+    }
+    .metric .value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .metric .hint {
+      color: var(--muted);
+      font-size: 0.83rem;
+      margin-top: 4px;
+    }
+    .viz-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(320px, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+    .viz-panel {
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 14px;
+    }
+    #graphSvg {
+      width: 100%;
+      height: 620px;
+      display: block;
+      border-radius: 14px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015)),
+        radial-gradient(circle at 50% 0%, rgba(110,231,255,0.09), transparent 40%);
+    }
+    .small-grid {
+      display: grid;
+      gap: 16px;
+    }
+    .chart-box {
+      background: rgba(255,255,255,0.024);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 12px;
+    }
+    .chart-box h3, .viz-panel h3 {
+      margin: 0 0 10px;
+      font-size: 0.98rem;
+    }
+    .chart-box p, .note, .callout {
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.92rem;
+      margin: 0;
+    }
+    .callout {
+      padding: 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(110,231,255,0.2);
+      background: rgba(110,231,255,0.06);
+    }
+    .status {
+      font-family: var(--mono);
+      font-size: 0.88rem;
+      color: #dce7ff;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.028);
+      border: 1px solid var(--border);
+      white-space: pre-wrap;
+    }
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    .table th, .table td {
+      padding: 10px 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      text-align: left;
+      vertical-align: top;
+    }
+    .table th { color: var(--muted); font-weight: 600; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.78rem;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.035);
+      color: #dce7ff;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+    .footer-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+    .muted { color: var(--muted); }
+    .good { color: var(--good); }
+    .warn { color: var(--warn); }
+    .bad { color: var(--bad); }
+    svg text {
+      font-family: var(--sans);
+      fill: var(--text);
+      user-select: none;
+    }
+    @media (max-width: 1100px) {
+      .content, .viz-grid { grid-template-columns: 1fr; }
+      .controls { position: static; }
+      .metrics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      #graphSvg { height: 520px; }
+    }
+    @media (max-width: 640px) {
+      .wrap { padding: 14px; }
+      .metrics-grid { grid-template-columns: 1fr; }
+      .button-row { grid-template-columns: 1fr; }
+      #graphSvg { height: 420px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="eyebrow"><span class="dot"></span>Scientific Topology Explorer</div>
+      <h1>Consciousness topology as a measurable graph hypothesis.</h1>
+      <p class="sub">
+        This standalone explorer compares three structural models — linear stream, 4D hypercube, and fractal branching — using computed graph-theoretic metrics rather than fixed narrative scores.
+        It is designed as a structural thought experiment: useful for measuring connectivity, routing efficiency, and resilience, but not as direct evidence that consciousness literally has any one topology.
+      </p>
+      <div class="formula">
+        <span>Density = 2E / N(N - 1)</span>
+        <span>Efficiency = mean(1 / d<sub>ij</sub>)</span>
+        <span>Clustering = local triangle closure</span>
+        <span>Diameter = max shortest-path distance</span>
+      </div>
+    </section>
+
+    <div class="content">
+      <aside class="controls panel">
+        <div>
+          <p class="section-title">Model selection</p>
+          <div class="control-grid">
+            <label>
+              Topology family
+              <select id="topologySelect">
+                <option value="linear">Linear Stream</option>
+                <option value="tesseract">Tesseract Hypercube (Q4)</option>
+                <option value="fractal">Fractal / Mycelial Branching</option>
+              </select>
+            </label>
+            <div class="button-row">
+              <button id="pulseBtn">Trace shortest path</button>
+              <button id="removeBtn">Random lesion</button>
+            </div>
+            <div class="button-row stack">
+              <button id="restoreBtn">Restore topology</button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="section-title">Legend</p>
+          <div class="legend">
+            <span class="legend-item"><span class="swatch" style="background: var(--node)"></span>Active node</span>
+            <span class="legend-item"><span class="swatch" style="background: var(--removed)"></span>Removed node</span>
+            <span class="legend-item"><span class="swatch" style="background: rgba(110,231,255,0.9)"></span>Traced path</span>
+          </div>
+        </div>
+
+        <div class="callout" id="interpretationBox"></div>
+
+        <div>
+          <p class="section-title">Status</p>
+          <div class="status" id="statusBox">Ready.</div>
+        </div>
+
+        <div>
+          <p class="section-title">Scientific notes</p>
+          <table class="table">
+            <thead>
+              <tr><th>Topology</th><th>Hypothesis role</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Linear</td><td>Sequential baseline with minimal branching and high path cost.</td></tr>
+              <tr><td>Tesseract</td><td>Uniform high-connectivity topology with short routes and balanced degree.</td></tr>
+              <tr><td>Fractal</td><td>Low wiring cost with hierarchical expansion, but possible bottleneck vulnerability.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </aside>
+
+      <main class="panel">
+        <div class="metrics-grid" id="metricsGrid"></div>
+
+        <div class="viz-grid">
+          <div class="viz-panel">
+            <h3>Topology map</h3>
+            <svg id="graphSvg" viewBox="0 0 980 620" aria-label="Topology graph visualization"></svg>
+          </div>
+
+          <div class="small-grid">
+            <div class="chart-box">
+              <h3>Degree distribution</h3>
+              <svg id="degreeChart" viewBox="0 0 320 180" width="100%" height="180"></svg>
+              <p class="note">Degree shows how many immediate transitions each state can access.</p>
+            </div>
+            <div class="chart-box">
+              <h3>Shortest-path histogram</h3>
+              <svg id="distanceChart" viewBox="0 0 320 180" width="100%" height="180"></svg>
+              <p class="note">Path-length counts summarize how quickly the topology routes information between states.</p>
+            </div>
+            <div class="chart-box">
+              <h3>Method boundary</h3>
+              <p class="note">
+                These metrics evaluate graph structure only. A graph can be efficient without corresponding to phenomenology, neural anatomy, or causal consciousness. Use this tool to compare models, not to claim proof.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px; display:grid; gap:12px;">
+          <div>
+            <p class="section-title">Derived comparison logic</p>
+            <div>
+              <span class="pill">Low average path length implies rapid multi-state reachability</span>
+              <span class="pill">High efficiency implies strong nonlocal routing potential</span>
+              <span class="pill">High clustering implies local closure and motif reuse</span>
+              <span class="pill">Low lesion robustness signals central bottlenecks</span>
+            </div>
+          </div>
+          <p class="footer-note">
+            A more scientific consciousness claim would require empirical state-transition data, explicit mechanisms, and failure conditions. This explorer improves the topology argument by turning it into a measurable graph comparison instead of a purely symbolic diagram.
+          </p>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const svg = document.getElementById('graphSvg');
+    const degreeChart = document.getElementById('degreeChart');
+    const distanceChart = document.getElementById('distanceChart');
+    const topologySelect = document.getElementById('topologySelect');
+    const pulseBtn = document.getElementById('pulseBtn');
+    const removeBtn = document.getElementById('removeBtn');
+    const restoreBtn = document.getElementById('restoreBtn');
+    const statusBox = document.getElementById('statusBox');
+    const interpretationBox = document.getElementById('interpretationBox');
+    const metricsGrid = document.getElementById('metricsGrid');
+
+    const TOPOLOGY_NOTES = {
+      linear: 'Linear stream is a sequential baseline: simple, interpretable, but structurally expensive for long-range transitions.',
+      tesseract: 'The hypercube keeps degree uniform and route lengths short, making it a strong candidate when parallel access matters more than Euclidean simplicity.',
+      fractal: 'Fractal branching is efficient for hierarchical expansion, but lesions near hub branches can strongly reduce global connectivity.'
+    };
+
+    function createGraph(kind) {
+      const nodes = [];
+      const edges = [];
+      const N = 16;
+      for (let i = 0; i < N; i++) nodes.push({ id: i, removed: false });
+
+      if (kind === 'linear') {
+        for (let i = 0; i < N - 1; i++) edges.push([i, i + 1]);
+      } else if (kind === 'tesseract') {
+        for (let i = 0; i < N; i++) {
+          for (let b = 0; b < 4; b++) {
+            const j = i ^ (1 << b);
+            if (i < j) edges.push([i, j]);
+          }
+        }
+      } else if (kind === 'fractal') {
+        const branchEdges = [
+          [0,1],[0,2],[0,3],
+          [1,4],[1,5],[2,6],[2,7],[3,8],[3,9],
+          [4,10],[4,11],[6,12],[6,13],[8,14],[8,15]
+        ];
+        branchEdges.forEach(e => edges.push(e));
+      }
+      return { kind, nodes, edges };
+    }
+
+    function computeLayout(graph) {
+      const pos = new Map();
+      if (graph.kind === 'linear') {
+        const y = 310;
+        graph.nodes.forEach((n, i) => pos.set(n.id, { x: 70 + i * 56, y }));
+      }
+      if (graph.kind === 'fractal') {
+        const coords = {
+          0:[490,90], 1:[250,180], 2:[490,180], 3:[730,180],
+          4:[160,290], 5:[320,290], 6:[410,290], 7:[570,290], 8:[650,290], 9:[810,290],
+          10:[120,420],11:[220,420],12:[360,420],13:[460,420],14:[610,420],15:[710,420]
+        };
+        graph.nodes.forEach(n => {
+          const c = coords[n.id] || [490,310];
+          pos.set(n.id, { x: c[0], y: c[1] });
+        });
+      }
+      if (graph.kind === 'tesseract') {
+        const base = [
+          [-1,-1,-1], [1,-1,-1], [-1,1,-1], [1,1,-1],
+          [-1,-1,1],  [1,-1,1],  [-1,1,1],  [1,1,1]
+        ];
+        const project = (x, y, z, offsetX, offsetY, scale) => ({
+          x: offsetX + (x * 110) + (z * 40) * scale,
+          y: offsetY + (y * 90) - (z * 28) * scale
+        });
+        for (let i = 0; i < 8; i++) {
+          const [x,y,z] = base[i];
+          pos.set(i, project(x,y,z, 360, 315, 1));
+          pos.set(i + 8, project(x,y,z, 620, 265, 1));
+        }
+      }
+      return pos;
+    }
+
+    function activeAdjacency(graph) {
+      const adj = new Map();
+      graph.nodes.forEach(n => { if (!n.removed) adj.set(n.id, new Set()); });
+      graph.edges.forEach(([a,b]) => {
+        const na = graph.nodes[a], nb = graph.nodes[b];
+        if (!na.removed && !nb.removed) {
+          adj.get(a).add(b);
+          adj.get(b).add(a);
+        }
+      });
+      return adj;
+    }
+
+    function bfs(adj, start) {
+      const q = [start];
+      const dist = new Map([[start, 0]]);
+      const parent = new Map([[start, null]]);
+      while (q.length) {
+        const u = q.shift();
+        for (const v of adj.get(u) || []) {
+          if (!dist.has(v)) {
+            dist.set(v, dist.get(u) + 1);
+            parent.set(v, u);
+            q.push(v);
+          }
+        }
+      }
+      return { dist, parent };
+    }
+
+    function connectedComponents(adj) {
+      const seen = new Set();
+      const comps = [];
+      for (const node of adj.keys()) {
+        if (seen.has(node)) continue;
+        const comp = [];
+        const q = [node];
+        seen.add(node);
+        while (q.length) {
+          const u = q.shift();
+          comp.push(u);
+          for (const v of adj.get(u) || []) {
+            if (!seen.has(v)) { seen.add(v); q.push(v); }
+          }
+        }
+        comps.push(comp);
+      }
+      return comps;
+    }
+
+    function computeMetrics(graph) {
+      const adj = activeAdjacency(graph);
+      const ids = [...adj.keys()];
+      const n = ids.length;
+      let m = 0;
+      adj.forEach(set => m += set.size);
+      m = m / 2;
+
+      const degrees = ids.map(id => adj.get(id).size);
+      const degreeHist = {};
+      degrees.forEach(d => degreeHist[d] = (degreeHist[d] || 0) + 1);
+
+      let pairCount = 0;
+      let reachablePairs = 0;
+      let pathSum = 0;
+      let efficiencySum = 0;
+      let diameter = 0;
+      const distanceHist = {};
+
+      const allParents = new Map();
+      ids.forEach(id => {
+        const result = bfs(adj, id);
+        allParents.set(id, result.parent);
+        for (const other of ids) {
+          if (id < other) {
+            pairCount++;
+            const d = result.dist.get(other);
+            if (Number.isFinite(d)) {
+              reachablePairs++;
+              pathSum += d;
+              efficiencySum += 1 / d;
+              diameter = Math.max(diameter, d);
+              distanceHist[d] = (distanceHist[d] || 0) + 1;
+            }
+          }
+        }
+      });
+
+      let clusteringAccum = 0;
+      ids.forEach(id => {
+        const neigh = [...adj.get(id)];
+        const k = neigh.length;
+        if (k < 2) return;
+        let linksBetweenNeighbors = 0;
+        for (let i = 0; i < k; i++) {
+          for (let j = i + 1; j < k; j++) {
+            if (adj.get(neigh[i]).has(neigh[j])) linksBetweenNeighbors++;
+          }
+        }
+        clusteringAccum += (2 * linksBetweenNeighbors) / (k * (k - 1));
+      });
+
+      const comps = connectedComponents(adj);
+      const largestComp = comps.length ? Math.max(...comps.map(c => c.length)) : 0;
+      const originalN = graph.nodes.length;
+      const lesionRobustness = originalN ? largestComp / originalN : 0;
+
+      return {
+        adj,
+        ids,
+        activeNodes: n,
+        removedNodes: originalN - n,
+        edges: m,
+        density: n > 1 ? (2 * m) / (n * (n - 1)) : 0,
+        avgPath: reachablePairs ? pathSum / reachablePairs : 0,
+        efficiency: pairCount ? efficiencySum / pairCount : 0,
+        diameter,
+        clustering: n ? clusteringAccum / n : 0,
+        meanDegree: n ? degrees.reduce((a,b) => a + b, 0) / n : 0,
+        pairCount,
+        reachablePairs,
+        connectivity: pairCount ? reachablePairs / pairCount : 1,
+        components: comps.length,
+        largestComponent: largestComp,
+        lesionRobustness,
+        degreeHist,
+        distanceHist,
+        allParents
+      };
+    }
+
+    function reconstructPath(parentMap, end) {
+      const path = [];
+      let current = end;
+      while (current !== null && current !== undefined) {
+        path.push(current);
+        current = parentMap.get(current);
+      }
+      return path.reverse();
+    }
+
+    function format(num, digits = 3) {
+      return Number.isFinite(num) ? Number(num).toFixed(digits) : '—';
+    }
+
+    function metricCards(metrics) {
+      const items = [
+        ['Active nodes', metrics.activeNodes, `${metrics.removedNodes} removed`],
+        ['Edges', metrics.edges, `${metrics.components} component(s)`],
+        ['Density', format(metrics.density, 3), 'Pairwise connection ratio'],
+        ['Mean degree', format(metrics.meanDegree, 2), 'Average immediate transitions'],
+        ['Avg shortest path', format(metrics.avgPath, 2), 'Lower means faster routing'],
+        ['Diameter', metrics.diameter, 'Longest shortest path'],
+        ['Global efficiency', format(metrics.efficiency, 3), 'Mean inverse distance'],
+        ['Clustering coefficient', format(metrics.clustering, 3), 'Local triangle closure']
+      ];
+      metricsGrid.innerHTML = items.map(([name, value, hint]) => `
+        <article class="metric">
+          <div class="name">${name}</div>
+          <div class="value">${value}</div>
+          <div class="hint">${hint}</div>
+        </article>
+      `).join('');
+    }
+
+    function clearSVG(el) {
+      while (el.firstChild) el.removeChild(el.firstChild);
+    }
+
+    function drawBarChart(svgEl, hist, xLabel) {
+      clearSVG(svgEl);
+      const svgNS = 'http://www.w3.org/2000/svg';
+      const width = 320, height = 180;
+      const keys = Object.keys(hist).map(Number).sort((a,b) => a - b);
+      const vals = keys.map(k => hist[k]);
+      const maxVal = Math.max(1, ...vals);
+      const margin = { top: 12, right: 12, bottom: 34, left: 28 };
+      const innerW = width - margin.left - margin.right;
+      const innerH = height - margin.top - margin.bottom;
+      const band = innerW / Math.max(keys.length, 1);
+
+      const bg = document.createElementNS(svgNS, 'rect');
+      bg.setAttribute('x', 0); bg.setAttribute('y', 0); bg.setAttribute('width', width); bg.setAttribute('height', height);
+      bg.setAttribute('fill', 'transparent');
+      svgEl.appendChild(bg);
+
+      for (let i = 0; i <= 3; i++) {
+        const y = margin.top + innerH * (i / 3);
+        const line = document.createElementNS(svgNS, 'line');
+        line.setAttribute('x1', margin.left); line.setAttribute('x2', width - margin.right);
+        line.setAttribute('y1', y); line.setAttribute('y2', y);
+        line.setAttribute('stroke', 'rgba(255,255,255,0.08)');
+        svgEl.appendChild(line);
+      }
+
+      keys.forEach((k, i) => {
+        const v = hist[k];
+        const barH = innerH * (v / maxVal);
+        const x = margin.left + i * band + band * 0.15;
+        const y = margin.top + innerH - barH;
+        const rect = document.createElementNS(svgNS, 'rect');
+        rect.setAttribute('x', x); rect.setAttribute('y', y);
+        rect.setAttribute('width', Math.max(10, band * 0.7)); rect.setAttribute('height', barH);
+        rect.setAttribute('rx', 8);
+        rect.setAttribute('fill', 'url(#gradBar)');
+        svgEl.appendChild(rect);
+
+        const label = document.createElementNS(svgNS, 'text');
+        label.setAttribute('x', x + Math.max(10, band * 0.35));
+        label.setAttribute('y', height - 12);
+        label.setAttribute('text-anchor', 'middle');
+        label.setAttribute('font-size', '12');
+        label.textContent = String(k);
+        svgEl.appendChild(label);
+      });
+
+      const defs = document.createElementNS(svgNS, 'defs');
+      const grad = document.createElementNS(svgNS, 'linearGradient');
+      grad.setAttribute('id', 'gradBar');
+      grad.setAttribute('x1', '0'); grad.setAttribute('x2', '0');
+      grad.setAttribute('y1', '0'); grad.setAttribute('y2', '1');
+      const s1 = document.createElementNS(svgNS, 'stop'); s1.setAttribute('offset', '0%'); s1.setAttribute('stop-color', '#6ee7ff');
+      const s2 = document.createElementNS(svgNS, 'stop'); s2.setAttribute('offset', '100%'); s2.setAttribute('stop-color', '#b794ff');
+      grad.appendChild(s1); grad.appendChild(s2); defs.appendChild(grad);
+      svgEl.insertBefore(defs, svgEl.firstChild);
+
+      const axisLabel = document.createElementNS(svgNS, 'text');
+      axisLabel.setAttribute('x', width / 2);
+      axisLabel.setAttribute('y', height - 2);
+      axisLabel.setAttribute('text-anchor', 'middle');
+      axisLabel.setAttribute('font-size', '12');
+      axisLabel.setAttribute('fill', '#9fb0d6');
+      axisLabel.textContent = xLabel;
+      svgEl.appendChild(axisLabel);
+    }
+
+    function drawGraph(graph, metrics, highlightPath = []) {
+      clearSVG(svg);
+      const svgNS = 'http://www.w3.org/2000/svg';
+      const pos = computeLayout(graph);
+      const highlightSet = new Set();
+      for (let i = 0; i < highlightPath.length - 1; i++) {
+        const a = highlightPath[i], b = highlightPath[i + 1];
+        highlightSet.add(`${Math.min(a,b)}-${Math.max(a,b)}`);
+      }
+
+      const title = document.createElementNS(svgNS, 'text');
+      title.setAttribute('x', 24); title.setAttribute('y', 30);
+      title.setAttribute('font-size', '16'); title.setAttribute('fill', '#9fb0d6');
+      title.textContent = 'Nodes are arranged with topology-specific coordinates instead of a force simulation so the structure itself remains interpretable.';
+      svg.appendChild(title);
+
+      graph.edges.forEach(([a,b]) => {
+        const pa = pos.get(a), pb = pos.get(b);
+        const key = `${Math.min(a,b)}-${Math.max(a,b)}`;
+        const line = document.createElementNS(svgNS, 'line');
+        line.setAttribute('x1', pa.x); line.setAttribute('y1', pa.y);
+        line.setAttribute('x2', pb.x); line.setAttribute('y2', pb.y);
+        line.setAttribute('stroke', highlightSet.has(key) ? 'var(--edge-strong)' : 'var(--edge)');
+        line.setAttribute('stroke-width', highlightSet.has(key) ? '4' : '2');
+        line.setAttribute('stroke-linecap', 'round');
+        line.setAttribute('opacity', (graph.nodes[a].removed || graph.nodes[b].removed) ? '0.15' : '1');
+        svg.appendChild(line);
+      });
+
+      graph.nodes.forEach(node => {
+        const p = pos.get(node.id);
+        const g = document.createElementNS(svgNS, 'g');
+
+        const circle = document.createElementNS(svgNS, 'circle');
+        circle.setAttribute('cx', p.x); circle.setAttribute('cy', p.y);
+        circle.setAttribute('r', graph.kind === 'tesseract' ? '18' : '16');
+        circle.setAttribute('fill', node.removed ? 'var(--removed)' : 'var(--node)');
+        circle.setAttribute('fill-opacity', node.removed ? '0.45' : '0.95');
+        circle.setAttribute('stroke', highlightPath.includes(node.id) ? '#ffffff' : 'rgba(255,255,255,0.18)');
+        circle.setAttribute('stroke-width', highlightPath.includes(node.id) ? '3' : '1.5');
+        g.appendChild(circle);
+
+        const label = document.createElementNS(svgNS, 'text');
+        label.setAttribute('x', p.x); label.setAttribute('y', p.y + 4);
+        label.setAttribute('text-anchor', 'middle');
+        label.setAttribute('font-size', graph.kind === 'tesseract' ? '10' : '12');
+        label.setAttribute('font-family', 'var(--mono)');
+        label.textContent = graph.kind === 'tesseract' ? node.id.toString(2).padStart(4, '0') : String(node.id);
+        g.appendChild(label);
+
+        if (graph.kind === 'tesseract') {
+          const tag = document.createElementNS(svgNS, 'text');
+          tag.setAttribute('x', p.x); tag.setAttribute('y', p.y + 30);
+          tag.setAttribute('text-anchor', 'middle');
+          tag.setAttribute('font-size', '10');
+          tag.setAttribute('fill', '#9fb0d6');
+          tag.textContent = `deg ${metrics.adj.has(node.id) ? metrics.adj.get(node.id).size : 0}`;
+          g.appendChild(tag);
+        }
+        svg.appendChild(g);
+      });
+    }
+
+    function choosePath(graph, metrics) {
+      const ids = metrics.ids;
+      if (ids.length < 2) return [];
+      for (let tries = 0; tries < 24; tries++) {
+        const a = ids[Math.floor(Math.random() * ids.length)];
+        const result = bfs(metrics.adj, a);
+        const reachable = ids.filter(x => x !== a && result.dist.has(x));
+        if (!reachable.length) continue;
+        const b = reachable[Math.floor(Math.random() * reachable.length)];
+        return reconstructPath(result.parent, b);
+      }
+      return [];
+    }
+
+    function animatePath(graph, path) {
+      if (path.length < 2) return;
+      const pos = computeLayout(graph);
+      const points = path.map(id => pos.get(id));
+      const svgNS = 'http://www.w3.org/2000/svg';
+      const pulse = document.createElementNS(svgNS, 'circle');
+      pulse.setAttribute('r', '8');
+      pulse.setAttribute('fill', '#ffb86b');
+      pulse.setAttribute('stroke', '#fff');
+      pulse.setAttribute('stroke-width', '1.5');
+      svg.appendChild(pulse);
+
+      const segments = [];
+      let total = 0;
+      for (let i = 0; i < points.length - 1; i++) {
+        const a = points[i], b = points[i + 1];
+        const len = Math.hypot(b.x - a.x, b.y - a.y);
+        segments.push({ a, b, len });
+        total += len;
+      }
+      const duration = 1700;
+      const start = performance.now();
+
+      function frame(now) {
+        const t = Math.min(1, (now - start) / duration);
+        let target = t * total;
+        let current = segments[0];
+        for (const seg of segments) {
+          if (target <= seg.len) { current = seg; break; }
+          target -= seg.len;
+        }
+        const ratio = current.len ? target / current.len : 0;
+        const x = current.a.x + (current.b.x - current.a.x) * ratio;
+        const y = current.a.y + (current.b.y - current.a.y) * ratio;
+        pulse.setAttribute('cx', x);
+        pulse.setAttribute('cy', y);
+        if (t < 1) requestAnimationFrame(frame);
+        else setTimeout(() => pulse.remove(), 250);
+      }
+      requestAnimationFrame(frame);
+    }
+
+    function updateInterpretation(kind, metrics) {
+      const efficiencyRank = metrics.efficiency > 0.55 ? 'high' : metrics.efficiency > 0.35 ? 'moderate' : 'low';
+      const robustRank = metrics.lesionRobustness > 0.75 ? 'high' : metrics.lesionRobustness > 0.5 ? 'moderate' : 'low';
+      interpretationBox.innerHTML = `
+        <strong>${topologySelect.options[topologySelect.selectedIndex].text}</strong><br>
+        ${TOPOLOGY_NOTES[kind]}<br><br>
+        Current interpretation: routing efficiency is <strong>${efficiencyRank}</strong>, lesion robustness is <strong>${robustRank}</strong>, and connectivity ratio is <strong>${format(metrics.connectivity, 3)}</strong>.
+      `;
+    }
+
+    let currentGraph = createGraph('linear');
+    let currentMetrics = computeMetrics(currentGraph);
+
+    function render(path = []) {
+      currentMetrics = computeMetrics(currentGraph);
+      metricCards(currentMetrics);
+      drawGraph(currentGraph, currentMetrics, path);
+      drawBarChart(degreeChart, currentMetrics.degreeHist, 'Degree');
+      drawBarChart(distanceChart, currentMetrics.distanceHist, 'Shortest-path distance');
+      updateInterpretation(currentGraph.kind, currentMetrics);
+      statusBox.textContent = [
+        `Topology: ${topologySelect.options[topologySelect.selectedIndex].text}`,
+        `Active nodes: ${currentMetrics.activeNodes} / ${currentGraph.nodes.length}`,
+        `Reachable pairs: ${currentMetrics.reachablePairs} / ${currentMetrics.pairCount}`,
+        `Largest component ratio: ${format(currentMetrics.lesionRobustness, 3)}`
+      ].join('\n');
+      restoreBtn.disabled = currentMetrics.removedNodes === 0;
+    }
+
+    topologySelect.addEventListener('change', () => {
+      currentGraph = createGraph(topologySelect.value);
+      render();
+    });
+
+    pulseBtn.addEventListener('click', () => {
+      const path = choosePath(currentGraph, currentMetrics);
+      render(path);
+      if (path.length >= 2) {
+        animatePath(currentGraph, path);
+        statusBox.textContent += `\nTraced path: ${path.join(' -> ')}`;
+      } else {
+        statusBox.textContent += '\nNo valid path found.';
+      }
+    });
+
+    removeBtn.addEventListener('click', () => {
+      const candidates = currentGraph.nodes.filter(n => !n.removed);
+      if (!candidates.length) return;
+      const chosen = candidates[Math.floor(Math.random() * candidates.length)];
+      chosen.removed = true;
+      render();
+      statusBox.textContent += `\nLesion applied at node ${currentGraph.kind === 'tesseract' ? chosen.id.toString(2).padStart(4,'0') : chosen.id}.`;
+    });
+
+    restoreBtn.addEventListener('click', () => {
+      currentGraph.nodes.forEach(n => n.removed = false);
+      render();
+      statusBox.textContent += '\nTopology restored to baseline.';
+    });
+
+    render();
+  </script>
+</body>
+</html>
