@@ -190,14 +190,14 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          load: true
-          tags: tmt-os-quantum:local
+          outputs: type=docker,dest=${{ runner.temp }}/tmt-os-quantum.tar
 
       - name: 🔍 Scan Docker Image with Trivy
         uses: aquasecurity/trivy-action@master
         continue-on-error: ${{ github.event_name == 'push' || github.event_name == 'pull_request' }}
         with:
-          image-ref: 'tmt-os-quantum:local'
+          scan-type: 'image'
+          input: '${{ runner.temp }}/tmt-os-quantum.tar'
           format: 'sarif'
           output: 'trivy-docker-results.sarif'
           severity: 'CRITICAL,HIGH'
