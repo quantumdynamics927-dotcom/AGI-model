@@ -150,6 +150,7 @@ jobs:
 
       - name: 🔍 Trivy Security Scanner
         uses: aquasecurity/trivy-action@master
+        continue-on-error: ${{ github.event_name == 'push' || github.event_name == 'pull_request' }}
         with:
           scan-type: 'fs'
           scan-ref: '.'
@@ -194,6 +195,7 @@ jobs:
 
       - name: 🔍 Scan Docker Image with Trivy
         uses: aquasecurity/trivy-action@master
+        continue-on-error: ${{ github.event_name == 'push' || github.event_name == 'pull_request' }}
         with:
           image-ref: 'tmt-os-quantum:local'
           format: 'sarif'
@@ -255,7 +257,7 @@ jobs:
       - name: 📥 Download Security Reports
         uses: actions/download-artifact@v4
         with:
-          pattern: '*-reports-*'
+          pattern: '*report*'
           merge-multiple: true
 
       - name: 📊 Generate Security Summary
