@@ -119,31 +119,57 @@ class QuantumMetatronProcessor:
         Compute von Neumann entanglement entropy
         S = -Tr(ρ log ρ) for reduced density matrix
         
+        Properly implements partial trace over bipartite system:
+        1. Reshape state vector into bipartite form
+        2. Compute partial trace over subsystem B
+        3. Ensure eigenvalues are valid probabilities
+        
         Args:
             amplitudes: (N, D) quantum amplitudes
             
         Returns:
-            entropy: Entanglement entropy
+            entropy: Entanglement entropy (always non-negative)
         """
-        # Construct density matrix ρ = |ψ⟩⟨ψ|
+        # Flatten amplitudes to get state vector |ψ⟩
         psi = amplitudes.flatten()
-        rho = np.outer(psi, psi.conj())
-        
-        # Trace over half the system (molecular bipartition)
         n_total = len(psi)
-        n_half = n_total // 2
         
-        # Reduced density matrix (simplified - trace over second half)
-        rho_reduced = np.zeros((n_half, n_half), dtype=complex)
-        for i in range(n_half):
-            for j in range(n_half):
-                rho_reduced[i, j] = rho[i, j]
+        # Reshape into bipartite form: |ψ⟩ = Σᵢⱼ ψᵢⱼ |i⟩_A ⊗ |j⟩_B
+        # Find dimensions that factor nicely
+        d_A = int(np.sqrt(n_total))
+        while n_total % d_A != 0 and d_A > 1:
+            d_A -= 1
+        d_B = n_total // d_A
         
-        # Eigenvalues
-        eigenvalues = np.linalg.eigvalsh(rho_reduced)
+        # Reshape state vector into matrix form (d_A × d_B)
+        # This represents the Schmidt decomposition coefficients
+        psi_matrix = psi.reshape(d_A, d_B)
+        
+        # For a pure state |ψ⟩, the reduced density matrix is:
+        # ρ_A = ψ_matrix @ ψ_matrix† (partial trace over B)
+        # This is equivalent to Tr_B(|ψ⟩⟨ψ|)
+        rho_A = psi_matrix @ psi_matrix.conj().T
+        
+        # Ensure Hermitian (should be by construction, but numerical safety)
+        rho_A = (rho_A + rho_A.conj().T) / 2
+        
+        # Normalize to ensure trace = 1
+        trace = np.trace(rho_A)
+        if trace > 1e-10:
+            rho_A = rho_A / trace
+        
+        # Compute eigenvalues of reduced density matrix
+        eigenvalues = np.linalg.eigvalsh(rho_A)
+        
+        # Ensure eigenvalues are valid probabilities (≥ 0, sum ≤ 1)
+        eigenvalues = np.maximum(eigenvalues, 0)  # Clip negative values
         eigenvalues = eigenvalues[eigenvalues > 1e-10]  # Remove numerical zeros
         
-        # Von Neumann entropy
+        # Renormalize to ensure they sum to 1
+        eigenvalues = eigenvalues / (np.sum(eigenvalues) + 1e-10)
+        
+        # Von Neumann entropy: S = -Σ λᵢ log(λᵢ)
+        # Always non-negative for valid density matrix
         entropy = -np.sum(eigenvalues * np.log(eigenvalues + 1e-10))
         
         return float(entropy)
