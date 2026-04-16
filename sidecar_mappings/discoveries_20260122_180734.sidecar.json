@@ -1,28 +1,3 @@
-{
-  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\data\\external_imports\\autonomous_data_20260405\\autonomous_data\\discoveries_20260122_180734.json",
-  "generated_at": "2026-04-15T22:54:26.472962",
-  "registry_version": "1.0.0",
-  "total_fields": 1,
-  "field_breakdown": {
-    "metadata": 1
-  },
-  "metric_breakdown": {},
-  "mappings": [
-    {
-      "original_path": "total_discoveries",
-      "field_name": "total_discoveries",
-      "field_class": "metadata",
-      "canonical_name": null,
-      "governance_status": null,
-      "metric_class": null,
-      "valid_range": null,
-      "value": 0.0,
-      "is_valid": true,
-      "issues": [],
-      "alias_chain": [
-        "total_discoveries"
-      ]
-    }
-  ],
-  "unresolved_high_frequency": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:06ce90cce59bdecc296f39b6748c78e6ab9153d68759d699d08352fc067ec201
+size 782

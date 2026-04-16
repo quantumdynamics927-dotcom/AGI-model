@@ -1,13 +1,3 @@
-{
-  "name": "Grover_Phi_Search",
-  "qubits": 5,
-  "depth": 50,
-  "gates": {
-    "x": 64,
-    "h": 61,
-    "mcx": 8,
-    "measure": 5,
-    "barrier": 1
-  },
-  "timestamp": "2026-01-05T01:11:19.565527"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f5acb3ce8d58080614aa63a5c532445a848b32b7bb436547c5ff88c1f45939e1
+size 213

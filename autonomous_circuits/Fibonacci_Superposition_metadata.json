@@ -1,13 +1,3 @@
-{
-  "name": "Fibonacci_Superposition",
-  "qubits": 13,
-  "depth": 4,
-  "gates": {
-    "h": 13,
-    "p": 13,
-    "measure": 13,
-    "qft": 1,
-    "barrier": 1
-  },
-  "timestamp": "2026-01-05T01:11:16.757174"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a72237bc81b3867d784b238cc10bfac4ecff580f3a6c7eb5b4d1a6c24a1afc3a
+size 220

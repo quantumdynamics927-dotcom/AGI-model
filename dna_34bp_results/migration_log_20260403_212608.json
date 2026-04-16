@@ -1,24 +1,3 @@
-{
-  "migration_timestamp": "2026-04-03T21:26:08.459443",
-  "files_migrated": [
-    {
-      "original": "dna_34bp_results\\dna_agent_report_20260310_210905.json",
-      "migrated_to": "dna_34bp_results\\reconstructed\\dna_agent_reconstructed_migrated_20260310_210905.json",
-      "classification": "reconstructed",
-      "hash": "c3edab1be0ee88b8"
-    },
-    {
-      "original": "dna_34bp_results\\dna_agent_report_20260403_204731.json",
-      "migrated_to": "dna_34bp_results\\reconstructed\\dna_agent_reconstructed_migrated_20260403_204731.json",
-      "classification": "reconstructed",
-      "hash": "e9dd1a36c7398776"
-    },
-    {
-      "original": "dna_34bp_results\\dna_agent_report_20260403_204842.json",
-      "migrated_to": "dna_34bp_results\\reconstructed\\dna_agent_reconstructed_migrated_20260403_204842.json",
-      "classification": "reconstructed",
-      "hash": "7c9b4b4cab460b88"
-    }
-  ],
-  "files_failed": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5fa258d33a1563283f10c3a76c0c851dba0323fe82bc9c84276897242c559790
+size 953

@@ -1,18 +1,3 @@
-{
-  "migration_timestamp": "2026-04-03T21:23:11.403390",
-  "files_migrated": [],
-  "files_failed": [
-    {
-      "file": "dna_34bp_results\\dna_agent_report_20260310_210905.json",
-      "error": "name 'base_output_dir' is not defined"
-    },
-    {
-      "file": "dna_34bp_results\\dna_agent_report_20260403_204731.json",
-      "error": "name 'base_output_dir' is not defined"
-    },
-    {
-      "file": "dna_34bp_results\\dna_agent_report_20260403_204842.json",
-      "error": "name 'base_output_dir' is not defined"
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a5749e58db9a1a08e8a3d51a8c775cd3ac2fb93c2c9bce617d9f00acfdf45cb9
+size 545

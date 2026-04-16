@@ -1,13 +1,3 @@
-{
-  "name": "Entanglement_Web",
-  "qubits": 20,
-  "depth": 40,
-  "gates": {
-    "cx": 108,
-    "h": 20,
-    "p": 20,
-    "measure": 20,
-    "barrier": 1
-  },
-  "timestamp": "2026-01-05T01:11:17.497690"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2142f33751c2d615ce73dca9796bb8a4bc6b3b33d222420cabd64dde36464550
+size 215

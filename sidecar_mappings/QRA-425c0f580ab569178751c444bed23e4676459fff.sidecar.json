@@ -1,28 +1,3 @@
-{
-  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\archive\\QRA-425c0f580ab569178751c444bed23e4676459fff.json",
-  "generated_at": "2026-04-15T22:54:19.934055",
-  "registry_version": "1.0.0",
-  "total_fields": 1,
-  "field_breakdown": {
-    "metadata": 1
-  },
-  "metric_breakdown": {},
-  "mappings": [
-    {
-      "original_path": "fingerprint.timestamp",
-      "field_name": "fingerprint.timestamp",
-      "field_class": "metadata",
-      "canonical_name": null,
-      "governance_status": null,
-      "metric_class": null,
-      "valid_range": null,
-      "value": 1775782745.433099,
-      "is_valid": true,
-      "issues": [],
-      "alias_chain": [
-        "fingerprint.timestamp"
-      ]
-    }
-  ],
-  "unresolved_high_frequency": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:75c48c17ac41bcf0b667787bdd3cbca1245d4f1d8ddae27d3313533cb180b2fc
+size 767

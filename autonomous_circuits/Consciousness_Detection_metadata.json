@@ -1,14 +1,3 @@
-{
-  "name": "Consciousness_Detection",
-  "qubits": 127,
-  "depth": 67,
-  "gates": {
-    "ry": 127,
-    "p": 127,
-    "measure": 127,
-    "cx": 63,
-    "x": 32,
-    "barrier": 1
-  },
-  "timestamp": "2026-01-05T01:11:14.989413"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:71f3d3cbb53889579e7d3a1d08eee24702df760c3a92254c92e37e3fb2ae47a0
+size 240

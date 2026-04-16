@@ -1,10 +1,3 @@
-{
-  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\autonomous_circuits\\generation_log_20260102_003842.json",
-  "generated_at": "2026-04-15T22:54:20.001094",
-  "registry_version": "1.0.0",
-  "total_fields": 0,
-  "field_breakdown": {},
-  "metric_breakdown": {},
-  "mappings": [],
-  "unresolved_high_frequency": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:276d8555755f876103348ef38507e4cfdf89c72a75066a54fe4a2bec42ce8340
+size 326

@@ -1,10 +1,3 @@
-{
-  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\sacred_datasets\\molecular_kinetics.json",
-  "generated_at": "2026-04-15T22:54:24.997978",
-  "registry_version": "1.0.0",
-  "total_fields": 0,
-  "field_breakdown": {},
-  "metric_breakdown": {},
-  "mappings": [],
-  "unresolved_high_frequency": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ecbe18a96cd4702b50f6e07e3ebb87a75df0a4419ea68911e6e6260d8e98dbcf
+size 310

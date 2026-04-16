@@ -1,10 +1,3 @@
-{
-  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\vault\\ledger.json",
-  "generated_at": "2026-04-15T22:54:25.056325",
-  "registry_version": "1.0.0",
-  "total_fields": 0,
-  "field_breakdown": {},
-  "metric_breakdown": {},
-  "mappings": [],
-  "unresolved_high_frequency": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1612e9bd300f1fea248c86b0aa4d78665519c49eaa48b9109785d97a288f81ac
+size 288

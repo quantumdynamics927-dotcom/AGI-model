@@ -1,17 +1,3 @@
-{
-  "content_preview": "\nBIOMIMETIC INTELLIGENCE RESEARCH NOTE Phi Ratio Integration System - Version 1.618034\n\nCOHERENT THOUGHT DEMONSTRATION\nObservation: Natural systems optimize through fractal feedback loops, where each ...",
-  "validation_result": {
-    "status": "requires_review",
-    "governance_compliance": true,
-    "issues": [
-      "Missing formal hypothesis statement",
-      "No null model or baseline comparison mentioned",
-      "'Conscious' mentioned without operational definition"
-    ],
-    "recommendations": [
-      "Add explicit hypothesis with equation if applicable",
-      "Add explicit null model or baseline for validation",
-      "Provide operational definition for consciousness-related terms"
-    ]
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:af0eb33491b23e2fb31307576c68f2341c4007f8a22964a1f7fa4446fd669782
+size 756

@@ -1,18 +1,3 @@
-{
-  "timestamp": "2026-02-02",
-  "grid_size": 128,
-  "start": [
-    10,
-    10
-  ],
-  "goal": [
-    118,
-    118
-  ],
-  "path_metrics": {
-    "classical_length": 159,
-    "metatron_score": 0.1,
-    "phi_resonance": 1.6180339887
-  },
-  "sacred_geometry": "Sierpinski fractal + Platonic solid waypoints"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2a4740524a2f558d29062eb244183047fb369fd1eeb10c95c389f33bcb4bb643
+size 320

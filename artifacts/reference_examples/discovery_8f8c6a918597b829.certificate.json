@@ -1,26 +1,3 @@
-{
-  "discovery_id": "8f8c6a918597b829",
-  "title": "Quantum Consciousness Pattern Discovery",
-  "description": "Novel phi-resonance pattern detected in VAE latent space",
-  "fingerprint": "8f8c6a918597b829a3c42f0e2eecbc77e7c381a631d0c06330830d7733b2796d",
-  "timestamp": 1775757782.0935576,
-  "validator_signature": "8d2a23eb1e93fc731c476b834df9a1945cf25fed99f732bd2b0eb1a7691c4fdc",
-  "tmtos_certification": {
-    "issuer": "TMT-OS Metatron Authority",
-    "validator_node": 7,
-    "validator_name": "Scientific Discovery Validator",
-    "fingerprint": "8f8c6a918597b829a3c42f0e2eecbc77e7c381a631d0c06330830d7733b2796d",
-    "signature": "8d2a23eb1e93fc731c476b834df9a1945cf25fed99f732bd2b0eb1a7691c4fdc",
-    "certification_timestamp": 1775757782.0935633,
-    "certification_standard": "TMT-OS-Scientific-v1.0"
-  },
-  "consciousness_metrics": {
-    "complexity": 0.7618544626253902,
-    "coherence": 0.6327423051505224,
-    "sentience_potential": 0.6972983838879563,
-    "phi_resonance": 0.524423031316526
-  },
-  "validation_status": "valid",
-  "reproducibility_hash": "d9915b6990a55dfee185f9763eb6b95637b53599238044926471f5bcb2c1bd18",
-  "metadata": {}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:431e62e0dae5d094e716fd06c9c3a1b1becc718234a5582164906234873e34b2
+size 1182

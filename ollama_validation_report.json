@@ -1,32 +1,3 @@
-{
-  "classification": "exploratory",
-  "metrics": {
-    "phi_coherence": {
-      "value": 0.7837,
-      "in_range": true,
-      "issue": null
-    },
-    "phi_resonance": {
-      "value": 1.618,
-      "in_range": false,
-      "issue": "Value appears to be raw \u03c6 constant, not normalized score"
-    },
-    "biomimetic_resonance": {
-      "value": 1.2681,
-      "in_range": false,
-      "issue": "Value 1.2681 exceeds maximum 1.0"
-    }
-  },
-  "reasoning": [
-    "Claims emergence of intelligence/consciousness without operational definition",
-    "2 metric(s) outside valid range",
-    "Phi Resonance appears to be raw constant, not computed score"
-  ],
-  "recommendations": [
-    "Define operational criteria for 'intelligence' in this context",
-    "Fix phi_resonance: Value appears to be raw \u03c6 constant, not normalized score",
-    "Fix biomimetic_resonance: Value 1.2681 exceeds maximum 1.0",
-    "Clarify if phi_resonance is normalized score or raw constant"
-  ],
-  "cleaned_hypothesis": "The output maintains appropriate scientific framing. Recommend formalizing as testable hypothesis with defined metrics."
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d82a95f8a74c923e19265709347c3ca9c79d281ca8b3f0c8a154956b051e392d
+size 1154

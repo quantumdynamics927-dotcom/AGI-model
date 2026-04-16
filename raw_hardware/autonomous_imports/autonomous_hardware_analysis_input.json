@@ -1,26 +1,3 @@
-{
-  "generated_at": "2026-04-05T00:32:13.288822",
-  "source": "autonomous_data_import",
-  "jobs": [
-    {
-      "job_id": "d569cg1smlfc739hftlg",
-      "processor": "IBM Torino (133 qubits)",
-      "circuit": "dna_helix_10bp_1turns",
-      "qubits": 40,
-      "depth": 18,
-      "gates": 272,
-      "execution_date": "2025-12-25T01:48:17Z",
-      "structural_entropy": 3.68
-    },
-    {
-      "job_id": "d569aj3ht8fs73a1ju6g",
-      "processor": "IBM Fez (156 qubits)",
-      "circuit": "dna_helix_20bp_2turns",
-      "qubits": 80,
-      "depth": 36,
-      "gates": 544,
-      "execution_date": "2025-12-25T02:15:33Z",
-      "structural_entropy": 3.71
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fd6bba948fa3d0f95be855e74d5fa22e8e697049fe883013b9ffb0b4f44f55cf
+size 688
