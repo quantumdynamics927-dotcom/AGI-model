@@ -1,0 +1,937 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\tmt_os_panel_results\\reconstructed\\promoter_TP53_20260404_001227.json",
+  "generated_at": "2026-04-15T22:54:25.106214",
+  "registry_version": "1.0.0",
+  "total_fields": 53,
+  "field_breakdown": {
+    "metadata": 26,
+    "metric": 21,
+    "parameter": 4,
+    "descriptor": 2
+  },
+  "metric_breakdown": {
+    "validated": 7,
+    "provisional": 3,
+    "unknown": 11
+  },
+  "mappings": [
+    {
+      "original_path": "sequence_length",
+      "field_name": "sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "sequence_length"
+      ]
+    },
+    {
+      "original_path": "gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6129032258064516,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "encoding.length",
+      "field_name": "encoding.length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "encoding.length"
+      ]
+    },
+    {
+      "original_path": "encoding.qubit_count",
+      "field_name": "encoding.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "encoding.qubit_count"
+      ]
+    },
+    {
+      "original_path": "encoding.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6129032258064516,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "encoding.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "encoding.phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 1.215495688017731,
+      "is_valid": false,
+      "issues": [
+        "Value 1.215495688017731 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "encoding.phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "circuit.qubits",
+      "field_name": "qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "circuit.qubits"
+      ]
+    },
+    {
+      "original_path": "circuit.circuit_depth",
+      "field_name": "circuit.circuit_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 55.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "circuit.circuit_depth"
+      ]
+    },
+    {
+      "original_path": "circuit.total_gates",
+      "field_name": "circuit.total_gates",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 229.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "circuit.total_gates"
+      ]
+    },
+    {
+      "original_path": "circuit.consciousness_position",
+      "field_name": "circuit.consciousness_position",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 20.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "circuit.consciousness_position",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "circuit.total_shots",
+      "field_name": "circuit.total_shots",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "circuit.total_shots"
+      ]
+    },
+    {
+      "original_path": "circuit.unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 113.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "circuit.unique_states"
+      ]
+    },
+    {
+      "original_path": "circuit.hamming_weight.mean",
+      "field_name": "circuit.hamming_weight.mean",
+      "field_class": "metric",
+      "canonical_name": "hamming_weight",
+      "governance_status": "validated",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0,
+        null
+      ],
+      "value": 4.585032062323178,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "circuit.hamming_weight.mean",
+        "resolved:hamming_weight"
+      ]
+    },
+    {
+      "original_path": "circuit.hamming_weight.expected",
+      "field_name": "circuit.hamming_weight.expected",
+      "field_class": "metric",
+      "canonical_name": "hamming_weight",
+      "governance_status": "validated",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0,
+        null
+      ],
+      "value": 51.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "circuit.hamming_weight.expected",
+        "resolved:hamming_weight"
+      ]
+    },
+    {
+      "original_path": "circuit.hamming_weight.deviation",
+      "field_name": "circuit.hamming_weight.deviation",
+      "field_class": "metric",
+      "canonical_name": "hamming_weight",
+      "governance_status": "validated",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0,
+        null
+      ],
+      "value": -46.41496793767682,
+      "is_valid": false,
+      "issues": [
+        "Value -46.41496793767682 < minimum 0"
+      ],
+      "alias_chain": [
+        "circuit.hamming_weight.deviation",
+        "resolved:hamming_weight"
+      ]
+    },
+    {
+      "original_path": "circuit.phi_alignment.total_score",
+      "field_name": "circuit.phi_alignment.total_score",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2702.33079907861,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "circuit.phi_alignment.total_score"
+      ]
+    },
+    {
+      "original_path": "circuit.phi_alignment.peak_position",
+      "field_name": "circuit.phi_alignment.peak_position",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 20.0,
+      "is_valid": false,
+      "issues": [
+        "Value 20.0 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "circuit.phi_alignment.peak_position",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "circuit.entropy.shannon",
+      "field_name": "circuit.entropy.shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.706175159194664,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "circuit.entropy.shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "circuit.entropy.normalized",
+      "field_name": "circuit.entropy.normalized",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8778731014145637,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "circuit.entropy.normalized",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "circuit.reproducibility.base_seed",
+      "field_name": "circuit.reproducibility.base_seed",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 42.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "circuit.reproducibility.base_seed",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "circuit.reproducibility.sequence_derived_seed",
+      "field_name": "circuit.reproducibility.sequence_derived_seed",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2910602787.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "circuit.reproducibility.sequence_derived_seed"
+      ]
+    },
+    {
+      "original_path": "circuit.reproducibility.combined_seed",
+      "field_name": "circuit.reproducibility.combined_seed",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2910602829.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "circuit.reproducibility.combined_seed",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "circuit.reproducibility.simulation_parameters.total_shots",
+      "field_name": "circuit.reproducibility.simulation_parameters.total_shots",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "circuit.reproducibility.simulation_parameters.total_shots"
+      ]
+    },
+    {
+      "original_path": "circuit.reproducibility.simulation_parameters.phi",
+      "field_name": "circuit.reproducibility.simulation_parameters.phi",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "circuit.reproducibility.simulation_parameters.phi"
+      ]
+    },
+    {
+      "original_path": "circuit.reproducibility.simulation_parameters.phi_inv",
+      "field_name": "circuit.reproducibility.simulation_parameters.phi_inv",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6180339887498948,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "circuit.reproducibility.simulation_parameters.phi_inv"
+      ]
+    },
+    {
+      "original_path": "circuit.reproducibility.simulation_parameters.consciousness_position",
+      "field_name": "circuit.reproducibility.simulation_parameters.consciousness_position",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 20.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "circuit.reproducibility.simulation_parameters.consciousness_position"
+      ]
+    },
+    {
+      "original_path": "circuit.reproducibility.simulation_parameters.peak_factor",
+      "field_name": "circuit.reproducibility.simulation_parameters.peak_factor",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.1129032258064515,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "circuit.reproducibility.simulation_parameters.peak_factor"
+      ]
+    },
+    {
+      "original_path": "circuit.reproducibility.simulation_parameters.fib_boost",
+      "field_name": "circuit.reproducibility.simulation_parameters.fib_boost",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.3838709677419354,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "circuit.reproducibility.simulation_parameters.fib_boost"
+      ]
+    },
+    {
+      "original_path": "circuit.reproducibility.simulation_parameters.beta_a",
+      "field_name": "circuit.reproducibility.simulation_parameters.beta_a",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.1129032258064515,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "circuit.reproducibility.simulation_parameters.beta_a"
+      ]
+    },
+    {
+      "original_path": "circuit.reproducibility.simulation_parameters.beta_b",
+      "field_name": "circuit.reproducibility.simulation_parameters.beta_b",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.8870967741935485,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "circuit.reproducibility.simulation_parameters.beta_b"
+      ]
+    },
+    {
+      "original_path": "circuit.reproducibility.simulation_parameters.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6129032258064516,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "circuit.reproducibility.simulation_parameters.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "metrics.qubit_count",
+      "field_name": "metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "metrics.circuit_depth",
+      "field_name": "metrics.circuit_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 55.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "metrics.circuit_depth"
+      ]
+    },
+    {
+      "original_path": "metrics.total_gates",
+      "field_name": "metrics.total_gates",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 229.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "metrics.total_gates"
+      ]
+    },
+    {
+      "original_path": "metrics.unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 113.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "metrics.unique_states"
+      ]
+    },
+    {
+      "original_path": "metrics.hamming_mean",
+      "field_name": "metrics.hamming_mean",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.585032062323178,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "metrics.hamming_mean",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "metrics.phi_alignment_score",
+      "field_name": "metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2702.33079907861,
+      "is_valid": false,
+      "issues": [
+        "Value 2702.33079907861 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "metrics.phi_peak_position",
+      "field_name": "metrics.phi_peak_position",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 20.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "metrics.phi_peak_position",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "metrics.entropy_shannon",
+      "field_name": "metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.706175159194664,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "metrics.entropy_normalized",
+      "field_name": "metrics.entropy_normalized",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8778731014145637,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "metrics.entropy_normalized",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "artifact_metadata.lineage_depth",
+      "field_name": "artifact_metadata.lineage_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "artifact_metadata.lineage_depth"
+      ]
+    },
+    {
+      "original_path": "artifact_metadata.reproducibility.base_seed",
+      "field_name": "artifact_metadata.reproducibility.base_seed",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 42.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "artifact_metadata.reproducibility.base_seed",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "artifact_metadata.reproducibility.sequence_derived_seed",
+      "field_name": "artifact_metadata.reproducibility.sequence_derived_seed",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2910602787.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "artifact_metadata.reproducibility.sequence_derived_seed"
+      ]
+    },
+    {
+      "original_path": "artifact_metadata.reproducibility.combined_seed",
+      "field_name": "artifact_metadata.reproducibility.combined_seed",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2910602829.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "artifact_metadata.reproducibility.combined_seed",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "artifact_metadata.reproducibility.simulation_parameters.total_shots",
+      "field_name": "artifact_metadata.reproducibility.simulation_parameters.total_shots",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "artifact_metadata.reproducibility.simulation_parameters.total_shots"
+      ]
+    },
+    {
+      "original_path": "artifact_metadata.reproducibility.simulation_parameters.phi",
+      "field_name": "artifact_metadata.reproducibility.simulation_parameters.phi",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "artifact_metadata.reproducibility.simulation_parameters.phi"
+      ]
+    },
+    {
+      "original_path": "artifact_metadata.reproducibility.simulation_parameters.phi_inv",
+      "field_name": "artifact_metadata.reproducibility.simulation_parameters.phi_inv",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6180339887498948,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "artifact_metadata.reproducibility.simulation_parameters.phi_inv"
+      ]
+    },
+    {
+      "original_path": "artifact_metadata.reproducibility.simulation_parameters.consciousness_position",
+      "field_name": "artifact_metadata.reproducibility.simulation_parameters.consciousness_position",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 20.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "artifact_metadata.reproducibility.simulation_parameters.consciousness_position"
+      ]
+    },
+    {
+      "original_path": "artifact_metadata.reproducibility.simulation_parameters.peak_factor",
+      "field_name": "artifact_metadata.reproducibility.simulation_parameters.peak_factor",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.1129032258064515,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "artifact_metadata.reproducibility.simulation_parameters.peak_factor"
+      ]
+    },
+    {
+      "original_path": "artifact_metadata.reproducibility.simulation_parameters.fib_boost",
+      "field_name": "artifact_metadata.reproducibility.simulation_parameters.fib_boost",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.3838709677419354,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "artifact_metadata.reproducibility.simulation_parameters.fib_boost"
+      ]
+    },
+    {
+      "original_path": "artifact_metadata.reproducibility.simulation_parameters.beta_a",
+      "field_name": "artifact_metadata.reproducibility.simulation_parameters.beta_a",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.1129032258064515,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "artifact_metadata.reproducibility.simulation_parameters.beta_a"
+      ]
+    },
+    {
+      "original_path": "artifact_metadata.reproducibility.simulation_parameters.beta_b",
+      "field_name": "artifact_metadata.reproducibility.simulation_parameters.beta_b",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.8870967741935485,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "artifact_metadata.reproducibility.simulation_parameters.beta_b"
+      ]
+    },
+    {
+      "original_path": "artifact_metadata.reproducibility.simulation_parameters.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6129032258064516,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "artifact_metadata.reproducibility.simulation_parameters.gc_content",
+        "resolved:gc_content"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "circuit.consciousness_position",
+      1
+    ],
+    [
+      "circuit.entropy.shannon",
+      1
+    ],
+    [
+      "circuit.entropy.normalized",
+      1
+    ],
+    [
+      "circuit.reproducibility.base_seed",
+      1
+    ],
+    [
+      "circuit.reproducibility.combined_seed",
+      1
+    ],
+    [
+      "metrics.hamming_mean",
+      1
+    ],
+    [
+      "metrics.phi_peak_position",
+      1
+    ],
+    [
+      "metrics.entropy_shannon",
+      1
+    ],
+    [
+      "metrics.entropy_normalized",
+      1
+    ],
+    [
+      "artifact_metadata.reproducibility.base_seed",
+      1
+    ]
+  ]
+}

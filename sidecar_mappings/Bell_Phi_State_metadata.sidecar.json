@@ -1,0 +1,157 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\autonomous_circuits\\Bell_Phi_State_metadata.json",
+  "generated_at": "2026-04-15T22:54:19.992847",
+  "registry_version": "1.0.0",
+  "total_fields": 7,
+  "field_breakdown": {
+    "parameter": 2,
+    "metric": 5
+  },
+  "metric_breakdown": {
+    "unknown": 5
+  },
+  "mappings": [
+    {
+      "original_path": "qubits",
+      "field_name": "qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "qubits"
+      ]
+    },
+    {
+      "original_path": "depth",
+      "field_name": "depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "depth"
+      ]
+    },
+    {
+      "original_path": "gates.p",
+      "field_name": "gates.p",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "gates.p",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "gates.measure",
+      "field_name": "gates.measure",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "gates.measure",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "gates.h",
+      "field_name": "gates.h",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "gates.h",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "gates.cx",
+      "field_name": "gates.cx",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "gates.cx",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "gates.barrier",
+      "field_name": "gates.barrier",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "gates.barrier",
+        "unresolved"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "gates.p",
+      1
+    ],
+    [
+      "gates.measure",
+      1
+    ],
+    [
+      "gates.h",
+      1
+    ],
+    [
+      "gates.cx",
+      1
+    ],
+    [
+      "gates.barrier",
+      1
+    ]
+  ]
+}

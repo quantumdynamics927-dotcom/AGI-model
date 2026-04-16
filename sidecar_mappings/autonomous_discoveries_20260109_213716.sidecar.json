@@ -1,0 +1,134 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\raw_hardware\\autonomous_imports\\derived_metrics\\autonomous_discoveries_20260109_213716.json",
+  "generated_at": "2026-04-15T22:54:25.215524",
+  "registry_version": "1.0.0",
+  "total_fields": 8,
+  "field_breakdown": {
+    "metadata": 5,
+    "descriptor": 3
+  },
+  "metric_breakdown": {},
+  "mappings": [
+    {
+      "original_path": "derived_metrics.total_discoveries",
+      "field_name": "total_discoveries",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 239.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "derived_metrics.total_discoveries"
+      ]
+    },
+    {
+      "original_path": "derived_metrics.domain_distribution.phi_universality",
+      "field_name": "derived_metrics.domain_distribution.phi_universality",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "derived_metrics.domain_distribution.phi_universality"
+      ]
+    },
+    {
+      "original_path": "derived_metrics.domain_distribution.phi_string_sweep",
+      "field_name": "derived_metrics.domain_distribution.phi_string_sweep",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 84.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "derived_metrics.domain_distribution.phi_string_sweep"
+      ]
+    },
+    {
+      "original_path": "derived_metrics.domain_distribution.bronze_resonance",
+      "field_name": "derived_metrics.domain_distribution.bronze_resonance",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "derived_metrics.domain_distribution.bronze_resonance"
+      ]
+    },
+    {
+      "original_path": "derived_metrics.domain_distribution.quantum_invisibility",
+      "field_name": "derived_metrics.domain_distribution.quantum_invisibility",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 135.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "derived_metrics.domain_distribution.quantum_invisibility"
+      ]
+    },
+    {
+      "original_path": "derived_metrics.phi_alignment_range.min",
+      "field_name": "derived_metrics.phi_alignment_range.min",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.3,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "derived_metrics.phi_alignment_range.min"
+      ]
+    },
+    {
+      "original_path": "derived_metrics.phi_alignment_range.max",
+      "field_name": "derived_metrics.phi_alignment_range.max",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "derived_metrics.phi_alignment_range.max"
+      ]
+    },
+    {
+      "original_path": "derived_metrics.phi_alignment_range.mean",
+      "field_name": "derived_metrics.phi_alignment_range.mean",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.1195756795275364,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "derived_metrics.phi_alignment_range.mean"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": []
+}

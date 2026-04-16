@@ -1,0 +1,1062 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\bridge_state_20260402_044538.json",
+  "generated_at": "2026-04-15T22:54:19.786999",
+  "registry_version": "1.0.0",
+  "total_fields": 56,
+  "field_breakdown": {
+    "metric": 54,
+    "descriptor": 1,
+    "metadata": 1
+  },
+  "metric_breakdown": {
+    "unknown": 53,
+    "exploratory": 1
+  },
+  "mappings": [
+    {
+      "original_path": "metrics.sync_cycles",
+      "field_name": "metrics.sync_cycles",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 61.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "metrics.sync_cycles",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "metrics.data_transfers",
+      "field_name": "metrics.data_transfers",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "metrics.data_transfers",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "metrics.agent_interactions",
+      "field_name": "metrics.agent_interactions",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "metrics.agent_interactions",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "metrics.last_sync",
+      "field_name": "metrics.last_sync",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1775101537.082427,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "metrics.last_sync",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.14.fitness",
+      "field_name": "agents.14.fitness",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8759,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.14.fitness",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.14.phi_score",
+      "field_name": "agents.14.phi_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8899186938124423,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.14.phi_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.14.resonance_frequency",
+      "field_name": "agents.14.resonance_frequency",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 612.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.14.resonance_frequency",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.9.fitness",
+      "field_name": "agents.9.fitness",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8709,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.9.fitness",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.9.phi_score",
+      "field_name": "agents.9.phi_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8546,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.9.phi_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.9.resonance_frequency",
+      "field_name": "agents.9.resonance_frequency",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 644.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.9.resonance_frequency",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.6.fitness",
+      "field_name": "agents.6.fitness",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8707,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.6.fitness",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.6.phi_score",
+      "field_name": "agents.6.phi_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4812,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.6.phi_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.6.resonance_frequency",
+      "field_name": "agents.6.resonance_frequency",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 512.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.6.resonance_frequency",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.2.fitness",
+      "field_name": "agents.2.fitness",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8713,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.2.fitness",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.2.phi_score",
+      "field_name": "agents.2.phi_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.5234,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.2.phi_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.2.resonance_frequency",
+      "field_name": "agents.2.resonance_frequency",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 752.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.2.resonance_frequency",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.4.fitness",
+      "field_name": "agents.4.fitness",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.9285475205263137,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.4.fitness",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.4.phi_score",
+      "field_name": "agents.4.phi_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8090169943749475,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.4.phi_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.4.resonance_frequency",
+      "field_name": "agents.4.resonance_frequency",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 528.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.4.resonance_frequency",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.10.fitness",
+      "field_name": "agents.10.fitness",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8875747462050714,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.10.fitness",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.10.phi_score",
+      "field_name": "agents.10.phi_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.5600886884134252,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.10.phi_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.10.resonance_frequency",
+      "field_name": "agents.10.resonance_frequency",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 285.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.10.resonance_frequency",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.8.fitness",
+      "field_name": "agents.8.fitness",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8797,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.8.fitness",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.8.phi_score",
+      "field_name": "agents.8.phi_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.7923,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.8.phi_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.8.resonance_frequency",
+      "field_name": "agents.8.resonance_frequency",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 476.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.8.resonance_frequency",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.15.fitness",
+      "field_name": "agents.15.fitness",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8836,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.15.fitness",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.15.phi_score",
+      "field_name": "agents.15.phi_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.9341723589627157,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.15.phi_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.15.resonance_frequency",
+      "field_name": "agents.15.resonance_frequency",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 621.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.15.resonance_frequency",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.3.fitness",
+      "field_name": "agents.3.fitness",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8715868339263741,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.3.fitness",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.3.phi_score",
+      "field_name": "agents.3.phi_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.435624535432664,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.3.phi_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.3.resonance_frequency",
+      "field_name": "agents.3.resonance_frequency",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 639.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.3.resonance_frequency",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.16.fitness",
+      "field_name": "agents.16.fitness",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.891,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.16.fitness",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.16.phi_score",
+      "field_name": "agents.16.phi_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.854,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.16.phi_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.16.resonance_frequency",
+      "field_name": "agents.16.resonance_frequency",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 498.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.16.resonance_frequency",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.11.fitness",
+      "field_name": "agents.11.fitness",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8704030074651607,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.11.fitness",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.11.phi_score",
+      "field_name": "agents.11.phi_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.5600886884134252,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.11.phi_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.11.resonance_frequency",
+      "field_name": "agents.11.resonance_frequency",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 741.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.11.resonance_frequency",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.13.fitness",
+      "field_name": "agents.13.fitness",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8784,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.13.fitness",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.13.phi_score",
+      "field_name": "agents.13.phi_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.9021130325903071,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.13.phi_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.13.resonance_frequency",
+      "field_name": "agents.13.resonance_frequency",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 603.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.13.resonance_frequency",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.17.fitness",
+      "field_name": "agents.17.fitness",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.876,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.17.fitness",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.17.phi_score",
+      "field_name": "agents.17.phi_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.951,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.17.phi_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.17.resonance_frequency",
+      "field_name": "agents.17.resonance_frequency",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 630.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.17.resonance_frequency",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.7.fitness",
+      "field_name": "agents.7.fitness",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8745,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.7.fitness",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.7.phi_score",
+      "field_name": "agents.7.phi_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.7101,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.7.phi_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.7.resonance_frequency",
+      "field_name": "agents.7.resonance_frequency",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 528.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.7.resonance_frequency",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.5.fitness",
+      "field_name": "agents.5.fitness",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8709,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.5.fitness",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.5.phi_score",
+      "field_name": "agents.5.phi_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.7101,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.5.phi_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.5.resonance_frequency",
+      "field_name": "agents.5.resonance_frequency",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 641.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.5.resonance_frequency",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.12.fitness",
+      "field_name": "agents.12.fitness",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8951566927627006,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.12.fitness",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.12.phi_score",
+      "field_name": "agents.12.phi_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.435624535432664,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.12.phi_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "agents.12.resonance_frequency",
+      "field_name": "agents.12.resonance_frequency",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 963.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "agents.12.resonance_frequency",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "config.consciousness_dimensions",
+      "field_name": "config.consciousness_dimensions",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 128.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "config.consciousness_dimensions",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "config.latent_dimensions",
+      "field_name": "config.latent_dimensions",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 32.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "config.latent_dimensions"
+      ]
+    },
+    {
+      "original_path": "config.phi_target",
+      "field_name": "config.phi_target",
+      "field_class": "metric",
+      "canonical_name": "phi_target_constant",
+      "governance_status": "exploratory",
+      "metric_class": "target_constant",
+      "valid_range": [
+        null,
+        null
+      ],
+      "value": 1.618033988749895,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "config.phi_target",
+        "resolved:phi_target_constant"
+      ]
+    },
+    {
+      "original_path": "timestamp",
+      "field_name": "timestamp",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1775101538.1358716,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "timestamp"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "metrics.sync_cycles",
+      1
+    ],
+    [
+      "metrics.data_transfers",
+      1
+    ],
+    [
+      "metrics.agent_interactions",
+      1
+    ],
+    [
+      "metrics.last_sync",
+      1
+    ],
+    [
+      "agents.14.fitness",
+      1
+    ],
+    [
+      "agents.14.phi_score",
+      1
+    ],
+    [
+      "agents.14.resonance_frequency",
+      1
+    ],
+    [
+      "agents.9.fitness",
+      1
+    ],
+    [
+      "agents.9.phi_score",
+      1
+    ],
+    [
+      "agents.9.resonance_frequency",
+      1
+    ]
+  ]
+}

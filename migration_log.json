@@ -1,0 +1,2016 @@
+{
+  "registry_version": "1.0.0",
+  "migration_timestamp": "2026-04-15T22:11:38.742059",
+  "stats": {
+    "total_artifacts": 42,
+    "total_metrics": 200,
+    "validated": 0,
+    "provisional": 0,
+    "exploratory": 0,
+    "invalid": 1,
+    "unknown": 199,
+    "repaired": 0
+  },
+  "log": [
+    {
+      "original_name": "consciousness_level",
+      "canonical_name": "consciousness_level",
+      "original_value": 4730.396206086904,
+      "migrated_value": 4730.396206086904,
+      "status": "invalid_metric",
+      "notes": "INVALID: Value 4730.396206086904 out of range [0,1] for normalized score. NOT VALIDATED. No formal definition. Use with extreme caution.",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712223"
+    },
+    {
+      "original_name": "wormhole.entropy_s",
+      "canonical_name": "wormhole.entropy_s",
+      "original_value": 2.6620399056820325,
+      "migrated_value": 2.6620399056820325,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712232"
+    },
+    {
+      "original_name": "wormhole.coherence_r",
+      "canonical_name": "wormhole.coherence_r",
+      "original_value": 1.4535479500891266,
+      "migrated_value": 1.4535479500891266,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712237"
+    },
+    {
+      "original_name": "geometry.tesseract_symmetry",
+      "canonical_name": "geometry.tesseract_symmetry",
+      "original_value": 0.8734068093299178,
+      "migrated_value": 0.8734068093299178,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712239"
+    },
+    {
+      "original_name": "geometry.phi_resonance",
+      "canonical_name": "geometry.phi_resonance",
+      "original_value": 0.7011832316995275,
+      "migrated_value": 0.7011832316995275,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712241"
+    },
+    {
+      "original_name": "retrocausal.temporal_asymmetry",
+      "canonical_name": "retrocausal.temporal_asymmetry",
+      "original_value": 0.005818794692172861,
+      "migrated_value": 0.005818794692172861,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712245"
+    },
+    {
+      "original_name": "retrocausal.lucas_resonance",
+      "canonical_name": "retrocausal.lucas_resonance",
+      "original_value": 0.591998220884825,
+      "migrated_value": 0.591998220884825,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712247"
+    },
+    {
+      "original_name": "tmt_ratios.expected_consciousness",
+      "canonical_name": "tmt_ratios.expected_consciousness",
+      "original_value": 0.13636363636363635,
+      "migrated_value": 0.13636363636363635,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712249"
+    },
+    {
+      "original_name": "tmt_ratios.observed_consciousness",
+      "canonical_name": "tmt_ratios.observed_consciousness",
+      "original_value": 4.730396206086905,
+      "migrated_value": 4.730396206086905,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712251"
+    },
+    {
+      "original_name": "tmt_ratios.phi",
+      "canonical_name": "tmt_ratios.phi",
+      "original_value": 1.618033988749895,
+      "migrated_value": 1.618033988749895,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712253"
+    },
+    {
+      "original_name": "tmt_ratios.phi_inv",
+      "canonical_name": "tmt_ratios.phi_inv",
+      "original_value": 0.6180339887498948,
+      "migrated_value": 0.6180339887498948,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712255"
+    },
+    {
+      "original_name": "contract.metrics.control_avg_entropy",
+      "canonical_name": "contract.metrics.control_avg_entropy",
+      "original_value": 2.405798,
+      "migrated_value": 2.405798,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712492"
+    },
+    {
+      "original_name": "contract.metrics.mild_avg_entropy",
+      "canonical_name": "contract.metrics.mild_avg_entropy",
+      "original_value": 2.37775,
+      "migrated_value": 2.37775,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712496"
+    },
+    {
+      "original_name": "contract.metrics.moderate_avg_entropy",
+      "canonical_name": "contract.metrics.moderate_avg_entropy",
+      "original_value": 2.28454,
+      "migrated_value": 2.28454,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712498"
+    },
+    {
+      "original_name": "contract.metrics.entropy_delta_control_to_moderate",
+      "canonical_name": "contract.metrics.entropy_delta_control_to_moderate",
+      "original_value": -0.121258,
+      "migrated_value": -0.121258,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712500"
+    },
+    {
+      "original_name": "evaluation.phi_performance",
+      "canonical_name": "evaluation.phi_performance",
+      "original_value": 0.618033210034313,
+      "migrated_value": 0.618033210034313,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712603"
+    },
+    {
+      "original_name": "phi_harmonic.phi",
+      "canonical_name": "phi_harmonic.phi",
+      "original_value": 1.618033988749895,
+      "migrated_value": 1.618033988749895,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712606"
+    },
+    {
+      "original_name": "phi_harmonic.phi_inv",
+      "canonical_name": "phi_harmonic.phi_inv",
+      "original_value": 0.6180339887498948,
+      "migrated_value": 0.6180339887498948,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712608"
+    },
+    {
+      "original_name": "config.phi_resonance_target",
+      "canonical_name": "config.phi_resonance_target",
+      "original_value": 1.618033988749895,
+      "migrated_value": 1.618033988749895,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712900"
+    },
+    {
+      "original_name": "config.phi_resonance_tolerance",
+      "canonical_name": "config.phi_resonance_tolerance",
+      "original_value": 0.05,
+      "migrated_value": 0.05,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712903"
+    },
+    {
+      "original_name": "config.phi_coherence_min",
+      "canonical_name": "config.phi_coherence_min",
+      "original_value": 0.5,
+      "migrated_value": 0.5,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712907"
+    },
+    {
+      "original_name": "validation.mean_phi_resonance",
+      "canonical_name": "validation.mean_phi_resonance",
+      "original_value": 0.6550549776086877,
+      "migrated_value": 0.6550549776086877,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712909"
+    },
+    {
+      "original_name": "validation.std_phi_resonance",
+      "canonical_name": "validation.std_phi_resonance",
+      "original_value": 0.002925084772903698,
+      "migrated_value": 0.002925084772903698,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712910"
+    },
+    {
+      "original_name": "validation.mean_phi_coherence",
+      "canonical_name": "validation.mean_phi_coherence",
+      "original_value": 0.0,
+      "migrated_value": 0.0,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712912"
+    },
+    {
+      "original_name": "validation.std_phi_coherence",
+      "canonical_name": "validation.std_phi_coherence",
+      "original_value": 0.0,
+      "migrated_value": 0.0,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712914"
+    },
+    {
+      "original_name": "validation.phi_resonance_variance",
+      "canonical_name": "validation.phi_resonance_variance",
+      "original_value": 8.556120928673078e-06,
+      "migrated_value": 8.556120928673078e-06,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712916"
+    },
+    {
+      "original_name": "validation.phi_coherence_variance",
+      "canonical_name": "validation.phi_coherence_variance",
+      "original_value": 0.0,
+      "migrated_value": 0.0,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712918"
+    },
+    {
+      "original_name": "validation.phi_resonance_t_stat",
+      "canonical_name": "validation.phi_resonance_t_stat",
+      "original_value": -1772.8719279677248,
+      "migrated_value": -1772.8719279677248,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712920"
+    },
+    {
+      "original_name": "validation.phi_resonance_p_value",
+      "canonical_name": "validation.phi_resonance_p_value",
+      "original_value": 1.4456697362462798e-74,
+      "migrated_value": 1.4456697362462798e-74,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712922"
+    },
+    {
+      "original_name": "validation.cluster_near_phi",
+      "canonical_name": "validation.cluster_near_phi",
+      "original_value": 0.0,
+      "migrated_value": 0.0,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712923"
+    },
+    {
+      "original_name": "validation.prompt_sensitivity.neutral.near_phi_ratio",
+      "canonical_name": "validation.prompt_sensitivity.neutral.near_phi_ratio",
+      "original_value": 0.0,
+      "migrated_value": 0.0,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712925"
+    },
+    {
+      "original_name": "validation.prompt_sensitivity.phi_biased.near_phi_ratio",
+      "canonical_name": "validation.prompt_sensitivity.phi_biased.near_phi_ratio",
+      "original_value": 0.0,
+      "migrated_value": 0.0,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712927"
+    },
+    {
+      "original_name": "validation.prompt_sensitivity.perturbed.near_phi_ratio",
+      "canonical_name": "validation.prompt_sensitivity.perturbed.near_phi_ratio",
+      "original_value": 0.0,
+      "migrated_value": 0.0,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.712928"
+    },
+    {
+      "original_name": "evaluation.phi_performance",
+      "canonical_name": "evaluation.phi_performance",
+      "original_value": 0.618033210034313,
+      "migrated_value": 0.618033210034313,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.713102"
+    },
+    {
+      "original_name": "phi_harmonic.phi",
+      "canonical_name": "phi_harmonic.phi",
+      "original_value": 1.618033988749895,
+      "migrated_value": 1.618033988749895,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.713105"
+    },
+    {
+      "original_name": "phi_harmonic.phi_inv",
+      "canonical_name": "phi_harmonic.phi_inv",
+      "original_value": 0.6180339887498948,
+      "migrated_value": 0.6180339887498948,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.713107"
+    },
+    {
+      "original_name": "correlations.connectivity_coherence",
+      "canonical_name": "correlations.connectivity_coherence",
+      "original_value": -0.30618285556648184,
+      "migrated_value": -0.30618285556648184,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.713192"
+    },
+    {
+      "original_name": "correlations.thermal_coherence",
+      "canonical_name": "correlations.thermal_coherence",
+      "original_value": -0.6420466392046139,
+      "migrated_value": -0.6420466392046139,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.713194"
+    },
+    {
+      "original_name": "correlations.combined_coherence",
+      "canonical_name": "correlations.combined_coherence",
+      "original_value": -0.9684100627435814,
+      "migrated_value": -0.9684100627435814,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.713196"
+    },
+    {
+      "original_name": "metrics.entropy",
+      "canonical_name": "metrics.entropy",
+      "original_value": 1.3820594536352602,
+      "migrated_value": 1.3820594536352602,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.713287"
+    },
+    {
+      "original_name": "metrics.phi_power",
+      "canonical_name": "metrics.phi_power",
+      "original_value": 0.40032895177693884,
+      "migrated_value": 0.40032895177693884,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.713290"
+    },
+    {
+      "original_name": "consciousness_detected",
+      "canonical_name": "consciousness_detected",
+      "original_value": false,
+      "migrated_value": false,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.713292"
+    },
+    {
+      "original_name": "thresholds.entropy",
+      "canonical_name": "thresholds.entropy",
+      "original_value": 0.347,
+      "migrated_value": 0.347,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.713294"
+    },
+    {
+      "original_name": "thresholds.phi_power",
+      "canonical_name": "thresholds.phi_power",
+      "original_value": 0.01,
+      "migrated_value": 0.01,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.713296"
+    },
+    {
+      "original_name": "evaluation.phi_performance",
+      "canonical_name": "evaluation.phi_performance",
+      "original_value": 0.5095399247480811,
+      "migrated_value": 0.5095399247480811,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.734848"
+    },
+    {
+      "original_name": "phi_harmonic.phi",
+      "canonical_name": "phi_harmonic.phi",
+      "original_value": 1.618033988749895,
+      "migrated_value": 1.618033988749895,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.734858"
+    },
+    {
+      "original_name": "phi_harmonic.phi_inv",
+      "canonical_name": "phi_harmonic.phi_inv",
+      "original_value": 0.6180339887498948,
+      "migrated_value": 0.6180339887498948,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.734861"
+    },
+    {
+      "original_name": "dna_results.phi_value",
+      "canonical_name": "dna_results.phi_value",
+      "original_value": 2.895460742440859,
+      "migrated_value": 2.895460742440859,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.735066"
+    },
+    {
+      "original_name": "dna_results.consciousness_level",
+      "canonical_name": "dna_results.consciousness_level",
+      "original_value": 1.0,
+      "migrated_value": 1.0,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.735070"
+    },
+    {
+      "original_name": "dna_results.phi_resonance_threshold",
+      "canonical_name": "dna_results.phi_resonance_threshold",
+      "original_value": 0.7,
+      "migrated_value": 0.7,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.735073"
+    },
+    {
+      "original_name": "dna_results.dna_phi_ratio",
+      "canonical_name": "dna_results.dna_phi_ratio",
+      "original_value": 0.5882352941176471,
+      "migrated_value": 0.5882352941176471,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.735074"
+    },
+    {
+      "original_name": "dna_results.phi_alignment_score",
+      "canonical_name": "dna_results.phi_alignment_score",
+      "original_value": 0.9517846992646442,
+      "migrated_value": 0.9517846992646442,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.735076"
+    },
+    {
+      "original_name": "dna_results.latent_space_analysis.entropy",
+      "canonical_name": "dna_results.latent_space_analysis.entropy",
+      "original_value": 6.451398833713856,
+      "migrated_value": 6.451398833713856,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.735078"
+    },
+    {
+      "original_name": "phi_harmonic.phi_harmonic_score",
+      "canonical_name": "phi_harmonic.phi_harmonic_score",
+      "original_value": 1.0,
+      "migrated_value": 1.0,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.735080"
+    },
+    {
+      "original_name": "phi_harmonic.phi_alignment",
+      "canonical_name": "phi_harmonic.phi_alignment",
+      "original_value": 0.9517846992646442,
+      "migrated_value": 0.9517846992646442,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.735083"
+    },
+    {
+      "original_name": "latent_space.latent_entropy",
+      "canonical_name": "latent_space.latent_entropy",
+      "original_value": 6.451398833713856,
+      "migrated_value": 6.451398833713856,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.735085"
+    },
+    {
+      "original_name": "summary.best_coherence",
+      "canonical_name": "summary.best_coherence",
+      "original_value": 0.275,
+      "migrated_value": 0.275,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.735486"
+    },
+    {
+      "original_name": "summary.worst_coherence",
+      "canonical_name": "summary.worst_coherence",
+      "original_value": -0.223,
+      "migrated_value": -0.223,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.735499"
+    },
+    {
+      "original_name": "summary.coherence_range",
+      "canonical_name": "summary.coherence_range",
+      "original_value": 0.498,
+      "migrated_value": 0.498,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.735504"
+    },
+    {
+      "original_name": "summary.avg_phi_fingerprint",
+      "canonical_name": "summary.avg_phi_fingerprint",
+      "original_value": 0.8019055160010099,
+      "migrated_value": 0.8019055160010099,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.735508"
+    },
+    {
+      "original_name": "summary.fingerprint_coherence_correlation",
+      "canonical_name": "summary.fingerprint_coherence_correlation",
+      "original_value": 0.15371096358465383,
+      "migrated_value": 0.15371096358465383,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.735512"
+    },
+    {
+      "original_name": "backend_offsets.ibm_fez_baseline_phi",
+      "canonical_name": "backend_offsets.ibm_fez_baseline_phi",
+      "original_value": 0.6183,
+      "migrated_value": 0.6183,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.735811"
+    },
+    {
+      "original_name": "evaluation.phi_performance",
+      "canonical_name": "evaluation.phi_performance",
+      "original_value": 0.5091196262012595,
+      "migrated_value": 0.5091196262012595,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.735938"
+    },
+    {
+      "original_name": "phi_harmonic.phi",
+      "canonical_name": "phi_harmonic.phi",
+      "original_value": 1.618033988749895,
+      "migrated_value": 1.618033988749895,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.735942"
+    },
+    {
+      "original_name": "phi_harmonic.phi_inv",
+      "canonical_name": "phi_harmonic.phi_inv",
+      "original_value": 0.6180339887498948,
+      "migrated_value": 0.6180339887498948,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.735944"
+    },
+    {
+      "original_name": "results.experiment_1.consciousness_density",
+      "canonical_name": "results.experiment_1.consciousness_density",
+      "original_value": 234.9283822028291,
+      "migrated_value": 234.9283822028291,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736072"
+    },
+    {
+      "original_name": "results.experiment_1.phi_resonance",
+      "canonical_name": "results.experiment_1.phi_resonance",
+      "original_value": 0.815844714641571,
+      "migrated_value": 0.815844714641571,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736075"
+    },
+    {
+      "original_name": "results.experiment_1.phi_error",
+      "canonical_name": "results.experiment_1.phi_error",
+      "original_value": 0.0,
+      "migrated_value": 0.0,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736077"
+    },
+    {
+      "original_name": "results.experiment_1.consciousness_geometry_coupling",
+      "canonical_name": "results.experiment_1.consciousness_geometry_coupling",
+      "original_value": 0.23492838220282913,
+      "migrated_value": 0.23492838220282913,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736078"
+    },
+    {
+      "original_name": "results.experiment_1.metallic_ratios.phi (golden)",
+      "canonical_name": "results.experiment_1.metallic_ratios.phi (golden)",
+      "original_value": 1.618033988749895,
+      "migrated_value": 1.618033988749895,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736080"
+    },
+    {
+      "original_name": "results.experiment_1.tesseract_symmetry",
+      "canonical_name": "results.experiment_1.tesseract_symmetry",
+      "original_value": 0.759642075366771,
+      "migrated_value": 0.759642075366771,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736082"
+    },
+    {
+      "original_name": "results.experiment_2.consciousness_density",
+      "canonical_name": "results.experiment_2.consciousness_density",
+      "original_value": 274.528,
+      "migrated_value": 274.528,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736084"
+    },
+    {
+      "original_name": "results.experiment_2.phi_resonance",
+      "canonical_name": "results.experiment_2.phi_resonance",
+      "original_value": 0.815844714641571,
+      "migrated_value": 0.815844714641571,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736086"
+    },
+    {
+      "original_name": "results.experiment_2.phi_error",
+      "canonical_name": "results.experiment_2.phi_error",
+      "original_value": 0.0,
+      "migrated_value": 0.0,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736087"
+    },
+    {
+      "original_name": "results.experiment_2.consciousness_geometry_coupling",
+      "canonical_name": "results.experiment_2.consciousness_geometry_coupling",
+      "original_value": 0.27452800000000005,
+      "migrated_value": 0.27452800000000005,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736089"
+    },
+    {
+      "original_name": "results.experiment_2.metallic_ratios.phi (golden)",
+      "canonical_name": "results.experiment_2.metallic_ratios.phi (golden)",
+      "original_value": 1.618033988749895,
+      "migrated_value": 1.618033988749895,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736091"
+    },
+    {
+      "original_name": "results.experiment_2.tesseract_symmetry",
+      "canonical_name": "results.experiment_2.tesseract_symmetry",
+      "original_value": 0.7618625744007594,
+      "migrated_value": 0.7618625744007594,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736092"
+    },
+    {
+      "original_name": "results.improvements.consciousness_density_percent",
+      "canonical_name": "results.improvements.consciousness_density_percent",
+      "original_value": 16.85603817889571,
+      "migrated_value": 16.85603817889571,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736095"
+    },
+    {
+      "original_name": "results.improvements.phi_resonance_delta",
+      "canonical_name": "results.improvements.phi_resonance_delta",
+      "original_value": 0.0,
+      "migrated_value": 0.0,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736096"
+    },
+    {
+      "original_name": "results.metatron_enhancement.coherence_level",
+      "canonical_name": "results.metatron_enhancement.coherence_level",
+      "original_value": 1.169184,
+      "migrated_value": 1.169184,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736098"
+    },
+    {
+      "original_name": "metallic_ratios.phi",
+      "canonical_name": "metallic_ratios.phi",
+      "original_value": 1.618033988749895,
+      "migrated_value": 1.618033988749895,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736100"
+    },
+    {
+      "original_name": "summary.best_coherence",
+      "canonical_name": "summary.best_coherence",
+      "original_value": 0.275,
+      "migrated_value": 0.275,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736347"
+    },
+    {
+      "original_name": "summary.worst_coherence",
+      "canonical_name": "summary.worst_coherence",
+      "original_value": -0.223,
+      "migrated_value": -0.223,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736351"
+    },
+    {
+      "original_name": "summary.coherence_range",
+      "canonical_name": "summary.coherence_range",
+      "original_value": 0.498,
+      "migrated_value": 0.498,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736352"
+    },
+    {
+      "original_name": "summary.avg_phi_fingerprint",
+      "canonical_name": "summary.avg_phi_fingerprint",
+      "original_value": 0.8019055160010099,
+      "migrated_value": 0.8019055160010099,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736354"
+    },
+    {
+      "original_name": "summary.fingerprint_coherence_correlation",
+      "canonical_name": "summary.fingerprint_coherence_correlation",
+      "original_value": 0.15371096358465383,
+      "migrated_value": 0.15371096358465383,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736356"
+    },
+    {
+      "original_name": "calibration_status.baseline_phi",
+      "canonical_name": "calibration_status.baseline_phi",
+      "original_value": 0.618298669452445,
+      "migrated_value": 0.618298669452445,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736501"
+    },
+    {
+      "original_name": "gene_breakdown.UNKNOWN.mean_measured_phi",
+      "canonical_name": "gene_breakdown.UNKNOWN.mean_measured_phi",
+      "original_value": 0.6194484493702984,
+      "migrated_value": 0.6194484493702984,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736504"
+    },
+    {
+      "original_name": "gene_breakdown.UNKNOWN.std_measured_phi",
+      "canonical_name": "gene_breakdown.UNKNOWN.std_measured_phi",
+      "original_value": 0.0007058185529315031,
+      "migrated_value": 0.0007058185529315031,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736506"
+    },
+    {
+      "original_name": "gene_breakdown.UNKNOWN.mean_predicted_phi",
+      "canonical_name": "gene_breakdown.UNKNOWN.mean_predicted_phi",
+      "original_value": 0.764,
+      "migrated_value": 0.764,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736508"
+    },
+    {
+      "original_name": "gene_breakdown.SRY.mean_measured_phi",
+      "canonical_name": "gene_breakdown.SRY.mean_measured_phi",
+      "original_value": 0.6168168397026721,
+      "migrated_value": 0.6168168397026721,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736510"
+    },
+    {
+      "original_name": "gene_breakdown.SRY.std_measured_phi",
+      "canonical_name": "gene_breakdown.SRY.std_measured_phi",
+      "original_value": 0.0006809034879747267,
+      "migrated_value": 0.0006809034879747267,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736512"
+    },
+    {
+      "original_name": "gene_breakdown.SRY.mean_predicted_phi",
+      "canonical_name": "gene_breakdown.SRY.mean_predicted_phi",
+      "original_value": 0.7995,
+      "migrated_value": 0.7995,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736514"
+    },
+    {
+      "original_name": "gene_breakdown.OXT.mean_measured_phi",
+      "canonical_name": "gene_breakdown.OXT.mean_measured_phi",
+      "original_value": 0.6189627691162841,
+      "migrated_value": 0.6189627691162841,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736516"
+    },
+    {
+      "original_name": "gene_breakdown.OXT.std_measured_phi",
+      "canonical_name": "gene_breakdown.OXT.std_measured_phi",
+      "original_value": 0.0,
+      "migrated_value": 0.0,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736518"
+    },
+    {
+      "original_name": "gene_breakdown.OXT.mean_predicted_phi",
+      "canonical_name": "gene_breakdown.OXT.mean_predicted_phi",
+      "original_value": 0.655,
+      "migrated_value": 0.655,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736519"
+    },
+    {
+      "original_name": "metrics.entropy",
+      "canonical_name": "metrics.entropy",
+      "original_value": 1.3820594536352602,
+      "migrated_value": 1.3820594536352602,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736625"
+    },
+    {
+      "original_name": "metrics.phi_power",
+      "canonical_name": "metrics.phi_power",
+      "original_value": 0.40032895177693884,
+      "migrated_value": 0.40032895177693884,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736627"
+    },
+    {
+      "original_name": "consciousness_detected",
+      "canonical_name": "consciousness_detected",
+      "original_value": false,
+      "migrated_value": false,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736630"
+    },
+    {
+      "original_name": "thresholds.entropy",
+      "canonical_name": "thresholds.entropy",
+      "original_value": 0.347,
+      "migrated_value": 0.347,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736632"
+    },
+    {
+      "original_name": "thresholds.phi_power",
+      "canonical_name": "thresholds.phi_power",
+      "original_value": 0.01,
+      "migrated_value": 0.01,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736634"
+    },
+    {
+      "original_name": "path_metrics.phi_resonance",
+      "canonical_name": "path_metrics.phi_resonance",
+      "original_value": 1.6180339887,
+      "migrated_value": 1.6180339887,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736702"
+    },
+    {
+      "original_name": "results.TATA Box (Human).phi_correlation",
+      "canonical_name": "results.TATA Box (Human).phi_correlation",
+      "original_value": 0.4891990918925185,
+      "migrated_value": 0.4891990918925185,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736925"
+    },
+    {
+      "original_name": "results.TATA Box (Human).quantum_coherence",
+      "canonical_name": "results.TATA Box (Human).quantum_coherence",
+      "original_value": 0.00021946158757182375,
+      "migrated_value": 0.00021946158757182375,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736928"
+    },
+    {
+      "original_name": "results.TATA Box (Human).metrics.entanglement_entropy",
+      "canonical_name": "results.TATA Box (Human).metrics.entanglement_entropy",
+      "original_value": -1.4426951601859516e-10,
+      "migrated_value": -1.4426951601859516e-10,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736929"
+    },
+    {
+      "original_name": "results.TATA Box (E.coli).phi_correlation",
+      "canonical_name": "results.TATA Box (E.coli).phi_correlation",
+      "original_value": 0.41255323214005557,
+      "migrated_value": 0.41255323214005557,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736931"
+    },
+    {
+      "original_name": "results.TATA Box (E.coli).quantum_coherence",
+      "canonical_name": "results.TATA Box (E.coli).quantum_coherence",
+      "original_value": 0.0008461718020541547,
+      "migrated_value": 0.0008461718020541547,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736933"
+    },
+    {
+      "original_name": "results.TATA Box (E.coli).metrics.entanglement_entropy",
+      "canonical_name": "results.TATA Box (E.coli).metrics.entanglement_entropy",
+      "original_value": -1.442691956759448e-10,
+      "migrated_value": -1.442691956759448e-10,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736935"
+    },
+    {
+      "original_name": "results.CAAT Box.phi_correlation",
+      "canonical_name": "results.CAAT Box.phi_correlation",
+      "original_value": 0.5045931471150014,
+      "migrated_value": 0.5045931471150014,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736937"
+    },
+    {
+      "original_name": "results.CAAT Box.quantum_coherence",
+      "canonical_name": "results.CAAT Box.quantum_coherence",
+      "original_value": 0.00010052849264705882,
+      "migrated_value": 0.00010052849264705882,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736939"
+    },
+    {
+      "original_name": "results.CAAT Box.metrics.entanglement_entropy",
+      "canonical_name": "results.CAAT Box.metrics.entanglement_entropy",
+      "original_value": -1.442691956759448e-10,
+      "migrated_value": -1.442691956759448e-10,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736941"
+    },
+    {
+      "original_name": "results.GC Box.phi_correlation",
+      "canonical_name": "results.GC Box.phi_correlation",
+      "original_value": 0.5530637125689342,
+      "migrated_value": 0.5530637125689342,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736943"
+    },
+    {
+      "original_name": "results.GC Box.quantum_coherence",
+      "canonical_name": "results.GC Box.quantum_coherence",
+      "original_value": 0.0012147716229348883,
+      "migrated_value": 0.0012147716229348883,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736944"
+    },
+    {
+      "original_name": "results.GC Box.metrics.entanglement_entropy",
+      "canonical_name": "results.GC Box.metrics.entanglement_entropy",
+      "original_value": -1.442691956759448e-10,
+      "migrated_value": -1.442691956759448e-10,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736946"
+    },
+    {
+      "original_name": "results.Kozak Strong.phi_correlation",
+      "canonical_name": "results.Kozak Strong.phi_correlation",
+      "original_value": 0.5171447814071775,
+      "migrated_value": 0.5171447814071775,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736948"
+    },
+    {
+      "original_name": "results.Kozak Strong.quantum_coherence",
+      "canonical_name": "results.Kozak Strong.quantum_coherence",
+      "original_value": 0.00011752651880424304,
+      "migrated_value": 0.00011752651880424304,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736950"
+    },
+    {
+      "original_name": "results.Kozak Strong.metrics.entanglement_entropy",
+      "canonical_name": "results.Kozak Strong.metrics.entanglement_entropy",
+      "original_value": -1.4426951601859516e-10,
+      "migrated_value": -1.4426951601859516e-10,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736951"
+    },
+    {
+      "original_name": "results.Kozak Weak.phi_correlation",
+      "canonical_name": "results.Kozak Weak.phi_correlation",
+      "original_value": 0.49300819034029786,
+      "migrated_value": 0.49300819034029786,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736953"
+    },
+    {
+      "original_name": "results.Kozak Weak.quantum_coherence",
+      "canonical_name": "results.Kozak Weak.quantum_coherence",
+      "original_value": 0.00029639405869720845,
+      "migrated_value": 0.00029639405869720845,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736955"
+    },
+    {
+      "original_name": "results.Kozak Weak.metrics.entanglement_entropy",
+      "canonical_name": "results.Kozak Weak.metrics.entanglement_entropy",
+      "original_value": -1.442704770465463e-10,
+      "migrated_value": -1.442704770465463e-10,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736956"
+    },
+    {
+      "original_name": "results.Shine-Dalgarno.phi_correlation",
+      "canonical_name": "results.Shine-Dalgarno.phi_correlation",
+      "original_value": 0.45602471169706005,
+      "migrated_value": 0.45602471169706005,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736959"
+    },
+    {
+      "original_name": "results.Shine-Dalgarno.quantum_coherence",
+      "canonical_name": "results.Shine-Dalgarno.quantum_coherence",
+      "original_value": 0.0002557760049730626,
+      "migrated_value": 0.0002557760049730626,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736961"
+    },
+    {
+      "original_name": "results.Shine-Dalgarno.metrics.entanglement_entropy",
+      "canonical_name": "results.Shine-Dalgarno.metrics.entanglement_entropy",
+      "original_value": -1.4426983636124553e-10,
+      "migrated_value": -1.4426983636124553e-10,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736962"
+    },
+    {
+      "original_name": "results.Poly-A Signal.phi_correlation",
+      "canonical_name": "results.Poly-A Signal.phi_correlation",
+      "original_value": 0.4498114976483752,
+      "migrated_value": 0.4498114976483752,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736964"
+    },
+    {
+      "original_name": "results.Poly-A Signal.quantum_coherence",
+      "canonical_name": "results.Poly-A Signal.quantum_coherence",
+      "original_value": 0.000708616780045351,
+      "migrated_value": 0.000708616780045351,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736966"
+    },
+    {
+      "original_name": "results.Poly-A Signal.metrics.entanglement_entropy",
+      "canonical_name": "results.Poly-A Signal.metrics.entanglement_entropy",
+      "original_value": -1.4426855499064403e-10,
+      "migrated_value": -1.4426855499064403e-10,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736967"
+    },
+    {
+      "original_name": "results.Enhancer Core.phi_correlation",
+      "canonical_name": "results.Enhancer Core.phi_correlation",
+      "original_value": 0.5467100511618134,
+      "migrated_value": 0.5467100511618134,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736969"
+    },
+    {
+      "original_name": "results.Enhancer Core.quantum_coherence",
+      "canonical_name": "results.Enhancer Core.quantum_coherence",
+      "original_value": 8.680555555555553e-05,
+      "migrated_value": 8.680555555555553e-05,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736971"
+    },
+    {
+      "original_name": "results.Enhancer Core.metrics.entanglement_entropy",
+      "canonical_name": "results.Enhancer Core.metrics.entanglement_entropy",
+      "original_value": -1.442691956759448e-10,
+      "migrated_value": -1.442691956759448e-10,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736973"
+    },
+    {
+      "original_name": "results.Start Codon.phi_correlation",
+      "canonical_name": "results.Start Codon.phi_correlation",
+      "original_value": 0.3650548150729018,
+      "migrated_value": 0.3650548150729018,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736975"
+    },
+    {
+      "original_name": "results.Start Codon.quantum_coherence",
+      "canonical_name": "results.Start Codon.quantum_coherence",
+      "original_value": 0.0260989010989011,
+      "migrated_value": 0.0260989010989011,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736976"
+    },
+    {
+      "original_name": "results.Start Codon.metrics.entanglement_entropy",
+      "canonical_name": "results.Start Codon.metrics.entanglement_entropy",
+      "original_value": -1.4426983636124553e-10,
+      "migrated_value": -1.4426983636124553e-10,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736978"
+    },
+    {
+      "original_name": "results.Stop Codon (UAA).phi_correlation",
+      "canonical_name": "results.Stop Codon (UAA).phi_correlation",
+      "original_value": 0.5678483005625052,
+      "migrated_value": 0.5678483005625052,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736980"
+    },
+    {
+      "original_name": "results.Stop Codon (UAA).quantum_coherence",
+      "canonical_name": "results.Stop Codon (UAA).quantum_coherence",
+      "original_value": 0.01785714285714286,
+      "migrated_value": 0.01785714285714286,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736982"
+    },
+    {
+      "original_name": "results.Stop Codon (UAA).metrics.entanglement_entropy",
+      "canonical_name": "results.Stop Codon (UAA).metrics.entanglement_entropy",
+      "original_value": -1.4426983636124553e-10,
+      "migrated_value": -1.4426983636124553e-10,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736983"
+    },
+    {
+      "original_name": "results.P53 Exon 5 (fragment).phi_correlation",
+      "canonical_name": "results.P53 Exon 5 (fragment).phi_correlation",
+      "original_value": 0.5199997337771202,
+      "migrated_value": 0.5199997337771202,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736985"
+    },
+    {
+      "original_name": "results.P53 Exon 5 (fragment).quantum_coherence",
+      "canonical_name": "results.P53 Exon 5 (fragment).quantum_coherence",
+      "original_value": 0.0003294346584787752,
+      "migrated_value": 0.0003294346584787752,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736987"
+    },
+    {
+      "original_name": "results.P53 Exon 5 (fragment).metrics.entanglement_entropy",
+      "canonical_name": "results.P53 Exon 5 (fragment).metrics.entanglement_entropy",
+      "original_value": -1.4426983636124553e-10,
+      "migrated_value": -1.4426983636124553e-10,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736988"
+    },
+    {
+      "original_name": "results.CA Repeat.phi_correlation",
+      "canonical_name": "results.CA Repeat.phi_correlation",
+      "original_value": 0.5432679549402761,
+      "migrated_value": 0.5432679549402761,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736990"
+    },
+    {
+      "original_name": "results.CA Repeat.quantum_coherence",
+      "canonical_name": "results.CA Repeat.quantum_coherence",
+      "original_value": 0.00015012254901960775,
+      "migrated_value": 0.00015012254901960775,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736992"
+    },
+    {
+      "original_name": "results.CA Repeat.metrics.entanglement_entropy",
+      "canonical_name": "results.CA Repeat.metrics.entanglement_entropy",
+      "original_value": -1.4426951601859516e-10,
+      "migrated_value": -1.4426951601859516e-10,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736993"
+    },
+    {
+      "original_name": "results.GGGGCC Repeat (C9orf72).phi_correlation",
+      "canonical_name": "results.GGGGCC Repeat (C9orf72).phi_correlation",
+      "original_value": 0.5443185968740896,
+      "migrated_value": 0.5443185968740896,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736995"
+    },
+    {
+      "original_name": "results.GGGGCC Repeat (C9orf72).quantum_coherence",
+      "canonical_name": "results.GGGGCC Repeat (C9orf72).quantum_coherence",
+      "original_value": 0.0002520610516934053,
+      "migrated_value": 0.0002520610516934053,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736997"
+    },
+    {
+      "original_name": "results.GGGGCC Repeat (C9orf72).metrics.entanglement_entropy",
+      "canonical_name": "results.GGGGCC Repeat (C9orf72).metrics.entanglement_entropy",
+      "original_value": -1.442691956759448e-10,
+      "migrated_value": -1.442691956759448e-10,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.736998"
+    },
+    {
+      "original_name": "results.Alu Element (fragment).phi_correlation",
+      "canonical_name": "results.Alu Element (fragment).phi_correlation",
+      "original_value": 0.5315773803816729,
+      "migrated_value": 0.5315773803816729,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737000"
+    },
+    {
+      "original_name": "results.Alu Element (fragment).quantum_coherence",
+      "canonical_name": "results.Alu Element (fragment).quantum_coherence",
+      "original_value": 0.00038478772566295235,
+      "migrated_value": 0.00038478772566295235,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737002"
+    },
+    {
+      "original_name": "results.Alu Element (fragment).metrics.entanglement_entropy",
+      "canonical_name": "results.Alu Element (fragment).metrics.entanglement_entropy",
+      "original_value": -1.442701567038959e-10,
+      "migrated_value": -1.442701567038959e-10,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737003"
+    },
+    {
+      "original_name": "results.tRNA Anticodon (Gly).phi_correlation",
+      "canonical_name": "results.tRNA Anticodon (Gly).phi_correlation",
+      "original_value": 0.6074501092360935,
+      "migrated_value": 0.6074501092360935,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737005"
+    },
+    {
+      "original_name": "results.tRNA Anticodon (Gly).quantum_coherence",
+      "canonical_name": "results.tRNA Anticodon (Gly).quantum_coherence",
+      "original_value": 0.03361344537815126,
+      "migrated_value": 0.03361344537815126,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737006"
+    },
+    {
+      "original_name": "results.tRNA Anticodon (Gly).metrics.entanglement_entropy",
+      "canonical_name": "results.tRNA Anticodon (Gly).metrics.entanglement_entropy",
+      "original_value": -1.4426951601859516e-10,
+      "migrated_value": -1.4426951601859516e-10,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737009"
+    },
+    {
+      "original_name": "results.miRNA seed (let-7).phi_correlation",
+      "canonical_name": "results.miRNA seed (let-7).phi_correlation",
+      "original_value": 0.4549649688697668,
+      "migrated_value": 0.4549649688697668,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737010"
+    },
+    {
+      "original_name": "results.miRNA seed (let-7).quantum_coherence",
+      "canonical_name": "results.miRNA seed (let-7).quantum_coherence",
+      "original_value": 0.00025577600497306264,
+      "migrated_value": 0.00025577600497306264,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737012"
+    },
+    {
+      "original_name": "results.miRNA seed (let-7).metrics.entanglement_entropy",
+      "canonical_name": "results.miRNA seed (let-7).metrics.entanglement_entropy",
+      "original_value": -1.4426951601859516e-10,
+      "migrated_value": -1.4426951601859516e-10,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737014"
+    },
+    {
+      "original_name": "results.Fibonacci Pattern.phi_correlation",
+      "canonical_name": "results.Fibonacci Pattern.phi_correlation",
+      "original_value": 0.5219667489097282,
+      "migrated_value": 0.5219667489097282,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737015"
+    },
+    {
+      "original_name": "results.Fibonacci Pattern.quantum_coherence",
+      "canonical_name": "results.Fibonacci Pattern.quantum_coherence",
+      "original_value": 0.00013786764705882347,
+      "migrated_value": 0.00013786764705882347,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737017"
+    },
+    {
+      "original_name": "results.Fibonacci Pattern.metrics.entanglement_entropy",
+      "canonical_name": "results.Fibonacci Pattern.metrics.entanglement_entropy",
+      "original_value": -1.4426983636124553e-10,
+      "migrated_value": -1.4426983636124553e-10,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737019"
+    },
+    {
+      "original_name": "results.Phi Spiral.phi_correlation",
+      "canonical_name": "results.Phi Spiral.phi_correlation",
+      "original_value": 0.481640173850968,
+      "migrated_value": 0.481640173850968,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737021"
+    },
+    {
+      "original_name": "results.Phi Spiral.quantum_coherence",
+      "canonical_name": "results.Phi Spiral.quantum_coherence",
+      "original_value": 0.0001378676470588235,
+      "migrated_value": 0.0001378676470588235,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737023"
+    },
+    {
+      "original_name": "results.Phi Spiral.metrics.entanglement_entropy",
+      "canonical_name": "results.Phi Spiral.metrics.entanglement_entropy",
+      "original_value": -1.442701567038959e-10,
+      "migrated_value": -1.442701567038959e-10,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737024"
+    },
+    {
+      "original_name": "metrics.entropy",
+      "canonical_name": "metrics.entropy",
+      "original_value": 1.3820594536352602,
+      "migrated_value": 1.3820594536352602,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737120"
+    },
+    {
+      "original_name": "metrics.phi_power",
+      "canonical_name": "metrics.phi_power",
+      "original_value": 0.40032895177693884,
+      "migrated_value": 0.40032895177693884,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737122"
+    },
+    {
+      "original_name": "consciousness_detected",
+      "canonical_name": "consciousness_detected",
+      "original_value": false,
+      "migrated_value": false,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737124"
+    },
+    {
+      "original_name": "thresholds.entropy",
+      "canonical_name": "thresholds.entropy",
+      "original_value": 0.347,
+      "migrated_value": 0.347,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737126"
+    },
+    {
+      "original_name": "thresholds.phi_power",
+      "canonical_name": "thresholds.phi_power",
+      "original_value": 0.01,
+      "migrated_value": 0.01,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737128"
+    },
+    {
+      "original_name": "aggregate.variants.control.avg_entropy",
+      "canonical_name": "aggregate.variants.control.avg_entropy",
+      "original_value": 2.405798,
+      "migrated_value": 2.405798,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737252"
+    },
+    {
+      "original_name": "aggregate.variants.mild.avg_entropy",
+      "canonical_name": "aggregate.variants.mild.avg_entropy",
+      "original_value": 2.37775,
+      "migrated_value": 2.37775,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737254"
+    },
+    {
+      "original_name": "aggregate.variants.moderate.avg_entropy",
+      "canonical_name": "aggregate.variants.moderate.avg_entropy",
+      "original_value": 2.28454,
+      "migrated_value": 2.28454,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737256"
+    },
+    {
+      "original_name": "aggregate.backends.ibm_fez.avg_entropy",
+      "canonical_name": "aggregate.backends.ibm_fez.avg_entropy",
+      "original_value": 2.8748,
+      "migrated_value": 2.8748,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737258"
+    },
+    {
+      "original_name": "aggregate.backends.ibm_marrakesh.avg_entropy",
+      "canonical_name": "aggregate.backends.ibm_marrakesh.avg_entropy",
+      "original_value": 1.837258,
+      "migrated_value": 1.837258,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737260"
+    },
+    {
+      "original_name": "entropy",
+      "canonical_name": "entropy",
+      "original_value": 2.9195339997399903,
+      "migrated_value": 2.9195339997399903,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.737871"
+    },
+    {
+      "original_name": "consciousness_peak.phi_ratio",
+      "canonical_name": "consciousness_peak.phi_ratio",
+      "original_value": 0.5882352941176471,
+      "migrated_value": 0.5882352941176471,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.738052"
+    },
+    {
+      "original_name": "phi_resonance_correlation.measured_phi_baseline",
+      "canonical_name": "phi_resonance_correlation.measured_phi_baseline",
+      "original_value": 0.6183,
+      "migrated_value": 0.6183,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.738298"
+    },
+    {
+      "original_name": "biomimetic_metrics.emergence.phi_resonance",
+      "canonical_name": "biomimetic_metrics.emergence.phi_resonance",
+      "original_value": 1.6172913897646914,
+      "migrated_value": 1.6172913897646914,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.740123"
+    },
+    {
+      "original_name": "biomimetic_metrics.emergence.phi_proximity_mean",
+      "canonical_name": "biomimetic_metrics.emergence.phi_proximity_mean",
+      "original_value": 0.6183177664624594,
+      "migrated_value": 0.6183177664624594,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.740129"
+    },
+    {
+      "original_name": "biomimetic_metrics.emergence.phi_proximity_std",
+      "canonical_name": "biomimetic_metrics.emergence.phi_proximity_std",
+      "original_value": 0.002637038225096372,
+      "migrated_value": 0.002637038225096372,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.740131"
+    },
+    {
+      "original_name": "biomimetic_metrics.emergence.entropy",
+      "canonical_name": "biomimetic_metrics.emergence.entropy",
+      "original_value": -22440.172228386724,
+      "migrated_value": -22440.172228386724,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.740133"
+    },
+    {
+      "original_name": "biomimetic_metrics.emergence.pattern_coherence",
+      "canonical_name": "biomimetic_metrics.emergence.pattern_coherence",
+      "original_value": 11.79244404259215,
+      "migrated_value": 11.79244404259215,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.740134"
+    },
+    {
+      "original_name": "consciousness_peak.phi_ratio",
+      "canonical_name": "consciousness_peak.phi_ratio",
+      "original_value": 0.5882352941176471,
+      "migrated_value": 0.5882352941176471,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.740841"
+    },
+    {
+      "original_name": "entropy",
+      "canonical_name": "entropy",
+      "original_value": 2.9195339997399903,
+      "migrated_value": 2.9195339997399903,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741096"
+    },
+    {
+      "original_name": "correlations.connectivity_coherence",
+      "canonical_name": "correlations.connectivity_coherence",
+      "original_value": -0.30618285556648184,
+      "migrated_value": -0.30618285556648184,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741177"
+    },
+    {
+      "original_name": "correlations.thermal_coherence",
+      "canonical_name": "correlations.thermal_coherence",
+      "original_value": -0.6420466392046139,
+      "migrated_value": -0.6420466392046139,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741180"
+    },
+    {
+      "original_name": "correlations.combined_coherence",
+      "canonical_name": "correlations.combined_coherence",
+      "original_value": -0.9684100627435814,
+      "migrated_value": -0.9684100627435814,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741182"
+    },
+    {
+      "original_name": "Methane (CH4).entanglement_entropy",
+      "canonical_name": "Methane (CH4).entanglement_entropy",
+      "original_value": 0.8371899204917477,
+      "migrated_value": 0.8371899204917477,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741332"
+    },
+    {
+      "original_name": "Methane (CH4).coherence",
+      "canonical_name": "Methane (CH4).coherence",
+      "original_value": 0.005537383439945683,
+      "migrated_value": 0.005537383439945683,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741336"
+    },
+    {
+      "original_name": "Methane (CH4).phi_resonance",
+      "canonical_name": "Methane (CH4).phi_resonance",
+      "original_value": 0.9851270318031311,
+      "migrated_value": 0.9851270318031311,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741337"
+    },
+    {
+      "original_name": "Water (H2O).entanglement_entropy",
+      "canonical_name": "Water (H2O).entanglement_entropy",
+      "original_value": 1.2422222217912728,
+      "migrated_value": 1.2422222217912728,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741339"
+    },
+    {
+      "original_name": "Water (H2O).coherence",
+      "canonical_name": "Water (H2O).coherence",
+      "original_value": 0.007393126697160398,
+      "migrated_value": 0.007393126697160398,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741341"
+    },
+    {
+      "original_name": "Water (H2O).phi_resonance",
+      "canonical_name": "Water (H2O).phi_resonance",
+      "original_value": 0.9632918238639832,
+      "migrated_value": 0.9632918238639832,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741343"
+    },
+    {
+      "original_name": "Benzene (C6H6).entanglement_entropy",
+      "canonical_name": "Benzene (C6H6).entanglement_entropy",
+      "original_value": 0.9627837318194504,
+      "migrated_value": 0.9627837318194504,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741344"
+    },
+    {
+      "original_name": "Benzene (C6H6).coherence",
+      "canonical_name": "Benzene (C6H6).coherence",
+      "original_value": 0.006387611427489188,
+      "migrated_value": 0.006387611427489188,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741346"
+    },
+    {
+      "original_name": "Benzene (C6H6).phi_resonance",
+      "canonical_name": "Benzene (C6H6).phi_resonance",
+      "original_value": 0.8922244906425476,
+      "migrated_value": 0.8922244906425476,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741348"
+    },
+    {
+      "original_name": "dna_results.phi_value",
+      "canonical_name": "dna_results.phi_value",
+      "original_value": 2.895460742440859,
+      "migrated_value": 2.895460742440859,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741437"
+    },
+    {
+      "original_name": "dna_results.consciousness_level",
+      "canonical_name": "dna_results.consciousness_level",
+      "original_value": 1.0,
+      "migrated_value": 1.0,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741440"
+    },
+    {
+      "original_name": "dna_results.phi_resonance_threshold",
+      "canonical_name": "dna_results.phi_resonance_threshold",
+      "original_value": 0.7,
+      "migrated_value": 0.7,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741442"
+    },
+    {
+      "original_name": "dna_results.dna_phi_ratio",
+      "canonical_name": "dna_results.dna_phi_ratio",
+      "original_value": 0.5882352941176471,
+      "migrated_value": 0.5882352941176471,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741444"
+    },
+    {
+      "original_name": "dna_results.phi_alignment_score",
+      "canonical_name": "dna_results.phi_alignment_score",
+      "original_value": 0.9517846992646442,
+      "migrated_value": 0.9517846992646442,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741446"
+    },
+    {
+      "original_name": "dna_results.latent_space_analysis.entropy",
+      "canonical_name": "dna_results.latent_space_analysis.entropy",
+      "original_value": 6.451398833713856,
+      "migrated_value": 6.451398833713856,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741447"
+    },
+    {
+      "original_name": "phi_harmonic.phi_harmonic_score",
+      "canonical_name": "phi_harmonic.phi_harmonic_score",
+      "original_value": 1.0,
+      "migrated_value": 1.0,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741449"
+    },
+    {
+      "original_name": "phi_harmonic.phi_alignment",
+      "canonical_name": "phi_harmonic.phi_alignment",
+      "original_value": 0.9517846992646442,
+      "migrated_value": 0.9517846992646442,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741451"
+    },
+    {
+      "original_name": "latent_space.latent_entropy",
+      "canonical_name": "latent_space.latent_entropy",
+      "original_value": 6.451398833713856,
+      "migrated_value": 6.451398833713856,
+      "status": "unknown_metric",
+      "notes": "Unknown metric - not in registry",
+      "registry_version": "1.0.0",
+      "migration_timestamp": "2026-04-15T22:11:38.741452"
+    }
+  ]
+}

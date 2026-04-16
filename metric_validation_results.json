@@ -1,0 +1,88 @@
+{
+  "date": "2026-04-15",
+  "total_tests": 8,
+  "passed": 7,
+  "failed": 1,
+  "results": [
+    {
+      "test_name": "entanglement_entropy_validity",
+      "passed": true,
+      "value": 1.9891267841525742,
+      "expected_range": [
+        0,
+        5.075173815233827
+      ],
+      "message": "All checks passed"
+    },
+    {
+      "test_name": "quantum_coherence_validity",
+      "passed": true,
+      "value": 0.03125,
+      "expected_range": [
+        0,
+        1
+      ],
+      "message": "Coherence in valid range"
+    },
+    {
+      "test_name": "phi_resonance_validity",
+      "passed": true,
+      "value": 0.9999403953552246,
+      "expected_range": [
+        0,
+        1
+      ],
+      "message": "Icosahedron phi resonance: 0.9999"
+    },
+    {
+      "test_name": "entanglement_vs_null",
+      "passed": true,
+      "value": -15.354466691586827,
+      "expected_range": [
+        -3,
+        3
+      ],
+      "message": "Water S=1.2422, Null mean=1.9864, z=-15.35"
+    },
+    {
+      "test_name": "phi_vs_alternatives",
+      "passed": true,
+      "value": 5.9588229570195494e-05,
+      "expected_range": [
+        0,
+        1
+      ],
+      "message": "Proximities: {'phi': np.float64(5.9588229570195494e-05), 'sqrt2': np.float64(0.20376083814722956), 'pi': np.float32(1.5236183), 'e': np.float32(1.1003073), 'random': np.float32(0.058428407)}"
+    },
+    {
+      "test_name": "platonic_vs_random",
+      "passed": true,
+      "value": 0.22980289551584193,
+      "expected_range": [
+        0,
+        1
+      ],
+      "message": "Methane: 0.6517, Random: 0.4219"
+    },
+    {
+      "test_name": "entanglement_predicts_complexity",
+      "passed": false,
+      "value": -0.27943851775987316,
+      "expected_range": [
+        0,
+        2
+      ],
+      "message": "Entropies: water=1.2422, methane=1.1223, benzene=0.9628"
+    },
+    {
+      "test_name": "phi_predicts_symmetry",
+      "passed": true,
+      "value": 0.17123581993367532,
+      "expected_range": [
+        0,
+        1
+      ],
+      "message": "Phi: benzene=0.8954, water=0.9633, random=0.7241"
+    }
+  ]
+}

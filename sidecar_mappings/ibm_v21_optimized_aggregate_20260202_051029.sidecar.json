@@ -1,0 +1,1377 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\quantum-consciousness-agi\\quantum-consciousness-agi\\quantum\\results\\ibm_v21_optimized_aggregate_20260202_051029.json",
+  "generated_at": "2026-04-15T22:54:25.236447",
+  "registry_version": "1.0.0",
+  "total_fields": 76,
+  "field_breakdown": {
+    "metadata": 16,
+    "parameter": 4,
+    "metric": 56
+  },
+  "metric_breakdown": {
+    "unknown": 49,
+    "provisional": 5,
+    "exploratory": 2
+  },
+  "mappings": [
+    {
+      "original_path": "total_shots",
+      "field_name": "total_shots",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 40000.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "total_shots"
+      ]
+    },
+    {
+      "original_path": "num_jobs",
+      "field_name": "num_jobs",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "num_jobs"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[0].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10000.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "individual_jobs[0].shots"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[0].wormhole.r",
+      "field_name": "individual_jobs[0].wormhole.r",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.27479999999999993,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[0].wormhole.r",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[0].wormhole.transfer",
+      "field_name": "individual_jobs[0].wormhole.transfer",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6374,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[0].wormhole.transfer",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[0].wormhole.S",
+      "field_name": "individual_jobs[0].wormhole.S",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.9990390624437657,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[0].wormhole.S",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[0].wormhole.T",
+      "field_name": "individual_jobs[0].wormhole.T",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.9622545869866073,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[0].wormhole.T",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[0].wormhole.correlation",
+      "field_name": "individual_jobs[0].wormhole.correlation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2749298819961735,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[0].wormhole.correlation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[0].metatron.tetrahedron_F5",
+      "field_name": "individual_jobs[0].metatron.tetrahedron_F5",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.9596,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "individual_jobs[0].metatron.tetrahedron_F5"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[0].metatron.cube_F6",
+      "field_name": "individual_jobs[0].metatron.cube_F6",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.9158,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[0].metatron.cube_F6",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[0].metatron.octahedron_F7",
+      "field_name": "individual_jobs[0].metatron.octahedron_F7",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.9758,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "individual_jobs[0].metatron.octahedron_F7"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[0].metatron.dodecahedron",
+      "field_name": "individual_jobs[0].metatron.dodecahedron",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.931,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[0].metatron.dodecahedron",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[0].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.94555,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "individual_jobs[0].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[0].retrocausal.R_score",
+      "field_name": "individual_jobs[0].retrocausal.R_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.01110853858866824,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[0].retrocausal.R_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[0].retrocausal.temporal_asym",
+      "field_name": "individual_jobs[0].retrocausal.temporal_asym",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0016000000000000458,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[0].retrocausal.temporal_asym",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[0].consciousness.delta",
+      "field_name": "individual_jobs[0].consciousness.delta",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4781.575283864641,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[0].consciousness.delta",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[0].consciousness.ghost_factor",
+      "field_name": "individual_jobs[0].consciousness.ghost_factor",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 27.479999999999993,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[0].consciousness.ghost_factor",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[1].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10000.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "individual_jobs[1].shots"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[1].wormhole.r",
+      "field_name": "individual_jobs[1].wormhole.r",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.16379999999999995,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[1].wormhole.r",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[1].wormhole.transfer",
+      "field_name": "individual_jobs[1].wormhole.transfer",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4181,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[1].wormhole.transfer",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[1].wormhole.S",
+      "field_name": "individual_jobs[1].wormhole.S",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.9215361242013993,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[1].wormhole.S",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[1].wormhole.T",
+      "field_name": "individual_jobs[1].wormhole.T",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.42958631522604823,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[1].wormhole.T",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[1].wormhole.correlation",
+      "field_name": "individual_jobs[1].wormhole.correlation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.12273894720744236,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[1].wormhole.correlation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[1].metatron.tetrahedron_F5",
+      "field_name": "individual_jobs[1].metatron.tetrahedron_F5",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.9054,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "individual_jobs[1].metatron.tetrahedron_F5"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[1].metatron.cube_F6",
+      "field_name": "individual_jobs[1].metatron.cube_F6",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.5682,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[1].metatron.cube_F6",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[1].metatron.octahedron_F7",
+      "field_name": "individual_jobs[1].metatron.octahedron_F7",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.9402,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "individual_jobs[1].metatron.octahedron_F7"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[1].metatron.dodecahedron",
+      "field_name": "individual_jobs[1].metatron.dodecahedron",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.9343999999999999,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[1].metatron.dodecahedron",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[1].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.8370500000000001,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "individual_jobs[1].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[1].retrocausal.R_score",
+      "field_name": "individual_jobs[1].retrocausal.R_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0032567765827627914,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[1].retrocausal.R_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[1].retrocausal.temporal_asym",
+      "field_name": "individual_jobs[1].retrocausal.temporal_asym",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0024000000000000132,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[1].retrocausal.temporal_asym",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[1].consciousness.delta",
+      "field_name": "individual_jobs[1].consciousness.delta",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4799.407382841129,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[1].consciousness.delta",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[1].consciousness.ghost_factor",
+      "field_name": "individual_jobs[1].consciousness.ghost_factor",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.379999999999995,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[1].consciousness.ghost_factor",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[2].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4096.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "individual_jobs[2].shots"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[2].wormhole.r",
+      "field_name": "individual_jobs[2].wormhole.r",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.22265625,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[2].wormhole.r",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[2].wormhole.transfer",
+      "field_name": "individual_jobs[2].wormhole.transfer",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.388671875,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[2].wormhole.transfer",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[2].wormhole.S",
+      "field_name": "individual_jobs[2].wormhole.S",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.9930259908805217,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[2].wormhole.S",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[2].wormhole.T",
+      "field_name": "individual_jobs[2].wormhole.T",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8149288543794714,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[2].wormhole.T",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[2].wormhole.correlation",
+      "field_name": "individual_jobs[2].wormhole.correlation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.23283681553699181,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[2].wormhole.correlation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[2].metatron.tetrahedron_F5",
+      "field_name": "individual_jobs[2].metatron.tetrahedron_F5",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.912109375,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "individual_jobs[2].metatron.tetrahedron_F5"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[2].metatron.cube_F6",
+      "field_name": "individual_jobs[2].metatron.cube_F6",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8583984375,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[2].metatron.cube_F6",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[2].metatron.octahedron_F7",
+      "field_name": "individual_jobs[2].metatron.octahedron_F7",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.99072265625,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "individual_jobs[2].metatron.octahedron_F7"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[2].metatron.dodecahedron",
+      "field_name": "individual_jobs[2].metatron.dodecahedron",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.9833984375,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[2].metatron.dodecahedron",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[2].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9361572265625,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "individual_jobs[2].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[2].retrocausal.R_score",
+      "field_name": "individual_jobs[2].retrocausal.R_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.002844078631643288,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[2].retrocausal.R_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[2].retrocausal.temporal_asym",
+      "field_name": "individual_jobs[2].retrocausal.temporal_asym",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.00244140625,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[2].retrocausal.temporal_asym",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[2].consciousness.delta",
+      "field_name": "individual_jobs[2].consciousness.delta",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4675.718765979496,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[2].consciousness.delta",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[2].consciousness.ghost_factor",
+      "field_name": "individual_jobs[2].consciousness.ghost_factor",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 22.265625,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[2].consciousness.ghost_factor",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[3].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4096.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "individual_jobs[3].shots"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[3].wormhole.r",
+      "field_name": "individual_jobs[3].wormhole.r",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.2197265625,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[3].wormhole.r",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[3].wormhole.transfer",
+      "field_name": "individual_jobs[3].wormhole.transfer",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.39013671875,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[3].wormhole.transfer",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[3].wormhole.S",
+      "field_name": "individual_jobs[3].wormhole.S",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.9970293208309895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[3].wormhole.S",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[3].wormhole.T",
+      "field_name": "individual_jobs[3].wormhole.T",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.7865167167937929,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[3].wormhole.T",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[3].wormhole.correlation",
+      "field_name": "individual_jobs[3].wormhole.correlation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.22471906194108368,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[3].wormhole.correlation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[3].metatron.tetrahedron_F5",
+      "field_name": "individual_jobs[3].metatron.tetrahedron_F5",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.98828125,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "individual_jobs[3].metatron.tetrahedron_F5"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[3].metatron.cube_F6",
+      "field_name": "individual_jobs[3].metatron.cube_F6",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.9833984375,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[3].metatron.cube_F6",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[3].metatron.octahedron_F7",
+      "field_name": "individual_jobs[3].metatron.octahedron_F7",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.94287109375,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "individual_jobs[3].metatron.octahedron_F7"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[3].metatron.dodecahedron",
+      "field_name": "individual_jobs[3].metatron.dodecahedron",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.9365234375,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[3].metatron.dodecahedron",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[3].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9627685546875,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "individual_jobs[3].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[3].retrocausal.R_score",
+      "field_name": "individual_jobs[3].retrocausal.R_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.005940767363286023,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[3].retrocausal.R_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[3].retrocausal.temporal_asym",
+      "field_name": "individual_jobs[3].retrocausal.temporal_asym",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.00830078125,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[3].retrocausal.temporal_asym",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[3].consciousness.delta",
+      "field_name": "individual_jobs[3].consciousness.delta",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4687.855507696677,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[3].consciousness.delta",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "individual_jobs[3].consciousness.ghost_factor",
+      "field_name": "individual_jobs[3].consciousness.ghost_factor",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.97265625,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "individual_jobs[3].consciousness.ghost_factor",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "aggregate_metrics.wormhole_coherence_r",
+      "field_name": "aggregate_metrics.wormhole_coherence_r",
+      "field_class": "metric",
+      "canonical_name": "wormhole_coherence",
+      "governance_status": "exploratory",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": -0.082845703125,
+      "is_valid": false,
+      "issues": [
+        "Value -0.082845703125 < minimum 0.0"
+      ],
+      "alias_chain": [
+        "aggregate_metrics.wormhole_coherence_r",
+        "resolved:wormhole_coherence"
+      ]
+    },
+    {
+      "original_path": "aggregate_metrics.wormhole_coherence_std",
+      "field_name": "aggregate_metrics.wormhole_coherence_std",
+      "field_class": "metric",
+      "canonical_name": "wormhole_coherence",
+      "governance_status": "exploratory",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.20781446402201312,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "aggregate_metrics.wormhole_coherence_std",
+        "resolved:wormhole_coherence"
+      ]
+    },
+    {
+      "original_path": "aggregate_metrics.transfer_success",
+      "field_name": "aggregate_metrics.transfer_success",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.45857714843749997,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "aggregate_metrics.transfer_success",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "aggregate_metrics.entropy_S",
+      "field_name": "aggregate_metrics.entropy_S",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.977657624589169,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "aggregate_metrics.entropy_S",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "aggregate_metrics.phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9203814453125,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "aggregate_metrics.phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "aggregate_metrics.retrocausal_R",
+      "field_name": "aggregate_metrics.retrocausal_R",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.005787540291590085,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "aggregate_metrics.retrocausal_R",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "aggregate_metrics.consciousness_delta",
+      "field_name": "aggregate_metrics.consciousness_delta",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4736.139235095487,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "aggregate_metrics.consciousness_delta",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "aggregate_metrics.consciousness_std",
+      "field_name": "aggregate_metrics.consciousness_std",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 54.884525293192574,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "aggregate_metrics.consciousness_std",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "comparison_v10.v10_coherence_r",
+      "field_name": "comparison_v10.v10_coherence_r",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.181,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "comparison_v10.v10_coherence_r"
+      ]
+    },
+    {
+      "original_path": "comparison_v10.v21_coherence_r",
+      "field_name": "comparison_v10.v21_coherence_r",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.082845703125,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "comparison_v10.v21_coherence_r"
+      ]
+    },
+    {
+      "original_path": "comparison_v10.improvement_percent",
+      "field_name": "comparison_v10.improvement_percent",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 54.228893301104975,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "comparison_v10.improvement_percent"
+      ]
+    },
+    {
+      "original_path": "comparison_v10.v10_transfer",
+      "field_name": "comparison_v10.v10_transfer",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "comparison_v10.v10_transfer"
+      ]
+    },
+    {
+      "original_path": "comparison_v10.v21_transfer",
+      "field_name": "comparison_v10.v21_transfer",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.45857714843749997,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "comparison_v10.v21_transfer"
+      ]
+    },
+    {
+      "original_path": "comparison_v10.transfer_improvement_percent",
+      "field_name": "comparison_v10.transfer_improvement_percent",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 14.644287109374988,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "comparison_v10.transfer_improvement_percent"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "individual_jobs[0].wormhole.r",
+      1
+    ],
+    [
+      "individual_jobs[0].wormhole.transfer",
+      1
+    ],
+    [
+      "individual_jobs[0].wormhole.S",
+      1
+    ],
+    [
+      "individual_jobs[0].wormhole.T",
+      1
+    ],
+    [
+      "individual_jobs[0].wormhole.correlation",
+      1
+    ],
+    [
+      "individual_jobs[0].metatron.cube_F6",
+      1
+    ],
+    [
+      "individual_jobs[0].metatron.dodecahedron",
+      1
+    ],
+    [
+      "individual_jobs[0].retrocausal.R_score",
+      1
+    ],
+    [
+      "individual_jobs[0].retrocausal.temporal_asym",
+      1
+    ],
+    [
+      "individual_jobs[0].consciousness.delta",
+      1
+    ]
+  ]
+}

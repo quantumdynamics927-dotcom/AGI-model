@@ -1,0 +1,6361 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\raw_hardware\\consciousness_validation_report.json",
+  "generated_at": "2026-04-15T22:54:20.368080",
+  "registry_version": "1.0.0",
+  "total_fields": 353,
+  "field_breakdown": {
+    "metadata": 75,
+    "metric": 278
+  },
+  "metric_breakdown": {
+    "unknown": 128,
+    "exploratory": 1,
+    "provisional": 111,
+    "passed": 38
+  },
+  "mappings": [
+    {
+      "original_path": "config.num_runs",
+      "field_name": "config.num_runs",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "config.num_runs"
+      ]
+    },
+    {
+      "original_path": "config.warmup_runs",
+      "field_name": "config.warmup_runs",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "config.warmup_runs",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "config.phi_resonance_target",
+      "field_name": "config.phi_resonance_target",
+      "field_class": "metric",
+      "canonical_name": "phi_target_constant",
+      "governance_status": "exploratory",
+      "metric_class": "target_constant",
+      "valid_range": [
+        null,
+        null
+      ],
+      "value": 1.618033988749895,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "config.phi_resonance_target",
+        "resolved:phi_target_constant"
+      ]
+    },
+    {
+      "original_path": "config.phi_resonance_tolerance",
+      "field_name": "config.phi_resonance_tolerance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.05,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "config.phi_resonance_tolerance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "config.phi_coherence_min",
+      "field_name": "config.phi_coherence_min",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "config.phi_coherence_min",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "config.emergence_threshold",
+      "field_name": "config.emergence_threshold",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.7,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "config.emergence_threshold",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "config.significance_level",
+      "field_name": "config.significance_level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "config.significance_level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "config.min_effect_size",
+      "field_name": "config.min_effect_size",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.3,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "config.min_effect_size"
+      ]
+    },
+    {
+      "original_path": "results[0].generation_tokens",
+      "field_name": "results[0].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[0].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[0].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.651592866924892,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[0].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[0].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[0].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[0].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[0].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[0].lz_complexity",
+      "field_name": "results[0].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[0].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[0].entropy",
+      "field_name": "results[0].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.1082436744014705,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[0].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[0].emergence_score",
+      "field_name": "results[0].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2212892585437329,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[0].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[0].inference_time_ms",
+      "field_name": "results[0].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 502.8512477874756,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[0].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[0].semantic_similarity",
+      "field_name": "results[0].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[0].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[1].generation_tokens",
+      "field_name": "results[1].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[1].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[1].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.651592866924892,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[1].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[1].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[1].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[1].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[1].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[1].lz_complexity",
+      "field_name": "results[1].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[1].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[1].entropy",
+      "field_name": "results[1].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.1082436744014705,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[1].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[1].emergence_score",
+      "field_name": "results[1].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2212892585437329,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[1].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[1].inference_time_ms",
+      "field_name": "results[1].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.44798851013184,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[1].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[1].semantic_similarity",
+      "field_name": "results[1].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[1].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[2].generation_tokens",
+      "field_name": "results[2].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[2].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[2].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.651592866924892,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[2].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[2].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[2].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[2].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[2].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[2].lz_complexity",
+      "field_name": "results[2].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[2].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[2].entropy",
+      "field_name": "results[2].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.1082436744014705,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[2].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[2].emergence_score",
+      "field_name": "results[2].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2212892585437329,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[2].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[2].inference_time_ms",
+      "field_name": "results[2].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 501.08861923217773,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[2].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[2].semantic_similarity",
+      "field_name": "results[2].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[2].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[3].generation_tokens",
+      "field_name": "results[3].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[3].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[3].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.651592866924892,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[3].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[3].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[3].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[3].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[3].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[3].lz_complexity",
+      "field_name": "results[3].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[3].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[3].entropy",
+      "field_name": "results[3].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.1082436744014705,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[3].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[3].emergence_score",
+      "field_name": "results[3].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2212892585437329,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[3].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[3].inference_time_ms",
+      "field_name": "results[3].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.2593994140625,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[3].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[3].semantic_similarity",
+      "field_name": "results[3].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[3].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[4].generation_tokens",
+      "field_name": "results[4].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[4].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[4].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.651592866924892,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[4].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[4].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[4].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[4].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[4].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[4].lz_complexity",
+      "field_name": "results[4].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[4].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[4].entropy",
+      "field_name": "results[4].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.1082436744014705,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[4].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[4].emergence_score",
+      "field_name": "results[4].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2212892585437329,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[4].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[4].inference_time_ms",
+      "field_name": "results[4].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.3390312194824,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[4].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[4].semantic_similarity",
+      "field_name": "results[4].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[4].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[5].generation_tokens",
+      "field_name": "results[5].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[5].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[5].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.651592866924892,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[5].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[5].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[5].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[5].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[5].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[5].lz_complexity",
+      "field_name": "results[5].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[5].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[5].entropy",
+      "field_name": "results[5].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.1082436744014705,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[5].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[5].emergence_score",
+      "field_name": "results[5].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2212892585437329,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[5].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[5].inference_time_ms",
+      "field_name": "results[5].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.7812976837158,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[5].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[5].semantic_similarity",
+      "field_name": "results[5].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[5].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[6].generation_tokens",
+      "field_name": "results[6].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[6].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[6].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6587467786257996,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[6].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[6].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[6].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[6].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Value 2.0 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "results[6].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[6].lz_complexity",
+      "field_name": "results[6].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[6].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[6].entropy",
+      "field_name": "results[6].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 3.910868524093668,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[6].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[6].emergence_score",
+      "field_name": "results[6].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4162622429971123,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[6].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[6].inference_time_ms",
+      "field_name": "results[6].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.4119873046875,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[6].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[6].semantic_similarity",
+      "field_name": "results[6].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[6].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[7].generation_tokens",
+      "field_name": "results[7].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 11.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[7].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[7].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6548252872753711,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[7].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[7].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[7].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[7].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[7].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[7].lz_complexity",
+      "field_name": "results[7].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[7].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[7].entropy",
+      "field_name": "results[7].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.311204305744126,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[7].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[7].emergence_score",
+      "field_name": "results[7].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2277821300278225,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[7].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[7].inference_time_ms",
+      "field_name": "results[7].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.3221035003662,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[7].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[7].semantic_similarity",
+      "field_name": "results[7].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[7].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[8].generation_tokens",
+      "field_name": "results[8].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[8].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[8].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.651592866924892,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[8].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[8].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[8].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[8].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[8].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[8].lz_complexity",
+      "field_name": "results[8].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[8].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[8].entropy",
+      "field_name": "results[8].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.1082436744014705,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[8].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[8].emergence_score",
+      "field_name": "results[8].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2212892585437329,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[8].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[8].inference_time_ms",
+      "field_name": "results[8].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 501.1405944824219,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[8].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[8].semantic_similarity",
+      "field_name": "results[8].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[8].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[9].generation_tokens",
+      "field_name": "results[9].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[9].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[9].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6587467786257996,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[9].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[9].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[9].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[9].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Value 2.0 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "results[9].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[9].lz_complexity",
+      "field_name": "results[9].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[9].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[9].entropy",
+      "field_name": "results[9].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 3.910868524093668,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[9].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[9].emergence_score",
+      "field_name": "results[9].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4162622429971123,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[9].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[9].inference_time_ms",
+      "field_name": "results[9].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.2622604370117,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[9].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[9].semantic_similarity",
+      "field_name": "results[9].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[9].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[10].generation_tokens",
+      "field_name": "results[10].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 11.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[10].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[10].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6548252872753711,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[10].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[10].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[10].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[10].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[10].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[10].lz_complexity",
+      "field_name": "results[10].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[10].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[10].entropy",
+      "field_name": "results[10].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.311204305744126,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[10].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[10].emergence_score",
+      "field_name": "results[10].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2277821300278225,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[10].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[10].inference_time_ms",
+      "field_name": "results[10].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.60033798217773,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[10].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[10].semantic_similarity",
+      "field_name": "results[10].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[10].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[11].generation_tokens",
+      "field_name": "results[11].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[11].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[11].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.651592866924892,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[11].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[11].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[11].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[11].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[11].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[11].lz_complexity",
+      "field_name": "results[11].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[11].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[11].entropy",
+      "field_name": "results[11].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.1082436744014705,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[11].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[11].emergence_score",
+      "field_name": "results[11].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2212892585437329,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[11].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[11].inference_time_ms",
+      "field_name": "results[11].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.61678886413574,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[11].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[11].semantic_similarity",
+      "field_name": "results[11].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[11].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[12].generation_tokens",
+      "field_name": "results[12].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[12].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[12].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6587467786257996,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[12].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[12].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[12].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[12].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Value 2.0 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "results[12].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[12].lz_complexity",
+      "field_name": "results[12].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[12].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[12].entropy",
+      "field_name": "results[12].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 3.910868524093668,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[12].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[12].emergence_score",
+      "field_name": "results[12].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4162622429971123,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[12].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[12].inference_time_ms",
+      "field_name": "results[12].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.2727508544922,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[12].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[12].semantic_similarity",
+      "field_name": "results[12].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[12].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[13].generation_tokens",
+      "field_name": "results[13].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 11.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[13].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[13].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6548252872753711,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[13].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[13].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[13].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[13].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[13].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[13].lz_complexity",
+      "field_name": "results[13].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[13].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[13].entropy",
+      "field_name": "results[13].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.311204305744126,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[13].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[13].emergence_score",
+      "field_name": "results[13].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2277821300278225,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[13].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[13].inference_time_ms",
+      "field_name": "results[13].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.5505084991455,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[13].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[13].semantic_similarity",
+      "field_name": "results[13].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[13].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[14].generation_tokens",
+      "field_name": "results[14].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[14].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[14].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.651592866924892,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[14].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[14].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[14].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[14].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[14].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[14].lz_complexity",
+      "field_name": "results[14].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[14].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[14].entropy",
+      "field_name": "results[14].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.1082436744014705,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[14].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[14].emergence_score",
+      "field_name": "results[14].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2212892585437329,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[14].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[14].inference_time_ms",
+      "field_name": "results[14].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.46706199645996,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[14].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[14].semantic_similarity",
+      "field_name": "results[14].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[14].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[15].generation_tokens",
+      "field_name": "results[15].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[15].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[15].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6587467786257996,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[15].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[15].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[15].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[15].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Value 2.0 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "results[15].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[15].lz_complexity",
+      "field_name": "results[15].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[15].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[15].entropy",
+      "field_name": "results[15].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 3.910868524093668,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[15].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[15].emergence_score",
+      "field_name": "results[15].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4162622429971123,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[15].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[15].inference_time_ms",
+      "field_name": "results[15].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.53977966308594,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[15].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[15].semantic_similarity",
+      "field_name": "results[15].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[15].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[16].generation_tokens",
+      "field_name": "results[16].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 11.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[16].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[16].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6548252872753711,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[16].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[16].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[16].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[16].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[16].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[16].lz_complexity",
+      "field_name": "results[16].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[16].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[16].entropy",
+      "field_name": "results[16].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.311204305744126,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[16].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[16].emergence_score",
+      "field_name": "results[16].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2277821300278225,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[16].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[16].inference_time_ms",
+      "field_name": "results[16].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.46825408935547,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[16].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[16].semantic_similarity",
+      "field_name": "results[16].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[16].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[17].generation_tokens",
+      "field_name": "results[17].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[17].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[17].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.651592866924892,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[17].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[17].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[17].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[17].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[17].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[17].lz_complexity",
+      "field_name": "results[17].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[17].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[17].entropy",
+      "field_name": "results[17].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.1082436744014705,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[17].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[17].emergence_score",
+      "field_name": "results[17].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2212892585437329,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[17].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[17].inference_time_ms",
+      "field_name": "results[17].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.2634525299072,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[17].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[17].semantic_similarity",
+      "field_name": "results[17].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[17].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[18].generation_tokens",
+      "field_name": "results[18].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[18].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[18].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6587467786257996,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[18].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[18].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[18].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[18].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Value 2.0 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "results[18].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[18].lz_complexity",
+      "field_name": "results[18].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[18].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[18].entropy",
+      "field_name": "results[18].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 3.910868524093668,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[18].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[18].emergence_score",
+      "field_name": "results[18].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4162622429971123,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[18].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[18].inference_time_ms",
+      "field_name": "results[18].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.457763671875,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[18].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[18].semantic_similarity",
+      "field_name": "results[18].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[18].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[19].generation_tokens",
+      "field_name": "results[19].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 11.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[19].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[19].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6548252872753711,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[19].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[19].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[19].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[19].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[19].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[19].lz_complexity",
+      "field_name": "results[19].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[19].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[19].entropy",
+      "field_name": "results[19].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.311204305744126,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[19].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[19].emergence_score",
+      "field_name": "results[19].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2277821300278225,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[19].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[19].inference_time_ms",
+      "field_name": "results[19].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.49662590026855,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[19].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[19].semantic_similarity",
+      "field_name": "results[19].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[19].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[20].generation_tokens",
+      "field_name": "results[20].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[20].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[20].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.651592866924892,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[20].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[20].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[20].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[20].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[20].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[20].lz_complexity",
+      "field_name": "results[20].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[20].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[20].entropy",
+      "field_name": "results[20].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.1082436744014705,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[20].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[20].emergence_score",
+      "field_name": "results[20].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2212892585437329,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[20].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[20].inference_time_ms",
+      "field_name": "results[20].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.5955696105957,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[20].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[20].semantic_similarity",
+      "field_name": "results[20].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[20].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[21].generation_tokens",
+      "field_name": "results[21].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[21].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[21].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6587467786257996,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[21].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[21].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[21].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[21].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Value 2.0 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "results[21].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[21].lz_complexity",
+      "field_name": "results[21].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[21].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[21].entropy",
+      "field_name": "results[21].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 3.910868524093668,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[21].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[21].emergence_score",
+      "field_name": "results[21].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4162622429971123,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[21].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[21].inference_time_ms",
+      "field_name": "results[21].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.45251846313477,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[21].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[21].semantic_similarity",
+      "field_name": "results[21].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[21].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[22].generation_tokens",
+      "field_name": "results[22].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 11.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[22].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[22].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6548252872753711,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[22].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[22].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[22].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[22].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[22].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[22].lz_complexity",
+      "field_name": "results[22].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[22].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[22].entropy",
+      "field_name": "results[22].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.311204305744126,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[22].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[22].emergence_score",
+      "field_name": "results[22].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2277821300278225,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[22].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[22].inference_time_ms",
+      "field_name": "results[22].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.77295303344727,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[22].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[22].semantic_similarity",
+      "field_name": "results[22].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[22].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[23].generation_tokens",
+      "field_name": "results[23].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[23].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[23].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.651592866924892,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[23].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[23].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[23].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[23].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[23].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[23].lz_complexity",
+      "field_name": "results[23].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[23].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[23].entropy",
+      "field_name": "results[23].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.1082436744014705,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[23].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[23].emergence_score",
+      "field_name": "results[23].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2212892585437329,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[23].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[23].inference_time_ms",
+      "field_name": "results[23].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 501.4312267303467,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[23].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[23].semantic_similarity",
+      "field_name": "results[23].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[23].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[24].generation_tokens",
+      "field_name": "results[24].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[24].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[24].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6587467786257996,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[24].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[24].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[24].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[24].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Value 2.0 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "results[24].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[24].lz_complexity",
+      "field_name": "results[24].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[24].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[24].entropy",
+      "field_name": "results[24].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 3.910868524093668,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[24].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[24].emergence_score",
+      "field_name": "results[24].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4162622429971123,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[24].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[24].inference_time_ms",
+      "field_name": "results[24].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.19145011901855,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[24].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[24].semantic_similarity",
+      "field_name": "results[24].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[24].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[25].generation_tokens",
+      "field_name": "results[25].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 11.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[25].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[25].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6548252872753711,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[25].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[25].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[25].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[25].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[25].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[25].lz_complexity",
+      "field_name": "results[25].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[25].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[25].entropy",
+      "field_name": "results[25].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.311204305744126,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[25].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[25].emergence_score",
+      "field_name": "results[25].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2277821300278225,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[25].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[25].inference_time_ms",
+      "field_name": "results[25].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.54359436035156,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[25].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[25].semantic_similarity",
+      "field_name": "results[25].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[25].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[26].generation_tokens",
+      "field_name": "results[26].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[26].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[26].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.651592866924892,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[26].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[26].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[26].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[26].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[26].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[26].lz_complexity",
+      "field_name": "results[26].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[26].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[26].entropy",
+      "field_name": "results[26].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.1082436744014705,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[26].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[26].emergence_score",
+      "field_name": "results[26].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2212892585437329,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[26].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[26].inference_time_ms",
+      "field_name": "results[26].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.5459785461426,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[26].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[26].semantic_similarity",
+      "field_name": "results[26].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[26].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[27].generation_tokens",
+      "field_name": "results[27].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[27].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[27].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6587467786257996,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[27].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[27].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[27].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[27].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Value 2.0 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "results[27].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[27].lz_complexity",
+      "field_name": "results[27].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[27].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[27].entropy",
+      "field_name": "results[27].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 3.910868524093668,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[27].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[27].emergence_score",
+      "field_name": "results[27].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4162622429971123,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[27].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[27].inference_time_ms",
+      "field_name": "results[27].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.4439353942871,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[27].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[27].semantic_similarity",
+      "field_name": "results[27].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[27].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[28].generation_tokens",
+      "field_name": "results[28].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 11.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[28].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[28].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6548252872753711,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[28].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[28].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[28].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[28].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[28].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[28].lz_complexity",
+      "field_name": "results[28].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[28].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[28].entropy",
+      "field_name": "results[28].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.311204305744126,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[28].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[28].emergence_score",
+      "field_name": "results[28].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2277821300278225,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[28].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[28].inference_time_ms",
+      "field_name": "results[28].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.3941059112549,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[28].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[28].semantic_similarity",
+      "field_name": "results[28].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[28].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[29].generation_tokens",
+      "field_name": "results[29].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[29].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[29].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.651592866924892,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[29].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[29].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[29].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[29].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[29].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[29].lz_complexity",
+      "field_name": "results[29].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[29].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[29].entropy",
+      "field_name": "results[29].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.1082436744014705,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[29].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[29].emergence_score",
+      "field_name": "results[29].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2212892585437329,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[29].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[29].inference_time_ms",
+      "field_name": "results[29].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.2870559692383,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[29].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[29].semantic_similarity",
+      "field_name": "results[29].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[29].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[30].generation_tokens",
+      "field_name": "results[30].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[30].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[30].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6587467786257996,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[30].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[30].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[30].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[30].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Value 2.0 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "results[30].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[30].lz_complexity",
+      "field_name": "results[30].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[30].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[30].entropy",
+      "field_name": "results[30].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 3.910868524093668,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[30].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[30].emergence_score",
+      "field_name": "results[30].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4162622429971123,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[30].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[30].inference_time_ms",
+      "field_name": "results[30].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.5450248718262,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[30].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[30].semantic_similarity",
+      "field_name": "results[30].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[30].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[31].generation_tokens",
+      "field_name": "results[31].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 11.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[31].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[31].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6548252872753711,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[31].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[31].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[31].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[31].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[31].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[31].lz_complexity",
+      "field_name": "results[31].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[31].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[31].entropy",
+      "field_name": "results[31].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.311204305744126,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[31].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[31].emergence_score",
+      "field_name": "results[31].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2277821300278225,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[31].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[31].inference_time_ms",
+      "field_name": "results[31].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.22101402282715,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[31].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[31].semantic_similarity",
+      "field_name": "results[31].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[31].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[32].generation_tokens",
+      "field_name": "results[32].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[32].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[32].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.651592866924892,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[32].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[32].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[32].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[32].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[32].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[32].lz_complexity",
+      "field_name": "results[32].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[32].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[32].entropy",
+      "field_name": "results[32].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.1082436744014705,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[32].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[32].emergence_score",
+      "field_name": "results[32].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2212892585437329,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[32].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[32].inference_time_ms",
+      "field_name": "results[32].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.69570541381836,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[32].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[32].semantic_similarity",
+      "field_name": "results[32].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[32].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[33].generation_tokens",
+      "field_name": "results[33].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[33].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[33].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6587467786257996,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[33].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[33].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[33].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[33].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Value 2.0 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "results[33].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[33].lz_complexity",
+      "field_name": "results[33].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[33].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[33].entropy",
+      "field_name": "results[33].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 3.910868524093668,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[33].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[33].emergence_score",
+      "field_name": "results[33].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4162622429971123,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[33].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[33].inference_time_ms",
+      "field_name": "results[33].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.3340244293213,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[33].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[33].semantic_similarity",
+      "field_name": "results[33].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[33].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[34].generation_tokens",
+      "field_name": "results[34].generation_tokens",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 11.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[34].generation_tokens"
+      ]
+    },
+    {
+      "original_path": "results[34].phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6548252872753711,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[34].phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "results[34].phi_coherence",
+      "field_name": "phi_coherence",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[34].phi_coherence",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "results[34].biomimetic_resonance",
+      "field_name": "biomimetic_resonance",
+      "field_class": "metric",
+      "canonical_name": "biomimetic_resonance",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[34].biomimetic_resonance",
+        "resolved:biomimetic_resonance"
+      ]
+    },
+    {
+      "original_path": "results[34].lz_complexity",
+      "field_name": "results[34].lz_complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05530946648692432,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[34].lz_complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[34].entropy",
+      "field_name": "results[34].entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 4.311204305744126,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[34].entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[34].emergence_score",
+      "field_name": "results[34].emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2277821300278225,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[34].emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[34].inference_time_ms",
+      "field_name": "results[34].inference_time_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 500.18763542175293,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[34].inference_time_ms"
+      ]
+    },
+    {
+      "original_path": "results[34].semantic_similarity",
+      "field_name": "results[34].semantic_similarity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[34].semantic_similarity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.mean_phi_resonance",
+      "field_name": "validation.mean_phi_resonance",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6550549776086877,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "validation.mean_phi_resonance"
+      ]
+    },
+    {
+      "original_path": "validation.std_phi_resonance",
+      "field_name": "validation.std_phi_resonance",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.002925084772903698,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.std_phi_resonance",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.mean_phi_coherence",
+      "field_name": "validation.mean_phi_coherence",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "validation.mean_phi_coherence"
+      ]
+    },
+    {
+      "original_path": "validation.std_phi_coherence",
+      "field_name": "validation.std_phi_coherence",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.std_phi_coherence",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.mean_emergence_score",
+      "field_name": "validation.mean_emergence_score",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2884445438562226,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "validation.mean_emergence_score"
+      ]
+    },
+    {
+      "original_path": "validation.std_emergence_score",
+      "field_name": "validation.std_emergence_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.09041962362702939,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.std_emergence_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.phi_resonance_variance",
+      "field_name": "validation.phi_resonance_variance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 8.556120928673078e-06,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "validation.phi_resonance_variance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "validation.phi_coherence_variance",
+      "field_name": "validation.phi_coherence_variance",
+      "field_class": "metric",
+      "canonical_name": "phi_coherence",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "validation.phi_coherence_variance",
+        "resolved:phi_coherence"
+      ]
+    },
+    {
+      "original_path": "validation.emergence_variance",
+      "field_name": "validation.emergence_variance",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.008175708336853651,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.emergence_variance",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.phi_resonance_t_stat",
+      "field_name": "validation.phi_resonance_t_stat",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": -1772.8719279677248,
+      "is_valid": false,
+      "issues": [
+        "Value -1772.8719279677248 < minimum 0.0"
+      ],
+      "alias_chain": [
+        "validation.phi_resonance_t_stat",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "validation.phi_resonance_p_value",
+      "field_name": "validation.phi_resonance_p_value",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 1.4456697362462798e-74,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "validation.phi_resonance_p_value",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "validation.cohens_d",
+      "field_name": "validation.cohens_d",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 329.2140522085686,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.cohens_d",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.cluster_near_phi",
+      "field_name": "validation.cluster_near_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.cluster_near_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.cluster_std",
+      "field_name": "validation.cluster_std",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.cluster_std",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.prompt_sensitivity.neutral.mean",
+      "field_name": "validation.prompt_sensitivity.neutral.mean",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.651592866924892,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.prompt_sensitivity.neutral.mean",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.prompt_sensitivity.neutral.std",
+      "field_name": "validation.prompt_sensitivity.neutral.std",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.prompt_sensitivity.neutral.std",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.prompt_sensitivity.neutral.min",
+      "field_name": "validation.prompt_sensitivity.neutral.min",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.651592866924892,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.prompt_sensitivity.neutral.min",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.prompt_sensitivity.neutral.max",
+      "field_name": "validation.prompt_sensitivity.neutral.max",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.651592866924892,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.prompt_sensitivity.neutral.max",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.prompt_sensitivity.neutral.near_phi_ratio",
+      "field_name": "validation.prompt_sensitivity.neutral.near_phi_ratio",
+      "field_class": "metric",
+      "canonical_name": "phi_ratio_proximity",
+      "governance_status": "passed",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "validation.prompt_sensitivity.neutral.near_phi_ratio",
+        "resolved:phi_ratio_proximity"
+      ]
+    },
+    {
+      "original_path": "validation.prompt_sensitivity.phi_biased.mean",
+      "field_name": "validation.prompt_sensitivity.phi_biased.mean",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6587467786257994,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.prompt_sensitivity.phi_biased.mean",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.prompt_sensitivity.phi_biased.std",
+      "field_name": "validation.prompt_sensitivity.phi_biased.std",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.1102230246251565e-16,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.prompt_sensitivity.phi_biased.std",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.prompt_sensitivity.phi_biased.min",
+      "field_name": "validation.prompt_sensitivity.phi_biased.min",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6587467786257996,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.prompt_sensitivity.phi_biased.min",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.prompt_sensitivity.phi_biased.max",
+      "field_name": "validation.prompt_sensitivity.phi_biased.max",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6587467786257996,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.prompt_sensitivity.phi_biased.max",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.prompt_sensitivity.phi_biased.near_phi_ratio",
+      "field_name": "validation.prompt_sensitivity.phi_biased.near_phi_ratio",
+      "field_class": "metric",
+      "canonical_name": "phi_ratio_proximity",
+      "governance_status": "passed",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "validation.prompt_sensitivity.phi_biased.near_phi_ratio",
+        "resolved:phi_ratio_proximity"
+      ]
+    },
+    {
+      "original_path": "validation.prompt_sensitivity.perturbed.mean",
+      "field_name": "validation.prompt_sensitivity.perturbed.mean",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6548252872753711,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.prompt_sensitivity.perturbed.mean",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.prompt_sensitivity.perturbed.std",
+      "field_name": "validation.prompt_sensitivity.perturbed.std",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.prompt_sensitivity.perturbed.std",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.prompt_sensitivity.perturbed.min",
+      "field_name": "validation.prompt_sensitivity.perturbed.min",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6548252872753711,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.prompt_sensitivity.perturbed.min",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.prompt_sensitivity.perturbed.max",
+      "field_name": "validation.prompt_sensitivity.perturbed.max",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6548252872753711,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.prompt_sensitivity.perturbed.max",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.prompt_sensitivity.perturbed.near_phi_ratio",
+      "field_name": "validation.prompt_sensitivity.perturbed.near_phi_ratio",
+      "field_class": "metric",
+      "canonical_name": "phi_ratio_proximity",
+      "governance_status": "passed",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "validation.prompt_sensitivity.perturbed.near_phi_ratio",
+        "resolved:phi_ratio_proximity"
+      ]
+    },
+    {
+      "original_path": "validation.reproducibility_score",
+      "field_name": "validation.reproducibility_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 35062.20824600947,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.reproducibility_score",
+        "unresolved"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "config.warmup_runs",
+      1
+    ],
+    [
+      "config.emergence_threshold",
+      1
+    ],
+    [
+      "config.significance_level",
+      1
+    ],
+    [
+      "results[0].lz_complexity",
+      1
+    ],
+    [
+      "results[0].emergence_score",
+      1
+    ],
+    [
+      "results[0].semantic_similarity",
+      1
+    ],
+    [
+      "results[1].lz_complexity",
+      1
+    ],
+    [
+      "results[1].emergence_score",
+      1
+    ],
+    [
+      "results[1].semantic_similarity",
+      1
+    ],
+    [
+      "results[2].lz_complexity",
+      1
+    ]
+  ]
+}

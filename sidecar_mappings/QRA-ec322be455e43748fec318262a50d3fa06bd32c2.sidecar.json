@@ -1,0 +1,28 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\archive\\QRA-ec322be455e43748fec318262a50d3fa06bd32c2.json",
+  "generated_at": "2026-04-15T22:54:19.950444",
+  "registry_version": "1.0.0",
+  "total_fields": 1,
+  "field_breakdown": {
+    "metadata": 1
+  },
+  "metric_breakdown": {},
+  "mappings": [
+    {
+      "original_path": "fingerprint.timestamp",
+      "field_name": "fingerprint.timestamp",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1775782745.6126008,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "fingerprint.timestamp"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": []
+}

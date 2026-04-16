@@ -1,0 +1,5735 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\raw_hardware\\promoter_replicate_schedule_manifest.json",
+  "generated_at": "2026-04-15T22:54:23.177913",
+  "registry_version": "1.0.0",
+  "total_fields": 336,
+  "field_breakdown": {
+    "parameter": 63,
+    "metric": 182,
+    "metadata": 91
+  },
+  "metric_breakdown": {
+    "unknown": 152,
+    "provisional": 30
+  },
+  "mappings": [
+    {
+      "original_path": "replicates_per_backend",
+      "field_name": "replicates_per_backend",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "replicates_per_backend"
+      ]
+    },
+    {
+      "original_path": "shots_per_run",
+      "field_name": "shots_per_run",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "shots_per_run"
+      ]
+    },
+    {
+      "original_path": "matrix_dimensions.promoters",
+      "field_name": "matrix_dimensions.promoters",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "matrix_dimensions.promoters",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "matrix_dimensions.backends",
+      "field_name": "matrix_dimensions.backends",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "matrix_dimensions.backends"
+      ]
+    },
+    {
+      "original_path": "matrix_dimensions.replicates",
+      "field_name": "matrix_dimensions.replicates",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "matrix_dimensions.replicates",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "matrix_dimensions.total_runs",
+      "field_name": "matrix_dimensions.total_runs",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 30.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "matrix_dimensions.total_runs"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[0].replicate_index",
+      "field_name": "scheduled_runs[0].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[0].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[0].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[0].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[0].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[0].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[0].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[0].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[0].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[0].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[0].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.698,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[0].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[0].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[0].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2769.1245809448374,
+      "is_valid": false,
+      "issues": [
+        "Value 2769.1245809448374 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[0].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[0].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[0].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.794728530978488,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[0].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[0].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[0].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[0].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6173137751818651,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[0].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[0].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[0].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6173137751818651,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[0].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[0].observed_metrics.residual",
+      "field_name": "scheduled_runs[0].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.08068622481813481,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[0].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[1].replicate_index",
+      "field_name": "scheduled_runs[1].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[1].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[1].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[1].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[1].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[1].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[1].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[1].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[1].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[1].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[1].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.698,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[1].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[1].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[1].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2769.1245809448374,
+      "is_valid": false,
+      "issues": [
+        "Value 2769.1245809448374 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[1].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[1].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[1].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.794728530978488,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[1].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[1].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[1].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[1].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6173512956446123,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[1].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[1].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[1].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6173512956446123,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[1].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[1].observed_metrics.residual",
+      "field_name": "scheduled_runs[1].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.08064870435538762,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[1].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[2].replicate_index",
+      "field_name": "scheduled_runs[2].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[2].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[2].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[2].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[2].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[2].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[2].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[2].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[2].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[2].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[2].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.698,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[2].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[2].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[2].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2769.1245809448374,
+      "is_valid": false,
+      "issues": [
+        "Value 2769.1245809448374 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[2].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[2].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[2].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.794728530978488,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[2].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[2].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[2].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[2].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6170207501741933,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[2].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[2].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[2].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6170207501741933,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[2].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[2].observed_metrics.residual",
+      "field_name": "scheduled_runs[2].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.08097924982580662,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[2].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[3].replicate_index",
+      "field_name": "scheduled_runs[3].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[3].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[3].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[3].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[3].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[3].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[3].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[3].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[3].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[3].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[3].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.698,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[3].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[3].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[3].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2769.1245809448374,
+      "is_valid": false,
+      "issues": [
+        "Value 2769.1245809448374 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[3].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[3].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[3].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.794728530978488,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[3].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[3].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[3].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[3].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6149855869956934,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[3].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[3].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[3].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6149855869956934,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[3].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[3].observed_metrics.residual",
+      "field_name": "scheduled_runs[3].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.08301441300430656,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[3].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[4].replicate_index",
+      "field_name": "scheduled_runs[4].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[4].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[4].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[4].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[4].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[4].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[4].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[4].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[4].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[4].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[4].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.698,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[4].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[4].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[4].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2769.1245809448374,
+      "is_valid": false,
+      "issues": [
+        "Value 2769.1245809448374 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[4].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[4].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[4].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.794728530978488,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[4].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[4].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[4].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[4].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6142981196386417,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[4].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[4].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[4].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6142981196386417,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[4].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[4].observed_metrics.residual",
+      "field_name": "scheduled_runs[4].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.08370188036135828,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[4].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[5].replicate_index",
+      "field_name": "scheduled_runs[5].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[5].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[5].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[5].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[5].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[5].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[5].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[5].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[5].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[5].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[5].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.698,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[5].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[5].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[5].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2769.1245809448374,
+      "is_valid": false,
+      "issues": [
+        "Value 2769.1245809448374 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[5].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[5].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[5].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.794728530978488,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[5].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[5].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[5].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[5].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6156122473145117,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[5].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[5].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[5].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6156122473145117,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[5].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[5].observed_metrics.residual",
+      "field_name": "scheduled_runs[5].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.08238775268548826,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[5].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[6].replicate_index",
+      "field_name": "scheduled_runs[6].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[6].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[6].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[6].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[6].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[6].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[6].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[6].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[6].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[6].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[6].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.742,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[6].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[6].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[6].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2868.9230117578127,
+      "is_valid": false,
+      "issues": [
+        "Value 2868.9230117578127 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[6].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[6].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[6].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.262217739893234,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[6].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[6].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[6].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[6].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6151266079650309,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[6].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[6].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[6].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6151266079650309,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[6].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[6].observed_metrics.residual",
+      "field_name": "scheduled_runs[6].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.12687339203496906,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[6].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[7].replicate_index",
+      "field_name": "scheduled_runs[7].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[7].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[7].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[7].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[7].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[7].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[7].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[7].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[7].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[7].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[7].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.742,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[7].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[7].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[7].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2868.9230117578127,
+      "is_valid": false,
+      "issues": [
+        "Value 2868.9230117578127 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[7].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[7].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[7].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.262217739893234,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[7].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[7].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[7].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[7].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6156544516683644,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[7].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[7].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[7].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6156544516683644,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[7].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[7].observed_metrics.residual",
+      "field_name": "scheduled_runs[7].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.12634554833163558,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[7].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[8].replicate_index",
+      "field_name": "scheduled_runs[8].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[8].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[8].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[8].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[8].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[8].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[8].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[8].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[8].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[8].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[8].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.742,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[8].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[8].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[8].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2868.9230117578127,
+      "is_valid": false,
+      "issues": [
+        "Value 2868.9230117578127 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[8].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[8].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[8].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.262217739893234,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[8].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[8].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[8].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[8].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6162155411512674,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[8].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[8].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[8].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6162155411512674,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[8].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[8].observed_metrics.residual",
+      "field_name": "scheduled_runs[8].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.12578445884873257,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[8].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[9].replicate_index",
+      "field_name": "scheduled_runs[9].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[9].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[9].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[9].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[9].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[9].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[9].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[9].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[9].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[9].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[9].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.742,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[9].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[9].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[9].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2868.9230117578127,
+      "is_valid": false,
+      "issues": [
+        "Value 2868.9230117578127 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[9].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[9].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[9].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.262217739893234,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[9].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[9].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[9].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[9].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6139740375757878,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[9].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[9].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[9].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6139740375757878,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[9].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[9].observed_metrics.residual",
+      "field_name": "scheduled_runs[9].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.12802596242421216,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[9].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[10].replicate_index",
+      "field_name": "scheduled_runs[10].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[10].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[10].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[10].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[10].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[10].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[10].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[10].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[10].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[10].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[10].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.742,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[10].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[10].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[10].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2868.9230117578127,
+      "is_valid": false,
+      "issues": [
+        "Value 2868.9230117578127 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[10].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[10].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[10].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.262217739893234,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[10].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[10].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[10].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[10].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6131781942013217,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[10].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[10].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[10].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6131781942013217,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[10].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[10].observed_metrics.residual",
+      "field_name": "scheduled_runs[10].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.1288218057986783,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[10].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[11].replicate_index",
+      "field_name": "scheduled_runs[11].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[11].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[11].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[11].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[11].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[11].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[11].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[11].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[11].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[11].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[11].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.742,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[11].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[11].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[11].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2868.9230117578127,
+      "is_valid": false,
+      "issues": [
+        "Value 2868.9230117578127 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[11].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[11].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[11].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.262217739893234,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[11].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[11].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[11].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[11].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6123425608423776,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[11].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[11].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[11].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6123425608423776,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[11].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[11].observed_metrics.residual",
+      "field_name": "scheduled_runs[11].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.1296574391576224,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[11].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[12].replicate_index",
+      "field_name": "scheduled_runs[12].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[12].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[12].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[12].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[12].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[12].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[12].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[12].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[12].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[12].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[12].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.655,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[12].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[12].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[12].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2666.503522055221,
+      "is_valid": false,
+      "issues": [
+        "Value 2666.503522055221 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[12].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[12].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[12].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.240954126220305,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[12].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[12].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[12].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[12].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6153640163426529,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[12].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[12].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[12].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6153640163426529,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[12].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[12].observed_metrics.residual",
+      "field_name": "scheduled_runs[12].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.03963598365734711,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[12].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[13].replicate_index",
+      "field_name": "scheduled_runs[13].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[13].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[13].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[13].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[13].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[13].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[13].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[13].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[13].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[13].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[13].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.655,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[13].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[13].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[13].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2666.503522055221,
+      "is_valid": false,
+      "issues": [
+        "Value 2666.503522055221 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[13].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[13].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[13].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.240954126220305,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[13].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[13].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[13].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[13].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6156660349101599,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[13].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[13].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[13].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6156660349101599,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[13].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[13].observed_metrics.residual",
+      "field_name": "scheduled_runs[13].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.039333965089840106,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[13].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[14].replicate_index",
+      "field_name": "scheduled_runs[14].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[14].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[14].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[14].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[14].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[14].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[14].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[14].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[14].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[14].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[14].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.655,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[14].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[14].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[14].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2666.503522055221,
+      "is_valid": false,
+      "issues": [
+        "Value 2666.503522055221 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[14].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[14].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[14].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.240954126220305,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[14].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[14].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[14].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[14].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.616368372890229,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[14].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[14].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[14].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.616368372890229,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[14].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[14].observed_metrics.residual",
+      "field_name": "scheduled_runs[14].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.03863162710977097,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[14].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[15].replicate_index",
+      "field_name": "scheduled_runs[15].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[15].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[15].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[15].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[15].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[15].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[15].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[15].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[15].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[15].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[15].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.655,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[15].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[15].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[15].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2666.503522055221,
+      "is_valid": false,
+      "issues": [
+        "Value 2666.503522055221 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[15].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[15].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[15].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.240954126220305,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[15].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[15].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[15].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[15].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6123337658747259,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[15].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[15].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[15].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6123337658747259,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[15].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[15].observed_metrics.residual",
+      "field_name": "scheduled_runs[15].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.04266623412527415,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[15].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[16].replicate_index",
+      "field_name": "scheduled_runs[16].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[16].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[16].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[16].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[16].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[16].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[16].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[16].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[16].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[16].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[16].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.655,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[16].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[16].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[16].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2666.503522055221,
+      "is_valid": false,
+      "issues": [
+        "Value 2666.503522055221 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[16].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[16].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[16].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.240954126220305,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[16].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[16].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[16].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[16].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.613365335156389,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[16].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[16].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[16].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.613365335156389,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[16].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[16].observed_metrics.residual",
+      "field_name": "scheduled_runs[16].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.041634664843611,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[16].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[17].replicate_index",
+      "field_name": "scheduled_runs[17].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[17].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[17].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[17].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[17].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[17].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[17].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[17].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[17].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[17].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[17].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.655,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[17].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[17].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[17].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2666.503522055221,
+      "is_valid": false,
+      "issues": [
+        "Value 2666.503522055221 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[17].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[17].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[17].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.240954126220305,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[17].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[17].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[17].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[17].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6133143600900509,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[17].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[17].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[17].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6133143600900509,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[17].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[17].observed_metrics.residual",
+      "field_name": "scheduled_runs[17].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.04168563990994911,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[17].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[18].replicate_index",
+      "field_name": "scheduled_runs[18].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[18].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[18].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[18].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[18].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[18].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[18].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[18].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[18].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[18].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[18].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.901,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[18].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[18].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[18].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2702.33079907861,
+      "is_valid": false,
+      "issues": [
+        "Value 2702.33079907861 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[18].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[18].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[18].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.706175159194664,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[18].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[18].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[18].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[18].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.614727460906422,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[18].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[18].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[18].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.614727460906422,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[18].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[18].observed_metrics.residual",
+      "field_name": "scheduled_runs[18].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.28627253909357797,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[18].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[19].replicate_index",
+      "field_name": "scheduled_runs[19].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[19].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[19].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[19].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[19].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[19].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[19].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[19].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[19].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[19].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[19].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.901,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[19].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[19].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[19].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2702.33079907861,
+      "is_valid": false,
+      "issues": [
+        "Value 2702.33079907861 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[19].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[19].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[19].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.706175159194664,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[19].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[19].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[19].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[19].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.615920268666356,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[19].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[19].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[19].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.615920268666356,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[19].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[19].observed_metrics.residual",
+      "field_name": "scheduled_runs[19].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.28507973133364406,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[19].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[20].replicate_index",
+      "field_name": "scheduled_runs[20].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[20].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[20].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[20].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[20].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[20].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[20].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[20].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[20].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[20].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[20].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.901,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[20].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[20].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[20].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2702.33079907861,
+      "is_valid": false,
+      "issues": [
+        "Value 2702.33079907861 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[20].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[20].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[20].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.706175159194664,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[20].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[20].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[20].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[20].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6159347948757407,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[20].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[20].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[20].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6159347948757407,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[20].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[20].observed_metrics.residual",
+      "field_name": "scheduled_runs[20].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.28506520512425937,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[20].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[21].replicate_index",
+      "field_name": "scheduled_runs[21].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[21].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[21].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[21].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[21].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[21].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[21].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[21].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[21].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[21].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[21].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.901,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[21].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[21].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[21].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2702.33079907861,
+      "is_valid": false,
+      "issues": [
+        "Value 2702.33079907861 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[21].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[21].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[21].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.706175159194664,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[21].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[21].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[21].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[21].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6133590854867028,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[21].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[21].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[21].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6133590854867028,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[21].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[21].observed_metrics.residual",
+      "field_name": "scheduled_runs[21].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.2876409145132972,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[21].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[22].replicate_index",
+      "field_name": "scheduled_runs[22].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[22].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[22].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[22].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[22].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[22].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[22].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[22].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[22].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[22].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[22].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.901,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[22].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[22].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[22].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2702.33079907861,
+      "is_valid": false,
+      "issues": [
+        "Value 2702.33079907861 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[22].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[22].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[22].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.706175159194664,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[22].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[22].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[22].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[22].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6131889284383053,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[22].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[22].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[22].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6131889284383053,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[22].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[22].observed_metrics.residual",
+      "field_name": "scheduled_runs[22].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.2878110715616947,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[22].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[23].replicate_index",
+      "field_name": "scheduled_runs[23].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[23].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[23].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[23].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[23].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[23].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[23].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[23].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[23].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[23].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[23].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.901,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[23].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[23].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[23].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 2702.33079907861,
+      "is_valid": false,
+      "issues": [
+        "Value 2702.33079907861 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[23].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[23].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[23].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.706175159194664,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[23].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[23].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[23].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[23].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6120949787215275,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[23].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[23].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[23].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6120949787215275,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[23].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[23].observed_metrics.residual",
+      "field_name": "scheduled_runs[23].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.2889050212784725,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[23].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[24].replicate_index",
+      "field_name": "scheduled_runs[24].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[24].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[24].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[24].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[24].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[24].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[24].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[24].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[24].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[24].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[24].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.786,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[24].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[24].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[24].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 3089.1424798367552,
+      "is_valid": false,
+      "issues": [
+        "Value 3089.1424798367552 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[24].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[24].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[24].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.017058119290484,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[24].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[24].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[24].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[24].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6162225647862716,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[24].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[24].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[24].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6162225647862716,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[24].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[24].observed_metrics.residual",
+      "field_name": "scheduled_runs[24].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.16977743521372846,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[24].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[25].replicate_index",
+      "field_name": "scheduled_runs[25].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[25].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[25].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[25].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[25].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[25].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[25].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[25].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[25].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[25].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[25].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.786,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[25].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[25].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[25].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 3089.1424798367552,
+      "is_valid": false,
+      "issues": [
+        "Value 3089.1424798367552 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[25].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[25].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[25].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.017058119290484,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[25].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[25].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[25].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[25].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6153261376349005,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[25].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[25].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[25].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6153261376349005,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[25].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[25].observed_metrics.residual",
+      "field_name": "scheduled_runs[25].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.17067386236509952,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[25].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[26].replicate_index",
+      "field_name": "scheduled_runs[26].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[26].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[26].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[26].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[26].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[26].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[26].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[26].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[26].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[26].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[26].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.786,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[26].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[26].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[26].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 3089.1424798367552,
+      "is_valid": false,
+      "issues": [
+        "Value 3089.1424798367552 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[26].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[26].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[26].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.017058119290484,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[26].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[26].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[26].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[26].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6157032333704343,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[26].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[26].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[26].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6157032333704343,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[26].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[26].observed_metrics.residual",
+      "field_name": "scheduled_runs[26].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.17029676662956572,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[26].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[27].replicate_index",
+      "field_name": "scheduled_runs[27].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[27].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[27].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[27].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[27].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[27].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[27].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[27].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[27].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[27].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[27].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.786,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[27].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[27].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[27].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 3089.1424798367552,
+      "is_valid": false,
+      "issues": [
+        "Value 3089.1424798367552 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[27].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[27].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[27].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.017058119290484,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[27].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[27].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[27].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[27].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6133336920245039,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[27].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[27].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[27].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6133336920245039,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[27].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[27].observed_metrics.residual",
+      "field_name": "scheduled_runs[27].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.1726663079754961,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[27].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[28].replicate_index",
+      "field_name": "scheduled_runs[28].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[28].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[28].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[28].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[28].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[28].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[28].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[28].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[28].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[28].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[28].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.786,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[28].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[28].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[28].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 3089.1424798367552,
+      "is_valid": false,
+      "issues": [
+        "Value 3089.1424798367552 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[28].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[28].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[28].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.017058119290484,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[28].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[28].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[28].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[28].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6133967108241288,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[28].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[28].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[28].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6133967108241288,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[28].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[28].observed_metrics.residual",
+      "field_name": "scheduled_runs[28].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.1726032891758712,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[28].observed_metrics.residual",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[29].replicate_index",
+      "field_name": "scheduled_runs[29].replicate_index",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[29].replicate_index"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[29].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[29].shots"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[29].planned_metrics.sequence_length",
+      "field_name": "scheduled_runs[29].planned_metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[29].planned_metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[29].planned_metrics.qubit_count",
+      "field_name": "scheduled_runs[29].planned_metrics.qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[29].planned_metrics.qubit_count"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[29].planned_metrics.predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.786,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[29].planned_metrics.predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[29].planned_metrics.phi_alignment_score",
+      "field_name": "scheduled_runs[29].planned_metrics.phi_alignment_score",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 3089.1424798367552,
+      "is_valid": false,
+      "issues": [
+        "Value 3089.1424798367552 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "scheduled_runs[29].planned_metrics.phi_alignment_score",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[29].planned_metrics.entropy_shannon",
+      "field_name": "scheduled_runs[29].planned_metrics.entropy_shannon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.017058119290484,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[29].planned_metrics.entropy_shannon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[29].execution.transpiled_depth",
+      "field_name": "transpiled_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "scheduled_runs[29].execution.transpiled_depth"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[29].observed_metrics.measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6121919492708241,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[29].observed_metrics.measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[29].observed_metrics.calibrated_phi",
+      "field_name": "scheduled_runs[29].observed_metrics.calibrated_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6121919492708241,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[29].observed_metrics.calibrated_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "scheduled_runs[29].observed_metrics.residual",
+      "field_name": "scheduled_runs[29].observed_metrics.residual",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.17380805072917593,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "scheduled_runs[29].observed_metrics.residual",
+        "unresolved"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "predicted_phi",
+      30
+    ],
+    [
+      "measured_phi",
+      30
+    ],
+    [
+      "matrix_dimensions.promoters",
+      1
+    ],
+    [
+      "matrix_dimensions.replicates",
+      1
+    ],
+    [
+      "scheduled_runs[0].planned_metrics.entropy_shannon",
+      1
+    ],
+    [
+      "scheduled_runs[0].observed_metrics.calibrated_phi",
+      1
+    ],
+    [
+      "scheduled_runs[0].observed_metrics.residual",
+      1
+    ],
+    [
+      "scheduled_runs[1].planned_metrics.entropy_shannon",
+      1
+    ],
+    [
+      "scheduled_runs[1].observed_metrics.calibrated_phi",
+      1
+    ],
+    [
+      "scheduled_runs[1].observed_metrics.residual",
+      1
+    ]
+  ]
+}

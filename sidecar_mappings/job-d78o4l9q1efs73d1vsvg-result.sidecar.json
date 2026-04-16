@@ -1,0 +1,69 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\raw_hardware\\workloads_34\\job-d78o4l9q1efs73d1vsvg-result.json",
+  "generated_at": "2026-04-15T22:54:25.188300",
+  "registry_version": "1.0.0",
+  "total_fields": 3,
+  "field_breakdown": {
+    "metadata": 2,
+    "metric": 1
+  },
+  "metric_breakdown": {
+    "unknown": 1
+  },
+  "mappings": [
+    {
+      "original_path": "__value__.pub_results[0].__value__.data.__value__.fields.c.__value__.num_bits",
+      "field_name": "__value__.pub_results[0].__value__.data.__value__.fields.c.__value__.num_bits",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "__value__.pub_results[0].__value__.data.__value__.fields.c.__value__.num_bits"
+      ]
+    },
+    {
+      "original_path": "__value__.pub_results[0].__value__.data.__value__.fields.meas.__value__.num_bits",
+      "field_name": "__value__.pub_results[0].__value__.data.__value__.fields.meas.__value__.num_bits",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 62.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "__value__.pub_results[0].__value__.data.__value__.fields.meas.__value__.num_bits"
+      ]
+    },
+    {
+      "original_path": "__value__.metadata.version",
+      "field_name": "__value__.metadata.version",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "__value__.metadata.version",
+        "unresolved"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "__value__.metadata.version",
+      1
+    ]
+  ]
+}

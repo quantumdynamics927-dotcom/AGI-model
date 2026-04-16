@@ -1,0 +1,418 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\quantum-consciousness-agi\\quantum-consciousness-agi\\quantum\\results\\quantum_teleportation_analysis.json",
+  "generated_at": "2026-04-15T22:54:25.241185",
+  "registry_version": "1.0.0",
+  "total_fields": 20,
+  "field_breakdown": {
+    "parameter": 1,
+    "metric": 19
+  },
+  "metric_breakdown": {
+    "validated": 1,
+    "unknown": 17,
+    "passed": 1
+  },
+  "mappings": [
+    {
+      "original_path": "shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1024.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "shots"
+      ]
+    },
+    {
+      "original_path": "fidelity",
+      "field_name": "fidelity",
+      "field_class": "metric",
+      "canonical_name": "quantum_fidelity",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9839667452420632,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "fidelity",
+        "resolved:quantum_fidelity"
+      ]
+    },
+    {
+      "original_path": "fidelity_squared",
+      "field_name": "fidelity_squared",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.9681905557422592,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "fidelity_squared",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "bob_measurements.0",
+      "field_name": "bob_measurements.0",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 482.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "bob_measurements.0",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "bob_measurements.1",
+      "field_name": "bob_measurements.1",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 542.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "bob_measurements.1",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "bob_measurements.prob_0",
+      "field_name": "bob_measurements.prob_0",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.470703125,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "bob_measurements.prob_0",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "bob_measurements.prob_1",
+      "field_name": "bob_measurements.prob_1",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.529296875,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "bob_measurements.prob_1",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "expected.prob_0",
+      "field_name": "expected.prob_0",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6477579078302381,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "expected.prob_0",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "expected.prob_1",
+      "field_name": "expected.prob_1",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.3522420921697617,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "expected.prob_1",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "entropy",
+      "field_name": "entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 2.9195339997399903,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "uniformity",
+      "field_name": "uniformity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.9731779999133301,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "uniformity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "runtime_seconds",
+      "field_name": "runtime_seconds",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.255562,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "runtime_seconds",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "full_distribution.110",
+      "field_name": "full_distribution.110",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 204.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "full_distribution.110",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "full_distribution.001",
+      "field_name": "full_distribution.001",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 115.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "full_distribution.001",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "full_distribution.111",
+      "field_name": "full_distribution.111",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 133.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "full_distribution.111",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "full_distribution.011",
+      "field_name": "full_distribution.011",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 74.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "full_distribution.011",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "full_distribution.100",
+      "field_name": "full_distribution.100",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 117.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "full_distribution.100",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "full_distribution.000",
+      "field_name": "full_distribution.000",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 191.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "full_distribution.000",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "full_distribution.101",
+      "field_name": "full_distribution.101",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 88.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "full_distribution.101",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "full_distribution.010",
+      "field_name": "full_distribution.010",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 102.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "full_distribution.010",
+        "unresolved"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "fidelity_squared",
+      1
+    ],
+    [
+      "bob_measurements.0",
+      1
+    ],
+    [
+      "bob_measurements.1",
+      1
+    ],
+    [
+      "bob_measurements.prob_0",
+      1
+    ],
+    [
+      "bob_measurements.prob_1",
+      1
+    ],
+    [
+      "expected.prob_0",
+      1
+    ],
+    [
+      "expected.prob_1",
+      1
+    ],
+    [
+      "uniformity",
+      1
+    ],
+    [
+      "runtime_seconds",
+      1
+    ],
+    [
+      "full_distribution.110",
+      1
+    ]
+  ]
+}

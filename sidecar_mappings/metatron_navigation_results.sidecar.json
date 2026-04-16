@@ -1,0 +1,91 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\metatron_navigation_results.json",
+  "generated_at": "2026-04-15T22:54:19.820796",
+  "registry_version": "1.0.0",
+  "total_fields": 4,
+  "field_breakdown": {
+    "metric": 2,
+    "metadata": 2
+  },
+  "metric_breakdown": {
+    "unknown": 1,
+    "provisional": 1
+  },
+  "mappings": [
+    {
+      "original_path": "grid_size",
+      "field_name": "grid_size",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 128.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "grid_size",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "path_metrics.classical_length",
+      "field_name": "path_metrics.classical_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 159.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "path_metrics.classical_length"
+      ]
+    },
+    {
+      "original_path": "path_metrics.metatron_score",
+      "field_name": "path_metrics.metatron_score",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "path_metrics.metatron_score"
+      ]
+    },
+    {
+      "original_path": "path_metrics.phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 1.6180339887,
+      "is_valid": false,
+      "issues": [
+        "Value 1.6180 \u2248 \u03c6 - likely target constant"
+      ],
+      "alias_chain": [
+        "path_metrics.phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "grid_size",
+      1
+    ]
+  ]
+}

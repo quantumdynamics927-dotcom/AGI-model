@@ -1,0 +1,1276 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\data\\external_imports\\tmt_os_20260405\\promoter_asset_inventory.json",
+  "generated_at": "2026-04-15T22:54:25.723516",
+  "registry_version": "1.0.0",
+  "total_fields": 78,
+  "field_breakdown": {
+    "metadata": 37,
+    "metric": 21,
+    "parameter": 20
+  },
+  "metric_breakdown": {
+    "unknown": 1,
+    "validated": 20
+  },
+  "mappings": [
+    {
+      "original_path": "asset_sets.promoters_fasta_31bp.count",
+      "field_name": "asset_sets.promoters_fasta_31bp.count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "asset_sets.promoters_fasta_31bp.count"
+      ]
+    },
+    {
+      "original_path": "asset_sets.promoters_fasta_81bp.count",
+      "field_name": "asset_sets.promoters_fasta_81bp.count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "asset_sets.promoters_fasta_81bp.count"
+      ]
+    },
+    {
+      "original_path": "asset_sets.promoter_qasm.count",
+      "field_name": "asset_sets.promoter_qasm.count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "asset_sets.promoter_qasm.count"
+      ]
+    },
+    {
+      "original_path": "summary.promoters_with_all_assets",
+      "field_name": "summary.promoters_with_all_assets",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "summary.promoters_with_all_assets",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "summary.total_promoters",
+      "field_name": "summary.total_promoters",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "summary.total_promoters"
+      ]
+    },
+    {
+      "original_path": "summary.fasta_31bp_count",
+      "field_name": "summary.fasta_31bp_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "summary.fasta_31bp_count"
+      ]
+    },
+    {
+      "original_path": "summary.fasta_81bp_count",
+      "field_name": "summary.fasta_81bp_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "summary.fasta_81bp_count"
+      ]
+    },
+    {
+      "original_path": "summary.promoter_qasm_count",
+      "field_name": "summary.promoter_qasm_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "summary.promoter_qasm_count"
+      ]
+    },
+    {
+      "original_path": "promoters[0].fasta_31bp.sequence_length",
+      "field_name": "promoters[0].fasta_31bp.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[0].fasta_31bp.sequence_length"
+      ]
+    },
+    {
+      "original_path": "promoters[0].fasta_31bp.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.7096774193548387,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[0].fasta_31bp.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "promoters[0].fasta_81bp.sequence_length",
+      "field_name": "promoters[0].fasta_81bp.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 81.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[0].fasta_81bp.sequence_length"
+      ]
+    },
+    {
+      "original_path": "promoters[0].fasta_81bp.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.654320987654321,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[0].fasta_81bp.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "promoters[0].promoter_qasm.declared_qubits",
+      "field_name": "promoters[0].promoter_qasm.declared_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[0].promoter_qasm.declared_qubits"
+      ]
+    },
+    {
+      "original_path": "promoters[0].promoter_qasm.line_count",
+      "field_name": "promoters[0].promoter_qasm.line_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 98.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[0].promoter_qasm.line_count"
+      ]
+    },
+    {
+      "original_path": "promoters[0].consistency.qasm_declared_qubits",
+      "field_name": "promoters[0].consistency.qasm_declared_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[0].consistency.qasm_declared_qubits"
+      ]
+    },
+    {
+      "original_path": "promoters[1].fasta_31bp.sequence_length",
+      "field_name": "promoters[1].fasta_31bp.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[1].fasta_31bp.sequence_length"
+      ]
+    },
+    {
+      "original_path": "promoters[1].fasta_31bp.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.3548387096774194,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[1].fasta_31bp.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "promoters[1].fasta_81bp.sequence_length",
+      "field_name": "promoters[1].fasta_81bp.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 81.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[1].fasta_81bp.sequence_length"
+      ]
+    },
+    {
+      "original_path": "promoters[1].fasta_81bp.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5679012345679012,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[1].fasta_81bp.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "promoters[1].promoter_qasm.declared_qubits",
+      "field_name": "promoters[1].promoter_qasm.declared_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[1].promoter_qasm.declared_qubits"
+      ]
+    },
+    {
+      "original_path": "promoters[1].promoter_qasm.line_count",
+      "field_name": "promoters[1].promoter_qasm.line_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 98.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[1].promoter_qasm.line_count"
+      ]
+    },
+    {
+      "original_path": "promoters[1].consistency.qasm_declared_qubits",
+      "field_name": "promoters[1].consistency.qasm_declared_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[1].consistency.qasm_declared_qubits"
+      ]
+    },
+    {
+      "original_path": "promoters[2].fasta_31bp.sequence_length",
+      "field_name": "promoters[2].fasta_31bp.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[2].fasta_31bp.sequence_length"
+      ]
+    },
+    {
+      "original_path": "promoters[2].fasta_31bp.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6774193548387096,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[2].fasta_31bp.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "promoters[2].fasta_81bp.sequence_length",
+      "field_name": "promoters[2].fasta_81bp.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 81.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[2].fasta_81bp.sequence_length"
+      ]
+    },
+    {
+      "original_path": "promoters[2].fasta_81bp.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5679012345679012,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[2].fasta_81bp.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "promoters[2].promoter_qasm.declared_qubits",
+      "field_name": "promoters[2].promoter_qasm.declared_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[2].promoter_qasm.declared_qubits"
+      ]
+    },
+    {
+      "original_path": "promoters[2].promoter_qasm.line_count",
+      "field_name": "promoters[2].promoter_qasm.line_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 98.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[2].promoter_qasm.line_count"
+      ]
+    },
+    {
+      "original_path": "promoters[2].consistency.qasm_declared_qubits",
+      "field_name": "promoters[2].consistency.qasm_declared_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[2].consistency.qasm_declared_qubits"
+      ]
+    },
+    {
+      "original_path": "promoters[3].fasta_31bp.sequence_length",
+      "field_name": "promoters[3].fasta_31bp.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[3].fasta_31bp.sequence_length"
+      ]
+    },
+    {
+      "original_path": "promoters[3].fasta_31bp.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6774193548387096,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[3].fasta_31bp.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "promoters[3].fasta_81bp.sequence_length",
+      "field_name": "promoters[3].fasta_81bp.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 81.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[3].fasta_81bp.sequence_length"
+      ]
+    },
+    {
+      "original_path": "promoters[3].fasta_81bp.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5432098765432098,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[3].fasta_81bp.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "promoters[3].promoter_qasm.declared_qubits",
+      "field_name": "promoters[3].promoter_qasm.declared_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[3].promoter_qasm.declared_qubits"
+      ]
+    },
+    {
+      "original_path": "promoters[3].promoter_qasm.line_count",
+      "field_name": "promoters[3].promoter_qasm.line_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 98.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[3].promoter_qasm.line_count"
+      ]
+    },
+    {
+      "original_path": "promoters[3].consistency.qasm_declared_qubits",
+      "field_name": "promoters[3].consistency.qasm_declared_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[3].consistency.qasm_declared_qubits"
+      ]
+    },
+    {
+      "original_path": "promoters[4].fasta_31bp.sequence_length",
+      "field_name": "promoters[4].fasta_31bp.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[4].fasta_31bp.sequence_length"
+      ]
+    },
+    {
+      "original_path": "promoters[4].fasta_31bp.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.4838709677419355,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[4].fasta_31bp.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "promoters[4].fasta_81bp.sequence_length",
+      "field_name": "promoters[4].fasta_81bp.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 81.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[4].fasta_81bp.sequence_length"
+      ]
+    },
+    {
+      "original_path": "promoters[4].fasta_81bp.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5432098765432098,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[4].fasta_81bp.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "promoters[4].promoter_qasm.declared_qubits",
+      "field_name": "promoters[4].promoter_qasm.declared_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[4].promoter_qasm.declared_qubits"
+      ]
+    },
+    {
+      "original_path": "promoters[4].promoter_qasm.line_count",
+      "field_name": "promoters[4].promoter_qasm.line_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 98.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[4].promoter_qasm.line_count"
+      ]
+    },
+    {
+      "original_path": "promoters[4].consistency.qasm_declared_qubits",
+      "field_name": "promoters[4].consistency.qasm_declared_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[4].consistency.qasm_declared_qubits"
+      ]
+    },
+    {
+      "original_path": "promoters[5].fasta_31bp.sequence_length",
+      "field_name": "promoters[5].fasta_31bp.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[5].fasta_31bp.sequence_length"
+      ]
+    },
+    {
+      "original_path": "promoters[5].fasta_31bp.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5806451612903226,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[5].fasta_31bp.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "promoters[5].fasta_81bp.sequence_length",
+      "field_name": "promoters[5].fasta_81bp.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 81.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[5].fasta_81bp.sequence_length"
+      ]
+    },
+    {
+      "original_path": "promoters[5].fasta_81bp.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5679012345679012,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[5].fasta_81bp.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "promoters[5].promoter_qasm.declared_qubits",
+      "field_name": "promoters[5].promoter_qasm.declared_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[5].promoter_qasm.declared_qubits"
+      ]
+    },
+    {
+      "original_path": "promoters[5].promoter_qasm.line_count",
+      "field_name": "promoters[5].promoter_qasm.line_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 98.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[5].promoter_qasm.line_count"
+      ]
+    },
+    {
+      "original_path": "promoters[5].consistency.qasm_declared_qubits",
+      "field_name": "promoters[5].consistency.qasm_declared_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[5].consistency.qasm_declared_qubits"
+      ]
+    },
+    {
+      "original_path": "promoters[6].fasta_31bp.sequence_length",
+      "field_name": "promoters[6].fasta_31bp.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[6].fasta_31bp.sequence_length"
+      ]
+    },
+    {
+      "original_path": "promoters[6].fasta_31bp.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5483870967741935,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[6].fasta_31bp.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "promoters[6].fasta_81bp.sequence_length",
+      "field_name": "promoters[6].fasta_81bp.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 81.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[6].fasta_81bp.sequence_length"
+      ]
+    },
+    {
+      "original_path": "promoters[6].fasta_81bp.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5555555555555556,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[6].fasta_81bp.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "promoters[6].promoter_qasm.declared_qubits",
+      "field_name": "promoters[6].promoter_qasm.declared_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[6].promoter_qasm.declared_qubits"
+      ]
+    },
+    {
+      "original_path": "promoters[6].promoter_qasm.line_count",
+      "field_name": "promoters[6].promoter_qasm.line_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 98.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[6].promoter_qasm.line_count"
+      ]
+    },
+    {
+      "original_path": "promoters[6].consistency.qasm_declared_qubits",
+      "field_name": "promoters[6].consistency.qasm_declared_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[6].consistency.qasm_declared_qubits"
+      ]
+    },
+    {
+      "original_path": "promoters[7].fasta_31bp.sequence_length",
+      "field_name": "promoters[7].fasta_31bp.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[7].fasta_31bp.sequence_length"
+      ]
+    },
+    {
+      "original_path": "promoters[7].fasta_31bp.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.7096774193548387,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[7].fasta_31bp.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "promoters[7].fasta_81bp.sequence_length",
+      "field_name": "promoters[7].fasta_81bp.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 81.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[7].fasta_81bp.sequence_length"
+      ]
+    },
+    {
+      "original_path": "promoters[7].fasta_81bp.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6666666666666666,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[7].fasta_81bp.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "promoters[7].promoter_qasm.declared_qubits",
+      "field_name": "promoters[7].promoter_qasm.declared_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[7].promoter_qasm.declared_qubits"
+      ]
+    },
+    {
+      "original_path": "promoters[7].promoter_qasm.line_count",
+      "field_name": "promoters[7].promoter_qasm.line_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 98.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[7].promoter_qasm.line_count"
+      ]
+    },
+    {
+      "original_path": "promoters[7].consistency.qasm_declared_qubits",
+      "field_name": "promoters[7].consistency.qasm_declared_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[7].consistency.qasm_declared_qubits"
+      ]
+    },
+    {
+      "original_path": "promoters[8].fasta_31bp.sequence_length",
+      "field_name": "promoters[8].fasta_31bp.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[8].fasta_31bp.sequence_length"
+      ]
+    },
+    {
+      "original_path": "promoters[8].fasta_31bp.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.3548387096774194,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[8].fasta_31bp.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "promoters[8].fasta_81bp.sequence_length",
+      "field_name": "promoters[8].fasta_81bp.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 81.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[8].fasta_81bp.sequence_length"
+      ]
+    },
+    {
+      "original_path": "promoters[8].fasta_81bp.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.32098765432098764,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[8].fasta_81bp.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "promoters[8].promoter_qasm.declared_qubits",
+      "field_name": "promoters[8].promoter_qasm.declared_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[8].promoter_qasm.declared_qubits"
+      ]
+    },
+    {
+      "original_path": "promoters[8].promoter_qasm.line_count",
+      "field_name": "promoters[8].promoter_qasm.line_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 98.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[8].promoter_qasm.line_count"
+      ]
+    },
+    {
+      "original_path": "promoters[8].consistency.qasm_declared_qubits",
+      "field_name": "promoters[8].consistency.qasm_declared_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[8].consistency.qasm_declared_qubits"
+      ]
+    },
+    {
+      "original_path": "promoters[9].fasta_31bp.sequence_length",
+      "field_name": "promoters[9].fasta_31bp.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[9].fasta_31bp.sequence_length"
+      ]
+    },
+    {
+      "original_path": "promoters[9].fasta_31bp.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5806451612903226,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[9].fasta_31bp.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "promoters[9].fasta_81bp.sequence_length",
+      "field_name": "promoters[9].fasta_81bp.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 81.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[9].fasta_81bp.sequence_length"
+      ]
+    },
+    {
+      "original_path": "promoters[9].fasta_81bp.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5925925925925926,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[9].fasta_81bp.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "promoters[9].promoter_qasm.declared_qubits",
+      "field_name": "promoters[9].promoter_qasm.declared_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[9].promoter_qasm.declared_qubits"
+      ]
+    },
+    {
+      "original_path": "promoters[9].promoter_qasm.line_count",
+      "field_name": "promoters[9].promoter_qasm.line_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 98.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[9].promoter_qasm.line_count"
+      ]
+    },
+    {
+      "original_path": "promoters[9].consistency.qasm_declared_qubits",
+      "field_name": "promoters[9].consistency.qasm_declared_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoters[9].consistency.qasm_declared_qubits"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "summary.promoters_with_all_assets",
+      1
+    ]
+  ]
+}

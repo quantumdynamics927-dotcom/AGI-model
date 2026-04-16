@@ -1,0 +1,959 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\research_loop_result.json",
+  "generated_at": "2026-04-15T22:54:19.894734",
+  "registry_version": "1.0.0",
+  "total_fields": 53,
+  "field_breakdown": {
+    "metric": 35,
+    "descriptor": 1,
+    "metadata": 16,
+    "parameter": 1
+  },
+  "metric_breakdown": {
+    "unknown": 35
+  },
+  "mappings": [
+    {
+      "original_path": "steps.vae_interpretation.contract.metrics.batch_size",
+      "field_name": "steps.vae_interpretation.contract.metrics.batch_size",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.vae_interpretation.contract.metrics.batch_size",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.contract.metrics.input_dim",
+      "field_name": "steps.vae_interpretation.contract.metrics.input_dim",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 128.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.vae_interpretation.contract.metrics.input_dim",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.contract.metrics.latent_dim",
+      "field_name": "steps.vae_interpretation.contract.metrics.latent_dim",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 32.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "steps.vae_interpretation.contract.metrics.latent_dim"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.contract.metrics.total_loss",
+      "field_name": "steps.vae_interpretation.contract.metrics.total_loss",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 20.497904,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "steps.vae_interpretation.contract.metrics.total_loss"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.contract.metrics.reconstruction_mae",
+      "field_name": "steps.vae_interpretation.contract.metrics.reconstruction_mae",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.52371,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "steps.vae_interpretation.contract.metrics.reconstruction_mae"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.contract.metrics.mu_mean",
+      "field_name": "steps.vae_interpretation.contract.metrics.mu_mean",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.01101,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.vae_interpretation.contract.metrics.mu_mean",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.contract.metrics.mu_std",
+      "field_name": "steps.vae_interpretation.contract.metrics.mu_std",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.107798,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.vae_interpretation.contract.metrics.mu_std",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.contract.metrics.log_var_mean",
+      "field_name": "steps.vae_interpretation.contract.metrics.log_var_mean",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.002535,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.vae_interpretation.contract.metrics.log_var_mean",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.contract.metrics.density_trace_mean",
+      "field_name": "steps.vae_interpretation.contract.metrics.density_trace_mean",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.vae_interpretation.contract.metrics.density_trace_mean",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.contract.metrics.loss_total",
+      "field_name": "steps.vae_interpretation.contract.metrics.loss_total",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 20.497904,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "steps.vae_interpretation.contract.metrics.loss_total"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.contract.metrics.loss_recon",
+      "field_name": "steps.vae_interpretation.contract.metrics.loss_recon",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.354622,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.vae_interpretation.contract.metrics.loss_recon",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.contract.metrics.loss_kl",
+      "field_name": "steps.vae_interpretation.contract.metrics.loss_kl",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.195278,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.vae_interpretation.contract.metrics.loss_kl",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.contract.metrics.loss_hamming",
+      "field_name": "steps.vae_interpretation.contract.metrics.loss_hamming",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 66.625,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.vae_interpretation.contract.metrics.loss_hamming",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.contract.metrics.loss_coherence",
+      "field_name": "steps.vae_interpretation.contract.metrics.loss_coherence",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.52371,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.vae_interpretation.contract.metrics.loss_coherence",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.contract.metrics.loss_hw",
+      "field_name": "steps.vae_interpretation.contract.metrics.loss_hw",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.427756,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.vae_interpretation.contract.metrics.loss_hw",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.contract.metrics.loss_mixed_state",
+      "field_name": "steps.vae_interpretation.contract.metrics.loss_mixed_state",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.989756,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.vae_interpretation.contract.metrics.loss_mixed_state",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.contract.metrics.loss_fidelity",
+      "field_name": "steps.vae_interpretation.contract.metrics.loss_fidelity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.vae_interpretation.contract.metrics.loss_fidelity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.contract.metrics.loss_entropy",
+      "field_name": "steps.vae_interpretation.contract.metrics.loss_entropy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.vae_interpretation.contract.metrics.loss_entropy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.contract.details.seed",
+      "field_name": "steps.vae_interpretation.contract.details.seed",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 7.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.vae_interpretation.contract.details.seed",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.contract.generated_at_epoch_s",
+      "field_name": "steps.vae_interpretation.contract.generated_at_epoch_s",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1773876710.278732,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "steps.vae_interpretation.contract.generated_at_epoch_s"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.analysis.stages[0].returncode",
+      "field_name": "steps.vae_interpretation.analysis.stages[0].returncode",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.vae_interpretation.analysis.stages[0].returncode",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.analysis.stages[0].duration_ms",
+      "field_name": "steps.vae_interpretation.analysis.stages[0].duration_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "steps.vae_interpretation.analysis.stages[0].duration_ms"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.analysis.stages[1].returncode",
+      "field_name": "steps.vae_interpretation.analysis.stages[1].returncode",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.vae_interpretation.analysis.stages[1].returncode",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.analysis.stages[1].duration_ms",
+      "field_name": "steps.vae_interpretation.analysis.stages[1].duration_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "steps.vae_interpretation.analysis.stages[1].duration_ms"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.analysis.stages[2].returncode",
+      "field_name": "steps.vae_interpretation.analysis.stages[2].returncode",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.vae_interpretation.analysis.stages[2].returncode",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.analysis.stages[2].duration_ms",
+      "field_name": "steps.vae_interpretation.analysis.stages[2].duration_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "steps.vae_interpretation.analysis.stages[2].duration_ms"
+      ]
+    },
+    {
+      "original_path": "steps.vae_interpretation.analysis.returncode",
+      "field_name": "steps.vae_interpretation.analysis.returncode",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.vae_interpretation.analysis.returncode",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.phi_analysis.contract.metrics.num_jobs",
+      "field_name": "steps.phi_analysis.contract.metrics.num_jobs",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 6.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "steps.phi_analysis.contract.metrics.num_jobs"
+      ]
+    },
+    {
+      "original_path": "steps.phi_analysis.contract.metrics.num_variants",
+      "field_name": "steps.phi_analysis.contract.metrics.num_variants",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "steps.phi_analysis.contract.metrics.num_variants"
+      ]
+    },
+    {
+      "original_path": "steps.phi_analysis.contract.metrics.control_avg_ghz_mass",
+      "field_name": "steps.phi_analysis.contract.metrics.control_avg_ghz_mass",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.809021,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.phi_analysis.contract.metrics.control_avg_ghz_mass",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.phi_analysis.contract.metrics.mild_avg_ghz_mass",
+      "field_name": "steps.phi_analysis.contract.metrics.mild_avg_ghz_mass",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.805176,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.phi_analysis.contract.metrics.mild_avg_ghz_mass",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.phi_analysis.contract.metrics.moderate_avg_ghz_mass",
+      "field_name": "steps.phi_analysis.contract.metrics.moderate_avg_ghz_mass",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.827149,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.phi_analysis.contract.metrics.moderate_avg_ghz_mass",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.phi_analysis.contract.metrics.control_avg_entropy",
+      "field_name": "steps.phi_analysis.contract.metrics.control_avg_entropy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.405798,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.phi_analysis.contract.metrics.control_avg_entropy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.phi_analysis.contract.metrics.mild_avg_entropy",
+      "field_name": "steps.phi_analysis.contract.metrics.mild_avg_entropy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.37775,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.phi_analysis.contract.metrics.mild_avg_entropy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.phi_analysis.contract.metrics.moderate_avg_entropy",
+      "field_name": "steps.phi_analysis.contract.metrics.moderate_avg_entropy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.28454,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.phi_analysis.contract.metrics.moderate_avg_entropy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.phi_analysis.contract.metrics.ghz_mass_delta_control_to_moderate",
+      "field_name": "steps.phi_analysis.contract.metrics.ghz_mass_delta_control_to_moderate",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.018128,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.phi_analysis.contract.metrics.ghz_mass_delta_control_to_moderate",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.phi_analysis.contract.metrics.entropy_delta_control_to_moderate",
+      "field_name": "steps.phi_analysis.contract.metrics.entropy_delta_control_to_moderate",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.121258,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.phi_analysis.contract.metrics.entropy_delta_control_to_moderate",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.phi_analysis.contract.metrics.backend_gap_marrakesh_minus_fez",
+      "field_name": "steps.phi_analysis.contract.metrics.backend_gap_marrakesh_minus_fez",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.149699,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "steps.phi_analysis.contract.metrics.backend_gap_marrakesh_minus_fez"
+      ]
+    },
+    {
+      "original_path": "steps.phi_analysis.contract.generated_at_epoch_s",
+      "field_name": "steps.phi_analysis.contract.generated_at_epoch_s",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1773878926.000362,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "steps.phi_analysis.contract.generated_at_epoch_s"
+      ]
+    },
+    {
+      "original_path": "steps.phi_analysis.analysis.stages[0].returncode",
+      "field_name": "steps.phi_analysis.analysis.stages[0].returncode",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.phi_analysis.analysis.stages[0].returncode",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.phi_analysis.analysis.stages[0].duration_ms",
+      "field_name": "steps.phi_analysis.analysis.stages[0].duration_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "steps.phi_analysis.analysis.stages[0].duration_ms"
+      ]
+    },
+    {
+      "original_path": "steps.phi_analysis.analysis.stages[1].returncode",
+      "field_name": "steps.phi_analysis.analysis.stages[1].returncode",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.phi_analysis.analysis.stages[1].returncode",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.phi_analysis.analysis.stages[1].duration_ms",
+      "field_name": "steps.phi_analysis.analysis.stages[1].duration_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "steps.phi_analysis.analysis.stages[1].duration_ms"
+      ]
+    },
+    {
+      "original_path": "steps.phi_analysis.analysis.stages[2].returncode",
+      "field_name": "steps.phi_analysis.analysis.stages[2].returncode",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.phi_analysis.analysis.stages[2].returncode",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.phi_analysis.analysis.stages[2].duration_ms",
+      "field_name": "steps.phi_analysis.analysis.stages[2].duration_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "steps.phi_analysis.analysis.stages[2].duration_ms"
+      ]
+    },
+    {
+      "original_path": "steps.phi_analysis.analysis.returncode",
+      "field_name": "steps.phi_analysis.analysis.returncode",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.phi_analysis.analysis.returncode",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.ci_audit.audit.stages[0].returncode",
+      "field_name": "steps.ci_audit.audit.stages[0].returncode",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.ci_audit.audit.stages[0].returncode",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.ci_audit.audit.stages[0].duration_ms",
+      "field_name": "steps.ci_audit.audit.stages[0].duration_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "steps.ci_audit.audit.stages[0].duration_ms"
+      ]
+    },
+    {
+      "original_path": "steps.ci_audit.audit.stages[1].returncode",
+      "field_name": "steps.ci_audit.audit.stages[1].returncode",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.ci_audit.audit.stages[1].returncode",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.ci_audit.audit.stages[1].duration_ms",
+      "field_name": "steps.ci_audit.audit.stages[1].duration_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "steps.ci_audit.audit.stages[1].duration_ms"
+      ]
+    },
+    {
+      "original_path": "steps.ci_audit.audit.stages[2].returncode",
+      "field_name": "steps.ci_audit.audit.stages[2].returncode",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.ci_audit.audit.stages[2].returncode",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "steps.ci_audit.audit.stages[2].duration_ms",
+      "field_name": "steps.ci_audit.audit.stages[2].duration_ms",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "steps.ci_audit.audit.stages[2].duration_ms"
+      ]
+    },
+    {
+      "original_path": "steps.ci_audit.audit.returncode",
+      "field_name": "steps.ci_audit.audit.returncode",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "steps.ci_audit.audit.returncode",
+        "unresolved"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "steps.vae_interpretation.contract.metrics.batch_size",
+      1
+    ],
+    [
+      "steps.vae_interpretation.contract.metrics.input_dim",
+      1
+    ],
+    [
+      "steps.vae_interpretation.contract.metrics.mu_mean",
+      1
+    ],
+    [
+      "steps.vae_interpretation.contract.metrics.mu_std",
+      1
+    ],
+    [
+      "steps.vae_interpretation.contract.metrics.log_var_mean",
+      1
+    ],
+    [
+      "steps.vae_interpretation.contract.metrics.density_trace_mean",
+      1
+    ],
+    [
+      "steps.vae_interpretation.contract.metrics.loss_recon",
+      1
+    ],
+    [
+      "steps.vae_interpretation.contract.metrics.loss_kl",
+      1
+    ],
+    [
+      "steps.vae_interpretation.contract.metrics.loss_hamming",
+      1
+    ],
+    [
+      "steps.vae_interpretation.contract.metrics.loss_coherence",
+      1
+    ]
+  ]
+}

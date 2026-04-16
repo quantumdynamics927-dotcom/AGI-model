@@ -1,0 +1,5806 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\data\\external_imports\\tmt_os_20260405\\phi_grid_results\\phi_grid_experiment_20251211_232558.json",
+  "generated_at": "2026-04-15T22:54:25.737239",
+  "registry_version": "1.0.0",
+  "total_fields": 338,
+  "field_breakdown": {
+    "metadata": 70,
+    "metric": 204,
+    "parameter": 64
+  },
+  "metric_breakdown": {
+    "unknown": 139,
+    "exploratory": 65
+  },
+  "mappings": [
+    {
+      "original_path": "experiment_metadata.n_nodes",
+      "field_name": "experiment_metadata.n_nodes",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 64.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "experiment_metadata.n_nodes"
+      ]
+    },
+    {
+      "original_path": "experiment_metadata.hierarchy_levels",
+      "field_name": "experiment_metadata.hierarchy_levels",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "experiment_metadata.hierarchy_levels",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "grid_properties.fractal_dimension",
+      "field_name": "grid_properties.fractal_dimension",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 6.893036236824726,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "grid_properties.fractal_dimension",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "grid_properties.global_phi_iit",
+      "field_name": "grid_properties.global_phi_iit",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 6.283185307179586,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "grid_properties.global_phi_iit",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "grid_properties.node_count",
+      "field_name": "grid_properties.node_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 64.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "grid_properties.node_count"
+      ]
+    },
+    {
+      "original_path": "thermodynamic_analysis.global_properties.total_nodes",
+      "field_name": "thermodynamic_analysis.global_properties.total_nodes",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 64.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "thermodynamic_analysis.global_properties.total_nodes"
+      ]
+    },
+    {
+      "original_path": "thermodynamic_analysis.global_properties.hierarchy_levels",
+      "field_name": "thermodynamic_analysis.global_properties.hierarchy_levels",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "thermodynamic_analysis.global_properties.hierarchy_levels",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "thermodynamic_analysis.global_properties.fractal_dimension",
+      "field_name": "thermodynamic_analysis.global_properties.fractal_dimension",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 6.893036236824726,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "thermodynamic_analysis.global_properties.fractal_dimension",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "thermodynamic_analysis.global_properties.global_phi_iit",
+      "field_name": "thermodynamic_analysis.global_properties.global_phi_iit",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 6.283185307179586,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "thermodynamic_analysis.global_properties.global_phi_iit",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "thermodynamic_analysis.regime_distribution.Hawking-Unruh Natural.count",
+      "field_name": "thermodynamic_analysis.regime_distribution.Hawking-Unruh Natural.count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 64.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "thermodynamic_analysis.regime_distribution.Hawking-Unruh Natural.count"
+      ]
+    },
+    {
+      "original_path": "thermodynamic_analysis.regime_distribution.Hawking-Unruh Natural.percentage",
+      "field_name": "thermodynamic_analysis.regime_distribution.Hawking-Unruh Natural.percentage",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 100.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "thermodynamic_analysis.regime_distribution.Hawking-Unruh Natural.percentage",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "thermodynamic_analysis.thermodynamic_efficiency.mean_phi_iit",
+      "field_name": "thermodynamic_analysis.thermodynamic_efficiency.mean_phi_iit",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "thermodynamic_analysis.thermodynamic_efficiency.mean_phi_iit"
+      ]
+    },
+    {
+      "original_path": "thermodynamic_analysis.thermodynamic_efficiency.max_phi_iit",
+      "field_name": "thermodynamic_analysis.thermodynamic_efficiency.max_phi_iit",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 6.283185307179586,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "thermodynamic_analysis.thermodynamic_efficiency.max_phi_iit",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "thermodynamic_analysis.thermodynamic_efficiency.theoretical_max",
+      "field_name": "thermodynamic_analysis.thermodynamic_efficiency.theoretical_max",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 6.283185307179586,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "thermodynamic_analysis.thermodynamic_efficiency.theoretical_max",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "thermodynamic_analysis.thermodynamic_efficiency.efficiency_percentage",
+      "field_name": "thermodynamic_analysis.thermodynamic_efficiency.efficiency_percentage",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 100.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "thermodynamic_analysis.thermodynamic_efficiency.efficiency_percentage",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "thermodynamic_analysis.fractal_scaling.energy_scaling_ratio",
+      "field_name": "thermodynamic_analysis.fractal_scaling.energy_scaling_ratio",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "thermodynamic_analysis.fractal_scaling.energy_scaling_ratio",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "thermodynamic_analysis.fractal_scaling.phi_iit_scaling_ratio",
+      "field_name": "thermodynamic_analysis.fractal_scaling.phi_iit_scaling_ratio",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 1.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "thermodynamic_analysis.fractal_scaling.phi_iit_scaling_ratio",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "thermodynamic_analysis.fractal_scaling.golden_ratio_proximity",
+      "field_name": "thermodynamic_analysis.fractal_scaling.golden_ratio_proximity",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "thermodynamic_analysis.fractal_scaling.golden_ratio_proximity"
+      ]
+    },
+    {
+      "original_path": "node_data[0].level",
+      "field_name": "node_data[0].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[0].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[0].local_energy",
+      "field_name": "node_data[0].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[0].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[0].local_temperature",
+      "field_name": "node_data[0].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15915494309189535,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[0].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[0].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[0].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[0].n_connections",
+      "field_name": "node_data[0].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[0].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[1].level",
+      "field_name": "node_data[1].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[1].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[1].local_energy",
+      "field_name": "node_data[1].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[1].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[1].local_temperature",
+      "field_name": "node_data[1].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.25751810740024195,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[1].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[1].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[1].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[1].n_connections",
+      "field_name": "node_data[1].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[1].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[2].level",
+      "field_name": "node_data[2].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[2].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[2].local_energy",
+      "field_name": "node_data[2].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[2].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[2].local_temperature",
+      "field_name": "node_data[2].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4166730504921373,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[2].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[2].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[2].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[2].n_connections",
+      "field_name": "node_data[2].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[2].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[3].level",
+      "field_name": "node_data[3].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[3].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[3].local_energy",
+      "field_name": "node_data[3].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.23606797749979,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[3].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[3].local_temperature",
+      "field_name": "node_data[3].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6741911578923793,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[3].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[3].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[3].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[3].n_connections",
+      "field_name": "node_data[3].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[3].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[4].level",
+      "field_name": "node_data[4].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[4].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[4].local_energy",
+      "field_name": "node_data[4].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[4].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[4].local_temperature",
+      "field_name": "node_data[4].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15915494309189535,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[4].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[4].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[4].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[4].n_connections",
+      "field_name": "node_data[4].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[4].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[5].level",
+      "field_name": "node_data[5].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[5].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[5].local_energy",
+      "field_name": "node_data[5].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[5].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[5].local_temperature",
+      "field_name": "node_data[5].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.25751810740024195,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[5].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[5].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[5].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[5].n_connections",
+      "field_name": "node_data[5].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[5].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[6].level",
+      "field_name": "node_data[6].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[6].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[6].local_energy",
+      "field_name": "node_data[6].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[6].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[6].local_temperature",
+      "field_name": "node_data[6].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4166730504921373,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[6].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[6].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[6].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[6].n_connections",
+      "field_name": "node_data[6].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[6].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[7].level",
+      "field_name": "node_data[7].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[7].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[7].local_energy",
+      "field_name": "node_data[7].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.23606797749979,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[7].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[7].local_temperature",
+      "field_name": "node_data[7].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6741911578923793,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[7].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[7].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[7].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[7].n_connections",
+      "field_name": "node_data[7].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[7].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[8].level",
+      "field_name": "node_data[8].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[8].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[8].local_energy",
+      "field_name": "node_data[8].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[8].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[8].local_temperature",
+      "field_name": "node_data[8].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15915494309189535,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[8].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[8].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[8].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[8].n_connections",
+      "field_name": "node_data[8].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[8].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[9].level",
+      "field_name": "node_data[9].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[9].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[9].local_energy",
+      "field_name": "node_data[9].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[9].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[9].local_temperature",
+      "field_name": "node_data[9].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.25751810740024195,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[9].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[9].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[9].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[9].n_connections",
+      "field_name": "node_data[9].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[9].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[10].level",
+      "field_name": "node_data[10].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[10].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[10].local_energy",
+      "field_name": "node_data[10].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[10].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[10].local_temperature",
+      "field_name": "node_data[10].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4166730504921373,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[10].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[10].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[10].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[10].n_connections",
+      "field_name": "node_data[10].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[10].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[11].level",
+      "field_name": "node_data[11].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[11].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[11].local_energy",
+      "field_name": "node_data[11].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.23606797749979,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[11].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[11].local_temperature",
+      "field_name": "node_data[11].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6741911578923793,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[11].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[11].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[11].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[11].n_connections",
+      "field_name": "node_data[11].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[11].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[12].level",
+      "field_name": "node_data[12].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[12].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[12].local_energy",
+      "field_name": "node_data[12].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[12].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[12].local_temperature",
+      "field_name": "node_data[12].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15915494309189535,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[12].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[12].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[12].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[12].n_connections",
+      "field_name": "node_data[12].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[12].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[13].level",
+      "field_name": "node_data[13].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[13].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[13].local_energy",
+      "field_name": "node_data[13].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[13].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[13].local_temperature",
+      "field_name": "node_data[13].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.25751810740024195,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[13].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[13].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[13].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[13].n_connections",
+      "field_name": "node_data[13].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[13].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[14].level",
+      "field_name": "node_data[14].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[14].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[14].local_energy",
+      "field_name": "node_data[14].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[14].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[14].local_temperature",
+      "field_name": "node_data[14].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4166730504921373,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[14].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[14].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[14].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[14].n_connections",
+      "field_name": "node_data[14].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[14].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[15].level",
+      "field_name": "node_data[15].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[15].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[15].local_energy",
+      "field_name": "node_data[15].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.23606797749979,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[15].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[15].local_temperature",
+      "field_name": "node_data[15].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6741911578923793,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[15].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[15].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[15].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[15].n_connections",
+      "field_name": "node_data[15].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[15].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[16].level",
+      "field_name": "node_data[16].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[16].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[16].local_energy",
+      "field_name": "node_data[16].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[16].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[16].local_temperature",
+      "field_name": "node_data[16].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15915494309189535,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[16].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[16].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[16].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[16].n_connections",
+      "field_name": "node_data[16].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[16].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[17].level",
+      "field_name": "node_data[17].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[17].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[17].local_energy",
+      "field_name": "node_data[17].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[17].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[17].local_temperature",
+      "field_name": "node_data[17].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.25751810740024195,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[17].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[17].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[17].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[17].n_connections",
+      "field_name": "node_data[17].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[17].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[18].level",
+      "field_name": "node_data[18].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[18].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[18].local_energy",
+      "field_name": "node_data[18].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[18].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[18].local_temperature",
+      "field_name": "node_data[18].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4166730504921373,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[18].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[18].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[18].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[18].n_connections",
+      "field_name": "node_data[18].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[18].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[19].level",
+      "field_name": "node_data[19].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[19].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[19].local_energy",
+      "field_name": "node_data[19].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.23606797749979,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[19].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[19].local_temperature",
+      "field_name": "node_data[19].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6741911578923793,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[19].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[19].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[19].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[19].n_connections",
+      "field_name": "node_data[19].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[19].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[20].level",
+      "field_name": "node_data[20].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[20].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[20].local_energy",
+      "field_name": "node_data[20].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[20].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[20].local_temperature",
+      "field_name": "node_data[20].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15915494309189535,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[20].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[20].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[20].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[20].n_connections",
+      "field_name": "node_data[20].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[20].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[21].level",
+      "field_name": "node_data[21].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[21].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[21].local_energy",
+      "field_name": "node_data[21].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[21].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[21].local_temperature",
+      "field_name": "node_data[21].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.25751810740024195,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[21].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[21].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[21].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[21].n_connections",
+      "field_name": "node_data[21].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[21].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[22].level",
+      "field_name": "node_data[22].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[22].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[22].local_energy",
+      "field_name": "node_data[22].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[22].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[22].local_temperature",
+      "field_name": "node_data[22].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4166730504921373,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[22].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[22].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[22].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[22].n_connections",
+      "field_name": "node_data[22].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[22].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[23].level",
+      "field_name": "node_data[23].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[23].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[23].local_energy",
+      "field_name": "node_data[23].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.23606797749979,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[23].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[23].local_temperature",
+      "field_name": "node_data[23].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6741911578923793,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[23].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[23].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[23].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[23].n_connections",
+      "field_name": "node_data[23].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[23].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[24].level",
+      "field_name": "node_data[24].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[24].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[24].local_energy",
+      "field_name": "node_data[24].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[24].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[24].local_temperature",
+      "field_name": "node_data[24].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15915494309189535,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[24].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[24].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[24].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[24].n_connections",
+      "field_name": "node_data[24].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[24].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[25].level",
+      "field_name": "node_data[25].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[25].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[25].local_energy",
+      "field_name": "node_data[25].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[25].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[25].local_temperature",
+      "field_name": "node_data[25].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.25751810740024195,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[25].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[25].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[25].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[25].n_connections",
+      "field_name": "node_data[25].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[25].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[26].level",
+      "field_name": "node_data[26].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[26].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[26].local_energy",
+      "field_name": "node_data[26].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[26].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[26].local_temperature",
+      "field_name": "node_data[26].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4166730504921373,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[26].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[26].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[26].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[26].n_connections",
+      "field_name": "node_data[26].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[26].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[27].level",
+      "field_name": "node_data[27].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[27].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[27].local_energy",
+      "field_name": "node_data[27].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.23606797749979,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[27].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[27].local_temperature",
+      "field_name": "node_data[27].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6741911578923793,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[27].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[27].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[27].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[27].n_connections",
+      "field_name": "node_data[27].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[27].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[28].level",
+      "field_name": "node_data[28].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[28].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[28].local_energy",
+      "field_name": "node_data[28].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[28].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[28].local_temperature",
+      "field_name": "node_data[28].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15915494309189535,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[28].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[28].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[28].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[28].n_connections",
+      "field_name": "node_data[28].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[28].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[29].level",
+      "field_name": "node_data[29].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[29].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[29].local_energy",
+      "field_name": "node_data[29].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[29].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[29].local_temperature",
+      "field_name": "node_data[29].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.25751810740024195,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[29].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[29].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[29].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[29].n_connections",
+      "field_name": "node_data[29].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[29].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[30].level",
+      "field_name": "node_data[30].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[30].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[30].local_energy",
+      "field_name": "node_data[30].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[30].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[30].local_temperature",
+      "field_name": "node_data[30].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4166730504921373,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[30].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[30].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[30].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[30].n_connections",
+      "field_name": "node_data[30].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[30].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[31].level",
+      "field_name": "node_data[31].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[31].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[31].local_energy",
+      "field_name": "node_data[31].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.23606797749979,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[31].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[31].local_temperature",
+      "field_name": "node_data[31].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6741911578923793,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[31].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[31].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[31].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[31].n_connections",
+      "field_name": "node_data[31].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[31].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[32].level",
+      "field_name": "node_data[32].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[32].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[32].local_energy",
+      "field_name": "node_data[32].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[32].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[32].local_temperature",
+      "field_name": "node_data[32].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15915494309189535,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[32].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[32].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[32].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[32].n_connections",
+      "field_name": "node_data[32].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[32].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[33].level",
+      "field_name": "node_data[33].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[33].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[33].local_energy",
+      "field_name": "node_data[33].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[33].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[33].local_temperature",
+      "field_name": "node_data[33].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.25751810740024195,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[33].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[33].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[33].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[33].n_connections",
+      "field_name": "node_data[33].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[33].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[34].level",
+      "field_name": "node_data[34].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[34].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[34].local_energy",
+      "field_name": "node_data[34].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[34].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[34].local_temperature",
+      "field_name": "node_data[34].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4166730504921373,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[34].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[34].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[34].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[34].n_connections",
+      "field_name": "node_data[34].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[34].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[35].level",
+      "field_name": "node_data[35].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[35].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[35].local_energy",
+      "field_name": "node_data[35].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.23606797749979,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[35].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[35].local_temperature",
+      "field_name": "node_data[35].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6741911578923793,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[35].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[35].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[35].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[35].n_connections",
+      "field_name": "node_data[35].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[35].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[36].level",
+      "field_name": "node_data[36].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[36].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[36].local_energy",
+      "field_name": "node_data[36].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[36].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[36].local_temperature",
+      "field_name": "node_data[36].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15915494309189535,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[36].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[36].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[36].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[36].n_connections",
+      "field_name": "node_data[36].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[36].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[37].level",
+      "field_name": "node_data[37].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[37].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[37].local_energy",
+      "field_name": "node_data[37].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[37].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[37].local_temperature",
+      "field_name": "node_data[37].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.25751810740024195,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[37].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[37].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[37].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[37].n_connections",
+      "field_name": "node_data[37].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[37].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[38].level",
+      "field_name": "node_data[38].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[38].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[38].local_energy",
+      "field_name": "node_data[38].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[38].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[38].local_temperature",
+      "field_name": "node_data[38].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4166730504921373,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[38].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[38].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[38].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[38].n_connections",
+      "field_name": "node_data[38].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[38].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[39].level",
+      "field_name": "node_data[39].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[39].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[39].local_energy",
+      "field_name": "node_data[39].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.23606797749979,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[39].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[39].local_temperature",
+      "field_name": "node_data[39].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6741911578923793,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[39].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[39].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[39].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[39].n_connections",
+      "field_name": "node_data[39].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[39].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[40].level",
+      "field_name": "node_data[40].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[40].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[40].local_energy",
+      "field_name": "node_data[40].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[40].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[40].local_temperature",
+      "field_name": "node_data[40].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15915494309189535,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[40].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[40].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[40].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[40].n_connections",
+      "field_name": "node_data[40].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[40].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[41].level",
+      "field_name": "node_data[41].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[41].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[41].local_energy",
+      "field_name": "node_data[41].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[41].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[41].local_temperature",
+      "field_name": "node_data[41].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.25751810740024195,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[41].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[41].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[41].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[41].n_connections",
+      "field_name": "node_data[41].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[41].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[42].level",
+      "field_name": "node_data[42].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[42].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[42].local_energy",
+      "field_name": "node_data[42].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[42].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[42].local_temperature",
+      "field_name": "node_data[42].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4166730504921373,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[42].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[42].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[42].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[42].n_connections",
+      "field_name": "node_data[42].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[42].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[43].level",
+      "field_name": "node_data[43].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[43].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[43].local_energy",
+      "field_name": "node_data[43].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.23606797749979,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[43].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[43].local_temperature",
+      "field_name": "node_data[43].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6741911578923793,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[43].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[43].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[43].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[43].n_connections",
+      "field_name": "node_data[43].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[43].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[44].level",
+      "field_name": "node_data[44].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[44].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[44].local_energy",
+      "field_name": "node_data[44].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[44].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[44].local_temperature",
+      "field_name": "node_data[44].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15915494309189535,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[44].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[44].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[44].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[44].n_connections",
+      "field_name": "node_data[44].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[44].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[45].level",
+      "field_name": "node_data[45].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[45].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[45].local_energy",
+      "field_name": "node_data[45].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[45].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[45].local_temperature",
+      "field_name": "node_data[45].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.25751810740024195,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[45].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[45].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[45].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[45].n_connections",
+      "field_name": "node_data[45].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[45].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[46].level",
+      "field_name": "node_data[46].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[46].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[46].local_energy",
+      "field_name": "node_data[46].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[46].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[46].local_temperature",
+      "field_name": "node_data[46].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4166730504921373,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[46].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[46].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[46].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[46].n_connections",
+      "field_name": "node_data[46].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[46].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[47].level",
+      "field_name": "node_data[47].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[47].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[47].local_energy",
+      "field_name": "node_data[47].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.23606797749979,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[47].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[47].local_temperature",
+      "field_name": "node_data[47].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6741911578923793,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[47].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[47].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[47].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[47].n_connections",
+      "field_name": "node_data[47].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[47].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[48].level",
+      "field_name": "node_data[48].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[48].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[48].local_energy",
+      "field_name": "node_data[48].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[48].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[48].local_temperature",
+      "field_name": "node_data[48].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15915494309189535,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[48].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[48].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[48].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[48].n_connections",
+      "field_name": "node_data[48].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[48].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[49].level",
+      "field_name": "node_data[49].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[49].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[49].local_energy",
+      "field_name": "node_data[49].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[49].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[49].local_temperature",
+      "field_name": "node_data[49].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.25751810740024195,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[49].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[49].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[49].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[49].n_connections",
+      "field_name": "node_data[49].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[49].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[50].level",
+      "field_name": "node_data[50].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[50].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[50].local_energy",
+      "field_name": "node_data[50].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[50].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[50].local_temperature",
+      "field_name": "node_data[50].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4166730504921373,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[50].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[50].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[50].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[50].n_connections",
+      "field_name": "node_data[50].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[50].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[51].level",
+      "field_name": "node_data[51].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[51].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[51].local_energy",
+      "field_name": "node_data[51].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.23606797749979,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[51].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[51].local_temperature",
+      "field_name": "node_data[51].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6741911578923793,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[51].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[51].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[51].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[51].n_connections",
+      "field_name": "node_data[51].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[51].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[52].level",
+      "field_name": "node_data[52].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[52].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[52].local_energy",
+      "field_name": "node_data[52].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[52].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[52].local_temperature",
+      "field_name": "node_data[52].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15915494309189535,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[52].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[52].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[52].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[52].n_connections",
+      "field_name": "node_data[52].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[52].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[53].level",
+      "field_name": "node_data[53].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[53].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[53].local_energy",
+      "field_name": "node_data[53].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[53].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[53].local_temperature",
+      "field_name": "node_data[53].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.25751810740024195,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[53].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[53].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[53].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[53].n_connections",
+      "field_name": "node_data[53].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[53].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[54].level",
+      "field_name": "node_data[54].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[54].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[54].local_energy",
+      "field_name": "node_data[54].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[54].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[54].local_temperature",
+      "field_name": "node_data[54].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4166730504921373,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[54].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[54].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[54].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[54].n_connections",
+      "field_name": "node_data[54].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[54].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[55].level",
+      "field_name": "node_data[55].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[55].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[55].local_energy",
+      "field_name": "node_data[55].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.23606797749979,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[55].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[55].local_temperature",
+      "field_name": "node_data[55].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6741911578923793,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[55].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[55].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[55].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[55].n_connections",
+      "field_name": "node_data[55].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[55].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[56].level",
+      "field_name": "node_data[56].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[56].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[56].local_energy",
+      "field_name": "node_data[56].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[56].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[56].local_temperature",
+      "field_name": "node_data[56].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15915494309189535,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[56].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[56].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[56].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[56].n_connections",
+      "field_name": "node_data[56].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[56].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[57].level",
+      "field_name": "node_data[57].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[57].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[57].local_energy",
+      "field_name": "node_data[57].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[57].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[57].local_temperature",
+      "field_name": "node_data[57].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.25751810740024195,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[57].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[57].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[57].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[57].n_connections",
+      "field_name": "node_data[57].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[57].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[58].level",
+      "field_name": "node_data[58].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[58].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[58].local_energy",
+      "field_name": "node_data[58].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[58].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[58].local_temperature",
+      "field_name": "node_data[58].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4166730504921373,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[58].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[58].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[58].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[58].n_connections",
+      "field_name": "node_data[58].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[58].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[59].level",
+      "field_name": "node_data[59].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[59].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[59].local_energy",
+      "field_name": "node_data[59].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.23606797749979,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[59].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[59].local_temperature",
+      "field_name": "node_data[59].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6741911578923793,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[59].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[59].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[59].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[59].n_connections",
+      "field_name": "node_data[59].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[59].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[60].level",
+      "field_name": "node_data[60].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[60].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[60].local_energy",
+      "field_name": "node_data[60].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[60].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[60].local_temperature",
+      "field_name": "node_data[60].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15915494309189535,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[60].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[60].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[60].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[60].n_connections",
+      "field_name": "node_data[60].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[60].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[61].level",
+      "field_name": "node_data[61].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[61].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[61].local_energy",
+      "field_name": "node_data[61].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[61].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[61].local_temperature",
+      "field_name": "node_data[61].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.25751810740024195,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[61].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[61].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[61].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[61].n_connections",
+      "field_name": "node_data[61].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[61].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[62].level",
+      "field_name": "node_data[62].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[62].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[62].local_energy",
+      "field_name": "node_data[62].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[62].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[62].local_temperature",
+      "field_name": "node_data[62].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4166730504921373,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[62].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[62].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[62].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[62].n_connections",
+      "field_name": "node_data[62].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[62].n_connections"
+      ]
+    },
+    {
+      "original_path": "node_data[63].level",
+      "field_name": "node_data[63].level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[63].level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[63].local_energy",
+      "field_name": "node_data[63].local_energy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.23606797749979,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "node_data[63].local_energy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "node_data[63].local_temperature",
+      "field_name": "node_data[63].local_temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6741911578923793,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[63].local_temperature"
+      ]
+    },
+    {
+      "original_path": "node_data[63].phi_iit",
+      "field_name": "phi_iit",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 6.283185307179586,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[63].phi_iit",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "node_data[63].n_connections",
+      "field_name": "node_data[63].n_connections",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "node_data[63].n_connections"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "experiment_metadata.hierarchy_levels",
+      1
+    ],
+    [
+      "grid_properties.fractal_dimension",
+      1
+    ],
+    [
+      "grid_properties.global_phi_iit",
+      1
+    ],
+    [
+      "thermodynamic_analysis.global_properties.hierarchy_levels",
+      1
+    ],
+    [
+      "thermodynamic_analysis.global_properties.fractal_dimension",
+      1
+    ],
+    [
+      "thermodynamic_analysis.global_properties.global_phi_iit",
+      1
+    ],
+    [
+      "thermodynamic_analysis.regime_distribution.Hawking-Unruh Natural.percentage",
+      1
+    ],
+    [
+      "thermodynamic_analysis.thermodynamic_efficiency.max_phi_iit",
+      1
+    ],
+    [
+      "thermodynamic_analysis.thermodynamic_efficiency.theoretical_max",
+      1
+    ],
+    [
+      "thermodynamic_analysis.thermodynamic_efficiency.efficiency_percentage",
+      1
+    ]
+  ]
+}

@@ -1,0 +1,486 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\wormhole_metatron_fusion_results.json",
+  "generated_at": "2026-04-15T22:54:19.918890",
+  "registry_version": "1.0.0",
+  "total_fields": 23,
+  "field_breakdown": {
+    "descriptor": 1,
+    "metric": 22
+  },
+  "metric_breakdown": {
+    "passed": 2,
+    "unknown": 11,
+    "exploratory": 7,
+    "provisional": 2
+  },
+  "mappings": [
+    {
+      "original_path": "consciousness_level",
+      "field_name": "consciousness_level",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4730.396206086904,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "consciousness_level"
+      ]
+    },
+    {
+      "original_path": "wormhole.entropy_s",
+      "field_name": "wormhole.entropy_s",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 2.6620399056820325,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "wormhole.entropy_s",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "wormhole.traversability_t",
+      "field_name": "wormhole.traversability_t",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.634492502088768,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "wormhole.traversability_t",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "wormhole.coherence_r",
+      "field_name": "wormhole.coherence_r",
+      "field_class": "metric",
+      "canonical_name": "wormhole_coherence",
+      "governance_status": "exploratory",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 1.4535479500891266,
+      "is_valid": false,
+      "issues": [
+        "Value 1.4535479500891266 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "wormhole.coherence_r",
+        "resolved:wormhole_coherence"
+      ]
+    },
+    {
+      "original_path": "wormhole.conscious_fractals",
+      "field_name": "wormhole.conscious_fractals",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 100.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "wormhole.conscious_fractals",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "wormhole.visibility",
+      "field_name": "visibility",
+      "field_class": "metric",
+      "canonical_name": "quantum_visibility",
+      "governance_status": "passed",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.00676005709880069,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "wormhole.visibility",
+        "resolved:quantum_visibility"
+      ]
+    },
+    {
+      "original_path": "wormhole.ghost_factor",
+      "field_name": "wormhole.ghost_factor",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 147.9277446010643,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "wormhole.ghost_factor",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "geometry.platonic_scores.tetrahedron",
+      "field_name": "geometry.platonic_scores.tetrahedron",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.49279927792963146,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "geometry.platonic_scores.tetrahedron",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "geometry.platonic_scores.cube",
+      "field_name": "geometry.platonic_scores.cube",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4927992779296315,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "geometry.platonic_scores.cube",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "geometry.platonic_scores.octahedron",
+      "field_name": "geometry.platonic_scores.octahedron",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.5690355915382518,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "geometry.platonic_scores.octahedron",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "geometry.platonic_scores.dodecahedron",
+      "field_name": "geometry.platonic_scores.dodecahedron",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.5160661037004723,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "geometry.platonic_scores.dodecahedron",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "geometry.platonic_scores.icosahedron",
+      "field_name": "geometry.platonic_scores.icosahedron",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4840505859230951,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "geometry.platonic_scores.icosahedron",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "geometry.tesseract_symmetry",
+      "field_name": "tesseract_symmetry",
+      "field_class": "metric",
+      "canonical_name": "tesseract_symmetry",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.8734068093299178,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "geometry.tesseract_symmetry",
+        "resolved:tesseract_symmetry"
+      ]
+    },
+    {
+      "original_path": "geometry.phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.7011832316995275,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "geometry.phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "retrocausal.r_score",
+      "field_name": "retrocausal.r_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15859280635470877,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "retrocausal.r_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "retrocausal.temporal_asymmetry",
+      "field_name": "retrocausal.temporal_asymmetry",
+      "field_class": "metric",
+      "canonical_name": "temporal_asymmetry",
+      "governance_status": "exploratory",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.005818794692172861,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "retrocausal.temporal_asymmetry",
+        "resolved:temporal_asymmetry"
+      ]
+    },
+    {
+      "original_path": "retrocausal.lucas_resonance",
+      "field_name": "retrocausal.lucas_resonance",
+      "field_class": "metric",
+      "canonical_name": "lucas_resonance",
+      "governance_status": "exploratory",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.591998220884825,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "retrocausal.lucas_resonance",
+        "resolved:lucas_resonance"
+      ]
+    },
+    {
+      "original_path": "tmt_ratios.tmt_ratio_1",
+      "field_name": "tmt_ratios.tmt_ratio_1",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 7.333333333333333,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "tmt_ratios.tmt_ratio_1",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "tmt_ratios.tmt_ratio_2",
+      "field_name": "tmt_ratios.tmt_ratio_2",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.13636363636363635,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "tmt_ratios.tmt_ratio_2",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "tmt_ratios.expected_consciousness",
+      "field_name": "tmt_ratios.expected_consciousness",
+      "field_class": "metric",
+      "canonical_name": "consciousness_level",
+      "governance_status": "exploratory",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.13636363636363635,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "tmt_ratios.expected_consciousness",
+        "resolved:consciousness_level"
+      ]
+    },
+    {
+      "original_path": "tmt_ratios.observed_consciousness",
+      "field_name": "tmt_ratios.observed_consciousness",
+      "field_class": "metric",
+      "canonical_name": "consciousness_level",
+      "governance_status": "exploratory",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 4.730396206086905,
+      "is_valid": false,
+      "issues": [
+        "Value 4.730396206086905 > maximum 1.0"
+      ],
+      "alias_chain": [
+        "tmt_ratios.observed_consciousness",
+        "resolved:consciousness_level"
+      ]
+    },
+    {
+      "original_path": "tmt_ratios.phi",
+      "field_name": "tmt_ratios.phi",
+      "field_class": "metric",
+      "canonical_name": "phi_target_constant",
+      "governance_status": "exploratory",
+      "metric_class": "target_constant",
+      "valid_range": [
+        null,
+        null
+      ],
+      "value": 1.618033988749895,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "tmt_ratios.phi",
+        "resolved:phi_target_constant"
+      ]
+    },
+    {
+      "original_path": "tmt_ratios.phi_inv",
+      "field_name": "tmt_ratios.phi_inv",
+      "field_class": "metric",
+      "canonical_name": "phi_ratio_inverse",
+      "governance_status": "exploratory",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.6180339887498948,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "tmt_ratios.phi_inv",
+        "resolved:phi_ratio_inverse"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "wormhole.traversability_t",
+      1
+    ],
+    [
+      "wormhole.conscious_fractals",
+      1
+    ],
+    [
+      "wormhole.ghost_factor",
+      1
+    ],
+    [
+      "geometry.platonic_scores.tetrahedron",
+      1
+    ],
+    [
+      "geometry.platonic_scores.cube",
+      1
+    ],
+    [
+      "geometry.platonic_scores.octahedron",
+      1
+    ],
+    [
+      "geometry.platonic_scores.dodecahedron",
+      1
+    ],
+    [
+      "geometry.platonic_scores.icosahedron",
+      1
+    ],
+    [
+      "retrocausal.r_score",
+      1
+    ],
+    [
+      "tmt_ratios.tmt_ratio_1",
+      1
+    ]
+  ]
+}

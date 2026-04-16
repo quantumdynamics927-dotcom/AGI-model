@@ -1,0 +1,179 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\raw_hardware\\ibm_quantum_submission_manifest.json",
+  "generated_at": "2026-04-15T22:54:20.390337",
+  "registry_version": "1.0.0",
+  "total_fields": 11,
+  "field_breakdown": {
+    "metadata": 1,
+    "parameter": 10
+  },
+  "metric_breakdown": {},
+  "mappings": [
+    {
+      "original_path": "total_jobs",
+      "field_name": "total_jobs",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "total_jobs"
+      ]
+    },
+    {
+      "original_path": "jobs[0].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "jobs[0].shots"
+      ]
+    },
+    {
+      "original_path": "jobs[0].circuit_depth",
+      "field_name": "jobs[0].circuit_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "jobs[0].circuit_depth"
+      ]
+    },
+    {
+      "original_path": "jobs[1].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "jobs[1].shots"
+      ]
+    },
+    {
+      "original_path": "jobs[1].circuit_depth",
+      "field_name": "jobs[1].circuit_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "jobs[1].circuit_depth"
+      ]
+    },
+    {
+      "original_path": "jobs[2].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "jobs[2].shots"
+      ]
+    },
+    {
+      "original_path": "jobs[2].circuit_depth",
+      "field_name": "jobs[2].circuit_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "jobs[2].circuit_depth"
+      ]
+    },
+    {
+      "original_path": "jobs[3].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "jobs[3].shots"
+      ]
+    },
+    {
+      "original_path": "jobs[3].circuit_depth",
+      "field_name": "jobs[3].circuit_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "jobs[3].circuit_depth"
+      ]
+    },
+    {
+      "original_path": "jobs[4].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "jobs[4].shots"
+      ]
+    },
+    {
+      "original_path": "jobs[4].circuit_depth",
+      "field_name": "jobs[4].circuit_depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 16.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "jobs[4].circuit_depth"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": []
+}

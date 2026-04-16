@@ -1,0 +1,60 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\phi_agent_planning_report_20260403_201621.json",
+  "generated_at": "2026-04-15T22:54:19.838030",
+  "registry_version": "1.0.0",
+  "total_fields": 2,
+  "field_breakdown": {
+    "metric": 2
+  },
+  "metric_breakdown": {
+    "unknown": 2
+  },
+  "mappings": [
+    {
+      "original_path": "strategies[0].priority",
+      "field_name": "strategies[0].priority",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "strategies[0].priority",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "strategies[1].priority",
+      "field_name": "strategies[1].priority",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "strategies[1].priority",
+        "unresolved"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "strategies[0].priority",
+      1
+    ],
+    [
+      "strategies[1].priority",
+      1
+    ]
+  ]
+}

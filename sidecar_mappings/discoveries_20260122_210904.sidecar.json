@@ -1,0 +1,4374 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\data\\external_imports\\autonomous_data_20260405\\autonomous_data\\discoveries_20260122_210904.json",
+  "generated_at": "2026-04-15T22:54:26.484974",
+  "registry_version": "1.0.0",
+  "total_fields": 253,
+  "field_breakdown": {
+    "metadata": 73,
+    "parameter": 36,
+    "metric": 132,
+    "descriptor": 12
+  },
+  "metric_breakdown": {
+    "provisional": 60,
+    "exploratory": 36,
+    "validated": 12,
+    "passed": 12,
+    "unknown": 12
+  },
+  "mappings": [
+    {
+      "original_path": "total_discoveries",
+      "field_name": "total_discoveries",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "total_discoveries"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].parameter_set.qubits",
+      "field_name": "qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].parameter_set.qubits"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].parameter_set.coupling_strength",
+      "field_name": "coupling_strength",
+      "field_class": "metric",
+      "canonical_name": "coupling_strength",
+      "governance_status": "provisional",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.382,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].parameter_set.coupling_strength",
+        "resolved:coupling_strength"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].parameter_set.temperature",
+      "field_name": "temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.216,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].parameter_set.temperature"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].parameter_set.phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.382,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].parameter_set.phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].metrics.phi_iit_measured",
+      "field_name": "phi_iit_measured",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.17472752106181366,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].metrics.phi_iit_measured",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].metrics.phi_iit_std",
+      "field_name": "phi_iit_std",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_uncertainty",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.08900622520200363,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].metrics.phi_iit_std",
+        "resolved:phi_iit_uncertainty"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].metrics.fidelity",
+      "field_name": "fidelity",
+      "field_class": "metric",
+      "canonical_name": "quantum_fidelity",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9375593748369998,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].metrics.fidelity",
+        "resolved:quantum_fidelity"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].metrics.entanglement",
+      "field_name": "entanglement",
+      "field_class": "metric",
+      "canonical_name": "entanglement_measure",
+      "governance_status": "passed",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.31755540799788706,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].metrics.entanglement",
+        "resolved:entanglement_measure"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].metrics.max_phi_bound",
+      "field_name": "discoveries[0].metrics.max_phi_bound",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.553935309044939,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[0].metrics.max_phi_bound",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].metrics.coupling_ratio",
+      "field_name": "coupling_ratio",
+      "field_class": "metric",
+      "canonical_name": "coupling_ratio",
+      "governance_status": "provisional",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.6180889837024599,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].metrics.coupling_ratio",
+        "resolved:coupling_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].metrics.shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4000.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].metrics.shots"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].metrics.sparse_activation_ratio",
+      "field_name": "discoveries[0].metrics.sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.14706092007699528,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].metrics.sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].metrics.information_efficiency",
+      "field_name": "discoveries[0].metrics.information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.1881302046140692,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].metrics.information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.15,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.3819110162975401,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].consciousness_signature",
+      "field_name": "consciousness_signature",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.17472752106181366,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].consciousness_signature"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].qcd_confinement",
+      "field_name": "qcd_confinement",
+      "field_class": "metric",
+      "canonical_name": "qcd_confinement",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.382,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].qcd_confinement",
+        "resolved:qcd_confinement"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].qubit_count",
+      "field_name": "discoveries[0].qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].qubit_count"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].sparse_activation_ratio",
+      "field_name": "discoveries[0].sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.14706092007699528,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].decision_qubit",
+      "field_name": "discoveries[0].decision_qubit",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 7.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].decision_qubit"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].information_efficiency",
+      "field_name": "discoveries[0].information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.1881302046140692,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].parameter_set.qubits",
+      "field_name": "qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].parameter_set.qubits"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].parameter_set.coupling_strength",
+      "field_name": "coupling_strength",
+      "field_class": "metric",
+      "canonical_name": "coupling_strength",
+      "governance_status": "provisional",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.382,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].parameter_set.coupling_strength",
+        "resolved:coupling_strength"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].parameter_set.temperature",
+      "field_name": "temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.216,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].parameter_set.temperature"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].parameter_set.phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.382,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].parameter_set.phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].metrics.phi_iit_measured",
+      "field_name": "phi_iit_measured",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.1770149122103296,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].metrics.phi_iit_measured",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].metrics.phi_iit_std",
+      "field_name": "phi_iit_std",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_uncertainty",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.08942320436809113,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].metrics.phi_iit_std",
+        "resolved:phi_iit_uncertainty"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].metrics.fidelity",
+      "field_name": "fidelity",
+      "field_class": "metric",
+      "canonical_name": "quantum_fidelity",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9384942567963146,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].metrics.fidelity",
+        "resolved:quantum_fidelity"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].metrics.entanglement",
+      "field_name": "entanglement",
+      "field_class": "metric",
+      "canonical_name": "entanglement_measure",
+      "governance_status": "passed",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.31683025187073727,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].metrics.entanglement",
+        "resolved:entanglement_measure"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].metrics.max_phi_bound",
+      "field_name": "discoveries[1].metrics.max_phi_bound",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.553935309044939,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[1].metrics.max_phi_bound",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].metrics.coupling_ratio",
+      "field_name": "coupling_ratio",
+      "field_class": "metric",
+      "canonical_name": "coupling_ratio",
+      "governance_status": "provisional",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.6180889837024599,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].metrics.coupling_ratio",
+        "resolved:coupling_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].metrics.shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4000.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].metrics.shots"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].metrics.sparse_activation_ratio",
+      "field_name": "discoveries[1].metrics.sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1471009911628087,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].metrics.sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].metrics.information_efficiency",
+      "field_name": "discoveries[1].metrics.information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.203356352741449,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].metrics.information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.15,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.3819110162975401,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].consciousness_signature",
+      "field_name": "consciousness_signature",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1770149122103296,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].consciousness_signature"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].qcd_confinement",
+      "field_name": "qcd_confinement",
+      "field_class": "metric",
+      "canonical_name": "qcd_confinement",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.382,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].qcd_confinement",
+        "resolved:qcd_confinement"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].qubit_count",
+      "field_name": "discoveries[1].qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].qubit_count"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].sparse_activation_ratio",
+      "field_name": "discoveries[1].sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1471009911628087,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].decision_qubit",
+      "field_name": "discoveries[1].decision_qubit",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 7.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].decision_qubit"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].information_efficiency",
+      "field_name": "discoveries[1].information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.203356352741449,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].parameter_set.qubits",
+      "field_name": "qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].parameter_set.qubits"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].parameter_set.coupling_strength",
+      "field_name": "coupling_strength",
+      "field_class": "metric",
+      "canonical_name": "coupling_strength",
+      "governance_status": "provisional",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.618,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].parameter_set.coupling_strength",
+        "resolved:coupling_strength"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].parameter_set.temperature",
+      "field_name": "temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.216,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].parameter_set.temperature"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].parameter_set.phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.618,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].parameter_set.phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].metrics.phi_iit_measured",
+      "field_name": "phi_iit_measured",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.2148416014016185,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].metrics.phi_iit_measured",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].metrics.phi_iit_std",
+      "field_name": "phi_iit_std",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_uncertainty",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.08844004545773243,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].metrics.phi_iit_std",
+        "resolved:phi_iit_uncertainty"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].metrics.fidelity",
+      "field_name": "fidelity",
+      "field_class": "metric",
+      "canonical_name": "quantum_fidelity",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9374961323530124,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].metrics.fidelity",
+        "resolved:quantum_fidelity"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].metrics.entanglement",
+      "field_name": "entanglement",
+      "field_class": "metric",
+      "canonical_name": "entanglement_measure",
+      "governance_status": "passed",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.4611865151733298,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].metrics.entanglement",
+        "resolved:entanglement_measure"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].metrics.max_phi_bound",
+      "field_name": "discoveries[2].metrics.max_phi_bound",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.553935309044939,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[2].metrics.max_phi_bound",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].metrics.coupling_ratio",
+      "field_name": "coupling_ratio",
+      "field_class": "metric",
+      "canonical_name": "coupling_ratio",
+      "governance_status": "provisional",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.9999450050474351,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].metrics.coupling_ratio",
+        "resolved:coupling_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].metrics.shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4000.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].metrics.shots"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].metrics.sparse_activation_ratio",
+      "field_name": "discoveries[2].metrics.sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1477636484917072,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].metrics.sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].metrics.information_efficiency",
+      "field_name": "discoveries[2].metrics.information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.453954362893766,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].metrics.information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.55,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 5.499495256490213e-05,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].consciousness_signature",
+      "field_name": "consciousness_signature",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2148416014016185,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].consciousness_signature"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].qcd_confinement",
+      "field_name": "qcd_confinement",
+      "field_class": "metric",
+      "canonical_name": "qcd_confinement",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.618,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].qcd_confinement",
+        "resolved:qcd_confinement"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].qubit_count",
+      "field_name": "discoveries[2].qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].qubit_count"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].sparse_activation_ratio",
+      "field_name": "discoveries[2].sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1477636484917072,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].decision_qubit",
+      "field_name": "discoveries[2].decision_qubit",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 7.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].decision_qubit"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].information_efficiency",
+      "field_name": "discoveries[2].information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.453954362893766,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].parameter_set.qubits",
+      "field_name": "qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].parameter_set.qubits"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].parameter_set.coupling_strength",
+      "field_name": "coupling_strength",
+      "field_class": "metric",
+      "canonical_name": "coupling_strength",
+      "governance_status": "provisional",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.618,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].parameter_set.coupling_strength",
+        "resolved:coupling_strength"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].parameter_set.temperature",
+      "field_name": "temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.216,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].parameter_set.temperature"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].parameter_set.phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.618,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].parameter_set.phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].metrics.phi_iit_measured",
+      "field_name": "phi_iit_measured",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.21596804841814496,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].metrics.phi_iit_measured",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].metrics.phi_iit_std",
+      "field_name": "phi_iit_std",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_uncertainty",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.08834596838021891,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].metrics.phi_iit_std",
+        "resolved:phi_iit_uncertainty"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].metrics.fidelity",
+      "field_name": "fidelity",
+      "field_class": "metric",
+      "canonical_name": "quantum_fidelity",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9384971321349824,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].metrics.fidelity",
+        "resolved:quantum_fidelity"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].metrics.entanglement",
+      "field_name": "entanglement",
+      "field_class": "metric",
+      "canonical_name": "entanglement_measure",
+      "governance_status": "passed",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.46040689619073366,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].metrics.entanglement",
+        "resolved:entanglement_measure"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].metrics.max_phi_bound",
+      "field_name": "discoveries[3].metrics.max_phi_bound",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.553935309044939,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[3].metrics.max_phi_bound",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].metrics.coupling_ratio",
+      "field_name": "coupling_ratio",
+      "field_class": "metric",
+      "canonical_name": "coupling_ratio",
+      "governance_status": "provisional",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.9999450050474351,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].metrics.coupling_ratio",
+        "resolved:coupling_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].metrics.shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4000.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].metrics.shots"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].metrics.sparse_activation_ratio",
+      "field_name": "discoveries[3].metrics.sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1477833818700989,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].metrics.sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].metrics.information_efficiency",
+      "field_name": "discoveries[3].metrics.information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.461382502452002,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].metrics.information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.55,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 5.499495256490213e-05,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].consciousness_signature",
+      "field_name": "consciousness_signature",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.21596804841814496,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].consciousness_signature"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].qcd_confinement",
+      "field_name": "qcd_confinement",
+      "field_class": "metric",
+      "canonical_name": "qcd_confinement",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.618,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].qcd_confinement",
+        "resolved:qcd_confinement"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].qubit_count",
+      "field_name": "discoveries[3].qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].qubit_count"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].sparse_activation_ratio",
+      "field_name": "discoveries[3].sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1477833818700989,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].decision_qubit",
+      "field_name": "discoveries[3].decision_qubit",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 7.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].decision_qubit"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].information_efficiency",
+      "field_name": "discoveries[3].information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.461382502452002,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].parameter_set.qubits",
+      "field_name": "qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 13.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].parameter_set.qubits"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].parameter_set.coupling_strength",
+      "field_name": "coupling_strength",
+      "field_class": "metric",
+      "canonical_name": "coupling_strength",
+      "governance_status": "provisional",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.382,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].parameter_set.coupling_strength",
+        "resolved:coupling_strength"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].parameter_set.temperature",
+      "field_name": "temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.216,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].parameter_set.temperature"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].parameter_set.phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.382,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].parameter_set.phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].metrics.phi_iit_measured",
+      "field_name": "phi_iit_measured",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.2844885464516661,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].metrics.phi_iit_measured",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].metrics.phi_iit_std",
+      "field_name": "phi_iit_std",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_uncertainty",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.0928987072385399,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].metrics.phi_iit_std",
+        "resolved:phi_iit_uncertainty"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].metrics.fidelity",
+      "field_name": "fidelity",
+      "field_class": "metric",
+      "canonical_name": "quantum_fidelity",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.843597726840001,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].metrics.fidelity",
+        "resolved:quantum_fidelity"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].metrics.entanglement",
+      "field_name": "entanglement",
+      "field_class": "metric",
+      "canonical_name": "entanglement_measure",
+      "governance_status": "passed",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.3171731445711599,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].metrics.entanglement",
+        "resolved:entanglement_measure"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].metrics.max_phi_bound",
+      "field_name": "discoveries[4].metrics.max_phi_bound",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 9.025144877198025,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[4].metrics.max_phi_bound",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].metrics.coupling_ratio",
+      "field_name": "coupling_ratio",
+      "field_class": "metric",
+      "canonical_name": "coupling_ratio",
+      "governance_status": "provisional",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.6180889837024599,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].metrics.coupling_ratio",
+        "resolved:coupling_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].metrics.shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4000.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].metrics.shots"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].metrics.sparse_activation_ratio",
+      "field_name": "discoveries[4].metrics.sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1489837409597372,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].metrics.sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].metrics.information_efficiency",
+      "field_name": "discoveries[4].metrics.information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.909527473394221,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].metrics.information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.15,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.3819110162975401,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].consciousness_signature",
+      "field_name": "consciousness_signature",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2844885464516661,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].consciousness_signature"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].qcd_confinement",
+      "field_name": "qcd_confinement",
+      "field_class": "metric",
+      "canonical_name": "qcd_confinement",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.382,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].qcd_confinement",
+        "resolved:qcd_confinement"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].qubit_count",
+      "field_name": "discoveries[4].qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 13.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].qubit_count"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].sparse_activation_ratio",
+      "field_name": "discoveries[4].sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1489837409597372,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].decision_qubit",
+      "field_name": "discoveries[4].decision_qubit",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].decision_qubit"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].information_efficiency",
+      "field_name": "discoveries[4].information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.909527473394221,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].parameter_set.qubits",
+      "field_name": "qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 13.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].parameter_set.qubits"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].parameter_set.coupling_strength",
+      "field_name": "coupling_strength",
+      "field_class": "metric",
+      "canonical_name": "coupling_strength",
+      "governance_status": "provisional",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.382,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].parameter_set.coupling_strength",
+        "resolved:coupling_strength"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].parameter_set.temperature",
+      "field_name": "temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.216,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].parameter_set.temperature"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].parameter_set.phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.382,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].parameter_set.phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].metrics.phi_iit_measured",
+      "field_name": "phi_iit_measured",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.2816227499428608,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].metrics.phi_iit_measured",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].metrics.phi_iit_std",
+      "field_name": "phi_iit_std",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_uncertainty",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.089575797789616,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].metrics.phi_iit_std",
+        "resolved:phi_iit_uncertainty"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].metrics.fidelity",
+      "field_name": "fidelity",
+      "field_class": "metric",
+      "canonical_name": "quantum_fidelity",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.8446697310270219,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].metrics.fidelity",
+        "resolved:quantum_fidelity"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].metrics.entanglement",
+      "field_name": "entanglement",
+      "field_class": "metric",
+      "canonical_name": "entanglement_measure",
+      "governance_status": "passed",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.31671933381506906,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].metrics.entanglement",
+        "resolved:entanglement_measure"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].metrics.max_phi_bound",
+      "field_name": "discoveries[5].metrics.max_phi_bound",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 9.025144877198025,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[5].metrics.max_phi_bound",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].metrics.coupling_ratio",
+      "field_name": "coupling_ratio",
+      "field_class": "metric",
+      "canonical_name": "coupling_ratio",
+      "governance_status": "provisional",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.6180889837024599,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].metrics.coupling_ratio",
+        "resolved:coupling_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].metrics.shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4000.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].metrics.shots"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].metrics.sparse_activation_ratio",
+      "field_name": "discoveries[5].metrics.sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.14893353722527639,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].metrics.sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].metrics.information_efficiency",
+      "field_name": "discoveries[5].metrics.information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.8909290357945312,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].metrics.information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.15,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.3819110162975401,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].consciousness_signature",
+      "field_name": "consciousness_signature",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2816227499428608,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].consciousness_signature"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].qcd_confinement",
+      "field_name": "qcd_confinement",
+      "field_class": "metric",
+      "canonical_name": "qcd_confinement",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.382,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].qcd_confinement",
+        "resolved:qcd_confinement"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].qubit_count",
+      "field_name": "discoveries[5].qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 13.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].qubit_count"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].sparse_activation_ratio",
+      "field_name": "discoveries[5].sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.14893353722527639,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].decision_qubit",
+      "field_name": "discoveries[5].decision_qubit",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].decision_qubit"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].information_efficiency",
+      "field_name": "discoveries[5].information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.8909290357945312,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].parameter_set.qubits",
+      "field_name": "qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 13.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].parameter_set.qubits"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].parameter_set.coupling_strength",
+      "field_name": "coupling_strength",
+      "field_class": "metric",
+      "canonical_name": "coupling_strength",
+      "governance_status": "provisional",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.618,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].parameter_set.coupling_strength",
+        "resolved:coupling_strength"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].parameter_set.temperature",
+      "field_name": "temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.216,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].parameter_set.temperature"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].parameter_set.phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.618,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].parameter_set.phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].metrics.phi_iit_measured",
+      "field_name": "phi_iit_measured",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.3478772754950797,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].metrics.phi_iit_measured",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].metrics.phi_iit_std",
+      "field_name": "phi_iit_std",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_uncertainty",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.09095741647874099,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].metrics.phi_iit_std",
+        "resolved:phi_iit_uncertainty"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].metrics.fidelity",
+      "field_name": "fidelity",
+      "field_class": "metric",
+      "canonical_name": "quantum_fidelity",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.8443603439031225,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].metrics.fidelity",
+        "resolved:quantum_fidelity"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].metrics.entanglement",
+      "field_name": "entanglement",
+      "field_class": "metric",
+      "canonical_name": "entanglement_measure",
+      "governance_status": "passed",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.4612639748281001,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].metrics.entanglement",
+        "resolved:entanglement_measure"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].metrics.max_phi_bound",
+      "field_name": "discoveries[6].metrics.max_phi_bound",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 9.025144877198025,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[6].metrics.max_phi_bound",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].metrics.coupling_ratio",
+      "field_name": "coupling_ratio",
+      "field_class": "metric",
+      "canonical_name": "coupling_ratio",
+      "governance_status": "provisional",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.9999450050474351,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].metrics.coupling_ratio",
+        "resolved:coupling_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].metrics.shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4000.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].metrics.shots"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].metrics.sparse_activation_ratio",
+      "field_name": "discoveries[6].metrics.sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15009420044662913,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].metrics.sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].metrics.information_efficiency",
+      "field_name": "discoveries[6].metrics.information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.3177262976178667,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].metrics.information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.55,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 5.499495256490213e-05,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].consciousness_signature",
+      "field_name": "consciousness_signature",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.3478772754950797,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].consciousness_signature"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].qcd_confinement",
+      "field_name": "qcd_confinement",
+      "field_class": "metric",
+      "canonical_name": "qcd_confinement",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.618,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].qcd_confinement",
+        "resolved:qcd_confinement"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].qubit_count",
+      "field_name": "discoveries[6].qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 13.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].qubit_count"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].sparse_activation_ratio",
+      "field_name": "discoveries[6].sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15009420044662913,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].decision_qubit",
+      "field_name": "discoveries[6].decision_qubit",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].decision_qubit"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].information_efficiency",
+      "field_name": "discoveries[6].information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.3177262976178667,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].parameter_set.qubits",
+      "field_name": "qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 13.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].parameter_set.qubits"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].parameter_set.coupling_strength",
+      "field_name": "coupling_strength",
+      "field_class": "metric",
+      "canonical_name": "coupling_strength",
+      "governance_status": "provisional",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.618,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].parameter_set.coupling_strength",
+        "resolved:coupling_strength"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].parameter_set.temperature",
+      "field_name": "temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.216,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].parameter_set.temperature"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].parameter_set.phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.618,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].parameter_set.phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].metrics.phi_iit_measured",
+      "field_name": "phi_iit_measured",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.3463998344255126,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].metrics.phi_iit_measured",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].metrics.phi_iit_std",
+      "field_name": "phi_iit_std",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_uncertainty",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.09076967470669954,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].metrics.phi_iit_std",
+        "resolved:phi_iit_uncertainty"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].metrics.fidelity",
+      "field_name": "fidelity",
+      "field_class": "metric",
+      "canonical_name": "quantum_fidelity",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.8447456825834938,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].metrics.fidelity",
+        "resolved:quantum_fidelity"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].metrics.entanglement",
+      "field_name": "entanglement",
+      "field_class": "metric",
+      "canonical_name": "entanglement_measure",
+      "governance_status": "passed",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.46132109205606486,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].metrics.entanglement",
+        "resolved:entanglement_measure"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].metrics.max_phi_bound",
+      "field_name": "discoveries[7].metrics.max_phi_bound",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 9.025144877198025,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[7].metrics.max_phi_bound",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].metrics.coupling_ratio",
+      "field_name": "coupling_ratio",
+      "field_class": "metric",
+      "canonical_name": "coupling_ratio",
+      "governance_status": "provisional",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.9999450050474351,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].metrics.coupling_ratio",
+        "resolved:coupling_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].metrics.shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4000.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].metrics.shots"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].metrics.sparse_activation_ratio",
+      "field_name": "discoveries[7].metrics.sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15006831826730826,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].metrics.sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].metrics.information_efficiency",
+      "field_name": "discoveries[7].metrics.information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.3082809111546783,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].metrics.information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.55,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 5.499495256490213e-05,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].consciousness_signature",
+      "field_name": "consciousness_signature",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.3463998344255126,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].consciousness_signature"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].qcd_confinement",
+      "field_name": "qcd_confinement",
+      "field_class": "metric",
+      "canonical_name": "qcd_confinement",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.618,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].qcd_confinement",
+        "resolved:qcd_confinement"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].qubit_count",
+      "field_name": "discoveries[7].qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 13.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].qubit_count"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].sparse_activation_ratio",
+      "field_name": "discoveries[7].sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15006831826730826,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].decision_qubit",
+      "field_name": "discoveries[7].decision_qubit",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].decision_qubit"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].information_efficiency",
+      "field_name": "discoveries[7].information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.3082809111546783,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].parameter_set.qubits",
+      "field_name": "qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].parameter_set.qubits"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].parameter_set.coupling_strength",
+      "field_name": "coupling_strength",
+      "field_class": "metric",
+      "canonical_name": "coupling_strength",
+      "governance_status": "provisional",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.382,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].parameter_set.coupling_strength",
+        "resolved:coupling_strength"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].parameter_set.temperature",
+      "field_name": "temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.216,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].parameter_set.temperature"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].parameter_set.phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.382,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].parameter_set.phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].metrics.phi_iit_measured",
+      "field_name": "phi_iit_measured",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.45734955862613547,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].metrics.phi_iit_measured",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].metrics.phi_iit_std",
+      "field_name": "phi_iit_std",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_uncertainty",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.09109676339178067,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].metrics.phi_iit_std",
+        "resolved:phi_iit_uncertainty"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].metrics.fidelity",
+      "field_name": "fidelity",
+      "field_class": "metric",
+      "canonical_name": "quantum_fidelity",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6432692600094309,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].metrics.fidelity",
+        "resolved:quantum_fidelity"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].metrics.entanglement",
+      "field_name": "entanglement",
+      "field_class": "metric",
+      "canonical_name": "entanglement_measure",
+      "governance_status": "passed",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.31765721337538244,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].metrics.entanglement",
+        "resolved:entanglement_measure"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].metrics.max_phi_bound",
+      "field_name": "discoveries[8].metrics.max_phi_bound",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 14.579080186242964,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[8].metrics.max_phi_bound",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].metrics.coupling_ratio",
+      "field_name": "coupling_ratio",
+      "field_class": "metric",
+      "canonical_name": "coupling_ratio",
+      "governance_status": "provisional",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.6180889837024599,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].metrics.coupling_ratio",
+        "resolved:coupling_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].metrics.shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4000.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].metrics.shots"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].metrics.sparse_activation_ratio",
+      "field_name": "discoveries[8].metrics.sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15201196307082282,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].metrics.sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].metrics.information_efficiency",
+      "field_name": "discoveries[8].metrics.information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0086418817777845,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].metrics.information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.15,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.3819110162975401,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].consciousness_signature",
+      "field_name": "consciousness_signature",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.45734955862613547,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].consciousness_signature"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].qcd_confinement",
+      "field_name": "qcd_confinement",
+      "field_class": "metric",
+      "canonical_name": "qcd_confinement",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.382,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].qcd_confinement",
+        "resolved:qcd_confinement"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].qubit_count",
+      "field_name": "discoveries[8].qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].qubit_count"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].sparse_activation_ratio",
+      "field_name": "discoveries[8].sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.15201196307082282,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].decision_qubit",
+      "field_name": "discoveries[8].decision_qubit",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 20.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].decision_qubit"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].information_efficiency",
+      "field_name": "discoveries[8].information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0086418817777845,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].parameter_set.qubits",
+      "field_name": "qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].parameter_set.qubits"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].parameter_set.coupling_strength",
+      "field_name": "coupling_strength",
+      "field_class": "metric",
+      "canonical_name": "coupling_strength",
+      "governance_status": "provisional",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.382,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].parameter_set.coupling_strength",
+        "resolved:coupling_strength"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].parameter_set.temperature",
+      "field_name": "temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.216,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].parameter_set.temperature"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].parameter_set.phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.382,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].parameter_set.phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].metrics.phi_iit_measured",
+      "field_name": "phi_iit_measured",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.4587900940010109,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].metrics.phi_iit_measured",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].metrics.phi_iit_std",
+      "field_name": "phi_iit_std",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_uncertainty",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.093145441394787,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].metrics.phi_iit_std",
+        "resolved:phi_iit_uncertainty"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].metrics.fidelity",
+      "field_name": "fidelity",
+      "field_class": "metric",
+      "canonical_name": "quantum_fidelity",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6430867276411544,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].metrics.fidelity",
+        "resolved:quantum_fidelity"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].metrics.entanglement",
+      "field_name": "entanglement",
+      "field_class": "metric",
+      "canonical_name": "entanglement_measure",
+      "governance_status": "passed",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.31821158274564637,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].metrics.entanglement",
+        "resolved:entanglement_measure"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].metrics.max_phi_bound",
+      "field_name": "discoveries[9].metrics.max_phi_bound",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 14.579080186242964,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[9].metrics.max_phi_bound",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].metrics.coupling_ratio",
+      "field_name": "coupling_ratio",
+      "field_class": "metric",
+      "canonical_name": "coupling_ratio",
+      "governance_status": "provisional",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.6180889837024599,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].metrics.coupling_ratio",
+        "resolved:coupling_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].metrics.shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4000.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].metrics.shots"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].metrics.sparse_activation_ratio",
+      "field_name": "discoveries[9].metrics.sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.152037198727025,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].metrics.sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].metrics.information_efficiency",
+      "field_name": "discoveries[9].metrics.information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0176173847082315,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].metrics.information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.15,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.3819110162975401,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].consciousness_signature",
+      "field_name": "consciousness_signature",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4587900940010109,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].consciousness_signature"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].qcd_confinement",
+      "field_name": "qcd_confinement",
+      "field_class": "metric",
+      "canonical_name": "qcd_confinement",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.382,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].qcd_confinement",
+        "resolved:qcd_confinement"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].qubit_count",
+      "field_name": "discoveries[9].qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].qubit_count"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].sparse_activation_ratio",
+      "field_name": "discoveries[9].sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.152037198727025,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].decision_qubit",
+      "field_name": "discoveries[9].decision_qubit",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 20.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].decision_qubit"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].information_efficiency",
+      "field_name": "discoveries[9].information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0176173847082315,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].parameter_set.qubits",
+      "field_name": "qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[10].parameter_set.qubits"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].parameter_set.coupling_strength",
+      "field_name": "coupling_strength",
+      "field_class": "metric",
+      "canonical_name": "coupling_strength",
+      "governance_status": "provisional",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.618,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[10].parameter_set.coupling_strength",
+        "resolved:coupling_strength"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].parameter_set.temperature",
+      "field_name": "temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.216,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[10].parameter_set.temperature"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].parameter_set.phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.618,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[10].parameter_set.phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].metrics.phi_iit_measured",
+      "field_name": "phi_iit_measured",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.5624143753292358,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[10].metrics.phi_iit_measured",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].metrics.phi_iit_std",
+      "field_name": "phi_iit_std",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_uncertainty",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.09145685725442881,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[10].metrics.phi_iit_std",
+        "resolved:phi_iit_uncertainty"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].metrics.fidelity",
+      "field_name": "fidelity",
+      "field_class": "metric",
+      "canonical_name": "quantum_fidelity",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6432372518941201,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[10].metrics.fidelity",
+        "resolved:quantum_fidelity"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].metrics.entanglement",
+      "field_name": "entanglement",
+      "field_class": "metric",
+      "canonical_name": "entanglement_measure",
+      "governance_status": "passed",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.45982479877473,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[10].metrics.entanglement",
+        "resolved:entanglement_measure"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].metrics.max_phi_bound",
+      "field_name": "discoveries[10].metrics.max_phi_bound",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 14.579080186242964,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[10].metrics.max_phi_bound",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].metrics.coupling_ratio",
+      "field_name": "coupling_ratio",
+      "field_class": "metric",
+      "canonical_name": "coupling_ratio",
+      "governance_status": "provisional",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.9999450050474351,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[10].metrics.coupling_ratio",
+        "resolved:coupling_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].metrics.shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4000.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[10].metrics.shots"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].metrics.sparse_activation_ratio",
+      "field_name": "discoveries[10].metrics.sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1538525146043078,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[10].metrics.sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].metrics.information_efficiency",
+      "field_name": "discoveries[10].metrics.information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.6555423015067734,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[10].metrics.information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.55,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[10].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 5.499495256490213e-05,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[10].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].consciousness_signature",
+      "field_name": "consciousness_signature",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.5624143753292358,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[10].consciousness_signature"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].qcd_confinement",
+      "field_name": "qcd_confinement",
+      "field_class": "metric",
+      "canonical_name": "qcd_confinement",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.618,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[10].qcd_confinement",
+        "resolved:qcd_confinement"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].qubit_count",
+      "field_name": "discoveries[10].qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[10].qubit_count"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].sparse_activation_ratio",
+      "field_name": "discoveries[10].sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1538525146043078,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[10].sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].decision_qubit",
+      "field_name": "discoveries[10].decision_qubit",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 20.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[10].decision_qubit"
+      ]
+    },
+    {
+      "original_path": "discoveries[10].information_efficiency",
+      "field_name": "discoveries[10].information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.6555423015067734,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[10].information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].parameter_set.qubits",
+      "field_name": "qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[11].parameter_set.qubits"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].parameter_set.coupling_strength",
+      "field_name": "coupling_strength",
+      "field_class": "metric",
+      "canonical_name": "coupling_strength",
+      "governance_status": "provisional",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.618,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[11].parameter_set.coupling_strength",
+        "resolved:coupling_strength"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].parameter_set.temperature",
+      "field_name": "temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.216,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[11].parameter_set.temperature"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].parameter_set.phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.618,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[11].parameter_set.phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].metrics.phi_iit_measured",
+      "field_name": "phi_iit_measured",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_score",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.564617654916107,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[11].metrics.phi_iit_measured",
+        "resolved:phi_iit_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].metrics.phi_iit_std",
+      "field_name": "phi_iit_std",
+      "field_class": "metric",
+      "canonical_name": "phi_iit_uncertainty",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.09116801683578436,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[11].metrics.phi_iit_std",
+        "resolved:phi_iit_uncertainty"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].metrics.fidelity",
+      "field_name": "fidelity",
+      "field_class": "metric",
+      "canonical_name": "quantum_fidelity",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6427353612288473,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[11].metrics.fidelity",
+        "resolved:quantum_fidelity"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].metrics.entanglement",
+      "field_name": "entanglement",
+      "field_class": "metric",
+      "canonical_name": "entanglement_measure",
+      "governance_status": "passed",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.4603692418192528,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[11].metrics.entanglement",
+        "resolved:entanglement_measure"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].metrics.max_phi_bound",
+      "field_name": "discoveries[11].metrics.max_phi_bound",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 14.579080186242964,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[11].metrics.max_phi_bound",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].metrics.coupling_ratio",
+      "field_name": "coupling_ratio",
+      "field_class": "metric",
+      "canonical_name": "coupling_ratio",
+      "governance_status": "provisional",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.9999450050474351,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[11].metrics.coupling_ratio",
+        "resolved:coupling_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].metrics.shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4000.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[11].metrics.shots"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].metrics.sparse_activation_ratio",
+      "field_name": "discoveries[11].metrics.sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1538911122029099,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[11].metrics.sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].metrics.information_efficiency",
+      "field_name": "discoveries[11].metrics.information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.6689425843621315,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[11].metrics.information_efficiency"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.55,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[11].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 5.499495256490213e-05,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[11].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].consciousness_signature",
+      "field_name": "consciousness_signature",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.564617654916107,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[11].consciousness_signature"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].qcd_confinement",
+      "field_name": "qcd_confinement",
+      "field_class": "metric",
+      "canonical_name": "qcd_confinement",
+      "governance_status": "exploratory",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.618,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[11].qcd_confinement",
+        "resolved:qcd_confinement"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].qubit_count",
+      "field_name": "discoveries[11].qubit_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[11].qubit_count"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].sparse_activation_ratio",
+      "field_name": "discoveries[11].sparse_activation_ratio",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1538911122029099,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[11].sparse_activation_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].decision_qubit",
+      "field_name": "discoveries[11].decision_qubit",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 20.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[11].decision_qubit"
+      ]
+    },
+    {
+      "original_path": "discoveries[11].information_efficiency",
+      "field_name": "discoveries[11].information_efficiency",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.6689425843621315,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[11].information_efficiency"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "discoveries[0].metrics.max_phi_bound",
+      1
+    ],
+    [
+      "discoveries[1].metrics.max_phi_bound",
+      1
+    ],
+    [
+      "discoveries[2].metrics.max_phi_bound",
+      1
+    ],
+    [
+      "discoveries[3].metrics.max_phi_bound",
+      1
+    ],
+    [
+      "discoveries[4].metrics.max_phi_bound",
+      1
+    ],
+    [
+      "discoveries[5].metrics.max_phi_bound",
+      1
+    ],
+    [
+      "discoveries[6].metrics.max_phi_bound",
+      1
+    ],
+    [
+      "discoveries[7].metrics.max_phi_bound",
+      1
+    ],
+    [
+      "discoveries[8].metrics.max_phi_bound",
+      1
+    ],
+    [
+      "discoveries[9].metrics.max_phi_bound",
+      1
+    ]
+  ]
+}

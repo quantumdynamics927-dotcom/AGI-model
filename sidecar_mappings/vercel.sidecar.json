@@ -1,0 +1,82 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\vercel.json",
+  "generated_at": "2026-04-15T22:54:19.917287",
+  "registry_version": "1.0.0",
+  "total_fields": 3,
+  "field_breakdown": {
+    "metric": 3
+  },
+  "metric_breakdown": {
+    "unknown": 3
+  },
+  "mappings": [
+    {
+      "original_path": "version",
+      "field_name": "version",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "version",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "functions.api/**/*.js.memory",
+      "field_name": "functions.api/**/*.js.memory",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1024.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "functions.api/**/*.js.memory",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "functions.api/**/*.js.maxDuration",
+      "field_name": "functions.api/**/*.js.maxDuration",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "functions.api/**/*.js.maxDuration",
+        "unresolved"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "version",
+      1
+    ],
+    [
+      "functions.api/**/*.js.memory",
+      1
+    ],
+    [
+      "functions.api/**/*.js.maxDuration",
+      1
+    ]
+  ]
+}

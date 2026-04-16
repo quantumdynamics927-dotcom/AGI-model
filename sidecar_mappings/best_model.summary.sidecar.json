@@ -1,0 +1,1272 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\best_model.summary.json",
+  "generated_at": "2026-04-15T22:54:19.759517",
+  "registry_version": "1.0.0",
+  "total_fields": 69,
+  "field_breakdown": {
+    "metadata": 12,
+    "parameter": 2,
+    "metric": 53,
+    "provenance": 2
+  },
+  "metric_breakdown": {
+    "unknown": 37,
+    "passed": 9,
+    "validated": 6,
+    "provisional": 1
+  },
+  "mappings": [
+    {
+      "original_path": "num_epochs_completed",
+      "field_name": "num_epochs_completed",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 111.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "num_epochs_completed"
+      ]
+    },
+    {
+      "original_path": "requested_epochs",
+      "field_name": "requested_epochs",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 200.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "requested_epochs"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.epoch",
+      "field_name": "best_checkpoint.epoch",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 81.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.epoch",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.best_val_loss",
+      "field_name": "best_checkpoint.best_val_loss",
+      "field_class": "metric",
+      "canonical_name": "validation_loss",
+      "governance_status": "passed",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 10.153733587265014,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.best_val_loss",
+        "resolved:validation_loss"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.train_losses.total",
+      "field_name": "best_checkpoint.train_losses.total",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.031145495337409,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.train_losses.total"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.train_losses.recon",
+      "field_name": "best_checkpoint.train_losses.recon",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.7622295295869982,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.train_losses.recon"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.train_losses.kl",
+      "field_name": "best_checkpoint.train_losses.kl",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.45634804142488017,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.train_losses.kl"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.train_losses.hamming",
+      "field_name": "best_checkpoint.train_losses.hamming",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 30.46875,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.train_losses.hamming"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.train_losses.coherence",
+      "field_name": "best_checkpoint.train_losses.coherence",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6132832008439142,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.train_losses.coherence"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.train_losses.hw",
+      "field_name": "best_checkpoint.train_losses.hw",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.539937427720508,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.train_losses.hw"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.train_losses.mixed_state",
+      "field_name": "best_checkpoint.train_losses.mixed_state",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0003463507353051289,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.train_losses.mixed_state"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.train_losses.fidelity",
+      "field_name": "fidelity",
+      "field_class": "metric",
+      "canonical_name": "quantum_fidelity",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.train_losses.fidelity",
+        "resolved:quantum_fidelity"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.train_losses.entropy",
+      "field_name": "best_checkpoint.train_losses.entropy",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.train_losses.entropy"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.train_losses.phi",
+      "field_name": "best_checkpoint.train_losses.phi",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.train_losses.phi"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.train_losses.contrastive",
+      "field_name": "best_checkpoint.train_losses.contrastive",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.16962647417912613,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.train_losses.contrastive"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.val_losses.total",
+      "field_name": "best_checkpoint.val_losses.total",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.153733587265014,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.val_losses.total"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.val_losses.recon",
+      "field_name": "best_checkpoint.val_losses.recon",
+      "field_class": "metric",
+      "canonical_name": "validation_loss",
+      "governance_status": "passed",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.7760352373123169,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.val_losses.recon",
+        "resolved:validation_loss"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.val_losses.kl",
+      "field_name": "best_checkpoint.val_losses.kl",
+      "field_class": "metric",
+      "canonical_name": "validation_loss",
+      "governance_status": "passed",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.49080061316490176,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.val_losses.kl",
+        "resolved:validation_loss"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.val_losses.hamming",
+      "field_name": "best_checkpoint.val_losses.hamming",
+      "field_class": "metric",
+      "canonical_name": "validation_loss",
+      "governance_status": "passed",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 31.03125,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.val_losses.hamming",
+        "resolved:validation_loss"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.val_losses.coherence",
+      "field_name": "best_checkpoint.val_losses.coherence",
+      "field_class": "metric",
+      "canonical_name": "quantum_coherence",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6250729978084564,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.val_losses.coherence",
+        "resolved:quantum_coherence"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.val_losses.hw",
+      "field_name": "best_checkpoint.val_losses.hw",
+      "field_class": "metric",
+      "canonical_name": "hamming_weight",
+      "governance_status": "validated",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0,
+        null
+      ],
+      "value": 0.5502351105213166,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.val_losses.hw",
+        "resolved:hamming_weight"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.val_losses.mixed_state",
+      "field_name": "best_checkpoint.val_losses.mixed_state",
+      "field_class": "metric",
+      "canonical_name": "validation_loss",
+      "governance_status": "passed",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.0011692162603139876,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.val_losses.mixed_state",
+        "resolved:validation_loss"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.val_losses.fidelity",
+      "field_name": "fidelity",
+      "field_class": "metric",
+      "canonical_name": "quantum_fidelity",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.val_losses.fidelity",
+        "resolved:quantum_fidelity"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.val_losses.entropy",
+      "field_name": "best_checkpoint.val_losses.entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.val_losses.entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.val_losses.phi",
+      "field_name": "best_checkpoint.val_losses.phi",
+      "field_class": "metric",
+      "canonical_name": "validation_loss",
+      "governance_status": "passed",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.val_losses.phi",
+        "resolved:validation_loss"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.val_losses.contrastive",
+      "field_name": "best_checkpoint.val_losses.contrastive",
+      "field_class": "metric",
+      "canonical_name": "validation_loss",
+      "governance_status": "passed",
+      "metric_class": "unbounded_positive",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.15484102368354796,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.val_losses.contrastive",
+        "resolved:validation_loss"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.learning_rate",
+      "field_name": "learning_rate",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.000125,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.learning_rate"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.fidelity",
+      "field_name": "fidelity",
+      "field_class": "metric",
+      "canonical_name": "quantum_fidelity",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.fidelity",
+        "resolved:quantum_fidelity"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.entropy",
+      "field_name": "best_checkpoint.quantum_metrics.entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.coherence",
+      "field_name": "best_checkpoint.quantum_metrics.coherence",
+      "field_class": "metric",
+      "canonical_name": "quantum_coherence",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6250729978084564,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.coherence",
+        "resolved:quantum_coherence"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.02903225806451613,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.phi_deviation",
+      "field_name": "best_checkpoint.quantum_metrics.phi_deviation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.04697518031854542,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.phi_deviation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.best_resonance",
+      "field_name": "best_checkpoint.quantum_metrics.best_resonance",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.04838709677419355,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.best_resonance",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.best_epoch",
+      "field_name": "best_checkpoint.quantum_metrics.best_epoch",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.best_epoch",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(0, 1)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(0, 1)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(0, 1)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(1, 2)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(1, 2)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(1, 2)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(2, 3)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(2, 3)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(2, 3)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(3, 4)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(3, 4)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(3, 4)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(4, 5)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(4, 5)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(4, 5)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(5, 6)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(5, 6)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(5, 6)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(6, 7)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(6, 7)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(6, 7)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(7, 8)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(7, 8)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(7, 8)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(8, 9)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(8, 9)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(8, 9)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(9, 10)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(9, 10)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(9, 10)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(10, 11)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(10, 11)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(10, 11)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(11, 12)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(11, 12)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(11, 12)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(12, 13)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(12, 13)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(12, 13)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(13, 14)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(13, 14)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(13, 14)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(14, 15)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(14, 15)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(14, 15)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(15, 16)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(15, 16)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(15, 16)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(16, 17)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(16, 17)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(16, 17)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(17, 18)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(17, 18)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(17, 18)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(18, 19)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(18, 19)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(18, 19)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(19, 20)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(19, 20)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(19, 20)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(20, 21)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(20, 21)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(20, 21)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(21, 22)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(21, 22)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(21, 22)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(22, 23)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(22, 23)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(22, 23)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(23, 24)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(23, 24)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(23, 24)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(24, 25)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(24, 25)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(24, 25)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(25, 26)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(25, 26)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(25, 26)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(26, 27)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(26, 27)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(26, 27)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(27, 28)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(27, 28)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(27, 28)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(28, 29)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(28, 29)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(28, 29)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(29, 30)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(29, 30)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(29, 30)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.quantum_metrics.pair_resonances.(30, 31)",
+      "field_name": "best_checkpoint.quantum_metrics.pair_resonances.(30, 31)",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.quantum_metrics.pair_resonances.(30, 31)",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.consciousness_metrics.lz_original",
+      "field_name": "best_checkpoint.consciousness_metrics.lz_original",
+      "field_class": "provenance",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 18.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.consciousness_metrics.lz_original"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.consciousness_metrics.lz_reconstructed",
+      "field_name": "best_checkpoint.consciousness_metrics.lz_reconstructed",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.consciousness_metrics.lz_reconstructed",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.consciousness_metrics.pci_original",
+      "field_name": "best_checkpoint.consciousness_metrics.pci_original",
+      "field_class": "provenance",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.17890625,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "best_checkpoint.consciousness_metrics.pci_original"
+      ]
+    },
+    {
+      "original_path": "best_checkpoint.consciousness_metrics.pci_reconstructed",
+      "field_name": "best_checkpoint.consciousness_metrics.pci_reconstructed",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.17109375,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "best_checkpoint.consciousness_metrics.pci_reconstructed",
+        "unresolved"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "best_checkpoint.epoch",
+      1
+    ],
+    [
+      "best_checkpoint.quantum_metrics.phi_deviation",
+      1
+    ],
+    [
+      "best_checkpoint.quantum_metrics.best_resonance",
+      1
+    ],
+    [
+      "best_checkpoint.quantum_metrics.best_epoch",
+      1
+    ],
+    [
+      "best_checkpoint.quantum_metrics.pair_resonances.(0, 1)",
+      1
+    ],
+    [
+      "best_checkpoint.quantum_metrics.pair_resonances.(1, 2)",
+      1
+    ],
+    [
+      "best_checkpoint.quantum_metrics.pair_resonances.(2, 3)",
+      1
+    ],
+    [
+      "best_checkpoint.quantum_metrics.pair_resonances.(3, 4)",
+      1
+    ],
+    [
+      "best_checkpoint.quantum_metrics.pair_resonances.(4, 5)",
+      1
+    ],
+    [
+      "best_checkpoint.quantum_metrics.pair_resonances.(5, 6)",
+      1
+    ]
+  ]
+}

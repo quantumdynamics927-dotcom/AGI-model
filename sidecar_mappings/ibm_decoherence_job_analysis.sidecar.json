@@ -1,0 +1,2014 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\artifacts\\ibm_decoherence_job_analysis.json",
+  "generated_at": "2026-04-15T22:54:19.953180",
+  "registry_version": "1.0.0",
+  "total_fields": 125,
+  "field_breakdown": {
+    "parameter": 16,
+    "metadata": 82,
+    "metric": 27
+  },
+  "metric_breakdown": {
+    "unknown": 27
+  },
+  "mappings": [
+    {
+      "original_path": "job_results[0].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[0].shots"
+      ]
+    },
+    {
+      "original_path": "job_results[0].gate_counts.rz",
+      "field_name": "job_results[0].gate_counts.rz",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 30.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[0].gate_counts.rz"
+      ]
+    },
+    {
+      "original_path": "job_results[0].gate_counts.sx",
+      "field_name": "job_results[0].gate_counts.sx",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 15.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[0].gate_counts.sx"
+      ]
+    },
+    {
+      "original_path": "job_results[0].gate_counts.cz",
+      "field_name": "job_results[0].gate_counts.cz",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 7.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[0].gate_counts.cz"
+      ]
+    },
+    {
+      "original_path": "job_results[0].gate_counts.measure",
+      "field_name": "job_results[0].gate_counts.measure",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[0].gate_counts.measure"
+      ]
+    },
+    {
+      "original_path": "job_results[0].metrics.shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[0].metrics.shots"
+      ]
+    },
+    {
+      "original_path": "job_results[0].metrics.ghz_mass",
+      "field_name": "job_results[0].metrics.ghz_mass",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.735107,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "job_results[0].metrics.ghz_mass",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "job_results[0].metrics.parity_expectation",
+      "field_name": "job_results[0].metrics.parity_expectation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.577393,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "job_results[0].metrics.parity_expectation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "job_results[0].metrics.distribution_entropy",
+      "field_name": "job_results[0].metrics.distribution_entropy",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.919537,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[0].metrics.distribution_entropy"
+      ]
+    },
+    {
+      "original_path": "job_results[0].metrics.dominant_count",
+      "field_name": "job_results[0].metrics.dominant_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3133.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[0].metrics.dominant_count"
+      ]
+    },
+    {
+      "original_path": "job_results[0].metrics.dominant_probability",
+      "field_name": "job_results[0].metrics.dominant_probability",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.382446,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "job_results[0].metrics.dominant_probability",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "job_results[0].top_counts[0].count",
+      "field_name": "job_results[0].top_counts[0].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3133.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[0].top_counts[0].count"
+      ]
+    },
+    {
+      "original_path": "job_results[0].top_counts[1].count",
+      "field_name": "job_results[0].top_counts[1].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2889.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[0].top_counts[1].count"
+      ]
+    },
+    {
+      "original_path": "job_results[0].top_counts[2].count",
+      "field_name": "job_results[0].top_counts[2].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 216.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[0].top_counts[2].count"
+      ]
+    },
+    {
+      "original_path": "job_results[0].top_counts[3].count",
+      "field_name": "job_results[0].top_counts[3].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 149.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[0].top_counts[3].count"
+      ]
+    },
+    {
+      "original_path": "job_results[0].top_counts[4].count",
+      "field_name": "job_results[0].top_counts[4].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 143.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[0].top_counts[4].count"
+      ]
+    },
+    {
+      "original_path": "job_results[0].top_counts[5].count",
+      "field_name": "job_results[0].top_counts[5].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 135.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[0].top_counts[5].count"
+      ]
+    },
+    {
+      "original_path": "job_results[1].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[1].shots"
+      ]
+    },
+    {
+      "original_path": "job_results[1].gate_counts.rz",
+      "field_name": "job_results[1].gate_counts.rz",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 30.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[1].gate_counts.rz"
+      ]
+    },
+    {
+      "original_path": "job_results[1].gate_counts.sx",
+      "field_name": "job_results[1].gate_counts.sx",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 15.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[1].gate_counts.sx"
+      ]
+    },
+    {
+      "original_path": "job_results[1].gate_counts.cz",
+      "field_name": "job_results[1].gate_counts.cz",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 7.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[1].gate_counts.cz"
+      ]
+    },
+    {
+      "original_path": "job_results[1].gate_counts.measure",
+      "field_name": "job_results[1].gate_counts.measure",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[1].gate_counts.measure"
+      ]
+    },
+    {
+      "original_path": "job_results[1].metrics.shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[1].metrics.shots"
+      ]
+    },
+    {
+      "original_path": "job_results[1].metrics.ghz_mass",
+      "field_name": "job_results[1].metrics.ghz_mass",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.882935,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "job_results[1].metrics.ghz_mass",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "job_results[1].metrics.parity_expectation",
+      "field_name": "job_results[1].metrics.parity_expectation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.807373,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "job_results[1].metrics.parity_expectation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "job_results[1].metrics.distribution_entropy",
+      "field_name": "job_results[1].metrics.distribution_entropy",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.892058,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[1].metrics.distribution_entropy"
+      ]
+    },
+    {
+      "original_path": "job_results[1].metrics.dominant_count",
+      "field_name": "job_results[1].metrics.dominant_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3876.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[1].metrics.dominant_count"
+      ]
+    },
+    {
+      "original_path": "job_results[1].metrics.dominant_probability",
+      "field_name": "job_results[1].metrics.dominant_probability",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.473145,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "job_results[1].metrics.dominant_probability",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "job_results[1].top_counts[0].count",
+      "field_name": "job_results[1].top_counts[0].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3876.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[1].top_counts[0].count"
+      ]
+    },
+    {
+      "original_path": "job_results[1].top_counts[1].count",
+      "field_name": "job_results[1].top_counts[1].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3357.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[1].top_counts[1].count"
+      ]
+    },
+    {
+      "original_path": "job_results[1].top_counts[2].count",
+      "field_name": "job_results[1].top_counts[2].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 294.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[1].top_counts[2].count"
+      ]
+    },
+    {
+      "original_path": "job_results[1].top_counts[3].count",
+      "field_name": "job_results[1].top_counts[3].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 82.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[1].top_counts[3].count"
+      ]
+    },
+    {
+      "original_path": "job_results[1].top_counts[4].count",
+      "field_name": "job_results[1].top_counts[4].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 49.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[1].top_counts[4].count"
+      ]
+    },
+    {
+      "original_path": "job_results[1].top_counts[5].count",
+      "field_name": "job_results[1].top_counts[5].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 45.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[1].top_counts[5].count"
+      ]
+    },
+    {
+      "original_path": "job_results[2].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4096.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[2].shots"
+      ]
+    },
+    {
+      "original_path": "job_results[2].gate_counts.rz",
+      "field_name": "job_results[2].gate_counts.rz",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 37.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[2].gate_counts.rz"
+      ]
+    },
+    {
+      "original_path": "job_results[2].gate_counts.sx",
+      "field_name": "job_results[2].gate_counts.sx",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 14.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[2].gate_counts.sx"
+      ]
+    },
+    {
+      "original_path": "job_results[2].gate_counts.cz",
+      "field_name": "job_results[2].gate_counts.cz",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 7.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[2].gate_counts.cz"
+      ]
+    },
+    {
+      "original_path": "job_results[2].gate_counts.rx",
+      "field_name": "job_results[2].gate_counts.rx",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[2].gate_counts.rx"
+      ]
+    },
+    {
+      "original_path": "job_results[2].gate_counts.measure",
+      "field_name": "job_results[2].gate_counts.measure",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[2].gate_counts.measure"
+      ]
+    },
+    {
+      "original_path": "job_results[2].metrics.shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4096.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[2].metrics.shots"
+      ]
+    },
+    {
+      "original_path": "job_results[2].metrics.ghz_mass",
+      "field_name": "job_results[2].metrics.ghz_mass",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.73999,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "job_results[2].metrics.ghz_mass",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "job_results[2].metrics.parity_expectation",
+      "field_name": "job_results[2].metrics.parity_expectation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.57959,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "job_results[2].metrics.parity_expectation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "job_results[2].metrics.distribution_entropy",
+      "field_name": "job_results[2].metrics.distribution_entropy",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.847585,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[2].metrics.distribution_entropy"
+      ]
+    },
+    {
+      "original_path": "job_results[2].metrics.dominant_count",
+      "field_name": "job_results[2].metrics.dominant_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1616.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[2].metrics.dominant_count"
+      ]
+    },
+    {
+      "original_path": "job_results[2].metrics.dominant_probability",
+      "field_name": "job_results[2].metrics.dominant_probability",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.394531,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "job_results[2].metrics.dominant_probability",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "job_results[2].top_counts[0].count",
+      "field_name": "job_results[2].top_counts[0].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1616.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[2].top_counts[0].count"
+      ]
+    },
+    {
+      "original_path": "job_results[2].top_counts[1].count",
+      "field_name": "job_results[2].top_counts[1].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1415.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[2].top_counts[1].count"
+      ]
+    },
+    {
+      "original_path": "job_results[2].top_counts[2].count",
+      "field_name": "job_results[2].top_counts[2].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 123.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[2].top_counts[2].count"
+      ]
+    },
+    {
+      "original_path": "job_results[2].top_counts[3].count",
+      "field_name": "job_results[2].top_counts[3].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 94.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[2].top_counts[3].count"
+      ]
+    },
+    {
+      "original_path": "job_results[2].top_counts[4].count",
+      "field_name": "job_results[2].top_counts[4].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 67.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[2].top_counts[4].count"
+      ]
+    },
+    {
+      "original_path": "job_results[2].top_counts[5].count",
+      "field_name": "job_results[2].top_counts[5].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 66.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[2].top_counts[5].count"
+      ]
+    },
+    {
+      "original_path": "job_results[3].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4096.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[3].shots"
+      ]
+    },
+    {
+      "original_path": "job_results[3].gate_counts.rz",
+      "field_name": "job_results[3].gate_counts.rz",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 37.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[3].gate_counts.rz"
+      ]
+    },
+    {
+      "original_path": "job_results[3].gate_counts.sx",
+      "field_name": "job_results[3].gate_counts.sx",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 14.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[3].gate_counts.sx"
+      ]
+    },
+    {
+      "original_path": "job_results[3].gate_counts.cz",
+      "field_name": "job_results[3].gate_counts.cz",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 7.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[3].gate_counts.cz"
+      ]
+    },
+    {
+      "original_path": "job_results[3].gate_counts.rx",
+      "field_name": "job_results[3].gate_counts.rx",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[3].gate_counts.rx"
+      ]
+    },
+    {
+      "original_path": "job_results[3].gate_counts.measure",
+      "field_name": "job_results[3].gate_counts.measure",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[3].gate_counts.measure"
+      ]
+    },
+    {
+      "original_path": "job_results[3].metrics.shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4096.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[3].metrics.shots"
+      ]
+    },
+    {
+      "original_path": "job_results[3].metrics.ghz_mass",
+      "field_name": "job_results[3].metrics.ghz_mass",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.870361,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "job_results[3].metrics.ghz_mass",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "job_results[3].metrics.parity_expectation",
+      "field_name": "job_results[3].metrics.parity_expectation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.782227,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "job_results[3].metrics.parity_expectation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "job_results[3].metrics.distribution_entropy",
+      "field_name": "job_results[3].metrics.distribution_entropy",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.907915,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[3].metrics.distribution_entropy"
+      ]
+    },
+    {
+      "original_path": "job_results[3].metrics.dominant_count",
+      "field_name": "job_results[3].metrics.dominant_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1968.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[3].metrics.dominant_count"
+      ]
+    },
+    {
+      "original_path": "job_results[3].metrics.dominant_probability",
+      "field_name": "job_results[3].metrics.dominant_probability",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.480469,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "job_results[3].metrics.dominant_probability",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "job_results[3].top_counts[0].count",
+      "field_name": "job_results[3].top_counts[0].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1968.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[3].top_counts[0].count"
+      ]
+    },
+    {
+      "original_path": "job_results[3].top_counts[1].count",
+      "field_name": "job_results[3].top_counts[1].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1597.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[3].top_counts[1].count"
+      ]
+    },
+    {
+      "original_path": "job_results[3].top_counts[2].count",
+      "field_name": "job_results[3].top_counts[2].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 220.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[3].top_counts[2].count"
+      ]
+    },
+    {
+      "original_path": "job_results[3].top_counts[3].count",
+      "field_name": "job_results[3].top_counts[3].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 33.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[3].top_counts[3].count"
+      ]
+    },
+    {
+      "original_path": "job_results[3].top_counts[4].count",
+      "field_name": "job_results[3].top_counts[4].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 23.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[3].top_counts[4].count"
+      ]
+    },
+    {
+      "original_path": "job_results[3].top_counts[5].count",
+      "field_name": "job_results[3].top_counts[5].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 22.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[3].top_counts[5].count"
+      ]
+    },
+    {
+      "original_path": "job_results[4].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4096.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[4].shots"
+      ]
+    },
+    {
+      "original_path": "job_results[4].gate_counts.rz",
+      "field_name": "job_results[4].gate_counts.rz",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 37.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[4].gate_counts.rz"
+      ]
+    },
+    {
+      "original_path": "job_results[4].gate_counts.sx",
+      "field_name": "job_results[4].gate_counts.sx",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 14.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[4].gate_counts.sx"
+      ]
+    },
+    {
+      "original_path": "job_results[4].gate_counts.cz",
+      "field_name": "job_results[4].gate_counts.cz",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 7.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[4].gate_counts.cz"
+      ]
+    },
+    {
+      "original_path": "job_results[4].gate_counts.rx",
+      "field_name": "job_results[4].gate_counts.rx",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[4].gate_counts.rx"
+      ]
+    },
+    {
+      "original_path": "job_results[4].gate_counts.measure",
+      "field_name": "job_results[4].gate_counts.measure",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[4].gate_counts.measure"
+      ]
+    },
+    {
+      "original_path": "job_results[4].metrics.shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4096.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[4].metrics.shots"
+      ]
+    },
+    {
+      "original_path": "job_results[4].metrics.ghz_mass",
+      "field_name": "job_results[4].metrics.ghz_mass",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.741699,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "job_results[4].metrics.ghz_mass",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "job_results[4].metrics.parity_expectation",
+      "field_name": "job_results[4].metrics.parity_expectation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.597656,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "job_results[4].metrics.parity_expectation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "job_results[4].metrics.distribution_entropy",
+      "field_name": "job_results[4].metrics.distribution_entropy",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.857278,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[4].metrics.distribution_entropy"
+      ]
+    },
+    {
+      "original_path": "job_results[4].metrics.dominant_count",
+      "field_name": "job_results[4].metrics.dominant_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1645.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[4].metrics.dominant_count"
+      ]
+    },
+    {
+      "original_path": "job_results[4].metrics.dominant_probability",
+      "field_name": "job_results[4].metrics.dominant_probability",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.401611,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "job_results[4].metrics.dominant_probability",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "job_results[4].top_counts[0].count",
+      "field_name": "job_results[4].top_counts[0].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1645.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[4].top_counts[0].count"
+      ]
+    },
+    {
+      "original_path": "job_results[4].top_counts[1].count",
+      "field_name": "job_results[4].top_counts[1].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1393.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[4].top_counts[1].count"
+      ]
+    },
+    {
+      "original_path": "job_results[4].top_counts[2].count",
+      "field_name": "job_results[4].top_counts[2].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 109.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[4].top_counts[2].count"
+      ]
+    },
+    {
+      "original_path": "job_results[4].top_counts[3].count",
+      "field_name": "job_results[4].top_counts[3].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 78.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[4].top_counts[3].count"
+      ]
+    },
+    {
+      "original_path": "job_results[4].top_counts[4].count",
+      "field_name": "job_results[4].top_counts[4].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 74.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[4].top_counts[4].count"
+      ]
+    },
+    {
+      "original_path": "job_results[4].top_counts[5].count",
+      "field_name": "job_results[4].top_counts[5].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 73.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[4].top_counts[5].count"
+      ]
+    },
+    {
+      "original_path": "job_results[5].shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4096.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[5].shots"
+      ]
+    },
+    {
+      "original_path": "job_results[5].gate_counts.rz",
+      "field_name": "job_results[5].gate_counts.rz",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 37.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[5].gate_counts.rz"
+      ]
+    },
+    {
+      "original_path": "job_results[5].gate_counts.sx",
+      "field_name": "job_results[5].gate_counts.sx",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 14.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[5].gate_counts.sx"
+      ]
+    },
+    {
+      "original_path": "job_results[5].gate_counts.cz",
+      "field_name": "job_results[5].gate_counts.cz",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 7.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[5].gate_counts.cz"
+      ]
+    },
+    {
+      "original_path": "job_results[5].gate_counts.rx",
+      "field_name": "job_results[5].gate_counts.rx",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[5].gate_counts.rx"
+      ]
+    },
+    {
+      "original_path": "job_results[5].gate_counts.measure",
+      "field_name": "job_results[5].gate_counts.measure",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[5].gate_counts.measure"
+      ]
+    },
+    {
+      "original_path": "job_results[5].metrics.shots",
+      "field_name": "shots",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4096.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[5].metrics.shots"
+      ]
+    },
+    {
+      "original_path": "job_results[5].metrics.ghz_mass",
+      "field_name": "job_results[5].metrics.ghz_mass",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.912598,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "job_results[5].metrics.ghz_mass",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "job_results[5].metrics.parity_expectation",
+      "field_name": "job_results[5].metrics.parity_expectation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.85791,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "job_results[5].metrics.parity_expectation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "job_results[5].metrics.distribution_entropy",
+      "field_name": "job_results[5].metrics.distribution_entropy",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.711802,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[5].metrics.distribution_entropy"
+      ]
+    },
+    {
+      "original_path": "job_results[5].metrics.dominant_count",
+      "field_name": "job_results[5].metrics.dominant_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1956.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[5].metrics.dominant_count"
+      ]
+    },
+    {
+      "original_path": "job_results[5].metrics.dominant_probability",
+      "field_name": "job_results[5].metrics.dominant_probability",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.477539,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "job_results[5].metrics.dominant_probability",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "job_results[5].top_counts[0].count",
+      "field_name": "job_results[5].top_counts[0].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1956.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[5].top_counts[0].count"
+      ]
+    },
+    {
+      "original_path": "job_results[5].top_counts[1].count",
+      "field_name": "job_results[5].top_counts[1].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1782.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[5].top_counts[1].count"
+      ]
+    },
+    {
+      "original_path": "job_results[5].top_counts[2].count",
+      "field_name": "job_results[5].top_counts[2].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 77.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[5].top_counts[2].count"
+      ]
+    },
+    {
+      "original_path": "job_results[5].top_counts[3].count",
+      "field_name": "job_results[5].top_counts[3].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 28.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[5].top_counts[3].count"
+      ]
+    },
+    {
+      "original_path": "job_results[5].top_counts[4].count",
+      "field_name": "job_results[5].top_counts[4].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 26.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[5].top_counts[4].count"
+      ]
+    },
+    {
+      "original_path": "job_results[5].top_counts[5].count",
+      "field_name": "job_results[5].top_counts[5].count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 18.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "job_results[5].top_counts[5].count"
+      ]
+    },
+    {
+      "original_path": "aggregate.num_jobs",
+      "field_name": "aggregate.num_jobs",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 6.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "aggregate.num_jobs"
+      ]
+    },
+    {
+      "original_path": "aggregate.variants.control.num_jobs",
+      "field_name": "aggregate.variants.control.num_jobs",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "aggregate.variants.control.num_jobs"
+      ]
+    },
+    {
+      "original_path": "aggregate.variants.control.avg_ghz_mass",
+      "field_name": "aggregate.variants.control.avg_ghz_mass",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.809021,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "aggregate.variants.control.avg_ghz_mass",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "aggregate.variants.control.avg_entropy",
+      "field_name": "aggregate.variants.control.avg_entropy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.405798,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "aggregate.variants.control.avg_entropy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "aggregate.variants.control.avg_parity",
+      "field_name": "aggregate.variants.control.avg_parity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.692383,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "aggregate.variants.control.avg_parity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "aggregate.variants.mild.num_jobs",
+      "field_name": "aggregate.variants.mild.num_jobs",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "aggregate.variants.mild.num_jobs"
+      ]
+    },
+    {
+      "original_path": "aggregate.variants.mild.avg_ghz_mass",
+      "field_name": "aggregate.variants.mild.avg_ghz_mass",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.805176,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "aggregate.variants.mild.avg_ghz_mass",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "aggregate.variants.mild.avg_entropy",
+      "field_name": "aggregate.variants.mild.avg_entropy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.37775,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "aggregate.variants.mild.avg_entropy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "aggregate.variants.mild.avg_parity",
+      "field_name": "aggregate.variants.mild.avg_parity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.680909,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "aggregate.variants.mild.avg_parity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "aggregate.variants.moderate.num_jobs",
+      "field_name": "aggregate.variants.moderate.num_jobs",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "aggregate.variants.moderate.num_jobs"
+      ]
+    },
+    {
+      "original_path": "aggregate.variants.moderate.avg_ghz_mass",
+      "field_name": "aggregate.variants.moderate.avg_ghz_mass",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.827149,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "aggregate.variants.moderate.avg_ghz_mass",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "aggregate.variants.moderate.avg_entropy",
+      "field_name": "aggregate.variants.moderate.avg_entropy",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.28454,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "aggregate.variants.moderate.avg_entropy",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "aggregate.variants.moderate.avg_parity",
+      "field_name": "aggregate.variants.moderate.avg_parity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.727783,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "aggregate.variants.moderate.avg_parity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "aggregate.backends.ibm_fez.num_jobs",
+      "field_name": "aggregate.backends.ibm_fez.num_jobs",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "aggregate.backends.ibm_fez.num_jobs"
+      ]
+    },
+    {
+      "original_path": "aggregate.backends.ibm_fez.avg_ghz_mass",
+      "field_name": "aggregate.backends.ibm_fez.avg_ghz_mass",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.738932,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "aggregate.backends.ibm_fez.avg_ghz_mass"
+      ]
+    },
+    {
+      "original_path": "aggregate.backends.ibm_fez.avg_entropy",
+      "field_name": "aggregate.backends.ibm_fez.avg_entropy",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.8748,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "aggregate.backends.ibm_fez.avg_entropy"
+      ]
+    },
+    {
+      "original_path": "aggregate.backends.ibm_marrakesh.num_jobs",
+      "field_name": "aggregate.backends.ibm_marrakesh.num_jobs",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "aggregate.backends.ibm_marrakesh.num_jobs"
+      ]
+    },
+    {
+      "original_path": "aggregate.backends.ibm_marrakesh.avg_ghz_mass",
+      "field_name": "aggregate.backends.ibm_marrakesh.avg_ghz_mass",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.888631,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "aggregate.backends.ibm_marrakesh.avg_ghz_mass"
+      ]
+    },
+    {
+      "original_path": "aggregate.backends.ibm_marrakesh.avg_entropy",
+      "field_name": "aggregate.backends.ibm_marrakesh.avg_entropy",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.837258,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "aggregate.backends.ibm_marrakesh.avg_entropy"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "job_results[0].metrics.ghz_mass",
+      1
+    ],
+    [
+      "job_results[0].metrics.parity_expectation",
+      1
+    ],
+    [
+      "job_results[0].metrics.dominant_probability",
+      1
+    ],
+    [
+      "job_results[1].metrics.ghz_mass",
+      1
+    ],
+    [
+      "job_results[1].metrics.parity_expectation",
+      1
+    ],
+    [
+      "job_results[1].metrics.dominant_probability",
+      1
+    ],
+    [
+      "job_results[2].metrics.ghz_mass",
+      1
+    ],
+    [
+      "job_results[2].metrics.parity_expectation",
+      1
+    ],
+    [
+      "job_results[2].metrics.dominant_probability",
+      1
+    ],
+    [
+      "job_results[3].metrics.ghz_mass",
+      1
+    ]
+  ]
+}

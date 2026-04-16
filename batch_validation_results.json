@@ -1,0 +1,1706 @@
+{
+  "total_artifacts": 96,
+  "artifacts": {
+    ".mypy_cache\\3.13\\golden_ratio_analysis_v2.data.json": {
+      "filepath": ".mypy_cache\\3.13\\golden_ratio_analysis_v2.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\pyparsing\\results.data.json": {
+      "filepath": ".mypy_cache\\3.13\\pyparsing\\results.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\analyze_ibm_wormhole_results.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\analyze_ibm_wormhole_results.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".venv\\Lib\\site-packages\\statsmodels\\tsa\\tests\\results\\fit_ets_results.json": {
+      "filepath": ".venv\\Lib\\site-packages\\statsmodels\\tsa\\tests\\results\\fit_ets_results.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "quantum_fingerprint_analysis.json": {
+      "filepath": "quantum_fingerprint_analysis.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\golden_ratio_analysis.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\golden_ratio_analysis.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\torch\\_inductor\\invert_expr_analysis.data.json": {
+      "filepath": ".mypy_cache\\3.13\\torch\\_inductor\\invert_expr_analysis.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\torch\\onnx\\_internal\\exporter\\_analysis.data.json": {
+      "filepath": ".mypy_cache\\3.13\\torch\\onnx\\_internal\\exporter\\_analysis.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "metric_validation_results.json": {
+      "filepath": "metric_validation_results.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\quantum_coherence_metrics.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\quantum_coherence_metrics.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\torch\\onnx\\_internal\\exporter\\_reporting.data.json": {
+      "filepath": ".mypy_cache\\3.13\\torch\\onnx\\_internal\\exporter\\_reporting.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "vault\\sanitized\\sanitization_report_20260319T221245Z.json": {
+      "filepath": "vault\\sanitized\\sanitization_report_20260319T221245Z.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "sierpinski_metatron_analysis_results.json": {
+      "filepath": "sierpinski_metatron_analysis_results.json",
+      "metrics_found": 5,
+      "validation_results": {
+        "results.experiment_1.phi_resonance": {
+          "value": 0.815844714641571,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.experiment_1.tesseract_symmetry": {
+          "value": 0.759642075366771,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.experiment_2.phi_resonance": {
+          "value": 0.815844714641571,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.experiment_2.tesseract_symmetry": {
+          "value": 0.7618625744007594,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.improvements.phi_resonance_delta": {
+          "value": 0.0,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        }
+      },
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 5
+      }
+    },
+    "data\\external_imports\\autonomous_data_20260405\\autonomous_data\\toroidal_wormhole_results.json": {
+      "filepath": "data\\external_imports\\autonomous_data_20260405\\autonomous_data\\toroidal_wormhole_results.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "golden_ratio_analysis_results.json": {
+      "filepath": "golden_ratio_analysis_results.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "AGI_EXPERIMENT_20260310\\qnn_agent_report_20260310_231452.json": {
+      "filepath": "AGI_EXPERIMENT_20260310\\qnn_agent_report_20260310_231452.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\torch\\_inductor\\codegen\\block_analysis.data.json": {
+      "filepath": ".mypy_cache\\3.13\\torch\\_inductor\\codegen\\block_analysis.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "AGI_EXPERIMENT_20260310\\dna_agent_report_20260310_210905.json": {
+      "filepath": "AGI_EXPERIMENT_20260310\\dna_agent_report_20260310_210905.json",
+      "metrics_found": 1,
+      "validation_results": {
+        "consciousness_peak.phi_ratio": {
+          "value": 0.5882352941176471,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        }
+      },
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 1
+      }
+    },
+    ".mypy_cache\\3.13\\torch\\_functorch\\_aot_autograd\\input_output_analysis.data.json": {
+      "filepath": ".mypy_cache\\3.13\\torch\\_functorch\\_aot_autograd\\input_output_analysis.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "quantum-consciousness-agi\\quantum-consciousness-agi\\quantum\\results\\xy8_hardware_analysis.json": {
+      "filepath": "quantum-consciousness-agi\\quantum-consciousness-agi\\quantum\\results\\xy8_hardware_analysis.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "quantum-consciousness-agi\\quantum-consciousness-agi\\quantum\\results\\quantum_teleportation_analysis.json": {
+      "filepath": "quantum-consciousness-agi\\quantum-consciousness-agi\\quantum\\results\\quantum_teleportation_analysis.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "phi_artifact_analysis.json": {
+      "filepath": "phi_artifact_analysis.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\check_results.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\check_results.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "metrics_registry.json": {
+      "filepath": "metrics_registry.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "raw_hardware\\autonomous_imports\\autonomous_hardware_analysis_input.json": {
+      "filepath": "raw_hardware\\autonomous_imports\\autonomous_hardware_analysis_input.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\analyze_ibm_enhanced_results.data.json": {
+      "filepath": ".mypy_cache\\3.13\\analyze_ibm_enhanced_results.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\torch\\_functorch\\_aot_autograd\\collect_metadata_analysis.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\torch\\_functorch\\_aot_autograd\\collect_metadata_analysis.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\_pytest\\reports.data.json": {
+      "filepath": ".mypy_cache\\3.13\\_pytest\\reports.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "raw_hardware\\biomimetic_calibration_report.json": {
+      "filepath": "raw_hardware\\biomimetic_calibration_report.json",
+      "metrics_found": 1,
+      "validation_results": {
+        "biomimetic_metrics.emergence.phi_resonance": {
+          "value": 1.6172913897646914,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        }
+      },
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 1
+      }
+    },
+    "raw_hardware\\backend_aware_calibration_report.json": {
+      "filepath": "raw_hardware\\backend_aware_calibration_report.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\sierpinski_metatron_analysis.data.json": {
+      "filepath": ".mypy_cache\\3.13\\sierpinski_metatron_analysis.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "raw_hardware\\test_backend_aware_calibration_report.json": {
+      "filepath": "raw_hardware\\test_backend_aware_calibration_report.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\torch\\_dynamo\\bytecode_analysis.data.json": {
+      "filepath": ".mypy_cache\\3.13\\torch\\_dynamo\\bytecode_analysis.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "artifacts\\ibm_decoherence_job_analysis.json": {
+      "filepath": "artifacts\\ibm_decoherence_job_analysis.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\golden_ratio_analysis_v2.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\golden_ratio_analysis_v2.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "vault\\sanitized\\sanitization_report_20260319T221246Z.json": {
+      "filepath": "vault\\sanitized\\sanitization_report_20260319T221246Z.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\torch\\_inductor\\metrics.data.json": {
+      "filepath": ".mypy_cache\\3.13\\torch\\_inductor\\metrics.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\torch\\_inductor\\metrics.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\torch\\_inductor\\metrics.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "qnn_agent_report_20260310_231452.json": {
+      "filepath": "qnn_agent_report_20260310_231452.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\torch\\_dynamo\\metrics_context.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\torch\\_dynamo\\metrics_context.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\quantum_results_analysis.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\quantum_results_analysis.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\TMT_DNA_Comprehensive_Analysis.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\TMT_DNA_Comprehensive_Analysis.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\torch\\_dynamo\\bytecode_analysis.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\torch\\_dynamo\\bytecode_analysis.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "dna_quantum_analysis_results.json": {
+      "filepath": "dna_quantum_analysis_results.json",
+      "metrics_found": 38,
+      "validation_results": {
+        "results.TATA Box (Human).quantum_coherence": {
+          "value": 0.00021946158757182375,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.TATA Box (Human).metrics.entanglement_entropy": {
+          "value": -1.4426951601859516e-10,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.TATA Box (E.coli).quantum_coherence": {
+          "value": 0.0008461718020541547,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.TATA Box (E.coli).metrics.entanglement_entropy": {
+          "value": -1.442691956759448e-10,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.CAAT Box.quantum_coherence": {
+          "value": 0.00010052849264705882,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.CAAT Box.metrics.entanglement_entropy": {
+          "value": -1.442691956759448e-10,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.GC Box.quantum_coherence": {
+          "value": 0.0012147716229348883,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.GC Box.metrics.entanglement_entropy": {
+          "value": -1.442691956759448e-10,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.Kozak Strong.quantum_coherence": {
+          "value": 0.00011752651880424304,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.Kozak Strong.metrics.entanglement_entropy": {
+          "value": -1.4426951601859516e-10,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.Kozak Weak.quantum_coherence": {
+          "value": 0.00029639405869720845,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.Kozak Weak.metrics.entanglement_entropy": {
+          "value": -1.442704770465463e-10,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.Shine-Dalgarno.quantum_coherence": {
+          "value": 0.0002557760049730626,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.Shine-Dalgarno.metrics.entanglement_entropy": {
+          "value": -1.4426983636124553e-10,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.Poly-A Signal.quantum_coherence": {
+          "value": 0.000708616780045351,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.Poly-A Signal.metrics.entanglement_entropy": {
+          "value": -1.4426855499064403e-10,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.Enhancer Core.quantum_coherence": {
+          "value": 8.680555555555553e-05,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.Enhancer Core.metrics.entanglement_entropy": {
+          "value": -1.442691956759448e-10,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.Start Codon.quantum_coherence": {
+          "value": 0.0260989010989011,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.Start Codon.metrics.entanglement_entropy": {
+          "value": -1.4426983636124553e-10,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.Stop Codon (UAA).quantum_coherence": {
+          "value": 0.01785714285714286,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.Stop Codon (UAA).metrics.entanglement_entropy": {
+          "value": -1.4426983636124553e-10,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.P53 Exon 5 (fragment).quantum_coherence": {
+          "value": 0.0003294346584787752,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.P53 Exon 5 (fragment).metrics.entanglement_entropy": {
+          "value": -1.4426983636124553e-10,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.CA Repeat.quantum_coherence": {
+          "value": 0.00015012254901960775,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.CA Repeat.metrics.entanglement_entropy": {
+          "value": -1.4426951601859516e-10,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.GGGGCC Repeat (C9orf72).quantum_coherence": {
+          "value": 0.0002520610516934053,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.GGGGCC Repeat (C9orf72).metrics.entanglement_entropy": {
+          "value": -1.442691956759448e-10,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.Alu Element (fragment).quantum_coherence": {
+          "value": 0.00038478772566295235,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.Alu Element (fragment).metrics.entanglement_entropy": {
+          "value": -1.442701567038959e-10,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.tRNA Anticodon (Gly).quantum_coherence": {
+          "value": 0.03361344537815126,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.tRNA Anticodon (Gly).metrics.entanglement_entropy": {
+          "value": -1.4426951601859516e-10,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.miRNA seed (let-7).quantum_coherence": {
+          "value": 0.00025577600497306264,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.miRNA seed (let-7).metrics.entanglement_entropy": {
+          "value": -1.4426951601859516e-10,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.Fibonacci Pattern.quantum_coherence": {
+          "value": 0.00013786764705882347,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.Fibonacci Pattern.metrics.entanglement_entropy": {
+          "value": -1.4426983636124553e-10,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.Phi Spiral.quantum_coherence": {
+          "value": 0.0001378676470588235,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "results.Phi Spiral.metrics.entanglement_entropy": {
+          "value": -1.442701567038959e-10,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        }
+      },
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 38
+      }
+    },
+    "raw_hardware\\consciousness_validation_report.json": {
+      "filepath": "raw_hardware\\consciousness_validation_report.json",
+      "metrics_found": 14,
+      "validation_results": {
+        "config.phi_resonance_target": {
+          "value": 1.618033988749895,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "config.phi_resonance_tolerance": {
+          "value": 0.05,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "config.phi_coherence_min": {
+          "value": 0.5,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "validation.mean_phi_resonance": {
+          "value": 0.6550549776086877,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "validation.std_phi_resonance": {
+          "value": 0.002925084772903698,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "validation.mean_phi_coherence": {
+          "value": 0.0,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "validation.std_phi_coherence": {
+          "value": 0.0,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "validation.phi_resonance_variance": {
+          "value": 8.556120928673078e-06,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "validation.phi_coherence_variance": {
+          "value": 0.0,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "validation.phi_resonance_t_stat": {
+          "value": -1772.8719279677248,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "validation.phi_resonance_p_value": {
+          "value": 1.4456697362462798e-74,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "validation.prompt_sensitivity.neutral.near_phi_ratio": {
+          "value": 0.0,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "validation.prompt_sensitivity.phi_biased.near_phi_ratio": {
+          "value": 0.0,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "validation.prompt_sensitivity.perturbed.near_phi_ratio": {
+          "value": 0.0,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        }
+      },
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 14
+      }
+    },
+    "metatron_navigation_results.json": {
+      "filepath": "metatron_navigation_results.json",
+      "metrics_found": 1,
+      "validation_results": {
+        "path_metrics.phi_resonance": {
+          "value": 1.6180339887,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        }
+      },
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 1
+      }
+    },
+    "quantum-consciousness-agi\\quantum-consciousness-agi\\quantum\\results\\dna_34bp_results\\dna_agent_report_20260310_210905.json": {
+      "filepath": "quantum-consciousness-agi\\quantum-consciousness-agi\\quantum\\results\\dna_34bp_results\\dna_agent_report_20260310_210905.json",
+      "metrics_found": 1,
+      "validation_results": {
+        "consciousness_peak.phi_ratio": {
+          "value": 0.5882352941176471,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        }
+      },
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 1
+      }
+    },
+    ".mypy_cache\\3.13\\wing_occlusion\\metrics.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\wing_occlusion\\metrics.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "vault\\sanitized\\sanitization_report_20260319T221554Z.json": {
+      "filepath": "vault\\sanitized\\sanitization_report_20260319T221554Z.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "AGI_EXPERIMENT_20260310\\phi_agent_report_20260310_231439.json": {
+      "filepath": "AGI_EXPERIMENT_20260310\\phi_agent_report_20260310_231439.json",
+      "metrics_found": 3,
+      "validation_results": {
+        "dna_results.consciousness_level": {
+          "value": 1.0,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "dna_results.phi_resonance_threshold": {
+          "value": 0.7,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "dna_results.dna_phi_ratio": {
+          "value": 0.5882352941176471,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        }
+      },
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 3
+      }
+    },
+    "raw_hardware\\replicate_aware_calibration_report.json": {
+      "filepath": "raw_hardware\\replicate_aware_calibration_report.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "qnn_agent_report_20260319_135855.json": {
+      "filepath": "qnn_agent_report_20260319_135855.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "phi_agent_planning_report_20260403_201621.json": {
+      "filepath": "phi_agent_planning_report_20260403_201621.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\torch\\onnx\\_internal\\exporter\\_reporting.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\torch\\onnx\\_internal\\exporter\\_reporting.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "phi_agent_report_20260310_231439.json": {
+      "filepath": "phi_agent_report_20260310_231439.json",
+      "metrics_found": 3,
+      "validation_results": {
+        "dna_results.consciousness_level": {
+          "value": 1.0,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "dna_results.phi_resonance_threshold": {
+          "value": 0.7,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "dna_results.dna_phi_ratio": {
+          "value": 0.5882352941176471,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        }
+      },
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 3
+      }
+    },
+    ".mypy_cache\\3.13\\molecular_geometry\\analysis.data.json": {
+      "filepath": ".mypy_cache\\3.13\\molecular_geometry\\analysis.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\quantum_coherence_metrics.data.json": {
+      "filepath": ".mypy_cache\\3.13\\quantum_coherence_metrics.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\sierpinski_metatron_analysis.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\sierpinski_metatron_analysis.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\golden_ratio_analysis.data.json": {
+      "filepath": ".mypy_cache\\3.13\\golden_ratio_analysis.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\torch\\_inductor\\comm_analysis.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\torch\\_inductor\\comm_analysis.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\TMT_DNA_Comprehensive_Analysis.data.json": {
+      "filepath": ".mypy_cache\\3.13\\TMT_DNA_Comprehensive_Analysis.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\molecular_geometry\\analysis.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\molecular_geometry\\analysis.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "vault\\sanitized\\sanitization_report_20260319T220735Z.json": {
+      "filepath": "vault\\sanitized\\sanitization_report_20260319T220735Z.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "quantum_calibration_report.json": {
+      "filepath": "quantum_calibration_report.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\_pytest\\reports.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\_pytest\\reports.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\quantum_results_analysis.data.json": {
+      "filepath": ".mypy_cache\\3.13\\quantum_results_analysis.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\convert_agi_results_to_tmt_eval.data.json": {
+      "filepath": ".mypy_cache\\3.13\\convert_agi_results_to_tmt_eval.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\torch\\_inductor\\codegen\\block_analysis.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\torch\\_inductor\\codegen\\block_analysis.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "qnn_agent_report_20260319_133152.json": {
+      "filepath": "qnn_agent_report_20260319_133152.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "biomimetic_validation_results.json": {
+      "filepath": "biomimetic_validation_results.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".venv\\Lib\\site-packages\\statsmodels\\tsa\\tests\\results\\fit_ets_results_nonseasonal.json": {
+      "filepath": ".venv\\Lib\\site-packages\\statsmodels\\tsa\\tests\\results\\fit_ets_results_nonseasonal.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "xy8_hardware_analysis.json": {
+      "filepath": "xy8_hardware_analysis.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "temp_enhanced\\v2_2_complete_analysis.json": {
+      "filepath": "temp_enhanced\\v2_2_complete_analysis.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\torch\\_inductor\\invert_expr_analysis.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\torch\\_inductor\\invert_expr_analysis.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\check_results.data.json": {
+      "filepath": ".mypy_cache\\3.13\\check_results.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "quantum-consciousness-agi\\quantum-consciousness-agi\\quantum\\results\\autonomous_data\\toroidal_wormhole_results.json": {
+      "filepath": "quantum-consciousness-agi\\quantum-consciousness-agi\\quantum\\results\\autonomous_data\\toroidal_wormhole_results.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "autonomous_data\\toroidal_wormhole_results.json": {
+      "filepath": "autonomous_data\\toroidal_wormhole_results.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\torch\\_inductor\\comm_analysis.data.json": {
+      "filepath": ".mypy_cache\\3.13\\torch\\_inductor\\comm_analysis.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "wormhole_metatron_fusion_results.json": {
+      "filepath": "wormhole_metatron_fusion_results.json",
+      "metrics_found": 3,
+      "validation_results": {
+        "consciousness_level": {
+          "value": 4730.396206086904,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "geometry.tesseract_symmetry": {
+          "value": 0.8734068093299178,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "geometry.phi_resonance": {
+          "value": 0.7011832316995275,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        }
+      },
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 3
+      }
+    },
+    "dna_agent_planning_report_20260403_204716.json": {
+      "filepath": "dna_agent_planning_report_20260403_204716.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\wing_occlusion\\metrics.data.json": {
+      "filepath": ".mypy_cache\\3.13\\wing_occlusion\\metrics.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\analyze_ibm_wormhole_results.data.json": {
+      "filepath": ".mypy_cache\\3.13\\analyze_ibm_wormhole_results.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "backend_calibration_analysis.json": {
+      "filepath": "backend_calibration_analysis.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\analyze_ibm_enhanced_results.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\analyze_ibm_enhanced_results.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\torch\\_functorch\\_aot_autograd\\collect_metadata_analysis.data.json": {
+      "filepath": ".mypy_cache\\3.13\\torch\\_functorch\\_aot_autograd\\collect_metadata_analysis.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".venv\\Lib\\site-packages\\statsmodels\\tsa\\tests\\results\\fit_ets_results_seasonal.json": {
+      "filepath": ".venv\\Lib\\site-packages\\statsmodels\\tsa\\tests\\results\\fit_ets_results_seasonal.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\pyparsing\\results.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\pyparsing\\results.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "vault\\sanitized\\sanitization_report_20260319T221556Z.json": {
+      "filepath": "vault\\sanitized\\sanitization_report_20260319T221556Z.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "artifacts\\metrics_summary.json": {
+      "filepath": "artifacts\\metrics_summary.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\torch\\_dynamo\\metrics_context.data.json": {
+      "filepath": ".mypy_cache\\3.13\\torch\\_dynamo\\metrics_context.data.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\torch\\onnx\\_internal\\exporter\\_analysis.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\torch\\onnx\\_internal\\exporter\\_analysis.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\convert_agi_results_to_tmt_eval.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\convert_agi_results_to_tmt_eval.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "quantum-consciousness-agi\\quantum-consciousness-agi\\quantum\\results\\quantum_fingerprint_analysis.json": {
+      "filepath": "quantum-consciousness-agi\\quantum-consciousness-agi\\quantum\\results\\quantum_fingerprint_analysis.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "quantum_teleportation_analysis.json": {
+      "filepath": "quantum_teleportation_analysis.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    ".mypy_cache\\3.13\\torch\\_functorch\\_aot_autograd\\input_output_analysis.meta.json": {
+      "filepath": ".mypy_cache\\3.13\\torch\\_functorch\\_aot_autograd\\input_output_analysis.meta.json",
+      "metrics_found": 0,
+      "validation_results": {},
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 0
+      }
+    },
+    "quantum_molecular_analysis.json": {
+      "filepath": "quantum_molecular_analysis.json",
+      "metrics_found": 6,
+      "validation_results": {
+        "Methane (CH4).entanglement_entropy": {
+          "value": 0.8371899204917477,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "Methane (CH4).phi_resonance": {
+          "value": 0.9851270318031311,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "Water (H2O).entanglement_entropy": {
+          "value": 1.2422222217912728,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "Water (H2O).phi_resonance": {
+          "value": 0.9632918238639832,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "Benzene (C6H6).entanglement_entropy": {
+          "value": 0.9627837318194504,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        },
+        "Benzene (C6H6).phi_resonance": {
+          "value": 0.8922244906425476,
+          "status": "MISSING",
+          "final_status": "EXPLORATORY",
+          "can_support_claim": false,
+          "annotation": "\ud83d\udd0d Exploratory - Not for claims"
+        }
+      },
+      "summary": {
+        "passed": 0,
+        "warnings": 0,
+        "failed": 0,
+        "missing": 0,
+        "exploratory": 6
+      }
+    }
+  },
+  "overall_summary": {
+    "total_metrics": 76,
+    "total_passed": 0,
+    "total_failed": 0,
+    "total_missing": 0
+  }
+}

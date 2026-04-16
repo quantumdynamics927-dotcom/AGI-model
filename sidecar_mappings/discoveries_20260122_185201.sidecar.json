@@ -1,0 +1,1865 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\data\\external_imports\\autonomous_data_20260405\\autonomous_data\\discoveries_20260122_185201.json",
+  "generated_at": "2026-04-15T22:54:26.480942",
+  "registry_version": "1.0.0",
+  "total_fields": 101,
+  "field_breakdown": {
+    "metadata": 21,
+    "metric": 80
+  },
+  "metric_breakdown": {
+    "unknown": 30,
+    "exploratory": 10,
+    "validated": 10,
+    "provisional": 30
+  },
+  "mappings": [
+    {
+      "original_path": "total_discoveries",
+      "field_name": "total_discoveries",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "total_discoveries"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].parameter_set.rotation_angle",
+      "field_name": "discoveries[0].parameter_set.rotation_angle",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].parameter_set.rotation_angle"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].parameter_set.helix_pitch",
+      "field_name": "discoveries[0].parameter_set.helix_pitch",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 34.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[0].parameter_set.helix_pitch",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].parameter_set.helix_diameter",
+      "field_name": "discoveries[0].parameter_set.helix_diameter",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[0].parameter_set.helix_diameter",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].parameter_set.phi_ratio",
+      "field_name": "phi_ratio",
+      "field_class": "metric",
+      "canonical_name": "phi_ratio",
+      "governance_status": "exploratory",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 1.619047619047619,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].parameter_set.phi_ratio",
+        "resolved:phi_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].metrics.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].metrics.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].metrics.sequence_length",
+      "field_name": "discoveries[0].metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 20.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].metrics.phi_deviation",
+      "field_name": "discoveries[0].metrics.phi_deviation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0010136302977241662,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[0].metrics.phi_deviation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9993735420239798,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[0].dna_correlation",
+      "field_name": "dna_correlation",
+      "field_class": "metric",
+      "canonical_name": "dna_correlation",
+      "governance_status": "provisional",
+      "metric_class": "signed_correlation",
+      "valid_range": [
+        -1.0,
+        1.0
+      ],
+      "value": 0.1283511736240623,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[0].dna_correlation",
+        "resolved:dna_correlation"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].parameter_set.rotation_angle",
+      "field_name": "discoveries[1].parameter_set.rotation_angle",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.9416110387254664,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].parameter_set.rotation_angle"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].parameter_set.helix_pitch",
+      "field_name": "discoveries[1].parameter_set.helix_pitch",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 34.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[1].parameter_set.helix_pitch",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].parameter_set.helix_diameter",
+      "field_name": "discoveries[1].parameter_set.helix_diameter",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[1].parameter_set.helix_diameter",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].parameter_set.phi_ratio",
+      "field_name": "phi_ratio",
+      "field_class": "metric",
+      "canonical_name": "phi_ratio",
+      "governance_status": "exploratory",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 1.619047619047619,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].parameter_set.phi_ratio",
+        "resolved:phi_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].metrics.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].metrics.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].metrics.sequence_length",
+      "field_name": "discoveries[1].metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 20.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].metrics.phi_deviation",
+      "field_name": "discoveries[1].metrics.phi_deviation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0010136302977241662,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[1].metrics.phi_deviation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9993735420239798,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[1].dna_correlation",
+      "field_name": "dna_correlation",
+      "field_class": "metric",
+      "canonical_name": "dna_correlation",
+      "governance_status": "provisional",
+      "metric_class": "signed_correlation",
+      "valid_range": [
+        -1.0,
+        1.0
+      ],
+      "value": 0.24906873825660192,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[1].dna_correlation",
+        "resolved:dna_correlation"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].parameter_set.rotation_angle",
+      "field_name": "discoveries[2].parameter_set.rotation_angle",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].parameter_set.rotation_angle"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].parameter_set.helix_pitch",
+      "field_name": "discoveries[2].parameter_set.helix_pitch",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 34.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[2].parameter_set.helix_pitch",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].parameter_set.helix_diameter",
+      "field_name": "discoveries[2].parameter_set.helix_diameter",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[2].parameter_set.helix_diameter",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].parameter_set.phi_ratio",
+      "field_name": "phi_ratio",
+      "field_class": "metric",
+      "canonical_name": "phi_ratio",
+      "governance_status": "exploratory",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 1.619047619047619,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].parameter_set.phi_ratio",
+        "resolved:phi_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].metrics.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].metrics.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].metrics.sequence_length",
+      "field_name": "discoveries[2].metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 20.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].metrics.phi_deviation",
+      "field_name": "discoveries[2].metrics.phi_deviation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0010136302977241662,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[2].metrics.phi_deviation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9993735420239798,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[2].dna_correlation",
+      "field_name": "dna_correlation",
+      "field_class": "metric",
+      "canonical_name": "dna_correlation",
+      "governance_status": "provisional",
+      "metric_class": "signed_correlation",
+      "valid_range": [
+        -1.0,
+        1.0
+      ],
+      "value": 0.1283511736240623,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[2].dna_correlation",
+        "resolved:dna_correlation"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].parameter_set.rotation_angle",
+      "field_name": "discoveries[3].parameter_set.rotation_angle",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.9416110387254664,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].parameter_set.rotation_angle"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].parameter_set.helix_pitch",
+      "field_name": "discoveries[3].parameter_set.helix_pitch",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 34.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[3].parameter_set.helix_pitch",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].parameter_set.helix_diameter",
+      "field_name": "discoveries[3].parameter_set.helix_diameter",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[3].parameter_set.helix_diameter",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].parameter_set.phi_ratio",
+      "field_name": "phi_ratio",
+      "field_class": "metric",
+      "canonical_name": "phi_ratio",
+      "governance_status": "exploratory",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 1.619047619047619,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].parameter_set.phi_ratio",
+        "resolved:phi_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].metrics.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].metrics.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].metrics.sequence_length",
+      "field_name": "discoveries[3].metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 20.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].metrics.phi_deviation",
+      "field_name": "discoveries[3].metrics.phi_deviation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0010136302977241662,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[3].metrics.phi_deviation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9993735420239798,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[3].dna_correlation",
+      "field_name": "dna_correlation",
+      "field_class": "metric",
+      "canonical_name": "dna_correlation",
+      "governance_status": "provisional",
+      "metric_class": "signed_correlation",
+      "valid_range": [
+        -1.0,
+        1.0
+      ],
+      "value": 0.24906873825660192,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[3].dna_correlation",
+        "resolved:dna_correlation"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].parameter_set.rotation_angle",
+      "field_name": "discoveries[4].parameter_set.rotation_angle",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].parameter_set.rotation_angle"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].parameter_set.helix_pitch",
+      "field_name": "discoveries[4].parameter_set.helix_pitch",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 34.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[4].parameter_set.helix_pitch",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].parameter_set.helix_diameter",
+      "field_name": "discoveries[4].parameter_set.helix_diameter",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[4].parameter_set.helix_diameter",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].parameter_set.phi_ratio",
+      "field_name": "phi_ratio",
+      "field_class": "metric",
+      "canonical_name": "phi_ratio",
+      "governance_status": "exploratory",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 1.619047619047619,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].parameter_set.phi_ratio",
+        "resolved:phi_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].metrics.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].metrics.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].metrics.sequence_length",
+      "field_name": "discoveries[4].metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 24.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].metrics.phi_deviation",
+      "field_name": "discoveries[4].metrics.phi_deviation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0010136302977241662,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[4].metrics.phi_deviation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9993735420239798,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[4].dna_correlation",
+      "field_name": "dna_correlation",
+      "field_class": "metric",
+      "canonical_name": "dna_correlation",
+      "governance_status": "provisional",
+      "metric_class": "signed_correlation",
+      "valid_range": [
+        -1.0,
+        1.0
+      ],
+      "value": 0.1283511736240623,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[4].dna_correlation",
+        "resolved:dna_correlation"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].parameter_set.rotation_angle",
+      "field_name": "discoveries[5].parameter_set.rotation_angle",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.9416110387254664,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].parameter_set.rotation_angle"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].parameter_set.helix_pitch",
+      "field_name": "discoveries[5].parameter_set.helix_pitch",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 34.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[5].parameter_set.helix_pitch",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].parameter_set.helix_diameter",
+      "field_name": "discoveries[5].parameter_set.helix_diameter",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[5].parameter_set.helix_diameter",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].parameter_set.phi_ratio",
+      "field_name": "phi_ratio",
+      "field_class": "metric",
+      "canonical_name": "phi_ratio",
+      "governance_status": "exploratory",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 1.619047619047619,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].parameter_set.phi_ratio",
+        "resolved:phi_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].metrics.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].metrics.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].metrics.sequence_length",
+      "field_name": "discoveries[5].metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 24.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].metrics.phi_deviation",
+      "field_name": "discoveries[5].metrics.phi_deviation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0010136302977241662,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[5].metrics.phi_deviation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9993735420239798,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[5].dna_correlation",
+      "field_name": "dna_correlation",
+      "field_class": "metric",
+      "canonical_name": "dna_correlation",
+      "governance_status": "provisional",
+      "metric_class": "signed_correlation",
+      "valid_range": [
+        -1.0,
+        1.0
+      ],
+      "value": 0.24906873825660192,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[5].dna_correlation",
+        "resolved:dna_correlation"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].parameter_set.rotation_angle",
+      "field_name": "discoveries[6].parameter_set.rotation_angle",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].parameter_set.rotation_angle"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].parameter_set.helix_pitch",
+      "field_name": "discoveries[6].parameter_set.helix_pitch",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 34.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[6].parameter_set.helix_pitch",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].parameter_set.helix_diameter",
+      "field_name": "discoveries[6].parameter_set.helix_diameter",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[6].parameter_set.helix_diameter",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].parameter_set.phi_ratio",
+      "field_name": "phi_ratio",
+      "field_class": "metric",
+      "canonical_name": "phi_ratio",
+      "governance_status": "exploratory",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 1.619047619047619,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].parameter_set.phi_ratio",
+        "resolved:phi_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].metrics.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].metrics.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].metrics.sequence_length",
+      "field_name": "discoveries[6].metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].metrics.phi_deviation",
+      "field_name": "discoveries[6].metrics.phi_deviation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0010136302977241662,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[6].metrics.phi_deviation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9993735420239798,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[6].dna_correlation",
+      "field_name": "dna_correlation",
+      "field_class": "metric",
+      "canonical_name": "dna_correlation",
+      "governance_status": "provisional",
+      "metric_class": "signed_correlation",
+      "valid_range": [
+        -1.0,
+        1.0
+      ],
+      "value": 0.1283511736240623,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[6].dna_correlation",
+        "resolved:dna_correlation"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].parameter_set.rotation_angle",
+      "field_name": "discoveries[7].parameter_set.rotation_angle",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.9416110387254664,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].parameter_set.rotation_angle"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].parameter_set.helix_pitch",
+      "field_name": "discoveries[7].parameter_set.helix_pitch",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 34.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[7].parameter_set.helix_pitch",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].parameter_set.helix_diameter",
+      "field_name": "discoveries[7].parameter_set.helix_diameter",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[7].parameter_set.helix_diameter",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].parameter_set.phi_ratio",
+      "field_name": "phi_ratio",
+      "field_class": "metric",
+      "canonical_name": "phi_ratio",
+      "governance_status": "exploratory",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 1.619047619047619,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].parameter_set.phi_ratio",
+        "resolved:phi_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].metrics.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].metrics.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].metrics.sequence_length",
+      "field_name": "discoveries[7].metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].metrics.phi_deviation",
+      "field_name": "discoveries[7].metrics.phi_deviation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0010136302977241662,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[7].metrics.phi_deviation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9993735420239798,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[7].dna_correlation",
+      "field_name": "dna_correlation",
+      "field_class": "metric",
+      "canonical_name": "dna_correlation",
+      "governance_status": "provisional",
+      "metric_class": "signed_correlation",
+      "valid_range": [
+        -1.0,
+        1.0
+      ],
+      "value": 0.24906873825660192,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[7].dna_correlation",
+        "resolved:dna_correlation"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].parameter_set.rotation_angle",
+      "field_name": "discoveries[8].parameter_set.rotation_angle",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].parameter_set.rotation_angle"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].parameter_set.helix_pitch",
+      "field_name": "discoveries[8].parameter_set.helix_pitch",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 34.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[8].parameter_set.helix_pitch",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].parameter_set.helix_diameter",
+      "field_name": "discoveries[8].parameter_set.helix_diameter",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[8].parameter_set.helix_diameter",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].parameter_set.phi_ratio",
+      "field_name": "phi_ratio",
+      "field_class": "metric",
+      "canonical_name": "phi_ratio",
+      "governance_status": "exploratory",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 1.619047619047619,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].parameter_set.phi_ratio",
+        "resolved:phi_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].metrics.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.42857142857142855,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].metrics.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].metrics.sequence_length",
+      "field_name": "discoveries[8].metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].metrics.phi_deviation",
+      "field_name": "discoveries[8].metrics.phi_deviation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0010136302977241662,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[8].metrics.phi_deviation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9993735420239798,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[8].dna_correlation",
+      "field_name": "dna_correlation",
+      "field_class": "metric",
+      "canonical_name": "dna_correlation",
+      "governance_status": "provisional",
+      "metric_class": "signed_correlation",
+      "valid_range": [
+        -1.0,
+        1.0
+      ],
+      "value": 0.1283511736240623,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[8].dna_correlation",
+        "resolved:dna_correlation"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].parameter_set.rotation_angle",
+      "field_name": "discoveries[9].parameter_set.rotation_angle",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.9416110387254664,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].parameter_set.rotation_angle"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].parameter_set.helix_pitch",
+      "field_name": "discoveries[9].parameter_set.helix_pitch",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 34.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[9].parameter_set.helix_pitch",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].parameter_set.helix_diameter",
+      "field_name": "discoveries[9].parameter_set.helix_diameter",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[9].parameter_set.helix_diameter",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].parameter_set.phi_ratio",
+      "field_name": "phi_ratio",
+      "field_class": "metric",
+      "canonical_name": "phi_ratio",
+      "governance_status": "exploratory",
+      "metric_class": "raw_ratio",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 1.619047619047619,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].parameter_set.phi_ratio",
+        "resolved:phi_ratio"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].metrics.gc_content",
+      "field_name": "gc_content",
+      "field_class": "metric",
+      "canonical_name": "gc_content",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.42857142857142855,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].metrics.gc_content",
+        "resolved:gc_content"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].metrics.sequence_length",
+      "field_name": "discoveries[9].metrics.sequence_length",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 21.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].metrics.sequence_length"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].metrics.phi_deviation",
+      "field_name": "discoveries[9].metrics.phi_deviation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0010136302977241662,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "discoveries[9].metrics.phi_deviation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].sacred_score",
+      "field_name": "sacred_score",
+      "field_class": "metric",
+      "canonical_name": "sacred_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.5,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].sacred_score",
+        "resolved:sacred_score"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9993735420239798,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "discoveries[9].dna_correlation",
+      "field_name": "dna_correlation",
+      "field_class": "metric",
+      "canonical_name": "dna_correlation",
+      "governance_status": "provisional",
+      "metric_class": "signed_correlation",
+      "valid_range": [
+        -1.0,
+        1.0
+      ],
+      "value": 0.24906873825660192,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "discoveries[9].dna_correlation",
+        "resolved:dna_correlation"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "discoveries[0].parameter_set.helix_pitch",
+      1
+    ],
+    [
+      "discoveries[0].parameter_set.helix_diameter",
+      1
+    ],
+    [
+      "discoveries[0].metrics.phi_deviation",
+      1
+    ],
+    [
+      "discoveries[1].parameter_set.helix_pitch",
+      1
+    ],
+    [
+      "discoveries[1].parameter_set.helix_diameter",
+      1
+    ],
+    [
+      "discoveries[1].metrics.phi_deviation",
+      1
+    ],
+    [
+      "discoveries[2].parameter_set.helix_pitch",
+      1
+    ],
+    [
+      "discoveries[2].parameter_set.helix_diameter",
+      1
+    ],
+    [
+      "discoveries[2].metrics.phi_deviation",
+      1
+    ],
+    [
+      "discoveries[3].parameter_set.helix_pitch",
+      1
+    ]
+  ]
+}

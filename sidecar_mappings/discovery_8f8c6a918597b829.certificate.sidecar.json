@@ -1,0 +1,153 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\artifacts\\reference_examples\\discovery_8f8c6a918597b829.certificate.json",
+  "generated_at": "2026-04-15T22:54:26.587563",
+  "registry_version": "1.0.0",
+  "total_fields": 7,
+  "field_breakdown": {
+    "metadata": 2,
+    "metric": 5
+  },
+  "metric_breakdown": {
+    "unknown": 3,
+    "validated": 1,
+    "provisional": 1
+  },
+  "mappings": [
+    {
+      "original_path": "timestamp",
+      "field_name": "timestamp",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1775757782.0935576,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "timestamp"
+      ]
+    },
+    {
+      "original_path": "tmtos_certification.validator_node",
+      "field_name": "tmtos_certification.validator_node",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 7.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "tmtos_certification.validator_node",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "tmtos_certification.certification_timestamp",
+      "field_name": "tmtos_certification.certification_timestamp",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1775757782.0935633,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "tmtos_certification.certification_timestamp"
+      ]
+    },
+    {
+      "original_path": "consciousness_metrics.complexity",
+      "field_name": "consciousness_metrics.complexity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.7618544626253902,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "consciousness_metrics.complexity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "consciousness_metrics.coherence",
+      "field_name": "consciousness_metrics.coherence",
+      "field_class": "metric",
+      "canonical_name": "quantum_coherence",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.6327423051505224,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "consciousness_metrics.coherence",
+        "resolved:quantum_coherence"
+      ]
+    },
+    {
+      "original_path": "consciousness_metrics.sentience_potential",
+      "field_name": "consciousness_metrics.sentience_potential",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6972983838879563,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "consciousness_metrics.sentience_potential",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "consciousness_metrics.phi_resonance",
+      "field_name": "phi_resonance",
+      "field_class": "metric",
+      "canonical_name": "phi_resonance_score",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.524423031316526,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "consciousness_metrics.phi_resonance",
+        "resolved:phi_resonance_score"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "tmtos_certification.validator_node",
+      1
+    ],
+    [
+      "consciousness_metrics.complexity",
+      1
+    ],
+    [
+      "consciousness_metrics.sentience_potential",
+      1
+    ]
+  ]
+}

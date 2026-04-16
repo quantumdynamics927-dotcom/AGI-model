@@ -1,0 +1,38 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\vault\\sanitized\\sanitization_report_20260319T220735Z.json",
+  "generated_at": "2026-04-15T22:54:25.066094",
+  "registry_version": "1.0.0",
+  "total_fields": 1,
+  "field_breakdown": {
+    "metric": 1
+  },
+  "metric_breakdown": {
+    "unknown": 1
+  },
+  "mappings": [
+    {
+      "original_path": "input_rows",
+      "field_name": "input_rows",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "input_rows",
+        "unresolved"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "input_rows",
+      1
+    ]
+  ]
+}

@@ -1,0 +1,965 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\backend_calibration_analysis.json",
+  "generated_at": "2026-04-15T22:54:19.657578",
+  "registry_version": "1.0.0",
+  "total_fields": 56,
+  "field_breakdown": {
+    "parameter": 25,
+    "metadata": 6,
+    "metric": 25
+  },
+  "metric_breakdown": {
+    "passed": 15,
+    "validated": 3,
+    "unknown": 4,
+    "exploratory": 3
+  },
+  "mappings": [
+    {
+      "original_path": "summary.backends_analyzed",
+      "field_name": "backends_analyzed",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "summary.backends_analyzed"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[0].summary.total_qubits",
+      "field_name": "total_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 155.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[0].summary.total_qubits"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[0].summary.operational_qubits",
+      "field_name": "operational_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 155.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[0].summary.operational_qubits"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[0].summary.operational_percentage",
+      "field_name": "operational_percentage",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 100.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[0].summary.operational_percentage"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[0].coherence.avg_t1_us",
+      "field_name": "backend_analyses[0].coherence.avg_t1_us",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 147.53,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[0].coherence.avg_t1_us"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[0].coherence.avg_t2_us",
+      "field_name": "backend_analyses[0].coherence.avg_t2_us",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 103.08,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[0].coherence.avg_t2_us"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[0].coherence.median_t1_us",
+      "field_name": "backend_analyses[0].coherence.median_t1_us",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 142.09,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[0].coherence.median_t1_us"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[0].coherence.median_t2_us",
+      "field_name": "backend_analyses[0].coherence.median_t2_us",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 99.95,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[0].coherence.median_t2_us"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[0].coherence.t2_t1_ratio",
+      "field_name": "t2_t1_ratio",
+      "field_class": "metric",
+      "canonical_name": "t2_t1_ratio",
+      "governance_status": "passed",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        2.0
+      ],
+      "value": 0.699,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[0].coherence.t2_t1_ratio",
+        "resolved:t2_t1_ratio"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[0].coherence.quality_score",
+      "field_name": "quality_score",
+      "field_class": "metric",
+      "canonical_name": "hardware_quality_score",
+      "governance_status": "passed",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.996,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[0].coherence.quality_score",
+        "resolved:hardware_quality_score"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[0].gate_performance.single_qubit_error",
+      "field_name": "backend_analyses[0].gate_performance.single_qubit_error",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.000438,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[0].gate_performance.single_qubit_error"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[0].gate_performance.two_qubit_error",
+      "field_name": "backend_analyses[0].gate_performance.two_qubit_error",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.004841,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[0].gate_performance.two_qubit_error"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[0].gate_performance.readout_error",
+      "field_name": "readout_error",
+      "field_class": "metric",
+      "canonical_name": "readout_error_rate",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.025321,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[0].gate_performance.readout_error",
+        "resolved:readout_error_rate"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[0].gate_performance.quality_score",
+      "field_name": "quality_score",
+      "field_class": "metric",
+      "canonical_name": "hardware_quality_score",
+      "governance_status": "passed",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9974,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[0].gate_performance.quality_score",
+        "resolved:hardware_quality_score"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[0].overall.quality_score",
+      "field_name": "quality_score",
+      "field_class": "metric",
+      "canonical_name": "hardware_quality_score",
+      "governance_status": "passed",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9968,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[0].overall.quality_score",
+        "resolved:hardware_quality_score"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[0].overall.ranking",
+      "field_name": "ranking",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[0].overall.ranking"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[1].summary.total_qubits",
+      "field_name": "total_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 153.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[1].summary.total_qubits"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[1].summary.operational_qubits",
+      "field_name": "operational_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 153.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[1].summary.operational_qubits"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[1].summary.operational_percentage",
+      "field_name": "operational_percentage",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 100.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[1].summary.operational_percentage"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[1].coherence.avg_t1_us",
+      "field_name": "backend_analyses[1].coherence.avg_t1_us",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 256.17,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[1].coherence.avg_t1_us"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[1].coherence.avg_t2_us",
+      "field_name": "backend_analyses[1].coherence.avg_t2_us",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 158.1,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[1].coherence.avg_t2_us"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[1].coherence.median_t1_us",
+      "field_name": "backend_analyses[1].coherence.median_t1_us",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 258.38,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[1].coherence.median_t1_us"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[1].coherence.median_t2_us",
+      "field_name": "backend_analyses[1].coherence.median_t2_us",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 134.49,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[1].coherence.median_t2_us"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[1].coherence.t2_t1_ratio",
+      "field_name": "t2_t1_ratio",
+      "field_class": "metric",
+      "canonical_name": "t2_t1_ratio",
+      "governance_status": "passed",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        2.0
+      ],
+      "value": 0.617,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[1].coherence.t2_t1_ratio",
+        "resolved:t2_t1_ratio"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[1].coherence.quality_score",
+      "field_name": "quality_score",
+      "field_class": "metric",
+      "canonical_name": "hardware_quality_score",
+      "governance_status": "passed",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9976,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[1].coherence.quality_score",
+        "resolved:hardware_quality_score"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[1].gate_performance.single_qubit_error",
+      "field_name": "backend_analyses[1].gate_performance.single_qubit_error",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.000439,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[1].gate_performance.single_qubit_error"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[1].gate_performance.two_qubit_error",
+      "field_name": "backend_analyses[1].gate_performance.two_qubit_error",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0039,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[1].gate_performance.two_qubit_error"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[1].gate_performance.readout_error",
+      "field_name": "readout_error",
+      "field_class": "metric",
+      "canonical_name": "readout_error_rate",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.02011,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[1].gate_performance.readout_error",
+        "resolved:readout_error_rate"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[1].gate_performance.quality_score",
+      "field_name": "quality_score",
+      "field_class": "metric",
+      "canonical_name": "hardware_quality_score",
+      "governance_status": "passed",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9978,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[1].gate_performance.quality_score",
+        "resolved:hardware_quality_score"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[1].overall.quality_score",
+      "field_name": "quality_score",
+      "field_class": "metric",
+      "canonical_name": "hardware_quality_score",
+      "governance_status": "passed",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9977,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[1].overall.quality_score",
+        "resolved:hardware_quality_score"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[1].overall.ranking",
+      "field_name": "ranking",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[1].overall.ranking"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[2].summary.total_qubits",
+      "field_name": "total_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 152.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[2].summary.total_qubits"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[2].summary.operational_qubits",
+      "field_name": "operational_qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 152.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[2].summary.operational_qubits"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[2].summary.operational_percentage",
+      "field_name": "operational_percentage",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 100.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[2].summary.operational_percentage"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[2].coherence.avg_t1_us",
+      "field_name": "backend_analyses[2].coherence.avg_t1_us",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 192.96,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[2].coherence.avg_t1_us"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[2].coherence.avg_t2_us",
+      "field_name": "backend_analyses[2].coherence.avg_t2_us",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 116.44,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[2].coherence.avg_t2_us"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[2].coherence.median_t1_us",
+      "field_name": "backend_analyses[2].coherence.median_t1_us",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 182.7,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[2].coherence.median_t1_us"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[2].coherence.median_t2_us",
+      "field_name": "backend_analyses[2].coherence.median_t2_us",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 95.26,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[2].coherence.median_t2_us"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[2].coherence.t2_t1_ratio",
+      "field_name": "t2_t1_ratio",
+      "field_class": "metric",
+      "canonical_name": "t2_t1_ratio",
+      "governance_status": "passed",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        2.0
+      ],
+      "value": 0.603,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[2].coherence.t2_t1_ratio",
+        "resolved:t2_t1_ratio"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[2].coherence.quality_score",
+      "field_name": "quality_score",
+      "field_class": "metric",
+      "canonical_name": "hardware_quality_score",
+      "governance_status": "passed",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9968,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[2].coherence.quality_score",
+        "resolved:hardware_quality_score"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[2].gate_performance.single_qubit_error",
+      "field_name": "backend_analyses[2].gate_performance.single_qubit_error",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.00042,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[2].gate_performance.single_qubit_error"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[2].gate_performance.two_qubit_error",
+      "field_name": "backend_analyses[2].gate_performance.two_qubit_error",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.005995,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[2].gate_performance.two_qubit_error"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[2].gate_performance.readout_error",
+      "field_name": "readout_error",
+      "field_class": "metric",
+      "canonical_name": "readout_error_rate",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.017433,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[2].gate_performance.readout_error",
+        "resolved:readout_error_rate"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[2].gate_performance.quality_score",
+      "field_name": "quality_score",
+      "field_class": "metric",
+      "canonical_name": "hardware_quality_score",
+      "governance_status": "passed",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9968,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[2].gate_performance.quality_score",
+        "resolved:hardware_quality_score"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[2].overall.quality_score",
+      "field_name": "quality_score",
+      "field_class": "metric",
+      "canonical_name": "hardware_quality_score",
+      "governance_status": "passed",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9968,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[2].overall.quality_score",
+        "resolved:hardware_quality_score"
+      ]
+    },
+    {
+      "original_path": "backend_analyses[2].overall.ranking",
+      "field_name": "ranking",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_analyses[2].overall.ranking"
+      ]
+    },
+    {
+      "original_path": "phi_resonance_correlation.measured_phi_baseline",
+      "field_name": "measured_phi_baseline",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6183,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "phi_resonance_correlation.measured_phi_baseline",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "phi_resonance_correlation.backend_comparison[0].quality_score",
+      "field_name": "quality_score",
+      "field_class": "metric",
+      "canonical_name": "hardware_quality_score",
+      "governance_status": "passed",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9968,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "phi_resonance_correlation.backend_comparison[0].quality_score",
+        "resolved:hardware_quality_score"
+      ]
+    },
+    {
+      "original_path": "phi_resonance_correlation.backend_comparison[0].estimated_phi_shift",
+      "field_name": "estimated_phi_shift",
+      "field_class": "metric",
+      "canonical_name": "phi_shift",
+      "governance_status": "exploratory",
+      "metric_class": "signed_correlation",
+      "valid_range": [
+        -1.0,
+        1.0
+      ],
+      "value": 0.0003,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "phi_resonance_correlation.backend_comparison[0].estimated_phi_shift",
+        "resolved:phi_shift"
+      ]
+    },
+    {
+      "original_path": "phi_resonance_correlation.backend_comparison[0].predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6186,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "phi_resonance_correlation.backend_comparison[0].predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "phi_resonance_correlation.backend_comparison[1].quality_score",
+      "field_name": "quality_score",
+      "field_class": "metric",
+      "canonical_name": "hardware_quality_score",
+      "governance_status": "passed",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9977,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "phi_resonance_correlation.backend_comparison[1].quality_score",
+        "resolved:hardware_quality_score"
+      ]
+    },
+    {
+      "original_path": "phi_resonance_correlation.backend_comparison[1].estimated_phi_shift",
+      "field_name": "estimated_phi_shift",
+      "field_class": "metric",
+      "canonical_name": "phi_shift",
+      "governance_status": "exploratory",
+      "metric_class": "signed_correlation",
+      "valid_range": [
+        -1.0,
+        1.0
+      ],
+      "value": 0.0002,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "phi_resonance_correlation.backend_comparison[1].estimated_phi_shift",
+        "resolved:phi_shift"
+      ]
+    },
+    {
+      "original_path": "phi_resonance_correlation.backend_comparison[1].predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6185,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "phi_resonance_correlation.backend_comparison[1].predicted_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "phi_resonance_correlation.backend_comparison[2].quality_score",
+      "field_name": "quality_score",
+      "field_class": "metric",
+      "canonical_name": "hardware_quality_score",
+      "governance_status": "passed",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9968,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "phi_resonance_correlation.backend_comparison[2].quality_score",
+        "resolved:hardware_quality_score"
+      ]
+    },
+    {
+      "original_path": "phi_resonance_correlation.backend_comparison[2].estimated_phi_shift",
+      "field_name": "estimated_phi_shift",
+      "field_class": "metric",
+      "canonical_name": "phi_shift",
+      "governance_status": "exploratory",
+      "metric_class": "signed_correlation",
+      "valid_range": [
+        -1.0,
+        1.0
+      ],
+      "value": 0.0003,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "phi_resonance_correlation.backend_comparison[2].estimated_phi_shift",
+        "resolved:phi_shift"
+      ]
+    },
+    {
+      "original_path": "phi_resonance_correlation.backend_comparison[2].predicted_phi",
+      "field_name": "predicted_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6186,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "phi_resonance_correlation.backend_comparison[2].predicted_phi",
+        "unresolved"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "predicted_phi",
+      3
+    ],
+    [
+      "measured_phi_baseline",
+      1
+    ]
+  ]
+}

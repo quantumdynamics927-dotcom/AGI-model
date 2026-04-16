@@ -6,6 +6,18 @@ An exploratory implementation of a phi-parameterized analog to the Cornell
 confinement potential from QCD. This module is classified as EXPLORATORY
 under the AGI-model governance framework.
 
+PUBLICATION-SAFE ABSTRACT
+------------------------
+We present a systematic analysis of a phi-parameterized analog to the Cornell 
+confinement potential from quantum chromodynamics (QCD). The Cornell-φ ansatz, 
+defined as V_φ(r) = r/φ - 1/(2φ²r) where φ is the golden ratio, is shown to be 
+algebraically equivalent to the standard Cornell form V_C(r) = σr - α/r under 
+specific coefficient constraints: σ = 1/φ and α = 1/(2φ²). Through rigorous 
+fitting analysis, we demonstrate exact parameter recovery with zero residual 
+error (MSE = 0, MAE = 0, max error = 0), proving that the Cornell-φ potential 
+represents a φ-constrained subfamily of the established Cornell potential class 
+rather than a distinct functional form.
+
 SCIENTIFIC CONCLUSION (April 16, 2026)
 --------------------------------------
 The Cornell-φ ansatz is NOT a new functional form. Fitting analysis shows it is
@@ -20,6 +32,12 @@ CORRECT CLAIM
 -------------
 "The Cornell-φ ansatz defines a φ-constrained subfamily of Cornell potentials,
 where the string tension and Coulomb strength are fixed by the golden ratio."
+
+This interpretation is supported by:
+- Exact algebraic equivalence demonstrated through fitting
+- Zero residual error in parameter recovery
+- Consistency with established Cornell potential theory [arxiv:2501.10786]
+- Methodological alignment with constrained optimization principles
 
 INCORRECT CLAIMS (Avoid)
 ------------------------

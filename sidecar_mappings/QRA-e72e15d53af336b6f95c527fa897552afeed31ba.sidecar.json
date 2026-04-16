@@ -1,0 +1,76 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\archive\\QRA-e72e15d53af336b6f95c527fa897552afeed31ba.json",
+  "generated_at": "2026-04-15T22:54:19.948917",
+  "registry_version": "1.0.0",
+  "total_fields": 3,
+  "field_breakdown": {
+    "metric": 2,
+    "metadata": 1
+  },
+  "metric_breakdown": {
+    "unknown": 2
+  },
+  "mappings": [
+    {
+      "original_path": "attributes[0].value",
+      "field_name": "attributes[0].value",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.98,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "attributes[0].value",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "attributes[1].value",
+      "field_name": "attributes[1].value",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.95,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "attributes[1].value",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "fingerprint.timestamp",
+      "field_name": "fingerprint.timestamp",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1775782741.2526293,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "fingerprint.timestamp"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "attributes[0].value",
+      1
+    ],
+    [
+      "attributes[1].value",
+      1
+    ]
+  ]
+}

@@ -1,0 +1,1063 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\raw_hardware\\replicate_ingestion_summary.json",
+  "generated_at": "2026-04-15T22:54:24.888119",
+  "registry_version": "1.0.0",
+  "total_fields": 63,
+  "field_breakdown": {
+    "metadata": 32,
+    "metric": 31
+  },
+  "metric_breakdown": {
+    "unknown": 31
+  },
+  "mappings": [
+    {
+      "original_path": "runs_total",
+      "field_name": "runs_total",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 30.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "runs_total"
+      ]
+    },
+    {
+      "original_path": "status_counts.DONE",
+      "field_name": "status_counts.DONE",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 30.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "status_counts.DONE"
+      ]
+    },
+    {
+      "original_path": "completed_runs",
+      "field_name": "completed_runs",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 30.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "completed_runs",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[0].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6173137751818651,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[0].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[0].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[0].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[1].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6173512956446123,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[1].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[1].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[1].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[2].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6170207501741933,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[2].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[2].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[2].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[3].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6149855869956934,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[3].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[3].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[3].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[4].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6142981196386417,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[4].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[4].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[4].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[5].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6156122473145117,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[5].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[5].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[5].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[6].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6151266079650309,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[6].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[6].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[6].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[7].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6156544516683644,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[7].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[7].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[7].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[8].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6162155411512674,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[8].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[8].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[8].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[9].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6139740375757878,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[9].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[9].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[9].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[10].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6131781942013217,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[10].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[10].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[10].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[11].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6123425608423776,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[11].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[11].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[11].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[12].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6153640163426529,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[12].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[12].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[12].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[13].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6156660349101599,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[13].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[13].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[13].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[14].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.616368372890229,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[14].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[14].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[14].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[15].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6123337658747259,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[15].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[15].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[15].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[16].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.613365335156389,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[16].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[16].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[16].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[17].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6133143600900509,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[17].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[17].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[17].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[18].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.614727460906422,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[18].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[18].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[18].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[19].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.615920268666356,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[19].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[19].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[19].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[20].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6159347948757407,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[20].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[20].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[20].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[21].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6133590854867028,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[21].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[21].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[21].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[22].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6131889284383053,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[22].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[22].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[22].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[23].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6120949787215275,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[23].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[23].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[23].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[24].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6162225647862716,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[24].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[24].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[24].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[25].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6153261376349005,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[25].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[25].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[25].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[26].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6157032333704343,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[26].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[26].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[26].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[27].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6133336920245039,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[27].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[27].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[27].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[28].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6133967108241288,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[28].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[28].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[28].unique_states"
+      ]
+    },
+    {
+      "original_path": "run_summaries[29].measured_phi",
+      "field_name": "measured_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6121919492708241,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "run_summaries[29].measured_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "run_summaries[29].unique_states",
+      "field_name": "unique_states",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 8192.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "run_summaries[29].unique_states"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "measured_phi",
+      30
+    ],
+    [
+      "completed_runs",
+      1
+    ]
+  ]
+}

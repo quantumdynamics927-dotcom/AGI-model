@@ -1,0 +1,178 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\data\\external_imports\\tmt_os_20260405\\import_manifest.json",
+  "generated_at": "2026-04-15T22:54:25.721927",
+  "registry_version": "1.0.0",
+  "total_fields": 11,
+  "field_breakdown": {
+    "metadata": 11
+  },
+  "metric_breakdown": {},
+  "mappings": [
+    {
+      "original_path": "entries[0].file_count",
+      "field_name": "entries[0].file_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 11.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "entries[0].file_count"
+      ]
+    },
+    {
+      "original_path": "entries[1].file_count",
+      "field_name": "entries[1].file_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 11.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "entries[1].file_count"
+      ]
+    },
+    {
+      "original_path": "entries[2].file_count",
+      "field_name": "entries[2].file_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 19.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "entries[2].file_count"
+      ]
+    },
+    {
+      "original_path": "entries[3].file_count",
+      "field_name": "entries[3].file_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "entries[3].file_count"
+      ]
+    },
+    {
+      "original_path": "entries[4].file_count",
+      "field_name": "entries[4].file_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 7.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "entries[4].file_count"
+      ]
+    },
+    {
+      "original_path": "entries[5].file_count",
+      "field_name": "entries[5].file_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "entries[5].file_count"
+      ]
+    },
+    {
+      "original_path": "entries[6].file_count",
+      "field_name": "entries[6].file_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "entries[6].file_count"
+      ]
+    },
+    {
+      "original_path": "entries[7].file_count",
+      "field_name": "entries[7].file_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 57.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "entries[7].file_count"
+      ]
+    },
+    {
+      "original_path": "entries[8].file_count",
+      "field_name": "entries[8].file_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "entries[8].file_count"
+      ]
+    },
+    {
+      "original_path": "entries[9].file_count",
+      "field_name": "entries[9].file_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "entries[9].file_count"
+      ]
+    },
+    {
+      "original_path": "entries[10].file_count",
+      "field_name": "entries[10].file_count",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "entries[10].file_count"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": []
+}

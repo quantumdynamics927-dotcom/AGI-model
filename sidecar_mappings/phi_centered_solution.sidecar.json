@@ -1,0 +1,2008 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\data\\external_imports\\tmt_os_20260405\\phi_centered_cube_results\\phi_centered_solution.json",
+  "generated_at": "2026-04-15T22:54:25.728668",
+  "registry_version": "1.0.0",
+  "total_fields": 107,
+  "field_breakdown": {
+    "metric": 106,
+    "metadata": 1
+  },
+  "metric_breakdown": {
+    "unknown": 79,
+    "provisional": 27
+  },
+  "mappings": [
+    {
+      "original_path": "center_cube.value",
+      "field_name": "center_cube.value",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "center_cube.value",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "center_cube.phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 1.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "center_cube.phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "face_centers[0].x",
+      "field_name": "face_centers[0].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "face_centers[0].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "face_centers[0].y",
+      "field_name": "face_centers[0].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "face_centers[0].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "face_centers[0].z",
+      "field_name": "face_centers[0].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "face_centers[0].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "face_centers[0].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.99,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "face_centers[0].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "face_centers[1].x",
+      "field_name": "face_centers[1].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "face_centers[1].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "face_centers[1].y",
+      "field_name": "face_centers[1].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "face_centers[1].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "face_centers[1].z",
+      "field_name": "face_centers[1].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "face_centers[1].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "face_centers[1].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.98,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "face_centers[1].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "face_centers[2].x",
+      "field_name": "face_centers[2].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "face_centers[2].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "face_centers[2].y",
+      "field_name": "face_centers[2].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "face_centers[2].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "face_centers[2].z",
+      "field_name": "face_centers[2].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "face_centers[2].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "face_centers[2].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.97,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "face_centers[2].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "face_centers[3].x",
+      "field_name": "face_centers[3].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "face_centers[3].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "face_centers[3].y",
+      "field_name": "face_centers[3].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "face_centers[3].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "face_centers[3].z",
+      "field_name": "face_centers[3].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "face_centers[3].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "face_centers[3].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.96,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "face_centers[3].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "face_centers[4].x",
+      "field_name": "face_centers[4].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "face_centers[4].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "face_centers[4].y",
+      "field_name": "face_centers[4].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "face_centers[4].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "face_centers[4].z",
+      "field_name": "face_centers[4].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "face_centers[4].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "face_centers[4].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.95,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "face_centers[4].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "face_centers[5].x",
+      "field_name": "face_centers[5].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "face_centers[5].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "face_centers[5].y",
+      "field_name": "face_centers[5].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "face_centers[5].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "face_centers[5].z",
+      "field_name": "face_centers[5].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "face_centers[5].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "face_centers[5].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 1.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "face_centers[5].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[0].x",
+      "field_name": "edge_cubes[0].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[0].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[0].y",
+      "field_name": "edge_cubes[0].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[0].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[0].z",
+      "field_name": "edge_cubes[0].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[0].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[0].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.94,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "edge_cubes[0].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[1].x",
+      "field_name": "edge_cubes[1].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[1].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[1].y",
+      "field_name": "edge_cubes[1].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[1].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[1].z",
+      "field_name": "edge_cubes[1].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[1].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[1].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.93,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "edge_cubes[1].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[2].x",
+      "field_name": "edge_cubes[2].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[2].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[2].y",
+      "field_name": "edge_cubes[2].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[2].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[2].z",
+      "field_name": "edge_cubes[2].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[2].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[2].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.92,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "edge_cubes[2].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[3].x",
+      "field_name": "edge_cubes[3].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[3].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[3].y",
+      "field_name": "edge_cubes[3].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[3].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[3].z",
+      "field_name": "edge_cubes[3].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[3].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[3].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.91,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "edge_cubes[3].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[4].x",
+      "field_name": "edge_cubes[4].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[4].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[4].y",
+      "field_name": "edge_cubes[4].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[4].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[4].z",
+      "field_name": "edge_cubes[4].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[4].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[4].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "edge_cubes[4].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[5].x",
+      "field_name": "edge_cubes[5].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[5].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[5].y",
+      "field_name": "edge_cubes[5].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[5].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[5].z",
+      "field_name": "edge_cubes[5].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[5].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[5].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.89,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "edge_cubes[5].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[6].x",
+      "field_name": "edge_cubes[6].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[6].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[6].y",
+      "field_name": "edge_cubes[6].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[6].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[6].z",
+      "field_name": "edge_cubes[6].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[6].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[6].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.88,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "edge_cubes[6].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[7].x",
+      "field_name": "edge_cubes[7].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[7].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[7].y",
+      "field_name": "edge_cubes[7].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[7].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[7].z",
+      "field_name": "edge_cubes[7].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[7].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[7].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.87,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "edge_cubes[7].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[8].x",
+      "field_name": "edge_cubes[8].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[8].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[8].y",
+      "field_name": "edge_cubes[8].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[8].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[8].z",
+      "field_name": "edge_cubes[8].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[8].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[8].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.96,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "edge_cubes[8].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[9].x",
+      "field_name": "edge_cubes[9].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[9].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[9].y",
+      "field_name": "edge_cubes[9].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[9].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[9].z",
+      "field_name": "edge_cubes[9].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[9].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[9].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.95,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "edge_cubes[9].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[10].x",
+      "field_name": "edge_cubes[10].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[10].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[10].y",
+      "field_name": "edge_cubes[10].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[10].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[10].z",
+      "field_name": "edge_cubes[10].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[10].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[10].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.94,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "edge_cubes[10].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[11].x",
+      "field_name": "edge_cubes[11].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[11].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[11].y",
+      "field_name": "edge_cubes[11].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[11].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[11].z",
+      "field_name": "edge_cubes[11].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "edge_cubes[11].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "edge_cubes[11].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.93,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "edge_cubes[11].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[0].x",
+      "field_name": "corner_cubes[0].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[0].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[0].y",
+      "field_name": "corner_cubes[0].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[0].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[0].z",
+      "field_name": "corner_cubes[0].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[0].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[0].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.9,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "corner_cubes[0].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[1].x",
+      "field_name": "corner_cubes[1].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[1].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[1].y",
+      "field_name": "corner_cubes[1].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[1].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[1].z",
+      "field_name": "corner_cubes[1].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[1].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[1].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.89,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "corner_cubes[1].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[2].x",
+      "field_name": "corner_cubes[2].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[2].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[2].y",
+      "field_name": "corner_cubes[2].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[2].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[2].z",
+      "field_name": "corner_cubes[2].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[2].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[2].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.95,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "corner_cubes[2].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[3].x",
+      "field_name": "corner_cubes[3].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[3].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[3].y",
+      "field_name": "corner_cubes[3].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[3].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[3].z",
+      "field_name": "corner_cubes[3].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[3].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[3].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.94,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "corner_cubes[3].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[4].x",
+      "field_name": "corner_cubes[4].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[4].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[4].y",
+      "field_name": "corner_cubes[4].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[4].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[4].z",
+      "field_name": "corner_cubes[4].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[4].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[4].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.91,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "corner_cubes[4].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[5].x",
+      "field_name": "corner_cubes[5].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[5].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[5].y",
+      "field_name": "corner_cubes[5].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[5].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[5].z",
+      "field_name": "corner_cubes[5].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[5].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[5].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.88,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "corner_cubes[5].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[6].x",
+      "field_name": "corner_cubes[6].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[6].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[6].y",
+      "field_name": "corner_cubes[6].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[6].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[6].z",
+      "field_name": "corner_cubes[6].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[6].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[6].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.93,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "corner_cubes[6].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[7].x",
+      "field_name": "corner_cubes[7].x",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[7].x",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[7].y",
+      "field_name": "corner_cubes[7].y",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[7].y",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[7].z",
+      "field_name": "corner_cubes[7].z",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "corner_cubes[7].z",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "corner_cubes[7].phi_alignment",
+      "field_name": "phi_alignment",
+      "field_class": "metric",
+      "canonical_name": "phi_alignment",
+      "governance_status": "provisional",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.999,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "corner_cubes[7].phi_alignment",
+        "resolved:phi_alignment"
+      ]
+    },
+    {
+      "original_path": "total_alignment",
+      "field_name": "total_alignment",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 93.58888888888889,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "total_alignment"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "center_cube.value",
+      1
+    ],
+    [
+      "face_centers[0].x",
+      1
+    ],
+    [
+      "face_centers[0].y",
+      1
+    ],
+    [
+      "face_centers[0].z",
+      1
+    ],
+    [
+      "face_centers[1].x",
+      1
+    ],
+    [
+      "face_centers[1].y",
+      1
+    ],
+    [
+      "face_centers[1].z",
+      1
+    ],
+    [
+      "face_centers[2].x",
+      1
+    ],
+    [
+      "face_centers[2].y",
+      1
+    ],
+    [
+      "face_centers[2].z",
+      1
+    ]
+  ]
+}

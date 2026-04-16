@@ -1,0 +1,201 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\autonomous_circuits\\Wormhole_Traversal_metadata.json",
+  "generated_at": "2026-04-15T22:54:20.012932",
+  "registry_version": "1.0.0",
+  "total_fields": 9,
+  "field_breakdown": {
+    "parameter": 2,
+    "metric": 7
+  },
+  "metric_breakdown": {
+    "unknown": 7
+  },
+  "mappings": [
+    {
+      "original_path": "qubits",
+      "field_name": "qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 20.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "qubits"
+      ]
+    },
+    {
+      "original_path": "depth",
+      "field_name": "depth",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 24.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "depth"
+      ]
+    },
+    {
+      "original_path": "gates.ry",
+      "field_name": "gates.ry",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 20.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "gates.ry",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "gates.cz",
+      "field_name": "gates.cz",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 20.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "gates.cz",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "gates.measure",
+      "field_name": "gates.measure",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 20.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "gates.measure",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "gates.h",
+      "field_name": "gates.h",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "gates.h",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "gates.cx",
+      "field_name": "gates.cx",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "gates.cx",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "gates.swap",
+      "field_name": "gates.swap",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 10.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "gates.swap",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "gates.barrier",
+      "field_name": "gates.barrier",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "gates.barrier",
+        "unresolved"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "gates.ry",
+      1
+    ],
+    [
+      "gates.cz",
+      1
+    ],
+    [
+      "gates.measure",
+      1
+    ],
+    [
+      "gates.h",
+      1
+    ],
+    [
+      "gates.cx",
+      1
+    ],
+    [
+      "gates.swap",
+      1
+    ],
+    [
+      "gates.barrier",
+      1
+    ]
+  ]
+}

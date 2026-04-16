@@ -1,0 +1,70 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\raw_hardware\\workloads_34\\job-d78o4k2k86tc739vgn90-info.json",
+  "generated_at": "2026-04-15T22:54:25.172279",
+  "registry_version": "1.0.0",
+  "total_fields": 3,
+  "field_breakdown": {
+    "metadata": 1,
+    "parameter": 1,
+    "metric": 1
+  },
+  "metric_breakdown": {
+    "unknown": 1
+  },
+  "mappings": [
+    {
+      "original_path": "estimated_running_time_seconds",
+      "field_name": "estimated_running_time_seconds",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.086371507,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "estimated_running_time_seconds"
+      ]
+    },
+    {
+      "original_path": "cost",
+      "field_name": "cost",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 600.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "cost"
+      ]
+    },
+    {
+      "original_path": "params.version",
+      "field_name": "params.version",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "params.version",
+        "unresolved"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "params.version",
+      1
+    ]
+  ]
+}

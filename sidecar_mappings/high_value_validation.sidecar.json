@@ -1,0 +1,370 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\raw_hardware\\high_value_validation.json",
+  "generated_at": "2026-04-15T22:54:20.388842",
+  "registry_version": "1.0.0",
+  "total_fields": 18,
+  "field_breakdown": {
+    "metadata": 3,
+    "metric": 14,
+    "parameter": 1
+  },
+  "metric_breakdown": {
+    "unknown": 14
+  },
+  "mappings": [
+    {
+      "original_path": "config.num_runs",
+      "field_name": "config.num_runs",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "config.num_runs"
+      ]
+    },
+    {
+      "original_path": "config.warmup_runs",
+      "field_name": "config.warmup_runs",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "config.warmup_runs",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "config.phi_tolerance",
+      "field_name": "config.phi_tolerance",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "config.phi_tolerance",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "config.significance_level",
+      "field_name": "config.significance_level",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.05,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "config.significance_level",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "config.min_effect_size",
+      "field_name": "config.min_effect_size",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.3,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "config.min_effect_size"
+      ]
+    },
+    {
+      "original_path": "config.max_tokens",
+      "field_name": "config.max_tokens",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 512.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "config.max_tokens",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "config.temperature",
+      "field_name": "temperature",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.7,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "config.temperature"
+      ]
+    },
+    {
+      "original_path": "config.timeout_seconds",
+      "field_name": "config.timeout_seconds",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 120.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "config.timeout_seconds",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.mean_phi_resonance",
+      "field_name": "validation.mean_phi_resonance",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.2685214494681185,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "validation.mean_phi_resonance"
+      ]
+    },
+    {
+      "original_path": "validation.std_phi_resonance",
+      "field_name": "validation.std_phi_resonance",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.7378567006501721,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.std_phi_resonance",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.cluster_rate_near_phi",
+      "field_name": "validation.cluster_rate_near_phi",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.cluster_rate_near_phi",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.null_baseline_mean",
+      "field_name": "validation.null_baseline_mean",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.04897112033491,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.null_baseline_mean",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.null_baseline_std",
+      "field_name": "validation.null_baseline_std",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.049340292252501,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.null_baseline_std",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.effect_size_vs_null",
+      "field_name": "validation.effect_size_vs_null",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.3444959742514313,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.effect_size_vs_null",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.t_statistic",
+      "field_name": "validation.t_statistic",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.144014905305471,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.t_statistic",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.p_value",
+      "field_name": "validation.p_value",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.00018376483424719668,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.p_value",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.p_value_corrected",
+      "field_name": "validation.p_value_corrected",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0007350593369887867,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.p_value_corrected",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "validation.reproducibility_score",
+      "field_name": "validation.reproducibility_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "validation.reproducibility_score",
+        "unresolved"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "config.warmup_runs",
+      1
+    ],
+    [
+      "config.phi_tolerance",
+      1
+    ],
+    [
+      "config.significance_level",
+      1
+    ],
+    [
+      "config.max_tokens",
+      1
+    ],
+    [
+      "config.timeout_seconds",
+      1
+    ],
+    [
+      "validation.std_phi_resonance",
+      1
+    ],
+    [
+      "validation.cluster_rate_near_phi",
+      1
+    ],
+    [
+      "validation.null_baseline_mean",
+      1
+    ],
+    [
+      "validation.null_baseline_std",
+      1
+    ],
+    [
+      "validation.effect_size_vs_null",
+      1
+    ]
+  ]
+}

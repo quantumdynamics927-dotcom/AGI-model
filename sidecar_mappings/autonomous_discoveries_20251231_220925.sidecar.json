@@ -1,0 +1,104 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\raw_hardware\\autonomous_imports\\derived_metrics\\autonomous_discoveries_20251231_220925.json",
+  "generated_at": "2026-04-15T22:54:25.208605",
+  "registry_version": "1.0.0",
+  "total_fields": 6,
+  "field_breakdown": {
+    "metadata": 3,
+    "descriptor": 3
+  },
+  "metric_breakdown": {},
+  "mappings": [
+    {
+      "original_path": "derived_metrics.total_discoveries",
+      "field_name": "total_discoveries",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 32.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "derived_metrics.total_discoveries"
+      ]
+    },
+    {
+      "original_path": "derived_metrics.domain_distribution.consciousness",
+      "field_name": "derived_metrics.domain_distribution.consciousness",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "derived_metrics.domain_distribution.consciousness"
+      ]
+    },
+    {
+      "original_path": "derived_metrics.domain_distribution.psi_minus",
+      "field_name": "derived_metrics.domain_distribution.psi_minus",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 20.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "derived_metrics.domain_distribution.psi_minus"
+      ]
+    },
+    {
+      "original_path": "derived_metrics.phi_alignment_range.min",
+      "field_name": "derived_metrics.phi_alignment_range.min",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.499495256490213e-05,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "derived_metrics.phi_alignment_range.min"
+      ]
+    },
+    {
+      "original_path": "derived_metrics.phi_alignment_range.max",
+      "field_name": "derived_metrics.phi_alignment_range.max",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "derived_metrics.phi_alignment_range.max"
+      ]
+    },
+    {
+      "original_path": "derived_metrics.phi_alignment_range.mean",
+      "field_name": "derived_metrics.phi_alignment_range.mean",
+      "field_class": "descriptor",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.7182978757031315,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "derived_metrics.phi_alignment_range.mean"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": []
+}

@@ -1,0 +1,512 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\quantum-consciousness-agi\\quantum-consciousness-agi\\quantum\\results\\xy8_hardware_analysis.json",
+  "generated_at": "2026-04-15T22:54:25.250408",
+  "registry_version": "1.0.0",
+  "total_fields": 25,
+  "field_breakdown": {
+    "metric": 23,
+    "metadata": 2
+  },
+  "metric_breakdown": {
+    "unknown": 19,
+    "validated": 4
+  },
+  "mappings": [
+    {
+      "original_path": "jobs[0].connectivity",
+      "field_name": "jobs[0].connectivity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.11111111111086419,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "jobs[0].connectivity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "jobs[0].thermal_isolation",
+      "field_name": "jobs[0].thermal_isolation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "jobs[0].thermal_isolation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "jobs[0].spread",
+      "field_name": "jobs[0].spread",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2064516129032258,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "jobs[0].spread",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "jobs[0].combined_score",
+      "field_name": "jobs[0].combined_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2863799283153134,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "jobs[0].combined_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "jobs[0].coherence",
+      "field_name": "jobs[0].coherence",
+      "field_class": "metric",
+      "canonical_name": "quantum_coherence",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": 0.275,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "jobs[0].coherence",
+        "resolved:quantum_coherence"
+      ]
+    },
+    {
+      "original_path": "jobs[1].connectivity",
+      "field_name": "jobs[1].connectivity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.19999999999955556,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "jobs[1].connectivity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "jobs[1].thermal_isolation",
+      "field_name": "jobs[1].thermal_isolation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "jobs[1].thermal_isolation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "jobs[1].spread",
+      "field_name": "jobs[1].spread",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2967741935483871,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "jobs[1].spread",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "jobs[1].combined_score",
+      "field_name": "jobs[1].combined_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.34903225806433835,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "jobs[1].combined_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "jobs[1].coherence",
+      "field_name": "jobs[1].coherence",
+      "field_class": "metric",
+      "canonical_name": "quantum_coherence",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": -0.164,
+      "is_valid": false,
+      "issues": [
+        "Value -0.164 < minimum 0.0"
+      ],
+      "alias_chain": [
+        "jobs[1].coherence",
+        "resolved:quantum_coherence"
+      ]
+    },
+    {
+      "original_path": "jobs[2].connectivity",
+      "field_name": "jobs[2].connectivity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.06666666666651852,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "jobs[2].connectivity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "jobs[2].thermal_isolation",
+      "field_name": "jobs[2].thermal_isolation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "jobs[2].thermal_isolation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "jobs[2].spread",
+      "field_name": "jobs[2].spread",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.2064516129032258,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "jobs[2].spread",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "jobs[2].combined_score",
+      "field_name": "jobs[2].combined_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.35860215053757516,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "jobs[2].combined_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "jobs[2].coherence",
+      "field_name": "jobs[2].coherence",
+      "field_class": "metric",
+      "canonical_name": "quantum_coherence",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": -0.223,
+      "is_valid": false,
+      "issues": [
+        "Value -0.223 < minimum 0.0"
+      ],
+      "alias_chain": [
+        "jobs[2].coherence",
+        "resolved:quantum_coherence"
+      ]
+    },
+    {
+      "original_path": "jobs[3].connectivity",
+      "field_name": "jobs[3].connectivity",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.22222222222172838,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "jobs[3].connectivity",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "jobs[3].thermal_isolation",
+      "field_name": "jobs[3].thermal_isolation",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.3,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "jobs[3].thermal_isolation",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "jobs[3].spread",
+      "field_name": "jobs[3].spread",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.16774193548387098,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "jobs[3].spread",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "jobs[3].combined_score",
+      "field_name": "jobs[3].combined_score",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.37921146953385265,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "jobs[3].combined_score",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "jobs[3].coherence",
+      "field_name": "jobs[3].coherence",
+      "field_class": "metric",
+      "canonical_name": "quantum_coherence",
+      "governance_status": "validated",
+      "metric_class": "normalized_score",
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "value": -0.22,
+      "is_valid": false,
+      "issues": [
+        "Value -0.22 < minimum 0.0"
+      ],
+      "alias_chain": [
+        "jobs[3].coherence",
+        "resolved:quantum_coherence"
+      ]
+    },
+    {
+      "original_path": "recommendations.min_connectivity",
+      "field_name": "recommendations.min_connectivity",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.11111111111086419,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "recommendations.min_connectivity"
+      ]
+    },
+    {
+      "original_path": "recommendations.min_thermal",
+      "field_name": "recommendations.min_thermal",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.1,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "recommendations.min_thermal"
+      ]
+    },
+    {
+      "original_path": "correlations.connectivity_coherence",
+      "field_name": "correlations.connectivity_coherence",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.30618285556648184,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "correlations.connectivity_coherence",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "correlations.thermal_coherence",
+      "field_name": "correlations.thermal_coherence",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.6420466392046139,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "correlations.thermal_coherence",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "correlations.combined_coherence",
+      "field_name": "correlations.combined_coherence",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.9684100627435814,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "correlations.combined_coherence",
+        "unresolved"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "jobs[0].connectivity",
+      1
+    ],
+    [
+      "jobs[0].thermal_isolation",
+      1
+    ],
+    [
+      "jobs[0].spread",
+      1
+    ],
+    [
+      "jobs[0].combined_score",
+      1
+    ],
+    [
+      "jobs[1].connectivity",
+      1
+    ],
+    [
+      "jobs[1].thermal_isolation",
+      1
+    ],
+    [
+      "jobs[1].spread",
+      1
+    ],
+    [
+      "jobs[1].combined_score",
+      1
+    ],
+    [
+      "jobs[2].connectivity",
+      1
+    ],
+    [
+      "jobs[2].thermal_isolation",
+      1
+    ]
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "Methane (CH4)": {
+    "entanglement_entropy": 0.8371899204917477,
+    "coherence": 0.005537383439945683,
+    "platonic_symmetry": "cube",
+    "phi_resonance": 0.9851270318031311,
+    "amplitude_shape": [
+      5,
+      32
+    ],
+    "tesseract_shape": [
+      5,
+      4
+    ]
+  },
+  "Water (H2O)": {
+    "entanglement_entropy": 1.2422222217912728,
+    "coherence": 0.007393126697160398,
+    "platonic_symmetry": "icosahedron",
+    "phi_resonance": 0.9632918238639832,
+    "amplitude_shape": [
+      3,
+      32
+    ],
+    "tesseract_shape": [
+      3,
+      4
+    ]
+  },
+  "Benzene (C6H6)": {
+    "entanglement_entropy": 0.9627837318194504,
+    "coherence": 0.006387611427489188,
+    "platonic_symmetry": "icosahedron",
+    "phi_resonance": 0.8922244906425476,
+    "amplitude_shape": [
+      6,
+      32
+    ],
+    "tesseract_shape": [
+      6,
+      4
+    ]
+  }
+}

@@ -1,0 +1,735 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\raw_hardware\\backend_aware_calibration_report.json",
+  "generated_at": "2026-04-15T22:54:20.337352",
+  "registry_version": "1.0.0",
+  "total_fields": 45,
+  "field_breakdown": {
+    "metadata": 8,
+    "parameter": 31,
+    "metric": 6
+  },
+  "metric_breakdown": {
+    "unknown": 6
+  },
+  "mappings": [
+    {
+      "original_path": "coverage.runs_total",
+      "field_name": "coverage.runs_total",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 30.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "coverage.runs_total"
+      ]
+    },
+    {
+      "original_path": "coverage.runs_by_backend.ibm_fez",
+      "field_name": "coverage.runs_by_backend.ibm_fez",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 15.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "coverage.runs_by_backend.ibm_fez"
+      ]
+    },
+    {
+      "original_path": "coverage.runs_by_backend.ibm_kingston",
+      "field_name": "coverage.runs_by_backend.ibm_kingston",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 15.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "coverage.runs_by_backend.ibm_kingston"
+      ]
+    },
+    {
+      "original_path": "coverage.runs_by_promoter.SRY",
+      "field_name": "coverage.runs_by_promoter.SRY",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 6.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "coverage.runs_by_promoter.SRY",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "coverage.runs_by_promoter.FOXG1",
+      "field_name": "coverage.runs_by_promoter.FOXG1",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 6.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "coverage.runs_by_promoter.FOXG1",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "coverage.runs_by_promoter.DCTN1",
+      "field_name": "coverage.runs_by_promoter.DCTN1",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 6.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "coverage.runs_by_promoter.DCTN1",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "coverage.runs_by_promoter.TP53",
+      "field_name": "coverage.runs_by_promoter.TP53",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 6.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "coverage.runs_by_promoter.TP53",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "coverage.runs_by_promoter.OXT",
+      "field_name": "coverage.runs_by_promoter.OXT",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 6.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "coverage.runs_by_promoter.OXT",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "coverage.replicates_by_promoter_backend.DCTN1:ibm_fez",
+      "field_name": "coverage.replicates_by_promoter_backend.DCTN1:ibm_fez",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "coverage.replicates_by_promoter_backend.DCTN1:ibm_fez"
+      ]
+    },
+    {
+      "original_path": "coverage.replicates_by_promoter_backend.DCTN1:ibm_kingston",
+      "field_name": "coverage.replicates_by_promoter_backend.DCTN1:ibm_kingston",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "coverage.replicates_by_promoter_backend.DCTN1:ibm_kingston"
+      ]
+    },
+    {
+      "original_path": "coverage.replicates_by_promoter_backend.FOXG1:ibm_fez",
+      "field_name": "coverage.replicates_by_promoter_backend.FOXG1:ibm_fez",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "coverage.replicates_by_promoter_backend.FOXG1:ibm_fez"
+      ]
+    },
+    {
+      "original_path": "coverage.replicates_by_promoter_backend.FOXG1:ibm_kingston",
+      "field_name": "coverage.replicates_by_promoter_backend.FOXG1:ibm_kingston",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "coverage.replicates_by_promoter_backend.FOXG1:ibm_kingston"
+      ]
+    },
+    {
+      "original_path": "coverage.replicates_by_promoter_backend.OXT:ibm_fez",
+      "field_name": "coverage.replicates_by_promoter_backend.OXT:ibm_fez",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "coverage.replicates_by_promoter_backend.OXT:ibm_fez"
+      ]
+    },
+    {
+      "original_path": "coverage.replicates_by_promoter_backend.OXT:ibm_kingston",
+      "field_name": "coverage.replicates_by_promoter_backend.OXT:ibm_kingston",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "coverage.replicates_by_promoter_backend.OXT:ibm_kingston"
+      ]
+    },
+    {
+      "original_path": "coverage.replicates_by_promoter_backend.SRY:ibm_fez",
+      "field_name": "coverage.replicates_by_promoter_backend.SRY:ibm_fez",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "coverage.replicates_by_promoter_backend.SRY:ibm_fez"
+      ]
+    },
+    {
+      "original_path": "coverage.replicates_by_promoter_backend.SRY:ibm_kingston",
+      "field_name": "coverage.replicates_by_promoter_backend.SRY:ibm_kingston",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "coverage.replicates_by_promoter_backend.SRY:ibm_kingston"
+      ]
+    },
+    {
+      "original_path": "coverage.replicates_by_promoter_backend.TP53:ibm_fez",
+      "field_name": "coverage.replicates_by_promoter_backend.TP53:ibm_fez",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "coverage.replicates_by_promoter_backend.TP53:ibm_fez"
+      ]
+    },
+    {
+      "original_path": "coverage.replicates_by_promoter_backend.TP53:ibm_kingston",
+      "field_name": "coverage.replicates_by_promoter_backend.TP53:ibm_kingston",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "coverage.replicates_by_promoter_backend.TP53:ibm_kingston"
+      ]
+    },
+    {
+      "original_path": "backend_offsets.ibm_fez",
+      "field_name": "backend_offsets.ibm_fez",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.1404056462554333,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_offsets.ibm_fez"
+      ]
+    },
+    {
+      "original_path": "backend_offsets.ibm_kingston",
+      "field_name": "backend_offsets.ibm_kingston",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.14300202983630056,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "backend_offsets.ibm_kingston"
+      ]
+    },
+    {
+      "original_path": "promoter_backend_interaction.SRY.offset_ibm_fez",
+      "field_name": "promoter_backend_interaction.SRY.offset_ibm_fez",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.08077139299977636,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoter_backend_interaction.SRY.offset_ibm_fez"
+      ]
+    },
+    {
+      "original_path": "promoter_backend_interaction.SRY.offset_ibm_kingston",
+      "field_name": "promoter_backend_interaction.SRY.offset_ibm_kingston",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.08303468201705104,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoter_backend_interaction.SRY.offset_ibm_kingston"
+      ]
+    },
+    {
+      "original_path": "promoter_backend_interaction.SRY.backend_spread",
+      "field_name": "promoter_backend_interaction.SRY.backend_spread",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0022632890172746833,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoter_backend_interaction.SRY.backend_spread"
+      ]
+    },
+    {
+      "original_path": "promoter_backend_interaction.FOXG1.offset_ibm_fez",
+      "field_name": "promoter_backend_interaction.FOXG1.offset_ibm_fez",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.1263344664051124,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoter_backend_interaction.FOXG1.offset_ibm_fez"
+      ]
+    },
+    {
+      "original_path": "promoter_backend_interaction.FOXG1.offset_ibm_kingston",
+      "field_name": "promoter_backend_interaction.FOXG1.offset_ibm_kingston",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.12883506912683762,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoter_backend_interaction.FOXG1.offset_ibm_kingston"
+      ]
+    },
+    {
+      "original_path": "promoter_backend_interaction.FOXG1.backend_spread",
+      "field_name": "promoter_backend_interaction.FOXG1.backend_spread",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.002500602721725226,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoter_backend_interaction.FOXG1.backend_spread"
+      ]
+    },
+    {
+      "original_path": "promoter_backend_interaction.DCTN1.offset_ibm_fez",
+      "field_name": "promoter_backend_interaction.DCTN1.offset_ibm_fez",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.03920052528565273,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoter_backend_interaction.DCTN1.offset_ibm_fez"
+      ]
+    },
+    {
+      "original_path": "promoter_backend_interaction.DCTN1.offset_ibm_kingston",
+      "field_name": "promoter_backend_interaction.DCTN1.offset_ibm_kingston",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.041995512959611424,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoter_backend_interaction.DCTN1.offset_ibm_kingston"
+      ]
+    },
+    {
+      "original_path": "promoter_backend_interaction.DCTN1.backend_spread",
+      "field_name": "promoter_backend_interaction.DCTN1.backend_spread",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.002794987673958693,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoter_backend_interaction.DCTN1.backend_spread"
+      ]
+    },
+    {
+      "original_path": "promoter_backend_interaction.TP53.offset_ibm_fez",
+      "field_name": "promoter_backend_interaction.TP53.offset_ibm_fez",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.2854724918504938,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoter_backend_interaction.TP53.offset_ibm_fez"
+      ]
+    },
+    {
+      "original_path": "promoter_backend_interaction.TP53.offset_ibm_kingston",
+      "field_name": "promoter_backend_interaction.TP53.offset_ibm_kingston",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.2881190024511548,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoter_backend_interaction.TP53.offset_ibm_kingston"
+      ]
+    },
+    {
+      "original_path": "promoter_backend_interaction.TP53.backend_spread",
+      "field_name": "promoter_backend_interaction.TP53.backend_spread",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0026465106006610117,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoter_backend_interaction.TP53.backend_spread"
+      ]
+    },
+    {
+      "original_path": "promoter_backend_interaction.OXT.offset_ibm_fez",
+      "field_name": "promoter_backend_interaction.OXT.offset_ibm_fez",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.17024935473613123,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoter_backend_interaction.OXT.offset_ibm_fez"
+      ]
+    },
+    {
+      "original_path": "promoter_backend_interaction.OXT.offset_ibm_kingston",
+      "field_name": "promoter_backend_interaction.OXT.offset_ibm_kingston",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.17302588262684773,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoter_backend_interaction.OXT.offset_ibm_kingston"
+      ]
+    },
+    {
+      "original_path": "promoter_backend_interaction.OXT.backend_spread",
+      "field_name": "promoter_backend_interaction.OXT.backend_spread",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0027765278907165014,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "promoter_backend_interaction.OXT.backend_spread"
+      ]
+    },
+    {
+      "original_path": "variance.within_promoter_variance.SRY",
+      "field_name": "variance.within_promoter_variance.SRY",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.7226616739775963e-06,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "variance.within_promoter_variance.SRY"
+      ]
+    },
+    {
+      "original_path": "variance.within_promoter_variance.FOXG1",
+      "field_name": "variance.within_promoter_variance.FOXG1",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.260742990635276e-06,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "variance.within_promoter_variance.FOXG1"
+      ]
+    },
+    {
+      "original_path": "variance.within_promoter_variance.DCTN1",
+      "field_name": "variance.within_promoter_variance.DCTN1",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.5850218015018908e-06,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "variance.within_promoter_variance.DCTN1"
+      ]
+    },
+    {
+      "original_path": "variance.within_promoter_variance.TP53",
+      "field_name": "variance.within_promoter_variance.TP53",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.4814923074305172e-06,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "variance.within_promoter_variance.TP53"
+      ]
+    },
+    {
+      "original_path": "variance.within_promoter_variance.OXT",
+      "field_name": "variance.within_promoter_variance.OXT",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.5776978874417603e-06,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "variance.within_promoter_variance.OXT"
+      ]
+    },
+    {
+      "original_path": "variance.between_promoter_variance_by_backend.ibm_fez",
+      "field_name": "variance.between_promoter_variance_by_backend.ibm_fez",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.867050648863686e-07,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "variance.between_promoter_variance_by_backend.ibm_fez"
+      ]
+    },
+    {
+      "original_path": "variance.between_promoter_variance_by_backend.ibm_kingston",
+      "field_name": "variance.between_promoter_variance_by_backend.ibm_kingston",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 7.781568345836356e-07,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "variance.between_promoter_variance_by_backend.ibm_kingston"
+      ]
+    },
+    {
+      "original_path": "transferability.reference_offset",
+      "field_name": "transferability.reference_offset",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": -0.1404056462554333,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "transferability.reference_offset",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "transferability.backend_rmse.ibm_fez",
+      "field_name": "transferability.backend_rmse.ibm_fez",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.08477335322001434,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "transferability.backend_rmse.ibm_fez"
+      ]
+    },
+    {
+      "original_path": "transferability.backend_rmse.ibm_kingston",
+      "field_name": "transferability.backend_rmse.ibm_kingston",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.08484662980048369,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "transferability.backend_rmse.ibm_kingston"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "coverage.runs_by_promoter.SRY",
+      1
+    ],
+    [
+      "coverage.runs_by_promoter.FOXG1",
+      1
+    ],
+    [
+      "coverage.runs_by_promoter.DCTN1",
+      1
+    ],
+    [
+      "coverage.runs_by_promoter.TP53",
+      1
+    ],
+    [
+      "coverage.runs_by_promoter.OXT",
+      1
+    ],
+    [
+      "transferability.reference_offset",
+      1
+    ]
+  ]
+}

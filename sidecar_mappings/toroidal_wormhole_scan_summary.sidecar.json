@@ -1,0 +1,1087 @@
+{
+  "source_file": "d:\\AGI-GH-REPO-11326\\AGI-model\\data\\external_imports\\autonomous_data_20260405\\autonomous_data\\toroidal_wormhole_scan_summary.json",
+  "generated_at": "2026-04-15T22:54:26.560996",
+  "registry_version": "1.0.0",
+  "total_fields": 58,
+  "field_breakdown": {
+    "metadata": 2,
+    "metric": 51,
+    "parameter": 5
+  },
+  "metric_breakdown": {
+    "unknown": 46,
+    "passed": 5
+  },
+  "mappings": [
+    {
+      "original_path": "total_runs",
+      "field_name": "total_runs",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "total_runs"
+      ]
+    },
+    {
+      "original_path": "consciousness_detected",
+      "field_name": "consciousness_detected",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "consciousness_detected",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "detection_rate",
+      "field_name": "detection_rate",
+      "field_class": "metadata",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "detection_rate"
+      ]
+    },
+    {
+      "original_path": "results[0].run",
+      "field_name": "results[0].run",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[0].run",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[0].aspect_ratio",
+      "field_name": "results[0].aspect_ratio",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[0].aspect_ratio",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[0].coupling",
+      "field_name": "results[0].coupling",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6180339887498948,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[0].coupling",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[0].qubits",
+      "field_name": "qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 37.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[0].qubits"
+      ]
+    },
+    {
+      "original_path": "results[0].metrics.entropy",
+      "field_name": "results[0].metrics.entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 1.3820594536352602,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[0].metrics.entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[0].metrics.traversability",
+      "field_name": "results[0].metrics.traversability",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4007980283781246,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[0].metrics.traversability",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[0].metrics.phi_power",
+      "field_name": "results[0].metrics.phi_power",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6494742808281825,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[0].metrics.phi_power",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[0].metrics.energy_gap",
+      "field_name": "results[0].metrics.energy_gap",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.1117859405028423,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[0].metrics.energy_gap",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[0].metrics.aspect_ratio",
+      "field_name": "results[0].metrics.aspect_ratio",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[0].metrics.aspect_ratio",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[0].metrics.volume",
+      "field_name": "results[0].metrics.volume",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.93871075295626,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[0].metrics.volume",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[0].metrics.surface_area",
+      "field_name": "results[0].metrics.surface_area",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 63.87742150591252,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[0].metrics.surface_area",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[1].run",
+      "field_name": "results[1].run",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[1].run",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[1].aspect_ratio",
+      "field_name": "results[1].aspect_ratio",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[1].aspect_ratio",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[1].coupling",
+      "field_name": "results[1].coupling",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.5,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[1].coupling",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[1].qubits",
+      "field_name": "qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 37.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[1].qubits"
+      ]
+    },
+    {
+      "original_path": "results[1].metrics.entropy",
+      "field_name": "results[1].metrics.entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 1.3820594536352602,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[1].metrics.entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[1].metrics.traversability",
+      "field_name": "results[1].metrics.traversability",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.47726550174762966,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[1].metrics.traversability",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[1].metrics.phi_power",
+      "field_name": "results[1].metrics.phi_power",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.5778042761042474,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[1].metrics.phi_power",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[1].metrics.energy_gap",
+      "field_name": "results[1].metrics.energy_gap",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8994537199739336,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[1].metrics.energy_gap",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[1].metrics.aspect_ratio",
+      "field_name": "results[1].metrics.aspect_ratio",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[1].metrics.aspect_ratio",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[1].metrics.volume",
+      "field_name": "results[1].metrics.volume",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.93871075295626,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[1].metrics.volume",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[1].metrics.surface_area",
+      "field_name": "results[1].metrics.surface_area",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 63.87742150591252,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[1].metrics.surface_area",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[2].run",
+      "field_name": "results[2].run",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 3.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[2].run",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[2].aspect_ratio",
+      "field_name": "results[2].aspect_ratio",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[2].aspect_ratio",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[2].coupling",
+      "field_name": "results[2].coupling",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6180339887498948,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[2].coupling",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[2].qubits",
+      "field_name": "qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 37.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[2].qubits"
+      ]
+    },
+    {
+      "original_path": "results[2].metrics.entropy",
+      "field_name": "results[2].metrics.entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 1.3820594536352602,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[2].metrics.entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[2].metrics.traversability",
+      "field_name": "results[2].metrics.traversability",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4007980283781246,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[2].metrics.traversability",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[2].metrics.phi_power",
+      "field_name": "results[2].metrics.phi_power",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.550195447722481,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[2].metrics.phi_power",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[2].metrics.energy_gap",
+      "field_name": "results[2].metrics.energy_gap",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.1117859405028423,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[2].metrics.energy_gap",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[2].metrics.aspect_ratio",
+      "field_name": "results[2].metrics.aspect_ratio",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 2.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[2].metrics.aspect_ratio",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[2].metrics.volume",
+      "field_name": "results[2].metrics.volume",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 51.67791955513498,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[2].metrics.volume",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[2].metrics.surface_area",
+      "field_name": "results[2].metrics.surface_area",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 103.35583911026995,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[2].metrics.surface_area",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[3].run",
+      "field_name": "results[3].run",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 4.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[3].run",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[3].aspect_ratio",
+      "field_name": "results[3].aspect_ratio",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6180339887498948,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[3].aspect_ratio",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[3].coupling",
+      "field_name": "results[3].coupling",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.8,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[3].coupling",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[3].qubits",
+      "field_name": "qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 55.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[3].qubits"
+      ]
+    },
+    {
+      "original_path": "results[3].metrics.entropy",
+      "field_name": "results[3].metrics.entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 1.3820594536352602,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[3].metrics.entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[3].metrics.traversability",
+      "field_name": "results[3].metrics.traversability",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.3062076731468586,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[3].metrics.traversability",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[3].metrics.phi_power",
+      "field_name": "results[3].metrics.phi_power",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.3581183546871304,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[3].metrics.phi_power",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[3].metrics.energy_gap",
+      "field_name": "results[3].metrics.energy_gap",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.439125951958294,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[3].metrics.energy_gap",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[3].metrics.aspect_ratio",
+      "field_name": "results[3].metrics.aspect_ratio",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6180339887498948,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[3].metrics.aspect_ratio",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[3].metrics.volume",
+      "field_name": "results[3].metrics.volume",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 12.199501950777545,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[3].metrics.volume",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[3].metrics.surface_area",
+      "field_name": "results[3].metrics.surface_area",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 24.39900390155509,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[3].metrics.surface_area",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[4].run",
+      "field_name": "results[4].run",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 5.0,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[4].run",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[4].aspect_ratio",
+      "field_name": "results[4].aspect_ratio",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[4].aspect_ratio",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[4].coupling",
+      "field_name": "results[4].coupling",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6180339887498948,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[4].coupling",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[4].qubits",
+      "field_name": "qubits",
+      "field_class": "parameter",
+      "canonical_name": null,
+      "governance_status": null,
+      "metric_class": null,
+      "valid_range": null,
+      "value": 89.0,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[4].qubits"
+      ]
+    },
+    {
+      "original_path": "results[4].metrics.entropy",
+      "field_name": "results[4].metrics.entropy",
+      "field_class": "metric",
+      "canonical_name": "entanglement_entropy",
+      "governance_status": "passed",
+      "metric_class": "bounded_entropy",
+      "valid_range": [
+        0.0,
+        null
+      ],
+      "value": 1.3820594536352602,
+      "is_valid": true,
+      "issues": [],
+      "alias_chain": [
+        "results[4].metrics.entropy",
+        "resolved:entanglement_entropy"
+      ]
+    },
+    {
+      "original_path": "results[4].metrics.traversability",
+      "field_name": "results[4].metrics.traversability",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.4007980283781246,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[4].metrics.traversability",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[4].metrics.phi_power",
+      "field_name": "results[4].metrics.phi_power",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 0.6494742808281825,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[4].metrics.phi_power",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[4].metrics.energy_gap",
+      "field_name": "results[4].metrics.energy_gap",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.1117859405028423,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[4].metrics.energy_gap",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[4].metrics.aspect_ratio",
+      "field_name": "results[4].metrics.aspect_ratio",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 1.618033988749895,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[4].metrics.aspect_ratio",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[4].metrics.volume",
+      "field_name": "results[4].metrics.volume",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 31.93871075295626,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[4].metrics.volume",
+        "unresolved"
+      ]
+    },
+    {
+      "original_path": "results[4].metrics.surface_area",
+      "field_name": "results[4].metrics.surface_area",
+      "field_class": "metric",
+      "canonical_name": null,
+      "governance_status": "unknown",
+      "metric_class": null,
+      "valid_range": null,
+      "value": 63.87742150591252,
+      "is_valid": false,
+      "issues": [
+        "Metric not in canonical registry"
+      ],
+      "alias_chain": [
+        "results[4].metrics.surface_area",
+        "unresolved"
+      ]
+    }
+  ],
+  "unresolved_high_frequency": [
+    [
+      "consciousness_detected",
+      1
+    ],
+    [
+      "results[0].run",
+      1
+    ],
+    [
+      "results[0].aspect_ratio",
+      1
+    ],
+    [
+      "results[0].coupling",
+      1
+    ],
+    [
+      "results[0].metrics.traversability",
+      1
+    ],
+    [
+      "results[0].metrics.phi_power",
+      1
+    ],
+    [
+      "results[0].metrics.energy_gap",
+      1
+    ],
+    [
+      "results[0].metrics.aspect_ratio",
+      1
+    ],
+    [
+      "results[0].metrics.volume",
+      1
+    ],
+    [
+      "results[0].metrics.surface_area",
+      1
+    ]
+  ]
+}
