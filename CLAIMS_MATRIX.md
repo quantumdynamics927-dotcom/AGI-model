@@ -228,10 +228,14 @@ V_cornell_fitted = sigma * r - alpha / r
 
 **Interpretation**: This is a **mathematical clarification**, not a physical claim. The φ-parameterization selects a specific point in the (σ, α) parameter space. The scientific question shifts from "Is this a new potential?" to "Does the φ-constrained subfamily have physical or phenomenological advantages?"
 
+**Publication-Ready Summary**: 
+This work demonstrates that principled incorporation of mathematical constants like φ into physical models should be framed as constrained parameterization within established theoretical frameworks rather than as novel functional forms. This approach maintains scientific rigor while enabling exploration of biomimetic optimization principles [arxiv:2501.10786].
+
 **Next Steps**:
 1. Test φ-constrained Cornell against actual hadronic/confinement data
 2. Compare fit quality: unconstrained vs φ-constrained
 3. Measure information content: 2 free parameters (unconstrained) vs 0 free parameters (φ-constrained)
+4. Execute benchmark proposal comparing unconstrained vs φ-constrained fits on quarkonium observables
 
 ---
 
