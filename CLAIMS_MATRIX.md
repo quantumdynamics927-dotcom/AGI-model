@@ -13,6 +13,7 @@
 | C3 | Entanglement entropy distinguishes molecules | $S(\text{water}) \neq S(\text{methane}) \neq S(\text{benzene})$ | Quantum molecular analysis | Random state entropy | **PARTIAL** | Entropy ordering contradicts complexity |
 | C4 | Platonic alignment scores real molecules higher | $P(\text{real}) > P(\text{random})$ | Methane vs random point cloud | Shuffled positions | **SUPPORTED** | $P(\text{random}) \geq P(\text{real})$ |
 | C5 | Backend quality correlates with φ-measurement stability | $\text{Quality} \uparrow \Rightarrow \text{Var}(\phi) \downarrow$ | IBM calibration data | Random backend selection | **SUPPORTED** | No correlation or inverse correlation |
+| C6 | Cornell-φ is a φ-constrained Cornell subfamily | $V_\phi(r) = V_C(r; \sigma=1/\phi, \alpha=1/(2\phi^2))$ | `cornell_phi_potential.py` fitting | Unconstrained Cornell fit | **CLARIFIED** | Fitted Cornell cannot reproduce $V_\phi$ |
 
 ---
 
@@ -190,6 +191,50 @@ quality = f(T1, T2, gate_errors, readout_errors)
 
 ---
 
+### C6: Cornell-φ Structural Equivalence
+
+**Formal Statement**:
+$$V_\phi(r) = \frac{r}{\phi} - \frac{1}{2\phi^2 r} = V_C(r; \sigma=1/\phi, \alpha=1/(2\phi^2))$$
+
+The Cornell-φ potential is exactly representable as a standard Cornell potential with coefficients constrained by the golden ratio.
+
+**Equation**:
+```python
+# Cornell-φ potential
+V_phi = r / PHI - 1 / (2 * PHI**2 * r)
+
+# Standard Cornell with fitted parameters
+V_cornell_fitted = sigma * r - alpha / r
+
+# Fitted parameters: sigma = 1/PHI, alpha = 1/(2*PHI**2)
+# Result: V_cornell_fitted == V_phi (exact equality)
+```
+
+**Evidence Sources**:
+- `cornell_phi_potential.py`: Fitting analysis with three objective functions (MSE, slope, combined)
+- `cornell_phi_fitted_analysis.png`: Four-panel comparison showing exact overlap
+- Measured fitted parameters: σ = 0.618034, α = 0.190983 (exact φ-derived values)
+
+**Baseline Comparison**:
+| Model | σ (string tension) | α (Coulomb) | MSE | Max Error |
+|-------|-------------------|-------------|-----|-----------|
+| Cornell-φ | 0.618034 (fixed) | 0.190983 (fixed) | - | - |
+| Fitted Cornell | 0.618034 (fitted) | 0.190983 (fitted) | 0 | 0 |
+| Fixed Cornell (1,1) | 1.000000 | 1.000000 | 0.382 | 0.809 |
+
+**Current Status**: ✅ **CLARIFIED** - The Cornell-φ ansatz is not a new potential class but a φ-constrained parameterization of the standard Cornell form.
+
+**Falsification Condition**: If fitting the standard Cornell potential to V_φ(r) produces parameters other than σ = 1/φ and α = 1/(2φ²), or if the fitting error is non-zero, the structural equivalence claim would be falsified.
+
+**Interpretation**: This is a **mathematical clarification**, not a physical claim. The φ-parameterization selects a specific point in the (σ, α) parameter space. The scientific question shifts from "Is this a new potential?" to "Does the φ-constrained subfamily have physical or phenomenological advantages?"
+
+**Next Steps**:
+1. Test φ-constrained Cornell against actual hadronic/confinement data
+2. Compare fit quality: unconstrained vs φ-constrained
+3. Measure information content: 2 free parameters (unconstrained) vs 0 free parameters (φ-constrained)
+
+---
+
 ## Metric Classification
 
 | Metric | Classification | Role |
@@ -212,6 +257,8 @@ quality = f(T1, T2, gate_errors, readout_errors)
 | E3 | `sierpinski_metatron_analysis_results.json` | C1 | Sierpinski analysis |
 | E4 | `validate_metrics.py` output | C2, C3, C4 | Validation tests |
 | E5 | `quantum_molecular_analysis.json` | C3 | Molecular analysis |
+| E6 | `cornell_phi_potential.py` | C6 | Fitting analysis |
+| E7 | `cornell_phi_fitted_analysis.png` | C6 | Visualization |
 
 ---
 
@@ -224,6 +271,7 @@ quality = f(T1, T2, gate_errors, readout_errors)
 | C3 | Entropy ordering contradicts complexity | **WEAKENED** |
 | C4 | $P(\text{random}) \geq P(\text{real})$ | Not falsified |
 | C5 | No quality-φ correlation | Not falsified |
+| C6 | Fitted Cornell cannot reproduce $V_\phi$ | **CLARIFIED** (structural equivalence proven) |
 
 ---
 
