@@ -1,0 +1,14 @@
+# Large generated artifacts that may need to stay in the repo.
+# Keep source code and hand-authored docs in normal Git.
+raw_hardware/**/*.json filter=lfs diff=lfs merge=lfs -text
+autonomous_data/**/*.json filter=lfs diff=lfs merge=lfs -text
+autonomous_circuits/**/*.json filter=lfs diff=lfs merge=lfs -text
+sidecar_mappings/**/*.json filter=lfs diff=lfs merge=lfs -text
+dna_34bp_results/**/*.json filter=lfs diff=lfs merge=lfs -text
+promoter_panel_results/**/*.json filter=lfs diff=lfs merge=lfs -text
+tmt_os_panel_results/**/*.json filter=lfs diff=lfs merge=lfs -text
+outputs/**/*.json filter=lfs diff=lfs merge=lfs -text
+
+# Known oversized reports.
+integrated_migration_report.json filter=lfs diff=lfs merge=lfs -text
+raw_hardware/replicate_aware_calibration_report.json filter=lfs diff=lfs merge=lfs -text
