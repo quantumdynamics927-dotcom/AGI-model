@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-04-17 22:27:55",
+  "routing_comparison": {
+    "flat_accuracy": 0.5129680137708783,
+    "tesseract_accuracy": 0.49386900674551726,
+    "flat_latency": 0.0074230051040649414,
+    "tesseract_latency": 0.027211523056030272,
+    "improvement": -0.019099007025361048
+  },
+  "edge_scoring_comparison": {
+    "classical_score": 0.08235577821731567,
+    "quantum_score": 0.08167584106326103,
+    "classical_latency": 0.01788405895233154,
+    "quantum_latency": 0.0267783784866333
+  },
+  "phi_weighting_comparison": {
+    "no_phi_accuracy": 0.4830779946781695,
+    "with_phi_accuracy": 0.5187661173939705,
+    "phi_benefit": 0.03568812271580102
+  },
+  "fault_tolerance_comparison": {
+    "standard_accuracy": 0.49917391458526256,
+    "fault_aware_accuracy": 0.49608901599422095,
+    "fault_tolerance_benefit": -0.003084898591041607
+  }
+}

@@ -187,12 +187,6 @@ class OllamaOutputValidator:
             reasoning.append(f"{len(raw_constants)} metric(s) appear to be raw constants")
             recommendations.append("Distinguish raw constants from computed scores in labeling")
         
-        # HARD RULE: If any metric is invalid, mark whole metric section as diagnostic_only
-        has_invalid_metrics = len(invalid_metrics) > 0 or len(raw_constants) > 0
-        if has_invalid_metrics:
-            reasoning.append("HARD RULE: One or more metrics are invalid - metric section labeled 'diagnostic_only'")
-            recommendations.append("Metric section auto-labeled 'diagnostic_only' - exclude from evidence claims")
-        
         # Model-specific warning
         if 'qwen' in model.lower():
             recommendations.append("qwen models show sensitivity to phi vocabulary - verify reproducibility")

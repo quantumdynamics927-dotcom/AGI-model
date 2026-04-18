@@ -1,0 +1,43 @@
+{
+  "export_timestamp": "2026-04-18T22:55:40.544657",
+  "experiments": {
+    "exp_20260418_225540_3289d35d": {
+      "hypothesis": "Tesseract routing improves efficiency by >10%",
+      "status": "pending",
+      "timestamp": "2026-04-18T22:55:40.528901",
+      "parameters_hash": "e888a1e691fae286"
+    }
+  },
+  "metrics": {
+    "exp_20260418_225540_3289d35d": [
+      {
+        "name": "efficiency_improvement",
+        "metric_type": "structural",
+        "value": 0.12,
+        "bounds": [
+          0.0,
+          1.0
+        ],
+        "confidence": 0.95,
+        "timestamp": "2026-04-18T22:55:40.543780",
+        "experiment_id": "exp_20260418_225540_3289d35d",
+        "metadata": {},
+        "is_valid": true
+      },
+      {
+        "name": "robustness_improvement",
+        "metric_type": "robustness",
+        "value": 0.08,
+        "bounds": [
+          0.0,
+          1.0
+        ],
+        "confidence": 0.9,
+        "timestamp": "2026-04-18T22:55:40.543818",
+        "experiment_id": "exp_20260418_225540_3289d35d",
+        "metadata": {},
+        "is_valid": true
+      }
+    ]
+  }
+}

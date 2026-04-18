@@ -1,0 +1,21 @@
+{
+  "session_id": "route_1776461272027",
+  "start_time": 1776461272.0270436,
+  "end_time": 1776461272.0477061,
+  "route_path": [
+    {
+      "timestamp": 1776461272.0436108,
+      "vertex_id": 14,
+      "vertex_name": "Action Arbitration",
+      "confidence": 0.07455803453922272,
+      "latency_ms": 0.0,
+      "transition_score": 0.744873046875,
+      "quantum_score": 0.5,
+      "error": null
+    }
+  ],
+  "total_latency_ms": 0.0,
+  "success": true,
+  "error": null,
+  "metadata": {}
+}

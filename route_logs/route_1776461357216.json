@@ -1,0 +1,21 @@
+{
+  "session_id": "route_1776461357216",
+  "start_time": 1776461357.2167802,
+  "end_time": 1776461357.2506747,
+  "route_path": [
+    {
+      "timestamp": 1776461357.243152,
+      "vertex_id": 10,
+      "vertex_name": "Cross-Agent Fusion",
+      "confidence": 0.07054232060909271,
+      "latency_ms": 0.0,
+      "transition_score": 0.602783203125,
+      "quantum_score": 0.5,
+      "error": null
+    }
+  ],
+  "total_latency_ms": 0.0,
+  "success": true,
+  "error": null,
+  "metadata": {}
+}

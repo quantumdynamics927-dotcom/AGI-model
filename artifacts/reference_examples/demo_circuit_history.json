@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2246a77c66c075d68557ed2e79fe45d2da15025f028d71fbb8999d0a80d4e595
-size 619
+[
+  {
+    "sequence": "ATGC",
+    "scheme": "base_to_gate",
+    "num_qubits": 4,
+    "circuit_depth": 2,
+    "timestamp": "2026-04-09T02:52:38"
+  },
+  {
+    "sequence": "GCGC",
+    "scheme": "base_to_gate",
+    "num_qubits": 4,
+    "circuit_depth": 2,
+    "timestamp": "2026-04-09T02:52:38"
+  },
+  {
+    "sequence": "ATAT",
+    "scheme": "base_to_gate",
+    "num_qubits": 4,
+    "circuit_depth": 2,
+    "timestamp": "2026-04-09T02:52:38"
+  },
+  {
+    "sequence": "GCTA",
+    "scheme": "base_to_gate",
+    "num_qubits": 4,
+    "circuit_depth": 2,
+    "timestamp": "2026-04-09T02:52:38"
+  }
+]

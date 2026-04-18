@@ -1,0 +1,67 @@
+{
+  "experimental_suite_summary": {
+    "timestamp": "2026-04-18 21:03:45",
+    "total_experiments": 4,
+    "experiments": [
+      {
+        "name": "clean_condition",
+        "recommendation": "EQUIVALENT_PERFORMANCE_CLEAN",
+        "timestamp": "2026-04-18 21:02:48"
+      },
+      {
+        "name": "lesioned_condition",
+        "recommendation": "EQUIVALENT_LESION_PERFORMANCE",
+        "timestamp": "2026-04-18 21:02:56"
+      },
+      {
+        "name": "edge_scoring_comparison",
+        "recommendation": "EQUIVALENT_SCORING",
+        "timestamp": "2026-04-18 21:03:02"
+      },
+      {
+        "name": "acceptance_criteria",
+        "recommendation": "REJECT_TESSERACT_ROUTING",
+        "timestamp": "2026-04-18 21:03:45"
+      }
+    ]
+  },
+  "individual_results": [
+    {
+      "experiment_name": "clean_condition",
+      "timestamp": "2026-04-18 21:02:48",
+      "flat_metrics": {
+        "route_efficiency": 1.0,
+        "route_accuracy": 1.0,
+        "lesion_robustness": 0.6799999999999999,
+        "average_latency": 0.006949236392974853,
+        "confidence_calibration": 0.0
+      },
+      "tesseract_metrics": {
+        "route_efficiency": 1.0,
+        "route_accuracy": 0.05,
+        "lesion_robustness": 0.6799999999999999,
+        "average_latency": 0.03322914719581604,
+        "confidence_calibration": 0.007170400989494688
+      },
+      "comparison": {
+        "efficiency_improvement": 0.0,
+        "accuracy_change": -0.95,
+        "robustness_improvement": 0.0,
+        "latency_change": 0.026279910802841186,
+        "calibration_improvement": 0.007170400989494688
+      },
+      "statistical_significance": {
+        "descriptive_statistics": {
+          "tesseract_mean": 0.5013761318040391,
+          "tesseract_std": 0.08824608561349047,
+          "tesseract_ci_lower": 0.49133299382435586,
+          "tesseract_ci_upper": 0.5114192697837223,
+          "flat_mean": 0.49469279060140253,
+          "flat_std": 0.08774970678670112,
+          "flat_ci_lower": 0.4847061446577454,
+          "flat_ci_upper": 0.5046794365450596
+        },
+        "statistical_tests": {
+          "t_statistic": 0.9396046714718844,
+          "p_value": 0.34817880603661977,
+          "is_statistically_significant": 

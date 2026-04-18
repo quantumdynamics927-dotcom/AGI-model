@@ -1,3 +1,56 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:04f89724e5eba2b77e51b0c40645203a38d637ca71b81c2c9763460135971579
-size 1791
+{
+  "version": "1.0",
+  "pipeline_name": "AGI_Model_Output_Governance",
+  "description": "Mandatory validation pipeline for all AI-generated outputs",
+  "rules": {
+    "mandatory_validation": {
+      "enabled": true,
+      "validator": "validate_ollama_output_v2.py",
+      "required_fields": ["text", "metrics"],
+      "fail_on_invalid_metrics": true
+    },
+    "metric_classification": {
+      "types": ["normalized_score", "signed_polarity", "raw_constant", "unbounded"],
+      "require_declaration": true,
+      "auto_detection": true
+    },
+    "output_classification": {
+      "supported": {
+        "criteria": ["all_metrics_valid", "null_models_tested", "claims_supported_by_evidence"]
+      },
+      "partial": {
+        "criteria": ["some_metrics_valid", "mechanistic_explanation", "cautious_language"]
+      },
+      "exploratory": {
+        "criteria": ["hypothesis_level_claims", "metric_issues_documented", "requires_testing"]
+      },
+      "rejected": {
+        "criteria": ["cosmological_leaps", "unsupported_claims", "invalid_metrics_in_evidence"]
+      }
+    }
+  },
+  "hard_rules": {
+    "metric_section_labeling": {
+      "description": "If any metric is invalid, label entire metric section as 'diagnostic_only'",
+      "implementation": "validate_ollama_output_v2.py:L205"
+    },
+    "evidence_exclusion": {
+      "description": "Exclude 'diagnostic_only' metrics from evidence claims",
+      "implementation": "Governance enforced in validation reports"
+    }
+  },
+  "audit_trail": {
+    "save_reports": true,
+    "report_format": "json",
+    "retention_days": 365
+  },
+  "models": {
+    "qwen3-coder:480b": {
+      "warnings": ["phi_vocabulary_sensitivity"],
+      "validation_required": true
+    },
+    "ollama_local": {
+      "validation_required": true
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "classical_edge_scoring": {
+    "approach": "classical",
+    "valid_samples": 50,
+    "failed_samples": 0,
+    "total_samples": 50,
+    "average_score": 0.08235577821731567,
+    "latency_seconds": 0.01788405895233154,
+    "success_rate": 1.0
+  },
+  "quantum_edge_scoring": {
+    "approach": "quantum",
+    "valid_samples": 50,
+    "failed_samples": 0,
+    "total_samples": 50,
+    "average_score": 0.08167584106326103,
+    "latency_seconds": 0.0267783784866333,
+    "success_rate": 1.0
+  }
+}

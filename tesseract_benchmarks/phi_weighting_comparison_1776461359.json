@@ -1,0 +1,22 @@
+{
+  "no_phi_weighting": {
+    "approach": "no_phi",
+    "valid_samples": 50,
+    "failed_samples": 0,
+    "total_samples": 50,
+    "accuracy": 0.4975668756663799,
+    "latency_seconds": 0.06699657440185547,
+    "route_paths": [],
+    "success_rate": 1.0
+  },
+  "with_phi_weighting": {
+    "approach": "with_phi",
+    "valid_samples": 50,
+    "failed_samples": 0,
+    "total_samples": 50,
+    "accuracy": 0.48570881322026255,
+    "latency_seconds": 0.07048946857452393,
+    "route_paths": [],
+    "success_rate": 1.0
+  }
+}

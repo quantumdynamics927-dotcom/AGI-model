@@ -1,0 +1,21 @@
+{
+  "session_id": "route_1776542617809",
+  "start_time": 1776542617.8096635,
+  "end_time": 1776542617.8455505,
+  "route_path": [
+    {
+      "timestamp": 1776542617.836414,
+      "vertex_id": 5,
+      "vertex_name": "Latent Encoding",
+      "confidence": 0.08136741816997528,
+      "latency_ms": 0.0,
+      "transition_score": 0.739013671875,
+      "quantum_score": 0.5,
+      "error": null
+    }
+  ],
+  "total_latency_ms": 0.0,
+  "success": true,
+  "error": null,
+  "metadata": {}
+}

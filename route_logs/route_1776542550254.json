@@ -1,0 +1,21 @@
+{
+  "session_id": "route_1776542550254",
+  "start_time": 1776542550.2545907,
+  "end_time": 1776542550.2843437,
+  "route_path": [
+    {
+      "timestamp": 1776542550.2760053,
+      "vertex_id": 3,
+      "vertex_name": "Sensor Fusion",
+      "confidence": 0.07751083374023438,
+      "latency_ms": 0.0,
+      "transition_score": 0.7265625,
+      "quantum_score": 0.5,
+      "error": null
+    }
+  ],
+  "total_latency_ms": 0.0,
+  "success": true,
+  "error": null,
+  "metadata": {}
+}

@@ -1,0 +1,21 @@
+{
+  "session_id": "route_1776542576883",
+  "start_time": 1776542576.8837595,
+  "end_time": 1776542576.8932037,
+  "route_path": [
+    {
+      "timestamp": 1776542576.8849628,
+      "vertex_id": 12,
+      "vertex_name": "Goal Formation",
+      "confidence": 0.0792204886674881,
+      "latency_ms": 0.0,
+      "transition_score": 0.7936787605285645,
+      "quantum_score": 0.5,
+      "error": null
+    }
+  ],
+  "total_latency_ms": 0.0,
+  "success": true,
+  "error": null,
+  "metadata": {}
+}

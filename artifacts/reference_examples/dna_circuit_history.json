@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fddcb68cede4bde28bb3e7575b33516487cbf33593b09c1fc1d8fc046933816a
-size 186
+[
+  {
+    "sequence": "ATGCATGCATGCATGCATGCATGCATGCATGC",
+    "scheme": "watson_crick",
+    "num_qubits": 32,
+    "circuit_depth": 2,
+    "timestamp": "2026-04-09T01:42:21"
+  }
+]
