@@ -1,0 +1,22 @@
+{
+  "standard_routing": {
+    "approach": "standard",
+    "valid_samples": 50,
+    "failed_samples": 0,
+    "total_samples": 50,
+    "accuracy": 0.49917391458526256,
+    "latency_seconds": 0.03047966003417969,
+    "route_paths": [],
+    "success_rate": 1.0
+  },
+  "fault_aware_routing": {
+    "approach": "fault_aware",
+    "valid_samples": 50,
+    "failed_samples": 0,
+    "total_samples": 50,
+    "accuracy": 0.49608901599422095,
+    "latency_seconds": 0.03877085685729981,
+    "route_paths": [],
+    "success_rate": 1.0
+  }
+}

@@ -1,13 +1,3 @@
-{
-  "name": "Phi_Resonance",
-  "qubits": 8,
-  "depth": 10,
-  "gates": {
-    "ry": 8,
-    "p": 8,
-    "measure": 8,
-    "cx": 7,
-    "barrier": 1
-  },
-  "timestamp": "2026-01-05T01:11:15.906408"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d7192d979a395df8eecefa00a84534148c53cc6677487250a1511986ddca3c0c
+size 207

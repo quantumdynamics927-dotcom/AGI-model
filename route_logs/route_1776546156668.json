@@ -1,0 +1,21 @@
+{
+  "session_id": "route_1776546156668",
+  "start_time": 1776546156.6686451,
+  "end_time": 1776546156.6987348,
+  "route_path": [
+    {
+      "timestamp": 1776546156.6912842,
+      "vertex_id": 13,
+      "vertex_name": "Policy Selection",
+      "confidence": 0.08017280697822571,
+      "latency_ms": 0.0,
+      "transition_score": 0.7353515625,
+      "quantum_score": 0.5,
+      "error": null
+    }
+  ],
+  "total_latency_ms": 0.0,
+  "success": true,
+  "error": null,
+  "metadata": {}
+}

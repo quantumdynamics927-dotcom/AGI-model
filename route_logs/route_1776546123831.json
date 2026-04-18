@@ -1,0 +1,21 @@
+{
+  "session_id": "route_1776546123831",
+  "start_time": 1776546123.831861,
+  "end_time": 1776546123.8584566,
+  "route_path": [
+    {
+      "timestamp": 1776546123.8523338,
+      "vertex_id": 11,
+      "vertex_name": "Knowledge Integration",
+      "confidence": 0.07771456241607666,
+      "latency_ms": 0.0,
+      "transition_score": 0.64892578125,
+      "quantum_score": 0.5,
+      "error": null
+    }
+  ],
+  "total_latency_ms": 0.0,
+  "success": true,
+  "error": null,
+  "metadata": {}
+}

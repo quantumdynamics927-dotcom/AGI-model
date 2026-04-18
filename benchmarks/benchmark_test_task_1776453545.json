@@ -1,0 +1,44 @@
+{
+  "classical": {
+    "system_type": "classical",
+    "task_name": "test_task",
+    "accuracy": 0.0,
+    "latency_seconds": 0.0,
+    "energy_joules": 0.0,
+    "robustness_score": 0.95,
+    "noise_sensitivity": 0.1,
+    "timestamp": "2026-04-17 20:19:05",
+    "metadata": {
+      "samples_processed": 0,
+      "total_samples": 5
+    }
+  },
+  "quantum": {
+    "system_type": "quantum",
+    "task_name": "test_task",
+    "accuracy": 0.5503901302814483,
+    "latency_seconds": 0.005859851837158203,
+    "energy_joules": 0.007031822204589843,
+    "robustness_score": 0.75,
+    "noise_sensitivity": 0.6,
+    "timestamp": "2026-04-17 20:19:05",
+    "metadata": {
+      "samples_processed": 5,
+      "total_samples": 5
+    }
+  },
+  "quantum_inspired": {
+    "system_type": "quantum_inspired",
+    "task_name": "test_task",
+    "accuracy": 0.0,
+    "latency_seconds": 0.0,
+    "energy_joules": 0.0,
+    "robustness_score": 0.85,
+    "noise_sensitivity": 0.3,
+    "timestamp": "2026-04-17 20:19:05",
+    "metadata": {
+      "samples_processed": 0,
+      "total_samples": 5
+    }
+  }
+}

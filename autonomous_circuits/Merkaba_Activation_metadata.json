@@ -1,14 +1,3 @@
-{
-  "name": "Merkaba_Activation",
-  "qubits": 6,
-  "depth": 7,
-  "gates": {
-    "h": 6,
-    "cx": 6,
-    "rz": 6,
-    "measure": 6,
-    "cz": 3,
-    "barrier": 1
-  },
-  "timestamp": "2026-01-05T01:11:16.278231"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d6704079201e8761a499372f071f5d03eb9a727c97a2f9a4deeae99a223eea08
+size 225

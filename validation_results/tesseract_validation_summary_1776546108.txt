@@ -1,0 +1,37 @@
+TESSELLACTED ROUTING VALIDATION REPORT
+==================================================
+
+APPROACH COMPARISON
+--------------------
+
+FLAT_ROUTING:
+  Route Efficiency: 1.000
+  Route Accuracy: 1.000
+  Average Latency: 0.0074s
+  Lesion Robustness: 0.680
+  Confidence Calibration: 0.000
+
+TESSERACT_ROUTING:
+  Route Efficiency: 1.000
+  Route Accuracy: 0.070
+  Average Latency: 0.0491s
+  Lesion Robustness: 0.630
+  Confidence Calibration: 0.102
+
+
+COMPARATIVE ANALYSIS
+--------------------
+  route_efficiency_improvement: 0.0000
+  latency_change: 0.0416
+  accuracy_change: -0.9300
+  robustness_improvement: -0.0500
+  confidence_calibration_improvement: 0.1024
+  invalid_transition_reduction: 0.0000
+  overall_benefit: 0.3333
+  recommendation: NEEDS_MORE_EVALUATION
+
+
+RECOMMENDATION
+---------------
+[UNCERTAIN] NEEDS MORE EVALUATION
+  Results are inconclusive, more testing required

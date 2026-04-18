@@ -1,0 +1,5634 @@
+{
+  "exp_20260418_225540_3289d35d": [
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:55:40.543780",
+      "experiment_id": "exp_20260418_225540_3289d35d",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:55:40.543818",
+      "experiment_id": "exp_20260418_225540_3289d35d",
+      "metadata": {},
+      "is_valid": true
+    }
+  ],
+  "exp_20260418_225739_2db2505c": [
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11172858257549229,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243028",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07419050742533574,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243056",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11614953811899544,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243085",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09171490357810826,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243093",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.14591359440399213,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243107",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0849022308891353,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243113",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1081375802425565,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243125",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07413990553271235,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243130",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.04326770586297064,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243141",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08825385504450775,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243145",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10362476287241515,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243158",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.06930712493242375,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243163",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.17650337436977487,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243189",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08794925650497254,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243194",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1436273327641543,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243206",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0717852345752446,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243212",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10244974352370101,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243225",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09099188559145872,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243230",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12561590812855486,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243244",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08827216967819354,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243249",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12215114560427187,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243262",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07325415860311785,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243267",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10578083440214997,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243282",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07551094680757527,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243287",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.15314529220293704,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243303",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0706767671697744,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243313",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.14868408092070765,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243329",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07830511758596945,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243334",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10344841650044675,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243349",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09021370422795456,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243353",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12739357999998838,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243367",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07623433578931002,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243372",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.08742733145085418,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243386",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0824539664199564,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243391",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11013466815152968,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243405",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0959770265243515,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243410",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.14836451409625148,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243425",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09985735656798808,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243430",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11276623305056123,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243445",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09365296293969326,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243450",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13830296271844678,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243468",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.06763366677162289,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243474",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.17052592588541543,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243491",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07741742782608425,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243497",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.14327148915782129,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243513",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08271825086116238,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243519",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.14785673772994815,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243538",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.083042733215006,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243543",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13234885594731005,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243559",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07240807077041933,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243565",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12309893209636681,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243583",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.10825173574198559,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243592",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1035386593832147,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243610",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08012727820986097,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243618",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11240659499674877,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243637",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.060240778136015416,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243641",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.14933553941576927,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243659",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08568462383483604,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243664",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1077290608440177,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243681",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08518724940949968,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243688",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13536456819158355,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243707",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07333708134987367,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243712",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11537411583886108,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243731",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0817413177377205,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243735",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11406815837420965,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243755",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09014018305369202,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243762",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.14629843945960813,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243784",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.06768772423812017,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243789",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.09700661476484201,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243811",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07730231875925248,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243816",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13779369184853552,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243835",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.06202548988347631,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243839",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.0975983658537303,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243860",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08936535140850894,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243865",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11739765683964062,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243880",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08153748536615378,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243883",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11184652669047179,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243900",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0873731292538124,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243905",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.08882772206344536,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243922",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0797887404756502,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243925",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.09599319367303294,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243938",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09562642617846362,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243943",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.15258778920157828,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243957",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08390425074940498,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243960",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10662434537040981,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.243978",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07110501789107994,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.243981",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13611686582269836,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244000",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09080653606658275,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244003",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10206526367369533,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244021",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07416808453375325,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244025",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10887604614278358,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244043",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08860054575009244,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244046",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11306754735633819,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244065",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.069192095171738,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244069",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11383202668732494,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244089",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08539202919656773,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244092",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12363090765501669,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244112",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07914436623632451,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244115",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.09137055299808818,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244135",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08703249013616077,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244138",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11131963424162228,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244153",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07338946633435409,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244157",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10253340640998214,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244178",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08371776465209388,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244182",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.08622423290710013,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244202",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08465164721302383,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244205",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.15707066415012905,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244221",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07469052922424285,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244224",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12639583393131254,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244246",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08395169940624946,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244250",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11863422297075521,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244273",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.06537182583749243,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244277",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.09599487162171655,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244299",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09663363990591632,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244302",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.105450444073281,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244319",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.06959503231863258,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244322",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11744264006167966,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244346",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08052837660551898,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244349",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.09358853533417258,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244372",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.06857241911536409,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244376",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13157196374406419,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244395",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07791259962873001,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244401",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.09252321565932844,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244430",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0853441476937926,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244435",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12939659614681942,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244457",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07785440643967514,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244462",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.09715336251745865,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244493",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07064724962080673,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244498",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.08253204239162054,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244520",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0786085106665009,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244526",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10937449790061,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244549",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.051870885756744346,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244553",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1193531114194417,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244585",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08627883430257581,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244590",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12579703658742897,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244618",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08142277084594693,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244621",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12111499167333523,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244647",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0752878283781576,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244650",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13426439378592428,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244678",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07512225379964739,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244682",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.15942838810949425,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244715",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08145198824528734,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244721",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1628328845845336,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244751",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07130695587115277,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244754",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.14799729157131422,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244781",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0818038587649083,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244784",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12464140366886785,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244812",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08345006751515657,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244815",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10715693459861735,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244842",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07619963637775529,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244846",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11910815789232382,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244874",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07324123485761402,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244878",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10403234169028562,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244904",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08210538695462234,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244907",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.14174746747219755,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244938",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07814821608140313,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244941",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.15209677336887695,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.244969",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08074647551483259,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.244973",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.09611115029015505,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245000",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07242699271901529,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245004",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13294581086251112,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245024",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07870256667244813,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245027",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1349157591705265,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245056",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08718073660376101,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245059",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13458042223220792,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245089",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.05843046849474571,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245092",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.0891133034274956,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245124",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08572121447794843,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245127",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13241734021331705,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245148",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.06094997275861157,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245151",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1182383805223018,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245192",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07830319275407903,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245197",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1364043127541539,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245226",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0825213156769257,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245231",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1256964461237122,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245261",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08480981561310752,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245264",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11438833549936049,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245294",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07071623354781743,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245297",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.0828840178605072,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245328",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08412516344547391,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245331",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.137273365758565,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245353",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0721917289481557,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245356",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13696645579266492,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245388",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08703892556507628,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245391",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12220198975493146,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245422",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09001445330786832,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245425",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.14423681485289697,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245464",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08501974646709053,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245468",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.06781253214287442,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245507",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0781281488762458,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245512",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.15250053872600244,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245542",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07912139748372454,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245546",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11596231512494741,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245587",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07958086000851534,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245592",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11922631334177265,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245632",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07267735376589758,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245635",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.07087639481077353,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245669",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08712600080243799,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245673",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10109794248859832,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245702",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.062089562472241115,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245708",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10308902710662177,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245747",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07989085353930908,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245752",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10995968751354715,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245786",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0687567870870455,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245789",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.08399291258882109,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245826",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09251775275332477,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245830",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1300302651968231,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245855",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07136074048414624,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245858",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12938420378080936,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245893",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0730341575629186,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245896",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10098741242272134,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245931",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0759940397850809,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245934",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13848526389355595,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.245970",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07680613251270614,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.245973",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.14405197031046568,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246008",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07907733675642421,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246011",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12144495018628475,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246047",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09277076306789082,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246050",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.15105912144625283,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246087",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07901531781998129,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246090",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10880840453308627,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246127",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09015571069884529,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246130",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12264558524726767,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246169",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08009052452658788,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246174",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.07690281905635067,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246211",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07528293266517472,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246214",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1063888005305993,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246244",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.062318258788004795,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246248",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.17758659428127055,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246295",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07065791902151043,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246300",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.09837948495863565,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246347",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.06436235470149018,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246352",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11093122775004682,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246380",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.06604490992283583,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246385",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.14511437717003317,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246424",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07996206525570722,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246427",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.09623900312686054,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246467",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08289127006762538,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246470",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.17398024007430168,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246501",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0764027846214669,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246506",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.15651180634536593,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246550",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09989571238032345,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246553",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13371297145705818,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246593",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08462171276861255,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246596",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.15334695898676712,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246635",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.06495479117145898,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246638",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.14880167667780855,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246679",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07456574581699016,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246683",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10903348496159963,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246722",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07518865913456062,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246726",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11979523594679213,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246767",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08290916821776961,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246772",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13908138674365003,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246813",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09643308291944078,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246816",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13110238198899388,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.246857",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0972093560501532,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.246863",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12290993366829417,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.247102",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07660291178245973,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.247123",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12051568615012698,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.247183",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.05983576340008481,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.247190",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1377868541142906,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.247247",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09072743213563556,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.247253",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.09707147866079589,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.247313",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0903008576536788,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.247319",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12951493081950274,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.247358",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08433304246230496,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.247364",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.08258188663373178,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.247423",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08731259194554802,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.247428",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12902628868384883,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.247469",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.10188483839756773,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.247475",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1306902548696998,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.247532",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0755981583263809,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.247538",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.09690453494785929,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.247591",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0769575976868422,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.247597",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.08075293076897996,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.247635",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07641774297098822,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.247640",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.14463898141532625,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.247678",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07872161742989703,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.247682",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11114828291781598,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.247736",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08369186402018759,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.247746",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10678483347764622,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.247825",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08799747992838544,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.247832",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11061874695233968,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.247886",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09243514224632532,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.247890",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12499310367438546,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.247945",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09325728442646113,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.247950",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10448987339843085,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.248005",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08851341618349141,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.248010",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12795209487607015,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.248065",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07125341858213399,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.248069",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11253548482172017,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.248124",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09254227009085142,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.248128",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11369066508281375,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.248185",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08162065183527095,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.248191",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1232781779641949,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.248249",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09258862355711221,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.248255",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11625022029552844,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.248313",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08331453418944239,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.248319",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.08324421968205134,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.248384",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.06179448168550733,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.248390",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10950922186293584,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.248434",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09109904997074128,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.248439",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13431614807775782,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.248505",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08238148994208187,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.248511",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11996443591873612,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.248579",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08621458134787588,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.248586",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.15313768232639208,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.248658",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08162937007459965,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.248670",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13429626578743456,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.248739",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07628383496180585,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.248748",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13940926139225926,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.248829",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07978067127459447,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.248838",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.083917793401216,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.248905",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08945971114306038,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.248911",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12506050311790226,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.248991",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07796791759966797,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.249002",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11727494349327161,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.249066",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.089006601775076,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.249072",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.08772253468952529,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.249138",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0681433628333145,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.249200",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13058301366425515,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.249268",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08687451378000717,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.249275",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.08497476917375342,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.249360",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08517917773480511,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.249365",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10829920600995506,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.249414",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07308921229154615,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.249419",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13172065601878094,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.249476",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.06858311897495423,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.249481",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.09299571516917418,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.249551",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07453798106003134,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.249556",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.15195429721555126,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.249603",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0747916920248296,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.249608",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10191964651595306,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.249674",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08618569561914478,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.249679",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.15193905141656494,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.249744",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07706183871012912,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.249750",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12285375628973105,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.249823",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.06689716088930012,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.249828",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.08602250675442233,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.249896",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08749818154042446,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.249901",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11344872526879032,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.249949",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08702419294677999,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.249954",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13578873442955794,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.250020",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07475601512752796,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.250024",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.15341403772130352,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.250129",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07597537910996281,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.250146",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12528528897892394,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.250220",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.09304869659880607,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.250225",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1273822529645042,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.250298",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08090223083245425,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.250304",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12777343441005512,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.250373",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08022606682873622,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.250379",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12477070195288104,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.250453",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.06763550919126807,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.250460",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10780315232362019,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.250535",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08591601783373737,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.250541",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.15309773328146634,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.250620",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08724754729780344,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.250626",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12449877532997934,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.250704",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07535632828508355,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.250709",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.11145467555237593,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.250775",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0845240758649087,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.250778",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1337638985758828,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.250835",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.062051428571935865,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.250838",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.09484744179120662,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.250898",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08900353836863201,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.250901",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.15378180877950257,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.250946",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0631498123154302,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.250952",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12144796549408438,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.251025",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07999967858858269,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.251031",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12334241925449778,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.251104",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07429968981436466,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.251109",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.13455977282773268,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.251183",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.06475813444175216,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.251189",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1453766773784073,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.251267",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07701975537872023,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.251272",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12137109178690661,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.251350",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07340566974111831,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.251356",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1405414314862925,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.251434",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.05807317640155808,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.251439",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10894590032054102,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.251516",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07121274667344546,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.251522",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1196396320294667,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.251601",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07533679908757843,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.251608",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.15468512959173902,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.251689",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07035550099891086,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.251696",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10097462578811701,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.251798",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.06715401271791162,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.251806",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.14226600627954597,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.251891",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.0845876378478941,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.251898",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.12719141423041336,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.251981",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07343293824221117,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.251989",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.14690937225764264,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.252081",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08623061351793866,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.252087",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10434068483405907,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.252170",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08127233181166882,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.252176",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.1052363492699312,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.252240",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.07323391374376434,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.252244",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "efficiency_improvement",
+      "metric_type": "structural",
+      "value": 0.10261743987832542,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T22:57:39.252306",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    },
+    {
+      "name": "robustness_improvement",
+      "metric_type": "robustness",
+      "value": 0.08430986541610563,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "confidence": 0.9,
+      "timestamp": "2026-04-18T22:57:39.252310",
+      "experiment_id": "exp_20260418_225739_2db2505c",
+      "metadata": {},
+      "is_valid": true
+    }
+  ]
+}

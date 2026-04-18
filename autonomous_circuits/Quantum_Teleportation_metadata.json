@@ -1,12 +1,3 @@
-{
-  "name": "Quantum_Teleportation",
-  "qubits": 3,
-  "depth": 5,
-  "gates": {
-    "measure": 3,
-    "h": 2,
-    "cx": 2,
-    "ry": 1
-  },
-  "timestamp": "2026-01-05T01:11:18.007776"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:083967a253fecd4db6a1cdbd4a478ac21ed9debc8b4a7595be2a39d867ddaef9
+size 195

@@ -1,0 +1,21 @@
+{
+  "session_id": "route_1776541973807",
+  "start_time": 1776541973.8077655,
+  "end_time": 1776541973.8350306,
+  "route_path": [
+    {
+      "timestamp": 1776541973.8285172,
+      "vertex_id": 4,
+      "vertex_name": "World Model Init",
+      "confidence": 0.08435256034135818,
+      "latency_ms": 0.0,
+      "transition_score": 0.73095703125,
+      "quantum_score": 0.5,
+      "error": null
+    }
+  ],
+  "total_latency_ms": 0.0,
+  "success": true,
+  "error": null,
+  "metadata": {}
+}

@@ -1,13 +1,3 @@
-{
-  "name": "Bell_Phi_State",
-  "qubits": 2,
-  "depth": 4,
-  "gates": {
-    "p": 2,
-    "measure": 2,
-    "h": 1,
-    "cx": 1,
-    "barrier": 1
-  },
-  "timestamp": "2026-01-05T01:11:19.902030"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e59e1e103eb8dea0ba87b1e8ab63df8024e763e30e4b361107450c9bafdffcac
+size 206
