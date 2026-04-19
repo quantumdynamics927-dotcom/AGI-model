@@ -1,0 +1,238 @@
+{
+  "version": "2.0.0",
+  "description": "Frozen task manifest for Phase 2 baseline characterization",
+  "created_at": "2026-04-18T23:00:00Z",
+  "baseline_id": "flat_routing_baseline_v2.0.0",
+  "task_families": [
+    {
+      "family_id": "routing_basic",
+      "description": "Basic routing tasks with varying node counts",
+      "tasks": [
+        {
+          "task_id": "routing_10nodes_easy",
+          "type": "routing",
+          "difficulty": "easy",
+          "n_nodes": 10,
+          "edge_density": 0.3,
+          "expected_path_length": 3
+        },
+        {
+          "task_id": "routing_20nodes_medium",
+          "type": "routing",
+          "difficulty": "medium",
+          "n_nodes": 20,
+          "edge_density": 0.25,
+          "expected_path_length": 5
+        },
+        {
+          "task_id": "routing_30nodes_hard",
+          "type": "routing",
+          "difficulty": "hard",
+          "n_nodes": 30,
+          "edge_density": 0.2,
+          "expected_path_length": 8
+        }
+      ]
+    },
+    {
+      "family_id": "planning_tasks",
+      "description": "Planning tasks with varying horizons",
+      "tasks": [
+        {
+          "task_id": "planning_horizon5_easy",
+          "type": "planning",
+          "difficulty": "easy",
+          "horizon": 5,
+          "n_actions": 3,
+          "state_space_size": 50
+        },
+        {
+          "task_id": "planning_horizon10_medium",
+          "type": "planning",
+          "difficulty": "medium",
+          "horizon": 10,
+          "n_actions": 4,
+          "state_space_size": 100
+        },
+        {
+          "task_id": "planning_horizon20_hard",
+          "type": "planning",
+          "difficulty": "hard",
+          "horizon": 20,
+          "n_actions": 5,
+          "state_space_size": 200
+        }
+      ]
+    },
+    {
+      "family_id": "decision_tasks",
+      "description": "Decision-making under uncertainty",
+      "tasks": [
+        {
+          "task_id": "decision_low_uncertainty",
+          "type": "decision",
+          "difficulty": "easy",
+          "uncertainty_level": 0.1,
+          "n_options": 3,
+          "time_pressure": false
+        },
+        {
+          "task_id": "decision_medium_uncertainty",
+          "type": "decision",
+          "difficulty": "medium",
+          "uncertainty_level": 0.3,
+          "n_options": 5,
+          "time_pressure": false
+        },
+        {
+          "task_id": "decision_high_uncertainty",
+          "type": "decision",
+          "difficulty": "hard",
+          "uncertainty_level": 0.5,
+          "n_options": 7,
+          "time_pressure": true
+        }
+      ]
+    }
+  ],
+  "condition_definitions": {
+    "clean": {
+      "description": "No lesions, no injected noise",
+      "perturbations": [],
+      "fault_mask": null,
+      "noise_level": 0.0
+    },
+    "fault": {
+      "description": "Predeclared degraded vertices and edge masks",
+      "perturbations": [
+        {
+          "type": "vertex_degradation",
+          "target": "random_20_percent",
+          "degradation_factor": 0.5
+        },
+        {
+          "type": "edge_mask",
+          "target": "non_critical_edges",
+          "mask_probability": 0.15
+        }
+      ],
+      "fault_mask": "degraded_vertices_20pct",
+      "noise_level": 0.0
+    },
+    "stress": {
+      "description": "Harder prompts, higher uncertainty inputs",
+      "perturbations": [
+        {
+          "type": "input_noise",
+          "target": "latent_representation",
+          "noise_level": 0.2
+        },
+        {
+          "type": "task_difficulty",
+          "target": "all_tasks",
+          "difficulty_multiplier": 1.5
+        },
+        {
+          "type": "time_pressure",
+          "target": "decision_tasks",
+          "time_factor": 0.7
+        }
+      ],
+      "fault_mask": null,
+      "noise_level": 0.2
+    }
+  },
+  "metrics_to_record": [
+    {
+      "name": "latency",
+      "type": "structural",
+      "unit": "seconds",
+      "bounds": [0.0, 10.0],
+      "threshold_type": "cv",
+      "threshold_value": 0.15
+    },
+    {
+      "name": "route_length",
+      "type": "structural",
+      "unit": "hops",
+      "bounds": [1.0, 100.0],
+      "threshold_type": "cv",
+      "threshold_value": 0.20
+    },
+    {
+      "name": "success_rate",
+      "type": "task_facing",
+      "unit": "probability",
+      "bounds": [0.0, 1.0],
+      "threshold_type": "calibration_error",
+      "threshold_value": 0.05
+    },
+    {
+      "name": "invalid_transition_rate",
+      "type": "robustness",
+      "unit": "probability",
+      "bounds": [0.0, 1.0],
+      "threshold_type": "absolute_tolerance",
+      "threshold_value": 0.02
+    },
+    {
+      "name": "confidence_calibration",
+      "type": "task_facing",
+      "unit": "probability",
+      "bounds": [0.0, 1.0],
+      "threshold_type": "calibration_error",
+      "threshold_value": 0.05
+    },
+    {
+      "name": "recovery_rate",
+      "type": "robustness",
+      "unit": "probability",
+      "bounds": [0.0, 1.0],
+      "threshold_type": "cv",
+      "threshold_value": 0.25
+    },
+    {
+      "name": "degradation_under_lesion",
+      "type": "robustness",
+      "unit": "percent",
+      "bounds": [0.0, 100.0],
+      "threshold_type": "cv",
+      "threshold_value": 0.20
+    }
+  ],
+  "seed_policy": {
+    "type": "sequential",
+    "base_seed": 42,
+    "condition_offsets": {
+      "clean": 0,
+      "fault": 10000,
+      "stress": 20000
+    }
+  },
+  "sample_counts": {
+    "clean": 333,
+    "fault": 333,
+    "stress": 334,
+    "total": 1000
+  },
+  "timeout_config": {
+    "per_sample_seconds": 30.0,
+    "max_retries": 3,
+    "fallback_enabled": true
+  },
+  "acceptance_criteria": {
+    "description": "Criteria for future optimizations to beat baseline",
+    "statistical_significance": 0.05,
+    "effect_size_threshold": 0.2,
+    "min_improved_metrics": 3,
+    "required_conditions": ["clean", "fault"],
+    "robustness_requirement": "must_maintain_under_fault"
+  },
+  "lock_statement": {
+    "locked": true,
+    "locked_at": "2026-04-18T23:00:00Z",
+    "locked_by": "Phase2_Baseline_Characterization",
+    "version": "2.0.0",
+    "change_policy": "Any change to task_suite_version, seed_policy, metric_definitions, backend_config, or timeout_rules requires a NEW baseline version, not a modification of this one."
+  }
+}
