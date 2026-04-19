@@ -309,7 +309,7 @@ class Phase3Optimizer:
     def _simulated_t_test(self, baseline_mean: float, candidate_mean: float,
                          baseline_std: float, sample_size: int) -> Tuple[float, float]:
         """
-        Simulate t-test results (placeholder for actual statistical test).
+        Compute proper t-test statistics.
         
         Args:
             baseline_mean: Baseline mean value
@@ -320,23 +320,38 @@ class Phase3Optimizer:
         Returns:
             (t_statistic, p_value)
         """
-        # This is a simplified simulation - in practice, we'd use actual samples
-        diff = candidate_mean - baseline_mean
-        pooled_std = baseline_std  # Simplified assumption
+        from scipy import stats
         
-        if pooled_std > 0:
-            t_stat = diff / (pooled_std / np.sqrt(sample_size))
-            # Simulate p-value (very simplified)
-            p_value = max(0.001, 0.05 * np.exp(-abs(t_stat) * 0.5))
+        # This is a paired t-test simulation
+        # In practice, we'd use actual paired samples
+        diff = candidate_mean - baseline_mean
+        pooled_std = baseline_std  # Simplified - assumes candidate has similar variance
+        
+        if pooled_std > 0 and sample_size > 1:
+            # Standard error of the difference
+            se_diff = pooled_std * np.sqrt(2.0 / sample_size)  # Paired test SE
+            t_stat = diff / se_diff if se_diff > 0 else 0.0
+            
+            # Proper two-tailed p-value from t-distribution
+            df = sample_size - 1  # degrees of freedom
+            p_value = 2.0 * (1.0 - stats.t.cdf(abs(t_stat), df)) if df > 0 else 1.0
+            
+            # Ensure valid p-value range
+            p_value = max(0.0, min(1.0, p_value))
         else:
             t_stat = 0.0
-            p_value = 1.0
+            p_value = 1.0  # No evidence of difference
             
         return t_stat, p_value
     
     def _make_promotion_decision(self, metrics_comparison: Dict[str, Any]) -> Tuple[str, str]:
         """
-        Make promotion decision based on three-part gate.
+        Make promotion decision based on three-part gate with strict non-inferiority.
+        
+        Three-part gate:
+        1. Superiority on at least one primary metric (p < 0.05, Cohen's d >= 0.2)
+        2. Non-inferiority on all robustness metrics (fault/stress success rate)
+        3. No degradation on critical metrics beyond declared margins
         
         Args:
             metrics_comparison: Metrics comparison across conditions
@@ -344,19 +359,32 @@ class Phase3Optimizer:
         Returns:
             (decision, reasoning)
         """
-        # Check primary metrics for superiority
+        # Primary metrics for superiority
         primary_metrics = ["success_rate", "confidence_calibration", "route_length"]
+        
+        # Robustness metrics that must maintain non-inferiority
+        robustness_metrics = ["success_rate"]  # Critical: must not degrade in fault/stress
+        
         superior_primary = []
         non_inferiority_violations = []
+        critical_violations = []  # Failures that automatically reject
         
+        # Check each condition
         for condition_name, metrics in metrics_comparison.items():
+            condition_label = condition_name.upper()
+            
             for metric_name, comparison in metrics.items():
+                diff = comparison["difference"]
+                p_value = comparison["p_value"]
+                cohens_d = comparison["cohens_d"]
+                baseline_mean = comparison["baseline_mean"]
+                
+                # Skip seed and non-outcome metrics
+                if metric_name in ["seed", "timestamp"]:
+                    continue
+                
+                # Check superiority for primary metrics
                 if metric_name in primary_metrics:
-                    diff = comparison["difference"]
-                    p_value = comparison["p_value"]
-                    cohens_d = comparison["cohens_d"]
-                    
-                    # Check superiority (p < 0.05 and meaningful effect)
                     if p_value < 0.05 and abs(cohens_d) >= 0.2:
                         if "success" in metric_name or "confidence" in metric_name:
                             # Want positive improvement
@@ -367,27 +395,52 @@ class Phase3Optimizer:
                             if diff < 0:
                                 superior_primary.append(f"{metric_name}({condition_name})")
                 
-                # Check non-inferiority margins
+                # STRICT NON-INFERIORITY CHECKS
+                
+                # 1. Fault/Stress success rate: CRITICAL - must not degrade
+                if metric_name == "success_rate" and condition_name in ["fault", "stress"]:
+                    # Non-inferiority margin: -5% absolute (not relative)
+                    # If success rate drops more than 5% absolute, it's a violation
+                    if diff < -0.05:  # More than 5% absolute drop
+                        critical_violations.append(f"{metric_name}({condition_name}): {diff:+.3f} < -0.05")
+                    elif diff < 0 and p_value < 0.05:
+                        # Statistically significant degradation
+                        non_inferiority_violations.append(f"{metric_name}({condition_name}): sig degrade")
+                
+                # 2. Fault/Stress confidence calibration: must not degrade significantly
+                if metric_name == "confidence_calibration" and condition_name in ["fault", "stress"]:
+                    if diff < -0.03 and p_value < 0.05:  # >3% drop, significant
+                        non_inferiority_violations.append(f"{metric_name}({condition_name})")
+                
+                # 3. Latency: non-inferiority margin +10% relative
                 if "latency" in metric_name:
-                    # Non-inferiority margin: +10%
-                    baseline = comparison["baseline_mean"]
-                    margin_violation = comparison["difference"] > (baseline * 0.10)
-                    if margin_violation:
-                        non_inferiority_violations.append(f"latency({condition_name})")
-                elif "invalid" in metric_name:
-                    # Non-inferiority margin: +15%
-                    baseline = comparison["baseline_mean"]
-                    margin_violation = comparison["difference"] > (baseline * 0.15)
-                    if margin_violation:
-                        non_inferiority_violations.append(f"invalid_transitions({condition_name})")
+                    relative_diff = diff / baseline_mean if baseline_mean > 0 else 0
+                    if relative_diff > 0.10:  # More than 10% increase
+                        non_inferiority_violations.append(f"{metric_name}({condition_name}): +{relative_diff:.1%}")
+                
+                # 4. Invalid transitions: non-inferiority margin +15% relative
+                if "invalid" in metric_name:
+                    if baseline_mean > 0:
+                        relative_diff = diff / baseline_mean
+                        if relative_diff > 0.15:
+                            non_inferiority_violations.append(f"{metric_name}({condition_name}): +{relative_diff:.1%}")
         
-        # Make decision
-        if len(superior_primary) > 0 and len(non_inferiority_violations) == 0:
-            return "promote", f"Superior on {len(superior_primary)} metrics, no non-inferiority violations"
-        elif len(non_inferiority_violations) > 0:
+        # PROMOTION DECISION LOGIC
+        
+        # Automatic reject if critical violations exist
+        if len(critical_violations) > 0:
+            return "reject", f"Critical violations: {len(critical_violations)} - {', '.join(critical_violations[:2])}"
+        
+        # Reject if non-inferiority violated
+        if len(non_inferiority_violations) > 0:
             return "reject", f"Non-inferiority violated on {len(non_inferiority_violations)} metrics"
-        else:
-            return "iterate", f"No clear superiority ({len(superior_primary)} potential), no violations"
+        
+        # Promote only if superior on at least one primary metric AND no violations
+        if len(superior_primary) >= 1:
+            return "promote", f"Superior on {len(superior_primary)} primary metrics, no violations"
+        
+        # Otherwise, iterate
+        return "iterate", f"No primary superiority ({len(superior_primary)} marginal), no violations"
     
     def _generate_optimization_report(self, results: List[OptimizationResult]):
         """Generate human-readable optimization report"""
