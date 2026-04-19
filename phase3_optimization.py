@@ -30,9 +30,13 @@ from governance_layer import (
     MetricsRegistry,
     TypedMetric,
     MetricType,
-    BoundedExperiment,
-    ExperimentTemplates,
     AcceptanceCriteria
+)
+
+# Import bounded experiment framework
+from bounded_experiment import (
+    BoundedExperiment,
+    ExperimentTemplates
 )
 
 # Import baseline utilities
@@ -445,7 +449,7 @@ class Phase3Optimizer:
 *QAGI Precursor Stack - Scientific Governance*
 """
         
-        with open(report_path, 'w') as f:
+        with open(report_path, 'w', encoding='utf-8') as f:
             f.write(report)
         
         logger.info(f"Generated optimization report: {report_path}")
