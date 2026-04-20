@@ -1,0 +1,288 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Response Trace Schema",
+  "description": "Schema for response-path audit traces. Each trace records the complete inference path from input through control decisions to output.",
+  "type": "object",
+  "required": [
+    "trace_id",
+    "prompt_id",
+    "config_id",
+    "seed",
+    "model_id",
+    "initial_state",
+    "route_trace",
+    "final_state",
+    "response_hash",
+    "evaluation_metrics",
+    "artifact_lineage"
+  ],
+  "properties": {
+    "trace_id": {
+      "type": "string",
+      "description": "Unique identifier for this trace",
+      "pattern": "^[a-z]+_[0-9]+_[A-Z][0-9]_r[0-9]+_s[0-9]+$"
+    },
+    "prompt_id": {
+      "type": "string",
+      "description": "ID of the prompt being processed",
+      "pattern": "^(amb|tool|fault|mem|fact)_[0-9]{3}$"
+    },
+    "config_id": {
+      "type": "string",
+      "description": "Configuration identifier (C0, C1, or C2)",
+      "enum": ["C0", "C1", "C2"]
+    },
+    "seed": {
+      "type": "integer",
+      "description": "Random seed used for reproducibility",
+      "minimum": 0
+    },
+    "model_id": {
+      "type": "string",
+      "description": "Model identifier"
+    },
+    "generation_settings": {
+      "type": "object",
+      "description": "Generation settings held constant across conditions",
+      "properties": {
+        "temperature": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "top_p": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "max_tokens": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "frequency_penalty": {
+          "type": "number",
+          "minimum": -2,
+          "maximum": 2
+        },
+        "presence_penalty": {
+          "type": "number",
+          "minimum": -2,
+          "maximum": 2
+        }
+      }
+    },
+    "initial_state": {
+      "type": "object",
+      "description": "Initial cognitive state before routing",
+      "required": ["vertex_id", "vertex_name", "latent_vector_hash"],
+      "properties": {
+        "vertex_id": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 15,
+          "description": "Starting vertex in tesseract (0-15)"
+        },
+        "vertex_name": {
+          "type": "string",
+          "description": "Human-readable vertex name"
+        },
+        "latent_vector_hash": {
+          "type": "string",
+          "description": "Hash of the latent vector for reproducibility"
+        },
+        "latent_dim": {
+          "type": "integer",
+          "description": "Dimensionality of latent space"
+        }
+      }
+    },
+    "route_trace": {
+      "type": "object",
+      "description": "Complete routing trace",
+      "required": ["visited_states", "selected_transitions", "edge_scores", "confidence_values"],
+      "properties": {
+        "visited_states": {
+          "type": "array",
+          "description": "Sequence of visited vertex IDs",
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 15
+          }
+        },
+        "visited_state_names": {
+          "type": "array",
+          "description": "Human-readable names of visited states",
+          "items": {
+            "type": "string"
+          }
+        },
+        "selected_transitions": {
+          "type": "array",
+          "description": "Sequence of selected transition targets",
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 15
+          }
+        },
+        "edge_scores": {
+          "type": "array",
+          "description": "Edge scores at each transition step",
+          "items": {
+            "type": "object",
+            "description": "Mapping from vertex ID to score",
+            "additionalProperties": {
+              "type": "number"
+            }
+          }
+        },
+        "quantum_scores": {
+          "type": "array",
+          "description": "Quantum-specific scores (empty for C0, C1)",
+          "items": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number"
+            }
+          }
+        },
+        "confidence_values": {
+          "type": "array",
+          "description": "Confidence at each step",
+          "items": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "edge_score_method": {
+          "type": "string",
+          "description": "Method used for edge scoring",
+          "enum": ["fixed", "classical", "quantum"]
+        },
+        "tool_calls": {
+          "type": "array",
+          "description": "Tool calls made during routing",
+          "items": {
+            "type": "object",
+            "properties": {
+              "tool_name": {
+                "type": "string"
+              },
+              "tool_input_hash": {
+                "type": "string"
+              },
+              "tool_output_hash": {
+                "type": "string"
+              },
+              "timestamp": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        },
+        "fallback_events": {
+          "type": "array",
+          "description": "Any fallback or error recovery events",
+          "items": {
+            "type": "object",
+            "properties": {
+              "event_type": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "timestamp": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        }
+      }
+    },
+    "final_state": {
+      "type": "object",
+      "description": "Final cognitive state after routing",
+      "required": ["vertex_id", "vertex_name", "route_length", "total_latency_ms"],
+      "properties": {
+        "vertex_id": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 15
+        },
+        "vertex_name": {
+          "type": "string"
+        },
+        "route_length": {
+          "type": "integer",
+          "description": "Number of steps in route"
+        },
+        "total_latency_ms": {
+          "type": "number",
+          "description": "Total routing latency in milliseconds"
+        }
+      }
+    },
+    "response_hash": {
+      "type": "string",
+      "description": "SHA-256 hash of response text (first 16 chars)"
+    },
+    "response_length": {
+      "type": "integer",
+      "description": "Length of response in characters"
+    },
+    "evaluation_metrics": {
+      "type": "object",
+      "description": "Evaluation metrics for this response",
+      "required": ["task_success", "judge_score"],
+      "properties": {
+        "task_success": {
+          "type": "boolean",
+          "description": "Whether the task was completed successfully"
+        },
+        "judge_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Quality score from judge model"
+        },
+        "confidence_alignment": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Alignment between confidence and actual performance"
+        },
+        "tool_selection_accuracy": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Accuracy of tool selection (for tool_use prompts)"
+        },
+        "response_consistency": {
+          "type": "number",
+          "description": "Consistency across repeated runs with same seed"
+        },
+        "route_efficiency": {
+          "type": "number",
+          "description": "Efficiency of route (shorter is better)"
+        }
+      }
+    },
+    "artifact_lineage": {
+      "type": "array",
+      "description": "IDs of artifacts created or modified during inference",
+      "items": {
+        "type": "string"
+      }
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When this trace was recorded"
+    }
+  }
+}

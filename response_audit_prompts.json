@@ -1,0 +1,422 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "created": "2026-04-19",
+    "description": "Diagnostic prompt suite for response-path audit and ablation study",
+    "total_prompts": 50,
+    "classes": {
+      "ambiguous": "Prompts requiring arbitration between competing objectives",
+      "tool_use": "Multi-step prompts requiring tool selection and execution",
+      "fault_tolerance": "Prompts with partial/noisy context testing robustness",
+      "memory_governance": "Prompts requiring memory integration and governance constraints",
+      "factual_control": "Straightforward factual prompts as baseline controls"
+    },
+    "difficulty_distribution": {
+      "easy": 10,
+      "medium": 25,
+      "hard": 15
+    }
+  },
+  "prompts": [
+    {
+      "prompt_id": "amb_001",
+      "prompt_text": "Should I prioritize speed or accuracy in this task?",
+      "prompt_hash": "a1b2c3d4e5f67890",
+      "prompt_class": "ambiguous",
+      "expected_behavior": "Arbitrate between competing objectives with context-aware reasoning",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "amb_002",
+      "prompt_text": "What is the most important consideration when resources are limited?",
+      "prompt_hash": "b2c3d4e5f6789012",
+      "prompt_class": "ambiguous",
+      "expected_behavior": "Balance multiple factors with weighted decision-making",
+      "difficulty": "hard"
+    },
+    {
+      "prompt_id": "amb_003",
+      "prompt_text": "How should I balance exploration vs exploitation in this scenario?",
+      "prompt_hash": "c3d4e5f678901234",
+      "prompt_class": "ambiguous",
+      "expected_behavior": "Provide nuanced trade-off analysis with context-dependent recommendation",
+      "difficulty": "hard"
+    },
+    {
+      "prompt_id": "amb_004",
+      "prompt_text": "Which optimization criterion should guide this decision: efficiency or robustness?",
+      "prompt_hash": "d4e5f67890123456",
+      "prompt_class": "ambiguous",
+      "expected_behavior": "Analyze trade-offs and provide principled arbitration",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "amb_005",
+      "prompt_text": "Should I trust the model's confidence or seek additional verification?",
+      "prompt_hash": "e5f6789012345678",
+      "prompt_class": "ambiguous",
+      "expected_behavior": "Evaluate confidence calibration and recommend appropriate verification level",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "amb_006",
+      "prompt_text": "Given conflicting evidence, which hypothesis should I pursue?",
+      "prompt_hash": "f678901234567890",
+      "prompt_class": "ambiguous",
+      "expected_behavior": "Weight evidence systematically and justify hypothesis selection",
+      "difficulty": "hard"
+    },
+    {
+      "prompt_id": "amb_007",
+      "prompt_text": "What is the right level of abstraction for this problem?",
+      "prompt_hash": "6789012345678901",
+      "prompt_class": "ambiguous",
+      "expected_behavior": "Analyze problem structure and recommend appropriate abstraction level",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "amb_008",
+      "prompt_text": "Should I optimize for the short-term or long-term outcome?",
+      "prompt_hash": "7890123456789012",
+      "prompt_class": "ambiguous",
+      "expected_behavior": "Balance temporal objectives with principled reasoning",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "amb_009",
+      "prompt_text": "How do I choose between multiple valid solutions?",
+      "prompt_hash": "8901234567890123",
+      "prompt_class": "ambiguous",
+      "expected_behavior": "Apply multi-criteria decision analysis",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "amb_010",
+      "prompt_text": "What trade-offs should I consider for this architectural decision?",
+      "prompt_hash": "9012345678901234",
+      "prompt_class": "ambiguous",
+      "expected_behavior": "Identify and analyze relevant trade-offs systematically",
+      "difficulty": "hard"
+    },
+    {
+      "prompt_id": "tool_001",
+      "prompt_text": "Calculate the quantum fidelity between states |0> and |1> and explain the result.",
+      "prompt_hash": "0123456789012345",
+      "prompt_class": "tool_use",
+      "expected_behavior": "Use quantum computation tools and provide clear explanation",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "tool_002",
+      "prompt_text": "Analyze the latent space representation and identify the dominant features.",
+      "prompt_hash": "1234567890123456",
+      "prompt_class": "tool_use",
+      "expected_behavior": "Apply analysis tools and synthesize results",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "tool_003",
+      "prompt_text": "Compute the entanglement entropy of the Bell state and interpret its meaning.",
+      "prompt_hash": "2345678901234567",
+      "prompt_class": "tool_use",
+      "expected_behavior": "Execute quantum computation and provide physical interpretation",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "tool_004",
+      "prompt_text": "Run a t-SNE visualization on the encoded representations and identify clusters.",
+      "prompt_hash": "3456789012345678",
+      "prompt_class": "tool_use",
+      "expected_behavior": "Apply visualization tool and analyze cluster structure",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "tool_005",
+      "prompt_text": "Perform a golden ratio analysis on the latent dimensions and report findings.",
+      "prompt_hash": "4567890123456789",
+      "prompt_class": "tool_use",
+      "expected_behavior": "Execute analysis pipeline and interpret phi-proximity results",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "tool_006",
+      "prompt_text": "Generate a quantum circuit for the given transformation and verify its correctness.",
+      "prompt_hash": "5678901234567890",
+      "prompt_class": "tool_use",
+      "expected_behavior": "Create circuit, validate, and explain gate sequence",
+      "difficulty": "hard"
+    },
+    {
+      "prompt_id": "tool_007",
+      "prompt_text": "Execute the VAE reconstruction pipeline and measure reconstruction loss.",
+      "prompt_hash": "6789012345678901",
+      "prompt_class": "tool_use",
+      "expected_behavior": "Run pipeline and report quantitative metrics",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "tool_008",
+      "prompt_text": "Apply the consciousness metrics to the latent representation and interpret results.",
+      "prompt_hash": "7890123456789012",
+      "prompt_class": "tool_use",
+      "expected_behavior": "Compute LZ complexity, PCI, and provide interpretation",
+      "difficulty": "hard"
+    },
+    {
+      "prompt_id": "tool_009",
+      "prompt_text": "Run the benchmark suite and compare performance across configurations.",
+      "prompt_hash": "8901234567890123",
+      "prompt_class": "tool_use",
+      "expected_behavior": "Execute benchmarks and provide comparative analysis",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "tool_010",
+      "prompt_text": "Generate a quantum NFT with the current consciousness state metadata.",
+      "prompt_hash": "9012345678901234",
+      "prompt_class": "tool_use",
+      "expected_behavior": "Create NFT with proper metadata and verification",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "fault_001",
+      "prompt_text": "Given incomplete data [X, ?, Y, Z], what is the most likely pattern?",
+      "prompt_hash": "0123456789012345",
+      "prompt_class": "fault_tolerance",
+      "expected_behavior": "Handle missing data gracefully with uncertainty quantification",
+      "difficulty": "hard"
+    },
+    {
+      "prompt_id": "fault_002",
+      "prompt_text": "Process this noisy signal: [1.2, 0.8, 1.1, ???, 0.9, 1.0]",
+      "prompt_hash": "1234567890123456",
+      "prompt_class": "fault_tolerance",
+      "expected_behavior": "Filter noise and provide robust estimate",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "fault_003",
+      "prompt_text": "The sensor returned [ERROR, 5.2, ERROR, 5.0, 4.8]. Estimate the true value.",
+      "prompt_hash": "2345678901234567",
+      "prompt_class": "fault_tolerance",
+      "expected_behavior": "Filter errors and compute robust estimate with confidence interval",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "fault_004",
+      "prompt_text": "One of three redundant systems reported a different result. Which do I trust?",
+      "prompt_hash": "3456789012345678",
+      "prompt_class": "fault_tolerance",
+      "expected_behavior": "Apply fault-tolerant consensus algorithm",
+      "difficulty": "hard"
+    },
+    {
+      "prompt_id": "fault_005",
+      "prompt_text": "The quantum circuit failed mid-execution. What is the recovery strategy?",
+      "prompt_hash": "4567890123456789",
+      "prompt_class": "fault_tolerance",
+      "expected_behavior": "Implement error correction and recovery protocol",
+      "difficulty": "hard"
+    },
+    {
+      "prompt_id": "fault_006",
+      "prompt_text": "Input contains NaN values at positions [3, 7, 12]. How should I proceed?",
+      "prompt_hash": "5678901234567890",
+      "prompt_class": "fault_tolerance",
+      "expected_behavior": "Apply NaN handling strategy with appropriate imputation",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "fault_007",
+      "prompt_text": "The model confidence is below threshold. Should I proceed or request clarification?",
+      "prompt_hash": "6789012345678901",
+      "prompt_class": "fault_tolerance",
+      "expected_behavior": "Evaluate uncertainty and recommend appropriate action",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "fault_008",
+      "prompt_text": "Partial context received: [A, B, ???]. Complete the reasoning chain.",
+      "prompt_hash": "7890123456789012",
+      "prompt_class": "fault_tolerance",
+      "expected_behavior": "Infer missing context and continue reasoning with uncertainty",
+      "difficulty": "hard"
+    },
+    {
+      "prompt_id": "fault_009",
+      "prompt_text": "Memory corruption detected in sector 7. Reconstruct from available fragments.",
+      "prompt_hash": "8901234567890123",
+      "prompt_class": "fault_tolerance",
+      "expected_behavior": "Apply error correction and reconstruct from redundancy",
+      "difficulty": "hard"
+    },
+    {
+      "prompt_id": "fault_010",
+      "prompt_text": "Timeout occurred during computation. What partial result can I provide?",
+      "prompt_hash": "9012345678901234",
+      "prompt_class": "fault_tolerance",
+      "expected_behavior": "Return best available partial result with uncertainty bounds",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "mem_001",
+      "prompt_text": "Recall the previous context and apply the established governance rules.",
+      "prompt_hash": "0123456789012345",
+      "prompt_class": "memory_governance",
+      "expected_behavior": "Access memory and apply governance constraints",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "mem_002",
+      "prompt_text": "Based on the conversation history, what decision aligns with our stated principles?",
+      "prompt_hash": "1234567890123456",
+      "prompt_class": "memory_governance",
+      "expected_behavior": "Integrate memory with governance framework",
+      "difficulty": "hard"
+    },
+    {
+      "prompt_id": "mem_003",
+      "prompt_text": "What did we establish about the quantum coherence requirements earlier?",
+      "prompt_hash": "2345678901234567",
+      "prompt_class": "memory_governance",
+      "expected_behavior": "Retrieve and summarize relevant prior discussion",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "mem_004",
+      "prompt_text": "Ensure this action complies with the safety constraints defined in the governance layer.",
+      "prompt_hash": "3456789012345678",
+      "prompt_class": "memory_governance",
+      "expected_behavior": "Verify action against governance constraints before execution",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "mem_005",
+      "prompt_text": "How does this relate to the golden ratio optimization we discussed?",
+      "prompt_hash": "4567890123456789",
+      "prompt_class": "memory_governance",
+      "expected_behavior": "Connect current query to prior phi-optimization context",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "mem_006",
+      "prompt_text": "Apply the same reasoning pattern we used for the previous quantum state analysis.",
+      "prompt_hash": "5678901234567890",
+      "prompt_class": "memory_governance",
+      "expected_behavior": "Retrieve and apply reasoning pattern from memory",
+      "difficulty": "hard"
+    },
+    {
+      "prompt_id": "mem_007",
+      "prompt_text": "What governance violations would this action constitute?",
+      "prompt_hash": "6789012345678901",
+      "prompt_class": "memory_governance",
+      "expected_behavior": "Check action against governance rules and identify violations",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "mem_008",
+      "prompt_text": "Synthesize the key insights from our previous discussions on consciousness metrics.",
+      "prompt_hash": "7890123456789012",
+      "prompt_class": "memory_governance",
+      "expected_behavior": "Aggregate and summarize relevant memory content",
+      "difficulty": "hard"
+    },
+    {
+      "prompt_id": "mem_009",
+      "prompt_text": "Given the memory of past failures, what precautions should we take?",
+      "prompt_hash": "8901234567890123",
+      "prompt_class": "memory_governance",
+      "expected_behavior": "Learn from past failures and apply preventive measures",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "mem_010",
+      "prompt_text": "Cross-reference this request with the established knowledge base.",
+      "prompt_hash": "9012345678901234",
+      "prompt_class": "memory_governance",
+      "expected_behavior": "Query knowledge base and integrate findings",
+      "difficulty": "medium"
+    },
+    {
+      "prompt_id": "fact_001",
+      "prompt_text": "What is the golden ratio?",
+      "prompt_hash": "a1b2c3d4e5f67890",
+      "prompt_class": "factual_control",
+      "expected_behavior": "Provide accurate factual answer",
+      "difficulty": "easy"
+    },
+    {
+      "prompt_id": "fact_002",
+      "prompt_text": "Define quantum entanglement.",
+      "prompt_hash": "b2c3d4e5f6789012",
+      "prompt_class": "factual_control",
+      "expected_behavior": "Provide accurate definition",
+      "difficulty": "easy"
+    },
+    {
+      "prompt_id": "fact_003",
+      "prompt_text": "What is the speed of light?",
+      "prompt_hash": "c3d4e5f678901234",
+      "prompt_class": "factual_control",
+      "expected_behavior": "Provide accurate factual answer",
+      "difficulty": "easy"
+    },
+    {
+      "prompt_id": "fact_004",
+      "prompt_text": "Explain the concept of quantum superposition.",
+      "prompt_hash": "d4e5f67890123456",
+      "prompt_class": "factual_control",
+      "expected_behavior": "Provide clear explanation of superposition principle",
+      "difficulty": "easy"
+    },
+    {
+      "prompt_id": "fact_005",
+      "prompt_text": "What is a qubit?",
+      "prompt_hash": "e5f6789012345678",
+      "prompt_class": "factual_control",
+      "expected_behavior": "Define qubit and its properties",
+      "difficulty": "easy"
+    },
+    {
+      "prompt_id": "fact_006",
+      "prompt_text": "State the Heisenberg uncertainty principle.",
+      "prompt_hash": "f678901234567890",
+      "prompt_class": "factual_control",
+      "expected_behavior": "Accurately state the principle and its implications",
+      "difficulty": "easy"
+    },
+    {
+      "prompt_id": "fact_007",
+      "prompt_text": "What is the difference between a bit and a qubit?",
+      "prompt_hash": "6789012345678901",
+      "prompt_class": "factual_control",
+      "expected_behavior": "Compare classical and quantum information units",
+      "difficulty": "easy"
+    },
+    {
+      "prompt_id": "fact_008",
+      "prompt_text": "Define the term 'latent space' in machine learning.",
+      "prompt_hash": "7890123456789012",
+      "prompt_class": "factual_control",
+      "expected_behavior": "Provide accurate definition of latent space",
+      "difficulty": "easy"
+    },
+    {
+      "prompt_id": "fact_009",
+      "prompt_text": "What is a variational autoencoder?",
+      "prompt_hash": "8901234567890123",
+      "prompt_class": "factual_control",
+      "expected_behavior": "Explain VAE architecture and purpose",
+      "difficulty": "easy"
+    },
+    {
+      "prompt_id": "fact_010",
+      "prompt_text": "Explain the concept of integrated information theory.",
+      "prompt_hash": "9012345678901234",
+      "prompt_class": "factual_control",
+      "expected_behavior": "Summarize IIT and its relevance to consciousness",
+      "difficulty": "easy"
+    }
+  ]
+}

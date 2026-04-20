@@ -1,0 +1,144 @@
+{
+  "by_config": {
+    "C0": {
+      "mean_judge_score": 0.6435851302074806,
+      "std_judge_score": 0.11209630807034479,
+      "task_success_rate": 1.0,
+      "mean_confidence_alignment": 0.8559882606901164,
+      "mean_route_length": 5,
+      "std_route_length": 0.0,
+      "mean_latency_ms": 0.018358230590820312,
+      "total_inferences": 150
+    },
+    "C1": {
+      "mean_judge_score": 0.6791859128281396,
+      "std_judge_score": 0.1164413764957518,
+      "task_success_rate": 0.6666666666666666,
+      "mean_confidence_alignment": 0.5414739530838212,
+      "mean_route_length": 7,
+      "std_route_length": 2.8379026190424126,
+      "mean_latency_ms": 0.20744005839029947,
+      "total_inferences": 150
+    },
+    "C2": {
+      "mean_judge_score": 0.802627791117721,
+      "std_judge_score": 0.040100653965488196,
+      "task_success_rate": 0.03333333333333333,
+      "mean_confidence_alignment": 0.8175235760697791,
+      "mean_route_length": 10.906666666666666,
+      "std_route_length": 0.6276264723657835,
+      "mean_latency_ms": 131.24901135762533,
+      "total_inferences": 150
+    }
+  },
+  "by_prompt_class": {
+    "fault_tolerance": {
+      "C0": {
+        "mean_judge_score": 0.5379843475868218,
+        "std_judge_score": 0.038351500088941184,
+        "count": 30
+      },
+      "C1": {
+        "mean_judge_score": 0.5379843475868218,
+        "std_judge_score": 0.038351500088941184,
+        "count": 30
+      },
+      "C2": {
+        "mean_judge_score": 0.7991859128281396,
+        "std_judge_score": 0.03451635008004703,
+        "count": 30
+      }
+    },
+    "memory_governance": {
+      "C0": {
+        "mean_judge_score": 0.6099804344835271,
+        "std_judge_score": 0.04793937511117648,
+        "count": 30
+      },
+      "C1": {
+        "mean_judge_score": 0.6099804344835271,
+        "std_judge_score": 0.04793937511117648,
+        "count": 30
+      },
+      "C2": {
+        "mean_judge_score": 0.7879843475868217,
+        "std_judge_score": 0.038351500088941184,
+        "count": 30
+      }
+    },
+    "ambiguous": {
+      "C0": {
+        "mean_judge_score": 0.6379843475868218,
+        "std_judge_score": 0.038351500088941184,
+        "count": 30
+      },
+      "C1": {
+        "mean_judge_score": 0.6379843475868218,
+        "std_judge_score": 0.038351500088941184,
+        "count": 30
+      },
+      "C2": {
+        "mean_judge_score": 0.8159882606901163,
+        "std_judge_score": 0.02876362506670589,
+        "count": 30
+      }
+    },
+    "tool_use": {
+      "C0": {
+        "mean_judge_score": 0.5879843475868217,
+        "std_judge_score": 0.038351500088941184,
+        "count": 30
+      },
+      "C1": {
+        "mean_judge_score": 0.7659882606901163,
+        "std_judge_score": 0.02876362506670589,
+        "count": 30
+      },
+      "C2": {
+        "mean_judge_score": 0.7659882606901163,
+        "std_judge_score": 0.02876362506670589,
+        "count": 30
+      }
+    },
+    "factual_control": {
+      "C0": {
+        "mean_judge_score": 0.8439921737934108,
+        "std_judge_score": 0.019175750044470592,
+        "count": 30
+      },
+      "C1": {
+        "mean_judge_score": 0.8439921737934108,
+        "std_judge_score": 0.019175750044470592,
+        "count": 30
+      },
+      "C2": {
+        "mean_judge_score": 0.8439921737934108,
+        "std_judge_score": 0.019175750044470592,
+        "count": 30
+      }
+    }
+  },
+  "pairwise_comparisons": {
+    "C1_vs_C0": {
+      "judge_score_diff": 0.03560078262065891,
+      "route_length_diff": 2,
+      "success_rate_diff": -0.33333333333333337,
+      "latency_diff_ms": 0.18908182779947916
+    },
+    "C2_vs_C1": {
+      "judge_score_diff": 0.12344187828958142,
+      "route_length_diff": 3.9066666666666663,
+      "success_rate_diff": -0.6333333333333333,
+      "latency_diff_ms": 131.04157129923504
+    },
+    "C2_vs_C0": {
+      "judge_score_diff": 0.15904266091024033,
+      "route_length_diff": 5.906666666666666,
+      "success_rate_diff": -0.9666666666666667,
+      "latency_diff_ms": 131.23065312703451
+    }
+  },
+  "statistical_tests": {
+    "note": "Use scipy.stats.ttest_ind for proper significance testing"
+  }
+}

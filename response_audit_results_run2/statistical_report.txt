@@ -1,0 +1,96 @@
+================================================================================
+STATISTICAL ANALYSIS REPORT
+================================================================================
+
+
+JUDGE_SCORE
+----------------------------------------
+
+ANOVA: F=113.05, p=0.0000, eta_sq=0.336
+  Significant: True
+
+Paired Comparisons:
+  C1 vs C0: Small significant difference (d=0.31)
+    Effect size (Cohen's d): 0.313
+    95% CI: [0.0241, 0.0471]
+  C2 vs C1: Large significant difference (d=1.42)
+    Effect size (Cohen's d): 1.422
+    95% CI: [0.1064, 0.1405]
+  C2 vs C0: Large significant difference (d=1.90)
+    Effect size (Cohen's d): 1.896
+    95% CI: [0.1451, 0.1730]
+
+TASK_SUCCESS
+----------------------------------------
+
+ANOVA: F=423.58, p=0.0000, eta_sq=0.655
+  Significant: True
+
+Paired Comparisons:
+  C1 vs C0: Small significant difference (d=-1.00)
+    Effect size (Cohen's d): -1.000
+    95% CI: [-0.4096, -0.2570]
+  C2 vs C1: Small significant difference (d=-1.78)
+    Effect size (Cohen's d): -1.776
+    95% CI: [-0.7113, -0.5553]
+  C2 vs C0: Small significant difference (d=-7.62)
+    Effect size (Cohen's d): -7.616
+    95% CI: [-0.9957, -0.9376]
+
+CONFIDENCE_ALIGNMENT
+----------------------------------------
+
+ANOVA: F=489.96, p=0.0000, eta_sq=0.687
+  Significant: True
+
+Paired Comparisons:
+  C1 vs C0: Small significant difference (d=-3.46)
+    Effect size (Cohen's d): -3.464
+    95% CI: [-0.3399, -0.2891]
+  C2 vs C1: Large significant difference (d=2.53)
+    Effect size (Cohen's d): 2.531
+    95% CI: [0.2557, 0.2964]
+  C2 vs C0: Small significant difference (d=-0.47)
+    Effect size (Cohen's d): -0.469
+    95% CI: [-0.0616, -0.0153]
+
+
+ANALYSIS BY PROMPT CLASS
+----------------------------------------
+
+AMBIGUOUS:
+  C0: 0.6380 ± 0.0377 (n=30)
+  C1: 0.6380 ± 0.0377 (n=30)
+  C2: 0.8160 ± 0.0283 (n=30)
+
+TOOL_USE:
+  C0: 0.5880 ± 0.0377 (n=30)
+  C1: 0.7660 ± 0.0283 (n=30)
+  C2: 0.7660 ± 0.0283 (n=30)
+
+FAULT_TOLERANCE:
+  C0: 0.5380 ± 0.0377 (n=30)
+  C1: 0.5380 ± 0.0377 (n=30)
+  C2: 0.7992 ± 0.0339 (n=30)
+
+MEMORY_GOVERNANCE:
+  C0: 0.6100 ± 0.0471 (n=30)
+  C1: 0.6100 ± 0.0471 (n=30)
+  C2: 0.7880 ± 0.0377 (n=30)
+
+FACTUAL_CONTROL:
+  C0: 0.8440 ± 0.0189 (n=30)
+  C1: 0.8440 ± 0.0189 (n=30)
+  C2: 0.8440 ± 0.0189 (n=30)
+
+
+CONCLUSIONS
+----------------------------------------
+
+[PASS] QUANTUM-ASSISTED ROUTING BENEFIT DETECTED
+  C2 shows significant improvement over C1 (p=0.0000, d=1.42)
+
+[PASS] TESSERACT TOPOLOGY BENEFIT DETECTED
+  C1 shows significant improvement over C0 (p=0.0000, d=0.31)
+
+================================================================================

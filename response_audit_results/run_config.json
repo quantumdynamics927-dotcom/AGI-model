@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-04-19T22:38:45.072504",
+  "model_id": "quantum_vae_v1",
+  "temperature": 0.7,
+  "num_prompts": 50,
+  "num_repeats": 3,
+  "configs": [
+    "C0",
+    "C1",
+    "C2"
+  ],
+  "prompt_classes": null,
+  "seeds": [
+    42,
+    123,
+    456,
+    789,
+    1024
+  ]
+}
