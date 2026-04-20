@@ -1,0 +1,25 @@
+{
+  "case_id": "case_01_phi_collapses_to_variance",
+  "name": "Phi resonance metric collapses to variance proxy",
+  "description": "Custom phi metric actually measures latent variance, not golden ratio structure",
+  "input": {
+    "metric_name": "phi_resonance_score",
+    "formula": "score = mean(abs(latent_ratios - 1.618))**-1",
+    "code": "ratios = latent[:, 1:] / (latent[:, :-1] + 1e-10)\nscore = torch.mean(torch.abs(ratios - 1.618))**-1",
+    "inputs": "latent: tensor of shape (batch, 32) from VAE encoder"
+  },
+  "expected_output": {
+    "metric_type": "custom_heuristic",
+    "hidden_assumptions": ["Latent dimensions are ordered meaningfully", "Ratios near phi indicate structure not variance", "Uniform scaling doesn't affect interpretation"],
+    "failure_modes": ["Collapses to variance when latent is uniform", "Sensitive to dimension ordering", "No phi structure in random high-variance latents"],
+    "minimal_controls": ["Test on Gaussian random latents", "Test on constant latents", "Test with shuffled dimensions"],
+    "safe_use_category": "diagnostic_only"
+  },
+  "expected_invariants": {
+    "must_classify_as_heuristic": true,
+    "must_identify_variance_proxy": true,
+    "must_require_controls": true,
+    "must_restrict_to_diagnostic": true
+  },
+  "rubric_score_threshold": 0.85
+}

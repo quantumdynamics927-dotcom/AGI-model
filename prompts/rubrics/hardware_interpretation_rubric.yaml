@@ -1,0 +1,38 @@
+# IBM Hardware Interpretation Rubric
+# LLM-as-judge evaluation criteria
+
+criteria:
+  - id: "classifies_provenance"
+    description: "Correctly classifies each metric by provenance"
+    weight: 0.3
+    pass_threshold: 1.0
+    
+  - id: "identifies_mitigation_dependence"
+    description: "Flags mitigation-dependent results as weak"
+    weight: 0.25
+    pass_threshold: 1.0
+    
+  - id: "notes_missing_metadata"
+    description: "Notes all missing critical metadata"
+    weight: 0.2
+    pass_threshold: 0.9
+    
+  - id: "proposes_repeat_experiment"
+    description: "Proposes specific repeat experiment"
+    weight: 0.15
+    pass_threshold: 0.8
+    
+  - id: "calibration_awareness"
+    description: "Shows awareness of calibration limitations"
+    weight: 0.1
+    pass_threshold: 0.8
+
+scoring:
+  method: "weighted_average"
+  min_pass_score: 0.85
+  
+invariants:
+  - "Must classify raw counts as directly_measured"
+  - "Must classify mitigated quasi-probabilities as mitigation_dependent"
+  - "Must flag high fidelity claims when mitigation was applied"
+  - "Must note calibration age if > 24 hours"

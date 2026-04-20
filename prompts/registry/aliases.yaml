@@ -1,0 +1,38 @@
+# Prompt Aliases Registry
+# Maps environment aliases to specific prompt versions
+# Edit this file to promote versions between environments
+
+benchmark_validity:
+  production: v1.0.0
+  staging: v1.0.0
+  development: v1.0.0
+
+ibm_hardware_result_interpretation:
+  production: v1.0.0
+  staging: v1.0.0
+  development: v1.0.0
+
+audit_custom_metric:
+  production: v1.0.0
+  staging: v1.0.0
+  development: v1.0.0
+
+interpret_results_conservatively:
+  production: v1.0.0
+  staging: v1.0.0
+  development: v1.0.0
+
+hostile_internal_skeptic:
+  production: v1.0.0
+  staging: v1.0.0
+  development: v1.0.0
+
+core_system_prompt:
+  production: v1.0.0
+  staging: v1.0.0
+  development: v1.0.0
+
+debug_tensor_shapes:
+  production: v1.0.0
+  staging: v1.0.0
+  development: v1.0.0

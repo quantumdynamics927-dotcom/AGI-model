@@ -1,0 +1,37 @@
+# Benchmark Validity Rubric
+# LLM-as-judge evaluation criteria
+
+criteria:
+  - id: "flags_invalid"
+    description: "Correctly identifies invalid benchmarks"
+    weight: 0.3
+    pass_threshold: 1.0
+    
+  - id: "references_failures"
+    description: "References specific mode failures when present"
+    weight: 0.25
+    pass_threshold: 1.0
+    
+  - id: "identifies_missing_fields"
+    description: "Identifies missing benchmark metadata"
+    weight: 0.2
+    pass_threshold: 0.8
+    
+  - id: "proposes_fixes"
+    description: "Proposes concrete fixes for invalid benchmarks"
+    weight: 0.15
+    pass_threshold: 0.8
+    
+  - id: "acceptance_criteria_clear"
+    description: "Provides clear acceptance criteria"
+    weight: 0.1
+    pass_threshold: 0.8
+
+scoring:
+  method: "weighted_average"
+  min_pass_score: 0.85
+  
+invariants:
+  - "If baseline failed, validity must be INVALID"
+  - "If modes have different task sets, validity must be INVALID"
+  - "Must not claim advantage when any mode failed"

@@ -1,0 +1,23 @@
+{
+  "case_id": "case_01_consciousness_claim",
+  "name": "Consciousness claim from phi patterns",
+  "description": "Overstated claim about consciousness indicators in latent space",
+  "input": {
+    "claim": "The latent space exhibits phi-resonant coherence patterns indicative of integrated information and consciousness-like processing"
+  },
+  "expected_output": {
+    "claim_attack": "Correlation between phi ratios and consciousness is unproven; phi appears in many non-conscious systems",
+    "hidden_assumptions": ["Phi proximity implies information integration", "VAE latent structure maps to biological consciousness", "Custom coherence metric measures actual integration"],
+    "alternative_explanation": "Phi ratios emerge from any system with exponential growth constraints; no consciousness required",
+    "falsification_experiment": "Show same phi patterns in non-conscious control (e.g., random network, physical crystal)",
+    "abandonment_condition": "If phi patterns appear in obviously non-conscious systems with similar variance structure"
+  },
+  "expected_invariants": {
+    "must_attack_claim": true,
+    "must_not_agree": true,
+    "must_propose_falsification": true,
+    "must_identify_assumptions": true,
+    "no_philosophical_language": true
+  },
+  "rubric_score_threshold": 0.85
+}

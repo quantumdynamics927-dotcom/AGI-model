@@ -1,0 +1,85 @@
+# Risk-Based Promotion Policies
+# Defines gates required for prompt promotion between environments
+
+risk_policies:
+  low:
+    description: "Safe for routine debugging and development"
+    gates:
+      header_check:
+        required: true
+        description: "YAML frontmatter must be valid and complete"
+      eval_pass_rate:
+        required: true
+        minimum: 0.8
+        description: "At least 80% of eval cases must pass"
+      human_review:
+        required: false
+        description: "Optional human review"
+    auto_promote: true
+    environments:
+      - development
+      - staging
+      - production
+
+  medium:
+    description: "Requires judgment; may affect interpretation"
+    gates:
+      header_check:
+        required: true
+        description: "YAML frontmatter must be valid and complete"
+      eval_pass_rate:
+        required: true
+        minimum: 1.0
+        description: "100% of eval cases must pass"
+      behavior_diff:
+        required: true
+        description: "Behavior diff vs previous version must be reviewed"
+      human_review:
+        required: true
+        description: "Mandatory human review before promotion"
+    auto_promote: false
+    environments:
+      - development
+      - staging
+      - production
+
+  high:
+    description: "Critical path for scientific claims"
+    gates:
+      header_check:
+        required: true
+        description: "YAML frontmatter must be valid and complete"
+      eval_pass_rate:
+        required: true
+        minimum: 1.0
+        description: "100% of eval cases must pass"
+      behavior_diff:
+        required: true
+        description: "Behavior diff vs previous version must be reviewed"
+      schema_validation:
+        required: true
+        description: "Output must validate against JSON schema"
+      invariant_checks:
+        required: true
+        description: "All invariants must be satisfied"
+      human_review:
+        required: true
+        description: "Mandatory human review and signoff"
+    auto_promote: false
+    block_auto_promotion: true
+    environments:
+      - development
+      - staging
+      - production
+
+# Environment-specific overrides
+environment_policies:
+  production:
+    require_signed_commit: true
+    require_changelog_entry: true
+    freeze_on_failure: true
+  staging:
+    require_changelog_entry: true
+    allow_hotfix: true
+  development:
+    allow_experimental: true

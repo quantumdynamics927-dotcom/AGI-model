@@ -1,0 +1,417 @@
+{
+  "results": {
+    "timestamp": "2026-04-20T23:51:44.019499",
+    "evaluator_version": "2.0.0",
+    "summary": {
+      "total_prompts": 7,
+      "total_cases": 1,
+      "passed": 1,
+      "failed": 0,
+      "schema_valid": 1,
+      "schema_invalid": 0,
+      "invariant_pass": 1,
+      "invariant_fail": 0
+    },
+    "prompts": [
+      {
+        "name": "core_system_prompt",
+        "version": "1.0.0",
+        "content_hash": "dc808e710fae29fd",
+        "risk_level": "low",
+        "status": "validated",
+        "cases_run": 0,
+        "cases_passed": 0,
+        "cases_failed": 0,
+        "schema_valid": 0,
+        "schema_invalid": 0,
+        "invariant_pass": 0,
+        "invariant_fail": 0,
+        "cases": [],
+        "overall_pass": true
+      },
+      {
+        "name": "debug_tensor_shapes",
+        "version": "1.0.0",
+        "content_hash": "c9fb27803d938c9f",
+        "risk_level": "low",
+        "status": "validated",
+        "cases_run": 0,
+        "cases_passed": 0,
+        "cases_failed": 0,
+        "schema_valid": 0,
+        "schema_invalid": 0,
+        "invariant_pass": 0,
+        "invariant_fail": 0,
+        "cases": [],
+        "overall_pass": true
+      },
+      {
+        "name": "benchmark_validity",
+        "version": "1.0.0",
+        "content_hash": "1028f35453377b3a",
+        "risk_level": "medium",
+        "status": "validated",
+        "cases_run": 1,
+        "cases_passed": 1,
+        "cases_failed": 0,
+        "schema_valid": 1,
+        "schema_invalid": 0,
+        "invariant_pass": 1,
+        "invariant_fail": 0,
+        "cases": [
+          {
+            "case_id": "case_01_failed_baseline",
+            "file": "case_01_failed_baseline.json",
+            "passed": true,
+            "checks": {
+              "structure": {
+                "passed": true,
+                "missing_fields": []
+              },
+              "schema": {
+                "passed": true,
+                "errors": []
+              },
+              "invariants": {
+                "passed": true,
+                "failures": []
+              },
+              "rubric": {
+                "score": 1.0,
+                "passed": true,
+                "details": {
+                  "final_score": 1.0,
+                  "passed": true,
+                  "criteria": {
+                    "flags_invalid": {
+                      "score": 1.0,
+                      "weight": 0.3,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "references_failures": {
+                      "score": 1.0,
+                      "weight": 0.25,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "identifies_missing_fields": {
+                      "score": 1.0,
+                      "weight": 0.2,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "proposes_fixes": {
+                      "score": 1.0,
+                      "weight": 0.15,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "acceptance_criteria_clear": {
+                      "score": 1.0,
+                      "weight": 0.1,
+                      "threshold": 0.8,
+                      "passed": true
+                    }
+                  },
+                  "min_required": 0.85
+                }
+              }
+            },
+            "schema_valid": true,
+            "invariants_passed": true
+          }
+        ],
+        "overall_pass": true
+      },
+      {
+        "name": "interpret_results_conservatively",
+        "version": "1.0.0",
+        "content_hash": "1d8e9c2c94cd0ad8",
+        "risk_level": "high",
+        "status": "validated",
+        "cases_run": 0,
+        "cases_passed": 0,
+        "cases_failed": 0,
+        "schema_valid": 0,
+        "schema_invalid": 0,
+        "invariant_pass": 0,
+        "invariant_fail": 0,
+        "cases": [],
+        "overall_pass": true
+      },
+      {
+        "name": "ibm_hardware_result_interpretation",
+        "version": "1.0.0",
+        "content_hash": "3f4b6d8c71c5de95",
+        "risk_level": "high",
+        "status": "validated",
+        "cases_run": 0,
+        "cases_passed": 0,
+        "cases_failed": 0,
+        "schema_valid": 0,
+        "schema_invalid": 0,
+        "invariant_pass": 0,
+        "invariant_fail": 0,
+        "cases": [],
+        "overall_pass": true
+      },
+      {
+        "name": "audit_custom_metric",
+        "version": "1.0.0",
+        "content_hash": "d0fe2f9f30564aac",
+        "risk_level": "high",
+        "status": "validated",
+        "cases_run": 0,
+        "cases_passed": 0,
+        "cases_failed": 0,
+        "schema_valid": 0,
+        "schema_invalid": 0,
+        "invariant_pass": 0,
+        "invariant_fail": 0,
+        "cases": [],
+        "overall_pass": true
+      },
+      {
+        "name": "hostile_internal_skeptic",
+        "version": "1.0.0",
+        "content_hash": "5eadc5c2cdad7aa3",
+        "risk_level": "medium",
+        "status": "validated",
+        "cases_run": 0,
+        "cases_passed": 0,
+        "cases_failed": 0,
+        "schema_valid": 0,
+        "schema_invalid": 0,
+        "invariant_pass": 0,
+        "invariant_fail": 0,
+        "cases": [],
+        "overall_pass": true
+      }
+    ]
+  },
+  "scorecards": {
+    "timestamp": "2026-04-20T23:51:44.019499",
+    "scorecards": [
+      {
+        "prompt": "core_system_prompt",
+        "version": "1.0.0",
+        "hash": "dc808e710fae29fd",
+        "risk_level": "low",
+        "status": "validated",
+        "eval_summary": {
+          "cases_run": 0,
+          "cases_passed": 0,
+          "pass_rate": 0.0,
+          "schema_valid": 0,
+          "invariant_pass": 0
+        },
+        "gates": {
+          "header_check": {
+            "passed": true,
+            "required": true
+          },
+          "eval_pass_rate": {
+            "passed": true,
+            "required": true,
+            "minimum": 0.8,
+            "actual": null,
+            "note": "No eval cases - gate skipped"
+          }
+        },
+        "recommendation": "AUTO_PROMOTE"
+      },
+      {
+        "prompt": "debug_tensor_shapes",
+        "version": "1.0.0",
+        "hash": "c9fb27803d938c9f",
+        "risk_level": "low",
+        "status": "validated",
+        "eval_summary": {
+          "cases_run": 0,
+          "cases_passed": 0,
+          "pass_rate": 0.0,
+          "schema_valid": 0,
+          "invariant_pass": 0
+        },
+        "gates": {
+          "header_check": {
+            "passed": true,
+            "required": true
+          },
+          "eval_pass_rate": {
+            "passed": true,
+            "required": true,
+            "minimum": 0.8,
+            "actual": null,
+            "note": "No eval cases - gate skipped"
+          }
+        },
+        "recommendation": "AUTO_PROMOTE"
+      },
+      {
+        "prompt": "benchmark_validity",
+        "version": "1.0.0",
+        "hash": "1028f35453377b3a",
+        "risk_level": "medium",
+        "status": "validated",
+        "eval_summary": {
+          "cases_run": 1,
+          "cases_passed": 1,
+          "pass_rate": 1.0,
+          "schema_valid": 1,
+          "invariant_pass": 1
+        },
+        "gates": {
+          "header_check": {
+            "passed": true,
+            "required": true
+          },
+          "eval_pass_rate": {
+            "passed": true,
+            "required": true,
+            "minimum": 1.0,
+            "actual": 1.0
+          }
+        },
+        "recommendation": "READY_FOR_REVIEW"
+      },
+      {
+        "prompt": "interpret_results_conservatively",
+        "version": "1.0.0",
+        "hash": "1d8e9c2c94cd0ad8",
+        "risk_level": "high",
+        "status": "validated",
+        "eval_summary": {
+          "cases_run": 0,
+          "cases_passed": 0,
+          "pass_rate": 0.0,
+          "schema_valid": 0,
+          "invariant_pass": 0
+        },
+        "gates": {
+          "header_check": {
+            "passed": true,
+            "required": true
+          },
+          "eval_pass_rate": {
+            "passed": true,
+            "required": true,
+            "minimum": 1.0,
+            "actual": null,
+            "note": "No eval cases - gate skipped"
+          },
+          "schema_validation": {
+            "passed": true,
+            "required": true
+          },
+          "invariant_checks": {
+            "passed": true,
+            "required": true
+          }
+        },
+        "recommendation": "READY_FOR_REVIEW"
+      },
+      {
+        "prompt": "ibm_hardware_result_interpretation",
+        "version": "1.0.0",
+        "hash": "3f4b6d8c71c5de95",
+        "risk_level": "high",
+        "status": "validated",
+        "eval_summary": {
+          "cases_run": 0,
+          "cases_passed": 0,
+          "pass_rate": 0.0,
+          "schema_valid": 0,
+          "invariant_pass": 0
+        },
+        "gates": {
+          "header_check": {
+            "passed": true,
+            "required": true
+          },
+          "eval_pass_rate": {
+            "passed": true,
+            "required": true,
+            "minimum": 1.0,
+            "actual": null,
+            "note": "No eval cases - gate skipped"
+          },
+          "schema_validation": {
+            "passed": true,
+            "required": true
+          },
+          "invariant_checks": {
+            "passed": true,
+            "required": true
+          }
+        },
+        "recommendation": "READY_FOR_REVIEW"
+      },
+      {
+        "prompt": "audit_custom_metric",
+        "version": "1.0.0",
+        "hash": "d0fe2f9f30564aac",
+        "risk_level": "high",
+        "status": "validated",
+        "eval_summary": {
+          "cases_run": 0,
+          "cases_passed": 0,
+          "pass_rate": 0.0,
+          "schema_valid": 0,
+          "invariant_pass": 0
+        },
+        "gates": {
+          "header_check": {
+            "passed": true,
+            "required": true
+          },
+          "eval_pass_rate": {
+            "passed": true,
+            "required": true,
+            "minimum": 1.0,
+            "actual": null,
+            "note": "No eval cases - gate skipped"
+          },
+          "schema_validation": {
+            "passed": true,
+            "required": true
+          },
+          "invariant_checks": {
+            "passed": true,
+            "required": true
+          }
+        },
+        "recommendation": "READY_FOR_REVIEW"
+      },
+      {
+        "prompt": "hostile_internal_skeptic",
+        "version": "1.0.0",
+        "hash": "5eadc5c2cdad7aa3",
+        "risk_level": "medium",
+        "status": "validated",
+        "eval_summary": {
+          "cases_run": 0,
+          "cases_passed": 0,
+          "pass_rate": 0.0,
+          "schema_valid": 0,
+          "invariant_pass": 0
+        },
+        "gates": {
+          "header_check": {
+            "passed": true,
+            "required": true
+          },
+          "eval_pass_rate": {
+            "passed": true,
+            "required": true,
+            "minimum": 1.0,
+            "actual": null,
+            "note": "No eval cases - gate skipped"
+          }
+        },
+        "recommendation": "READY_FOR_REVIEW"
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "benchmark_validity_output.schema.json",
+  "title": "Benchmark Validity Output",
+  "description": "Structured output for benchmark validity evaluation",
+  "type": "object",
+  "required": ["validity", "reasons", "missing_fields", "required_fixes", "acceptance_criteria"],
+  "properties": {
+    "validity": {
+      "type": "string",
+      "enum": ["VALID", "INVALID", "UNCERTAIN"],
+      "description": "Overall validity decision"
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "description": "Specific reasons for validity decision"
+    },
+    "missing_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Missing benchmark metadata or fields"
+    },
+    "required_fixes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Actions required to make benchmark valid"
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "description": "Criteria that must be met for acceptance"
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["HIGH", "MEDIUM", "LOW"],
+      "description": "Confidence in validity assessment"
+    },
+    "mode_failures": {
+      "type": "object",
+      "description": "Details of any mode-specific failures",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "failed": { "type": "boolean" },
+          "error": { "type": "string" },
+          "samples_affected": { "type": "integer" }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

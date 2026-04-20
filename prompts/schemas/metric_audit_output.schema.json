@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "metric_audit_output.schema.json",
+  "title": "Custom Metric Audit Output",
+  "description": "Structured output for custom metric trustworthiness evaluation",
+  "type": "object",
+  "required": ["metric_type", "hidden_assumptions", "failure_modes", "minimal_controls", "safe_use_category"],
+  "properties": {
+    "metric_type": {
+      "type": "string",
+      "enum": ["directly_measured", "derived_well_defined", "custom_heuristic", "currently_unreliable"],
+      "description": "Classification of metric type"
+    },
+    "hidden_assumptions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Assumptions not explicit in metric definition"
+    },
+    "failure_modes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Ways the metric can fail or mislead"
+    },
+    "minimal_controls": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Required control experiments"
+    },
+    "safe_use_category": {
+      "type": "string",
+      "enum": ["safe_for_decisions", "diagnostic_only", "unsafe_for_any_use", "requires_review"],
+      "description": "Recommended usage restrictions"
+    },
+    "proxy_analysis": {
+      "type": "object",
+      "properties": {
+        "collapses_to_variance": { "type": "boolean" },
+        "collapses_to_mean": { "type": "boolean" },
+        "correlates_with": { "type": "array", "items": { "type": "string" } },
+        "explanation": { "type": "string" }
+      }
+    },
+    "recommendations": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Specific recommendations for metric improvement or replacement"
+    }
+  },
+  "additionalProperties": false
+}
