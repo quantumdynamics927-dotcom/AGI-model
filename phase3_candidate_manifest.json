@@ -1,0 +1,155 @@
+{
+  "version": "1.0.0",
+  "description": "Phase 3 candidate optimization manifest",
+  "created_at": "2026-04-19T00:00:00Z",
+  "baseline_reference": "baseline_20260418_232605",
+  "optimization_phases": {
+    "tesseract_only": {
+      "description": "Tesseract routing optimization without biomimetic adaptation",
+      "parameters": {
+        "phi_prior_strength": {
+          "range": [0.5, 2.0],
+          "default": 1.0,
+          "step": 0.1,
+          "type": "continuous"
+        },
+        "routing_confidence_threshold": {
+          "range": [0.7, 0.95],
+          "default": 0.85,
+          "step": 0.05,
+          "type": "continuous"
+        },
+        "fault_mask_penalty": {
+          "range": [0.1, 1.0],
+          "default": 0.5,
+          "step": 0.1,
+          "type": "continuous"
+        },
+        "edge_score_weighting": {
+          "range": [0.5, 1.5],
+          "default": 1.0,
+          "step": 0.1,
+          "type": "continuous"
+        },
+        "transition_cost_weight": {
+          "range": [0.1, 2.0],
+          "default": 1.0,
+          "step": 0.2,
+          "type": "continuous"
+        }
+      },
+      "candidates": [
+        {
+          "candidate_id": "tess_001",
+          "description": "High phi prior emphasis",
+          "parameters": {
+            "phi_prior_strength": 1.5,
+            "routing_confidence_threshold": 0.85,
+            "fault_mask_penalty": 0.5,
+            "edge_score_weighting": 1.0,
+            "transition_cost_weight": 1.0
+          },
+          "status": "planned"
+        },
+        {
+          "candidate_id": "tess_002",
+          "description": "Conservative routing threshold",
+          "parameters": {
+            "phi_prior_strength": 1.0,
+            "routing_confidence_threshold": 0.90,
+            "fault_mask_penalty": 0.5,
+            "edge_score_weighting": 1.0,
+            "transition_cost_weight": 1.0
+          },
+          "status": "planned"
+        },
+        {
+          "candidate_id": "tess_003",
+          "description": "High fault penalty",
+          "parameters": {
+            "phi_prior_strength": 1.0,
+            "routing_confidence_threshold": 0.85,
+            "fault_mask_penalty": 0.8,
+            "edge_score_weighting": 1.0,
+            "transition_cost_weight": 1.0
+          },
+          "status": "planned"
+        },
+        {
+          "candidate_id": "tess_004",
+          "description": "Balanced optimization",
+          "parameters": {
+            "phi_prior_strength": 1.2,
+            "routing_confidence_threshold": 0.88,
+            "fault_mask_penalty": 0.6,
+            "edge_score_weighting": 1.1,
+            "transition_cost_weight": 1.2
+          },
+          "status": "planned"
+        }
+      ]
+    },
+    "tesseract_plus_biomimetic": {
+      "description": "Tesseract routing with biomimetic adaptation",
+      "activation_criteria": {
+        "tesseract_success": true,
+        "primary_metric_improvement": "≥1 metric",
+        "non_inferiority_maintained": true,
+        "effect_size_minimum": "≥0.1"
+      },
+      "biomimetic_parameters": {
+        "plasticity_rate": {
+          "range": [0.001, 0.05],
+          "default": 0.01,
+          "step": 0.005,
+          "type": "continuous"
+        },
+        "resilience_threshold": {
+          "range": [0.5, 0.9],
+          "default": 0.7,
+          "step": 0.05,
+          "type": "continuous"
+        },
+        "emergence_detection_window": {
+          "range": [5, 50],
+          "default": 20,
+          "step": 5,
+          "type": "discrete"
+        },
+        "adaptation_rate": {
+          "range": [0.01, 0.2],
+          "default": 0.05,
+          "step": 0.02,
+          "type": "continuous"
+        }
+      },
+      "candidates": []
+    }
+  },
+  "statistical_requirements": {
+    "samples_per_condition": 333,
+    "conditions": ["clean", "fault", "stress"],
+    "alpha_level": 0.05,
+    "multiple_comparisons_correction": "holm-bonferroni",
+    "effect_size_minimum": {
+      "primary_metrics": 0.2,
+      "secondary_metrics": 0.1
+    },
+    "non_inferiority_margins": {
+      "latency": 0.1,
+      "robustness": 0.05,
+      "invalid_transitions": 0.15
+    }
+  },
+  "acceptance_criteria": {
+    "primary_superiority": "≥1 primary metric with p<0.05 and Cohen's d≥0.2",
+    "non_inferiority": "latency and robustness within declared margins",
+    "meaningful_effect": "confidence intervals exclude trivial effects"
+  },
+  "governance_integration": {
+    "experiment_registration_required": true,
+    "metric_tracking_via_registry": true,
+    "raw_data_preservation": true,
+    "reproducibility_verification": true
+  }
+}
