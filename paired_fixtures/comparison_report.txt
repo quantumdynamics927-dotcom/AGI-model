@@ -1,0 +1,97 @@
+======================================================================
+VCapture Paired Comparison Report
+======================================================================
+
+Comparison ID: comp_ac226262632bd579_5c25d8e1932d1b5f
+Timestamp: 2026-04-21T17:23:57.839872
+Policy Version: 2.1.0
+Schema Version: 1.0.0
+
+======================================================================
+STATE CHANGES
+======================================================================
+
+  Baseline State: DEVELOPMENT
+  Hierarchical State: CANDIDATE
+  State Changed: YES
+  State Delta: development -> candidate
+
+  Baseline Eligible: YES
+  Hierarchical Eligible: YES
+  Eligibility Changed: NO
+
+======================================================================
+GATE CHANGES
+======================================================================
+
+  Gates Improved: 3
+  Gates Degraded: 0
+  Gates Unchanged: 5
+
+  Improved Gates:
+    ✓ residual_spread
+    ✓ portability
+    ✓ rank_stability_ci
+
+======================================================================
+GATE DELTAS
+======================================================================
+
+  replicate_count:
+    Status: pass → pass
+    Value: 3.0000 -> 3.0000 (Δ +0.0000)
+    Margin: +2.0000 -> +2.0000 (Δ +0.0000)
+
+  residual_spread:
+    Status: warning ↑ pass
+    Value: 0.0848 -> 0.0650 (Δ -0.0198)
+    Margin: +0.1152 -> +0.1350 (Δ +0.0198)
+
+  signal_to_separation:
+    Status: pass → pass
+    Value: 1.4236 -> 1.8000 (Δ +0.3764)
+    Margin: +0.4236 -> +0.8000 (Δ +0.3764)
+
+  portability:
+    Status: warning ↑ pass
+    Value: 0.8498 -> 0.9200 (Δ +0.0702)
+    Margin: -0.0002 -> +0.0700 (Δ +0.0702)
+
+  stability:
+    Status: pass → pass
+    Value: 0.0015 -> 0.0012 (Δ -0.0003)
+    Margin: +0.0085 -> +0.0088 (Δ +0.0003)
+
+  model_fit:
+    Status: pass → pass
+    Value: 0.9002 -> 0.9200 (Δ +0.0198)
+    Margin: +0.4002 -> +0.4200 (Δ +0.0198)
+
+  rank_stability_ci:
+    Status: warning ↑ pass
+    Value: 0.6000 -> 0.7500 (Δ +0.1500)
+    Margin: -0.1000 -> +0.0500 (Δ +0.1500)
+
+  cohort_coverage:
+    Status: pass → pass
+    Value: 1.0000 -> 1.0000 (Δ +0.0000)
+    Margin: +0.2000 -> +0.2000 (Δ +0.0000)
+
+======================================================================
+RECOMMENDATION
+======================================================================
+
+  Baseline: PROMOTE
+  Hierarchical: PROMOTE
+  Changed: NO
+
+  Overall Improvement: YES
+
+======================================================================
+PROVENANCE
+======================================================================
+
+  Baseline Path: raw_hardware/vcapture_ledger_report.json
+  Hierarchical Path: raw_hardware/hierarchical_ledger_report.json
+  Baseline Hash: ac226262632bd579
+  Hierarchical Hash: 5c25d8e1932d1b5f

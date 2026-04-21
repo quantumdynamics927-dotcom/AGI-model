@@ -234,6 +234,52 @@ class CanonicalGovernanceOutput:
             "calibration_version": self.calibration_version,
         }
     
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "CanonicalGovernanceOutput":
+        """Create CanonicalGovernanceOutput from dictionary (deserialized JSON)."""
+        # Parse gates from list of dicts
+        gates = []
+        for gate_data in data.get("gates", []):
+            gate_summary = GateSummary(
+                name=gate_data["name"],
+                status=GateStatus(gate_data["status"]),
+                value=gate_data["value"],
+                pass_threshold=gate_data["pass_threshold"],
+                warning_threshold=gate_data["warning_threshold"],
+                margin_to_pass=gate_data["margin_to_pass"],
+                message=gate_data["message"],
+            )
+            gates.append(gate_summary)
+        
+        return cls(
+            policy_version=data.get("policy_version", "2.1.0"),
+            state_machine_version=data.get("state_machine_version", "1.0.0"),
+            current_state=CalibrationState(data.get("current_state", "development")),
+            target_state=CalibrationState(data.get("target_state", "production")),
+            eligible_for_promotion=data.get("eligible_for_promotion", False),
+            requires_downgrade=data.get("requires_downgrade", False),
+            gate_counts=data.get("gate_counts", {"pass": 0, "warning": 0, "fail": 0}),
+            passing_gates=data.get("passing_gates", []),
+            warning_gates=data.get("warning_gates", []),
+            failing_gates=data.get("failing_gates", []),
+            gates=gates,
+            core_gates=data.get("core_gates", [
+                "replicate_count", "residual_spread", "signal_to_separation",
+                "portability", "stability", "model_fit"
+            ]),
+            optional_gates=data.get("optional_gates", [
+                "heldout_performance", "backend_drift", "rank_stability_ci", "cohort_coverage"
+            ]),
+            blocking_conditions=data.get("blocking_conditions", []),
+            downgrade_triggers=data.get("downgrade_triggers", []),
+            recommended_action=RecommendedAction(data.get("recommended_action", "hold")),
+            cohort_coverage=data.get("cohort_coverage"),
+            rank_stability_ci=data.get("rank_stability_ci"),
+            assessed_at=data.get("assessed_at", ""),
+            ledger_path=data.get("ledger_path", ""),
+            calibration_version=data.get("calibration_version", ""),
+        )
+    
     def to_json(self, indent: int = 2) -> str:
         """Convert to JSON string."""
         return json.dumps(self.to_dict(), indent=indent)

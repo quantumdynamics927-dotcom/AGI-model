@@ -1,0 +1,147 @@
+{
+  "comparison_id": "comp_ac226262632bd579_5c25d8e1932d1b5f",
+  "comparison_timestamp": "2026-04-21T17:23:57.839872",
+  "policy_version": "2.1.0",
+  "schema_version": "1.0.0",
+  "baseline_state": "development",
+  "baseline_eligible": true,
+  "baseline_gate_counts": {
+    "pass": 5,
+    "warning": 3,
+    "fail": 0
+  },
+  "hierarchical_state": "candidate",
+  "hierarchical_eligible": true,
+  "hierarchical_gate_counts": {
+    "pass": 8,
+    "warning": 0,
+    "fail": 0
+  },
+  "state_changed": true,
+  "state_delta": "development -> candidate",
+  "eligibility_changed": false,
+  "eligibility_delta": "unchanged",
+  "gates_improved": [
+    "residual_spread",
+    "portability",
+    "rank_stability_ci"
+  ],
+  "gates_degraded": [],
+  "gates_unchanged": [
+    "replicate_count",
+    "signal_to_separation",
+    "stability",
+    "model_fit",
+    "cohort_coverage"
+  ],
+  "gate_deltas": [
+    {
+      "gate_name": "replicate_count",
+      "baseline_status": "pass",
+      "hierarchical_status": "pass",
+      "status_change": "unchanged",
+      "baseline_value": 3.0,
+      "hierarchical_value": 3.0,
+      "value_delta": 0.0,
+      "baseline_margin": 2.0,
+      "hierarchical_margin": 2.0,
+      "margin_delta": 0.0
+    },
+    {
+      "gate_name": "residual_spread",
+      "baseline_status": "warning",
+      "hierarchical_status": "pass",
+      "status_change": "improved",
+      "baseline_value": 0.0848,
+      "hierarchical_value": 0.065,
+      "value_delta": -0.019799999999999998,
+      "baseline_margin": 0.1152,
+      "hierarchical_margin": 0.135,
+      "margin_delta": 0.019800000000000012
+    },
+    {
+      "gate_name": "signal_to_separation",
+      "baseline_status": "pass",
+      "hierarchical_status": "pass",
+      "status_change": "unchanged",
+      "baseline_value": 1.4236,
+      "hierarchical_value": 1.8,
+      "value_delta": 0.37640000000000007,
+      "baseline_margin": 0.4236,
+      "hierarchical_margin": 0.8,
+      "margin_delta": 0.37640000000000007
+    },
+    {
+      "gate_name": "portability",
+      "baseline_status": "warning",
+      "hierarchical_status": "pass",
+      "status_change": "improved",
+      "baseline_value": 0.8498,
+      "hierarchical_value": 0.92,
+      "value_delta": 0.07020000000000004,
+      "baseline_margin": -0.0002,
+      "hierarchical_margin": 0.07,
+      "margin_delta": 0.07020000000000001
+    },
+    {
+      "gate_name": "stability",
+      "baseline_status": "pass",
+      "hierarchical_status": "pass",
+      "status_change": "unchanged",
+      "baseline_value": 0.0015,
+      "hierarchical_value": 0.0012,
+      "value_delta": -0.00030000000000000014,
+      "baseline_margin": 0.0085,
+      "hierarchical_margin": 0.0088,
+      "margin_delta": 0.0002999999999999999
+    },
+    {
+      "gate_name": "model_fit",
+      "baseline_status": "pass",
+      "hierarchical_status": "pass",
+      "status_change": "unchanged",
+      "baseline_value": 0.9002,
+      "hierarchical_value": 0.92,
+      "value_delta": 0.01980000000000004,
+      "baseline_margin": 0.4002,
+      "hierarchical_margin": 0.42,
+      "margin_delta": 0.019799999999999984
+    },
+    {
+      "gate_name": "rank_stability_ci",
+      "baseline_status": "warning",
+      "hierarchical_status": "pass",
+      "status_change": "improved",
+      "baseline_value": 0.6,
+      "hierarchical_value": 0.75,
+      "value_delta": 0.15000000000000002,
+      "baseline_margin": -0.1,
+      "hierarchical_margin": 0.05,
+      "margin_delta": 0.15000000000000002
+    },
+    {
+      "gate_name": "cohort_coverage",
+      "baseline_status": "pass",
+      "hierarchical_status": "pass",
+      "status_change": "unchanged",
+      "baseline_value": 1.0,
+      "hierarchical_value": 1.0,
+      "value_delta": 0.0,
+      "baseline_margin": 0.2,
+      "hierarchical_margin": 0.2,
+      "margin_delta": 0.0
+    }
+  ],
+  "baseline_recommendation": "promote",
+  "hierarchical_recommendation": "promote",
+  "recommendation_changed": false,
+  "recommendation_delta": "unchanged",
+  "n_gates_improved": 3,
+  "n_gates_degraded": 0,
+  "n_gates_unchanged": 5,
+  "overall_improvement": true,
+  "baseline_path": "raw_hardware/vcapture_ledger_report.json",
+  "hierarchical_path": "raw_hardware/hierarchical_ledger_report.json",
+  "baseline_hash": "ac226262632bd579",
+  "hierarchical_hash": "5c25d8e1932d1b5f"
+}
