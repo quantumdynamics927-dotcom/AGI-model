@@ -6,6 +6,10 @@ gradio>=4.0.0
 
 # Local model routing
 ollama>=0.1.0
+aiohttp>=3.9.0  # Required for async Ollama calls
+
+# Audio support (Python 3.13 compatibility)
+pyaudioop>=1.0.0
 
 # Scientific computing
 torch>=2.0.0
