@@ -1,0 +1,113 @@
+{
+  "name": "development_2026_04_21",
+  "description": "Current calibration assessment from 2026-04-21",
+  "policy_version": "2.1.0",
+  "input_assessment": {
+    "current_state": "development",
+    "target_state": "production",
+    "eligible_for_promotion": true,
+    "requires_downgrade": false,
+    "gates": {
+      "replicate": {
+        "gate_name": "replicate_count",
+        "status": "pass",
+        "value": 3.0,
+        "pass_threshold": 1,
+        "warning_threshold": 1,
+        "margin_to_pass": 2.0,
+        "message": "Replicate count: 3 per cell, 30 total (pass)"
+      },
+      "residual": {
+        "gate_name": "residual_spread",
+        "status": "warning",
+        "value": 0.0848,
+        "pass_threshold": 0.2,
+        "warning_threshold": 0.3,
+        "margin_to_pass": 0.1152,
+        "message": "Residual spread: std=0.0848, mean=0.1417 (warning)"
+      },
+      "separation": {
+        "gate_name": "signal_to_separation",
+        "status": "pass",
+        "value": 1.4236,
+        "pass_threshold": 1.0,
+        "warning_threshold": 0.8,
+        "margin_to_pass": 0.4236,
+        "message": "Signal-to-separation: mean S/S=1.42 (pass)"
+      },
+      "portability": {
+        "gate_name": "portability",
+        "status": "warning",
+        "value": 0.8498,
+        "pass_threshold": 0.85,
+        "warning_threshold": 0.75,
+        "margin_to_pass": -0.0002,
+        "message": "Portability: efficiency=100.0%, ranking=0.70, score=85.0% (warning)"
+      },
+      "stability": {
+        "gate_name": "stability",
+        "status": "pass",
+        "value": 0.0015,
+        "pass_threshold": 0.01,
+        "warning_threshold": 0.02,
+        "margin_to_pass": 0.0085,
+        "message": "Stability: within-promoter std=0.001521 (pass)"
+      },
+      "model_fit": {
+        "gate_name": "model_fit",
+        "status": "pass",
+        "value": 0.9002,
+        "pass_threshold": 0.5,
+        "warning_threshold": 0.4,
+        "margin_to_pass": 0.4002,
+        "message": "Model fit: R\u00b2=0.9002 (pass)"
+      },
+      "rank_ci": {
+        "gate_name": "rank_stability_ci",
+        "status": "warning",
+        "value": 0.6,
+        "pass_threshold": 0.7,
+        "warning_threshold": 0.6,
+        "margin_to_pass": -0.1,
+        "message": "Rank stability CI: [0.60, 0.80] (warning)"
+      },
+      "coverage": {
+        "gate_name": "cohort_coverage",
+        "status": "pass",
+        "value": 1.0,
+        "pass_threshold": 0.8,
+        "warning_threshold": 0.7,
+        "margin_to_pass": 0.2,
+        "message": "Cohort coverage: 2/2 cells (pass)"
+      }
+    },
+    "blocking_issues": [],
+    "assessed_at": "2026-04-21T04:05:55.584733",
+    "ledger_path": "raw_hardware/vcapture_ledger_report.json",
+    "calibration_version": "1.0"
+  },
+  "expected_output": {
+    "current_state": "development",
+    "target_state": "production",
+    "eligible_for_promotion": true,
+    "requires_downgrade": false,
+    "gate_counts": {
+      "pass": 5,
+      "warning": 3,
+      "fail": 0
+    },
+    "recommended_action": "promote"
+  },
+  "expected_gate_counts": {
+    "pass": 5,
+    "warning": 3,
+    "fail": 0
+  },
+  "expected_state": "development",
+  "expected_action": "promote",
+  "tags": [
+    "historical",
+    "development",
+    "warnings"
+  ]
+}
