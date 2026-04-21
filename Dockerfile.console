@@ -1,0 +1,68 @@
+# Dockerfile for AGI Research Console
+# Includes Ollama for local model inference
+
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    wget \
+    git \
+    gnupg \
+    lsb-release \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Ollama
+RUN curl -fsSL https://ollama.com/install.sh | sh
+
+# Create non-root user for security
+RUN useradd -m -s /bin/bash appuser
+
+# Copy requirements first for caching
+COPY requirements_console.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application files
+COPY research_console.py .
+COPY vcapture_lifecycle_governance.py .
+COPY vcapture_canonical_schema.py .
+COPY vcapture_metric_schema.py .
+COPY vcapture_golden_tests.py .
+COPY vcapture_paired_fixtures.py .
+COPY phase3_optimization.py .
+COPY consciousness_validation_framework.py .
+COPY qagi_sacred_geometry_native.py .
+
+# Copy paired fixtures if available
+COPY paired_fixtures/ ./paired_fixtures/
+
+# Set ownership
+RUN chown -R appuser:appuser /app
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1
+ENV HF_SPACE=true
+ENV GRADIO_SERVER_NAME="0.0.0.0"
+ENV GRADIO_SERVER_PORT=7860
+ENV OLLAMA_HOST=0.0.0.0:11434
+
+# Expose ports
+EXPOSE 7860
+EXPOSE 11434
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
+    CMD curl -f http://localhost:7860/ || exit 1
+
+# Switch to non-root user
+USER appuser
+
+# Start script: Ollama + Gradio
+COPY start_console.sh .
+RUN chmod +x start_console.sh
+
+# Run the console
+CMD ["./start_console.sh"]

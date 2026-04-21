@@ -208,7 +208,7 @@ class MetricSchema:
         name="signal_to_separation",
         type=MetricType.RATIO,
         unit="ratio",
-        range=(0.0, 10.0),
+        range=(0.0, 500.0),
         comparison_direction=ComparisonDirection.HIGHER_IS_BETTER,
         threshold_semantics=ThresholdSemantics.MINIMUM,
         description="Ratio of between-promoter to within-promoter variance",

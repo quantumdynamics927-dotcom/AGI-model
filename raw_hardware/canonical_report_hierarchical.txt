@@ -1,0 +1,146 @@
+======================================================================
+VCapture Lifecycle Governance Assessment v2.1
+======================================================================
+
+Policy Version: 2.1.0
+State Machine Version: 1.0.0
+Assessed at: 2026-04-21T21:08:48.448901
+Ledger: raw_hardware\hierarchical_ledger_report.json
+Calibration version: 1.0
+
+======================================================================
+STATE MACHINE STATUS
+======================================================================
+
+  Current State: DEVELOPMENT
+  Target State: CANDIDATE
+  Eligible for Promotion: NO ✗
+  Requires Downgrade: NO
+
+  State Progression:
+    ● DEVELOPMENT
+    ○ CANDIDATE
+    ○ STAGING
+    ○ PRODUCTION
+    ○ RETIRED
+
+======================================================================
+GATE SUMMARY (CANONICAL)
+======================================================================
+
+  Total Gates: 8
+  Core Gates: 6
+  Optional Gates: 2
+
+  PASS: 6
+  WARNING: 1
+  FAIL: 1
+
+  Passing Gates:
+    ✓ replicate_count
+    ✓ residual_spread
+    ✓ signal_to_separation
+    ✓ stability
+    ✓ model_fit
+    ✓ cohort_coverage
+
+  Warning Gates:
+    ⚠ portability
+
+  Failing Gates:
+    ✗ rank_stability_ci
+
+======================================================================
+GATE DETAILS
+======================================================================
+
+  replicate_count:
+    Status: ✓ PASS
+    Value: 3.0000
+    Pass Threshold: 1.0000
+    Warning Threshold: 1.0000
+    Margin to Pass: +2.0000
+    Message: Replicate count: 3 per cell, 30 total (pass)
+
+  residual_spread:
+    Status: ✓ PASS
+    Value: 0.0005
+    Pass Threshold: 0.2000
+    Warning Threshold: 0.3000
+    Margin to Pass: +0.1995
+    Message: Residual spread: std=0.0005, mean=0.0000 (pass)
+
+  signal_to_separation:
+    Status: ✓ PASS
+    Value: 133.6682
+    Pass Threshold: 1.0000
+    Warning Threshold: 0.8000
+    Margin to Pass: +132.6682
+    Message: Signal-to-separation: mean S/S=133.67 (pass)
+
+  portability:
+    Status: ⚠ WARN
+    Value: 0.8498
+    Pass Threshold: 0.8500
+    Warning Threshold: 0.7500
+    Margin to Pass: -0.0002
+    Message: Portability: efficiency=100.0%, ranking=0.70, score=85.0% (warning)
+
+  stability:
+    Status: ✓ PASS
+    Value: 0.0005
+    Pass Threshold: 0.0100
+    Warning Threshold: 0.0200
+    Margin to Pass: +0.0095
+    Message: Stability: within-promoter std=0.000535 (pass)
+
+  model_fit:
+    Status: ✓ PASS
+    Value: 1.0000
+    Pass Threshold: 0.5000
+    Warning Threshold: 0.4000
+    Margin to Pass: +0.5000
+    Message: Model fit: R²=1.0000, interaction ratio=0.0000 (pass)
+
+  rank_stability_ci:
+    Status: ✗ FAIL
+    Value: 0.5839
+    Pass Threshold: 0.7000
+    Warning Threshold: 0.6000
+    Margin to Pass: -0.1161
+    Message: Rank stability CI: [0.58, 0.79] (fail)
+
+  cohort_coverage:
+    Status: ✓ PASS
+    Value: 1.0000
+    Pass Threshold: 0.8000
+    Warning Threshold: 0.7000
+    Margin to Pass: +0.2000
+    Message: Cohort coverage: 10/10 cells (pass)
+
+======================================================================
+BLOCKING CONDITIONS
+======================================================================
+
+  ✗ Rank stability CI: [0.58, 0.79] (fail)
+
+======================================================================
+RECOMMENDED ACTION
+======================================================================
+
+  REJECT
+
+======================================================================
+COHORT COVERAGE
+======================================================================
+
+  Total Promoters: 5
+  Promoters Above S/S: N/A
+  Cells with Min Replicates: 10/10
+
+======================================================================
+RANK STABILITY CI
+======================================================================
+
+  Point Estimate: 0.7000
+  95% CI: [0.5839, 0.7881]

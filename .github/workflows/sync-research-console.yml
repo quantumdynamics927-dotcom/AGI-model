@@ -1,0 +1,241 @@
+# Sync AGI Research Console to Hugging Face Space
+#
+# This workflow deploys the Research Console to a separate HF Space
+# from the existing agi-ollama-demo.
+#
+# Prerequisites:
+# - HF_TOKEN secret configured in GitHub repository
+# - Space created at: https://huggingface.co/spaces/Quantum927/agi-research-console
+#
+# IMPORTANT: Do not enable this workflow until PR #35 critical bugs are fixed:
+# - Layer weights not applied in ablation forward pass
+# - Zero-variance baseline in matched-controls ablation
+# - Hardcoded ranking_correlation = 0.7
+# - Inflated estimated_accuracy + 0.5
+
+name: Sync Research Console to HF
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      # Core console files
+      - 'research_console.py'
+      - 'requirements_console.txt'
+      - 'README_console.md'
+      - 'Dockerfile.console'
+      - 'start_console.sh'
+      # Backend dependencies
+      - 'vcapture_lifecycle_governance.py'
+      - 'vcapture_canonical_schema.py'
+      - 'vcapture_metric_schema.py'
+      - 'vcapture_golden_tests.py'
+      - 'vcapture_paired_fixtures.py'
+      - 'phase3_optimization.py'
+      - 'consciousness_validation_framework.py'
+      - 'qagi_sacred_geometry_native.py'
+      # Paired fixtures
+      - 'paired_fixtures/**'
+      # This workflow
+      - '.github/workflows/sync-research-console.yml'
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for manual deployment'
+        required: false
+        default: 'Manual trigger'
+
+jobs:
+  check-readiness:
+    runs-on: ubuntu-latest
+    outputs:
+      ready: ${{ steps.check.outputs.ready }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check if PR #35 bugs are fixed
+        id: check
+        run: |
+          echo "Checking for PR #35 critical bug fixes..."
+          
+          # Check 1: Layer weights applied in ablation
+          if grep -q "layer_weights" qagi_matched_controls_ablation.py 2>/dev/null; then
+            echo "✓ Layer weights check passed"
+            LAYER_WEIGHTS_OK=true
+          else
+            echo "✗ Layer weights not found in ablation"
+            LAYER_WEIGHTS_OK=false
+          fi
+          
+          # Check 2: No zero-variance baseline
+          if grep -q "std.*=.*0\.0" qagi_matched_controls_ablation.py 2>/dev/null; then
+            echo "✗ Zero-variance baseline detected"
+            ZERO_VAR_OK=false
+          else
+            echo "✓ No zero-variance baseline"
+            ZERO_VAR_OK=true
+          fi
+          
+          # Check 3: No hardcoded ranking_correlation
+          if grep -q "ranking_correlation.*=.*0\.7" qagi_matched_controls_ablation.py 2>/dev/null; then
+            echo "✗ Hardcoded ranking_correlation = 0.7 detected"
+            HARDCODED_OK=false
+          else
+            echo "✓ No hardcoded ranking_correlation"
+            HARDCODED_OK=true
+          fi
+          
+          # Check 4: No inflated accuracy
+          if grep -q "estimated_accuracy.*\+.*0\.5" qagi_matched_controls_ablation.py 2>/dev/null; then
+            echo "✗ Inflated estimated_accuracy detected"
+            INFLATED_OK=false
+          else
+            echo "✓ No inflated accuracy"
+            INFLATED_OK=true
+          fi
+          
+          # All checks must pass
+          if [ "$LAYER_WEIGHTS_OK" = "true" ] && [ "$ZERO_VAR_OK" = "true" ] && [ "$HARDCODED_OK" = "true" ] && [ "$INFLATED_OK" = "true" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+            echo "✅ All PR #35 bug fixes verified. Ready to deploy."
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "❌ PR #35 bugs not yet fixed. Deployment blocked."
+            echo "Please fix the following issues before deploying:"
+            [ "$LAYER_WEIGHTS_OK" = "false" ] && echo "  - Layer weights not applied in ablation forward pass"
+            [ "$ZERO_VAR_OK" = "false" ] && echo "  - Zero-variance baseline in matched-controls ablation"
+            [ "$HARDCODED_OK" = "false" ] && echo "  - Hardcoded ranking_correlation = 0.7"
+            [ "$INFLATED_OK" = "false" ] && echo "  - Inflated estimated_accuracy + 0.5"
+          fi
+
+  sync-to-hf:
+    needs: check-readiness
+    if: needs.check-readiness.outputs.ready == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      - name: Install Git LFS
+        run: git lfs install
+
+      - name: Configure Git
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+
+      - name: Check HF secrets
+        id: hf-secrets
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          if [ -z "${HF_TOKEN}" ]; then
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "❌ HF_TOKEN secret not configured"
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+            echo "✓ HF_TOKEN secret configured"
+          fi
+
+      - name: Create deployment directory
+        if: steps.hf-secrets.outputs.configured == 'true'
+        run: |
+          mkdir -p hf-console-deploy
+          cd hf-console-deploy
+          git init -b main
+
+      - name: Copy Research Console files
+        if: steps.hf-secrets.outputs.configured == 'true'
+        run: |
+          cd hf-console-deploy
+          
+          # Main app
+          cp ../research_console.py .
+          
+          # HF Space metadata
+          cp ../README_console.md README.md
+          
+          # Dependencies
+          cp ../requirements_console.txt requirements.txt
+          
+          # Docker (renamed for HF)
+          cp ../Dockerfile.console Dockerfile
+          cp ../start_console.sh .
+          
+          # Backend modules
+          cp ../vcapture_lifecycle_governance.py .
+          cp ../vcapture_canonical_schema.py .
+          cp ../vcapture_metric_schema.py .
+          cp ../vcapture_golden_tests.py .
+          cp ../vcapture_paired_fixtures.py .
+          cp ../phase3_optimization.py .
+          cp ../consciousness_validation_framework.py .
+          cp ../qagi_sacred_geometry_native.py .
+          
+          # Paired fixtures
+          cp -r ../paired_fixtures .
+          
+          # Create .gitignore
+          cat > .gitignore << 'EOF'
+          *.pyc
+          __pycache__/
+          *.py[cod]
+          .env
+          *.log
+          .DS_Store
+          EOF
+
+      - name: Push to Hugging Face Space
+        if: steps.hf-secrets.outputs.configured == 'true'
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          cd hf-console-deploy
+          
+          git add .
+          git commit -m "Deploy AGI Research Console from GitHub: ${{ github.sha }}"
+          
+          # Push to HF Space
+          git remote add hf https://Quantum927:${HF_TOKEN}@huggingface.co/spaces/Quantum927/agi-research-console
+          git push hf main --force
+
+      - name: Deployment summary
+        if: steps.hf-secrets.outputs.configured == 'true'
+        run: |
+          echo "## 🚀 Research Console Deployed" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Space URL**: https://huggingface.co/spaces/Quantum927/agi-research-console" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Files deployed**:" >> $GITHUB_STEP_SUMMARY
+          echo "- research_console.py" >> $GITHUB_STEP_SUMMARY
+          echo "- vcapture_*.py (governance modules)" >> $GITHUB_STEP_SUMMARY
+          echo "- phase3_optimization.py" >> $GITHUB_STEP_SUMMARY
+          echo "- consciousness_validation_framework.py" >> $GITHUB_STEP_SUMMARY
+          echo "- qagi_sacred_geometry_native.py" >> $GITHUB_STEP_SUMMARY
+          echo "- paired_fixtures/" >> $GITHUB_STEP_SUMMARY
+
+  blocked-notification:
+    needs: check-readiness
+    if: needs.check-readiness.outputs.ready == 'false'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment blocked
+        run: |
+          echo "## ⚠️ Deployment Blocked" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "PR #35 critical bugs have not been fixed yet." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Please fix the following before deploying:" >> $GITHUB_STEP_SUMMARY
+          echo "- [ ] Layer weights not applied in ablation forward pass" >> $GITHUB_STEP_SUMMARY
+          echo "- [ ] Zero-variance baseline in matched-controls ablation" >> $GITHUB_STEP_SUMMARY
+          echo "- [ ] Hardcoded ranking_correlation = 0.7" >> $GITHUB_STEP_SUMMARY
+          echo "- [ ] Inflated estimated_accuracy + 0.5" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "See PR #35 for details." >> $GITHUB_STEP_SUMMARY

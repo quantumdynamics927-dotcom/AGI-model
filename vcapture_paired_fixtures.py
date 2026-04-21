@@ -400,12 +400,12 @@ def create_baseline_fixture() -> CanonicalGovernanceOutput:
         state_machine_version="1.0.0",
         current_state=CalibrationState.DEVELOPMENT,
         target_state=CalibrationState.PRODUCTION,
-        eligible_for_promotion=True,
+        eligible_for_promotion=False,
         requires_downgrade=False,
-        gate_counts={"pass": 5, "warning": 3, "fail": 0},
+        gate_counts={"pass": 5, "warning": 2, "fail": 1},
         passing_gates=["replicate_count", "signal_to_separation", "stability", "model_fit", "cohort_coverage"],
-        warning_gates=["residual_spread", "portability", "rank_stability_ci"],
-        failing_gates=[],
+        warning_gates=["residual_spread", "portability"],
+        failing_gates=["rank_stability_ci"],
         gates=[
             GateSummary("replicate_count", GateStatus.PASS, 3.0, 1.0, 1.0, 2.0, "Replicate count: 3 per cell, 30 total (pass)"),
             GateSummary("residual_spread", GateStatus.WARNING, 0.0848, 0.20, 0.30, 0.1152, "Residual spread: std=0.0848, mean=0.1417 (warning)"),
@@ -413,13 +413,13 @@ def create_baseline_fixture() -> CanonicalGovernanceOutput:
             GateSummary("portability", GateStatus.WARNING, 0.8498, 0.85, 0.75, -0.0002, "Portability: efficiency=100.0%, ranking=0.70, score=85.0% (warning)"),
             GateSummary("stability", GateStatus.PASS, 0.0015, 0.01, 0.02, 0.0085, "Stability: within-promoter std=0.001521 (pass)"),
             GateSummary("model_fit", GateStatus.PASS, 0.9002, 0.50, 0.40, 0.4002, "Model fit: R²=0.9002 (pass)"),
-            GateSummary("rank_stability_ci", GateStatus.WARNING, 0.60, 0.70, 0.60, -0.10, "Rank stability CI: [0.60, 0.80] (warning)"),
+            GateSummary("rank_stability_ci", GateStatus.FAIL, 0.583855688035997, 0.70, 0.60, -0.11614431196400299, "Rank stability CI: [0.58, 0.79] (fail)"),
             GateSummary("cohort_coverage", GateStatus.PASS, 1.0, 0.80, 0.70, 0.20, "Cohort coverage: 2/2 cells (pass)"),
         ],
-        blocking_conditions=[],
+        blocking_conditions=["Rank stability CI: [0.58, 0.79] (fail)"],
         downgrade_triggers=[],
-        recommended_action=RecommendedAction.PROMOTE,
-        assessed_at="2026-04-21T04:05:55.584733",
+        recommended_action=RecommendedAction.REJECT,
+        assessed_at="2026-04-21T20:08:16.811883",
         ledger_path="raw_hardware/vcapture_ledger_report.json",
         calibration_version="1.0",
     )
@@ -534,6 +534,78 @@ def save_paired_fixtures(output_dir: Path):
     print(f"Saved: {index_path}")
 
 
+def save_paired_fixtures_from_files(
+    baseline_path: Path,
+    hierarchical_path: Path,
+    output_dir: Path,
+):
+    """Freeze paired fixtures from real canonical outputs."""
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    with open(baseline_path, 'r', encoding='utf-8') as f:
+        baseline = CanonicalGovernanceOutput.from_dict(json.load(f))
+
+    with open(hierarchical_path, 'r', encoding='utf-8') as f:
+        hierarchical = CanonicalGovernanceOutput.from_dict(json.load(f))
+
+    engine = PairedComparisonEngine()
+    delta = engine.compare(baseline, hierarchical)
+    delta.baseline_path = str(baseline_path)
+    delta.hierarchical_path = str(hierarchical_path)
+
+    frozen_baseline_path = output_dir / "baseline_canonical.json"
+    with open(frozen_baseline_path, 'w', encoding='utf-8') as f:
+        f.write(baseline.to_json())
+    print(f"Saved: {frozen_baseline_path}")
+
+    frozen_hierarchical_path = output_dir / "hierarchical_canonical.json"
+    with open(frozen_hierarchical_path, 'w', encoding='utf-8') as f:
+        f.write(hierarchical.to_json())
+    print(f"Saved: {frozen_hierarchical_path}")
+
+    delta_path = output_dir / "comparison_delta.json"
+    with open(delta_path, 'w', encoding='utf-8') as f:
+        f.write(engine.to_json(delta))
+    print(f"Saved: {delta_path}")
+
+    report_path = output_dir / "comparison_report.txt"
+    with open(report_path, 'w', encoding='utf-8') as f:
+        f.write(engine.to_text_report(delta))
+    print(f"Saved: {report_path}")
+
+    index = {
+        "policy_version": engine.policy_version,
+        "schema_version": engine.schema_version,
+        "created_at": datetime.now().isoformat(),
+        "fixtures": {
+            "baseline": {
+                "path": str(baseline_path),
+                "hash": delta.baseline_hash,
+                "state": baseline.current_state.value,
+                "gate_counts": baseline.gate_counts,
+            },
+            "hierarchical": {
+                "path": str(hierarchical_path),
+                "hash": delta.hierarchical_hash,
+                "state": hierarchical.current_state.value,
+                "gate_counts": hierarchical.gate_counts,
+            },
+            "delta": {
+                "path": str(delta_path),
+                "comparison_id": delta.comparison_id,
+                "overall_improvement": delta.overall_improvement,
+                "n_gates_improved": delta.n_gates_improved,
+                "n_gates_degraded": delta.n_gates_degraded,
+            },
+        },
+    }
+
+    index_path = output_dir / "index.json"
+    with open(index_path, 'w', encoding='utf-8') as f:
+        json.dump(index, f, indent=2)
+    print(f"Saved: {index_path}")
+
+
 # =============================================================================
 # VALIDATION
 # =============================================================================
@@ -636,13 +708,42 @@ def main():
     parser = argparse.ArgumentParser(description="VCapture Paired Comparison Fixtures")
     parser.add_argument("--create", action="store_true", help="Create paired fixtures")
     parser.add_argument("--validate", action="store_true", help="Validate paired fixtures")
+    parser.add_argument("--baseline", type=str, help="Baseline canonical output JSON")
+    parser.add_argument("--hierarchical", type=str, help="Hierarchical canonical output JSON")
+    parser.add_argument(
+        "--compare",
+        nargs=2,
+        metavar=("BASELINE", "HIERARCHICAL"),
+        help="Freeze paired fixtures from two canonical output JSON files",
+    )
     parser.add_argument("--output-dir", type=str, default="paired_fixtures", help="Output directory")
     
     args = parser.parse_args()
     
     if args.create:
-        print("Creating paired fixtures...")
-        save_paired_fixtures(Path(args.output_dir))
+        if bool(args.baseline) != bool(args.hierarchical):
+            parser.error("--baseline and --hierarchical must be provided together")
+
+        if args.baseline and args.hierarchical:
+            print("Creating paired fixtures from canonical outputs...")
+            save_paired_fixtures_from_files(
+                Path(args.baseline),
+                Path(args.hierarchical),
+                Path(args.output_dir),
+            )
+        else:
+            print("Creating paired fixtures...")
+            save_paired_fixtures(Path(args.output_dir))
+        print("Done.")
+    elif args.compare:
+        print("Creating paired fixtures from canonical outputs...")
+        baseline_path = Path(args.compare[0])
+        hierarchical_path = Path(args.compare[1])
+        save_paired_fixtures_from_files(
+            baseline_path,
+            hierarchical_path,
+            Path(args.output_dir),
+        )
         print("Done.")
     elif args.validate:
         print("Validating paired fixtures...")

@@ -509,26 +509,37 @@ class AblatedQAGISystem(nn.Module):
         
         # Input/output projection
         self.input_proj = nn.Linear(dim, dim)
+        self.integration = nn.Linear(dim * 5, dim)
         self.output_proj = nn.Linear(dim, dim)
     
     def forward(self, x: torch.Tensor) -> Dict[str, Any]:
         x = self.input_proj(x)
         
         # Layer 5: Outer Ring (containment)
-        x, contained = self.outer_ring(x)
+        boundary_out, contained = self.outer_ring(x)
         
         # Layer 4: Flower Lattice (memory)
-        x = self.flower_lattice(x)
+        lattice_out = self.flower_lattice(boundary_out)
         
         # Layer 3: Six Nodes (processing)
-        node_outputs = self.six_nodes(x)
-        x = node_outputs['combined']
+        node_outputs = self.six_nodes(lattice_out)
+        node_out = node_outputs['combined']
         
         # Layer 2: Star Mesh (entanglement)
-        x = self.star_mesh(x)
+        mesh_out = self.star_mesh(node_out)
         
         # Layer 1: Sierpinski Core (cognition)
-        x = self.sierpinski_core(x)
+        core_out = self.sierpinski_core(mesh_out)
+
+        weighted_outputs = torch.cat([
+            self.layer_weights[0] * boundary_out,
+            self.layer_weights[1] * lattice_out,
+            self.layer_weights[2] * node_out,
+            self.layer_weights[3] * mesh_out,
+            self.layer_weights[4] * core_out,
+        ], dim=-1)
+
+        x = self.integration(weighted_outputs)
         
         x = self.output_proj(x)
         
