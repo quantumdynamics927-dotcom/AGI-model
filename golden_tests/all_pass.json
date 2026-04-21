@@ -1,0 +1,95 @@
+{
+  "name": "all_pass",
+  "description": "All gates passing, ready for production",
+  "policy_version": "2.1.0",
+  "input_assessment": {
+    "current_state": "staging",
+    "target_state": "production",
+    "eligible_for_promotion": true,
+    "requires_downgrade": false,
+    "gates": {
+      "replicate": {
+        "gate_name": "replicate_count",
+        "status": "pass",
+        "value": 5.0,
+        "pass_threshold": 3,
+        "warning_threshold": 2,
+        "margin_to_pass": 2.0,
+        "message": "OK"
+      },
+      "residual": {
+        "gate_name": "residual_spread",
+        "status": "pass",
+        "value": 0.05,
+        "pass_threshold": 0.1,
+        "warning_threshold": 0.15,
+        "margin_to_pass": 0.05,
+        "message": "OK"
+      },
+      "separation": {
+        "gate_name": "signal_to_separation",
+        "status": "pass",
+        "value": 2.5,
+        "pass_threshold": 2.0,
+        "warning_threshold": 1.5,
+        "margin_to_pass": 0.5,
+        "message": "OK"
+      },
+      "portability": {
+        "gate_name": "portability",
+        "status": "pass",
+        "value": 0.92,
+        "pass_threshold": 0.85,
+        "warning_threshold": 0.75,
+        "margin_to_pass": 0.07,
+        "message": "OK"
+      },
+      "stability": {
+        "gate_name": "stability",
+        "status": "pass",
+        "value": 0.005,
+        "pass_threshold": 0.01,
+        "warning_threshold": 0.02,
+        "margin_to_pass": 0.005,
+        "message": "OK"
+      },
+      "model_fit": {
+        "gate_name": "model_fit",
+        "status": "pass",
+        "value": 0.85,
+        "pass_threshold": 0.7,
+        "warning_threshold": 0.6,
+        "margin_to_pass": 0.15,
+        "message": "OK"
+      }
+    },
+    "blocking_issues": [],
+    "assessed_at": "2026-04-21T12:00:00",
+    "ledger_path": "test/all_pass.json",
+    "calibration_version": "test"
+  },
+  "expected_output": {
+    "current_state": "staging",
+    "target_state": "production",
+    "eligible_for_promotion": true,
+    "requires_downgrade": false,
+    "gate_counts": {
+      "pass": 6,
+      "warning": 0,
+      "fail": 0
+    },
+    "recommended_action": "promote"
+  },
+  "expected_gate_counts": {
+    "pass": 6,
+    "warning": 0,
+    "fail": 0
+  },
+  "expected_state": "staging",
+  "expected_action": "promote",
+  "tags": [
+    "synthetic",
+    "all-pass",
+    "production-ready"
+  ]
+}

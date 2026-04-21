@@ -1,0 +1,137 @@
+{
+  "policy_version": "2.1.0",
+  "state_machine_version": "1.0.0",
+  "current_state": "candidate",
+  "target_state": "production",
+  "eligible_for_promotion": true,
+  "requires_downgrade": false,
+  "gate_counts": {
+    "pass": 8,
+    "warning": 0,
+    "fail": 0
+  },
+  "passing_gates": [
+    "replicate_count",
+    "residual_spread",
+    "signal_to_separation",
+    "portability",
+    "stability",
+    "model_fit",
+    "rank_stability_ci",
+    "cohort_coverage"
+  ],
+  "warning_gates": [],
+  "failing_gates": [],
+  "gates": [
+    {
+      "name": "replicate_count",
+      "status": "pass",
+      "value": 3.0,
+      "pass_threshold": 1.0,
+      "warning_threshold": 1.0,
+      "margin_to_pass": 2.0,
+      "message": "Replicate count: 3 per cell, 30 total (pass)",
+      "unit": "",
+      "comparison_direction": ""
+    },
+    {
+      "name": "residual_spread",
+      "status": "pass",
+      "value": 0.065,
+      "pass_threshold": 0.2,
+      "warning_threshold": 0.3,
+      "margin_to_pass": 0.135,
+      "message": "Residual spread: std=0.065, mean=0.08 (pass)",
+      "unit": "",
+      "comparison_direction": ""
+    },
+    {
+      "name": "signal_to_separation",
+      "status": "pass",
+      "value": 1.8,
+      "pass_threshold": 1.0,
+      "warning_threshold": 0.8,
+      "margin_to_pass": 0.8,
+      "message": "Signal-to-separation: mean S/S=1.8 (pass)",
+      "unit": "",
+      "comparison_direction": ""
+    },
+    {
+      "name": "portability",
+      "status": "pass",
+      "value": 0.92,
+      "pass_threshold": 0.85,
+      "warning_threshold": 0.75,
+      "margin_to_pass": 0.07,
+      "message": "Portability: efficiency=99.5%, ranking=0.85, score=92% (pass)",
+      "unit": "",
+      "comparison_direction": ""
+    },
+    {
+      "name": "stability",
+      "status": "pass",
+      "value": 0.0012,
+      "pass_threshold": 0.01,
+      "warning_threshold": 0.02,
+      "margin_to_pass": 0.0088,
+      "message": "Stability: within-promoter std=0.0012 (pass)",
+      "unit": "",
+      "comparison_direction": ""
+    },
+    {
+      "name": "model_fit",
+      "status": "pass",
+      "value": 0.92,
+      "pass_threshold": 0.5,
+      "warning_threshold": 0.4,
+      "margin_to_pass": 0.42,
+      "message": "Model fit: R\u00b2=0.92 (pass)",
+      "unit": "",
+      "comparison_direction": ""
+    },
+    {
+      "name": "rank_stability_ci",
+      "status": "pass",
+      "value": 0.75,
+      "pass_threshold": 0.7,
+      "warning_threshold": 0.6,
+      "margin_to_pass": 0.05,
+      "message": "Rank stability CI: [0.75, 0.88] (pass)",
+      "unit": "",
+      "comparison_direction": ""
+    },
+    {
+      "name": "cohort_coverage",
+      "status": "pass",
+      "value": 1.0,
+      "pass_threshold": 0.8,
+      "warning_threshold": 0.7,
+      "margin_to_pass": 0.2,
+      "message": "Cohort coverage: 2/2 cells (pass)",
+      "unit": "",
+      "comparison_direction": ""
+    }
+  ],
+  "core_gates": [
+    "replicate_count",
+    "residual_spread",
+    "signal_to_separation",
+    "portability",
+    "stability",
+    "model_fit"
+  ],
+  "optional_gates": [
+    "heldout_performance",
+    "backend_drift",
+    "rank_stability_ci",
+    "cohort_coverage"
+  ],
+  "blocking_conditions": [],
+  "downgrade_triggers": [],
+  "recommended_action": "promote",
+  "cohort_coverage": null,
+  "rank_stability_ci": null,
+  "assessed_at": "2026-04-21T12:00:00",
+  "ledger_path": "raw_hardware/hierarchical_ledger_report.json",
+  "calibration_version": "2.0"
+}

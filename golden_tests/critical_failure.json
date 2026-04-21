@@ -1,0 +1,99 @@
+{
+  "name": "critical_failure",
+  "description": "Critical gate failure requiring downgrade",
+  "policy_version": "2.1.0",
+  "input_assessment": {
+    "current_state": "staging",
+    "target_state": "production",
+    "eligible_for_promotion": false,
+    "requires_downgrade": true,
+    "gates": {
+      "replicate": {
+        "gate_name": "replicate_count",
+        "status": "pass",
+        "value": 3.0,
+        "pass_threshold": 3,
+        "warning_threshold": 2,
+        "margin_to_pass": 0.0,
+        "message": "OK"
+      },
+      "residual": {
+        "gate_name": "residual_spread",
+        "status": "fail",
+        "value": 0.25,
+        "pass_threshold": 0.1,
+        "warning_threshold": 0.15,
+        "margin_to_pass": -0.15,
+        "message": "FAIL"
+      },
+      "separation": {
+        "gate_name": "signal_to_separation",
+        "status": "pass",
+        "value": 2.0,
+        "pass_threshold": 2.0,
+        "warning_threshold": 1.5,
+        "margin_to_pass": 0.0,
+        "message": "OK"
+      },
+      "portability": {
+        "gate_name": "portability",
+        "status": "fail",
+        "value": 0.5,
+        "pass_threshold": 0.85,
+        "warning_threshold": 0.75,
+        "margin_to_pass": -0.35,
+        "message": "FAIL"
+      },
+      "stability": {
+        "gate_name": "stability",
+        "status": "fail",
+        "value": 0.05,
+        "pass_threshold": 0.01,
+        "warning_threshold": 0.02,
+        "margin_to_pass": -0.04,
+        "message": "FAIL"
+      },
+      "model_fit": {
+        "gate_name": "model_fit",
+        "status": "pass",
+        "value": 0.75,
+        "pass_threshold": 0.7,
+        "warning_threshold": 0.6,
+        "margin_to_pass": 0.05,
+        "message": "OK"
+      }
+    },
+    "blocking_issues": [
+      "residual_spread failed",
+      "portability failed",
+      "stability failed"
+    ],
+    "assessed_at": "2026-04-21T12:00:00",
+    "ledger_path": "test/critical_failure.json",
+    "calibration_version": "test"
+  },
+  "expected_output": {
+    "current_state": "staging",
+    "target_state": "production",
+    "eligible_for_promotion": false,
+    "requires_downgrade": true,
+    "gate_counts": {
+      "pass": 3,
+      "warning": 0,
+      "fail": 3
+    },
+    "recommended_action": "downgrade"
+  },
+  "expected_gate_counts": {
+    "pass": 3,
+    "warning": 0,
+    "fail": 3
+  },
+  "expected_state": "staging",
+  "expected_action": "downgrade",
+  "tags": [
+    "synthetic",
+    "critical-failure",
+    "downgrade"
+  ]
+}

@@ -1,0 +1,89 @@
+======================================================================
+VCapture Calibration Promotion Assessment
+======================================================================
+
+Assessed at: 2026-04-21T03:45:20.768016
+Ledger: raw_hardware\vcapture_ledger_report.json
+Calibration version: 1.0
+
+======================================================================
+PROMOTION DECISION
+======================================================================
+
+  Promotion Level: DEVELOPMENT
+  Eligible for Promotion: NO ✗
+  Overall Score: -0.0588
+
+======================================================================
+GATE RESULTS
+======================================================================
+
+  Replicate Count:
+    Status: ✓ PASS
+    Value: 3.0000
+    Threshold: 3.0000
+    Margin: +0.0000
+    Message: Replicate count sufficient: 3 per cell, 30 total
+
+  Residual Spread:
+    Status: ✗ FAIL
+    Value: 0.0848
+    Threshold: 0.1000
+    Margin: +0.0152
+    Message: Residual spread too high: std=0.0848 (max 0.1), mean=0.1417 (max 0.05)
+
+  Signal-to-Separation:
+    Status: ✗ FAIL
+    Value: 1.4236
+    Threshold: 2.0000
+    Margin: -0.5764
+    Message: Promoter separation insufficient: 2/10 promoters above threshold (need 50%), mean S/S=1.42
+
+  Portability:
+    Status: ✗ FAIL
+    Value: 0.8498
+    Threshold: 0.8500
+    Margin: -0.0002
+    Message: Calibration not portable: efficiency=100.0% (need 90%), ranking=0.70 (need 80%), score=85.0%
+
+  Stability:
+    Status: ✓ PASS
+    Value: 0.0015
+    Threshold: 0.0100
+    Margin: +0.0085
+    Message: Measurement stability sufficient: within-promoter std=0.001521
+
+  Model Fit:
+    Status: ✓ PASS
+    Value: 0.9002
+    Threshold: 0.7000
+    Margin: +0.2002
+    Message: Model fit sufficient: R²=0.9002, interaction ratio=0.0000
+
+======================================================================
+BLOCKING ISSUES
+======================================================================
+
+  • Residual spread too high: std=0.0848 (max 0.1), mean=0.1417 (max 0.05)
+  • Promoter separation insufficient: 2/10 promoters above threshold (need 50%), mean S/S=1.42
+  • Calibration not portable: efficiency=100.0% (need 90%), ranking=0.70 (need 80%), score=85.0%
+
+======================================================================
+RECOMMENDATIONS
+======================================================================
+
+  → Investigate residual outliers; consider robust calibration methods
+  → Increase promoter distinctiveness or reduce measurement noise
+  → Use backend-conditioned or hierarchical calibration instead of universal offset
+
+======================================================================
+PROMOTION CRITERIA REFERENCE
+======================================================================
+
+  PRODUCTION thresholds:
+    • Min replicates per cell: 3
+    • Max residual std: 0.1
+    • Min S/S ratio: 2.0
+    • Min transfer efficiency: 90%
+    • Min ranking correlation: 80%
+    • Min R²: 0.7
