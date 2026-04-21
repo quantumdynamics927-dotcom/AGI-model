@@ -226,7 +226,7 @@ The next scientific question in measurable form:
 
 ## Governance Maturity
 
-This is no longer just engineering support code. This is now **governance infrastructure for calibration promotion**.
+This is no longer just engineering support code. This is now **audit-grade governance architecture** for calibration promotion.
 
 The system converts empirical promoter runs into explicit go/no-go decisions backed by policy, with:
 - Falsifiable thresholds
@@ -234,3 +234,22 @@ The system converts empirical promoter runs into explicit go/no-go decisions bac
 - State machine for lifecycle management
 - Downgrade conditions for automatic demotion
 - Comparison framework for model selection
+- Semantic validation for all metrics
+- Golden test suite for reproducibility
+
+### Audit-Grade Requirements
+
+| Requirement | Status |
+|-------------|--------|
+| Canonical output schema | ✓ |
+| Semantic metric validation | ✓ |
+| Warning bands (3-tier) | ✓ |
+| State machine with downgrade | ✓ |
+| Golden test suite | ✓ |
+| Reproducible fixtures | ✓ |
+| Versioned policy evaluation | ✓ |
+| Historical records | ✓ |
+| Adversarial cases | ✓ |
+| Regression tests | ✓ |
+
+**Note**: "Audit-grade governance architecture" rather than "audit-grade confidence" - true audit-grade also requires ongoing operational validation, not just architectural soundness.
