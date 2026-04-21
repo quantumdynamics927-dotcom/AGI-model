@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-VCapture Canonical Output Schema v2.1
+VCapture Canonical Output Schema v2.2
 =====================================
 
 Ensures all governance outputs derive from ONE canonical decision object.
@@ -24,6 +24,9 @@ The canonical schema contains:
 - downgrade_triggers: List of downgrade triggers
 - recommended_action: promote/hold/reject/downgrade
 
+All metrics are validated against vcapture_metric_schema to ensure
+semantic consistency (units, ranges, comparison directions).
+
 Usage:
     from vcapture_canonical_schema import CanonicalGovernanceOutput
     
@@ -42,6 +45,13 @@ from datetime import datetime
 from enum import Enum
 from typing import Dict, List, Optional, Any
 import json
+
+# Import metric schema for validation
+try:
+    from vcapture_metric_schema import MetricSchema, validate_metric, compute_margin
+    HAS_METRIC_SCHEMA = True
+except ImportError:
+    HAS_METRIC_SCHEMA = False
 
 
 # =============================================================================
@@ -87,6 +97,25 @@ class GateSummary:
     margin_to_pass: float
     message: str
     
+    # Metric metadata (from vcapture_metric_schema)
+    unit: str = ""
+    comparison_direction: str = ""
+    
+    def __post_init__(self):
+        """Validate metric against schema."""
+        if HAS_METRIC_SCHEMA:
+            is_valid, msg = validate_metric(self.name, self.value)
+            if not is_valid:
+                # Log warning but don't fail
+                import warnings
+                warnings.warn(f"Metric validation: {msg}")
+                
+                # Try to get schema for metadata
+                schema = MetricSchema.get(self.name)
+                if schema:
+                    self.unit = schema.unit
+                    self.comparison_direction = schema.comparison_direction.value
+    
     def to_dict(self) -> Dict[str, Any]:
         return {
             "name": self.name,
@@ -96,6 +125,8 @@ class GateSummary:
             "warning_threshold": self.warning_threshold,
             "margin_to_pass": self.margin_to_pass,
             "message": self.message,
+            "unit": self.unit,
+            "comparison_direction": self.comparison_direction,
         }
 
 

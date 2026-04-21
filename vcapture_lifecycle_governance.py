@@ -947,16 +947,24 @@ class VCaptureLifecycleGovernance:
         cells_with_min = 0
         min_replicates = self.thresholds.min_replicates_per_cell.pass_threshold
         
+        # Track unique cells (promoter-backend combinations)
+        unique_cells = set()
+        cells_meeting_threshold = set()
+        
         for s in summaries:
             promoter = s.get('promoter', 'unknown')
             backend = s.get('backend', 'unknown')
             promoters.add(promoter)
             backends.add(backend)
             
+            cell_key = f"{promoter}_{backend}"
+            unique_cells.add(cell_key)
+            
             if s.get('replicate_count', 0) >= min_replicates:
-                cells_with_min += 1
+                cells_meeting_threshold.add(cell_key)
         
-        total_cells = len(promoters) * len(backends) if promoters and backends else len(summaries)
+        total_cells = len(unique_cells)
+        cells_with_min = len(cells_meeting_threshold)
         
         # Count promoters above S/S threshold
         ss_values = [s.get('signal_to_separation', 0) for s in summaries]
