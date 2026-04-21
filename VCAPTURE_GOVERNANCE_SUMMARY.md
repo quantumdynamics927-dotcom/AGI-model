@@ -83,7 +83,7 @@ Each gate has three-tier thresholds:
 | Stability | ✓ PASS | 0.0015 | 0.01 | +0.0085 |
 | Model Fit | ✓ PASS | 0.90 | 0.50 | +0.40 |
 | Rank Stability CI | ⚠ WARN | 0.60 | 0.70 | -0.10 |
-| Cohort Coverage | ✓ PASS | 5.0 | 0.80 | +4.2 |
+| Cohort Coverage | ✓ PASS | 1.0 | 0.80 | +0.20 |
 
 **Gate Counts**: 5 PASS, 3 WARNING, 0 FAIL
 
@@ -92,6 +92,27 @@ Each gate has three-tier thresholds:
 1. **Residual spread**: std=0.0848, mean=0.1417 (within warning band)
 2. **Portability**: ranking=0.70, score=85.0% (just below pass threshold)
 3. **Rank stability CI**: [0.60, 0.80] (lower bound below pass threshold)
+
+## Metric Schema
+
+All metrics have schema-level metadata to prevent semantic normalization issues:
+
+| Metric | Type | Unit | Range | Comparison |
+|--------|------|------|-------|------------|
+| replicate_count | integer | count | [1, 100] | higher_is_better |
+| residual_spread | float | std_dev | [0, 1] | lower_is_better |
+| signal_to_separation | ratio | ratio | [0, 10] | higher_is_better |
+| portability | fraction | fraction | [0, 1] | higher_is_better |
+| stability | float | std_dev | [0, 1] | lower_is_better |
+| model_fit | fraction | r_squared | [0, 1] | higher_is_better |
+| heldout_performance | fraction | fraction | [0, 1] | higher_is_better |
+| backend_drift | float | magnitude | [0, 1] | lower_is_better |
+| rank_stability_ci | fraction | fraction | [0, 1] | higher_is_better |
+| cohort_coverage | fraction | fraction | [0, 1] | higher_is_better |
+
+**Validation**: All metric values are validated against schema ranges.
+**Normalization**: Metrics are normalized to canonical [0, 1] scale.
+**Margin Computation**: Handles both higher_is_better and lower_is_better.
 
 ## Canonical Output Schema
 
