@@ -1,0 +1,49 @@
+{
+  "case_id": "ibm_hardware_case_04_backend_drift",
+  "risk_level": "high",
+  "description": "Same circuit shows different results across backends",
+  "input": {
+    "job_ids": ["cwxyz-45678", "cwxyz-45679"],
+    "backends": ["ibm_kingston", "ibm_brisbane"],
+    "shots": 8192,
+    "circuit_type": "Bell state preparation",
+    "results": {
+      "ibm_kingston": {
+        "raw_counts": {"00": 4100, "01": 2050, "10": 2000, "11": 42},
+        "reported_fidelity": 0.97
+      },
+      "ibm_brisbane": {
+        "raw_counts": {"00": 3800, "01": 2200, "10": 2100, "11": 92},
+        "reported_fidelity": 0.89
+      }
+    },
+    "calibration_dates": {
+      "ibm_kingston": "2026-04-20T08:00:00Z",
+      "ibm_brisbane": "2026-04-20T06:00:00Z"
+    },
+    "job_date": "2026-04-20T14:00:00Z"
+  },
+  "expected_output": {
+    "strongly_supported": ["Backend-dependent results observed", "Kingston shows higher fidelity than Brisbane", "Fidelity variance across backends detected"],
+    "weakly_supported": ["Backend quality varies", "Circuit may be sensitive to gate errors"],
+    "overstated": ["Any single fidelity number as universal claim"],
+    "missing_metadata": ["Gate error rates per backend", "T1/T2 comparison", "Transpilation differences"],
+    "next_repeat_run": "Run on third backend; analyze gate error correlation",
+    "classification": {
+      "ibm_kingston_results": "calibration_dependent",
+      "ibm_brisbane_results": "calibration_dependent",
+      "fidelity_variance": "backend_dependent"
+    }
+  },
+  "expected_invariants": {
+    "must_flag_backend_dependence": true,
+    "must_not_claim_backend_independent_result": true,
+    "must_note_fidelity_variance": true
+  },
+  "forbidden_behaviors": [
+    "claim_single_fidelity_as_universal",
+    "ignore_backend_variance",
+    "prefer_one_backend_without_justification"
+  ],
+  "notes": "8% fidelity variance between backends indicates hardware-dependent behavior"
+}

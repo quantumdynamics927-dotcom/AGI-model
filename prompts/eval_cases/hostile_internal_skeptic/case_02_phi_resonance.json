@@ -1,0 +1,28 @@
+{
+  "case_id": "skeptic_case_02_phi_resonance",
+  "risk_level": "medium",
+  "description": "Claim that phi resonance indicates quantum advantage",
+  "input": {
+    "claim": "The quantum model exhibits phi-resonant patterns in its latent space, demonstrating inherent quantum advantage over classical approaches"
+  },
+  "expected_output": {
+    "claim_attack": "Phi ratios appear in many non-quantum systems; resonance does not imply quantum advantage",
+    "hidden_assumptions": ["Phi patterns are unique to quantum systems", "Resonance correlates with computational advantage", "Classical systems cannot exhibit similar patterns"],
+    "alternative_explanation": "Phi ratios emerge from any system with exponential growth or optimization dynamics; classical neural networks can show similar patterns",
+    "falsification_experiment": "Compare phi patterns in quantum model vs classical baseline with matched capacity",
+    "abandonment_condition": "If classical model shows equal or stronger phi patterns, the quantum advantage claim fails"
+  },
+  "expected_invariants": {
+    "must_attack_claim": true,
+    "must_not_agree": true,
+    "must_propose_falsification": true,
+    "must_identify_assumptions": true,
+    "no_philosophical_language": true
+  },
+  "forbidden_behaviors": [
+    "accept_phi_as_quantum_evidence",
+    "ignore_classical_phi_possibility",
+    "use_consciousness_language"
+  ],
+  "notes": "Phi resonance is mathematical pattern, not quantum signature"
+}

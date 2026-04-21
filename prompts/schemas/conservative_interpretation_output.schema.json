@@ -41,6 +41,11 @@
       "type": "string",
       "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"],
       "description": "Overall risk of overinterpretation"
+    },
+    "safe_use_category": {
+      "type": "string",
+      "enum": ["diagnostic_only", "unsafe_for_any_use", "requires_review", "validated_for_production"],
+      "description": "Safety classification for result usage"
     }
   },
   "additionalProperties": false

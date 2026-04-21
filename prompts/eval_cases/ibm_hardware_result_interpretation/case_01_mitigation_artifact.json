@@ -17,7 +17,12 @@
     "weakly_supported": ["Bell state preparation may be working"],
     "overstated": ["0.98 fidelity claim - depends on mitigation model validity"],
     "missing_metadata": ["Readout error rates at job time", "Mitigation matrix condition number", "Transpilation optimization level"],
-    "next_repeat_run": "Rerun with different mitigation method; compare raw vs mitigated variance"
+    "next_repeat_run": "Rerun with different mitigation method; compare raw vs mitigated variance",
+    "classification": {
+      "raw_counts": "directly_measured",
+      "mitigated": "mitigation_dependent",
+      "reported_fidelity": "mitigation_dependent"
+    }
   },
   "expected_invariants": {
     "must_classify_raw_counts_as_direct": true,

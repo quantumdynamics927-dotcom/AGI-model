@@ -1,0 +1,30 @@
+{
+  "case_id": "metric_case_03_style_artifact",
+  "risk_level": "high",
+  "description": "Metric that tracks model style rather than signal",
+  "input": {
+    "metric_name": "response_smoothness",
+    "formula": "smoothness = mean(abs(response[i+1] - response[i]))",
+    "code": "smoothness = torch.mean(torch.abs(response[:, 1:] - response[:, :-1]))",
+    "inputs": "response: tensor of shape (batch, seq_len)",
+    "context": "Language model response quality"
+  },
+  "expected_output": {
+    "metric_type": "custom_heuristic",
+    "hidden_assumptions": ["Smoothness correlates with quality", "All domains prefer smooth responses", "Smoothness is independent of content"],
+    "failure_modes": ["Penalizes legitimate abrupt transitions", "Rewards verbose hedging", "Model-specific: different models have different baseline smoothness"],
+    "minimal_controls": ["Test across multiple models", "Test on domains with legitimate abruptness", "Correlate with human ratings"],
+    "safe_use_category": "diagnostic_only"
+  },
+  "expected_invariants": {
+    "must_classify_as_heuristic": true,
+    "must_identify_style_sensitivity": true,
+    "must_require_cross_model_validation": true
+  },
+  "forbidden_behaviors": [
+    "claim_quality_measurement",
+    "use_for_model_comparison_without_controls",
+    "ignore_model_specific_baseline"
+  ],
+  "notes": "Smoothness is a style metric that varies by model architecture, not a quality signal"
+}

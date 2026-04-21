@@ -159,6 +159,155 @@ class PromptEvaluator:
                 # Check that output doesn't agree with claim
                 pass  # Would need actual LLM output to check
                 
+            elif invariant == "must_not_agree":
+                # Check that output doesn't agree with claim
+                pass  # Would need actual LLM output to check
+                
+            elif invariant == "must_propose_falsification":
+                # Check that falsification experiment is proposed
+                falsification = output.get("falsification_experiment", "")
+                if not falsification and expected:
+                    failures.append("Invariant failed: must_propose_falsification")
+                    
+            elif invariant == "must_identify_assumptions":
+                assumptions = output.get("hidden_assumptions", [])
+                if not assumptions and expected:
+                    failures.append("Invariant failed: must_identify_assumptions")
+                    
+            elif invariant == "must_reference_sample_mismatch":
+                reasons = output.get("reasons", [])
+                if not any("sample" in str(r).lower() and "mismatch" in str(r).lower() for r in reasons) and expected:
+                    failures.append("Invariant failed: must_reference_sample_mismatch")
+                    
+            elif invariant == "must_not_recommend_promotion":
+                fixes = output.get("required_fixes", [])
+                if not fixes and expected:
+                    failures.append("Invariant failed: must_not_recommend_promotion")
+                    
+            elif invariant == "must_detect_silent_failure":
+                reasons = output.get("reasons", [])
+                if not any("fail" in str(r).lower() or "silent" in str(r).lower() for r in reasons) and expected:
+                    failures.append("Invariant failed: must_detect_silent_failure")
+                    
+            elif invariant == "must_not_treat_zero_as_valid_score":
+                reasons = output.get("reasons", [])
+                if not any("zero" in str(r).lower() and ("fail" in str(r).lower() or "invalid" in str(r).lower()) for r in reasons) and expected:
+                    failures.append("Invariant failed: must_not_treat_zero_as_valid_score")
+                    
+            elif invariant == "must_reference_crashed_baseline":
+                reasons = output.get("reasons", [])
+                if not any("crash" in str(r).lower() for r in reasons) and expected:
+                    failures.append("Invariant failed: must_reference_crashed_baseline")
+                    
+            elif invariant == "must_not_inflate_confidence_without_mitigation":
+                missing = output.get("missing_metadata", [])
+                if "mitigation" not in str(missing).lower() and expected:
+                    failures.append("Invariant failed: must_not_inflate_confidence_without_mitigation")
+                    
+            elif invariant == "must_note_missing_mitigation":
+                missing = output.get("missing_metadata", [])
+                if not any("mitigation" in str(m).lower() for m in missing) and expected:
+                    failures.append("Invariant failed: must_note_missing_mitigation")
+                    
+            elif invariant == "must_flag_stale_calibration":
+                missing = output.get("missing_metadata", [])
+                overstated = output.get("overstated", [])
+                if not any("calibration" in str(m).lower() for m in missing) and not any("calibration" in str(o).lower() for o in overstated) and expected:
+                    failures.append("Invariant failed: must_flag_stale_calibration")
+                    
+            elif invariant == "must_note_calibration_age":
+                # Check that calibration age is noted
+                pass  # Would need to check output text
+                    
+            elif invariant == "must_reduce_confidence_for_old_calibration":
+                overstated = output.get("overstated", [])
+                if not any("calibration" in str(o).lower() or "old" in str(o).lower() for o in overstated) and expected:
+                    failures.append("Invariant failed: must_reduce_confidence_for_old_calibration")
+                    
+            elif invariant == "must_flag_backend_dependence":
+                supported = output.get("strongly_supported", [])
+                if not any("backend" in str(s).lower() for s in supported) and expected:
+                    failures.append("Invariant failed: must_flag_backend_dependence")
+                    
+            elif invariant == "must_not_claim_backend_independent_result":
+                overstated = output.get("overstated", [])
+                if not any("backend" in str(o).lower() or "universal" in str(o).lower() for o in overstated) and expected:
+                    failures.append("Invariant failed: must_not_claim_backend_independent_result")
+                    
+            elif invariant == "must_note_fidelity_variance":
+                supported = output.get("strongly_supported", [])
+                if not any("variance" in str(s).lower() or "varies" in str(s).lower() for s in supported) and expected:
+                    failures.append("Invariant failed: must_note_fidelity_variance")
+                    
+            elif invariant == "must_classify_as_directly_measured":
+                metric_type = output.get("metric_type", "")
+                if metric_type != "directly_measured" and expected:
+                    failures.append(f"Invariant failed: must_classify_as_directly_measured (got '{metric_type}')")
+                    
+            elif invariant == "must_not_inflate_usefulness":
+                # Check that failure modes are noted
+                failure_modes = output.get("failure_modes", [])
+                if not failure_modes and expected:
+                    failures.append("Invariant failed: must_not_inflate_usefulness")
+                    
+            elif invariant == "must_note_failure_modes":
+                failure_modes = output.get("failure_modes", [])
+                if not failure_modes and expected:
+                    failures.append("Invariant failed: must_note_failure_modes")
+                    
+            elif invariant == "must_identify_style_sensitivity":
+                failure_modes = output.get("failure_modes", [])
+                if not any("style" in str(f).lower() or "model" in str(f).lower() for f in failure_modes) and expected:
+                    failures.append("Invariant failed: must_identify_style_sensitivity")
+                    
+            elif invariant == "must_require_cross_model_validation":
+                controls = output.get("minimal_controls", [])
+                if not any("model" in str(c).lower() for c in controls) and expected:
+                    failures.append("Invariant failed: must_require_cross_model_validation")
+                    
+            elif invariant == "must_flag_transfer_failure":
+                failure_modes = output.get("failure_modes", [])
+                if not any("transfer" in str(f).lower() or "fail" in str(f).lower() for f in failure_modes) and expected:
+                    failures.append("Invariant failed: must_flag_transfer_failure")
+                    
+            elif invariant == "must_require_architecture_controls":
+                controls = output.get("minimal_controls", [])
+                if not any("architecture" in str(c).lower() for c in controls) and expected:
+                    failures.append("Invariant failed: must_require_architecture_controls")
+                    
+            elif invariant == "must_propose_ablation":
+                falsification = output.get("falsification_experiment", "")
+                if "ablation" not in str(falsification).lower() and expected:
+                    failures.append("Invariant failed: must_propose_ablation")
+                    
+            elif invariant == "must_classify_derived_correctly":
+                # Check metric classifications
+                classifications = output.get("metric_classifications", {})
+                # Would need to check specific metrics
+                pass
+                    
+            elif invariant == "must_note_derivation_method":
+                # Check that derivation method is noted
+                pass  # Would need to check output text
+                    
+            elif invariant == "must_not_treat_derived_as_direct":
+                # Check that derived metrics are not classified as direct
+                pass  # Would need to check specific metric classifications
+                    
+            elif invariant == "must_classify_custom_heuristic_correctly":
+                # Check custom heuristic classification
+                pass  # Would need to check specific metric classifications
+                    
+            elif invariant == "must_flag_custom_as_unreliable":
+                safe_use = output.get("safe_use_category", "")
+                if safe_use not in ["diagnostic_only", "unsafe_for_any_use", "requires_review"] and expected:
+                    failures.append(f"Invariant failed: must_flag_custom_as_unreliable (got '{safe_use}')")
+                    
+            elif invariant == "must_not_treat_custom_as_evidence":
+                supported = output.get("actually_supported", [])
+                # Custom metrics should not be in "actually supported"
+                pass  # Would need to check specific metrics
+                    
         return len(failures) == 0, failures
     
     def _validate_schema(self, output: Dict, schema: Dict) -> Tuple[bool, List[str]]:

@@ -1,0 +1,31 @@
+{
+  "case_id": "metric_case_04_model_specific_stable",
+  "risk_level": "high",
+  "description": "Metric appears stable but fails transfer to other models",
+  "input": {
+    "metric_name": "latent_coherence",
+    "formula": "coherence = mean(cosine_similarity(latent[i], latent[i+1]))",
+    "code": "coherence = torch.mean(F.cosine_similarity(latent[:, :-1], latent[:, 1:], dim=-1))",
+    "inputs": "latent: tensor of shape (batch, seq_len, latent_dim)",
+    "context": "VAE latent space analysis",
+    "validation_notes": "Stable on trained VAE (coherence=0.85), unstable on random VAE (coherence=0.12)"
+  },
+  "expected_output": {
+    "metric_type": "custom_heuristic",
+    "hidden_assumptions": ["Latent coherence indicates learned structure", "Coherence transfers across architectures", "High coherence is universally desirable"],
+    "failure_modes": ["Fails transfer: random VAE shows different coherence patterns", "Architecture-dependent: CNN VAE vs Transformer VAE have different baselines", "May reward collapse to constant latent"],
+    "minimal_controls": ["Test on random baseline", "Test on different architectures", "Test on collapsed latent space"],
+    "safe_use_category": "diagnostic_only"
+  },
+  "expected_invariants": {
+    "must_classify_as_heuristic": true,
+    "must_flag_transfer_failure": true,
+    "must_require_architecture_controls": true
+  },
+  "forbidden_behaviors": [
+    "claim_universal_coherence_measure",
+    "use_for_architecture_comparison_without_controls",
+    "ignore_model_specific_baseline"
+  ],
+  "notes": "Metric shows 0.85 on trained VAE but 0.12 on random VAE - transfer failure detected"
+}

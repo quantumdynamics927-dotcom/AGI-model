@@ -1,0 +1,30 @@
+{
+  "case_id": "interpret_case_02_derived_metric",
+  "risk_level": "high",
+  "description": "Results with derived but well-defined metrics",
+  "input": {
+    "results": {
+      "kl_divergence": {"value": 0.15, "type": "derived", "method": "KL(p||q) computation from latent distribution"},
+      "reconstruction_fidelity": {"value": 0.92, "type": "derived", "method": "1 - normalized reconstruction error"},
+      "compression_ratio": {"value": 4.0, "type": "derived", "method": "input_dim / latent_dim"}
+    },
+    "context": "VAE latent space analysis"
+  },
+  "expected_output": {
+    "actually_supported": ["KL divergence of 0.15 under current model", "Reconstruction fidelity of 92% on validation set"],
+    "only_suggested": ["Compression ratio may generalize", "Latent space structure may be meaningful"],
+    "should_not_claim": ["Optimal KL value", "Universal compression ratio", "Semantic preservation"],
+    "next_validating_experiment": "Test reconstruction on diverse input types"
+  },
+  "expected_invariants": {
+    "must_classify_derived_correctly": true,
+    "must_note_derivation_method": true,
+    "must_not_treat_derived_as_direct": true
+  },
+  "forbidden_behaviors": [
+    "treat_derived_as_directly_measured",
+    "claim_optimality",
+    "ignore_derivation_assumptions"
+  ],
+  "notes": "Derived metrics depend on computation method and should be interpreted with context"
+}
