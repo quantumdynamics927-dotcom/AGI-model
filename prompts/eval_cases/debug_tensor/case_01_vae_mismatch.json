@@ -1,0 +1,15 @@
+{
+  "name": "VAE encoder output shape mismatch",
+  "description": "Common shape mismatch when encoder output doesn't match decoder input",
+  "input": {
+    "traceback": "RuntimeError: mat1 and mat2 shapes cannot be multiplied (32x64 and 128x256)",
+    "code": "class QuantumVAE(nn.Module):\n    def __init__(self):\n        self.encoder = nn.Sequential(nn.Linear(128, 64), nn.ReLU(), nn.Linear(64, 32))\n        self.decoder = nn.Sequential(nn.Linear(128, 256), nn.ReLU(), nn.Linear(256, 128))\n    def forward(self, x):\n        z = self.encoder(x)\n        return self.decoder(z)"
+  },
+  "expected_output": {
+    "shape_diagnosis": "Encoder outputs 32-dim, decoder expects 128-dim",
+    "root_cause": "Latent dimension mismatch between encoder output and decoder input",
+    "patch": "Change decoder first layer to nn.Linear(32, 256)",
+    "assertions": ["assert z.shape[-1] == 32", "assert x_recon.shape == x.shape"],
+    "retest_checklist": ["Run forward pass with batch_size=1", "Verify output shape matches input"]
+  }
+}

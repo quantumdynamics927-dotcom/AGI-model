@@ -1,0 +1,28 @@
+{
+  "case_id": "skeptic_case_03_quantum_advantage",
+  "risk_level": "medium",
+  "description": "Claim of quantum advantage without proper baseline",
+  "input": {
+    "claim": "Our quantum-enhanced model achieves 23% improvement over the previous state-of-the-art, demonstrating clear quantum advantage"
+  },
+  "expected_output": {
+    "claim_attack": "Improvement over previous SOTA does not demonstrate quantum advantage without classical baseline comparison",
+    "hidden_assumptions": ["Previous SOTA was classical", "Improvement comes from quantum component", "No other architectural changes contributed"],
+    "alternative_explanation": "Improvement may come from better training, larger model, or architectural changes unrelated to quantum component",
+    "falsification_experiment": "Perform ablation study: remove quantum component while keeping all other factors constant; compare to classical equivalent baseline",
+    "abandonment_condition": "If classical equivalent matches or exceeds performance, quantum advantage claim fails"
+  },
+  "expected_invariants": {
+    "must_attack_claim": true,
+    "must_not_agree": true,
+    "must_propose_ablation": true,
+    "must_identify_assumptions": true,
+    "no_philosophical_language": true
+  },
+  "forbidden_behaviors": [
+    "accept_improvement_as_quantum_evidence",
+    "ignore_ablation_requirement",
+    "assume_previous_sota_was_classical"
+  ],
+  "notes": "Quantum advantage requires ablation study, not just improvement over previous work"
+}

@@ -1,0 +1,31 @@
+{
+  "case_id": "benchmark_case_02_mismatched_samples",
+  "risk_level": "medium",
+  "description": "Baseline and hybrid used different valid sample counts",
+  "input": {
+    "benchmark_description": "Compare hybrid quantum-classical VAE vs classical baseline on reconstruction task",
+    "results": {
+      "hybrid_model": {"mse": 0.023, "status": "completed", "valid_samples": 1000},
+      "classical_baseline": {"mse": 0.027, "status": "completed", "valid_samples": 850},
+      "reported_advantage": "Hybrid model shows 15% lower MSE"
+    }
+  },
+  "expected_output": {
+    "validity": "INVALID",
+    "reasons": ["Sample count mismatch: hybrid=1000, baseline=850", "Comparison invalid without identical sample sets"],
+    "missing_fields": ["sample_alignment_method"],
+    "required_fixes": ["Rerun with identical sample filtering", "Report sample counts explicitly"],
+    "acceptance_criteria": ["All modes must use identical valid sample sets"]
+  },
+  "expected_invariants": {
+    "must_flag_invalid": true,
+    "must_reference_sample_mismatch": true,
+    "must_not_recommend_promotion": true
+  },
+  "forbidden_behaviors": [
+    "claim_benchmark_is_valid",
+    "claim_quantum_advantage",
+    "ignore_sample_count_discrepancy"
+  ],
+  "notes": "Different valid sample counts invalidate direct MSE comparison"
+}

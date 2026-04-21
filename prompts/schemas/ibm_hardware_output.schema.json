@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ibm_hardware_output.schema.json",
+  "title": "IBM Hardware Result Interpretation Output",
+  "description": "Structured output for IBM Quantum hardware result analysis",
+  "type": "object",
+  "required": ["strongly_supported", "weakly_supported", "overstated", "missing_metadata", "next_repeat_run"],
+  "properties": {
+    "strongly_supported": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 0,
+      "description": "Claims strongly supported by raw data"
+    },
+    "weakly_supported": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 0,
+      "description": "Claims with some support but caveats"
+    },
+    "overstated": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 0,
+      "description": "Claims that exceed what the data supports"
+    },
+    "missing_metadata": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 0,
+      "description": "Required metadata not present in results"
+    },
+    "next_repeat_run": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Recommended next experiment to validate claims"
+    },
+    "classification": {
+      "type": "object",
+      "properties": {
+        "directly_measured": { "type": "array", "items": { "type": "string" } },
+        "calibration_dependent": { "type": "array", "items": { "type": "string" } },
+        "mitigation_dependent": { "type": "array", "items": { "type": "string" } },
+        "post_processing_artifact": { "type": "array", "items": { "type": "string" } },
+        "potentially_meaningful": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "hardware_provenance": {
+      "type": "object",
+      "properties": {
+        "backend": { "type": "string" },
+        "shots": { "type": "integer" },
+        "calibration_age_hours": { "type": "number" },
+        "readout_error_rate": { "type": "number" }
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "conservative_interpretation_output.schema.json",
+  "title": "Conservative Result Interpretation Output",
+  "description": "Structured output for conservative metric interpretation",
+  "type": "object",
+  "required": ["actually_supported", "only_suggested", "should_not_claim", "next_validating_experiment"],
+  "properties": {
+    "actually_supported": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 0,
+      "description": "Claims directly supported by evidence"
+    },
+    "only_suggested": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 0,
+      "description": "Claims with suggestive but not conclusive evidence"
+    },
+    "should_not_claim": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 0,
+      "description": "Claims that exceed available evidence"
+    },
+    "next_validating_experiment": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Specific experiment to validate uncertain claims"
+    },
+    "metric_classifications": {
+      "type": "object",
+      "description": "Classification of each metric in results",
+      "additionalProperties": {
+        "type": "string",
+        "enum": ["directly_measured", "derived_well_defined", "custom_heuristic", "currently_unreliable"]
+      }
+    },
+    "overclaim_risk": {
+      "type": "string",
+      "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"],
+      "description": "Overall risk of overinterpretation"
+    },
+    "safe_use_category": {
+      "type": "string",
+      "enum": ["diagnostic_only", "unsafe_for_any_use", "requires_review", "validated_for_production"],
+      "description": "Safety classification for result usage"
+    }
+  },
+  "additionalProperties": false
+}

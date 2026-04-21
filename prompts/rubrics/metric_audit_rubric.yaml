@@ -1,0 +1,38 @@
+# Custom Metric Audit Rubric
+# LLM-as-judge evaluation criteria
+
+criteria:
+  - id: "identifies_proxy_collapse"
+    description: "Identifies when metric collapses to simpler proxy"
+    weight: 0.35
+    pass_threshold: 1.0
+    
+  - id: "lists_hidden_assumptions"
+    description: "Lists all hidden assumptions"
+    weight: 0.25
+    pass_threshold: 0.9
+    
+  - id: "proposes_controls"
+    description: "Proposes appropriate control experiments"
+    weight: 0.2
+    pass_threshold: 0.8
+    
+  - id: "safe_use_classification"
+    description: "Correctly classifies safe use category"
+    weight: 0.15
+    pass_threshold: 1.0
+    
+  - id: "failure_mode_coverage"
+    description: "Covers major failure modes"
+    weight: 0.05
+    pass_threshold: 0.8
+
+scoring:
+  method: "weighted_average"
+  min_pass_score: 0.85
+  
+invariants:
+  - "If metric formula includes ratio of consecutive elements, must test for variance proxy"
+  - "If metric claims consciousness relevance, must require biological validation"
+  - "Must classify phi-based metrics as custom_heuristic minimum"
+  - "Must require controls before allowing decision-making use"

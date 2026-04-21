@@ -1,0 +1,27 @@
+{
+  "case_id": "case_01_failed_baseline",
+  "name": "Invalid benchmark with failed baseline",
+  "description": "Benchmark reports hybrid advantage but baseline failed silently",
+  "input": {
+    "benchmark_description": "Compare hybrid quantum-classical VAE vs classical baseline on reconstruction task",
+    "results": {
+      "hybrid_model": {"mse": 0.023, "status": "completed"},
+      "classical_baseline": {"mse": null, "status": "failed", "error": "CUDA OOM"},
+      "reported_advantage": "Hybrid model shows 15% lower MSE"
+    }
+  },
+  "expected_output": {
+    "validity": "INVALID",
+    "reasons": ["Baseline failed - no valid comparison possible", "Reported advantage is meaningless without baseline"],
+    "missing_fields": ["baseline_success_check"],
+    "required_fixes": ["Rerun with smaller batch size", "Add explicit baseline success check", "Fail benchmark if any mode errors"],
+    "acceptance_criteria": ["All modes must complete successfully on identical task set"]
+  },
+  "expected_invariants": {
+    "must_flag_invalid": true,
+    "must_not_claim_advantage": true,
+    "must_reference_failed_baselines": true,
+    "validity_must_be_invalid": true
+  },
+  "rubric_score_threshold": 0.85
+}

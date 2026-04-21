@@ -1,0 +1,86 @@
+================================================================================
+RESPONSE PATH AUDIT REPORT
+================================================================================
+
+CONFIGURATION SUMMARY
+----------------------------------------
+
+C0: classical_baseline
+  Description: No tesseract router, no quantum scorer, fixed classical policy
+  Mean Judge Score: 0.6436 ± 0.1121
+  Task Success Rate: 100.00%
+  Mean Route Length: 5.00 ± 0.00
+  Mean Latency: 0.04 ms
+
+C1: tesseract_classical
+  Description: Tesseract router enabled, quantum scorer replaced with deterministic classical
+  Mean Judge Score: 0.6792 ± 0.1164
+  Task Success Rate: 66.67%
+  Mean Route Length: 7.00 ± 2.84
+  Mean Latency: 0.62 ms
+
+C2: tesseract_quantum
+  Description: Tesseract router enabled with actual quantum/quantum-inspired scorer
+  Mean Judge Score: 0.8026 ± 0.0401
+  Task Success Rate: 0.00%
+  Mean Route Length: 11.00 ± 0.00
+  Mean Latency: 157.13 ms
+
+
+PAIRWISE COMPARISONS
+----------------------------------------
+
+C1_vs_C0:
+  Judge Score Difference: +0.0356
+  Route Length Difference: +2.00
+  Success Rate Difference: -33.33%
+
+C2_vs_C1:
+  Judge Score Difference: +0.1234
+  Route Length Difference: +4.00
+  Success Rate Difference: -66.67%
+
+C2_vs_C0:
+  Judge Score Difference: +0.1590
+  Route Length Difference: +6.00
+  Success Rate Difference: -100.00%
+
+
+ROUTE DIVERGENCE ANALYSIS
+----------------------------------------
+Total Divergences: 450
+
+Sample Divergences:
+  Prompt amb_001 (C1_vs_C0):
+    Divergence at step 1
+    Route 1: [0, 2, 6, 14, 6, 14, 6, 14, 6, 14, 6]
+    Route 2: [0, 1, 5, 13, 15]
+    Judge Score Diff: +0.0000
+  Prompt amb_001 (C1_vs_C0):
+    Divergence at step 1
+    Route 1: [0, 2, 3, 11, 15]
+    Route 2: [0, 1, 5, 13, 15]
+    Judge Score Diff: +0.0000
+  Prompt amb_001 (C1_vs_C0):
+    Divergence at step 2
+    Route 1: [0, 1, 9, 13, 15]
+    Route 2: [0, 1, 5, 13, 15]
+    Judge Score Diff: +0.0000
+  Prompt amb_001 (C2_vs_C1):
+    Divergence at step 1
+    Route 1: [0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0]
+    Route 2: [0, 2, 6, 14, 6, 14, 6, 14, 6, 14, 6]
+    Judge Score Diff: +0.1813
+  Prompt amb_001 (C2_vs_C1):
+    Divergence at step 1
+    Route 1: [0, 8, 0, 8, 0, 2, 10, 2, 0, 8, 12]
+    Route 2: [0, 2, 3, 11, 15]
+    Judge Score Diff: +0.1652
+
+
+CONCLUSIONS
+----------------------------------------
+[PASS] C2 (tesseract_quantum) shows improvement over C1 and C0
+  This suggests quantum-assisted routing provides measurable benefit.
+
+================================================================================

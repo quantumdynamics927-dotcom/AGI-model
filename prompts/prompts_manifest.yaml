@@ -1,0 +1,141 @@
+registry_version: "1.0.0"
+last_updated: "2026-04-20"
+owner: "Quantum Dynamics"
+
+prompts:
+  - name: core_system_prompt
+    version: "1.0.0"
+    file: core_system_prompt.md
+    purpose: "Persistent instruction block for all QAGI interactions"
+    status: validated
+    risk_level: low
+    inputs:
+      - user query
+      - context
+    outputs:
+      - claim
+      - mechanism
+      - evidence needed
+      - failure modes
+      - next experiment
+    last_validated_on: "2026-04-20"
+    eval_cases: eval_cases/core_system/
+
+  - name: debug_tensor_shapes
+    version: "1.0.0"
+    file: debug_tensor_shapes.md
+    purpose: "Diagnose shape mismatches in PyTorch/NumPy/Qiskit interfaces"
+    status: validated
+    risk_level: low
+    inputs:
+      - error traceback
+      - relevant function code
+    outputs:
+      - shape diagnosis
+      - root cause
+      - patch
+      - assertions to add
+      - retest checklist
+    last_validated_on: "2026-04-20"
+    eval_cases: eval_cases/debug_tensor/
+
+  - name: benchmark_validity
+    version: "1.0.0"
+    file: benchmark_validity.md
+    purpose: "Validate whether a benchmark result is comparable and trustworthy"
+    status: validated
+    risk_level: medium
+    inputs:
+      - benchmark logs
+      - result JSON
+      - benchmark description
+    outputs:
+      - validity decision
+      - failure reasons
+      - required fixes
+      - acceptance criteria
+    last_validated_on: "2026-04-20"
+    eval_cases: eval_cases/benchmark_validity/
+
+  - name: interpret_results_conservatively
+    version: "1.0.0"
+    file: interpret_results_conservatively.md
+    status: validated
+    purpose: "Conservative classification of metrics before claiming significance"
+    risk_level: high
+    inputs:
+      - JSON results
+      - tables
+      - logs
+    outputs:
+      - what is actually supported
+      - what is only suggested
+      - what should not be claimed
+      - next validating experiment
+    last_validated_on: "2026-04-20"
+    eval_cases: eval_cases/conservative_interpretation/
+
+  - name: ibm_hardware_result_interpretation
+    version: "1.0.0"
+    file: ibm_hardware_result_interpretation.md
+    status: validated
+    purpose: "Hardware-provenance-first analysis of IBM Quantum job results"
+    risk_level: high
+    inputs:
+      - IBM job results
+      - raw counts
+      - calibration data
+    outputs:
+      - what is strongly supported
+      - what is weakly supported
+      - what is overstated
+      - missing metadata
+      - next repeat run
+    last_validated_on: "2026-04-20"
+    eval_cases: eval_cases/ibm_hardware/
+
+  - name: audit_custom_metric
+    version: "1.0.0"
+    status: validated
+    file: audit_custom_metric.md
+    purpose: "Evaluate trustworthiness of custom metrics before using for decisions"
+    risk_level: high
+    inputs:
+      - metric name
+      - formula or code
+      - inputs
+    outputs:
+      - metric type
+      - hidden assumptions
+      - failure modes
+      - minimal controls
+      - safe use category
+    last_validated_on: "2026-04-20"
+    eval_cases: eval_cases/custom_metric/
+
+  - name: hostile_internal_skeptic
+    version: "1.0.0"
+    status: validated
+    file: hostile_internal_skeptic.md
+    purpose: "Adversarial review of claims before committing to documentation"
+    risk_level: medium
+    inputs:
+      - claim text
+    outputs:
+      - claim attack
+      - hidden assumptions
+      - alternative explanation
+      - falsification experiment
+      - abandonment condition
+    last_validated_on: "2026-04-20"
+    eval_cases: eval_cases/hostile_skeptic/
+
+risk_level_definitions:
+  low: "Safe for routine debugging and development"
+  medium: "Requires judgment; may affect interpretation"
+  high: "Critical path for scientific claims; always apply before documentation"
+
+status_definitions:
+  draft: "Under development, not yet validated"
+  validated: "Passed eval cases, safe for use"
+  deprecated: "Superseded by newer version, preserved for reproducibility"

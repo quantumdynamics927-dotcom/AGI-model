@@ -1,0 +1,1333 @@
+{
+  "results": {
+    "timestamp": "2026-04-21T01:32:54.382660",
+    "evaluator_version": "2.0.0",
+    "summary": {
+      "total_prompts": 7,
+      "total_cases": 18,
+      "passed": 18,
+      "failed": 0,
+      "schema_valid": 15,
+      "schema_invalid": 0,
+      "invariant_pass": 18,
+      "invariant_fail": 0
+    },
+    "prompts": [
+      {
+        "name": "core_system_prompt",
+        "version": "1.0.0",
+        "content_hash": "dc808e710fae29fd",
+        "risk_level": "low",
+        "status": "validated",
+        "cases_run": 0,
+        "cases_passed": 0,
+        "cases_failed": 0,
+        "schema_valid": 0,
+        "schema_invalid": 0,
+        "invariant_pass": 0,
+        "invariant_fail": 0,
+        "cases": [],
+        "overall_pass": true
+      },
+      {
+        "name": "debug_tensor_shapes",
+        "version": "1.0.0",
+        "content_hash": "c9fb27803d938c9f",
+        "risk_level": "low",
+        "status": "validated",
+        "cases_run": 0,
+        "cases_passed": 0,
+        "cases_failed": 0,
+        "schema_valid": 0,
+        "schema_invalid": 0,
+        "invariant_pass": 0,
+        "invariant_fail": 0,
+        "cases": [],
+        "overall_pass": true
+      },
+      {
+        "name": "benchmark_validity",
+        "version": "1.0.0",
+        "content_hash": "1028f35453377b3a",
+        "risk_level": "medium",
+        "status": "validated",
+        "cases_run": 4,
+        "cases_passed": 4,
+        "cases_failed": 0,
+        "schema_valid": 4,
+        "schema_invalid": 0,
+        "invariant_pass": 4,
+        "invariant_fail": 0,
+        "cases": [
+          {
+            "case_id": "case_01_failed_baseline",
+            "file": "case_01_failed_baseline.json",
+            "passed": true,
+            "checks": {
+              "structure": {
+                "passed": true,
+                "missing_fields": []
+              },
+              "schema": {
+                "passed": true,
+                "errors": []
+              },
+              "invariants": {
+                "passed": true,
+                "failures": []
+              },
+              "rubric": {
+                "score": 1.0,
+                "passed": true,
+                "details": {
+                  "final_score": 1.0,
+                  "passed": true,
+                  "criteria": {
+                    "flags_invalid": {
+                      "score": 1.0,
+                      "weight": 0.3,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "references_failures": {
+                      "score": 1.0,
+                      "weight": 0.25,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "identifies_missing_fields": {
+                      "score": 1.0,
+                      "weight": 0.2,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "proposes_fixes": {
+                      "score": 1.0,
+                      "weight": 0.15,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "acceptance_criteria_clear": {
+                      "score": 1.0,
+                      "weight": 0.1,
+                      "threshold": 0.8,
+                      "passed": true
+                    }
+                  },
+                  "min_required": 0.85
+                }
+              }
+            },
+            "schema_valid": true,
+            "invariants_passed": true
+          },
+          {
+            "case_id": "benchmark_case_02_mismatched_samples",
+            "file": "case_02_mismatched_samples.json",
+            "passed": true,
+            "checks": {
+              "structure": {
+                "passed": true,
+                "missing_fields": []
+              },
+              "schema": {
+                "passed": true,
+                "errors": []
+              },
+              "invariants": {
+                "passed": true,
+                "failures": []
+              },
+              "rubric": {
+                "score": 1.0,
+                "passed": true,
+                "details": {
+                  "final_score": 1.0,
+                  "passed": true,
+                  "criteria": {
+                    "flags_invalid": {
+                      "score": 1.0,
+                      "weight": 0.3,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "references_failures": {
+                      "score": 1.0,
+                      "weight": 0.25,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "identifies_missing_fields": {
+                      "score": 1.0,
+                      "weight": 0.2,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "proposes_fixes": {
+                      "score": 1.0,
+                      "weight": 0.15,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "acceptance_criteria_clear": {
+                      "score": 1.0,
+                      "weight": 0.1,
+                      "threshold": 0.8,
+                      "passed": true
+                    }
+                  },
+                  "min_required": 0.85
+                }
+              }
+            },
+            "schema_valid": true,
+            "invariants_passed": true
+          },
+          {
+            "case_id": "benchmark_case_03_silent_failure_masked",
+            "file": "case_03_silent_failure_masked.json",
+            "passed": true,
+            "checks": {
+              "structure": {
+                "passed": true,
+                "missing_fields": []
+              },
+              "schema": {
+                "passed": true,
+                "errors": []
+              },
+              "invariants": {
+                "passed": true,
+                "failures": []
+              },
+              "rubric": {
+                "score": 1.0,
+                "passed": true,
+                "details": {
+                  "final_score": 1.0,
+                  "passed": true,
+                  "criteria": {
+                    "flags_invalid": {
+                      "score": 1.0,
+                      "weight": 0.3,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "references_failures": {
+                      "score": 1.0,
+                      "weight": 0.25,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "identifies_missing_fields": {
+                      "score": 1.0,
+                      "weight": 0.2,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "proposes_fixes": {
+                      "score": 1.0,
+                      "weight": 0.15,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "acceptance_criteria_clear": {
+                      "score": 1.0,
+                      "weight": 0.1,
+                      "threshold": 0.8,
+                      "passed": true
+                    }
+                  },
+                  "min_required": 0.85
+                }
+              }
+            },
+            "schema_valid": true,
+            "invariants_passed": true
+          },
+          {
+            "case_id": "benchmark_case_04_advantage_with_crashed_baseline",
+            "file": "case_04_advantage_with_crashed_baseline.json",
+            "passed": true,
+            "checks": {
+              "structure": {
+                "passed": true,
+                "missing_fields": []
+              },
+              "schema": {
+                "passed": true,
+                "errors": []
+              },
+              "invariants": {
+                "passed": true,
+                "failures": []
+              },
+              "rubric": {
+                "score": 1.0,
+                "passed": true,
+                "details": {
+                  "final_score": 1.0,
+                  "passed": true,
+                  "criteria": {
+                    "flags_invalid": {
+                      "score": 1.0,
+                      "weight": 0.3,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "references_failures": {
+                      "score": 1.0,
+                      "weight": 0.25,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "identifies_missing_fields": {
+                      "score": 1.0,
+                      "weight": 0.2,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "proposes_fixes": {
+                      "score": 1.0,
+                      "weight": 0.15,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "acceptance_criteria_clear": {
+                      "score": 1.0,
+                      "weight": 0.1,
+                      "threshold": 0.8,
+                      "passed": true
+                    }
+                  },
+                  "min_required": 0.85
+                }
+              }
+            },
+            "schema_valid": true,
+            "invariants_passed": true
+          }
+        ],
+        "overall_pass": true
+      },
+      {
+        "name": "interpret_results_conservatively",
+        "version": "1.0.0",
+        "content_hash": "1d8e9c2c94cd0ad8",
+        "risk_level": "high",
+        "status": "validated",
+        "cases_run": 3,
+        "cases_passed": 3,
+        "cases_failed": 0,
+        "schema_valid": 3,
+        "schema_invalid": 0,
+        "invariant_pass": 3,
+        "invariant_fail": 0,
+        "cases": [
+          {
+            "case_id": "interpret_case_01_direct_measurement",
+            "file": "case_01_direct_measurement.json",
+            "passed": true,
+            "checks": {
+              "structure": {
+                "passed": true,
+                "missing_fields": []
+              },
+              "schema": {
+                "passed": true,
+                "errors": []
+              },
+              "invariants": {
+                "passed": true,
+                "failures": []
+              }
+            },
+            "schema_valid": true,
+            "invariants_passed": true
+          },
+          {
+            "case_id": "interpret_case_02_derived_metric",
+            "file": "case_02_derived_metric.json",
+            "passed": true,
+            "checks": {
+              "structure": {
+                "passed": true,
+                "missing_fields": []
+              },
+              "schema": {
+                "passed": true,
+                "errors": []
+              },
+              "invariants": {
+                "passed": true,
+                "failures": []
+              }
+            },
+            "schema_valid": true,
+            "invariants_passed": true
+          },
+          {
+            "case_id": "interpret_case_03_custom_heuristic",
+            "file": "case_03_custom_heuristic.json",
+            "passed": true,
+            "checks": {
+              "structure": {
+                "passed": true,
+                "missing_fields": []
+              },
+              "schema": {
+                "passed": true,
+                "errors": []
+              },
+              "invariants": {
+                "passed": true,
+                "failures": []
+              }
+            },
+            "schema_valid": true,
+            "invariants_passed": true
+          }
+        ],
+        "overall_pass": true
+      },
+      {
+        "name": "ibm_hardware_result_interpretation",
+        "version": "1.0.0",
+        "content_hash": "3f4b6d8c71c5de95",
+        "risk_level": "high",
+        "status": "validated",
+        "cases_run": 4,
+        "cases_passed": 4,
+        "cases_failed": 0,
+        "schema_valid": 4,
+        "schema_invalid": 0,
+        "invariant_pass": 4,
+        "invariant_fail": 0,
+        "cases": [
+          {
+            "case_id": "case_01_mitigation_artifact",
+            "file": "case_01_mitigation_artifact.json",
+            "passed": true,
+            "checks": {
+              "structure": {
+                "passed": true,
+                "missing_fields": []
+              },
+              "schema": {
+                "passed": true,
+                "errors": []
+              },
+              "invariants": {
+                "passed": true,
+                "failures": []
+              },
+              "rubric": {
+                "score": 1.0,
+                "passed": true,
+                "details": {
+                  "final_score": 1.0,
+                  "passed": true,
+                  "criteria": {
+                    "classifies_provenance": {
+                      "score": 1.0,
+                      "weight": 0.3,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "identifies_mitigation_dependence": {
+                      "score": 1.0,
+                      "weight": 0.25,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "notes_missing_metadata": {
+                      "score": 1.0,
+                      "weight": 0.2,
+                      "threshold": 0.9,
+                      "passed": true
+                    },
+                    "proposes_repeat_experiment": {
+                      "score": 1.0,
+                      "weight": 0.15,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "calibration_awareness": {
+                      "score": 1.0,
+                      "weight": 0.1,
+                      "threshold": 0.8,
+                      "passed": true
+                    }
+                  },
+                  "min_required": 0.85
+                }
+              }
+            },
+            "schema_valid": true,
+            "invariants_passed": true
+          },
+          {
+            "case_id": "ibm_hardware_case_02_raw_counts_only",
+            "file": "case_02_raw_counts_only.json",
+            "passed": true,
+            "checks": {
+              "structure": {
+                "passed": true,
+                "missing_fields": []
+              },
+              "schema": {
+                "passed": true,
+                "errors": []
+              },
+              "invariants": {
+                "passed": true,
+                "failures": []
+              },
+              "rubric": {
+                "score": 1.0,
+                "passed": true,
+                "details": {
+                  "final_score": 1.0,
+                  "passed": true,
+                  "criteria": {
+                    "classifies_provenance": {
+                      "score": 1.0,
+                      "weight": 0.3,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "identifies_mitigation_dependence": {
+                      "score": 1.0,
+                      "weight": 0.25,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "notes_missing_metadata": {
+                      "score": 1.0,
+                      "weight": 0.2,
+                      "threshold": 0.9,
+                      "passed": true
+                    },
+                    "proposes_repeat_experiment": {
+                      "score": 1.0,
+                      "weight": 0.15,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "calibration_awareness": {
+                      "score": 1.0,
+                      "weight": 0.1,
+                      "threshold": 0.8,
+                      "passed": true
+                    }
+                  },
+                  "min_required": 0.85
+                }
+              }
+            },
+            "schema_valid": true,
+            "invariants_passed": true
+          },
+          {
+            "case_id": "ibm_hardware_case_03_missing_calibration",
+            "file": "case_03_missing_calibration.json",
+            "passed": true,
+            "checks": {
+              "structure": {
+                "passed": true,
+                "missing_fields": []
+              },
+              "schema": {
+                "passed": true,
+                "errors": []
+              },
+              "invariants": {
+                "passed": true,
+                "failures": []
+              },
+              "rubric": {
+                "score": 1.0,
+                "passed": true,
+                "details": {
+                  "final_score": 1.0,
+                  "passed": true,
+                  "criteria": {
+                    "classifies_provenance": {
+                      "score": 1.0,
+                      "weight": 0.3,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "identifies_mitigation_dependence": {
+                      "score": 1.0,
+                      "weight": 0.25,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "notes_missing_metadata": {
+                      "score": 1.0,
+                      "weight": 0.2,
+                      "threshold": 0.9,
+                      "passed": true
+                    },
+                    "proposes_repeat_experiment": {
+                      "score": 1.0,
+                      "weight": 0.15,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "calibration_awareness": {
+                      "score": 1.0,
+                      "weight": 0.1,
+                      "threshold": 0.8,
+                      "passed": true
+                    }
+                  },
+                  "min_required": 0.85
+                }
+              }
+            },
+            "schema_valid": true,
+            "invariants_passed": true
+          },
+          {
+            "case_id": "ibm_hardware_case_04_backend_drift",
+            "file": "case_04_backend_drift.json",
+            "passed": true,
+            "checks": {
+              "structure": {
+                "passed": true,
+                "missing_fields": []
+              },
+              "schema": {
+                "passed": true,
+                "errors": []
+              },
+              "invariants": {
+                "passed": true,
+                "failures": []
+              },
+              "rubric": {
+                "score": 1.0,
+                "passed": true,
+                "details": {
+                  "final_score": 1.0,
+                  "passed": true,
+                  "criteria": {
+                    "classifies_provenance": {
+                      "score": 1.0,
+                      "weight": 0.3,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "identifies_mitigation_dependence": {
+                      "score": 1.0,
+                      "weight": 0.25,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "notes_missing_metadata": {
+                      "score": 1.0,
+                      "weight": 0.2,
+                      "threshold": 0.9,
+                      "passed": true
+                    },
+                    "proposes_repeat_experiment": {
+                      "score": 1.0,
+                      "weight": 0.15,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "calibration_awareness": {
+                      "score": 1.0,
+                      "weight": 0.1,
+                      "threshold": 0.8,
+                      "passed": true
+                    }
+                  },
+                  "min_required": 0.85
+                }
+              }
+            },
+            "schema_valid": true,
+            "invariants_passed": true
+          }
+        ],
+        "overall_pass": true
+      },
+      {
+        "name": "audit_custom_metric",
+        "version": "1.0.0",
+        "content_hash": "d0fe2f9f30564aac",
+        "risk_level": "high",
+        "status": "validated",
+        "cases_run": 4,
+        "cases_passed": 4,
+        "cases_failed": 0,
+        "schema_valid": 4,
+        "schema_invalid": 0,
+        "invariant_pass": 4,
+        "invariant_fail": 0,
+        "cases": [
+          {
+            "case_id": "case_01_phi_collapses_to_variance",
+            "file": "case_01_phi_collapses_to_variance.json",
+            "passed": true,
+            "checks": {
+              "structure": {
+                "passed": true,
+                "missing_fields": []
+              },
+              "schema": {
+                "passed": true,
+                "errors": []
+              },
+              "invariants": {
+                "passed": true,
+                "failures": []
+              },
+              "rubric": {
+                "score": 1.0,
+                "passed": true,
+                "details": {
+                  "final_score": 1.0,
+                  "passed": true,
+                  "criteria": {
+                    "identifies_proxy_collapse": {
+                      "score": 1.0,
+                      "weight": 0.35,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "lists_hidden_assumptions": {
+                      "score": 1.0,
+                      "weight": 0.25,
+                      "threshold": 0.9,
+                      "passed": true
+                    },
+                    "proposes_controls": {
+                      "score": 1.0,
+                      "weight": 0.2,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "safe_use_classification": {
+                      "score": 1.0,
+                      "weight": 0.15,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "failure_mode_coverage": {
+                      "score": 1.0,
+                      "weight": 0.05,
+                      "threshold": 0.8,
+                      "passed": true
+                    }
+                  },
+                  "min_required": 0.85
+                }
+              }
+            },
+            "schema_valid": true,
+            "invariants_passed": true
+          },
+          {
+            "case_id": "metric_case_02_useful_metric",
+            "file": "case_02_useful_metric.json",
+            "passed": true,
+            "checks": {
+              "structure": {
+                "passed": true,
+                "missing_fields": []
+              },
+              "schema": {
+                "passed": true,
+                "errors": []
+              },
+              "invariants": {
+                "passed": true,
+                "failures": []
+              },
+              "rubric": {
+                "score": 1.0,
+                "passed": true,
+                "details": {
+                  "final_score": 1.0,
+                  "passed": true,
+                  "criteria": {
+                    "identifies_proxy_collapse": {
+                      "score": 1.0,
+                      "weight": 0.35,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "lists_hidden_assumptions": {
+                      "score": 1.0,
+                      "weight": 0.25,
+                      "threshold": 0.9,
+                      "passed": true
+                    },
+                    "proposes_controls": {
+                      "score": 1.0,
+                      "weight": 0.2,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "safe_use_classification": {
+                      "score": 1.0,
+                      "weight": 0.15,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "failure_mode_coverage": {
+                      "score": 1.0,
+                      "weight": 0.05,
+                      "threshold": 0.8,
+                      "passed": true
+                    }
+                  },
+                  "min_required": 0.85
+                }
+              }
+            },
+            "schema_valid": true,
+            "invariants_passed": true
+          },
+          {
+            "case_id": "metric_case_03_style_artifact",
+            "file": "case_03_style_artifact.json",
+            "passed": true,
+            "checks": {
+              "structure": {
+                "passed": true,
+                "missing_fields": []
+              },
+              "schema": {
+                "passed": true,
+                "errors": []
+              },
+              "invariants": {
+                "passed": true,
+                "failures": []
+              },
+              "rubric": {
+                "score": 1.0,
+                "passed": true,
+                "details": {
+                  "final_score": 1.0,
+                  "passed": true,
+                  "criteria": {
+                    "identifies_proxy_collapse": {
+                      "score": 1.0,
+                      "weight": 0.35,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "lists_hidden_assumptions": {
+                      "score": 1.0,
+                      "weight": 0.25,
+                      "threshold": 0.9,
+                      "passed": true
+                    },
+                    "proposes_controls": {
+                      "score": 1.0,
+                      "weight": 0.2,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "safe_use_classification": {
+                      "score": 1.0,
+                      "weight": 0.15,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "failure_mode_coverage": {
+                      "score": 1.0,
+                      "weight": 0.05,
+                      "threshold": 0.8,
+                      "passed": true
+                    }
+                  },
+                  "min_required": 0.85
+                }
+              }
+            },
+            "schema_valid": true,
+            "invariants_passed": true
+          },
+          {
+            "case_id": "metric_case_04_model_specific_stable",
+            "file": "case_04_model_specific_stable.json",
+            "passed": true,
+            "checks": {
+              "structure": {
+                "passed": true,
+                "missing_fields": []
+              },
+              "schema": {
+                "passed": true,
+                "errors": []
+              },
+              "invariants": {
+                "passed": true,
+                "failures": []
+              },
+              "rubric": {
+                "score": 1.0,
+                "passed": true,
+                "details": {
+                  "final_score": 1.0,
+                  "passed": true,
+                  "criteria": {
+                    "identifies_proxy_collapse": {
+                      "score": 1.0,
+                      "weight": 0.35,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "lists_hidden_assumptions": {
+                      "score": 1.0,
+                      "weight": 0.25,
+                      "threshold": 0.9,
+                      "passed": true
+                    },
+                    "proposes_controls": {
+                      "score": 1.0,
+                      "weight": 0.2,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "safe_use_classification": {
+                      "score": 1.0,
+                      "weight": 0.15,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "failure_mode_coverage": {
+                      "score": 1.0,
+                      "weight": 0.05,
+                      "threshold": 0.8,
+                      "passed": true
+                    }
+                  },
+                  "min_required": 0.85
+                }
+              }
+            },
+            "schema_valid": true,
+            "invariants_passed": true
+          }
+        ],
+        "overall_pass": true
+      },
+      {
+        "name": "hostile_internal_skeptic",
+        "version": "1.0.0",
+        "content_hash": "5eadc5c2cdad7aa3",
+        "risk_level": "medium",
+        "status": "validated",
+        "cases_run": 3,
+        "cases_passed": 3,
+        "cases_failed": 0,
+        "schema_valid": 0,
+        "schema_invalid": 0,
+        "invariant_pass": 3,
+        "invariant_fail": 0,
+        "cases": [
+          {
+            "case_id": "case_01_consciousness_claim",
+            "file": "case_01_consciousness_claim.json",
+            "passed": true,
+            "checks": {
+              "structure": {
+                "passed": true,
+                "missing_fields": []
+              },
+              "invariants": {
+                "passed": true,
+                "failures": []
+              },
+              "rubric": {
+                "score": 1.0,
+                "passed": true,
+                "details": {
+                  "final_score": 1.0,
+                  "passed": true,
+                  "criteria": {
+                    "attacks_claim_directly": {
+                      "score": 1.0,
+                      "weight": 0.3,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "identifies_assumptions": {
+                      "score": 1.0,
+                      "weight": 0.25,
+                      "threshold": 0.9,
+                      "passed": true
+                    },
+                    "alternative_explanation": {
+                      "score": 1.0,
+                      "weight": 0.2,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "falsification_experiment": {
+                      "score": 1.0,
+                      "weight": 0.15,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "abandonment_condition": {
+                      "score": 1.0,
+                      "weight": 0.1,
+                      "threshold": 0.8,
+                      "passed": true
+                    }
+                  },
+                  "min_required": 0.85
+                }
+              }
+            },
+            "invariants_passed": true
+          },
+          {
+            "case_id": "skeptic_case_02_phi_resonance",
+            "file": "case_02_phi_resonance.json",
+            "passed": true,
+            "checks": {
+              "structure": {
+                "passed": true,
+                "missing_fields": []
+              },
+              "invariants": {
+                "passed": true,
+                "failures": []
+              },
+              "rubric": {
+                "score": 1.0,
+                "passed": true,
+                "details": {
+                  "final_score": 1.0,
+                  "passed": true,
+                  "criteria": {
+                    "attacks_claim_directly": {
+                      "score": 1.0,
+                      "weight": 0.3,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "identifies_assumptions": {
+                      "score": 1.0,
+                      "weight": 0.25,
+                      "threshold": 0.9,
+                      "passed": true
+                    },
+                    "alternative_explanation": {
+                      "score": 1.0,
+                      "weight": 0.2,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "falsification_experiment": {
+                      "score": 1.0,
+                      "weight": 0.15,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "abandonment_condition": {
+                      "score": 1.0,
+                      "weight": 0.1,
+                      "threshold": 0.8,
+                      "passed": true
+                    }
+                  },
+                  "min_required": 0.85
+                }
+              }
+            },
+            "invariants_passed": true
+          },
+          {
+            "case_id": "skeptic_case_03_quantum_advantage",
+            "file": "case_03_quantum_advantage.json",
+            "passed": true,
+            "checks": {
+              "structure": {
+                "passed": true,
+                "missing_fields": []
+              },
+              "invariants": {
+                "passed": true,
+                "failures": []
+              },
+              "rubric": {
+                "score": 1.0,
+                "passed": true,
+                "details": {
+                  "final_score": 1.0,
+                  "passed": true,
+                  "criteria": {
+                    "attacks_claim_directly": {
+                      "score": 1.0,
+                      "weight": 0.3,
+                      "threshold": 1.0,
+                      "passed": true
+                    },
+                    "identifies_assumptions": {
+                      "score": 1.0,
+                      "weight": 0.25,
+                      "threshold": 0.9,
+                      "passed": true
+                    },
+                    "alternative_explanation": {
+                      "score": 1.0,
+                      "weight": 0.2,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "falsification_experiment": {
+                      "score": 1.0,
+                      "weight": 0.15,
+                      "threshold": 0.8,
+                      "passed": true
+                    },
+                    "abandonment_condition": {
+                      "score": 1.0,
+                      "weight": 0.1,
+                      "threshold": 0.8,
+                      "passed": true
+                    }
+                  },
+                  "min_required": 0.85
+                }
+              }
+            },
+            "invariants_passed": true
+          }
+        ],
+        "overall_pass": true
+      }
+    ]
+  },
+  "scorecards": {
+    "timestamp": "2026-04-21T01:32:54.382660",
+    "scorecards": [
+      {
+        "prompt": "core_system_prompt",
+        "version": "1.0.0",
+        "hash": "dc808e710fae29fd",
+        "risk_level": "low",
+        "status": "validated",
+        "eval_summary": {
+          "cases_run": 0,
+          "cases_passed": 0,
+          "pass_rate": 0.0,
+          "schema_valid": 0,
+          "invariant_pass": 0
+        },
+        "gates": {
+          "header_check": {
+            "passed": true,
+            "required": true
+          },
+          "eval_pass_rate": {
+            "passed": true,
+            "required": true,
+            "minimum": 0.8,
+            "actual": null,
+            "note": "No eval cases - gate skipped"
+          }
+        },
+        "recommendation": "AUTO_PROMOTE"
+      },
+      {
+        "prompt": "debug_tensor_shapes",
+        "version": "1.0.0",
+        "hash": "c9fb27803d938c9f",
+        "risk_level": "low",
+        "status": "validated",
+        "eval_summary": {
+          "cases_run": 0,
+          "cases_passed": 0,
+          "pass_rate": 0.0,
+          "schema_valid": 0,
+          "invariant_pass": 0
+        },
+        "gates": {
+          "header_check": {
+            "passed": true,
+            "required": true
+          },
+          "eval_pass_rate": {
+            "passed": true,
+            "required": true,
+            "minimum": 0.8,
+            "actual": null,
+            "note": "No eval cases - gate skipped"
+          }
+        },
+        "recommendation": "AUTO_PROMOTE"
+      },
+      {
+        "prompt": "benchmark_validity",
+        "version": "1.0.0",
+        "hash": "1028f35453377b3a",
+        "risk_level": "medium",
+        "status": "validated",
+        "eval_summary": {
+          "cases_run": 4,
+          "cases_passed": 4,
+          "pass_rate": 1.0,
+          "schema_valid": 4,
+          "invariant_pass": 4
+        },
+        "gates": {
+          "header_check": {
+            "passed": true,
+            "required": true
+          },
+          "eval_pass_rate": {
+            "passed": true,
+            "required": true,
+            "minimum": 1.0,
+            "actual": 1.0
+          }
+        },
+        "recommendation": "READY_FOR_REVIEW"
+      },
+      {
+        "prompt": "interpret_results_conservatively",
+        "version": "1.0.0",
+        "hash": "1d8e9c2c94cd0ad8",
+        "risk_level": "high",
+        "status": "validated",
+        "eval_summary": {
+          "cases_run": 3,
+          "cases_passed": 3,
+          "pass_rate": 1.0,
+          "schema_valid": 3,
+          "invariant_pass": 3
+        },
+        "gates": {
+          "header_check": {
+            "passed": true,
+            "required": true
+          },
+          "eval_pass_rate": {
+            "passed": true,
+            "required": true,
+            "minimum": 1.0,
+            "actual": 1.0
+          },
+          "schema_validation": {
+            "passed": true,
+            "required": true
+          },
+          "invariant_checks": {
+            "passed": true,
+            "required": true
+          }
+        },
+        "recommendation": "READY_FOR_REVIEW"
+      },
+      {
+        "prompt": "ibm_hardware_result_interpretation",
+        "version": "1.0.0",
+        "hash": "3f4b6d8c71c5de95",
+        "risk_level": "high",
+        "status": "validated",
+        "eval_summary": {
+          "cases_run": 4,
+          "cases_passed": 4,
+          "pass_rate": 1.0,
+          "schema_valid": 4,
+          "invariant_pass": 4
+        },
+        "gates": {
+          "header_check": {
+            "passed": true,
+            "required": true
+          },
+          "eval_pass_rate": {
+            "passed": true,
+            "required": true,
+            "minimum": 1.0,
+            "actual": 1.0
+          },
+          "schema_validation": {
+            "passed": true,
+            "required": true
+          },
+          "invariant_checks": {
+            "passed": true,
+            "required": true
+          }
+        },
+        "recommendation": "READY_FOR_REVIEW"
+      },
+      {
+        "prompt": "audit_custom_metric",
+        "version": "1.0.0",
+        "hash": "d0fe2f9f30564aac",
+        "risk_level": "high",
+        "status": "validated",
+        "eval_summary": {
+          "cases_run": 4,
+          "cases_passed": 4,
+          "pass_rate": 1.0,
+          "schema_valid": 4,
+          "invariant_pass": 4
+        },
+        "gates": {
+          "header_check": {
+            "passed": true,
+            "required": true
+          },
+          "eval_pass_rate": {
+            "passed": true,
+            "required": true,
+            "minimum": 1.0,
+            "actual": 1.0
+          },
+          "schema_validation": {
+            "passed": true,
+            "required": true
+          },
+          "invariant_checks": {
+            "passed": true,
+            "required": true
+          }
+        },
+        "recommendation": "READY_FOR_REVIEW"
+      },
+      {
+        "prompt": "hostile_internal_skeptic",
+        "version": "1.0.0",
+        "hash": "5eadc5c2cdad7aa3",
+        "risk_level": "medium",
+        "status": "validated",
+        "eval_summary": {
+          "cases_run": 3,
+          "cases_passed": 3,
+          "pass_rate": 1.0,
+          "schema_valid": 0,
+          "invariant_pass": 3
+        },
+        "gates": {
+          "header_check": {
+            "passed": true,
+            "required": true
+          },
+          "eval_pass_rate": {
+            "passed": true,
+            "required": true,
+            "minimum": 1.0,
+            "actual": 1.0
+          }
+        },
+        "recommendation": "READY_FOR_REVIEW"
+      }
+    ]
+  }
+}

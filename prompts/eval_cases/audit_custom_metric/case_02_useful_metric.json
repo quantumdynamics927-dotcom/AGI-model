@@ -1,0 +1,29 @@
+{
+  "case_id": "metric_case_02_useful_metric",
+  "risk_level": "high",
+  "description": "A genuinely useful metric with clear interpretation",
+  "input": {
+    "metric_name": "reconstruction_error",
+    "formula": "mse = mean((x_reconstructed - x_original)^2)",
+    "code": "mse = torch.mean((x_reconstructed - x_original) ** 2)",
+    "inputs": "x_original: tensor of shape (batch, dim), x_reconstructed: tensor of shape (batch, dim)",
+    "context": "VAE reconstruction loss"
+  },
+  "expected_output": {
+    "metric_type": "directly_measured",
+    "hidden_assumptions": ["Reconstruction is the primary objective", "MSE is appropriate for data type"],
+    "failure_modes": ["May not capture perceptual similarity", "Sensitive to outliers"],
+    "minimal_controls": ["Compare against random reconstruction", "Test on held-out data"],
+    "safe_use_category": "safe_for_decisions"
+  },
+  "expected_invariants": {
+    "must_classify_as_directly_measured": true,
+    "must_not_inflate_usefulness": true,
+    "must_note_failure_modes": true
+  },
+  "forbidden_behaviors": [
+    "claim_universal_validity",
+    "ignore_outlier_sensitivity"
+  ],
+  "notes": "MSE is directly measured and well-defined for reconstruction tasks"
+}

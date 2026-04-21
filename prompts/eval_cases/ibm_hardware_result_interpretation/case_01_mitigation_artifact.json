@@ -1,0 +1,34 @@
+{
+  "case_id": "case_01_mitigation_artifact",
+  "name": "IBM result with mitigation-dependent metric",
+  "description": "Result appears significant but depends heavily on readout error mitigation",
+  "input": {
+    "job_id": "cwxyz-12345",
+    "backend": "ibm_kingston",
+    "shots": 8192,
+    "raw_counts": {"00": 3950, "01": 2100, "10": 2050, "11": 92},
+    "mitigated_quasi": {"00": 0.52, "01": 0.24, "10": 0.23, "11": 0.01},
+    "reported_fidelity": 0.98,
+    "calibration_date": "2026-04-19T08:00:00Z",
+    "job_date": "2026-04-20T14:30:00Z"
+  },
+  "expected_output": {
+    "strongly_supported": ["Raw counts show expected distribution within shot noise"],
+    "weakly_supported": ["Bell state preparation may be working"],
+    "overstated": ["0.98 fidelity claim - depends on mitigation model validity"],
+    "missing_metadata": ["Readout error rates at job time", "Mitigation matrix condition number", "Transpilation optimization level"],
+    "next_repeat_run": "Rerun with different mitigation method; compare raw vs mitigated variance",
+    "classification": {
+      "raw_counts": "directly_measured",
+      "mitigated": "mitigation_dependent",
+      "reported_fidelity": "mitigation_dependent"
+    }
+  },
+  "expected_invariants": {
+    "must_classify_raw_counts_as_direct": true,
+    "must_classify_mitigated_as_dependent": true,
+    "must_flag_high_fidelity_with_mitigation": true,
+    "must_note_calibration_age": true
+  },
+  "rubric_score_threshold": 0.85
+}

@@ -1,0 +1,32 @@
+{
+  "case_id": "ibm_hardware_case_03_missing_calibration",
+  "risk_level": "high",
+  "description": "Result with calibration data older than 24 hours",
+  "input": {
+    "job_id": "cwxyz-34567",
+    "backend": "ibm_kingston",
+    "shots": 8192,
+    "raw_counts": {"00": 4100, "01": 2050, "10": 2000, "11": 42},
+    "mitigated_quasi": {"00": 0.51, "01": 0.24, "10": 0.24, "11": 0.01},
+    "reported_fidelity": 0.97,
+    "calibration_date": "2026-04-18T08:00:00Z",
+    "job_date": "2026-04-20T16:00:00Z"
+  },
+  "expected_output": {
+    "strongly_supported": ["Raw counts show approximate Bell state distribution"],
+    "weakly_supported": ["Mitigated results suggest improved fidelity"],
+    "overstated": ["0.97 fidelity claim - calibration is 56 hours old"],
+    "missing_metadata": ["Current readout error rates", "Calibration drift estimate", "Backend stability metrics"],
+    "next_repeat_run": "Rerun after fresh calibration; compare with current results"
+  },
+  "expected_invariants": {
+    "must_flag_stale_calibration": true,
+    "must_note_calibration_age": true,
+    "must_reduce_confidence_for_old_calibration": true
+  },
+  "forbidden_behaviors": [
+    "treat_old_calibration_as_current",
+    "claim_high_fidelity_without_calibration_check"
+  ],
+  "notes": "Calibration older than 24 hours significantly reduces confidence in mitigated results"
+}

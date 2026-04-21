@@ -1,0 +1,31 @@
+{
+  "case_id": "benchmark_case_04_advantage_with_crashed_baseline",
+  "risk_level": "medium",
+  "description": "Advantage claimed while baseline crashed mid-run",
+  "input": {
+    "benchmark_description": "Compare quantum annealing vs simulated annealing on optimization benchmark",
+    "results": {
+      "quantum_annealing": {"energy": -42.5, "status": "completed", "runtime_s": 120},
+      "simulated_annealing": {"energy": null, "status": "crashed", "error": "Timeout after 300s", "completed_samples": 45, "total_samples": 100},
+      "reported_advantage": "Quantum annealing achieves lower energy in less time"
+    }
+  },
+  "expected_output": {
+    "validity": "INVALID",
+    "reasons": ["Baseline crashed - no valid comparison possible", "Advantage claim is meaningless without completed baseline"],
+    "missing_fields": ["baseline_completion_status"],
+    "required_fixes": ["Increase timeout for simulated annealing", "Report baseline failure explicitly", "Remove advantage claim until both complete"],
+    "acceptance_criteria": ["Both modes must complete successfully"]
+  },
+  "expected_invariants": {
+    "must_flag_invalid": true,
+    "must_not_claim_advantage": true,
+    "must_reference_crashed_baseline": true
+  },
+  "forbidden_behaviors": [
+    "claim_quantum_advantage",
+    "ignore_baseline_crash",
+    "compare_incomplete_results"
+  ],
+  "notes": "Crashed baseline invalidates any advantage claim regardless of how good quantum result looks"
+}
