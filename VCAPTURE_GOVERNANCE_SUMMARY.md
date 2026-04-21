@@ -72,12 +72,12 @@ Each gate has three-tier thresholds:
 **Eligible for Promotion**: YES ✓
 **Requires Downgrade**: NO
 
-### Gate Summary
+### Gate Summary (CANONICAL)
 
 | Gate | Status | Value | Threshold | Margin |
 |------|--------|-------|-----------|--------|
 | Replicate Count | ✓ PASS | 3 | 1 | +2.0 |
-| Residual Spread | ⚠ WARN | 0.0848 | 0.10 | +0.1152 |
+| Residual Spread | ⚠ WARN | 0.0848 | 0.20 | +0.1152 |
 | Signal-to-Separation | ✓ PASS | 1.42 | 1.0 | +0.42 |
 | Portability | ⚠ WARN | 0.85 | 0.85 | -0.0002 |
 | Stability | ✓ PASS | 0.0015 | 0.01 | +0.0085 |
@@ -85,13 +85,50 @@ Each gate has three-tier thresholds:
 | Rank Stability CI | ⚠ WARN | 0.60 | 0.70 | -0.10 |
 | Cohort Coverage | ✓ PASS | 5.0 | 0.80 | +4.2 |
 
+**Gate Counts**: 5 PASS, 3 WARNING, 0 FAIL
+
 ### Warnings
 
-1. **Residual spread**: std=0.0848, mean=0.1417 (approaching threshold)
-2. **Portability**: ranking=0.70, score=85.0% (just below threshold)
-3. **Rank stability CI**: [0.60, 0.80] (lower bound below threshold)
+1. **Residual spread**: std=0.0848, mean=0.1417 (within warning band)
+2. **Portability**: ranking=0.70, score=85.0% (just below pass threshold)
+3. **Rank stability CI**: [0.60, 0.80] (lower bound below pass threshold)
 
-## New Metrics
+## Canonical Output Schema
+
+All governance outputs derive from ONE canonical decision object:
+
+```python
+CanonicalGovernanceOutput:
+    policy_version: str
+    state_machine_version: str
+    current_state: CalibrationState
+    target_state: CalibrationState
+    eligible_for_promotion: bool
+    requires_downgrade: bool
+    gate_counts: {pass: int, warning: int, fail: int}
+    passing_gates: List[str]
+    warning_gates: List[str]
+    failing_gates: List[str]
+    gates: List[GateSummary]
+    blocking_conditions: List[str]
+    downgrade_triggers: List[str]
+    recommended_action: RecommendedAction
+```
+
+This ensures consistency across:
+- JSON assessment (`canonical_output.json`)
+- Text report (`canonical_report.txt`)
+- Markdown summary (`canonical_summary.md`)
+- CLI display
+
+**Gate counts are validated to match gate lists** in `__post_init__`:
+```python
+assert gate_counts["pass"] == len(passing_gates)
+assert gate_counts["warning"] == len(warning_gates)
+assert gate_counts["fail"] == len(failing_gates)
+```
+
+This prevents the correctness bug where summary said "4 pass, 2 warning" but listed 3 warnings.
 
 ### Cohort Coverage
 - Total Promoters: 1
@@ -159,9 +196,12 @@ The next scientific question in measurable form:
 | `vcapture_promotion_policy.py` | Calibration governance with explicit thresholds |
 | `vcapture_lifecycle_governance.py` | Full lifecycle management with state machine |
 | `vcapture_calibration_comparison.py` | Baseline vs hierarchical comparison framework |
+| `vcapture_canonical_schema.py` | Canonical output schema for consistency |
 | `raw_hardware/vcapture_ledger_report.json` | Current ledger data |
 | `raw_hardware/lifecycle_assessment.json` | Lifecycle assessment output |
-| `raw_hardware/lifecycle_report.txt` | Human-readable report |
+| `raw_hardware/canonical_output.json` | Canonical governance output |
+| `raw_hardware/canonical_report.txt` | Canonical text report |
+| `raw_hardware/canonical_summary.md` | Canonical markdown summary |
 
 ## Governance Maturity
 
