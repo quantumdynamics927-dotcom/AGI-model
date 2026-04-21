@@ -78,7 +78,7 @@ GOLDEN_DEVELOPMENT_2026_04_21 = GoldenTestCase(
     input_assessment={
         "current_state": "development",
         "target_state": "production",
-        "eligible_for_promotion": True,
+        "eligible_for_promotion": False,
         "requires_downgrade": False,
         "gates": {
             "replicate": {
@@ -137,12 +137,12 @@ GOLDEN_DEVELOPMENT_2026_04_21 = GoldenTestCase(
             },
             "rank_ci": {
                 "gate_name": "rank_stability_ci",
-                "status": "warning",
-                "value": 0.6,
+                "status": "fail",
+                "value": 0.583855688035997,
                 "pass_threshold": 0.7,
                 "warning_threshold": 0.6,
-                "margin_to_pass": -0.1,
-                "message": "Rank stability CI: [0.60, 0.80] (warning)",
+                "margin_to_pass": -0.11614431196400299,
+                "message": "Rank stability CI: [0.58, 0.79] (fail)",
             },
             "coverage": {
                 "gate_name": "cohort_coverage",
@@ -154,22 +154,22 @@ GOLDEN_DEVELOPMENT_2026_04_21 = GoldenTestCase(
                 "message": "Cohort coverage: 2/2 cells (pass)",
             },
         },
-        "blocking_issues": [],
-        "assessed_at": "2026-04-21T04:05:55.584733",
+        "blocking_issues": ["Rank stability CI: [0.58, 0.79] (fail)"],
+        "assessed_at": "2026-04-21T20:08:16.811883",
         "ledger_path": "raw_hardware/vcapture_ledger_report.json",
         "calibration_version": "1.0",
     },
     expected_output={
         "current_state": "development",
         "target_state": "production",
-        "eligible_for_promotion": True,
+        "eligible_for_promotion": False,
         "requires_downgrade": False,
-        "gate_counts": {"pass": 5, "warning": 3, "fail": 0},
-        "recommended_action": "promote",
+        "gate_counts": {"pass": 5, "warning": 2, "fail": 1},
+        "recommended_action": "reject",
     },
-    expected_gate_counts={"pass": 5, "warning": 3, "fail": 0},
+    expected_gate_counts={"pass": 5, "warning": 2, "fail": 1},
     expected_state="development",
-    expected_action="promote",
+    expected_action="reject",
     tags=["historical", "development", "warnings"],
 )
 

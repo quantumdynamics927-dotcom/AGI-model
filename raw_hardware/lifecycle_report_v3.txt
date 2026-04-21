@@ -1,0 +1,135 @@
+======================================================================
+VCapture Lifecycle Governance Assessment v2.0
+======================================================================
+
+Assessed at: 2026-04-21T21:08:46.549864
+Ledger: raw_hardware\vcapture_ledger_report.json
+Calibration version: 1.0
+
+======================================================================
+STATE MACHINE STATUS
+======================================================================
+
+  Current State: DEVELOPMENT
+  Target State: PRODUCTION
+  Eligible for Promotion: NO ✗
+  Requires Downgrade: NO
+
+  State Progression:
+    ● DEVELOPMENT
+    ○ CANDIDATE
+    ○ STAGING
+    ○ PRODUCTION
+    ○ RETIRED
+
+======================================================================
+GATE RESULTS (with Warning Bands)
+======================================================================
+
+  Replicate Count:
+    Status: ✓ PASS
+    Value: 3.0000
+    Pass Threshold: 1.0000
+    Warning Threshold: 1.0000
+    Margin to Pass: +2.0000
+    Message: Replicate count: 3 per cell, 30 total (pass)
+
+  Residual Spread:
+    Status: ✓ PASS
+    Value: 0.0848
+    Pass Threshold: 0.2000
+    Warning Threshold: 0.3000
+    Margin to Pass: +0.1152
+    Message: Residual spread: std=0.0848, mean=0.0000 (pass)
+
+  Signal-to-Separation:
+    Status: ✓ PASS
+    Value: 1.4236
+    Pass Threshold: 1.0000
+    Warning Threshold: 0.8000
+    Margin to Pass: +0.4236
+    Message: Signal-to-separation: mean S/S=1.42 (pass)
+
+  Portability:
+    Status: ⚠ WARN
+    Value: 0.8498
+    Pass Threshold: 0.8500
+    Warning Threshold: 0.7500
+    Margin to Pass: -0.0002
+    Message: Portability: efficiency=100.0%, ranking=0.70, score=85.0% (warning)
+
+  Stability:
+    Status: ✓ PASS
+    Value: 0.0005
+    Pass Threshold: 0.0100
+    Warning Threshold: 0.0200
+    Margin to Pass: +0.0095
+    Message: Stability: within-promoter std=0.000547 (pass)
+
+  Model Fit:
+    Status: ✓ PASS
+    Value: 0.6756
+    Pass Threshold: 0.5000
+    Warning Threshold: 0.4000
+    Margin to Pass: +0.1756
+    Message: Model fit: R²=0.6756, interaction ratio=0.0000 (pass)
+
+  Rank Stability CI:
+    Status: ✗ FAIL
+    Value: 0.5839
+    Pass Threshold: 0.7000
+    Warning Threshold: 0.6000
+    Margin to Pass: -0.1161
+    Message: Rank stability CI: [0.58, 0.79] (fail)
+
+  Cohort Coverage:
+    Status: ✓ PASS
+    Value: 1.0000
+    Pass Threshold: 0.8000
+    Warning Threshold: 0.7000
+    Margin to Pass: +0.2000
+    Message: Cohort coverage: 10/10 cells (pass)
+
+======================================================================
+COHORT COVERAGE
+======================================================================
+
+  Total Promoters: 5
+  Promoters Above S/S: 1 (20.0%)
+  Backend Pairs Tested: 0
+  Cells with Min Replicates: 10/10 (100.0%)
+
+======================================================================
+RANK STABILITY (with CI)
+======================================================================
+
+  Point Estimate: 0.7000
+  95% CI: [0.5839, 0.7881]
+  Method: fisher_z
+  N Observations: 100
+
+======================================================================
+BLOCKING ISSUES
+======================================================================
+
+  ✗ Rank stability CI: [0.58, 0.79] (fail)
+
+======================================================================
+WARNINGS
+======================================================================
+
+  ⚠ Portability: efficiency=100.0%, ranking=0.70, score=85.0% (warning)
+
+======================================================================
+RECOMMENDATIONS
+======================================================================
+
+  → Monitor portability: approaching threshold
+  → Increase sample size for stable ranking estimates
+
+======================================================================
+SUMMARY
+======================================================================
+
+  Calibration remains in DEVELOPMENT state.
+  ✗ Not ready for promotion.

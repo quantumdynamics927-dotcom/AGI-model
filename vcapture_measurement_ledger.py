@@ -463,6 +463,18 @@ class VCaptureLedger:
     def to_dataframe(self) -> pd.DataFrame:
         """Export all records as a pandas DataFrame."""
         return pd.DataFrame([r.to_dict() for r in self.records])
+
+    def _get_analysis_phi(self, record: VCaptureRecord) -> Optional[float]:
+        """Return the best available phi for calibration analysis."""
+        if record.calibrated_phi is not None:
+            return record.calibrated_phi
+        return record.measured_phi
+
+    def _get_analysis_residual(self, record: VCaptureRecord) -> Optional[float]:
+        """Return the best available residual for calibration analysis."""
+        if record.calibrated_residual is not None:
+            return record.calibrated_residual
+        return record.residual
     
     def to_canonical_table(self) -> Dict[str, Any]:
         """
@@ -582,8 +594,9 @@ class VCaptureLedger:
         promoter_calibrated: Dict[str, List[float]] = defaultdict(list)
         
         for record in self.records:
-            if record.measured_phi is not None:
-                promoter_measurements[record.promoter_id].append(record.measured_phi)
+            analysis_phi = self._get_analysis_phi(record)
+            if analysis_phi is not None:
+                promoter_measurements[record.promoter_id].append(analysis_phi)
                 if record.calibrated_phi is not None:
                     promoter_calibrated[record.promoter_id].append(record.calibrated_phi)
         
@@ -604,8 +617,9 @@ class VCaptureLedger:
         backend_promoter_means: Dict[str, Dict[str, List[float]]] = defaultdict(lambda: defaultdict(list))
         
         for record in self.records:
-            if record.measured_phi is not None:
-                backend_promoter_means[record.backend][record.promoter_id].append(record.measured_phi)
+            analysis_phi = self._get_analysis_phi(record)
+            if analysis_phi is not None:
+                backend_promoter_means[record.backend][record.promoter_id].append(analysis_phi)
         
         between_variances = []
         for backend, promoter_dict in backend_promoter_means.items():
@@ -623,11 +637,15 @@ class VCaptureLedger:
         # RESIDUAL DISTRIBUTIONS (calibration effectiveness)
         # ─────────────────────────────────────────────────────────────────────
         residuals_by_backend: Dict[str, List[float]] = defaultdict(list)
+        raw_residuals_by_backend: Dict[str, List[float]] = defaultdict(list)
         calibrated_residuals_by_backend: Dict[str, List[float]] = defaultdict(list)
         
         for record in self.records:
             if record.residual is not None:
-                residuals_by_backend[record.backend].append(record.residual)
+                raw_residuals_by_backend[record.backend].append(record.residual)
+            analysis_residual = self._get_analysis_residual(record)
+            if analysis_residual is not None:
+                residuals_by_backend[record.backend].append(analysis_residual)
             if record.calibrated_residual is not None:
                 calibrated_residuals_by_backend[record.backend].append(record.calibrated_residual)
         
@@ -643,6 +661,8 @@ class VCaptureLedger:
                     'q25': float(np.percentile(residuals, 25)),
                     'q75': float(np.percentile(residuals, 75)),
                     'count': len(residuals),
+                    'raw_mean': float(np.mean(raw_residuals_by_backend.get(backend, []))) if raw_residuals_by_backend.get(backend) else None,
+                    'raw_std': float(np.std(raw_residuals_by_backend.get(backend, []))) if raw_residuals_by_backend.get(backend) else None,
                     'calibrated_mean': float(np.mean(calibrated_residuals_by_backend.get(backend, []))) if calibrated_residuals_by_backend.get(backend) else None,
                     'calibrated_std': float(np.std(calibrated_residuals_by_backend.get(backend, []))) if calibrated_residuals_by_backend.get(backend) else None,
                 }
@@ -657,7 +677,8 @@ class VCaptureLedger:
         # ─────────────────────────────────────────────────────────────────────
         for backend in self._by_backend.keys():
             backend_records = [self.records[i] for i in self._by_backend[backend]]
-            measurements = [r.measured_phi for r in backend_records if r.measured_phi is not None]
+            measurements = [self._get_analysis_phi(r) for r in backend_records]
+            measurements = [value for value in measurements if value is not None]
             if measurements:
                 variance.backend_variance_components[backend] = float(np.var(measurements, ddof=1))
         
@@ -683,7 +704,8 @@ class VCaptureLedger:
             
             measured = [r.measured_phi for r in records if r.measured_phi is not None]
             calibrated = [r.calibrated_phi for r in records if r.calibrated_phi is not None]
-            residuals = [r.residual for r in records if r.residual is not None]
+            residuals = [self._get_analysis_residual(r) for r in records]
+            residuals = [value for value in residuals if value is not None]
             
             if measured and calibrated:
                 mean_measured = float(np.mean(measured))
@@ -718,7 +740,8 @@ class VCaptureLedger:
         """
         # Get this promoter's mean
         this_indices = self._by_promoter_backend.get((promoter_id, backend), [])
-        this_measured = [self.records[i].measured_phi for i in this_indices if self.records[i].measured_phi is not None]
+        this_measured = [self._get_analysis_phi(self.records[i]) for i in this_indices]
+        this_measured = [value for value in this_measured if value is not None]
         
         if not this_measured:
             return 0.0
@@ -732,7 +755,8 @@ class VCaptureLedger:
         
         for other_id in other_promoters:
             other_indices = self._by_promoter_backend.get((other_id, backend), [])
-            other_measured = [self.records[i].measured_phi for i in other_indices if self.records[i].measured_phi is not None]
+            other_measured = [self._get_analysis_phi(self.records[i]) for i in other_indices]
+            other_measured = [value for value in other_measured if value is not None]
             
             if other_measured:
                 other_mean = np.mean(other_measured)
@@ -959,11 +983,12 @@ class VCaptureLedger:
         # Collect data
         data = []
         for record in self.records:
-            if record.measured_phi is not None:
+            analysis_phi = self._get_analysis_phi(record)
+            if analysis_phi is not None:
                 data.append({
                     'promoter': record.promoter_id,
                     'backend': record.backend,
-                    'phi': record.measured_phi,
+                    'phi': analysis_phi,
                     'predicted': record.predicted_phi,
                     'replicate': record.replicate_index,
                 })
@@ -1111,6 +1136,13 @@ def main():
     parser = argparse.ArgumentParser(description="VCapture Measurement Ledger System")
     parser.add_argument("--manifest", type=str, required=True, help="Path to promoter replicate manifest")
     parser.add_argument("--output", type=str, default="vcapture_ledger_report.json", help="Output report path")
+    parser.add_argument(
+        "--calibration-type",
+        type=str,
+        default="backend",
+        choices=["backend", "promoter_backend", "hierarchical"],
+        help="Calibration strategy to apply before analysis",
+    )
     parser.add_argument("--calibration-version", type=str, default="1.0", help="Calibration version tag")
     parser.add_argument("--offset-model-version", type=str, default="1.0", help="Offset model version")
     parser.add_argument("--reference-backend", type=str, default="ibm_fez", help="Reference backend for calibration")
@@ -1135,10 +1167,15 @@ def main():
     records_loaded = ledger.load_from_manifest(manifest_path)
     print(f"Loaded {records_loaded} records")
     
-    # Apply backend calibration
-    print(f"\nApplying backend calibration...")
-    offsets = ledger.apply_backend_calibration(reference_backend=args.reference_backend)
-    print(f"Backend offsets: {offsets}")
+    # Apply calibration
+    if args.calibration_type == "backend":
+        print(f"\nApplying backend calibration...")
+        offsets = ledger.apply_backend_calibration(reference_backend=args.reference_backend)
+        print(f"Backend offsets: {offsets}")
+    else:
+        print(f"\nApplying {args.calibration_type} calibration...")
+        offsets = ledger.apply_promoter_backend_calibration()
+        print(f"Promoter-backend offsets computed for {len(offsets)} promoters")
     
     # Estimate variance structure
     print("\nEstimating variance structure...")

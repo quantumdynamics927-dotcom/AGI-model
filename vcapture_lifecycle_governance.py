@@ -25,7 +25,6 @@ import argparse
 import json
 from dataclasses import dataclass, asdict, field
 from datetime import datetime, timedelta
-from enum import Enum
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Any
 import warnings
@@ -33,35 +32,12 @@ import warnings
 import numpy as np
 from scipy import stats
 
+from vcapture_canonical_schema import CalibrationState, GateStatus
+
 
 # =============================================================================
 # PROMOTION STATE MACHINE
 # =============================================================================
-
-class CalibrationState(str, Enum):
-    """
-    Calibration model lifecycle states.
-    
-    State transitions:
-    - development → candidate: Passes all development gates
-    - candidate → staging: Passes all candidate gates
-    - staging → production: Passes all production gates
-    - production → retired: Deprecated or replaced
-    - Any state → development: Fails critical gates (downgrade)
-    - Any state → retired: Explicit deprecation
-    """
-    DEVELOPMENT = "development"  # Initial state, not ready for use
-    CANDIDATE = "candidate"      # Ready for cross-validation
-    STAGING = "staging"          # Ready for limited deployment
-    PRODUCTION = "production"    # Ready for full deployment
-    RETIRED = "retired"          # Deprecated, should be replaced
-
-
-class GateStatus(str, Enum):
-    """Gate evaluation status with warning bands."""
-    PASS = "pass"          # Meets threshold with margin
-    WARNING = "warning"    # Within warning band, needs attention
-    FAIL = "fail"          # Below threshold, blocks promotion
 
 
 # =============================================================================
@@ -480,6 +456,7 @@ class VCaptureLifecycleGovernance:
         backend_drift = self._compute_backend_drift(metadata)
         rank_stability_ci = self._compute_rank_stability_ci(transfer)
         heldout_performance = self._compute_heldout_performance(variance)
+        overfitting_warning = self._compute_overfitting_warning(mixed, portability_gate)
         
         # Collect all gates
         gates = [
@@ -499,7 +476,13 @@ class VCaptureLifecycleGovernance:
         warnings = [
             g.message for g in gates if g.status == GateStatus.WARNING
         ]
+        if overfitting_warning is not None:
+            warnings.append(overfitting_warning)
         recommendations = self._generate_recommendations(gates)
+        if overfitting_warning is not None:
+            recommendations.append(
+                "Validate hierarchical calibration on held-out promoter/backend data before using near-perfect manifest fit as evidence of generalization"
+            )
         
         return LifecycleAssessment(
             current_state=self.current_state.value,
@@ -548,13 +531,8 @@ class VCaptureLifecycleGovernance:
             if g.gate_name in critical_gates and g.status == GateStatus.FAIL
         ]
         
-        # Determine eligibility
-        if n_fail == 0:
-            eligible_for_promotion = True
-        elif n_fail <= 2 and n_pass >= 6:
-            eligible_for_promotion = True  # Minor failures, mostly passing
-        else:
-            eligible_for_promotion = False
+        # Any failed gate is treated as a promotion blocker.
+        eligible_for_promotion = n_fail == 0
         
         # Determine downgrade
         if len(critical_failures) > 0:
@@ -565,6 +543,23 @@ class VCaptureLifecycleGovernance:
             requires_downgrade = False
         
         return eligible_for_promotion, requires_downgrade
+
+    def _compute_overfitting_warning(
+        self,
+        mixed: Dict,
+        portability_gate: EnhancedGateResult,
+    ) -> Optional[str]:
+        """Flag suspicious near-perfect fit that does not translate to portability."""
+        model_stats = mixed.get('model_statistics', {})
+        r_squared = float(model_stats.get('r_squared', 0.0) or 0.0)
+
+        if r_squared >= 0.99 and portability_gate.status != GateStatus.PASS:
+            return (
+                "Potential overfitting: near-perfect model fit on the measured manifest "
+                f"(R^2={r_squared:.4f}) without passing cross-backend portability"
+            )
+
+        return None
     
     def _assess_replicate_gate_enhanced(self, metadata: Dict, variance: Dict,
                                          previous: Optional[Dict]) -> EnhancedGateResult:
@@ -871,11 +866,13 @@ class VCaptureLifecycleGovernance:
         """Assess ranking correlation with confidence interval."""
         if not transfer:
             return None
-        
-        # Would compute bootstrap CI in practice
-        # For now, use point estimate ± 0.1 as approximation
-        ranking_corr = abs(transfer[0].get('promoter_ranking_correlation', 0))
-        ci_lower = max(0, ranking_corr - 0.1)
+
+        rank_stability_ci = self._compute_rank_stability_ci(transfer)
+        if rank_stability_ci is None:
+            return None
+
+        ci_lower = rank_stability_ci.ci_lower
+        ci_upper = rank_stability_ci.ci_upper
         
         status = self.thresholds.min_rank_stability_ci_lower.evaluate(ci_lower)
         
@@ -887,7 +884,7 @@ class VCaptureLifecycleGovernance:
             warning_threshold=self.thresholds.min_rank_stability_ci_lower.warning_threshold,
             margin_to_pass=ci_lower - self.thresholds.min_rank_stability_ci_lower.pass_threshold,
             margin_to_warning=ci_lower - self.thresholds.min_rank_stability_ci_lower.warning_threshold,
-            message=f"Rank stability CI: [{ci_lower:.2f}, {ranking_corr + 0.1:.2f}] ({status.value})",
+            message=f"Rank stability CI: [{ci_lower:.2f}, {ci_upper:.2f}] ({status.value})",
         )
     
     def _assess_coverage_gate(self, variance: Dict, metadata: Dict,
@@ -941,18 +938,18 @@ class VCaptureLifecycleGovernance:
         if not summaries:
             return None
         
-        # Count unique promoters and backends
+        # Count unique promoters and backends from the ledger summary schema.
         promoters = set()
         backends = set()
-        cells_with_min = 0
         min_replicates = self.thresholds.min_replicates_per_cell.pass_threshold
         
         # Track unique cells (promoter-backend combinations)
         unique_cells = set()
         cells_meeting_threshold = set()
+        promoters_above_threshold = set()
         
         for s in summaries:
-            promoter = s.get('promoter', 'unknown')
+            promoter = s.get('promoter_id') or s.get('promoter', 'unknown')
             backend = s.get('backend', 'unknown')
             promoters.add(promoter)
             backends.add(backend)
@@ -962,13 +959,12 @@ class VCaptureLifecycleGovernance:
             
             if s.get('replicate_count', 0) >= min_replicates:
                 cells_meeting_threshold.add(cell_key)
+            if s.get('signal_to_separation', 0) >= self.thresholds.min_ss_ratio.pass_threshold:
+                promoters_above_threshold.add(promoter)
         
         total_cells = len(unique_cells)
         cells_with_min = len(cells_meeting_threshold)
-        
-        # Count promoters above S/S threshold
-        ss_values = [s.get('signal_to_separation', 0) for s in summaries]
-        promoters_above = sum(1 for ss in ss_values if ss >= self.thresholds.min_ss_ratio.pass_threshold)
+        promoters_above = len(promoters_above_threshold)
         
         return CohortCoverage(
             total_promoters=len(promoters),
@@ -1351,7 +1347,10 @@ def main():
         assessment.replicate_gate, assessment.residual_gate,
         assessment.separation_gate, assessment.portability_gate,
         assessment.stability_gate, assessment.model_fit_gate,
+        assessment.heldout_gate, assessment.drift_gate,
+        assessment.rank_ci_gate, assessment.coverage_gate,
     ]
+    gates = [g for g in gates if g is not None]
     n_pass = sum(1 for g in gates if g.status == GateStatus.PASS)
     n_warn = sum(1 for g in gates if g.status == GateStatus.WARNING)
     n_fail = sum(1 for g in gates if g.status == GateStatus.FAIL)

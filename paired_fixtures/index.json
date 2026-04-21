@@ -1,33 +1,33 @@
 {
   "policy_version": "2.1.0",
   "schema_version": "1.0.0",
-  "created_at": "2026-04-21T17:23:57.856843",
+  "created_at": "2026-04-21T21:08:49.063563",
   "fixtures": {
     "baseline": {
-      "path": "paired_fixtures\\baseline_canonical.json",
-      "hash": "ac226262632bd579",
+      "path": "raw_hardware\\canonical_output_v4.json",
+      "hash": "03d636cdc0b3a195",
       "state": "development",
       "gate_counts": {
-        "pass": 5,
-        "warning": 3,
-        "fail": 0
+        "pass": 6,
+        "warning": 1,
+        "fail": 1
       }
     },
     "hierarchical": {
-      "path": "paired_fixtures\\hierarchical_canonical.json",
-      "hash": "5c25d8e1932d1b5f",
-      "state": "candidate",
+      "path": "raw_hardware\\canonical_output_hierarchical.json",
+      "hash": "fdc5d25a4500b1fa",
+      "state": "development",
       "gate_counts": {
-        "pass": 8,
-        "warning": 0,
-        "fail": 0
+        "pass": 6,
+        "warning": 1,
+        "fail": 1
       }
     },
     "delta": {
       "path": "paired_fixtures\\comparison_delta.json",
-      "comparison_id": "comp_ac226262632bd579_5c25d8e1932d1b5f",
-      "overall_improvement": true,
-      "n_gates_improved": 3,
+      "comparison_id": "comp_03d636cdc0b3a195_fdc5d25a4500b1fa",
+      "overall_improvement": false,
+      "n_gates_improved": 0,
       "n_gates_degraded": 0
     }
   }

@@ -2,8 +2,8 @@
 VCapture Paired Comparison Report
 ======================================================================
 
-Comparison ID: comp_ac226262632bd579_5c25d8e1932d1b5f
-Timestamp: 2026-04-21T17:23:57.839872
+Comparison ID: comp_03d636cdc0b3a195_fdc5d25a4500b1fa
+Timestamp: 2026-04-21T21:08:49.034833
 Policy Version: 2.1.0
 Schema Version: 1.0.0
 
@@ -12,26 +12,21 @@ STATE CHANGES
 ======================================================================
 
   Baseline State: DEVELOPMENT
-  Hierarchical State: CANDIDATE
-  State Changed: YES
-  State Delta: development -> candidate
+  Hierarchical State: DEVELOPMENT
+  State Changed: NO
+  State Delta: unchanged
 
-  Baseline Eligible: YES
-  Hierarchical Eligible: YES
+  Baseline Eligible: NO
+  Hierarchical Eligible: NO
   Eligibility Changed: NO
 
 ======================================================================
 GATE CHANGES
 ======================================================================
 
-  Gates Improved: 3
+  Gates Improved: 0
   Gates Degraded: 0
-  Gates Unchanged: 5
-
-  Improved Gates:
-    ✓ residual_spread
-    ✓ portability
-    ✓ rank_stability_ci
+  Gates Unchanged: 8
 
 ======================================================================
 GATE DELTAS
@@ -43,34 +38,34 @@ GATE DELTAS
     Margin: +2.0000 -> +2.0000 (Δ +0.0000)
 
   residual_spread:
-    Status: warning ↑ pass
-    Value: 0.0848 -> 0.0650 (Δ -0.0198)
-    Margin: +0.1152 -> +0.1350 (Δ +0.0198)
+    Status: pass → pass
+    Value: 0.0848 -> 0.0005 (Δ -0.0843)
+    Margin: +0.1152 -> +0.1995 (Δ +0.0843)
 
   signal_to_separation:
     Status: pass → pass
-    Value: 1.4236 -> 1.8000 (Δ +0.3764)
-    Margin: +0.4236 -> +0.8000 (Δ +0.3764)
+    Value: 1.4236 -> 133.6682 (Δ +132.2446)
+    Margin: +0.4236 -> +132.6682 (Δ +132.2446)
 
   portability:
-    Status: warning ↑ pass
-    Value: 0.8498 -> 0.9200 (Δ +0.0702)
-    Margin: -0.0002 -> +0.0700 (Δ +0.0702)
+    Status: warning → warning
+    Value: 0.8498 -> 0.8498 (Δ +0.0000)
+    Margin: -0.0002 -> -0.0002 (Δ +0.0000)
 
   stability:
     Status: pass → pass
-    Value: 0.0015 -> 0.0012 (Δ -0.0003)
-    Margin: +0.0085 -> +0.0088 (Δ +0.0003)
+    Value: 0.0005 -> 0.0005 (Δ -0.0000)
+    Margin: +0.0095 -> +0.0095 (Δ +0.0000)
 
   model_fit:
     Status: pass → pass
-    Value: 0.9002 -> 0.9200 (Δ +0.0198)
-    Margin: +0.4002 -> +0.4200 (Δ +0.0198)
+    Value: 0.6756 -> 1.0000 (Δ +0.3243)
+    Margin: +0.1756 -> +0.5000 (Δ +0.3243)
 
   rank_stability_ci:
-    Status: warning ↑ pass
-    Value: 0.6000 -> 0.7500 (Δ +0.1500)
-    Margin: -0.1000 -> +0.0500 (Δ +0.1500)
+    Status: fail → fail
+    Value: 0.5839 -> 0.5839 (Δ +0.0000)
+    Margin: -0.1161 -> -0.1161 (Δ +0.0000)
 
   cohort_coverage:
     Status: pass → pass
@@ -81,17 +76,17 @@ GATE DELTAS
 RECOMMENDATION
 ======================================================================
 
-  Baseline: PROMOTE
-  Hierarchical: PROMOTE
+  Baseline: REJECT
+  Hierarchical: REJECT
   Changed: NO
 
-  Overall Improvement: YES
+  Overall Improvement: NO
 
 ======================================================================
 PROVENANCE
 ======================================================================
 
-  Baseline Path: raw_hardware/vcapture_ledger_report.json
-  Hierarchical Path: raw_hardware/hierarchical_ledger_report.json
-  Baseline Hash: ac226262632bd579
-  Hierarchical Hash: 5c25d8e1932d1b5f
+  Baseline Path: raw_hardware\canonical_output_v4.json
+  Hierarchical Path: raw_hardware\canonical_output_hierarchical.json
+  Baseline Hash: 03d636cdc0b3a195
+  Hierarchical Hash: fdc5d25a4500b1fa

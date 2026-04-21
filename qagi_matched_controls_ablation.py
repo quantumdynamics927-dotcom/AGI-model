@@ -295,9 +295,22 @@ class WideBranching(nn.Module):
         self.depth = depth
         self.n_branches = 1
         
-        # Match total parameters of Sierpinski
-        sierpinski_params = depth * (3 * dim * dim + dim * 3 * dim)  # Approximate
-        hidden_dim = int(math.sqrt(sierpinski_params / depth / 2))
+        # Match the actual per-depth parameter budget of the Sierpinski control,
+        # including bias terms on all four linear layers.
+        sierpinski_params_per_depth = 6 * dim * dim + 4 * dim
+
+        def wide_params_per_depth(hidden_dim: int) -> int:
+            return 2 * dim * hidden_dim + hidden_dim + dim
+
+        hidden_guess = (sierpinski_params_per_depth - dim) / (2 * dim + 1)
+        candidates = {
+            max(1, int(math.floor(hidden_guess))),
+            max(1, int(math.ceil(hidden_guess))),
+        }
+        hidden_dim = min(
+            candidates,
+            key=lambda candidate: abs(wide_params_per_depth(candidate) - sierpinski_params_per_depth),
+        )
         
         self.transforms = nn.ModuleList([
             nn.Sequential(
@@ -657,11 +670,26 @@ def compute_ci(data: np.ndarray, confidence: float = 0.95) -> Tuple[float, float
     return (float(mean - h), float(mean + h))
 
 
+def compute_ttest_p_value(treatment: np.ndarray, control: np.ndarray) -> float:
+    """Compute a stable Welch t-test p-value for two samples."""
+    if len(treatment) < 2 or len(control) < 2:
+        return 1.0
+
+    if np.allclose(treatment, treatment[0]) and np.allclose(control, control[0]):
+        return 1.0 if np.isclose(np.mean(treatment), np.mean(control)) else 0.0
+
+    _, p_value = stats.ttest_ind(treatment, control, equal_var=False, nan_policy='omit')
+    if np.isnan(p_value):
+        return 1.0
+    return float(p_value)
+
+
 def run_ablation(config: AblationConfig,
-                 baseline_outputs: Optional[np.ndarray] = None,
+                 baseline_metrics: Optional[Dict[str, np.ndarray]] = None,
                  n_runs: int = 10,
                  n_samples: int = 200,
-                 dim: int = 128) -> AblationResult:
+                 dim: int = 128,
+                 return_metric_samples: bool = False) -> Any:
     """Run ablation with statistical rigor."""
     
     outputs = []
@@ -727,15 +755,18 @@ def run_ablation(config: AblationConfig,
     spectral_gap_ci = compute_ci(spectral_gaps_arr)
     
     # Effect sizes and p-values (vs baseline)
-    if baseline_outputs is not None:
+    if baseline_metrics is not None:
+        baseline_outputs = baseline_metrics['output']
+        baseline_convergences = baseline_metrics['convergence']
+        baseline_stabilities = baseline_metrics['stability']
+
         output_effect_size = compute_cohens_d(outputs_arr, baseline_outputs)
-        convergence_effect_size = compute_cohens_d(convergences_arr, baseline_outputs)  # Simplified
-        stability_effect_size = compute_cohens_d(stabilities_arr, baseline_outputs)
+        convergence_effect_size = compute_cohens_d(convergences_arr, baseline_convergences)
+        stability_effect_size = compute_cohens_d(stabilities_arr, baseline_stabilities)
         
-        # Two-sample t-test
-        _, output_p_value = stats.ttest_ind(outputs_arr, baseline_outputs)
-        _, convergence_p_value = stats.ttest_ind(convergences_arr, baseline_outputs)
-        _, stability_p_value = stats.ttest_ind(stabilities_arr, baseline_outputs)
+        output_p_value = compute_ttest_p_value(outputs_arr, baseline_outputs)
+        convergence_p_value = compute_ttest_p_value(convergences_arr, baseline_convergences)
+        stability_p_value = compute_ttest_p_value(stabilities_arr, baseline_stabilities)
     else:
         output_effect_size = 0.0
         convergence_effect_size = 0.0
@@ -744,7 +775,7 @@ def run_ablation(config: AblationConfig,
         convergence_p_value = 1.0
         stability_p_value = 1.0
     
-    return AblationResult(
+    result = AblationResult(
         config_name=config.name,
         description=config.description,
         n_params=model.count_params(),
@@ -766,6 +797,15 @@ def run_ablation(config: AblationConfig,
         spectral_gap=spectral_gap_mean,
         spectral_gap_ci=spectral_gap_ci,
     )
+
+    if return_metric_samples:
+        return result, {
+            'output': outputs_arr,
+            'convergence': convergences_arr,
+            'stability': stabilities_arr,
+        }
+
+    return result
 
 
 # =============================================================================
@@ -799,16 +839,14 @@ def main():
     print(f"{'='*70}")
     
     baseline_config = configs['baseline']
-    baseline_result = run_ablation(
+    baseline_result, baseline_metrics = run_ablation(
         baseline_config,
         n_runs=args.n_runs,
         n_samples=args.n_samples,
         dim=args.dim,
+        return_metric_samples=True,
     )
     results.append(baseline_result)
-    
-    # Store baseline for comparison
-    baseline_outputs = np.array([baseline_result.output_mean] * args.n_runs)  # Simplified
     
     print(f"  Parameters: {baseline_result.n_params:,}")
     print(f"  Output: {baseline_result.output_mean:.4f} ± {baseline_result.output_std:.4f}")
@@ -827,7 +865,7 @@ def main():
         
         result = run_ablation(
             config,
-            baseline_outputs=baseline_outputs,
+            baseline_metrics=baseline_metrics,
             n_runs=args.n_runs,
             n_samples=args.n_samples,
             dim=args.dim,
