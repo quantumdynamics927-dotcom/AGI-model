@@ -28,8 +28,10 @@ from typing import Optional, Dict, Any, List
 try:
     import ollama
     OLLAMA_AVAILABLE = True
-except ImportError:
+    print("✅ Ollama Python client successfully imported")
+except ImportError as e:
     OLLAMA_AVAILABLE = False
+    print(f"❌ Ollama Python client import failed: {e}")
 
 # ── Local backend imports (graceful degradation) ───────────────────────────
 try:
@@ -125,6 +127,7 @@ def call_local_model(
     system_prompt: Optional[str] = None
 ) -> str:
     """Call Ollama local model. Returns response string."""
+    print(f"DEBUG: OLLAMA_AVAILABLE = {OLLAMA_AVAILABLE}, model = {model}")
     if not OLLAMA_AVAILABLE:
         return "⚠️ Ollama not available. Install with: pip install ollama"
 
