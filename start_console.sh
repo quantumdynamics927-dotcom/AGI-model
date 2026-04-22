@@ -6,6 +6,11 @@ set -e
 
 echo "=== AGI Research Console Startup ==="
 
+# Debug: Check if ollama package is available
+echo "Checking Python environment..."
+python -c "import ollama; print('✅ Ollama Python client available')" || echo "❌ Ollama Python client not available"
+python -c "import sys; print('Python path:', sys.path)" || echo "Could not print Python path"
+
 # Start Ollama in background
 echo "Starting Ollama service..."
 ollama serve &

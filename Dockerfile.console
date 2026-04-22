@@ -24,6 +24,7 @@ RUN useradd -m -s /bin/bash appuser
 # Copy requirements first for caching
 COPY requirements_console.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip show ollama || echo "Ollama not found after installation"
 
 # Copy application files
 COPY research_console.py .
