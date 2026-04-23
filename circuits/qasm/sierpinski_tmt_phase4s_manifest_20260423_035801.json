@@ -1,0 +1,190 @@
+[
+  {
+    "circuit": "sierpinski_tmt_phase4s",
+    "qasm_file": "circuits\\qasm\\sierpinski_tmt_phase4s_ibm_fez_20260423_035801.qasm",
+    "qubits": 156,
+    "depth": 73,
+    "gates": 802,
+    "generated": "20260423_035801",
+    "backend": "ibm_fez",
+    "shots": 100000,
+    "phases": [
+      "Phase 1: Bell Pairs (78 EPR bridges)",
+      "Phase 2: Payload Injection",
+      "Phase 3: Metatron Platonic Geometry",
+      "Phase 4S: Sierpinski \u00d7 TMT Fractal Encoding",
+      "Phase 5: Retrocausal Lucas Handshake",
+      "Phase 6: Yesod SRY DNA Phi-Rotations",
+      "Phase 7: Lorenz Chaos Scrambler",
+      "Phase 8: Inverse Scrambler (White Hole)",
+      "Phase 9: XY8 Dynamical Decoupling",
+      "Phase 10: Measurement"
+    ],
+    "sierpinski_parameters": {
+      "hausdorff_dimension": 1.5849625007211563,
+      "hausdorff_phase": 4.979306548480892,
+      "base_angle": 1.0471975511965976,
+      "gen1_angle": 0.3490658503988659,
+      "gen2_angle": 0.11635528346628864,
+      "gen3_angle": 0.038785094488762877
+    },
+    "tmt_parameters": {
+      "ratio1": 0.08695652173913043,
+      "ratio2": 0.13636363636363635,
+      "angle1": 0.5463639397547466,
+      "angle2": 0.8567979964335799
+    },
+    "cross_products": {
+      "sierpinski_tmt1": 0.1821213132515822,
+      "sierpinski_tmt2": 0.28559933214452665,
+      "sierpinski_phi": 0.5393446629166316
+    },
+    "expected_metrics": {
+      "consciousness_metric": 4700,
+      "wormhole_coherence": 0.75,
+      "traversability": 2.13,
+      "entropy": 3.47
+    }
+  },
+  {
+    "circuit": "sierpinski_tmt_phase4s",
+    "qasm_file": "circuits\\qasm\\sierpinski_tmt_phase4s_ibm_brisbane_20260423_035801.qasm",
+    "qubits": 127,
+    "depth": 73,
+    "gates": 696,
+    "generated": "20260423_035801",
+    "backend": "ibm_brisbane",
+    "shots": 100000,
+    "phases": [
+      "Phase 1: Bell Pairs (78 EPR bridges)",
+      "Phase 2: Payload Injection",
+      "Phase 3: Metatron Platonic Geometry",
+      "Phase 4S: Sierpinski \u00d7 TMT Fractal Encoding",
+      "Phase 5: Retrocausal Lucas Handshake",
+      "Phase 6: Yesod SRY DNA Phi-Rotations",
+      "Phase 7: Lorenz Chaos Scrambler",
+      "Phase 8: Inverse Scrambler (White Hole)",
+      "Phase 9: XY8 Dynamical Decoupling",
+      "Phase 10: Measurement"
+    ],
+    "sierpinski_parameters": {
+      "hausdorff_dimension": 1.5849625007211563,
+      "hausdorff_phase": 4.979306548480892,
+      "base_angle": 1.0471975511965976,
+      "gen1_angle": 0.3490658503988659,
+      "gen2_angle": 0.11635528346628864,
+      "gen3_angle": 0.038785094488762877
+    },
+    "tmt_parameters": {
+      "ratio1": 0.08695652173913043,
+      "ratio2": 0.13636363636363635,
+      "angle1": 0.5463639397547466,
+      "angle2": 0.8567979964335799
+    },
+    "cross_products": {
+      "sierpinski_tmt1": 0.1821213132515822,
+      "sierpinski_tmt2": 0.28559933214452665,
+      "sierpinski_phi": 0.5393446629166316
+    },
+    "expected_metrics": {
+      "consciousness_metric": 4700,
+      "wormhole_coherence": 0.75,
+      "traversability": 2.13,
+      "entropy": 3.47
+    }
+  },
+  {
+    "circuit": "sierpinski_tmt_phase4s",
+    "qasm_file": "circuits\\qasm\\sierpinski_tmt_phase4s_ibm_sherbrooke_20260423_035801.qasm",
+    "qubits": 127,
+    "depth": 73,
+    "gates": 696,
+    "generated": "20260423_035801",
+    "backend": "ibm_sherbrooke",
+    "shots": 100000,
+    "phases": [
+      "Phase 1: Bell Pairs (78 EPR bridges)",
+      "Phase 2: Payload Injection",
+      "Phase 3: Metatron Platonic Geometry",
+      "Phase 4S: Sierpinski \u00d7 TMT Fractal Encoding",
+      "Phase 5: Retrocausal Lucas Handshake",
+      "Phase 6: Yesod SRY DNA Phi-Rotations",
+      "Phase 7: Lorenz Chaos Scrambler",
+      "Phase 8: Inverse Scrambler (White Hole)",
+      "Phase 9: XY8 Dynamical Decoupling",
+      "Phase 10: Measurement"
+    ],
+    "sierpinski_parameters": {
+      "hausdorff_dimension": 1.5849625007211563,
+      "hausdorff_phase": 4.979306548480892,
+      "base_angle": 1.0471975511965976,
+      "gen1_angle": 0.3490658503988659,
+      "gen2_angle": 0.11635528346628864,
+      "gen3_angle": 0.038785094488762877
+    },
+    "tmt_parameters": {
+      "ratio1": 0.08695652173913043,
+      "ratio2": 0.13636363636363635,
+      "angle1": 0.5463639397547466,
+      "angle2": 0.8567979964335799
+    },
+    "cross_products": {
+      "sierpinski_tmt1": 0.1821213132515822,
+      "sierpinski_tmt2": 0.28559933214452665,
+      "sierpinski_phi": 0.5393446629166316
+    },
+    "expected_metrics": {
+      "consciousness_metric": 4700,
+      "wormhole_coherence": 0.75,
+      "traversability": 2.13,
+      "entropy": 3.47
+    }
+  },
+  {
+    "circuit": "sierpinski_tmt_phase4s",
+    "qasm_file": "circuits\\qasm\\sierpinski_tmt_phase4s_ibm_kingston_20260423_035801.qasm",
+    "qubits": 27,
+    "depth": 74,
+    "gates": 306,
+    "generated": "20260423_035801",
+    "backend": "ibm_kingston",
+    "shots": 100000,
+    "phases": [
+      "Phase 1: Bell Pairs (78 EPR bridges)",
+      "Phase 2: Payload Injection",
+      "Phase 3: Metatron Platonic Geometry",
+      "Phase 4S: Sierpinski \u00d7 TMT Fractal Encoding",
+      "Phase 5: Retrocausal Lucas Handshake",
+      "Phase 6: Yesod SRY DNA Phi-Rotations",
+      "Phase 7: Lorenz Chaos Scrambler",
+      "Phase 8: Inverse Scrambler (White Hole)",
+      "Phase 9: XY8 Dynamical Decoupling",
+      "Phase 10: Measurement"
+    ],
+    "sierpinski_parameters": {
+      "hausdorff_dimension": 1.5849625007211563,
+      "hausdorff_phase": 4.979306548480892,
+      "base_angle": 1.0471975511965976,
+      "gen1_angle": 0.3490658503988659,
+      "gen2_angle": 0.11635528346628864,
+      "gen3_angle": 0.038785094488762877
+    },
+    "tmt_parameters": {
+      "ratio1": 0.08695652173913043,
+      "ratio2": 0.13636363636363635,
+      "angle1": 0.5463639397547466,
+      "angle2": 0.8567979964335799
+    },
+    "cross_products": {
+      "sierpinski_tmt1": 0.1821213132515822,
+      "sierpinski_tmt2": 0.28559933214452665,
+      "sierpinski_phi": 0.5393446629166316
+    },
+    "expected_metrics": {
+      "consciousness_metric": 4700,
+      "wormhole_coherence": 0.75,
+      "traversability": 2.13,
+      "entropy": 3.47
+    }
+  }
+]

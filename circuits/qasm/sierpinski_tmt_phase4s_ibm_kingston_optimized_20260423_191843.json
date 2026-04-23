@@ -1,0 +1,21 @@
+{
+  "backend": "ibm_kingston",
+  "n_qubits": 27,
+  "depth": 32,
+  "total_gates": 140,
+  "gate_breakdown": {
+    "barrier": 10,
+    "h": 7,
+    "cx": 13,
+    "ry": 30,
+    "rz": 37,
+    "x": 8,
+    "y": 8,
+    "measure": 27
+  },
+  "timestamp": "20260423_191843",
+  "optimization": "reduced_gates_v1",
+  "sierpinski_generations": 2,
+  "xy8_cycles": 2,
+  "active_qubits": 8
+}

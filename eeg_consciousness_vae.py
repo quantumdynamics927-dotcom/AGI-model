@@ -331,7 +331,7 @@ class EEGConsciousnessVAE:
         self.model = GoldenRatioVAE(input_dim, latent_dim, golden_ratio_weight=golden_ratio_weight)
         self.optimizer = torch.optim.Adam(self.model.parameters(), lr=1e-3)
         self.scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-            self.optimizer, mode='min', factor=0.5, patience=10, verbose=True
+            self.optimizer, mode='min', factor=0.5, patience=10
         )
 
         # Initialize biomimetic components
@@ -554,110 +554,6 @@ class EEGConsciousnessVAE:
         print(f"Golden ratio proximity: {phi_proximity:.3f}")
         print(f"Mean ratio: {np.mean(ratios):.3f}")
         print(f"Ratio std: {np.std(ratios):.3f}")
-    def evolutionary_nft_minting(self, num_nfts: int = 10):
-        """Generate evolutionary NFTs using singularity engine."""
-        if not self.singularity_engine:
-            print("❌ Singularity engine not available for NFT minting")
-            return []
-
-        print(f"\n🎨 Evolutionary NFT Minting ({num_nfts} NFTs)")
-        print("=" * 50)
-
-        minted_nfts = []
-
-        for i in range(num_nfts):
-            # Generate DNA sequence using singularity amplification
-            dna_sequence = self._generate_evolutionary_dna()
-
-            # Process through biomimetic foundation
-            if self.biomimetic_foundation:
-                processed_data = self.biomimetic_foundation.process_dna_sequence(dna_sequence)
-                behavioral_syntax = processed_data['behavioral_syntax']
-                neural_latents = processed_data['neural_latents']
-
-                # Combine for VAE input
-                combined_input = np.concatenate([behavioral_syntax, neural_latents])
-                if len(combined_input) < self.input_dim:
-                    combined_input = np.pad(combined_input, (0, self.input_dim - len(combined_input)))
-                elif len(combined_input) > self.input_dim:
-                    combined_input = combined_input[:self.input_dim]
-
-                vae_input = torch.tensor(combined_input, dtype=torch.float32).unsqueeze(0)
-
-                # Get VAE latent representation
-                self.model.eval()
-                with torch.no_grad():
-                    mu, log_var = self.model.encode(vae_input)
-                    z = self.model.reparameterize(mu, log_var)
-                    x_recon = self.model.decode(z)
-
-                    # Compute metrics
-                    fidelity = F.mse_loss(x_recon, vae_input).item()
-                    entropy = 0.5 * torch.mean(1 + log_var - mu.pow(2) - log_var.exp()).item()
-
-                # Mint NFT if criteria met
-                if entropy > 1.0 and fidelity < 0.01:  # High entropy, high fidelity
-                    nft = self._create_transcendent_nft(dna_sequence, z.squeeze().numpy(),
-                                                       entropy, fidelity, i)
-                    minted_nfts.append(nft)
-                    print(f"✅ Minted Transcendent NFT #{i+1}: Entropy={entropy:.3f}, Fidelity={fidelity:.4f}")
-                else:
-                    print(f"❌ NFT #{i+1} rejected: Entropy={entropy:.3f}, Fidelity={fidelity:.4f}")
-
-        print(f"\n🎯 Successfully minted {len(minted_nfts)} transcendent consciousness NFTs")
-        return minted_nfts
-
-    def _generate_evolutionary_dna(self) -> str:
-        """Generate DNA sequence using evolutionary principles."""
-        bases = ['A', 'T', 'C', 'G']
-
-        # Start with BDNF/FOXP2 motifs
-        motifs = ['AACAAT', 'GTG', 'ATG', 'GAGTCATCATCTTTTATGGG']
-
-        # Evolutionary amplification
-        sequence = random.choice(motifs)
-
-        # Add evolutionary mutations and extensions
-        for _ in range(random.randint(5, 15)):
-            if random.random() < 0.7:  # Extension
-                sequence += random.choice(bases)
-            elif random.random() < 0.8:  # Insertion
-                pos = random.randint(0, len(sequence))
-                sequence = sequence[:pos] + random.choice(bases) + sequence[pos:]
-            # Small chance of mutation
-            elif random.random() < 0.9 and len(sequence) > 3:
-                pos = random.randint(0, len(sequence) - 1)
-                current_base = sequence[pos]
-                new_bases = [b for b in bases if b != current_base]
-                sequence = sequence[:pos] + random.choice(new_bases) + sequence[pos+1:]
-
-        return sequence
-
-    def _create_transcendent_nft(self, dna_sequence: str, latent_vector: np.ndarray,
-                               entropy: float, fidelity: float, nft_id: int) -> Dict:
-        """Create a transcendent consciousness NFT."""
-        return {
-            'id': nft_id + 1,
-            'tier': 'Transcendent',
-            'dna_sequence': dna_sequence,
-            'quantum_signature': latent_vector.tolist(),
-            'entropy': entropy,
-            'fidelity': fidelity,
-            'consciousness_level': 'Transcendent',
-            'biomimetic_markers': {
-                'BDNF_amplified': 'GTG' in dna_sequence or 'ATG' in dna_sequence,
-                'FOXP2_enhanced': 'AACAAT' in dna_sequence,
-                'golden_ratio_optimized': True
-            },
-            'mint_timestamp': datetime.now().isoformat(),
-            'verification': 'quantum-verified'
-        }
-
-    def save_nfts(self, nfts: List[Dict], filename: str = 'transcendent_nfts.json'):
-        """Save minted NFTs to file."""
-        with open(filename, 'w') as f:
-            json.dump(nfts, f, indent=2, default=str)
-        print(f"💾 Saved {len(nfts)} NFTs to {filename}")
 
 
 def main():
@@ -681,21 +577,16 @@ def main():
     vae = EEGConsciousnessVAE(input_dim=128, latent_dim=32, golden_ratio_weight=0.1)
 
     # Train the model
-    consciousness_labels = dataset.labels
-    vae.train(train_loader, val_loader, epochs=50, consciousness_labels=consciousness_labels)
+    # Note: labels are passed for analysis only, training uses batch labels from DataLoader
+    vae.train(train_loader, val_loader, epochs=50, consciousness_labels=None)
 
-    # Analyze consciousness patterns
+    # Analyze consciousness patterns with correct validation labels
     val_latents = vae.get_latents(val_loader)
     val_labels = np.array([dataset.labels[i] for i in val_dataset.indices])
     vae.analyze_consciousness_patterns(val_latents, val_labels)
 
-    # Evolutionary NFT minting
-    nfts = vae.evolutionary_nft_minting(num_nfts=5)
-    if nfts:
-        vae.save_nfts(nfts)
-
     print("\n✅ EEG Consciousness VAE analysis complete!")
-    print("Results saved: eeg_consciousness_analysis.png, transcendent_nfts.json")
+    print("Results saved: eeg_consciousness_analysis.png")
 
 
 if __name__ == "__main__":

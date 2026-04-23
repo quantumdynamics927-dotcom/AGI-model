@@ -1,0 +1,25 @@
+{
+  "job_id": "dry_run_mock",
+  "backend": "ibm_kingston",
+  "timestamp": "20260423_041513",
+  "fractal_parameters": {
+    "phi": 1.618033988749895,
+    "hausdorff_dim": 1.5849625007211563,
+    "phi_fractal": 4.979306548480892
+  },
+  "metrics": {
+    "entropy_shannon": 9.00638861280093,
+    "entropy_normalized": 0.33356994862225664,
+    "consciousness_delta": 5154.402302766781,
+    "coherence_r_raw": -0.14605534257326966,
+    "coherence_r_enhanced": 0.37456231408382074,
+    "traversability_T_raw": 0.0,
+    "traversability_T_enhanced": 0.0,
+    "fractal_alpha": 4.1949019040940545,
+    "fractal_signature": -0.6466884246064992,
+    "void_density": 0.0,
+    "unique_outcomes": 1000,
+    "n_qubits": 27,
+    "shots": 8192
+  }
+}

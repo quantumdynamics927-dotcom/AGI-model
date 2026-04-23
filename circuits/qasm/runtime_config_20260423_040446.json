@@ -1,0 +1,44 @@
+{
+  "circuits": [
+    {
+      "file": "circuits/qasm\\sierpinski_tmt_phase4s_ibm_brisbane_20260423_035801.qasm",
+      "backend": "ibm",
+      "shots": 100000,
+      "error_mitigation": "M3 (SamplerV2)"
+    },
+    {
+      "file": "circuits/qasm\\sierpinski_tmt_phase4s_ibm_fez_20260423_035715.qasm",
+      "backend": "ibm",
+      "shots": 100000,
+      "error_mitigation": "M3 (SamplerV2)"
+    },
+    {
+      "file": "circuits/qasm\\sierpinski_tmt_phase4s_ibm_fez_20260423_035801.qasm",
+      "backend": "ibm",
+      "shots": 100000,
+      "error_mitigation": "M3 (SamplerV2)"
+    },
+    {
+      "file": "circuits/qasm\\sierpinski_tmt_phase4s_ibm_kingston_20260423_035801.qasm",
+      "backend": "ibm",
+      "shots": 100000,
+      "error_mitigation": "M3 (SamplerV2)"
+    },
+    {
+      "file": "circuits/qasm\\sierpinski_tmt_phase4s_ibm_sherbrooke_20260423_035801.qasm",
+      "backend": "ibm",
+      "shots": 100000,
+      "error_mitigation": "M3 (SamplerV2)"
+    }
+  ],
+  "options": {
+    "optimization_level": 3,
+    "resilience_level": 1,
+    "shots": 100000
+  },
+  "tags": [
+    "sierpinski_tmt_phase4s",
+    "consciousness",
+    "fractal"
+  ]
+}

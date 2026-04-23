@@ -98,6 +98,24 @@ prompts:
     version: "1.0.0"
     status: validated
     file: audit_custom_metric.md
+
+  - name: golden_reference_prompts
+    version: "1.0.0"
+    file: golden_reference_prompts.md
+    purpose: "Golden reference prompts for phi coherence and biomimetic resonance benchmarking"
+    status: validated
+    risk_level: low
+    inputs:
+      - prompt text
+      - expected output characteristics
+      - target metrics
+    outputs:
+      - phi_coherence: > 0.55
+      - biomimetic_resonance: > 0.85
+      - phi_resonance: 1.618 (structural constant)
+    last_validated_on: "2026-04-23"
+    eval_cases: eval_cases/golden_prompts/
+    notes: "Known-good prompts that reliably produce high-coherence outputs. Use for benchmarking new model configurations."
     purpose: "Evaluate trustworthiness of custom metrics before using for decisions"
     risk_level: high
     inputs:

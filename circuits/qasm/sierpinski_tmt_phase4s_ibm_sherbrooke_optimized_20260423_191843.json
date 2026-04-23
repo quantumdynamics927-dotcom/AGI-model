@@ -1,0 +1,21 @@
+{
+  "backend": "ibm_sherbrooke",
+  "n_qubits": 127,
+  "depth": 30,
+  "total_gates": 242,
+  "gate_breakdown": {
+    "barrier": 10,
+    "h": 8,
+    "cx": 14,
+    "ry": 30,
+    "rz": 37,
+    "x": 8,
+    "y": 8,
+    "measure": 127
+  },
+  "timestamp": "20260423_191843",
+  "optimization": "reduced_gates_v1",
+  "sierpinski_generations": 2,
+  "xy8_cycles": 2,
+  "active_qubits": 8
+}
