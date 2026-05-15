@@ -1,0 +1,64 @@
+{
+  "experiment_info": {
+    "timestamp": "20260515_022200",
+    "shots": 8192,
+    "backend": "aer_simulator",
+    "seed": 42,
+    "variant": "entangled"
+  },
+  "modes": {
+    "d0": {
+      "parity_kl": 10.845077653767705,
+      "joint_kl": 0.6931495902220898,
+      "correlation_drift": -0.9999965173485177,
+      "chi_square": {
+        "statistic": 2510998397.31447,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "witness_score": 4.845974893778264,
+      "detected": true
+    },
+    "d1": {
+      "parity_kl": 10.845077653767705,
+      "joint_kl": 0.6931495902220898,
+      "correlation_drift": -0.9999965173485177,
+      "chi_square": {
+        "statistic": 2510998397.31447,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "witness_score": 4.845974893778264,
+      "detected": true
+    },
+    "both": {
+      "parity_kl": 10.845077653767705,
+      "joint_kl": 0.6931495902220898,
+      "correlation_drift": -0.9999965173485177,
+      "chi_square": {
+        "statistic": 2510998397.31447,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "witness_score": 4.845974893778264,
+      "detected": true
+    }
+  },
+  "comparisons": {
+    "d0_vs_d1": {
+      "d0_witness_score": 4.845974893778264,
+      "d1_witness_score": 4.845974893778264,
+      "difference": 0.0,
+      "symmetric": true
+    }
+  },
+  "detection_analysis": {
+    "modes_detected": [
+      "d0",
+      "d1",
+      "both"
+    ],
+    "detection_rate": 1.0,
+    "best_detection": "d0"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "timestamp": "20260515_022200",
+  "shots": 8192,
+  "backend": "aer_simulator",
+  "seed": 42,
+  "variant": "entangled",
+  "modes": {
+    "none": {
+      "circuit_info": {
+        "name": "PW-3Q-entangled",
+        "num_qubits": 3,
+        "depth": 5,
+        "num_gates": 5,
+        "gate_types": {
+          "h": 1,
+          "cx": 3,
+          "measure": 1
+        }
+      },
+      "counts": {
+        "0": 8192
+      },
+      "parity_distribution": [
+        1.0,
+        0.0
+      ],
+      "min_entropy": -1.4426951601859516e-10
+    },
+    "d0": {
+      "circuit_info": {
+        "name": "PW-3Q-entangled",
+        "num_qubits": 3,
+        "depth": 6,
+        "num_gates": 8,
+        "gate_types": {
+          "h": 1,
+          "cx": 3,
+          "measure": 4
+        }
+      },
+      "counts": {
+        "011": 4105,
+        "000": 4087
+      },
+      "parity_distribution": [
+        0.4989013671875,
+        0.5010986328125
+      ],
+      "min_entropy": 0.9968334930469265,
+      "joint_distribution": [
+        0.4989013671875,
+        0.0,
+        0.0,
+        0.5010986328125
+      ],
+      "mutual_information": 0.9999965173485177,
+      "parity_kl_from_baseline": 10.845077653767705
+    },
+    "d1": {
+      "circuit_info": {
+        "name": "PW-3Q-entangled",
+        "num_qubits": 3,
+        "depth": 5,
+        "num_gates": 8,
+        "gate_types": {
+          "h": 1,
+          "cx": 3,
+          "measure": 4
+        }
+      },
+      "counts": {
+        "011": 4105,
+        "000": 4087
+      },
+      "parity_distribution": [
+        0.4989013671875,
+        0.5010986328125
+      ],
+      "min_entropy": 0.9968334930469265,
+      "joint_distribution": [
+        0.4989013671875,
+        0.0,
+        0.0,
+        0.5010986328125
+      ],
+      "mutual_information": 0.9999965173485177,
+      "parity_kl_from_baseline": 10.845077653767705
+    },
+    "both": {
+      "circuit_info": {
+        "name": "PW-3Q-entangled",
+        "num_qubits": 3,
+        "depth": 6,
+        "num_gates": 9,
+        "gate_types": {
+          "h": 1,
+          "cx": 3,
+          "measure": 5
+        }
+      },
+      "counts": {
+        "011": 4105,
+        "000": 4087
+      },
+      "parity_distribution": [
+        0.4989013671875,
+        0.5010986328125
+      ],
+      "min_entropy": 0.9968334930469265,
+      "joint_distribution": [
+        0.4989013671875,
+        0.0,
+        0.0,
+        0.5010986328125
+      ],
+      "mutual_information": 0.9999965173485177,
+      "parity_kl_from_baseline": 10.845077653767705
+    }
+  }
+}

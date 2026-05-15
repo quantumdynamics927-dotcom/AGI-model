@@ -1,0 +1,127 @@
+{
+  "timestamp": "20260515_021402",
+  "shots": 8192,
+  "backend": "aer_simulator",
+  "seed": 42,
+  "variant": "entangled",
+  "modes": {
+    "none": {
+      "circuit_info": {
+        "name": "PW-3Q-entangled",
+        "num_qubits": 3,
+        "depth": 6,
+        "num_gates": 6,
+        "gate_types": {
+          "h": 2,
+          "cx": 3,
+          "measure": 1
+        }
+      },
+      "counts": {
+        "0": 4051,
+        "1": 4141
+      },
+      "parity_distribution": [
+        0.4945068359375,
+        0.5054931640625
+      ],
+      "min_entropy": 0.9842365123447181
+    },
+    "d0": {
+      "circuit_info": {
+        "name": "PW-3Q-entangled",
+        "num_qubits": 3,
+        "depth": 7,
+        "num_gates": 9,
+        "gate_types": {
+          "h": 2,
+          "cx": 3,
+          "measure": 4
+        }
+      },
+      "counts": {
+        "011": 2038,
+        "000": 2028,
+        "111": 2067,
+        "100": 2059
+      },
+      "parity_distribution": [
+        0.4989013671875,
+        0.5010986328125
+      ],
+      "min_entropy": 0.9968334930469265,
+      "joint_distribution": [
+        0.24755859375,
+        0.2513427734375,
+        0.248779296875,
+        0.2523193359375
+      ],
+      "mutual_information": 4.885371751583989e-08,
+      "parity_kl_from_baseline": 3.862648284317597e-05
+    },
+    "d1": {
+      "circuit_info": {
+        "name": "PW-3Q-entangled",
+        "num_qubits": 3,
+        "depth": 6,
+        "num_gates": 9,
+        "gate_types": {
+          "h": 2,
+          "cx": 3,
+          "measure": 4
+        }
+      },
+      "counts": {
+        "011": 2038,
+        "000": 2028,
+        "111": 2067,
+        "100": 2059
+      },
+      "parity_distribution": [
+        0.4989013671875,
+        0.5010986328125
+      ],
+      "min_entropy": 0.9968334930469265,
+      "joint_distribution": [
+        0.24755859375,
+        0.2513427734375,
+        0.248779296875,
+        0.2523193359375
+      ],
+      "mutual_information": 4.885371751583989e-08,
+      "parity_kl_from_baseline": 3.862648284317597e-05
+    },
+    "both": {
+      "circuit_info": {
+        "name": "PW-3Q-entangled",
+        "num_qubits": 3,
+        "depth": 7,
+        "num_gates": 10,
+        "gate_types": {
+          "h": 2,
+          "cx": 3,
+          "measure": 5
+        }
+      },
+      "counts": {
+        "111": 2056,
+        "100": 2070,
+        "011": 2049,
+        "000": 2017
+      },
+      "parity_distribution": [
+        0.4989013671875,
+        0.5010986328125
+      ],
+      "min_entropy": 0.9968334930469265,
+      "joint_distribution": [
+        0.2462158203125,
+        0.252685546875,
+        0.2501220703125,
+        0.2509765625
+      ],
+      "mutual_information": 2.2876726340825826e-05,
+      "parity_kl_from_baseline": 3.862648284317597e-05
+    }
+  }
+}

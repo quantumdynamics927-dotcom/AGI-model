@@ -1,0 +1,139 @@
+{
+  "timestamp": "20260515_021242",
+  "shots": 8192,
+  "backend": "aer_simulator",
+  "seed": 42,
+  "variant": "basic",
+  "modes": {
+    "none": {
+      "circuit_info": {
+        "name": "PW-3Q-basic",
+        "num_qubits": 3,
+        "depth": 5,
+        "num_gates": 6,
+        "gate_types": {
+          "h": 3,
+          "cx": 2,
+          "measure": 1
+        }
+      },
+      "counts": {
+        "0": 4051,
+        "1": 4141
+      },
+      "parity_distribution": [
+        0.4945068359375,
+        0.5054931640625
+      ],
+      "min_entropy": 0.9842365123447181
+    },
+    "d0": {
+      "circuit_info": {
+        "name": "PW-3Q-basic",
+        "num_qubits": 3,
+        "depth": 6,
+        "num_gates": 9,
+        "gate_types": {
+          "h": 3,
+          "measure": 4,
+          "cx": 2
+        }
+      },
+      "counts": {
+        "011": 1044,
+        "000": 1002,
+        "101": 1039,
+        "010": 1026,
+        "100": 1050,
+        "111": 1028,
+        "110": 1009,
+        "001": 994
+      },
+      "parity_distribution": [
+        0.4989013671875,
+        0.5010986328125
+      ],
+      "min_entropy": 0.9968334930469265,
+      "joint_distribution": [
+        0.24365234375,
+        0.2550048828125,
+        0.252685546875,
+        0.2486572265625
+      ],
+      "mutual_information": 0.00017110377661477827,
+      "parity_kl_from_baseline": 3.862648284317597e-05
+    },
+    "d1": {
+      "circuit_info": {
+        "name": "PW-3Q-basic",
+        "num_qubits": 3,
+        "depth": 5,
+        "num_gates": 9,
+        "gate_types": {
+          "h": 3,
+          "measure": 4,
+          "cx": 2
+        }
+      },
+      "counts": {
+        "011": 970,
+        "000": 1020,
+        "101": 1026,
+        "111": 1041,
+        "010": 1008,
+        "110": 1014,
+        "001": 1068,
+        "100": 1045
+      },
+      "parity_distribution": [
+        0.4989013671875,
+        0.5010986328125
+      ],
+      "min_entropy": 0.9968334930469265,
+      "joint_distribution": [
+        0.2548828125,
+        0.2528076171875,
+        0.241455078125,
+        0.2508544921875
+      ],
+      "mutual_information": 9.688192274137641e-05,
+      "parity_kl_from_baseline": 3.862648284317597e-05
+    },
+    "both": {
+      "circuit_info": {
+        "name": "PW-3Q-basic",
+        "num_qubits": 3,
+        "depth": 6,
+        "num_gates": 10,
+        "gate_types": {
+          "h": 3,
+          "measure": 5,
+          "cx": 2
+        }
+      },
+      "counts": {
+        "111": 1047,
+        "100": 1021,
+        "001": 1024,
+        "101": 1009,
+        "010": 986,
+        "000": 1031,
+        "011": 1025,
+        "110": 1049
+      },
+      "parity_distribution": [
+        0.4989013671875,
+        0.5010986328125
+      ],
+      "min_entropy": 0.9968334930469265,
+      "joint_distribution": [
+        0.2508544921875,
+        0.247802734375,
+        0.2454833984375,
+        0.255859375
+      ],
+      "mutual_information": 0.00012969285216168913,
+      "parity_kl_from_baseline": 3.862648284317597e-05
+    }
+  }
+}

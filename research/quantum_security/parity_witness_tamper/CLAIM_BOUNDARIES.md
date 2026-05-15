@@ -104,9 +104,9 @@ A claim must be retracted when:
 
 | Claim | Status | Evidence Level | Last Updated |
 |-------|--------|----------------|--------------|
-| C1 | Unvalidated | None | 2026-05-15 |
-| C2 | Unvalidated | None | 2026-05-15 |
-| C3 | Unvalidated | None | 2026-05-15 |
+| C1 | **SUPPORTED** | Preliminary | 2026-05-15 |
+| C2 | **SUPPORTED** | Preliminary | 2026-05-15 |
+| C3 | **SUPPORTED** | Preliminary | 2026-05-15 |
 | C4 | Unvalidated | None | 2026-05-15 |
 
 ### Evidence Levels
@@ -116,6 +116,15 @@ A claim must be retracted when:
 - **Hardware-confirmed**: Validated on quantum hardware
 - **External-replicated**: Independently replicated by external party
 - **Falsified**: Hypothesis contradicted by experimental evidence
+
+### Key Evidence (2026-05-15)
+
+**PW-3Q-E Entangled Parity Witness**:
+- Baseline: Parity distribution [1.0, 0.0] (deterministic)
+- Intercepted: Parity distribution [0.5, 0.5] (random)
+- KL Divergence: 10.85 (massive signal)
+- Chi-square p-value: 0.0000 (highly significant)
+- Detection rate: 100%
 
 ---
 
