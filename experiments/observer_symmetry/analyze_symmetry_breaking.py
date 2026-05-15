@@ -137,7 +137,7 @@ def analyze_experiment(results: dict) -> dict:
         "detection_analysis": {},
     }
 
-    # Extract baseline distribution
+    # Extract baseline distribution (center qubit only)
     baseline_dist = np.array(results["modes"]["none"]["distribution"])
     baseline_symmetry = results["modes"]["none"]["symmetry_score"]
     baseline_entropy = results["modes"]["none"]["min_entropy"]
@@ -147,17 +147,37 @@ def analyze_experiment(results: dict) -> dict:
         if mode_name == "none":
             continue
 
-        mode_dist = np.array(mode_data["distribution"])
+        # Extract center qubit marginal for fair comparison with baseline
+        # For 3-qubit measurement, extract marginal of center qubit (Q1)
+        counts = mode_data["counts"]
+        total = sum(counts.values())
+        p_center_0 = 0.0
+        p_center_1 = 0.0
+
+        for bitstring, count in counts.items():
+            if isinstance(bitstring, str):
+                bits = bitstring.zfill(3)
+                center_bit = bits[1]  # Middle bit is center qubit
+            else:
+                center_bit = "1" if (bitstring >> 1) & 1 else "0"
+
+            if center_bit == "0":
+                p_center_0 += count / total
+            else:
+                p_center_1 += count / total
+
+        center_marginal = np.array([p_center_0, p_center_1])
+
         mode_symmetry = mode_data["symmetry_score"]
         mode_entropy = mode_data["min_entropy"]
 
-        # Compute metrics
-        kl_div = kl_divergence(mode_dist, baseline_dist)
+        # Compute metrics using center marginal
+        kl_div = kl_divergence(center_marginal, baseline_dist)
         symmetry_loss = baseline_symmetry - mode_symmetry
         entropy_loss = baseline_entropy - mode_entropy
 
         # Statistical tests
-        chi2, chi2_p = chi_square_test(mode_dist, baseline_dist)
+        chi2, chi2_p = chi_square_test(center_marginal, baseline_dist)
 
         # Detection score
         detection_score = compute_detection_score(

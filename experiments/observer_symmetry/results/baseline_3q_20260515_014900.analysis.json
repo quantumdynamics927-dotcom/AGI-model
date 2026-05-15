@@ -1,0 +1,63 @@
+{
+  "experiment_info": {
+    "timestamp": "20260515_014900",
+    "shots": 8192,
+    "backend": "aer_simulator",
+    "seed": 42
+  },
+  "modes": {
+    "left": {
+      "kl_divergence": 0.00029803551126343295,
+      "symmetry_loss": -0.010986328125,
+      "entropy_loss": -1.942960952013715,
+      "chi_square": {
+        "statistic": 0.0005961183988903614,
+        "p_value": 0.9805211560721592,
+        "significant": "False"
+      },
+      "detection_score": 0.5863033982461198,
+      "detected": true
+    },
+    "right": {
+      "kl_divergence": 0.00029803551126343295,
+      "symmetry_loss": -0.010986328125,
+      "entropy_loss": -1.942960952013715,
+      "chi_square": {
+        "statistic": 0.0005961183988903614,
+        "p_value": 0.9805211560721592,
+        "significant": "False"
+      },
+      "detection_score": 0.5863033982461198,
+      "detected": true
+    },
+    "bilateral": {
+      "kl_divergence": 0.00029803551126343295,
+      "symmetry_loss": -0.010986328125,
+      "entropy_loss": -1.942960952013715,
+      "chi_square": {
+        "statistic": 0.0005961183988903614,
+        "p_value": 0.9805211560721592,
+        "significant": "False"
+      },
+      "detection_score": 0.5863033982461198,
+      "detected": true
+    }
+  },
+  "comparisons": {
+    "left_vs_right": {
+      "left_detection_score": 0.5863033982461198,
+      "right_detection_score": 0.5863033982461198,
+      "difference": 0.0,
+      "symmetric": true
+    }
+  },
+  "detection_analysis": {
+    "modes_detected": [
+      "left",
+      "right",
+      "bilateral"
+    ],
+    "detection_rate": 1.0,
+    "best_detection": "left"
+  }
+}

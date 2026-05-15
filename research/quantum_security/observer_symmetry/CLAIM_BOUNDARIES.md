@@ -94,9 +94,9 @@ A claim must be retracted when:
 
 | Claim | Status | Evidence Level | Last Updated |
 |-------|--------|----------------|--------------|
-| C1 | Unvalidated | None | 2026-05-15 |
-| C2 | Unvalidated | None | 2026-05-15 |
-| C3 | Unvalidated | None | 2026-05-15 |
+| C1 | **FALSIFIED** | Validated (negative result) | 2026-05-15 |
+| C2 | Not Testable | N/A | 2026-05-15 |
+| C3 | Validated | Preliminary | 2026-05-15 |
 
 ### Evidence Levels
 - **None**: No experimental data collected
@@ -104,6 +104,7 @@ A claim must be retracted when:
 - **Validated**: Reproducible across multiple backends
 - **Hardware-confirmed**: Validated on quantum hardware
 - **External-replicated**: Independently replicated by external party
+- **Falsified**: Hypothesis contradicted by experimental evidence
 
 ---
 
