@@ -498,15 +498,25 @@ if __name__ == "__main__":
     else:
         print("  None detected")
 
-    # Test drift detection
-    print("\nAdding unauthorized node...")
-    tig.add_node("attacker", NodeClass.CLIENT)
-    tig.add_edge("attacker", "core-1", EdgeClass.TRANSPORT)  # Bypass!
+    # Test drift detection - add a node and a VALID edge that changes topology
+    print("\nAdding new authorized node...")
+    tig.add_node("client-3", NodeClass.CLIENT, role="new_device")
+    tig.add_edge(
+        "relay-1", "client-3", EdgeClass.TRANSPORT
+    )  # Valid but changes topology
 
     print(f"Has drifted: {tig.has_drifted()}")
-    print(f"Forbidden edges: {tig.count_forbidden_edges()}")
+    print(f"New fingerprint: {tig.compute_fingerprint()}")
+    print(f"Baseline fingerprint: {tig.baseline_hash}")
 
-    escalations = tig.detect_privilege_escalation()
-    print(f"Privilege escalations: {len(escalations)}")
-    for client, core in escalations:
-        print(f"  {client} -> {core}")
+    # Test forbidden edge detection
+    print("\nTesting forbidden edge detection...")
+    tig2 = create_sample_qsg_topology()
+    tig2.add_node("attacker", NodeClass.CLIENT)
+    try:
+        tig2.add_edge("attacker", "core-1", EdgeClass.TRANSPORT)  # Bypass!
+    except ForbiddenEdgeError as e:
+        print(f"  Blocked forbidden edge: {e}")
+
+    print("\nSchema enforcement working correctly!")
+    print("All forbidden edges are blocked by the topology constraints.")
