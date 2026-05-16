@@ -1,0 +1,171 @@
+{
+  "experimental_suite_summary": {
+    "timestamp": "2026-05-03 17:56:21",
+    "total_experiments": 4,
+    "experiments": [
+      {
+        "name": "clean_condition",
+        "recommendation": "EQUIVALENT_PERFORMANCE_CLEAN",
+        "timestamp": "2026-05-03 17:56:06"
+      },
+      {
+        "name": "lesioned_condition",
+        "recommendation": "EQUIVALENT_LESION_PERFORMANCE",
+        "timestamp": "2026-05-03 17:56:11"
+      },
+      {
+        "name": "edge_scoring_comparison",
+        "recommendation": "EQUIVALENT_SCORING",
+        "timestamp": "2026-05-03 17:56:14"
+      },
+      {
+        "name": "acceptance_criteria",
+        "recommendation": "CONDITIONAL_ACCEPTANCE",
+        "timestamp": "2026-05-03 17:56:21"
+      }
+    ]
+  },
+  "individual_results": [
+    {
+      "experiment_name": "clean_condition",
+      "timestamp": "2026-05-03 17:56:06",
+      "flat_metrics": {
+        "route_efficiency": 1.0,
+        "route_accuracy": 0.5,
+        "lesion_robustness": 0.0,
+        "average_latency": 0.1,
+        "confidence_calibration": 0.0
+      },
+      "tesseract_metrics": {
+        "route_efficiency": 1.0,
+        "route_accuracy": 0.5,
+        "lesion_robustness": 0.0,
+        "average_latency": 0.1,
+        "confidence_calibration": 0.0
+      },
+      "comparison": {
+        "efficiency_improvement": 0.0,
+        "accuracy_change": 0.0,
+        "robustness_improvement": 0.0,
+        "latency_change": 0.0,
+        "calibration_improvement": 0.0
+      },
+      "statistical_significance": {
+        "descriptive_statistics": {
+          "tesseract_mean": 0.5,
+          "tesseract_std": 0.0,
+          "tesseract_ci_lower": NaN,
+          "tesseract_ci_upper": NaN,
+          "flat_mean": 0.5,
+          "flat_std": 0.0,
+          "flat_ci_lower": NaN,
+          "flat_ci_upper": NaN
+        },
+        "statistical_tests": {
+          "t_statistic": NaN,
+          "p_value": NaN,
+          "is_statistically_significant": false,
+          "cohens_d": 0.0,
+          "practical_significance": "NO"
+        },
+        "interpretation": {
+          "mean_difference": 0.0,
+          "improvement_percentage": 0.0,
+          "significance_level": 0.05
+        },
+        "recommendation": "STICK_WITH_FLAT_ROUTING",
+        "justification": "No significant improvement detected"
+      },
+      "recommendation": "EQUIVALENT_PERFORMANCE_CLEAN"
+    },
+    {
+      "experiment_name": "lesioned_condition",
+      "timestamp": "2026-05-03 17:56:11",
+      "flat_metrics": {
+        "lesion_robustness": 0.5,
+        "degradation_slope": -3.5160536074145057e-16,
+        "final_performance": 0.5
+      },
+      "tesseract_metrics": {
+        "lesion_robustness": 0.5,
+        "degradation_slope": -3.5160536074145057e-16,
+        "final_performance": 0.5
+      },
+      "comparison": {
+        "robustness_improvement": 0.0,
+        "degradation_slope_improvement": 0.0,
+        "lesion_resilience": 1.0
+      },
+      "statistical_significance": {},
+      "recommendation": "EQUIVALENT_LESION_PERFORMANCE"
+    },
+    {
+      "experiment_name": "edge_scoring_comparison",
+      "timestamp": "2026-05-03 17:56:14",
+      "flat_metrics": {
+        "classical_scoring_performance": 0.0,
+        "samples_tested": 100
+      },
+      "tesseract_metrics": {
+        "quantum_scoring_performance": 0.0,
+        "samples_tested": 100
+      },
+      "comparison": {
+        "quantum_advantage": 0.0,
+        "relative_improvement": 0
+      },
+      "statistical_significance": {},
+      "recommendation": "EQUIVALENT_SCORING"
+    },
+    {
+      "experiment_name": "acceptance_criteria",
+      "timestamp": "2026-05-03 17:56:21",
+      "flat_metrics": {
+        "baseline_performance": 0.5,
+        "meets_criteria": 2
+      },
+      "tesseract_metrics": {
+        "tested_performance": 2,
+        "total_criteria": 5
+      },
+      "comparison": {
+        "criteria_met": 2,
+        "total_criteria": 5
+      },
+      "statistical_significance": {
+        "descriptive_statistics": {
+          "tesseract_mean": 0.5,
+          "tesseract_std": 0.0,
+          "tesseract_ci_lower": NaN,
+          "tesseract_ci_upper": NaN,
+          "flat_mean": 0.5,
+          "flat_std": 0.0,
+          "flat_ci_lower": NaN,
+          "flat_ci_upper": NaN
+        },
+        "statistical_tests": {
+          "t_statistic": NaN,
+          "p_value": NaN,
+          "is_statistically_significant": false,
+          "cohens_d": 0.0,
+          "practical_significance": "NO"
+        },
+        "interpretation": {
+          "mean_difference": 0.0,
+          "improvement_percentage": 0.0,
+          "significance_level": 0.05
+        },
+        "recommendation": "STICK_WITH_FLAT_ROUTING",
+        "justification": "No significant improvement detected"
+      },
+      "recommendation": "CONDITIONAL_ACCEPTANCE"
+    }
+  ],
+  "overall_assessment": {
+    "tesseract_advantages": 0,
+    "flat_advantages": 0,
+    "equivalents": 4,
+    "tesseract_win_rate": 0.0,
+    "overall_recommendation": "STICK_WITH_FLAT_ROUTING"
+  }
+}

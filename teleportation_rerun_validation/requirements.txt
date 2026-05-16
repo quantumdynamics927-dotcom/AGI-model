@@ -1,0 +1,15 @@
+# IBM Quantum Teleportation Rerun Validation Requirements
+
+# Core Qiskit packages
+qiskit>=1.0.0
+qiskit-ibm-runtime>=0.20.0
+
+# Numerical computing
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Visualization (optional)
+matplotlib>=3.7.0
+
+# Data handling
+pandas>=2.0.0

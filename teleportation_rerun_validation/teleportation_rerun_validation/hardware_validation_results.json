@@ -1,0 +1,224 @@
+[
+  {
+    "job_id": "d7l8qtokj84c73ceo7tg",
+    "backend": "ibm_marrakesh",
+    "created": "2026-04-23T21:21:59.470396Z",
+    "shots": 4096,
+    "status": "Completed",
+    "fidelity_metrics": {
+      "fidelity": 0.9658626092569169,
+      "fidelity_squared": 0.9328905799605798,
+      "expected_prob_0": 0.7500000000000001,
+      "expected_prob_1": 0.24999999999999994,
+      "measured_prob_0": 0.499755859375,
+      "measured_prob_1": 0.500244140625,
+      "bob_0_count": 2047,
+      "bob_1_count": 2049,
+      "total_shots": 4096,
+      "exceeds_classical_threshold": true,
+      "quality": "EXCELLENT \u2705"
+    },
+    "distribution_analysis": {
+      "total_shots": 4096,
+      "unique_states": 8,
+      "state_distribution": {
+        "000": 662,
+        "111": 646,
+        "011": 552,
+        "100": 541,
+        "001": 482,
+        "110": 447,
+        "010": 397,
+        "101": 369
+      },
+      "entropy": 2.9718356102559187,
+      "max_entropy": 3.0,
+      "uniformity": 0.9906118700853063
+    }
+  },
+  {
+    "job_id": "d7l8r38kj84c73ceo860",
+    "backend": "ibm_marrakesh",
+    "created": "2026-04-23T21:22:21.076655Z",
+    "shots": 1024,
+    "status": "Completed",
+    "fidelity_metrics": {
+      "fidelity": 0.9659258262890683,
+      "fidelity_squared": 0.9330127018922194,
+      "expected_prob_0": 0.7500000000000001,
+      "expected_prob_1": 0.24999999999999994,
+      "measured_prob_0": 0.5,
+      "measured_prob_1": 0.5,
+      "bob_0_count": 512,
+      "bob_1_count": 512,
+      "total_shots": 1024,
+      "exceeds_classical_threshold": true,
+      "quality": "EXCELLENT \u2705"
+    },
+    "distribution_analysis": {
+      "total_shots": 1024,
+      "unique_states": 8,
+      "state_distribution": {
+        "000": 155,
+        "111": 153,
+        "100": 144,
+        "001": 144,
+        "011": 124,
+        "110": 118,
+        "010": 95,
+        "101": 91
+      },
+      "entropy": 2.974672029581137,
+      "max_entropy": 3.0,
+      "uniformity": 0.9915573431937124
+    }
+  },
+  {
+    "job_id": "d7l8r1i8ui0s73b648q0",
+    "backend": "ibm_fez",
+    "created": "2026-04-23T21:22:14.942766Z",
+    "shots": 1024,
+    "status": "Completed",
+    "fidelity_metrics": {
+      "fidelity": 0.9661781187934484,
+      "fidelity_squared": 0.9335001572352468,
+      "expected_prob_0": 0.7500000000000001,
+      "expected_prob_1": 0.24999999999999994,
+      "measured_prob_0": 0.5009765625,
+      "measured_prob_1": 0.4990234375,
+      "bob_0_count": 513,
+      "bob_1_count": 511,
+      "total_shots": 1024,
+      "exceeds_classical_threshold": true,
+      "quality": "EXCELLENT \u2705"
+    },
+    "distribution_analysis": {
+      "total_shots": 1024,
+      "unique_states": 8,
+      "state_distribution": {
+        "000": 190,
+        "111": 162,
+        "011": 151,
+        "100": 131,
+        "001": 107,
+        "110": 105,
+        "101": 91,
+        "010": 87
+      },
+      "entropy": 2.9484531842106207,
+      "max_entropy": 3.0,
+      "uniformity": 0.982817728070207
+    }
+  },
+  {
+    "job_id": "d7l8qri4lglc7380atr0",
+    "backend": "ibm_fez",
+    "created": "2026-04-23T21:21:50.22025Z",
+    "shots": 4096,
+    "status": "Completed",
+    "fidelity_metrics": {
+      "fidelity": 0.9666174162351662,
+      "fidelity_squared": 0.9343492293691484,
+      "expected_prob_0": 0.7500000000000001,
+      "expected_prob_1": 0.24999999999999994,
+      "measured_prob_0": 0.502685546875,
+      "measured_prob_1": 0.497314453125,
+      "bob_0_count": 2059,
+      "bob_1_count": 2037,
+      "total_shots": 4096,
+      "exceeds_classical_threshold": true,
+      "quality": "EXCELLENT \u2705"
+    },
+    "distribution_analysis": {
+      "total_shots": 4096,
+      "unique_states": 8,
+      "state_distribution": {
+        "000": 652,
+        "111": 630,
+        "011": 532,
+        "100": 526,
+        "110": 520,
+        "001": 472,
+        "101": 403,
+        "010": 361
+      },
+      "entropy": 2.975387152538799,
+      "max_entropy": 3.0,
+      "uniformity": 0.9917957175129329
+    }
+  },
+  {
+    "job_id": "d7l8r028ui0s73b648ng",
+    "backend": "ibm_kingston",
+    "created": "2026-04-23T21:22:08.135611Z",
+    "shots": 1024,
+    "status": "Completed",
+    "fidelity_metrics": {
+      "fidelity": 0.9698524208685138,
+      "fidelity_squared": 0.9406137182645168,
+      "expected_prob_0": 0.7500000000000001,
+      "expected_prob_1": 0.24999999999999994,
+      "measured_prob_0": 0.515625,
+      "measured_prob_1": 0.484375,
+      "bob_0_count": 528,
+      "bob_1_count": 496,
+      "total_shots": 1024,
+      "exceeds_classical_threshold": true,
+      "quality": "EXCELLENT \u2705"
+    },
+    "distribution_analysis": {
+      "total_shots": 1024,
+      "unique_states": 8,
+      "state_distribution": {
+        "000": 180,
+        "111": 159,
+        "100": 145,
+        "011": 134,
+        "001": 113,
+        "110": 107,
+        "010": 96,
+        "101": 90
+      },
+      "entropy": 2.9612645634554124,
+      "max_entropy": 3.0,
+      "uniformity": 0.9870881878184709
+    }
+  },
+  {
+    "job_id": "d7l8qp24lglc7380atlg",
+    "backend": "ibm_kingston",
+    "created": "2026-04-23T21:21:40.128069Z",
+    "shots": 4096,
+    "status": "Completed",
+    "fidelity_metrics": {
+      "fidelity": 0.968163379586678,
+      "fidelity_squared": 0.9373403295726979,
+      "expected_prob_0": 0.7500000000000001,
+      "expected_prob_1": 0.24999999999999994,
+      "measured_prob_0": 0.5087890625,
+      "measured_prob_1": 0.4912109375,
+      "bob_0_count": 2084,
+      "bob_1_count": 2012,
+      "total_shots": 4096,
+      "exceeds_classical_threshold": true,
+      "quality": "EXCELLENT \u2705"
+    },
+    "distribution_analysis": {
+      "total_shots": 4096,
+      "unique_states": 8,
+      "state_distribution": {
+        "000": 671,
+        "111": 648,
+        "100": 564,
+        "011": 504,
+        "001": 501,
+        "110": 462,
+        "010": 387,
+        "101": 359
+      },
+      "entropy": 2.9694940554933495,
+      "max_entropy": 3.0,
+      "uniformity": 0.9898313518311165
+    }
+  }
+]

@@ -1,0 +1,230 @@
+[
+  {
+    "job_id": "d7l8qtokj84c73ceo7tg",
+    "backend": "ibm_marrakesh",
+    "created": "2026-04-23T21:21:59.470396Z",
+    "shots": 4096,
+    "status": "Completed",
+    "corrected_fidelity": {
+      "fidelity": 0.9846942755574437,
+      "fidelity_squared": 0.9696228163155989,
+      "expected_p0": 0.7500000000000001,
+      "expected_p1": 0.24999999999999994,
+      "corrected_p0": 0.586181640625,
+      "corrected_p1": 0.413818359375,
+      "bob_0_count": 2401,
+      "bob_1_count": 1695,
+      "total_shots": 4096,
+      "exceeds_classical_threshold": true,
+      "quality": "EXCELLENT \u2705"
+    },
+    "raw_fidelity": {
+      "raw_fidelity": 0.9658626092569169,
+      "raw_p0": 0.499755859375,
+      "raw_p1": 0.500244140625,
+      "raw_bob_0_count": 2047,
+      "raw_bob_1_count": 2049
+    },
+    "bell_analysis": {
+      "bell_00_count": 1144,
+      "bell_01_count": 949,
+      "bell_10_count": 910,
+      "bell_11_count": 1093,
+      "bell_00_prob": 0.279296875,
+      "bell_01_prob": 0.231689453125,
+      "bell_10_prob": 0.22216796875,
+      "bell_11_prob": 0.266845703125,
+      "ideal_bell_prob": 0.25
+    }
+  },
+  {
+    "job_id": "d7l8r38kj84c73ceo860",
+    "backend": "ibm_marrakesh",
+    "created": "2026-04-23T21:22:21.076655Z",
+    "shots": 1024,
+    "status": "Completed",
+    "corrected_fidelity": {
+      "fidelity": 0.9802379667214027,
+      "fidelity_squared": 0.9608664714021099,
+      "expected_p0": 0.7500000000000001,
+      "expected_p1": 0.24999999999999994,
+      "corrected_p0": 0.5625,
+      "corrected_p1": 0.4375,
+      "bob_0_count": 576,
+      "bob_1_count": 448,
+      "total_shots": 1024,
+      "exceeds_classical_threshold": true,
+      "quality": "EXCELLENT \u2705"
+    },
+    "raw_fidelity": {
+      "raw_fidelity": 0.9659258262890683,
+      "raw_p0": 0.5,
+      "raw_p1": 0.5,
+      "raw_bob_0_count": 512,
+      "raw_bob_1_count": 512
+    },
+    "bell_analysis": {
+      "bell_00_count": 299,
+      "bell_01_count": 219,
+      "bell_10_count": 235,
+      "bell_11_count": 271,
+      "bell_00_prob": 0.2919921875,
+      "bell_01_prob": 0.2138671875,
+      "bell_10_prob": 0.2294921875,
+      "bell_11_prob": 0.2646484375,
+      "ideal_bell_prob": 0.25
+    }
+  },
+  {
+    "job_id": "d7l8r1i8ui0s73b648q0",
+    "backend": "ibm_fez",
+    "created": "2026-04-23T21:22:14.942766Z",
+    "shots": 1024,
+    "status": "Completed",
+    "corrected_fidelity": {
+      "fidelity": 0.9900053536381961,
+      "fidelity_squared": 0.9801106002322897,
+      "expected_p0": 0.7500000000000001,
+      "expected_p1": 0.24999999999999994,
+      "corrected_p0": 0.619140625,
+      "corrected_p1": 0.380859375,
+      "bob_0_count": 634,
+      "bob_1_count": 390,
+      "total_shots": 1024,
+      "exceeds_classical_threshold": true,
+      "quality": "EXCELLENT \u2705"
+    },
+    "raw_fidelity": {
+      "raw_fidelity": 0.9661781187934484,
+      "raw_p0": 0.5009765625,
+      "raw_p1": 0.4990234375,
+      "raw_bob_0_count": 513,
+      "raw_bob_1_count": 511
+    },
+    "bell_analysis": {
+      "bell_00_count": 297,
+      "bell_01_count": 238,
+      "bell_10_count": 222,
+      "bell_11_count": 267,
+      "bell_00_prob": 0.2900390625,
+      "bell_01_prob": 0.232421875,
+      "bell_10_prob": 0.216796875,
+      "bell_11_prob": 0.2607421875,
+      "ideal_bell_prob": 0.25
+    }
+  },
+  {
+    "job_id": "d7l8qri4lglc7380atr0",
+    "backend": "ibm_fez",
+    "created": "2026-04-23T21:21:50.22025Z",
+    "shots": 4096,
+    "status": "Completed",
+    "corrected_fidelity": {
+      "fidelity": 0.9819538589228716,
+      "fidelity_squared": 0.9642333810535187,
+      "expected_p0": 0.7500000000000001,
+      "expected_p1": 0.24999999999999994,
+      "corrected_p0": 0.5712890625,
+      "corrected_p1": 0.4287109375,
+      "bob_0_count": 2340,
+      "bob_1_count": 1756,
+      "total_shots": 4096,
+      "exceeds_classical_threshold": true,
+      "quality": "EXCELLENT \u2705"
+    },
+    "raw_fidelity": {
+      "raw_fidelity": 0.9666174162351662,
+      "raw_p0": 0.502685546875,
+      "raw_p1": 0.497314453125,
+      "raw_bob_0_count": 2059,
+      "raw_bob_1_count": 2037
+    },
+    "bell_analysis": {
+      "bell_00_count": 1124,
+      "bell_01_count": 893,
+      "bell_10_count": 929,
+      "bell_11_count": 1150,
+      "bell_00_prob": 0.2744140625,
+      "bell_01_prob": 0.218017578125,
+      "bell_10_prob": 0.226806640625,
+      "bell_11_prob": 0.28076171875,
+      "ideal_bell_prob": 0.25
+    }
+  },
+  {
+    "job_id": "d7l8r028ui0s73b648ng",
+    "backend": "ibm_kingston",
+    "created": "2026-04-23T21:22:08.135611Z",
+    "shots": 1024,
+    "status": "Completed",
+    "corrected_fidelity": {
+      "fidelity": 0.9876178431692477,
+      "fidelity_squared": 0.9753890041462768,
+      "expected_p0": 0.7500000000000001,
+      "expected_p1": 0.24999999999999994,
+      "corrected_p0": 0.603515625,
+      "corrected_p1": 0.396484375,
+      "bob_0_count": 618,
+      "bob_1_count": 406,
+      "total_shots": 1024,
+      "exceeds_classical_threshold": true,
+      "quality": "EXCELLENT \u2705"
+    },
+    "raw_fidelity": {
+      "raw_fidelity": 0.9698524208685138,
+      "raw_p0": 0.515625,
+      "raw_p1": 0.484375,
+      "raw_bob_0_count": 528,
+      "raw_bob_1_count": 496
+    },
+    "bell_analysis": {
+      "bell_00_count": 293,
+      "bell_01_count": 230,
+      "bell_10_count": 235,
+      "bell_11_count": 266,
+      "bell_00_prob": 0.2861328125,
+      "bell_01_prob": 0.224609375,
+      "bell_10_prob": 0.2294921875,
+      "bell_11_prob": 0.259765625,
+      "ideal_bell_prob": 0.25
+    }
+  },
+  {
+    "job_id": "d7l8qp24lglc7380atlg",
+    "backend": "ibm_kingston",
+    "created": "2026-04-23T21:21:40.128069Z",
+    "shots": 4096,
+    "status": "Completed",
+    "corrected_fidelity": {
+      "fidelity": 0.9840839469480382,
+      "fidelity_squared": 0.9684212146408293,
+      "expected_p0": 0.7500000000000001,
+      "expected_p1": 0.24999999999999994,
+      "corrected_p0": 0.582763671875,
+      "corrected_p1": 0.417236328125,
+      "bob_0_count": 2387,
+      "bob_1_count": 1709,
+      "total_shots": 4096,
+      "exceeds_classical_threshold": true,
+      "quality": "EXCELLENT \u2705"
+    },
+    "raw_fidelity": {
+      "raw_fidelity": 0.968163379586678,
+      "raw_p0": 0.5087890625,
+      "raw_p1": 0.4912109375,
+      "raw_bob_0_count": 2084,
+      "raw_bob_1_count": 2012
+    },
+    "bell_analysis": {
+      "bell_00_count": 1172,
+      "bell_01_count": 891,
+      "bell_10_count": 923,
+      "bell_11_count": 1110,
+      "bell_00_prob": 0.2861328125,
+      "bell_01_prob": 0.217529296875,
+      "bell_10_prob": 0.225341796875,
+      "bell_11_prob": 0.27099609375,
+      "ideal_bell_prob": 0.25
+    }
+  }
+]

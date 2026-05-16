@@ -1,0 +1,21 @@
+{
+  "session_id": "route_1777827374777",
+  "start_time": 1777827374.777207,
+  "end_time": 1777827374.778282,
+  "route_path": [
+    {
+      "timestamp": 1777827374.7777896,
+      "vertex_id": 2,
+      "vertex_name": "Pattern Recognition",
+      "confidence": 0.08104781061410904,
+      "latency_ms": 0.0,
+      "transition_score": 0.7537985444068909,
+      "quantum_score": 0.5,
+      "error": null
+    }
+  ],
+  "total_latency_ms": 0.0,
+  "success": false,
+  "error": "shapes (55,32) and (1,32) not aligned: 32 (dim 1) != 1 (dim 0)",
+  "metadata": {}
+}

@@ -1,0 +1,47 @@
+{
+  "validation_timestamp": "2026-05-03 17:56:00",
+  "approach_results": {
+    "flat_routing": {
+      "route_efficiency": 1.0,
+      "route_density": 1.0,
+      "clustering_coefficient": 0.5,
+      "network_diameter": 1.0,
+      "route_accuracy": 0.5,
+      "invalid_transition_rate": 1.0,
+      "reroute_success_rate": 0.9,
+      "average_latency": 0.1,
+      "confidence_calibration": 0.0,
+      "lesion_robustness": 0.0,
+      "fault_degradation_slope": 0.0,
+      "recovery_time": 0.05,
+      "samples_processed": 200,
+      "validation_timestamp": "2026-05-03 17:55:57"
+    },
+    "tesseract_routing": {
+      "route_efficiency": 1.0,
+      "route_density": 1.0,
+      "clustering_coefficient": 0.5,
+      "network_diameter": 1.0,
+      "route_accuracy": 0.5,
+      "invalid_transition_rate": 1.0,
+      "reroute_success_rate": 0.9,
+      "average_latency": 0.1,
+      "confidence_calibration": 0.0,
+      "lesion_robustness": 0.0,
+      "fault_degradation_slope": 0.0,
+      "recovery_time": 0.05,
+      "samples_processed": 200,
+      "validation_timestamp": "2026-05-03 17:56:00"
+    }
+  },
+  "comparative_analysis": {
+    "route_efficiency_improvement": 0.0,
+    "latency_change": 0.0,
+    "accuracy_change": 0.0,
+    "robustness_improvement": 0.0,
+    "confidence_calibration_improvement": 0.0,
+    "invalid_transition_reduction": 0.0,
+    "overall_benefit": 0.0,
+    "recommendation": "STICK_WITH_FLAT"
+  }
+}

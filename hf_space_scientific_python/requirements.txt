@@ -1,0 +1,9 @@
+numpy
+pandas
+scipy
+matplotlib
+Pillow
+scikit-learn
+qiskit
+numba
+huggingface_hub>=0.26.0

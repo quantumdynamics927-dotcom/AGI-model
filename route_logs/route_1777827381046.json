@@ -1,0 +1,21 @@
+{
+  "session_id": "route_1777827381046",
+  "start_time": 1777827381.0464394,
+  "end_time": 1777827381.0481083,
+  "route_path": [
+    {
+      "timestamp": 1777827381.0477908,
+      "vertex_id": 0,
+      "vertex_name": "Sensory Input",
+      "confidence": 0.07825272530317307,
+      "latency_ms": 0.0,
+      "transition_score": 0.7534667253494263,
+      "quantum_score": 0.5,
+      "error": null
+    }
+  ],
+  "total_latency_ms": 0.0,
+  "success": false,
+  "error": "shapes (147,32) and (1,32) not aligned: 32 (dim 1) != 1 (dim 0)",
+  "metadata": {}
+}
