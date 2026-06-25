@@ -1,0 +1,13 @@
+# Placeholder for the deprecated `TMT-OS/core/` layout.
+#
+# The TMT-OS runtime was reorganized: the canonical modules now live at
+# the top level of `TMT-OS/` (e.g. `TMT-OS/node1_base_os.py`,
+# `TMT-OS/node13_metatron.py`). Older CI workflows referenced
+# `TMT-OS/core/comprehensive_tests.py` and friends, which no longer exist;
+# those workflows have been removed in favor of `ci.yml`.
+#
+# This directory is kept as an explicit marker so anyone migrating from
+# the old layout notices the rename. Do not put code here.
+
+# Test path (legacy): TMT-OS/core/tests/  ->  tests/
+# Test runner:        python -m pytest tests/

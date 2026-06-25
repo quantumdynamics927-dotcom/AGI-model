@@ -15,6 +15,7 @@ build
 *.egg
 .pytest_cache
 .mypy_cache
+.ruff_cache
 .coverage
 htmlcov
 .tox
@@ -40,7 +41,7 @@ test_*.py
 coverage.xml
 *.cover
 
-# Documentation
+# Documentation (kept out of images; mounted at runtime when needed)
 docs/
 *.md
 !README.md
@@ -123,3 +124,17 @@ node_modules/
 # Local development
 .env.local
 .env.*.local
+
+# HuggingFace deployment scratch dirs (created by sync workflows)
+hf-deploy/
+hf-console-deploy/
+
+# Nginx (only needed if the loadbalancer profile is active on the host)
+nginx/
+
+# Compose support files (mounted as configs, not part of any image)
+config/
+scripts/init.sql
+
+# Docker compose override (dev-only)
+docker-compose.override.yml

@@ -1,39 +1,97 @@
-# Dockerfile for Hugging Face Space
-# Based on AGI Model production Dockerfile
+# Dockerfile for the AGI-model Hugging Face Space.
+#
+# This image is the canonical Hugging Face Space build for the AGI-model
+# interactive 13-node control surface. It is built by the GitHub Actions
+# workflow `.github/workflows/sync-to-huggingface.yml` and pushed to
+# `${HF_USER}/agi-model` on the Hub.
+#
+# Hardening notes (matches SECURITY_HARDENING.md):
+#   - Base image is `python:3.11-slim-bookworm`, tagged (digest pin is a
+#     follow-up; see docs/QUANTUM_AGI_ROADMAP.md, Phase P0, "Image digest").
+#   - Multi-stage builder keeps build tooling out of the runtime image.
+#   - Runtime runs as the non-root `appuser`.
+#   - Only Space-relevant files are copied; the rest of the monorepo is
+#     excluded by `.dockerignore`.
+#
+# Local build:
+#   docker build -f Dockerfile.space -t agi-space:local .
+#   docker run --rm -p 7860:7860 agi-space:local
 
-FROM python:3.10-slim
+# ---------- Stage 1: builder ----------
+FROM python:3.11-slim-bookworm AS builder
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
+
+WORKDIR /build
+
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends build-essential \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
+
+# Space requirements only. The HF Space uses a smaller dependency set than
+# the main `requirements.txt` (which also pulls torch + qiskit); torch is
+# loaded lazily inside `space_app.py` so the Space can boot even if the
+# heavy ML deps fail to install on the Hub runner.
+COPY requirements.txt ./
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel \
+ && pip install --no-cache-dir --target=/install -r requirements.txt \
+ && pip install --no-cache-dir --target=/install gradio \
+ && find /install -type f -name '*.pyc' -delete \
+ && find /install -type d -name '__pycache__' -exec rm -rf {} + 2>/dev/null || true \
+ && find /install -type f -name '*.pyo' -delete \
+ && find /install -type d -name 'tests' -exec rm -rf {} + 2>/dev/null || true \
+ && find /install -type d -name 'test'  -exec rm -rf {} + 2>/dev/null || true
+
+# ---------- Stage 2: runtime ----------
+FROM python:3.11-slim-bookworm
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PYTHONPATH=/app:/app/lib \
+    HF_HOME=/app/.cache/huggingface \
+    GRADIO_SERVER_NAME=0.0.0.0 \
+    GRADIO_SERVER_PORT=7860 \
+    HF_SPACE=true
+
+# Minimal runtime deps: curl for HEALTHCHECK, git so the Space can clone
+# any pinned model artifacts at runtime.
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends curl git \
+ && apt-get upgrade -y \
+ && apt-get autoremove -y \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# Non-root user (matches the convention in the main Dockerfile).
+RUN groupadd -r appuser && useradd -r -g appuser -d /app -s /bin/bash appuser
 
 WORKDIR /app
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    curl \
-    git \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+# Pull in the prebuilt wheels from the builder.
+COPY --from=builder --chown=appuser:appuser /install /app/lib
 
-# Copy requirements first for caching
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Copy Space-only sources. Keep this list narrow on purpose: anything that
+# is not on the Hub must be in `.dockerignore` so we don't accidentally
+# ship the rest of the monorepo.
+COPY --chown=appuser:appuser space_app.py ./
+COPY --chown=appuser:appuser README_HF_SPACE.md ./README.md
 
-# Install Gradio for Space interface
-RUN pip install --no-cache-dir gradio
+# Cache + writable dirs for runtime (Gradio tmp, HF_HOME).
+RUN install -d -o appuser -g appuser /app/.cache/huggingface \
+ && install -d -o appuser -g appuser /app/.cache/gradio \
+ && install -d -o appuser -g appuser /app/logs
 
-# Copy Space application
-COPY space_app.py .
+USER appuser
 
-# Set environment variables
-ENV PYTHONUNBUFFERED=1
-ENV HF_SPACE=true
-ENV GRADIO_SERVER_NAME="0.0.0.0"
-ENV GRADIO_SERVER_PORT=7860
-
-# Expose Gradio port
 EXPOSE 7860
 
-# Health check for Space
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost:7860/ || exit 1
+HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
+    CMD curl -fsS http://localhost:7860/ || exit 1
 
-# Run the Space app
 CMD ["python", "space_app.py"]

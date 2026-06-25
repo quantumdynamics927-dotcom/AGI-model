@@ -127,29 +127,50 @@ streamlit run dashboards/quantum_consciousness_dashboard/app.py
 
 ## Replicate-aware next phase
 
-The next milestone is to move from job-level calibration to **replicate-aware promoter calibration**.
+The calibration layer above is fit to a single 5-job batch on `ibm_fez`.
+The next milestone — moving from job-level calibration to
+**replicate-aware promoter calibration** — is broken into four phases
+in [`docs/QUANTUM_AGI_ROADMAP.md`](docs/QUANTUM_AGI_ROADMAP.md):
 
-For each selected promoter, store:
+| Phase | Window | Deliverable |
+| --- | --- | --- |
+| **P0** — Backend-aware offset transferability | Month 1–2 | `backend_aware_offset.py` (shipped) — per-backend offset with shrinkage toward the global mean. |
+| **P1** — Replicate-aware calibration | Month 3–4 | Within-promoter mean/variance, between-promoter effect size, residual distribution. |
+| **P2** — Small variational agent benchmark | Month 5–8 | A 4-qubit VQE agent that succeeds under the calibrated noise model. |
+| **P3** — Logical-qubit noise robustness | Month 9–12 | Rerun P2 on the cleanest available hardware to test portability. |
 
-- promoter ID,
-- replicate index,
-- backend,
-- shots,
-- transpiled depth,
-- layout,
-- measured phi,
-- calibrated phi,
-- residual,
-- execution timestamp.
+### Milestone 0 (P0) is implemented
 
-Then evaluate:
+`backend_aware_offset.py` answers the *backend-specific offset
+transferability* sub-question immediately. It reads
+`quantum_calibration_report.json` (v2.0 schema produced by
+`quantum_calibration_framework.py`) and emits a Markdown table with
+per-backend offsets, sample counts, and shrinkage weights.
 
-- within-promoter mean and variance,
-- between-promoter effect size,
-- calibration residual distribution,
-- backend-specific offset transferability.
+CLI:
 
-That will determine whether the calibration layer is portable or merely fit to the current five-job batch.
+```bash
+python -m backend_aware_offset --report quantum_calibration_report.json
+```
+
+Tests (run as part of CI before each Space sync):
+
+```bash
+python -m pytest tests/test_backend_aware_offset.py -v
+```
+
+On every push to `main`, `ci.yml` runs the CLI and uploads
+`backend-offset-report.md` + `backend-offset-report.json` as a
+workflow artifact — so the offset report is auditable alongside the
+calibration input.
+
+See `docs/QUANTUM_AGI_ROADMAP.md` for the full four-phase plan,
+including success criteria, dependencies, and risks.
+
+### Deploying
+
+For instructions on pushing the interactive 13-node Space to
+Hugging Face, see [`DEPLOY.md`](DEPLOY.md).
 
 ## Documentation
 

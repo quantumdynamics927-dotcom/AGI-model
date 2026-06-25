@@ -163,6 +163,18 @@ appendonly.aof
 temp/
 tmp/
 hf-deploy/
+hf-console-deploy/
+
+# Local docker-compose override (copy from .example)
+docker-compose.override.yml
+
+# Writable app dirs (mounted as named volumes in compose)
+TMT-OS/data/
+TMT-OS/logs/
+TMT-OS/cache/
+
+# Backend-aware offset CLI outputs
+backend-offset-report.md
 
 # Build artifacts
 *.tar.gz

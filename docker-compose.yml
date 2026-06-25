@@ -1,33 +1,71 @@
-# TMT-OS Production Configuration
+# TMT-OS / AGI-model local development stack.
+#
+# This compose file is the canonical local-dev stack for the AGI-model
+# monorepo. It is INTENTIONALLY not a production-grade orchestration file:
+# for production deploy, build the Space image (Dockerfile.space) and
+# deploy via the GitHub Actions workflow `.github/workflows/sync-to-huggingface.yml`.
+#
+# What this file gives you locally:
+#   - The TMT-OS API on http://localhost:8000
+#   - The Streamlit dashboard on http://localhost:8501
+#   - Redis (cache) on localhost:6379
+#   - Postgres (calibration + audit trail) on localhost:5432
+#   - Prometheus on http://localhost:9090
+#   - Grafana on http://localhost:3000 (admin / ${GRAFANA_PASSWORD})
+#
+# Optional profiles:
+#   --profile loadbalancer   add an nginx front-end on :80 (requires
+#                            nginx/nginx.conf + nginx/ssl/ — see the file)
+#   --profile tracing        NOT enabled; the previous Jaeger profile
+#                            pointed at an Elasticsearch backend that
+#                            is not in this stack. To re-enable, add
+#                            an elasticsearch service first.
+#
+# Secrets:
+#   Sensitive values (POSTGRES_PASSWORD, JWT_SECRET, GRAFANA_PASSWORD,
+#   QISKIT_IBM_TOKEN) flow in from the host environment. For local dev,
+#   copy `.env.example` to `.env`. For CI, inject them via GitHub
+#   Actions secrets and `env_file:`.
+
 version: '3.8'
+
+# ---- Secrets --------------------------------------------------------------
+# `secrets:` here is for the file-based form. The values that need to
+# reach a container can be passed either via `${...}` env interpolation
+# (current behavior) or via `secrets:` block. We use the env form because
+# it lets operators source a `.env` file once and have it work everywhere.
 
 services:
   # Main TMT-OS Quantum Consciousness Service
   tmt-os-api:
     image: tmt-os-quantum:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: tmt-os-api
     restart: unless-stopped
     environment:
       - TMT_OS_ENV=production
       - TMT_OS_HOST=0.0.0.0
       - TMT_OS_PORT=8000
-      - TMT_OS_WORKERS=4
-      - QISKIT_IBM_TOKEN=${QISKIT_IBM_TOKEN}
-      - JWT_SECRET=${JWT_SECRET}
+      - TMT_OS_WORKERS=2
+      - QISKIT_IBM_TOKEN=${QISKIT_IBM_TOKEN:-}
+      - JWT_SECRET=${JWT_SECRET:-change_me}
       - REDIS_URL=redis://redis:6379/0
-      - DATABASE_URL=postgresql://tmtos:${POSTGRES_PASSWORD}@postgres:5432/tmt_os
+      - DATABASE_URL=postgresql://tmtos:${POSTGRES_PASSWORD:-tmtos}@postgres:5432/tmt_os
       - PROMETHEUS_ENABLED=true
-      - LOG_LEVEL=INFO
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
     ports:
       - "8000:8000"
     volumes:
-      - ./TMT-OS/data:/app/data
-      - ./TMT-OS/logs:/app/logs
-      - ./TMT-OS/cache:/app/cache
+      - tmt_os_data:/app/TMT-OS/data
+      - tmt_os_logs:/app/TMT-OS/logs
+      - tmt_os_cache:/app/TMT-OS/cache
     depends_on:
-      - redis
-      - postgres
-      - prometheus
+      redis:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
     networks:
       - tmt-os-network
     healthcheck:
@@ -36,10 +74,18 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+    # Local-dev resource limits. Tune upward in production. The cap on
+    # pids_limit guards against fork bombs inside the API.
+    mem_limit: 2g
+    cpus: "1.5"
+    pids_limit: 512
 
   # Streamlit Dashboard
   tmt-os-dashboard:
     image: tmt-os-quantum:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
     container_name: tmt-os-dashboard
     restart: unless-stopped
     environment:
@@ -53,14 +99,21 @@ services:
     ports:
       - "8501:8501"
     volumes:
-      - ./TMT-OS/dashboard:/app/dashboard
-      - ./TMT-OS/logs:/app/logs
+      - tmt_os_logs:/app/logs
     depends_on:
       - redis
       - tmt-os-api
     networks:
       - tmt-os-network
     command: ["streamlit", "run", "TMT-OS/dashboard/app.py"]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    mem_limit: 1g
+    cpus: "1.0"
 
   # Redis Cache
   redis:
@@ -80,6 +133,8 @@ services:
       interval: 10s
       timeout: 3s
       retries: 3
+    mem_limit: 3g
+    cpus: "1.0"
 
   # PostgreSQL Database
   postgres:
@@ -91,7 +146,7 @@ services:
     environment:
       - POSTGRES_DB=tmt_os
       - POSTGRES_USER=tmtos
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-tmtos}
       - POSTGRES_INITDB_ARGS=--encoding=UTF-8 --lc-collate=C --lc-ctype=C
       - POSTGRES_HOST_AUTH_METHOD=scram-sha-256
     volumes:
@@ -105,6 +160,8 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    mem_limit: 2g
+    cpus: "1.0"
 
   # Prometheus Monitoring
   prometheus:
@@ -128,6 +185,8 @@ services:
       - tmt-os-network
     depends_on:
       - tmt-os-api
+    mem_limit: 1g
+    cpus: "0.5"
 
   # Grafana Dashboard
   grafana:
@@ -138,7 +197,7 @@ services:
       - "3000:3000"
     environment:
       - GF_SECURITY_ADMIN_USER=admin
-      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-admin}
       - GF_USERS_ALLOW_SIGN_UP=false
       - GF_SERVER_ROOT_URL=http://localhost:3000
       - GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-simple-json-datasource
@@ -150,10 +209,13 @@ services:
     networks:
       - tmt-os-network
     depends_on:
-      - prometheus
+      prometheus:
+        condition: service_started
     user: "472"
+    mem_limit: 512m
+    cpus: "0.5"
 
-  # Nginx Load Balancer (Optional)
+  # Nginx Load Balancer (Optional; needs nginx/nginx.conf + nginx/ssl/)
   nginx:
     image: nginx:alpine
     container_name: tmt-os-nginx
@@ -164,7 +226,6 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/ssl:/etc/nginx/ssl:ro
-      - ./logs/nginx:/var/log/nginx
     depends_on:
       - tmt-os-api
       - tmt-os-dashboard
@@ -172,26 +233,8 @@ services:
       - tmt-os-network
     profiles:
       - loadbalancer
-
-  # Jaeger Tracing (Optional)
-  jaeger:
-    image: jaegertracing/all-in-one:latest
-    container_name: tmt-os-jaeger
-    restart: unless-stopped
-    ports:
-      - "16686:16686"
-      - "14268:14268"
-      - "14250:14250"
-      - "6831:6831/udp"
-      - "6832:6832/udp"
-    environment:
-      - COLLECTOR_ZIPKIN_HTTP_PORT=9411
-      - SPAN_STORAGE_TYPE=elasticsearch
-      - ES_SERVER_URLS=http://elasticsearch:9200
-    networks:
-      - tmt-os-network
-    profiles:
-      - tracing
+    mem_limit: 256m
+    cpus: "0.5"
 
 volumes:
   redis_data:
@@ -203,6 +246,12 @@ volumes:
   prometheus_data:
     driver: local
   grafana_data:
+    driver: local
+  tmt_os_data:
+    driver: local
+  tmt_os_logs:
+    driver: local
+  tmt_os_cache:
     driver: local
 
 networks:

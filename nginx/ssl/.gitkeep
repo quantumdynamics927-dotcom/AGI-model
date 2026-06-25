@@ -1,0 +1,7 @@
+# Placeholder so the docker-compose.yml volume mount
+# `./nginx/ssl:/etc/nginx/ssl:ro` does not fail on a fresh clone.
+#
+# Drop your TLS material (fullchain.pem + privkey.pem) here when you
+# enable HTTPS. The nginx.conf file references `/etc/nginx/ssl/` for
+# future TLS configuration; until then this directory is intentionally
+# empty.

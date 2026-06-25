@@ -9,22 +9,60 @@ on:
       - 'Dockerfile.space'
       - 'README_HF_SPACE.md'
       - 'requirements.txt'
+      - 'backend_aware_offset.py'
+      - 'tests/test_backend_aware_offset.py'
       - '.github/workflows/sync-to-huggingface.yml'
+      - '.github/workflows/ci.yml'
   release:
     types: [published]
+  workflow_dispatch:
+
+# Serialize Space deploys across pushes and manual triggers. Without this,
+# a slow manual run overlapping a push could clobber a more recent commit.
+concurrency:
+  group: hf-space-deploy
+  cancel-in-progress: false
+
+permissions:
+  contents: read
 
 jobs:
+  test-before-sync:
+    name: Test before sync
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest
+
+      - name: Set PYTHONPATH
+        run: echo "PYTHONPATH=$(pwd):$(pwd)/TMT-OS:$(pwd)/tmt-os-labs:$(pwd)/integrations:$(pwd)/agi_scripts:$(pwd)/agi_app:$(pwd)/agi_model:$(pwd)/quantum_observer" >> $GITHUB_ENV
+
+      - name: Run backend_aware_offset tests
+        run: |
+          python -m pytest tests/test_backend_aware_offset.py -q
+
   deploy-to-hub:
+    name: Sync to Hugging Face
+    needs: test-before-sync
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
+
       - name: Install Git LFS
         run: git lfs install
-      
+
       - name: Configure Git
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -42,14 +80,23 @@ jobs:
           else
             echo "configured=true" >> "$GITHUB_OUTPUT"
           fi
-      
+
+      - name: Skipped (no secrets)
+        if: steps.hf-secrets.outputs.configured != 'true'
+        run: |
+          echo "## ⏭️ Hugging Face deploy skipped" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Neither \`HF_TOKEN\` nor \`HF_USER\` is configured on this repository." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "See \`SECRETS.md\` for the list of secrets the deploy workflow expects." >> $GITHUB_STEP_SUMMARY
+
       - name: Create deployment directory
         if: steps.hf-secrets.outputs.configured == 'true'
         run: |
           mkdir -p hf-deploy
           cd hf-deploy
           git init -b main
-      
+
       - name: Copy Space files only
         if: steps.hf-secrets.outputs.configured == 'true'
         run: |
@@ -57,7 +104,7 @@ jobs:
           cp Dockerfile.space hf-deploy/Dockerfile
           cp README_HF_SPACE.md hf-deploy/README.md
           cp requirements.txt hf-deploy/
-          
+
           # Create .gitignore for Space
           cat > hf-deploy/.gitignore << 'EOF'
           *.pyc
@@ -68,23 +115,25 @@ jobs:
           *.md
           !README.md
           EOF
-      
+
       - name: Push to Hugging Face Space
         if: steps.hf-secrets.outputs.configured == 'true'
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           HF_USER: ${{ secrets.HF_USER }}
+          GITHUB_SHA: ${{ github.sha }}
         run: |
           cd hf-deploy
           git add .
-          git commit -m "Deploy from GitHub: ${{ github.sha }}"
-          
-          # Push to Hugging Face Space
-          git push https://${HF_USER}:${HF_TOKEN}@huggingface.co/spaces/${HF_USER}/agi-model HEAD:main --force
-          
-          echo "✅ Deployed to Hugging Face Space"
-          echo "🔗 View at: https://huggingface.co/spaces/${HF_USER}/agi-model"
+          # Plain push; HF Hub accepts non-fast-forward updates without
+          # requiring --force. Keeping --force off means a misconfigured
+          # local clone can't accidentally clobber the Space.
+          git commit -m "Deploy from GitHub: ${GITHUB_SHA}"
 
-      - name: Skip deployment without secrets
-        if: steps.hf-secrets.outputs.configured != 'true'
-        run: echo "Skipping Hugging Face deployment because HF_USER and/or HF_TOKEN are not configured."
+          git push https://${HF_USER}:${HF_TOKEN}@huggingface.co/spaces/${HF_USER}/agi-model HEAD:main
+
+          echo "## ✅ Deployed to Hugging Face Space" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Commit**: \`${GITHUB_SHA}\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Space URL**: https://huggingface.co/spaces/${HF_USER}/agi-model" >> $GITHUB_STEP_SUMMARY

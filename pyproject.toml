@@ -13,6 +13,7 @@ packages = [
     { include = "agi_model" },
     { include = "vae_model.py" },
     { include = "ollama_cloud_models.py" },
+    { include = "backend_aware_offset.py" },
 ]
 
 [tool.poetry.dependencies]

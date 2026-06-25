@@ -1,0 +1,54 @@
+# Local-development override for AGI-model docker-compose.
+#
+# Copy this file to `docker-compose.override.yml` (gitignored) when
+# hacking on the API or dashboard locally. The override:
+#
+#   - Binds the source tree into the containers so edits are picked up
+#     without rebuilding.
+#   - Lowers log levels to DEBUG.
+#   - Reduces the API worker count so a developer laptop does not get
+#     pegged.
+#   - Disables restart policies so `docker compose down` is the only
+#     way to stop services (no surprise restarts on file changes).
+#
+# Usage:
+#   cp docker-compose.override.yml.example docker-compose.override.yml
+#   docker compose up -d
+#
+# The base `docker-compose.yml` is unchanged; this file is layered on
+# top by Compose automatically.
+
+services:
+  tmt-os-api:
+    restart: "no"
+    environment:
+      - TMT_OS_ENV=development
+      - LOG_LEVEL=DEBUG
+      - TMT_OS_WORKERS=1
+    volumes:
+      - ./:/app:rw
+      # Keep the named volume for cache/logs; bind-mount source for edits.
+      - tmt_os_data:/app/TMT-OS/data
+      - tmt_os_logs:/app/TMT-OS/logs
+      - tmt_os_cache:/app/TMT-OS/cache
+
+  tmt-os-dashboard:
+    restart: "no"
+    environment:
+      - LOG_LEVEL=DEBUG
+    volumes:
+      - ./dashboards/quantum_consciousness_dashboard:/app:rw
+
+  redis:
+    restart: "no"
+
+  postgres:
+    restart: "no"
+    ports:
+      - "5432:5432"
+
+  prometheus:
+    restart: "no"
+
+  grafana:
+    restart: "no"
