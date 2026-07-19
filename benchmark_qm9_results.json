@@ -10,16 +10,16 @@
     "lr": 0.001,
     "device": "cpu",
     "seed": 42,
-    "n_molecules": 10000,
+    "n_molecules": 133000,
     "save_path": "benchmark_qm9_results.json"
   },
   "vae_with_phi": {
-    "val_recon_mse": 1.1027311701327562,
-    "val_phi_alignment": 0.07092855691735167
+    "val_recon_mse": 1.3380022693711977,
+    "val_phi_alignment": 0.01372531384254435
   },
   "vae_without_phi": {
-    "val_recon_mse": 1.1405690647661686,
-    "val_phi_alignment": 0.9174572639167309
+    "val_recon_mse": 1.327768256744513,
+    "val_phi_alignment": 0.8278171518960824
   },
   "egnn": {
     "val_mae_mev": NaN,
@@ -27,21 +27,21 @@
   },
   "symmetry": {
     "metatron_accuracy": 1.0,
-    "random_accuracy": 0.185,
-    "metatron_vs_random_improvement": 4.405405405405405,
+    "random_accuracy": 0.225,
+    "metatron_vs_random_improvement": 3.4444444444444446,
     "n_test": 200
   },
   "history_phi": {
-    "recon_mse": 1.1101536030769348,
-    "kl": 3.4964003314971923,
-    "phi_alignment": 0.1096906266696751,
-    "loss": 1.1147469100952148
+    "recon_mse": 1.3325021233962948,
+    "kl": 2.6949637601408556,
+    "phi_alignment": 0.02078699638953652,
+    "loss": 1.3354049554017389
   },
   "history_no_phi": {
-    "recon_mse": 1.1507660775184632,
-    "kl": 2.5595364627838135,
+    "recon_mse": 1.3219926366588113,
+    "kl": 2.551500838561296,
     "phi_alignment": 0.0,
-    "loss": 1.1533256130218505
+    "loss": 1.3245441361643504
   },
   "history_egnn": {}
 }
