@@ -1,0 +1,76 @@
+{
+  "config": {
+    "scales": null,
+    "epochs": 20,
+    "batch_size": 64,
+    "latent_dim": 32,
+    "hidden_dims": [
+      256,
+      128
+    ],
+    "lr": 0.001,
+    "device": "cpu",
+    "seed": 42,
+    "save_path": "learning_curve_results.json"
+  },
+  "scales": [
+    1000,
+    5000,
+    10000,
+    50000,
+    133885
+  ],
+  "results": [
+    {
+      "n_molecules": 1000,
+      "val_mse": 0.22224504828453065,
+      "isotropy": 0.32144981622695923,
+      "mean_radius": 5.720261096954346,
+      "std_radius": 0.6225927472114563,
+      "input_dim": 60,
+      "max_atoms": 20,
+      "elapsed_s": 4.818370580673218
+    },
+    {
+      "n_molecules": 5000,
+      "val_mse": 0.10162647473812103,
+      "isotropy": 0.41865795850753784,
+      "mean_radius": 5.6700615882873535,
+      "std_radius": 0.45350608229637146,
+      "input_dim": 69,
+      "max_atoms": 23,
+      "elapsed_s": 4.6542649269104
+    },
+    {
+      "n_molecules": 10000,
+      "val_mse": 0.10273182368278504,
+      "isotropy": 0.45831355452537537,
+      "mean_radius": 5.644417762756348,
+      "std_radius": 0.3771497905254364,
+      "input_dim": 78,
+      "max_atoms": 26,
+      "elapsed_s": 11.418276071548462
+    },
+    {
+      "n_molecules": 50000,
+      "val_mse": 0.07623430697917938,
+      "isotropy": 0.4810104966163635,
+      "mean_radius": 5.633945465087891,
+      "std_radius": 0.3059732913970947,
+      "input_dim": 81,
+      "max_atoms": 27,
+      "elapsed_s": 61.57137107849121
+    },
+    {
+      "n_molecules": 133885,
+      "val_mse": 0.08346270541589709,
+      "isotropy": 0.591655969619751,
+      "mean_radius": 5.630995750427246,
+      "std_radius": 0.2681442201137543,
+      "input_dim": 87,
+      "max_atoms": 29,
+      "elapsed_s": 239.61802768707275
+    }
+  ],
+  "timestamp": "2026-07-20T00:19:05.191446"
+}
