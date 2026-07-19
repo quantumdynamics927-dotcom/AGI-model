@@ -1,0 +1,208 @@
+{
+  "config": {
+    "n_molecules": 10000,
+    "epochs": 20,
+    "batch_size": 64,
+    "latent_dim": 32,
+    "hidden_dims": [
+      256,
+      128
+    ],
+    "lr": 0.001,
+    "device": "cpu",
+    "seed": 42,
+    "save_path": "ablation_ladder_10k.json",
+    "n_test": 200
+  },
+  "levels": [
+    "metatron_composite",
+    "single_tetra",
+    "single_octa",
+    "single_icosa",
+    "random_geometric",
+    "shuffled_metatron",
+    "haar_continuous",
+    "flat_baseline"
+  ],
+  "results": {
+    "metatron_composite": {
+      "prior_name": "Metatron Composite (5 platonic solids)",
+      "val_recon_mse": 1.0962317287921906,
+      "val_prior_loss": 0.062379468232393265,
+      "symmetry_accuracy": 0.0,
+      "symmetry_random": 0.0,
+      "symmetry_n_test": 0,
+      "isotropy": 0.0,
+      "history": {
+        "recon_mse": 1.0777512683868409,
+        "prior_loss": 0.053838913798332215,
+        "kl": 3.323398586273193
+      },
+      "latent_isotropy": 0.6633802652359009,
+      "mean_radius": 5.686409950256348,
+      "std_radius": 0.20002540946006775
+    },
+    "single_tetra": {
+      "prior_name": "Single Tetrahedron Prior",
+      "val_recon_mse": 1.115965710952878,
+      "val_prior_loss": 0.052577177761122584,
+      "symmetry_accuracy": 0.0,
+      "symmetry_random": 0.0,
+      "symmetry_n_test": 0,
+      "isotropy": 0.0,
+      "history": {
+        "recon_mse": 1.0992170310020446,
+        "prior_loss": 0.04685050371289253,
+        "kl": 3.2691954574584963
+      },
+      "latent_isotropy": 0.6904865503311157,
+      "mean_radius": 5.673923969268799,
+      "std_radius": 0.18606150150299072
+    },
+    "single_octa": {
+      "prior_name": "Single Octahedron Prior",
+      "val_recon_mse": 1.1064019426703453,
+      "val_prior_loss": 0.06606610619928688,
+      "symmetry_accuracy": 0.0,
+      "symmetry_random": 0.0,
+      "symmetry_n_test": 0,
+      "isotropy": 0.0,
+      "history": {
+        "recon_mse": 1.0893789749145508,
+        "prior_loss": 0.05652568677067757,
+        "kl": 3.3001612224578856
+      },
+      "latent_isotropy": 0.6717230677604675,
+      "mean_radius": 5.6409382820129395,
+      "std_radius": 0.19469258189201355
+    },
+    "single_icosa": {
+      "prior_name": "Single Icosahedron Prior",
+      "val_recon_mse": 1.0977864488959312,
+      "val_prior_loss": 0.06118953099939972,
+      "symmetry_accuracy": 0.0,
+      "symmetry_random": 0.0,
+      "symmetry_n_test": 0,
+      "isotropy": 0.0,
+      "history": {
+        "recon_mse": 1.0825174465179443,
+        "prior_loss": 0.05130979886651039,
+        "kl": 3.3168163013458254
+      },
+      "latent_isotropy": 0.6764881014823914,
+      "mean_radius": 5.6110711097717285,
+      "std_radius": 0.1749776303768158
+    },
+    "random_geometric": {
+      "prior_name": "Random Geometric Prior (100 random directions)",
+      "val_recon_mse": 1.0615861471742392,
+      "val_prior_loss": 0.07282663765363395,
+      "symmetry_accuracy": 0.0,
+      "symmetry_random": 0.0,
+      "symmetry_n_test": 0,
+      "isotropy": 0.0,
+      "history": {
+        "recon_mse": 1.0469125237464905,
+        "prior_loss": 0.0665609567463398,
+        "kl": 3.326180513381958
+      },
+      "latent_isotropy": 0.6515415906906128,
+      "mean_radius": 5.687935829162598,
+      "std_radius": 0.22151757776737213
+    },
+    "shuffled_metatron": {
+      "prior_name": "Shuffled Metatron (random labels)",
+      "val_recon_mse": 1.1014443524181843,
+      "val_prior_loss": 0.06233465496916324,
+      "symmetry_accuracy": 0.0,
+      "symmetry_random": 0.0,
+      "symmetry_n_test": 0,
+      "isotropy": 0.0,
+      "history": {
+        "recon_mse": 1.0879435300827027,
+        "prior_loss": 0.05314774915575981,
+        "kl": 3.247026679992676
+      },
+      "latent_isotropy": 0.6682692170143127,
+      "mean_radius": 5.635611534118652,
+      "std_radius": 0.19406770169734955
+    },
+    "haar_continuous": {
+      "prior_name": "Continuous SO(3) Haar Prior",
+      "val_recon_mse": 1.1405980959534645,
+      "val_prior_loss": 0.05094232549890876,
+      "symmetry_accuracy": 0.0,
+      "symmetry_random": 0.0,
+      "symmetry_n_test": 0,
+      "isotropy": 0.0,
+      "history": {
+        "recon_mse": 1.1231191835403442,
+        "prior_loss": 0.03629045420885086,
+        "kl": 3.032711950302124
+      },
+      "latent_isotropy": 0.5159517526626587,
+      "mean_radius": 5.693174839019775,
+      "std_radius": 0.21461312472820282
+    },
+    "flat_baseline": {
+      "prior_name": "Flat Baseline (standard normal prior)",
+      "val_recon_mse": 1.1130539644509554,
+      "val_prior_loss": 0.0,
+      "symmetry_accuracy": 0.0,
+      "symmetry_random": 0.0,
+      "symmetry_n_test": 0,
+      "isotropy": 0.0,
+      "history": {
+        "recon_mse": 1.0954071946144104,
+        "prior_loss": 0.0,
+        "kl": 2.8416328315734862
+      },
+      "latent_isotropy": 0.22390571236610413,
+      "mean_radius": 6.358425617218018,
+      "std_radius": 1.3294968605041504
+    }
+  },
+  "latent_stats": {
+    "metatron_composite": {
+      "isotropy": 0.6633802652359009,
+      "mean_radius": 5.686409950256348,
+      "std_radius": 0.20002540946006775
+    },
+    "single_tetra": {
+      "isotropy": 0.6904865503311157,
+      "mean_radius": 5.673923969268799,
+      "std_radius": 0.18606150150299072
+    },
+    "single_octa": {
+      "isotropy": 0.6717230677604675,
+      "mean_radius": 5.6409382820129395,
+      "std_radius": 0.19469258189201355
+    },
+    "single_icosa": {
+      "isotropy": 0.6764881014823914,
+      "mean_radius": 5.6110711097717285,
+      "std_radius": 0.1749776303768158
+    },
+    "random_geometric": {
+      "isotropy": 0.6515415906906128,
+      "mean_radius": 5.687935829162598,
+      "std_radius": 0.22151757776737213
+    },
+    "shuffled_metatron": {
+      "isotropy": 0.6682692170143127,
+      "mean_radius": 5.635611534118652,
+      "std_radius": 0.19406770169734955
+    },
+    "haar_continuous": {
+      "isotropy": 0.5159517526626587,
+      "mean_radius": 5.693174839019775,
+      "std_radius": 0.21461312472820282
+    },
+    "flat_baseline": {
+      "isotropy": 0.22390571236610413,
+      "mean_radius": 6.358425617218018,
+      "std_radius": 1.3294968605041504
+    }
+  },
+  "timestamp": "2026-07-19T23:51:40.414284"
+}
