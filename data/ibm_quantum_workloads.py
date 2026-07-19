@@ -35,9 +35,19 @@ IBM_BACKENDS = {
     "ibm_osaka": "IBM Osaka (127 qubits, Eagle r3)",
     "ibm_nairobi": "IBM Nairobi (127 qubits, Eagle r3)",
     "ibm_casablanca": "IBM Casablanca (127 qubits, Eagle r3)",
+    "ibm_kingston": "IBM Kingston (127 qubits, Eagle r3)",
 }
 
 SFREQ_APPROX = 1e9  # IBM reports usage in nanoseconds
+
+
+def compute_shannon_entropy(outcome_counts: Dict[str, int]) -> float:
+    """Compute Shannon entropy H of an outcome distribution in bits."""
+    total = sum(outcome_counts.values())
+    if total == 0:
+        return 0.0
+    probs = [count / total for count in outcome_counts.values() if count > 0]
+    return -sum(p * np.log2(p) for p in probs if p > 0)
 
 
 # ── Dataclasses ─────────────────────────────────────────────────────────────
@@ -53,6 +63,7 @@ class IBMJobResult:
     usage_ns: int
     num_qubits: int
     circuit_depth: int
+    circuit_size_bytes: int  # serialized circuit size (complexity proxy)
     num_shots: int
     # Measurement outcome statistics
     outcome_counts: Dict[str, int]
@@ -79,31 +90,54 @@ def _parse_quantum_circuit(circuit_b64: str) -> dict:
     """
     Parse a qiskit QuantumCircuit from its serialized form.
     Returns a dict with basic circuit properties.
+
+    Note: The QISKIT serialization format (QISKIT\\x0e...) cannot be
+    deserialized by standard pickle or qiskit.load(). Circuit depth
+    and qubit count are unavailable without successful deserialization.
+    We return the raw byte size as a complexity proxy.
     """
     try:
+        raw = _decode_qiskit_bytes(circuit_b64)
+        # Check for QISKIT format magic bytes
+        if raw[:6] == b'QISKIT':
+            return {
+                "num_qubits": -1,
+                "depth": -1,
+                "num_gates": -1,
+                "serialized_size_bytes": len(raw),
+                "circuit": None,
+            }
+        # Try pickle as fallback
+        import pickle
         import qiskit
         from qiskit import QuantumCircuit
-        raw = _decode_qiskit_bytes(circuit_b64)
-        # qiskit QuantumCircuit deserialization
-        import pickle
         circuit = pickle.loads(raw)
         return {
             "num_qubits": circuit.num_qubits,
             "depth": circuit.depth(),
             "num_gates": len(circuit.data),
-            "num_operations": sum(len(circuit) for _ in [1]),  # count operations
+            "num_operations": sum(len(circuit) for _ in [1]),
             "circuit": circuit,
         }
     except Exception:
         # Can't deserialize — return basic size estimate
-        raw = _decode_qiskit_bytes(circuit_b64)
-        return {
-            "num_qubits": -1,
-            "depth": -1,
-            "num_gates": -1,
-            "serialized_size_bytes": len(raw),
-            "circuit": None,
-        }
+        try:
+            raw = _decode_qiskit_bytes(circuit_b64)
+            return {
+                "num_qubits": -1,
+                "depth": -1,
+                "num_gates": -1,
+                "serialized_size_bytes": len(raw),
+                "circuit": None,
+            }
+        except Exception:
+            return {
+                "num_qubits": -1,
+                "depth": -1,
+                "num_gates": -1,
+                "serialized_size_bytes": -1,
+                "circuit": None,
+            }
 
 
 def _parse_bit_array(bit_array_dict: dict) -> Tuple[Dict[str, int], int]:
@@ -146,14 +180,19 @@ def _parse_result_json(result_json: dict) -> Tuple[Dict[str, int], int, dict]:
     for pr in pub_results:
         data = pr.get("__value__", {}).get("data", {})
         data_val = data.get("__value__", {})
-        # fields is a dict {field_name: field_value}, not a list
+        # fields is a dict {field_name: field_value}
+        # Known measurement field names: 'reg_measure' (SamplerPubResult standard),
+        # 'meas' (alternative). 'c' and others are classical register data — skip.
+        MEASURE_FIELDS = {"reg_measure", "meas"}
         fields = data_val.get("fields", {})
         if isinstance(fields, dict):
             for field_name, field_val in fields.items():
-                if field_name == "reg_measure" or "measure" in field_name.lower():
+                if field_name in MEASURE_FIELDS:
                     counts, shots = _parse_bit_array(field_val)
-                    all_counts.update(counts)
-                    total_shots += shots
+                    if counts:
+                        all_counts.update(counts)
+                        total_shots += shots
+                        break  # one measurement field per pub_result
 
     return all_counts, total_shots, {}
 
@@ -185,6 +224,7 @@ def load_ibm_job_result(info_json: dict, result_json: dict) -> IBMJobResult:
     # Circuit metadata
     num_qubits = -1
     circuit_depth = -1
+    circuit_size_bytes = -1
     num_shots = 0
 
     params = info_json.get("params", {})
@@ -198,6 +238,7 @@ def load_ibm_job_result(info_json: dict, result_json: dict) -> IBMJobResult:
                     parsed = _parse_quantum_circuit(circuit_info.get("__value__", ""))
                     num_qubits = parsed.get("num_qubits", -1)
                     circuit_depth = parsed.get("depth", -1)
+                    circuit_size_bytes = parsed.get("serialized_size_bytes", -1)
                 except Exception:
                     pass
 
@@ -220,6 +261,7 @@ def load_ibm_job_result(info_json: dict, result_json: dict) -> IBMJobResult:
         usage_ns=usage_ns,
         num_qubits=num_qubits,
         circuit_depth=circuit_depth,
+        circuit_size_bytes=circuit_size_bytes,
         num_shots=num_shots,
         outcome_counts=outcome_counts,
         total_shots=total_shots,

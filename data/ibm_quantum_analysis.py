@@ -135,18 +135,33 @@ def analyze_backend_performance(dataset: WorkloadDataset) -> Dict:
 
     stats = {}
     for backend, jobs in by_backend.items():
+        jobs_with_entropy = [j for j in jobs if j.outcome_counts]
         usage_s = [j.usage_ns / 1e9 for j in jobs if j.usage_ns > 0]
-        entropies = [compute_shannon_entropy(j.outcome_counts) for j in jobs if j.outcome_counts]
-        scores = [compute_ibm_quantum_score(j) for j in jobs]
+        entropies = [compute_shannon_entropy(j.outcome_counts) for j in jobs_with_entropy]
+        scores = [compute_ibm_quantum_score(j) for j in jobs_with_entropy]
+
+        # Circuit size analysis
+        sizes = [j.circuit_size_bytes for j in jobs if j.circuit_size_bytes > 0]
+
+        # Stratify by entropy (proxy for circuit family)
+        high_entropy_jobs = [j for j in jobs_with_entropy
+                            if len(j.outcome_counts) >= 200]
+        low_entropy_jobs = [j for j in jobs_with_entropy
+                           if len(j.outcome_counts) < 200]
 
         stats[backend] = {
             "n_jobs": len(jobs),
+            "n_jobs_with_entropy": len(jobs_with_entropy),
             "total_shots": sum(j.total_shots for j in jobs),
             "success_rate": sum(1 for j in jobs if j.status == "Completed") / max(len(jobs), 1),
             "mean_entropy": float(np.mean(entropies)) if entropies else 0.0,
             "std_entropy": float(np.std(entropies)) if entropies else 0.0,
             "mean_entropy_ratio": float(np.mean([s["entropy_ratio"] for s in scores])) if scores else 0.0,
             "mean_gini": float(np.mean([s["gini_like"] for s in scores])) if scores else 0.0,
+            "n_high_entropy": len(high_entropy_jobs),
+            "n_low_entropy": len(low_entropy_jobs),
+            "mean_circuit_size_bytes": float(np.mean(sizes)) if sizes else 0.0,
+            "median_circuit_size_bytes": float(np.median(sizes)) if sizes else 0.0,
         }
 
     return stats
