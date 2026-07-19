@@ -1,23 +1,30 @@
 {
-  "timestamp": "2026-07-19T22:23:57.069271",
+  "timestamp": "2026-07-19T23:16:06.850525",
   "ibm_summary": {
     "ibm_fez": {
-      "n_jobs_with_data": 5,
-      "mean_H": 5.304162184999884,
-      "std_H": 2.8313524664205727,
-      "mean_ratio": 0.6936282426164591,
-      "mean_gini": 0.9891456117021276
+      "n_jobs_with_data": 341,
+      "mean_H": 6.9851971403362,
+      "std_H": 1.3692938427513108,
+      "mean_ratio": 0.8762218967626606,
+      "mean_gini": 0.995762973193905
     },
     "ibm_torino": {
-      "n_jobs_with_data": 1,
-      "mean_H": 7.695447613229427,
-      "std_H": 0.0,
-      "mean_ratio": 0.9619309516536784,
+      "n_jobs_with_data": 51,
+      "mean_H": 7.6089932527579025,
+      "std_H": 0.8978338099391763,
+      "mean_ratio": 0.9511241565947378,
+      "mean_gini": 0.9960473354269231
+    },
+    "ibm_kingston": {
+      "n_jobs_with_data": 30,
+      "mean_H": 7.948908555682231,
+      "std_H": 0.0014183909645866068,
+      "mean_ratio": 0.9936135694602789,
       "mean_gini": 0.99609375
     }
   },
   "ibm_total_jobs": 1108,
-  "ibm_total_shots": 9512832,
+  "ibm_total_shots": 31966464,
   "ibm_date_range": [
     "2025-12-01",
     "2026-05-01"
@@ -31,7 +38,7 @@
   },
   "comparison": {
     "ibm_backend_reference": "ibm_fez",
-    "ibm_mean_H": 5.304162184999884,
+    "ibm_mean_H": 6.9851971403362,
     "vae_phi_angle_entropy": 5.145170817262809,
     "vae_no_phi_angle_entropy": 5.1310298281923945
   }
