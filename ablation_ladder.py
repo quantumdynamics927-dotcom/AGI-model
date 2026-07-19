@@ -12,7 +12,8 @@ Design:
   Level 3:  Random geometric prior                   — random SO(3) projections
   Level 4:  Shuffled Metatron                        — same vertices, permuted labels
   Level 5:  Continuous SO(3) Haar prior              — no discrete symmetry
-  Level 6:  Flat/random latent baseline               — no geometric prior
+  Level 6:  Golden-angle spherical code               — 128 Fibonacci points on S^2
+  Level 7:  Flat/random latent baseline               — no geometric prior
 
 Metrics per level:
   - Symmetry classification accuracy
@@ -25,7 +26,7 @@ Hypothesis:
   If Metatron composite IS specifically matched to molecular symmetry:
     → Single-platonic < Composite < Crystallographic (molecular point groups ≈ crystallographic)
   If ANY structured prior works:
-    → All structured priors ≈ Metatron composite
+    → All structured priors ≈ Metatron composite ≈ golden-angle
   If only smooth structure matters (not discrete symmetry):
     → SO(3) Haar ≈ Metatron composite
 """
@@ -352,6 +353,60 @@ class ContinuousHaarPrior(GeometricPrior):
         return torch.mean((z_radial - self.target_radius) ** 2)
 
 
+class GoldenAnglePrior(GeometricPrior):
+    """
+    Level N: Golden-angle spherical code prior.
+
+    Uses the Fibonacci / golden-angle lattice on the sphere — the same
+    construction used for spherical codepacking in physics (e.g., omnidirectional
+    microphones, pixel cameras). Generates N evenly-spaced points on S^2
+    using the azimuthal golden angle (2π/φ) and colatitude formula.
+
+    This is a principled spherical code construction from information theory,
+    distinct from platonic solids (which have only 4/6/8/12/20 vertices).
+    """
+    def __init__(self, latent_dim: int, n_points: int = 128):
+        super().__init__(latent_dim, "golden_angle")
+        self.n_points = n_points
+        phi = PHI
+        # Fibonacci / golden-angle lattice on S^2
+        # k = 1..N, N = n_points
+        N = n_points
+        dirs = []
+        for k in range(1, N + 1):
+            # Colatitude: arccos(1 - 2k/(N+1))
+            # Azimuth: 2π × k / φ
+            cos_theta = 1.0 - 2.0 * k / (N + 1)
+            sin_theta = np.sqrt(max(0.0, 1.0 - cos_theta**2))
+            theta = np.arccos(cos_theta)
+            psi = 2.0 * np.pi * k / phi
+            x = sin_theta * np.cos(psi)
+            y = sin_theta * np.sin(psi)
+            z = cos_theta
+            dirs.append([x, y, z])
+        dirs = np.array(dirs, dtype=np.float32)
+        # Project to latent_dim
+        projected = np.zeros((n_points, latent_dim), dtype=np.float32)
+        projected[:, :3] = dirs
+        projected = projected / (np.linalg.norm(projected, axis=1, keepdims=True) + 1e-12)
+        self.register_buffer("directions", torch.tensor(projected, dtype=torch.float32))
+        self.register_buffer("target_radius", torch.tensor(3.5 * PHI, dtype=torch.float32))
+
+    def get_name(self):
+        return f"Golden-Angle Spherical Code ({self.n_points} pts)"
+
+    def compute_loss(self, z: torch.Tensor) -> torch.Tensor:
+        eps = 1e-8
+        z_norm = torch.norm(z, dim=1, keepdim=True).clamp(min=eps)
+        z_unit = z / z_norm
+        z_radial = z_norm.squeeze(-1)
+        cosine = torch.matmul(z_unit, self.directions.T)
+        max_cosine, _ = cosine.max(dim=1)
+        radial_loss = torch.mean((z_radial - self.target_radius) ** 2)
+        angular_loss = torch.mean((1.0 - max_cosine) ** 2)
+        return radial_loss + 0.5 * angular_loss
+
+
 class FlatPrior(GeometricPrior):
     """Level 6: No geometric prior — standard VAE with standard normal prior."""
     def __init__(self, latent_dim: int):
@@ -376,6 +431,7 @@ def build_prior(latent_dim: int, level: str) -> GeometricPrior:
         "random_geometric": RandomGeometricPrior,
         "shuffled_metatron": ShuffledMetatronPrior,
         "haar_continuous": ContinuousHaarPrior,
+        "golden_angle": GoldenAnglePrior,
         "flat_baseline": FlatPrior,
     }
     if level not in level_map:
@@ -593,6 +649,7 @@ def run_ablation(config: AblationConfig):
         "random_geometric",
         "shuffled_metatron",
         "haar_continuous",
+        "golden_angle",
         "flat_baseline",
     ]
 

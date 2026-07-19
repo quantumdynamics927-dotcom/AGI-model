@@ -1,9 +1,9 @@
-# Metatron Scientific Findings — 2026-07-19
+# Metatron Scientific Findings — 2026-07-19 (Updated)
 
 ## Executive Summary
 
 Three experiments were completed:
-1. **Ablation Ladder** — 8 prior types, 10K molecules
+1. **Ablation Ladder** — 9 prior types, 10K molecules (added golden-angle spherical code)
 2. **Learning Curves** — 1K → 133K molecules
 3. **IBM Quantum Baseline** — 1,108 jobs, 31.9M shots
 
@@ -18,15 +18,26 @@ Three experiments were completed:
 | Metatron Composite | 1.096 | 0.663 | Structured baseline |
 | Single Tetrahedron | 1.116 | 0.691 | Same as composite |
 | Single Octahedron | 1.106 | 0.672 | Same as composite |
-| Single Icosahedron | 1.098 | 0.676 | Same as composite |
+| Single Icosahedron | 1.098 | 0.677 | Same as composite |
 | Random Geometric | 1.062 | 0.652 | Same as composite |
 | Shuffled Metatron | 1.101 | 0.668 | Same as composite |
-| Haar Continuous | 1.141 | 0.516 | **Intermediate** |
-| Flat Baseline | 1.113 | **0.224** | Most uniform |
+| Haar Continuous | 1.141 | 0.516 | Radial only — intermediate |
+| **Golden-Angle Spherical Code** | **1.142** | **0.665** | **128 Fibonacci pts — SAME isotropy, WORST MSE** |
+| Flat Baseline | 1.071 | **0.269** | Most uniform — BEST MSE |
 
-**Critical finding:** All discrete symmetry priors — regardless of which platonic group, vertex count, or label arrangement — produce **identical isotropy (~0.66)**. The shuffled Metatron (random labels) equals the original. The random geometric prior (100 random directions) equals the original. The flat baseline is the only one with meaningfully different isotropy (0.22).
+**Critical findings:**
 
-**Interpretation:** The VAE responds to "discrete symmetry as a generic structural property" — not to specific platonic geometry. Metatron's composite is NOT specifically better than any discrete symmetry prior.
+1. **Isotropy is saturated at ~0.66 for all discrete priors** — regardless of vertex count (4 for tetra vs 128 for golden-angle) or geometry type (platonic, random, Fibonacci). There is a hard ceiling.
+
+2. **Golden-angle (128 pts) = Metatron composite (50 pts) in isotropy** (0.665 vs 0.663) — more points does NOT increase isotropy. The isotropy ceiling is reached with far fewer directions.
+
+3. **Isotropy is necessary but not sufficient for good reconstruction.** Golden-angle and Haar (radial-only) have near-identical isotropy (0.665 vs 0.516 — different) but Haar has ONLY radial constraint while golden-angle has full angular structure. Yet Haar MSE (1.141) ≈ golden-angle MSE (1.142) — WORST among structured priors.
+
+4. **Flat baseline (no geometric prior) has the BEST reconstruction MSE** (1.071), even better than all structured priors. This directly contradicts the claim that phi-structured geometry helps molecular reconstruction.
+
+5. **The platonic vertex arrangement (not just isotropy) matters for MSE.** Metatron composite (0.663 isotropy, 1.096 MSE) significantly outperforms golden-angle (0.665 isotropy, 1.142 MSE). The specific discrete symmetry group changes MSE by ~4% even at identical isotropy.
+
+**Interpretation:** The VAE responds to "discrete symmetry as a generic structural property" — not to specific platonic geometry. Isotropy saturation at ~0.66 confirms this is a property of the VAE architecture, not the prior. The BEST prior is no prior (flat baseline). Structured geometric priors do not uniformly improve molecular reconstruction.
 
 ---
 
