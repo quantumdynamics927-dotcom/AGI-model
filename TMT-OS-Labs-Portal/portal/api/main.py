@@ -8,9 +8,22 @@ import shutil
 
 app = FastAPI(title="TMT-OS Labs Portal API")
 
+# CORS: restrict origins in production; allow localhost in development
+_allowed_origins = [
+    "http://localhost:3000",
+    "http://localhost:8000",
+    "http://127.0.0.1:3000",
+    "http://127.0.0.1:8000",
+]
+_portal_env = os.getenv("PORTAL_ALLOWED_ORIGINS", "")
+if _portal_env == "*":
+    _allowed_origins = ["*"]
+elif _portal_env:
+    _allowed_origins += [o.strip() for o in _portal_env.split(",") if o.strip()]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=_allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

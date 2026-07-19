@@ -64,7 +64,7 @@ class QuantumConsciousnessAnalyzer:
 
     def __init__(self, model_path: str = 'best_model.pt', use_enhanced_metrics: bool = True):
         self.model = QuantumVAE()
-        self.model.load_state_dict(torch.load(model_path))
+        self.model.load_state_dict(torch.load(model_path, weights_only=True))
         self.model.eval()
         self.phi = (1 + np.sqrt(5)) / 2  # Golden ratio ≈ 1.618033988749895
         self.use_enhanced_metrics = use_enhanced_metrics
